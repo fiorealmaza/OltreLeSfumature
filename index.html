@@ -1,253 +1,301 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
-    <meta charset="UTF-8">
-    <title>Disturbo dello Spettro Autistico</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/png" href="favicon.png">
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            background-color: #f4f7fb;
-            color: #333;
-            line-height: 1.6;
-        }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Disturbo dello Spettro Autistico</title>
 
-        /* Header aggiornato: titolo meno luminoso */
-        header {
-            background-color: #1f3c88; /* blu pieno sobrio */
-            color: #f0f4fb; /* bianco soft */
-            padding: 60px 20px;
-            text-align: center;
-        }
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
-        header h1 {
-            font-size: 3em;
-            margin-bottom: 10px;
-            font-weight: bold;
-        }
+<style>
 
-        header p {
-            font-size: 1.3em;
-            font-weight: 300;
-            color: #e1e8f5; /* sottotitolo soft */
-        }
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-        /* Menu */
-        nav {
-            background-color: #162a5c;
-            padding: 15px;
-            text-align: center;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-        }
+html {
+    scroll-behavior: smooth;
+}
 
-        nav a {
-            color: white;
-            text-decoration: none;
-            margin: 0 15px;
-            font-weight: bold;
-            font-size: 1.1em;
-            transition: color 0.3s;
-        }
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #f4f7fb, #e8efff);
+    color: #333;
+    overflow-x: hidden;
+}
 
-        nav a:hover {
-            color: #4a6ed1;
-        }
+/* HEADER */
 
-        /* Sezioni */
-        section {
-            padding: 60px 10%;
-        }
+header {
+    background: linear-gradient(135deg, #1f3c88, #4a6ed1);
+    color: white;
+    text-align: center;
+    padding: 80px 20px;
+    position: relative;
+}
 
-        h2 {
-            color: #1f3c88;
-            border-bottom: 3px solid #4a6ed1;
-            padding-bottom: 10px;
-            margin-bottom: 25px;
-        }
+header img {
+    width: 180px;
+    margin-bottom: 20px;
+    animation: float 4s ease-in-out infinite;
+}
 
-        /* Box */
-        .box {
-            background: white;
-            padding: 25px 20px;
-            margin: 20px 0;
-            border-left: 7px solid #1f3c88;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-            border-radius: 10px;
-            transition: transform 0.3s, box-shadow 0.3s;
-        }
+@keyframes float {
+    0%,100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
 
-        .box:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 20px rgba(0,0,0,0.15);
-        }
+header h1 {
+    font-size: 3em;
+    font-weight: 700;
+}
 
-        ul {
-            padding-left: 20px;
-        }
+header p {
+    font-size: 1.2em;
+    opacity: 0.9;
+}
 
-        footer {
-            background-color: #1f3c88;
-            color: white;
-            text-align: center;
-            padding: 30px 20px;
-            margin-top: 40px;
-        }
+/* NAV */
 
-        @media (max-width: 768px) {
-            section {
-                padding: 40px 5%;
-            }
-            header h1 {
-                font-size: 2.2em;
-            }
-        }
-    </style>
+nav {
+    position: sticky;
+    top: 0;
+    background: rgba(31,60,136,0.95);
+    backdrop-filter: blur(10px);
+    padding: 15px;
+    text-align: center;
+    z-index: 1000;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+nav a:hover {
+    color: #a5c3ff;
+    transform: scale(1.1);
+}
+
+/* SECTIONS */
+
+section {
+    padding: 80px 10%;
+    opacity: 0;
+    transform: translateY(40px);
+    transition: all 1s ease;
+}
+
+section.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+section:nth-child(even) {
+    background: #f0f4ff;
+}
+
+h2 {
+    font-size: 2em;
+    margin-bottom: 40px;
+    color: #1f3c88;
+}
+
+/* BOX MODERNI */
+
+.box {
+    background: rgba(255,255,255,0.7);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    padding: 30px;
+    margin-bottom: 30px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+    transition: all 0.4s ease;
+}
+
+.box:hover {
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+}
+
+.box h3 {
+    color: #4a6ed1;
+    margin-bottom: 15px;
+}
+
+ul {
+    padding-left: 20px;
+}
+
+li {
+    margin-bottom: 8px;
+}
+
+/* FOOTER */
+
+footer {
+    background: linear-gradient(135deg, #1f3c88, #162a5c);
+    color: white;
+    text-align: center;
+    padding: 40px 20px;
+}
+
+/* ANIMAZIONE PARTICELLE SFONDO */
+
+body::before {
+    content: "";
+    position: fixed;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(74,110,209,0.05) 10%, transparent 10%);
+    background-size: 60px 60px;
+    animation: moveBackground 30s linear infinite;
+    z-index: -1;
+}
+
+@keyframes moveBackground {
+    from { transform: translate(0,0); }
+    to { transform: translate(-200px,-200px); }
+}
+
+@media(max-width:768px){
+    header h1 {
+        font-size: 2.2em;
+    }
+}
+
+</style>
 </head>
+
 <body>
 
 <header>
+    <img src="logo-autismo.png" alt="Logo Autismo">
     <h1>Disturbo dello Spettro Autistico</h1>
-    <p>Materiale informativo basato su contenuti didattici</p>
+    <p>Informazioni, caratteristiche e interventi</p>
 </header>
 
 <nav>
-    <a href="#cos-e">Cos'è</a>
-    <a href="#sintomi">Caratteristiche</a>
+    <a href="#cose">Cos'è</a>
+    <a href="#caratteristiche">Caratteristiche</a>
     <a href="#diagnosi">Diagnosi</a>
     <a href="#prognosi">Prognosi</a>
-    <a href="#interventi">Interventi</a>
+    <a href="#intervento">Intervento</a>
     <a href="#aba">ABA</a>
     <a href="#teacch">TEACCH</a>
 </nav>
 
-<section id="cos-e">
-    <h2>Cos'è l'Autismo</h2>
-    <div class="box">
-        <p>L'autismo è un disturbo del neurosviluppo a genesi multifattoriale che interessa primariamente il Sistema Nervoso Centrale durante la sua organizzazione.</p>
-        <p>È caratterizzato da disfunzioni della maturazione neurobiologica e del funzionamento del SNC.</p>
-        <p>Si tratta di uno spettro variabile che può comprendere sia persone con alto quoziente intellettivo sia con ritardo mentale.</p>
-    </div>
+<section id="cose">
+<h2>Cos'è l'Autismo</h2>
+<div class="box">
+<p>L'autismo è un disturbo del neurosviluppo caratterizzato da difficoltà nella comunicazione e nell'interazione sociale e dalla presenza di comportamenti, interessi o attività ristretti e ripetitivi.</p>
+<p>È una condizione dello spettro: ogni persona è diversa per caratteristiche, punti di forza e bisogni di supporto.</p>
+</div>
 </section>
 
-<section id="sintomi">
-    <h2>Caratteristiche Principali</h2>
+<section id="caratteristiche">
+<h2>Caratteristiche</h2>
 
-    <div class="box">
-        <h3>Alterazioni nella comunicazione</h3>
-        <ul>
-            <li>Assenza o ritardo del linguaggio</li>
-            <li>Ecolalia immediata o differita</li>
-            <li>Prosodia monotona o alterata</li>
-            <li>Inversione pronominale</li>
-            <li>Difficoltà a comprendere ironia e scherzo</li>
-            <li>Contatto oculare sfuggente</li>
-        </ul>
-    </div>
+<div class="box">
+<h3>Comunicazione</h3>
+<ul>
+<li>Ritardo o particolarità nel linguaggio</li>
+<li>Ecolalia</li>
+<li>Prosodia atipica</li>
+<li>Difficoltà nella comprensione dell'ironia</li>
+<li>Contatto oculare ridotto</li>
+</ul>
+</div>
 
-    <div class="box">
-        <h3>Comportamenti ripetitivi e stereotipati</h3>
-        <ul>
-            <li>Sfarfallare le mani</li>
-            <li>Dondolarsi</li>
-            <li>Girare su se stessi</li>
-            <li>Camminare sulle punte</li>
-            <li>Rituali e rigidità</li>
-        </ul>
-    </div>
+<div class="box">
+<h3>Comportamenti Ripetitivi</h3>
+<ul>
+<li>Movimenti ripetitivi</li>
+<li>Interessi molto specifici</li>
+<li>Bisogno di routine</li>
+</ul>
+</div>
 
-    <div class="box">
-        <h3>Difficoltà nell’interazione sociale</h3>
-        <ul>
-            <li>Scarso interesse per gli altri</li>
-            <li>Assenza di attenzione condivisa</li>
-            <li>Difficoltà di comprensione degli stati mentali</li>
-            <li>Mancanza di condivisione spontanea di emozioni</li>
-        </ul>
-    </div>
+<div class="box">
+<h3>Punti di Forza</h3>
+<ul>
+<li>Pensiero visivo</li>
+<li>Grande attenzione ai dettagli</li>
+<li>Memoria eccellente</li>
+<li>Competenze specifiche approfondite</li>
+</ul>
+</div>
 
-    <div class="box">
-        <h3>Punti di forza</h3>
-        <ul>
-            <li>Pensiero visivo</li>
-            <li>Precisione e attenzione ai dettagli</li>
-            <li>Memoria visiva eccellente</li>
-            <li>Conoscenze approfondite su argomenti specifici</li>
-            <li>Talenti artistici o logico-matematici</li>
-        </ul>
-    </div>
 </section>
 
 <section id="diagnosi">
-    <h2>Diagnosi</h2>
-    <div class="box">
-        <p>La diagnosi è clinica, basata sull’osservazione del comportamento e sulla raccolta dei dati anamnestici.</p>
-        <p>Non esistono test biologici in grado di individuare la sindrome autistica.</p>
-        <p>La diagnosi e il trattamento precoci cambiano la prognosi a lungo termine.</p>
-    </div>
+<h2>Diagnosi</h2>
+<div class="box">
+<p>La diagnosi è clinica e si basa sull'osservazione del comportamento e sulla raccolta della storia evolutiva.</p>
+<p>Una diagnosi precoce permette interventi tempestivi e migliori prospettive di sviluppo.</p>
+</div>
 </section>
 
 <section id="prognosi">
-    <h2>Prognosi ed Evoluzione</h2>
-    <div class="box">
-        <ul>
-            <li>1-2% acquisisce uno stato normale</li>
-            <li>10-15% raggiunge autonomia familiare</li>
-            <li>25-30% necessita sostegno</li>
-            <li>60-70% diventa adulto non autosufficiente</li>
-        </ul>
-        <p>La prognosi dipende fortemente dal grado di funzionamento cognitivo e dalla precocità dell’intervento.</p>
-    </div>
+<h2>Prognosi</h2>
+<div class="box">
+<p>L’evoluzione è variabile e dipende da:</p>
+<ul>
+<li>Livello cognitivo</li>
+<li>Sviluppo del linguaggio</li>
+<li>Precocità dell’intervento</li>
+<li>Supporto familiare e scolastico</li>
+</ul>
+</div>
 </section>
 
-<section id="interventi">
-    <h2>Intervento</h2>
-    <div class="box">
-        <ul>
-            <li>Intervento precoce e intensivo</li>
-            <li>Programma individualizzato</li>
-            <li>Coinvolgimento attivo della famiglia</li>
-            <li>Lavoro di rete</li>
-            <li>Verifiche periodiche</li>
-        </ul>
-        <p>Non esistono metodi miracolosi, ma sistemi di intervento integrati psico-educativi e cognitivo-comportamentali scientificamente validati.</p>
-    </div>
+<section id="intervento">
+<h2>Intervento</h2>
+<div class="box">
+<ul>
+<li>Intervento precoce</li>
+<li>Programmazione individualizzata</li>
+<li>Coinvolgimento della famiglia</li>
+<li>Lavoro multidisciplinare</li>
+</ul>
+</div>
 </section>
 
 <section id="aba">
-    <h2>Metodo ABA</h2>
-    <div class="box">
-        <p>ABA (Applied Behavior Analysis) utilizza principi comportamentali per costruire repertori comportamentali utili e ridurre quelli problematici.</p>
-        <ul>
-            <li>Intervento altamente individualizzato</li>
-            <li>Insegnamento senza errori</li>
-            <li>Riduzione dei comportamenti problema</li>
-            <li>Incremento delle capacità adattive</li>
-        </ul>
-    </div>
+<h2>Metodo ABA</h2>
+<div class="box">
+<p>L’Applied Behavior Analysis utilizza principi comportamentali per insegnare nuove abilità e ridurre comportamenti problematici.</p>
+</div>
 </section>
 
 <section id="teacch">
-    <h2>Modello TEACCH</h2>
-    <div class="box">
-        <p>Il TEACCH è un modello di presa in carico globale che punta sull’organizzazione visiva di spazi, tempi e materiali.</p>
-        <ul>
-            <li>Strutturazione dello spazio</li>
-            <li>Strutturazione del tempo</li>
-            <li>Uso di agende visive</li>
-            <li>Adattamento dell’ambiente</li>
-            <li>Coinvolgimento dei genitori</li>
-        </ul>
-        <p>Obiettivi: incrementare le abilità emergenti e rendere l’ambiente più comprensibile.</p>
-    </div>
+<h2>Modello TEACCH</h2>
+<div class="box">
+<p>Modello che punta sulla strutturazione visiva di spazi, tempi e materiali per rendere l’ambiente più comprensibile e prevedibile.</p>
+</div>
 </section>
 
 <footer>
-    <p>Sito informativo sul Disturbo dello Spettro Autistico</p>
+<p>Sito informativo sul Disturbo dello Spettro Autistico</p>
 </footer>
+
+<script>
+const sections = document.querySelectorAll("section");
+
+window.addEventListener("scroll", () => {
+    sections.forEach(sec => {
+        const rect = sec.getBoundingClientRect();
+        if(rect.top < window.innerHeight - 100){
+            sec.classList.add("visible");
+        }
+    });
+});
+</script>
 
 </body>
 </html>
