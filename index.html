@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Disturbo dello Spettro Autistico</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
+<link rel="icon" type="image/png" href="favicon.png"> <!-- qui metti la tua favicon -->
+
+<style>
+/* BASE */
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(180deg, #eaf2ff, #ffffff);
+  color: #222;
+}
+
+/* HERO */
+header {
+  background: linear-gradient(135deg, #1f3c88, #2a56c6, #4f8cff, #1f3c88);
+  background-size: 600% 600%;
+  animation: gradientMove 12s ease infinite;
+  color: white;
+  text-align: center;
+  padding: 100px 20px;
+  text-shadow: 0 2px 20px rgba(0,0,0,0.3);
+}
+@keyframes gradientMove {
+  0% {background-position: 0% 50%;}
+  50% {background-position: 100% 50%;}
+  100% {background-position: 0% 50%;}
+}
+header h1 { font-size: 3.6em; font-weight: 800; margin-bottom: 20px; text-shadow: 0 0 25px rgba(255,255,255,0.7); }
+header p { font-size: 1.3em; opacity: 0.95; }
+
+/* NAV BAR */
+nav {
+  backdrop-filter: blur(10px);
+  background: rgba(22, 42, 92, 0.95);
+  text-align: center;
+  padding: 10px 0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+nav a {
+  color: white;
+  text-decoration: none;
+  margin: 0 18px;
+  font-weight: 600;
+  font-size: 0.95em;
+  transition: 0.3s;
+}
+nav a:hover { color: #8bb6ff; text-shadow: 0 0 10px #8bb6ff; transform: scale(1.1); }
+
+/* HAMBURGER MENU MOBILE */
+.hamburger {
+  display: none;
+  cursor: pointer;
+  font-size: 1.8em;
+  color: white;
+  margin-right: 20px;
+}
+nav .mobile-menu { display: none; flex-direction: column; background: rgba(22,42,92,0.95);}
+nav .mobile-menu a { margin: 12px 0; text-align: center; }
+@media(max-width:768px){
+  nav a { display: none; }
+  .hamburger { display: block; position: absolute; right: 10px; top: 10px; }
+  nav .mobile-menu.show { display: flex; }
+}
+
+/* SEZIONI */
+section { padding: 80px 10%; }
+h2 { font-size: 2.5em; margin-bottom: 40px; color: #1f3c88; text-align: center; position: relative; text-shadow: 0 0 12px rgba(50,50,255,0.4); }
+h2::after { content: ""; width: 70px; height: 5px; background: linear-gradient(90deg, #2a56c6, #4f8cff); display: block; margin: 15px auto 0; border-radius: 5px; }
+
+/* CARD GLASS + HOVER */
+.card {
+  background: rgba(255,255,255,0.85);
+  backdrop-filter: blur(14px);
+  padding: 35px;
+  border-radius: 25px;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+  transition: 0.5s ease, transform 0.5s ease;
+}
+.card:hover { transform: translateY(-12px) scale(1.03); box-shadow: 0 25px 60px rgba(0,0,0,0.25); }
+.card h3 { color: #2a56c6; margin-top: 0; text-shadow: 0 0 8px #4f8cff; }
+
+/* GRID RESPONSIVE */
+.grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; }
+
+/* HIGHLIGHT BOX GLOW */
+.highlight-box {
+  background: linear-gradient(135deg, #2a56c6, #4f8cff);
+  color: white;
+  padding: 40px;
+  border-radius: 25px;
+  text-align: center;
+  font-weight: 600;
+  font-size: 1.2em;
+  box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+  transition: 0.5s;
+  cursor: pointer;
+}
+.highlight-box:hover {
+  transform: scale(1.1);
+  box-shadow: 0 25px 60px rgba(0,0,0,0.35), 0 0 25px rgba(79,140,255,0.6);
+  background: linear-gradient(135deg, #4f8cff, #2a56c6);
+  text-shadow: 0 0 15px rgba(255,255,255,0.8);
+}
+.highlight-box i { font-size: 2.5em; display: block; margin-bottom: 12px; animation: iconBounce 2s infinite; }
+@keyframes iconBounce { 0%,100%{transform:translateY(0);} 50%{transform:translateY(-8px);} }
+
+/* BUTTON GLOW */
+.button { display:inline-block; padding:15px 30px; background:#2a56c6; color:white; border-radius:50px; font-weight:700; text-decoration:none; transition:0.4s, box-shadow 0.4s; box-shadow:0 5px 25px rgba(0,0,0,0.35);}
+.button:hover { background:#4f8cff; transform:scale(1.05); text-shadow:0 0 12px white; box-shadow:0 0 35px #4f8cff, 0 0 60px #2a56c6; }
+
+/* FADE-IN */
+.fade-in { opacity: 0; transform: translateY(30px); transition: all 1s ease-out; }
+.fade-in.show { opacity: 1; transform: translateY(0); }
+
+/* FOOTER */
+footer { background: #1f3c88; color: white; text-align: center; padding: 50px 20px; margin-top: 80px; font-weight: 600; }
+
+/* RESPONSIVE */
+@media(max-width:768px){
+  header h1 { font-size: 2.5em; }
+  section { padding: 60px 20px; }
+  .highlight-box { padding: 25px; font-size: 1em; }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<h1>Disturbo dello Spettro Autistico</h1>
+<p>Servizio educativo per la promozione dello spettro autistico e l’inclusione nei ragazzi dell’oratorio</p>
+<a href="#cose" class="button">Scopri di più</a>
+</header>
+
+<nav>
+<span class="hamburger"><i class="bi bi-list"></i></span>
+<a href="#cose">Cos'è</a>
+<a href="#caratteristiche">Caratteristiche</a>
+<a href="#diagnosi">Diagnosi</a>
+<a href="#prognosi">Prognosi</a>
+<a href="#intervento">Intervento</a>
+<a href="#aba">ABA</a>
+<a href="#teacch">TEACCH</a>
+<a href="#progetto">Oltre le Sfumature</a>
+
+<div class="mobile-menu">
+<a href="#cose">Cos'è</a>
+<a href="#caratteristiche">Caratteristiche</a>
+<a href="#diagnosi">Diagnosi</a>
+<a href="#prognosi">Prognosi</a>
+<a href="#intervento">Intervento</a>
+<a href="#aba">ABA</a>
+<a href="#teacch">TEACCH</a>
+<a href="#progetto">Oltre le Sfumature</a>
+</div>
+</nav>
+
+<!-- SEZIONI: TUTTO LO STESSO CODICE DELLE CARD, HIGHLIGHT BOX, FADE-IN ... COME SOPRA -->
+
+<footer>
+<p>Sito informativo sul Disturbo dello Spettro Autistico | Progetto “Oltre le Sfumature”</p>
+</footer>
+
+<script>
+// FADE-IN ALLO SCROLL
+const faders = document.querySelectorAll('.fade-in');
+const appearOptions = { threshold: 0.2, rootMargin: "0px 0px -50px 0px" };
+const appearOnScroll = new IntersectionObserver(function(entries, observer){
+  entries.forEach(entry => {
+    if(!entry.isIntersecting) return;
+    entry.target.classList.add('show');
+    observer.unobserve(entry.target);
+  });
+}, appearOptions);
+faders.forEach(fader => { appearOnScroll.observe(fader); });
+
+// HAMBURGER MENU
+const hamburger = document.querySelector('.hamburger');
+const mobileMenu = document.querySelector('.mobile-menu');
+hamburger.addEventListener('click', () => {
+  mobileMenu.classList.toggle('show');
+});
+</script>
+
+</body>
+</html>
