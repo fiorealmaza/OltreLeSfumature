@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Oltre Le Sfumature</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
 
 <style>
 
@@ -18,7 +18,7 @@ scroll-behavior:smooth;
 
 body{
 font-family:'Poppins',sans-serif;
-background:#f4f7fb;
+background:#eef3ff;
 color:#1a1a1a;
 line-height:1.7;
 }
@@ -26,62 +26,27 @@ line-height:1.7;
 /* HEADER */
 
 header{
-background:linear-gradient(135deg,#1e3fa3,#3f73ff);
-padding:20px 8%;
+background:linear-gradient(135deg,#1e3fa3,#4e7bff);
+padding:25px 8%;
 display:flex;
 align-items:center;
-justify-content:space-between;
+justify-content:center;
 color:white;
-position:sticky;
-top:0;
-z-index:1000;
-box-shadow:0 4px 20px rgba(0,0,0,0.15);
+box-shadow:0 6px 25px rgba(0,0,0,0.15);
 }
 
-.logo-area{
-display:flex;
-align-items:center;
-gap:15px;
-}
-
-.logo-area img{
-width:65px;
-height:65px;
-border-radius:18px;
-background:white;
-padding:5px;
-}
-
-.logo-area h1{
+header h1{
 font-family:'Playfair Display',serif;
-font-size:32px;
+font-size:36px;
 letter-spacing:1px;
 }
 
-.contact{
-display:flex;
-align-items:center;
-gap:20px;
-font-size:14px;
-}
-
-.contact a{
-color:white;
-text-decoration:none;
-opacity:0.9;
-transition:0.3s;
-}
-
-.contact a:hover{
-opacity:1;
-}
-
-/* HERO TEXT */
+/* HERO */
 
 .hero{
 padding:60px 10%;
 text-align:center;
-background:white;
+background:#f8faff;
 }
 
 .hero p{
@@ -89,34 +54,42 @@ max-width:900px;
 margin:auto;
 font-size:18px;
 color:#444;
-animation:fadeUp 1.2s ease forwards;
 }
 
 /* SECTIONS */
 
 section{
 padding:70px 10%;
-animation:fadeUp 1s ease forwards;
 }
 
 section h2{
 font-family:'Playfair Display',serif;
-font-size:32px;
-margin-bottom:25px;
+font-size:30px;
+margin-bottom:30px;
 color:#1e3fa3;
+text-align:center;
 }
 
+/* CARDS */
+
 .card{
-background:white;
+background:linear-gradient(145deg,#ffffff,#f0f4ff);
 padding:35px;
-border-radius:18px;
-box-shadow:0 8px 30px rgba(0,0,0,0.08);
-margin-bottom:35px;
+border-radius:20px;
+box-shadow:0 0 25px rgba(30,63,163,0.25);
+margin-bottom:40px;
 transition:0.4s;
+border:1px solid rgba(30,63,163,0.15);
 }
 
 .card:hover{
-transform:translateY(-6px);
+transform:translateY(-8px);
+box-shadow:0 0 40px rgba(30,63,163,0.45);
+}
+
+.card h3{
+color:#1e3fa3;
+margin-bottom:15px;
 }
 
 ul{
@@ -135,39 +108,16 @@ background:#1e3fa3;
 color:white;
 text-align:center;
 padding:30px 10%;
-margin-top:40px;
-}
-
-/* ANIMAZIONE */
-
-@keyframes fadeUp{
-from{
-opacity:0;
-transform:translateY(30px);
-}
-to{
-opacity:1;
-transform:translateY(0);
-}
+margin-top:50px;
 }
 
 /* RESPONSIVE */
 
 @media(max-width:768px){
 
-header{
-flex-direction:column;
-gap:15px;
+header h1{
+font-size:26px;
 text-align:center;
-}
-
-.contact{
-flex-direction:column;
-gap:8px;
-}
-
-.logo-area h1{
-font-size:24px;
 }
 
 section{
@@ -181,17 +131,7 @@ padding:60px 7%;
 <body>
 
 <header>
-
-<div class="logo-area">
-<img src="logo.png" alt="Logo">
 <h1>Oltre Le Sfumature</h1>
-</div>
-
-<div class="contact">
-<a href="mailto:oltrelesfumature@email.com">📩 oltrelesfumature@email.com</a>
-<a href="#">📨 Scrivici</a>
-</div>
-
 </header>
 
 <div class="hero">
@@ -206,10 +146,10 @@ Ogni persona è unica: comprendere significa rispettare e costruire opportunità
 <h2>Cos’è l’Autismo</h2>
 <div class="card">
 <p>
-L’autismo è un disturbo del neurosviluppo a genesi multifattoriale che interessa primariamente il Sistema Nervoso Centrale durante la sua organizzazione.
-È caratterizzato da disfunzioni della maturazione neurobiologica e del funzionamento del SNC.
-Si tratta di uno spettro variabile che può comprendere sia persone con alto quoziente intellettivo sia con ritardo cognitivo.
-La diagnosi rientra nel Disturbo dello Spettro Autistico (ASD).
+L’autismo è un disturbo del neurosviluppo che interessa il Sistema Nervoso Centrale.
+Rientra nel Disturbo dello Spettro Autistico (ASD) ed è caratterizzato da difficoltà
+nella comunicazione, nell’interazione sociale e dalla presenza di comportamenti ripetitivi.
+Lo spettro è ampio e variabile: ogni persona è diversa.
 </p>
 </div>
 </section>
@@ -218,129 +158,80 @@ La diagnosi rientra nel Disturbo dello Spettro Autistico (ASD).
 <h2>Caratteristiche Principali</h2>
 
 <div class="card">
-<h3>Alterazioni nella comunicazione</h3>
+<h3>Comunicazione</h3>
 <ul>
-<li>Assenza o ritardo del linguaggio</li>
-<li>Ecolalia immediata o differita</li>
-<li>Prosodia monotona o alterata</li>
+<li>Ritardo o assenza del linguaggio</li>
+<li>Ecolalia</li>
+<li>Difficoltà nella comunicazione non verbale</li>
+<li>Prosodia alterata</li>
 <li>Inversione pronominale</li>
-<li>Difficoltà a comprendere ironia e scherzo</li>
-<li>Contatto oculare sfuggente</li>
 </ul>
 </div>
 
 <div class="card">
-<h3>Comportamenti ripetitivi e stereotipati</h3>
+<h3>Comportamenti Ripetitivi</h3>
 <ul>
 <li>Sfarfallare le mani</li>
 <li>Dondolarsi</li>
-<li>Girare su se stessi</li>
 <li>Camminare sulle punte</li>
-<li>Rituali e rigidità comportamentale</li>
+<li>Ritualità rigida</li>
+<li>Interessi ristretti</li>
 </ul>
 </div>
 
 <div class="card">
-<h3>Difficoltà nell’interazione sociale</h3>
+<h3>Interazione Sociale</h3>
 <ul>
-<li>Scarso interesse per gli altri</li>
-<li>Assenza di attenzione condivisa</li>
-<li>Difficoltà nella comprensione degli stati mentali</li>
-<li>Mancanza di condivisione spontanea delle emozioni</li>
+<li>Difficoltà nella relazione con i coetanei</li>
+<li>Scarso contatto oculare</li>
+<li>Difficoltà nella comprensione delle emozioni</li>
+<li>Mancanza di attenzione condivisa</li>
 </ul>
 </div>
 
 <div class="card">
-<h3>Punti di forza</h3>
+<h3>Punti di Forza</h3>
 <ul>
-<li>Pensiero visivo</li>
-<li>Precisione e attenzione ai dettagli</li>
-<li>Memoria visiva eccellente</li>
-<li>Conoscenze approfondite su argomenti specifici</li>
+<li>Grande memoria visiva</li>
+<li>Precisione nei dettagli</li>
 <li>Talenti artistici o logico-matematici</li>
+<li>Pensiero visivo sviluppato</li>
 </ul>
 </div>
 
 </section>
 
 <section>
-<h2>Diagnosi</h2>
-<div class="card">
-<p>
-La diagnosi è clinica, basata sull’osservazione del comportamento e sulla raccolta dei dati anamnestici.
-Non esistono test biologici in grado di individuare la sindrome autistica.
-La diagnosi e il trattamento precoci cambiano significativamente la prognosi a lungo termine.
-</p>
-</div>
-</section>
+<h2>Intervento e Supporto</h2>
 
-<section>
-<h2>Prognosi ed Evoluzione</h2>
 <div class="card">
-<ul>
-<li>1-2% acquisisce uno stato funzionale nella norma</li>
-<li>10-15% raggiunge autonomia familiare</li>
-<li>25-30% necessita sostegno continuativo</li>
-<li>60-70% diventa adulto non autosufficiente</li>
-</ul>
+<h3>Intervento Precoce</h3>
 <p>
-La prognosi dipende fortemente dal grado di funzionamento cognitivo e dalla precocità dell’intervento.
+Un intervento tempestivo migliora significativamente la qualità della vita.
+È fondamentale lavorare in équipe con famiglia, scuola e specialisti.
 </p>
 </div>
-</section>
 
-<section>
-<h2>Intervento</h2>
 <div class="card">
-<ul>
-<li>Intervento precoce e intensivo</li>
-<li>Programma educativo individualizzato</li>
-<li>Coinvolgimento attivo della famiglia</li>
-<li>Lavoro di rete tra professionisti</li>
-<li>Verifiche periodiche degli obiettivi</li>
-</ul>
+<h3>Metodo ABA</h3>
 <p>
-Non esistono metodi miracolosi, ma sistemi di intervento integrati psico-educativi e cognitivo-comportamentali scientificamente validati.
+Approccio comportamentale basato sull’analisi applicata del comportamento,
+utile per sviluppare nuove abilità e ridurre comportamenti problema.
 </p>
 </div>
-</section>
 
-<section>
-<h2>Metodo ABA</h2>
 <div class="card">
+<h3>Modello TEACCH</h3>
 <p>
-ABA (Applied Behavior Analysis) utilizza principi comportamentali per costruire repertori comportamentali utili e ridurre quelli problematici.
+Strutturazione visiva di spazio e tempo per rendere l’ambiente più comprensibile
+e favorire l’autonomia.
 </p>
-<ul>
-<li>Intervento altamente individualizzato</li>
-<li>Insegnamento senza errori</li>
-<li>Riduzione dei comportamenti problema</li>
-<li>Incremento delle capacità adattive</li>
-</ul>
 </div>
-</section>
 
-<section>
-<h2>Modello TEACCH</h2>
-<div class="card">
-<p>
-Il TEACCH è un modello di presa in carico globale che punta sull’organizzazione visiva di spazi, tempi e materiali.
-</p>
-<ul>
-<li>Strutturazione dello spazio</li>
-<li>Strutturazione del tempo</li>
-<li>Uso di agende visive</li>
-<li>Adattamento dell’ambiente</li>
-<li>Coinvolgimento dei genitori</li>
-</ul>
-<p>
-Obiettivo: incrementare le abilità emergenti e rendere l’ambiente più comprensibile.
-</p>
-</div>
 </section>
 
 <footer>
-<p>© 2026 Oltre Le Sfumature | Progetto informativo sulla neurodiversità</p>
+<p>© 2026 Oltre Le Sfumature | Progetto sulla neurodiversità</p>
 </footer>
 
 </body>
