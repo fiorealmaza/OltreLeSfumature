@@ -16,7 +16,7 @@
 }
 
 body{
-    background:#cce6ff; /* BLU MOLTO CHIARO */
+    background:#cce6ff; /* BLU CHIARO PER TUTTA LA PARTE INFORMATIVA */
     color:#1a1a1a;
 }
 
@@ -25,130 +25,31 @@ header{
     display:flex;
     justify-content:space-between;
     align-items:center;
-    padding:15px 40px;
+    padding:20px 40px;
     position:sticky;
     top:0;
     z-index:1000;
-    background:white;
+    background:white; /* TITOLO SU SFONDO BIANCO */
     box-shadow:0 4px 15px rgba(0,0,0,0.1);
-}
-
-.logo{
-    display:flex;
-    align-items:center;
-    gap:20px;
-}
-
-.logo img{
-    width:80px;
 }
 
 .logo h1{
     font-size:40px;
     font-weight:700;
     letter-spacing:2px;
-    color:#0066cc; /* TITOLO BLU */
+    color:#0066cc;
 }
 
 .menu-toggle{
     font-size:32px;
     color:#1a1a1a;
     cursor:pointer;
-    display:none;
 }
 
-nav{
-    display:flex;
-    gap:25px;
-}
-
-nav a{
-    color:#1a1a1a;
-    text-decoration:none;
-    font-weight:500;
-    padding:8px 14px;
-    border-radius:8px;
-    transition:0.3s;
-}
-
-nav a:hover{
-    background:#4da6ff;
-    color:white;
-    box-shadow:0 0 20px #4da6ff;
-}
-
-@media(max-width:900px){
-    nav{
-        position:absolute;
-        top:90px;
-        right:0;
-        background:white;
-        flex-direction:column;
-        width:220px;
-        display:none;
-        padding:20px;
-        box-shadow:0 5px 20px rgba(0,0,0,0.1);
-    }
-    nav.active{
-        display:flex;
-    }
-    .menu-toggle{
-        display:block;
-    }
-}
-
-/* HERO / INTRO */
-.intro{
-    display:flex;
-    flex-direction:column;
-    padding:60px 40px;
-    max-width:1200px;
-    margin:auto;
-}
-
-.intro-top{
-    display:flex;
-    align-items:center;
-    gap:30px;
-    flex-wrap:wrap;
-}
-
-.intro-top img{
-    width:200px;
-    border-radius:20px;
-    box-shadow:0 0 30px rgba(77,166,255,0.6);
-}
-
-.intro-title{
-    font-size:48px;
-    font-weight:800;
-    color:#1a1a1a;
-}
-
-.intro-text{
-    margin-top:30px;
-    max-width:900px;
-}
-
-.intro-text h2{
-    font-size:28px;
-    font-weight:700;
-    color:#1a1a1a;
-    margin-bottom:20px;
-    text-align:left;
-}
-
-.intro-text p{
-    font-size:18px;
-    line-height:1.9;
-    color:#1a1a1a;
-    text-align:left;
-}
-
-/* SEZIONI */
+/* CONTENUTO */
 .section{
-    padding:40px 20px;
-    max-width:1200px;
+    padding:60px 40px;
+    max-width:1100px;
     margin:auto;
 }
 
@@ -169,13 +70,7 @@ nav a:hover{
     padding:20px 25px;
     border-radius:16px;
     margin-bottom:20px;
-    transition:0.5s;
     box-shadow:0 4px 18px rgba(0,0,0,0.1);
-}
-
-.card:hover{
-    transform:translateY(-5px);
-    box-shadow:0 0 35px #4da6ff;
 }
 
 /* CONTATTI */
@@ -203,12 +98,6 @@ nav a:hover{
     padding:12px 25px;
     border-radius:10px;
     cursor:pointer;
-    transition:0.3s;
-    font-size:16px;
-}
-
-.contact button:hover{
-    box-shadow:0 0 25px #4da6ff;
 }
 
 footer{
@@ -218,30 +107,6 @@ footer{
     color:white;
     margin-top:40px;
 }
-
-/* RESPONSIVE HERO */
-@media(max-width:900px){
-    .intro-top{
-        flex-direction:column;
-        align-items:flex-start;
-    }
-
-    .intro-top img{
-        width:150px;
-    }
-
-    .intro-title{
-        font-size:32px;
-    }
-
-    .intro-text h2{
-        font-size:22px;
-    }
-
-    .intro-text p{
-        font-size:16px;
-    }
-}
 </style>
 </head>
 
@@ -249,59 +114,37 @@ footer{
 
 <header>
 <div class="logo">
-<img src="logo.png" alt="logo">
 <h1>Oltre Le Sfumature</h1>
 </div>
-<div class="menu-toggle" onclick="toggleMenu()">|||</div>
-<nav id="menu">
-<a href="#definizione">Definizione</a>
-<a href="#evoluzione">Evoluzione</a>
-<a href="#caratteristiche">Caratteristiche</a>
-<a href="#diagnosi">Diagnosi</a>
-<a href="#intervento">Intervento</a>
-<a href="#famiglia">Famiglia</a>
-<a href="#contatti">Contatti</a>
-</nav>
+<div class="menu-toggle">|||</div>
 </header>
 
-<section class="intro">
-<div class="intro-top">
-<img src="logo.png" alt="logo hero">
-<div class="intro-title">Oltre Le Sfumature</div>
-</div>
+<section class="section">
 
-<div class="intro-text">
-<h2>Cos’è lo Spettro Autistico?</h2>
-<p>
+<div class="box-title">Cos’è lo Spettro Autistico?</div>
+<div class="card">
 Il Disturbo dello Spettro Autistico (DSA) è una condizione complessa del neurosviluppo che coinvolge comunicazione, interazione sociale e comportamenti ripetitivi o stereotipati.  
 Può manifestarsi in maniera molto variabile: alcune persone hanno alto quoziente intellettivo, capacità linguistiche elevate e interessi specifici intensi, mentre altre presentano disabilità intellettiva, ritardi nel linguaggio e difficoltà nelle abilità adattive.  
 È determinato da una combinazione di fattori genetici e neurobiologici che influenzano la maturazione del cervello.  
 La diagnosi precoce permette interventi mirati, personalizzati e intensivi, migliorando autonomia, gestione dei comportamenti, competenze sociali e qualità della vita.  
 Il ruolo della famiglia è fondamentale per supportare lo sviluppo, favorire l’inclusione e creare ambienti strutturati e prevedibili.  
 Il riconoscimento dei bisogni individuali e l’uso di metodi basati sull’evidenza consentono di valorizzare le abilità e ridurre le difficoltà quotidiane, promuovendo benessere emotivo e partecipazione sociale.
-</p>
 </div>
-</section>
 
-<section id="definizione" class="section">
 <div class="box-title">Definizione e quadro generale</div>
 <div class="card">
 Il Disturbo dello Spettro Autistico è caratterizzato da difficoltà persistenti nella comunicazione sociale, interazione e comportamenti ripetitivi.  
 La gravità e la modalità di espressione dei sintomi variano molto tra gli individui.  
 È fondamentale una valutazione completa per progettare interventi mirati e personalizzati.
 </div>
-</section>
 
-<section id="evoluzione" class="section">
 <div class="box-title">Evoluzione storica</div>
 <div class="card">
 Negli anni '50 l’autismo era erroneamente considerato una forma di schizofrenia infantile.  
 Con il DSM-III (1980) entra nei Disturbi Pervasivi dello Sviluppo, mentre con il DSM-5 (2013) viene riconosciuto come Disturbo dello Spettro Autistico unico.  
 Questa evoluzione ha permesso di sviluppare interventi più efficaci e personalizzati.
 </div>
-</section>
 
-<section id="caratteristiche" class="section">
 <div class="box-title">Caratteristiche principali</div>
 <div class="card">
 <b>Comunicazione:</b> Ritardo del linguaggio, ecolalia, inversione pronominale, prosodia alterata, difficoltà a comprendere ironia e sarcasmo.
@@ -312,9 +155,7 @@ Questa evoluzione ha permesso di sviluppare interventi più efficaci e personali
 <div class="card">
 <b>Comportamenti ripetitivi:</b> Stereotipie motorie, rigidità cognitiva, routine rigide, opposizione ai cambiamenti, interessi ristretti e intensi.
 </div>
-</section>
 
-<section id="diagnosi" class="section">
 <div class="box-title">Diagnosi</div>
 <div class="card">
 La diagnosi si basa su osservazione clinica, anamnesi dettagliata e strumenti psicometrici.  
@@ -322,9 +163,7 @@ Se necessario, esami audiometrici o genetici possono essere integrati.
 Non esistono test biologici specifici.  
 La diagnosi precoce permette interventi mirati e un miglioramento significativo delle abilità.
 </div>
-</section>
 
-<section id="intervento" class="section">
 <div class="box-title">Intervento</div>
 <div class="card">
 Interventi precoci, intensivi e personalizzati migliorano autonomia, competenze sociali e adattamento quotidiano.  
@@ -336,17 +175,13 @@ Il supporto della famiglia è essenziale.
 <div class="card">
 <b>TEACCH:</b> Approccio strutturato che organizza ambiente, attività e routine per favorire autonomia, apprendimento e gestione dei comportamenti.
 </div>
-</section>
 
-<section id="famiglia" class="section">
 <div class="box-title">La Famiglia</div>
 <div class="card">
 Il ciclo di adattamento familiare include crisi, adattamento, pianificazione e attivismo.  
 Supporto e collaborazione con professionisti sono fondamentali per la prognosi e il benessere complessivo.
 </div>
-</section>
 
-<section id="contatti" class="section">
 <div class="box-title">Contattaci</div>
 <div class="contact">
 <input type="text" placeholder="Nome">
@@ -354,16 +189,12 @@ Supporto e collaborazione con professionisti sono fondamentali per la prognosi e
 <textarea rows="5" placeholder="Scrivi il tuo messaggio"></textarea>
 <button>Invia Messaggio</button>
 </div>
+
 </section>
 
 <footer>
 © 2026 Oltre Le Sfumature
 </footer>
 
-<script>
-function toggleMenu(){
-document.getElementById("menu").classList.toggle("active");
-}
-</script>
 </body>
 </html>
