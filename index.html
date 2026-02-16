@@ -4,6 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Oltre Le Sfumature | Neurodiversità</title>
+
 <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@900&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
 
@@ -14,7 +15,7 @@
 body{
   font-family:'Roboto',sans-serif;
   line-height:1.8;
-  background:#122c8f; /* blu leggermente più chiaro */
+  background:#1436a6;
   color:#ffffff;
   overflow-x:hidden;
 }
@@ -29,203 +30,184 @@ header{
   display:flex;
   justify-content:space-between;
   align-items:center;
-  padding:15px 8%;
-  background:linear-gradient(90deg,#122c8f,#1e40af,#122c8f);
-  box-shadow:0 6px 25px rgba(0,0,0,0.25);
-  border-bottom-left-radius:15px;
-  border-bottom-right-radius:15px;
+  padding:12px 8%;
+  background:linear-gradient(90deg,#1436a6,#1e4ed8,#1436a6);
+  box-shadow:0 4px 20px rgba(0,0,0,0.25);
 }
 
-.logo-title{display:flex;align-items:center;gap:15px;}
+.logo-title{
+  display:flex;
+  align-items:center;
+  gap:10px;
+}
+
+.logo-title img{
+  height:40px;
+  border-radius:8px;
+}
+
 .site-name{
-  color:white;
   font-family:'Cinzel',serif;
   font-weight:900;
-  font-size:2.6rem;
-  text-shadow:0 0 20px rgba(255,255,255,0.6);
+  font-size:1.8rem;
+  text-shadow:0 0 15px rgba(255,255,255,0.6);
 }
 
-nav{display:flex;gap:20px;}
+nav{
+  display:flex;
+  gap:15px;
+}
+
 nav a{
   color:white;
   text-decoration:none;
-  font-weight:600;
-  padding:10px 18px;
-  border-radius:25px;
+  font-weight:500;
+  padding:8px 14px;
+  border-radius:20px;
   transition:0.3s;
+  font-size:0.95rem;
   background:rgba(255,255,255,0.08);
 }
+
 nav a:hover{
   background:white;
-  color:#122c8f;
-  box-shadow:0 0 15px rgba(255,255,255,0.8);
+  color:#1436a6;
+  box-shadow:0 0 10px rgba(255,255,255,0.8);
 }
 
-.hamburger{display:none;flex-direction:column;gap:6px;cursor:pointer;}
-.hamburger span{
-  width:32px;
-  height:4px;
-  background:linear-gradient(90deg,#60a5fa,#93c5fd);
-  border-radius:3px;
-  transition:0.4s;
+.hamburger{
+  display:none;
+  flex-direction:column;
+  gap:5px;
+  cursor:pointer;
 }
-.hamburger.active span:nth-child(1){transform:rotate(45deg) translate(6px,6px);}
-.hamburger.active span:nth-child(2){opacity:0;}
-.hamburger.active span:nth-child(3){transform:rotate(-45deg) translate(6px,-6px);}
+
+.hamburger span{
+  width:28px;
+  height:3px;
+  background:white;
+  border-radius:3px;
+}
 
 /* ================= HERO ================= */
 .hero{
-  padding:260px 8% 200px 8%;
+  padding:150px 8% 80px 8%;
   text-align:center;
-  position:relative;
-  border-radius:0 0 50px 50px;
-  background:linear-gradient(135deg,#122c8f,#1e40af,#3b82f6);
-  color:white;
+  background:linear-gradient(135deg,#1436a6,#1e4ed8,#3b82f6);
 }
 
 .hero h1{
   font-family:'Cinzel',serif;
-  font-size:5rem;
-  margin-bottom:25px;
-  text-shadow:0 0 40px rgba(255,255,255,0.7);
+  font-size:3rem;
+  margin-bottom:15px;
+  text-shadow:0 0 25px rgba(255,255,255,0.7);
 }
 
-.hero img{
-  height:200px;
-  margin-top:20px;
-  transition:0.3s;
-  border-radius:20px;
-}
-
-.hero img:hover{transform:scale(1.05);}
-
-.hero .button{
-  display:inline-block;
-  margin-top:30px;
-  padding:18px 45px;
-  background:#3b82f6;
-  color:white;
-  border-radius:30px;
-  font-weight:600;
-  text-decoration:none;
-  transition:0.3s;
-  font-size:1.2rem;
-  box-shadow:0 0 20px rgba(255,255,255,0.5);
-}
-.hero .button:hover{
-  background:#60a5fa;
-  transform:scale(1.05);
+.hero p{
+  max-width:800px;
+  margin:auto;
+  font-size:1.1rem;
+  opacity:0.95;
 }
 
 /* ================= SECTIONS ================= */
-section{padding:130px 8%;}
-
-.section-title{
-  display:inline-block;
-  padding:18px 45px;
-  border-radius:30px;
-  font-size:2rem;
-  font-weight:700;
-  margin-bottom:50px;
-  color:white;
-  background:linear-gradient(90deg,#3b82f6,#60a5fa);
-  box-shadow:0 0 30px rgba(59,130,246,0.6);
+section{
+  padding:100px 8%;
 }
 
-.text{
-  font-size:1.15rem;
-  margin-bottom:25px;
-  line-height:1.8;
+.section-title{
+  font-size:1.8rem;
+  margin-bottom:35px;
+  padding-bottom:10px;
+  border-bottom:2px solid rgba(255,255,255,0.3);
+  display:flex;
+  align-items:center;
+  gap:12px;
 }
 
 .grid{
   display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-  gap:40px;
-  margin-top:50px;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:30px;
+  margin-top:30px;
 }
 
 .card{
-  background:linear-gradient(145deg,#1e40af,#3b82f6);
-  padding:35px;
-  border-radius:25px;
-  box-shadow:0 6px 35px rgba(59,130,246,0.4);
-  transition:0.4s;
+  background:linear-gradient(145deg,#1e4ed8,#3b82f6);
+  padding:25px;
+  border-radius:18px;
+  box-shadow:0 6px 25px rgba(0,0,0,0.25);
+  transition:0.3s;
 }
+
 .card:hover{
-  transform:translateY(-10px);
-  box-shadow:0 0 60px rgba(147,197,253,0.7);
+  transform:translateY(-8px);
+  box-shadow:0 0 40px rgba(147,197,253,0.6);
 }
 
 .card i{
-  font-size:2.3rem;
-  color:white;
-  margin-bottom:15px;
+  font-size:1.8rem;
+  margin-bottom:12px;
 }
 
 /* ================= CONTACT ================= */
-.contact-form{
-  max-width:700px;
-  margin:auto;
+.contact{
+  text-align:center;
+}
+
+.contact-icons{
+  margin-top:25px;
   display:flex;
-  flex-direction:column;
-  gap:20px;
+  justify-content:center;
+  gap:40px;
+  flex-wrap:wrap;
 }
 
-.contact-form input,
-.contact-form textarea{
-  padding:15px;
-  border:none;
-  border-radius:12px;
-  font-size:1rem;
-}
-
-.contact-form button{
-  padding:15px;
-  border:none;
-  border-radius:25px;
-  background:#3b82f6;
-  color:white;
-  font-weight:600;
-  cursor:pointer;
+.contact-icons div{
+  background:linear-gradient(145deg,#1e4ed8,#3b82f6);
+  padding:20px 30px;
+  border-radius:15px;
+  box-shadow:0 4px 20px rgba(0,0,0,0.3);
   transition:0.3s;
 }
-.contact-form button:hover{
-  background:#60a5fa;
+
+.contact-icons div:hover{
+  transform:scale(1.05);
+}
+
+.contact-icons i{
+  font-size:1.5rem;
+  margin-bottom:10px;
+  display:block;
 }
 
 /* ================= FOOTER ================= */
 footer{
   text-align:center;
-  padding:90px 20px;
-  background:linear-gradient(90deg,#122c8f,#1e40af);
-  color:white;
-  line-height:1.8;
-  font-size:0.95rem;
+  padding:60px 20px;
+  background:linear-gradient(90deg,#1436a6,#1e4ed8);
+  font-size:0.9rem;
   margin-top:50px;
-  border-top-left-radius:50px;
-  border-top-right-radius:50px;
 }
 
 /* ================= MOBILE ================= */
-@media (max-width:900px){
+@media(max-width:900px){
+
   nav{
     position:absolute;
-    top:70px;
+    top:65px;
     right:0;
-    background:linear-gradient(180deg,#122c8f,#1e40af);
+    background:#1436a6;
     flex-direction:column;
-    width:240px;
+    width:220px;
     display:none;
     padding:20px;
   }
+
   nav.active{display:flex;}
-  nav a{width:80%;text-align:center;margin:5px 0;}
+
   .hamburger{display:flex;}
-  .hero h1{font-size:3rem;}
-  .hero img{height:150px;}
-  section{padding:90px 6%;}
-  .grid{grid-template-columns:1fr;}
+
 }
 
 </style>
@@ -235,14 +217,17 @@ footer{
 
 <header>
   <div class="logo-title">
-    <h1 class="site-name">Oltre Le Sfumature</h1>
+    <img src="logo.png" alt="Logo">
+    <div class="site-name">Oltre Le Sfumature</div>
   </div>
+
   <div class="hamburger" id="hamburger">
     <span></span><span></span><span></span>
   </div>
+
   <nav id="navLinks">
     <a href="#hero">Home</a>
-    <a href="#perche">Perché "Spettro"</a>
+    <a href="#perche">Spettro</a>
     <a href="#caratteristiche">Caratteristiche</a>
     <a href="#cause">Cause</a>
     <a href="#sviluppo">Sviluppo</a>
@@ -250,67 +235,113 @@ footer{
     <a href="#metodi">Metodi</a>
     <a href="#inclusione">Inclusione</a>
     <a href="#futuro">Futuro</a>
-    <a href="#contatti">Contattaci</a>
+    <a href="#contatti">Contatti</a>
   </nav>
 </header>
 
 <section class="hero" id="hero">
   <h1>Lo Spettro Autistico</h1>
-  <img src="logo.png" alt="Logo">
-  <br>
-  <a href="#perche" class="button">Scopri di più</a>
+  <p>
+    Informazione, consapevolezza e inclusione sulla neurodiversità.
+    Ogni persona nello spettro autistico possiede caratteristiche uniche,
+    punti di forza, talenti e bisogni specifici.
+  </p>
 </section>
 
 <section id="perche">
-  <div class="section-title">Perché si chiama "Spettro"</div>
-  <div class="text">
-  Il termine “spettro” indica l’ampia variabilità con cui l’autismo si manifesta. 
-  Non esiste un unico profilo: ogni persona presenta caratteristiche, abilità e bisogni differenti.
-  </div>
-  <div class="text">
-  Alcune persone possono avere elevate competenze cognitive e linguistiche, 
-  altre possono necessitare di supporto significativo nella comunicazione e nell’autonomia.
-  </div>
-  <div class="text">
-  Questa variabilità rende fondamentale un approccio personalizzato, centrato sulla persona,
-  sui suoi punti di forza e sulle sue potenzialità.
+  <h2 class="section-title"><i class="fas fa-lightbulb"></i>Perché si chiama “Spettro”</h2>
+  <p>
+    Il termine spettro indica la grande variabilità delle manifestazioni dell’autismo.
+    Non esiste un unico profilo: ogni individuo presenta combinazioni diverse
+    di abilità sociali, comunicative e comportamentali.
+  </p>
+</section>
+
+<section id="caratteristiche">
+  <h2 class="section-title"><i class="fas fa-puzzle-piece"></i>Caratteristiche</h2>
+  <div class="grid">
+    <div class="card"><i class="fas fa-comments"></i><h3>Comunicazione</h3><p>Difficoltà verbali e non verbali, uso di strumenti alternativi.</p></div>
+    <div class="card"><i class="fas fa-users"></i><h3>Interazione</h3><p>Difficoltà nella comprensione delle dinamiche sociali.</p></div>
+    <div class="card"><i class="fas fa-sync"></i><h3>Routine</h3><p>Preferenza per schemi prevedibili e ripetitivi.</p></div>
+    <div class="card"><i class="fas fa-bolt"></i><h3>Sensibilità</h3><p>Iper o ipo sensibilità a stimoli sensoriali.</p></div>
   </div>
 </section>
 
-<section id="contatti">
-  <div class="section-title">Contattaci</div>
-  <div class="text">
-  Per informazioni, collaborazioni o richieste di supporto, compila il modulo sottostante.
-  Saremo lieti di rispondere nel più breve tempo possibile.
-  </div>
+<section id="cause">
+  <h2 class="section-title"><i class="fas fa-dna"></i>Cause</h2>
+  <p>
+    Le cause sono multifattoriali: genetiche e biologiche.
+    Non esiste alcuna correlazione scientifica tra vaccini e autismo.
+  </p>
+</section>
 
-  <form class="contact-form">
-    <input type="text" placeholder="Nome e Cognome" required>
-    <input type="email" placeholder="Email" required>
-    <textarea rows="5" placeholder="Scrivi il tuo messaggio..." required></textarea>
-    <button type="submit">Invia Messaggio</button>
-  </form>
+<section id="sviluppo">
+  <h2 class="section-title"><i class="fas fa-seedling"></i>Sviluppo</h2>
+  <p>
+    Routine strutturate, supporto educativo personalizzato,
+    inclusione scolastica e sociale favoriscono autonomia e crescita.
+  </p>
+</section>
+
+<section id="terapie">
+  <h2 class="section-title"><i class="fas fa-brain"></i>Terapie</h2>
+  <p>
+    Logopedia, psicomotricità, terapia cognitivo-comportamentale,
+    musicoterapia e integrazione sensoriale.
+  </p>
+</section>
+
+<section id="metodi">
+  <h2 class="section-title"><i class="fas fa-chart-line"></i>Metodi Educativi</h2>
+  <p>
+    ABA, TEACCH e Comunicazione Aumentativa Alternativa (CAA).
+  </p>
+</section>
+
+<section id="inclusione">
+  <h2 class="section-title"><i class="fas fa-handshake"></i>Inclusione</h2>
+  <p>
+    Creare ambienti accoglienti e valorizzare le differenze
+    è fondamentale per una società equa e consapevole.
+  </p>
+</section>
+
+<section id="futuro">
+  <h2 class="section-title"><i class="fas fa-rocket"></i>Futuro</h2>
+  <p>
+    La ricerca neuroscientifica continua a sviluppare tecnologie
+    e strumenti innovativi per migliorare qualità della vita e autonomia.
+  </p>
+</section>
+
+<section id="contatti" class="contact">
+  <h2 class="section-title"><i class="fas fa-envelope"></i>Contattaci</h2>
+
+  <div class="contact-icons">
+    <div>
+      <i class="fas fa-envelope"></i>
+      oltrelesfumature@gmail.com
+    </div>
+
+    <div>
+      <i class="fab fa-instagram"></i>
+      Instagram: oltrelesfumature@gmail.
+    </div>
+  </div>
 </section>
 
 <footer>
-© 2026 Oltre Le Sfumature — Inclusione • Consapevolezza • Ricerca • Innovazione • Crescita • Comunità • Neurodiversità
+© 2026 Oltre Le Sfumature — Inclusione • Consapevolezza • Neurodiversità • Crescita • Ricerca
 </footer>
 
 <script>
 const hamburger = document.getElementById("hamburger");
 const navLinks = document.getElementById("navLinks");
+
 hamburger.addEventListener("click", () => {
-  hamburger.classList.toggle("active");
   navLinks.classList.toggle("active");
-});
-document.querySelectorAll("#navLinks a").forEach(link => {
-  link.addEventListener("click", () => {
-    hamburger.classList.remove("active");
-    navLinks.classList.remove("active");
-  });
 });
 </script>
 
 </body>
 </html>
-
