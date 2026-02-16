@@ -9,176 +9,255 @@
 
 <style>
 
-/* ---------------- RESET ---------------- */
+/* =========================== RESET =========================== */
 
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-}
-
-html{
-scroll-behavior:smooth;
-}
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
 
 body{
 font-family:'Poppins',sans-serif;
-background:
-radial-gradient(circle at 10% 20%,#dbeeff,transparent 40%),
-radial-gradient(circle at 90% 80%,#eaf4ff,transparent 40%),
-linear-gradient(135deg,#f6fbff,#ffffff);
-color:#111;
-line-height:1.9;
+background:linear-gradient(-45deg,#041c3d,#0a2f6b,#114aad,#1f6fe0,#4fa3ff,#1f6fe0,#114aad,#041c3d);
+background-size:600% 600%;
+animation:gradientMove 20s ease infinite;
+color:white;
+line-height:1.8;
 overflow-x:hidden;
 }
 
-/* ---------------- MENU ---------------- */
+@keyframes gradientMove{
+0%{background-position:0% 50%;}
+50%{background-position:100% 50%;}
+100%{background-position:0% 50%;}
+}
+
+/* =========================== MENU =========================== */
 
 nav{
 position:fixed;
 top:0;
 width:100%;
-background:linear-gradient(90deg,#bfe0ff,#d7ecff);
 display:flex;
 justify-content:center;
-gap:35px;
+gap:30px;
 padding:18px;
+background:rgba(255,255,255,0.12);
+backdrop-filter:blur(20px);
 z-index:1000;
-box-shadow:0 10px 40px rgba(0,0,0,0.1);
+box-shadow:0 0 40px rgba(255,255,255,0.2);
 }
 
 nav a{
+color:white;
 text-decoration:none;
-color:#0e4aa8;
 font-weight:600;
-font-size:0.95rem;
-padding:10px 18px;
-border-radius:30px;
-transition:all .4s ease;
+padding:10px 20px;
+border-radius:40px;
+transition:0.3s;
 }
 
 nav a:hover{
 background:white;
-box-shadow:0 0 25px rgba(42,110,219,0.7);
+color:#0a2f6b;
+box-shadow:0 0 25px white;
 transform:scale(1.1);
 }
 
-/* ---------------- HERO ---------------- */
+/* =========================== HERO =========================== */
 
 .hero{
 min-height:100vh;
-padding:240px 120px 160px 120px;
 display:flex;
 flex-direction:column;
 justify-content:center;
+align-items:center;
+padding-top:170px;
+text-align:center;
 }
 
-.top-layout{
+.title-row{
 display:flex;
-justify-content:space-between;
-align-items:flex-start;
-gap:100px;
+align-items:center;
+gap:40px;
+justify-content:center;
 flex-wrap:wrap;
 }
 
 .logo{
-width:260px;
-margin-bottom:40px;
+width:200px;
+filter:drop-shadow(0 0 40px white);
 }
 
 .main-title{
 font-family:'Cinzel',serif;
 font-size:6rem;
-font-weight:800;
-line-height:0.95;
-background:linear-gradient(90deg,#2a6edb,#4e8cff,#2a6edb);
+line-height:1;
+background:linear-gradient(90deg,#ffffff,#bcd9ff,#ffffff);
 -webkit-background-clip:text;
 -webkit-text-fill-color:transparent;
-text-shadow:
-0 0 40px rgba(42,110,219,0.9),
-0 0 120px rgba(42,110,219,0.8),
-0 0 220px rgba(42,110,219,0.7);
-margin-bottom:70px;
+text-shadow:0 0 60px white,0 0 180px #8ec5ff;
 animation:glow 4s infinite alternate;
 }
 
 @keyframes glow{
-from{text-shadow:0 0 40px rgba(42,110,219,0.6)}
-to{text-shadow:0 0 260px rgba(42,110,219,1)}
+from{text-shadow:0 0 60px white;}
+to{text-shadow:0 0 300px #8ec5ff;}
 }
 
-.question-box{
-background:#cfe6ff;
-padding:40px 55px;
-border-radius:50px;
-box-shadow:0 0 60px rgba(42,110,219,0.4);
-font-size:1.6rem;
-font-weight:600;
-color:#0e4aa8;
-margin-bottom:90px;
-max-width:850px;
+.question{
+margin-top:80px;
+font-size:2rem;
+background:rgba(255,255,255,0.2);
+padding:30px 70px;
+border-radius:80px;
+box-shadow:0 0 60px rgba(255,255,255,0.8);
+max-width:1000px;
 }
 
-.subtitle-box{
-background:#d9ecff;
-padding:18px 35px;
-border-radius:40px;
+/* =========================== SEZIONI =========================== */
+
+.section{
+padding:170px 8%;
+}
+
+.section-title{
+font-size:2.2rem;
+margin-bottom:80px;
+text-align:center;
 display:inline-block;
-margin-bottom:40px;
-font-weight:600;
-font-size:1.1rem;
-color:#0e4aa8;
-box-shadow:0 20px 60px rgba(42,110,219,0.2);
+padding:20px 60px;
+border-radius:60px;
+background:linear-gradient(90deg,#1f6fe0,#4fa3ff);
+box-shadow:0 0 70px #4fa3ff;
+}
+
+/* =========================== GRIGLIA =========================== */
+
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+gap:50px;
 }
 
 .card{
-background:white;
-padding:100px;
-border-radius:60px;
-box-shadow:0 90px 260px rgba(0,0,0,0.08);
-margin-bottom:150px;
-}
-
-/* BOX COLORATI */
-
-.box{
-padding:70px;
+background:rgba(255,255,255,0.18);
+padding:50px;
 border-radius:50px;
-margin-bottom:80px;
-box-shadow:0 50px 160px rgba(0,0,0,0.08);
+box-shadow:0 0 40px rgba(255,255,255,0.5);
+transition:0.4s;
 }
 
-.blue{background:#eaf3ff;}
-.green{background:#e8fff3;}
-.purple{background:#f3eaff;}
-.orange{background:#fff3e6;}
-.pink{background:#ffeaf5;}
+.card:hover{
+transform:translateY(-15px) scale(1.05);
+box-shadow:0 0 90px white;
+}
 
-.box h3{
+.card h3{
 margin-bottom:25px;
-font-size:1.3rem;
-font-weight:600;
-color:#0e4aa8;
+font-size:1.4rem;
 }
 
-.section{
-padding:170px 120px;
+/* =========================== METODI SPECIALI =========================== */
+
+.methods{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:60px;
+}
+
+.method-box{
+background:linear-gradient(135deg,#ffffff,#dbeeff);
+color:#0a2f6b;
+padding:60px;
+border-radius:60px;
+box-shadow:0 0 80px white;
+transition:0.4s;
+}
+
+.method-box:hover{
+transform:scale(1.05);
+box-shadow:0 0 120px white;
+}
+
+.method-box h3{
+margin-bottom:25px;
+font-size:1.6rem;
+}
+
+/* =========================== NUVOLA CONTATTI =========================== */
+
+.contact-section{
+display:flex;
+justify-content:center;
+align-items:center;
+padding:220px 8%;
+}
+
+.cloud{
+position:relative;
+background:white;
+color:#0a2f6b;
+padding:100px 140px;
+border-radius:150px;
+box-shadow:0 0 120px white;
+text-align:center;
+max-width:1000px;
+}
+
+.cloud::before,
+.cloud::after{
+content:"";
+position:absolute;
+background:white;
+border-radius:50%;
+}
+
+.cloud::before{
+width:180px;
+height:180px;
+top:-60px;
+left:150px;
+}
+
+.cloud::after{
+width:220px;
+height:220px;
+bottom:-80px;
+right:200px;
+}
+
+.cloud h2{
+margin-bottom:40px;
+font-size:2.5rem;
+}
+
+.cloud button{
+margin-top:40px;
+padding:20px 60px;
+border:none;
+border-radius:60px;
+background:#114aad;
+color:white;
+font-weight:600;
+cursor:pointer;
+transition:0.3s;
+}
+
+.cloud button:hover{
+background:#041c3d;
+transform:scale(1.1);
+box-shadow:0 0 40px #114aad;
 }
 
 footer{
-background:#2a6edb;
-color:white;
 text-align:center;
-padding:120px;
-font-weight:600;
-letter-spacing:2px;
-margin-top:120px;
+padding:80px;
+font-weight:500;
 }
 
-@media(max-width:1000px){
-.top-layout{flex-direction:column;}
-.main-title{font-size:4rem;}
-.logo{width:200px;}
+@media(max-width:900px){
+.main-title{font-size:3.5rem;}
+.logo{width:130px;}
+.methods{grid-template-columns:1fr;}
 }
 
 </style>
@@ -187,186 +266,78 @@ margin-top:120px;
 <body>
 
 <nav>
-<a href="#cos">Cos'è</a>
+<a href="#definizione">Cos'è</a>
 <a href="#sviluppo">Sviluppo</a>
 <a href="#cause">Cause</a>
-<a href="#aba">ABA</a>
-<a href="#teacch">TEACCH</a>
+<a href="#metodi">Metodi</a>
 <a href="#terapie">Terapie</a>
 <a href="#figure">Figure</a>
+<a href="#contatti">Contatti</a>
 </nav>
 
-<section class="hero" id="cos">
+<section class="hero" id="definizione">
 
-<div class="top-layout">
-
-<div>
-
+<div class="title-row">
 <img src="logo.png" class="logo">
-
-<h1 class="main-title">
-Oltre Le<br>Sfumature
-</h1>
-
-<div class="question-box">
-Cos'è lo Spettro Autistico e come possiamo sostenere ogni bambino nel suo percorso di crescita?
+<h1 class="main-title">Oltre Le<br>Sfumature</h1>
 </div>
 
-<div class="subtitle-box">Definizione Approfondita</div>
+<div class="question">
+Cos'è lo Spettro Autistico? Definizione completa, caratteristiche, cause, sviluppo, metodi educativi, terapie e figure professionali.
+</div>
 
+</section>
+
+<section class="section">
+<div class="section-title">Definizione dello Spettro Autistico</div>
+<div class="grid">
 <div class="card">
-Il Disturbo dello Spettro Autistico (ASD) è una condizione del neurosviluppo caratterizzata da differenze nella comunicazione sociale, nei comportamenti e negli interessi. 
-Si manifesta nei primi anni di vita e accompagna la persona lungo tutto l’arco dell’esistenza. 
-La parola “spettro” indica la grande variabilità con cui si presenta: alcune persone possono avere bisogni di supporto elevati, altre possono essere autonome ma presentare difficoltà nelle relazioni sociali o nella gestione sensoriale.
-<br><br>
-L’autismo non è una malattia da guarire, ma una condizione neurobiologica che richiede comprensione, accoglienza e interventi personalizzati. 
-Ogni bambino possiede potenzialità uniche che possono emergere attraverso percorsi educativi mirati e un ambiente inclusivo.
+<h3>Cos'è l'Autismo</h3>
+Disturbo del neurosviluppo che influenza comunicazione, interazione sociale e comportamento.
+</div>
+<div class="card">
+<h3>Perché “Spettro”</h3>
+Ampia variabilità nei livelli di autonomia e bisogni di supporto.
+</div>
+<div class="card">
+<h3>Neurodiversità</h3>
+Valorizzazione delle differenze neurologiche come parte della diversità umana.
+</div>
+</div>
+</section>
+
+<section class="section" id="metodi">
+<div class="section-title">Metodi Educativi</div>
+
+<div class="methods">
+
+<div class="method-box">
+<h3>ABA - Applied Behavior Analysis</h3>
+Approccio scientifico basato sull’analisi del comportamento.
+Utilizza rinforzo positivo, raccolta dati continua, obiettivi misurabili.
+Intervento intensivo e personalizzato.
+</div>
+
+<div class="method-box">
+<h3>TEACCH</h3>
+Approccio strutturato che utilizza supporti visivi,
+organizzazione degli spazi e routine prevedibili.
+Favorisce autonomia e comprensione.
 </div>
 
 </div>
 
-<div class="box blue" style="max-width:420px;">
-<h3>Dove Ci Trovi</h3>
-Centro Specializzato Neurodiversità<br><br>
+</section>
+
+<section class="contact-section" id="contatti">
+<div class="cloud">
+<h2>Contattaci</h2>
+Centro Oltre Le Sfumature<br><br>
 Supporto educativo e terapeutico personalizzato<br><br>
 📞 +39 000 000000<br>
-📧 info@oltrelesfumature.it
+📧 info@oltrelesfumature.it<br>
+<button>Prenota una Consulenza</button>
 </div>
-
-</div>
-
-</section>
-
-<section class="section" id="sviluppo">
-
-<div class="subtitle-box">Sviluppo del Bambino</div>
-
-<div class="box green">
-<h3>Prime Manifestazioni</h3>
-I segnali possono emergere tra i 12 e i 36 mesi. Possono includere ridotto contatto visivo, mancata risposta al nome, difficoltà nel gioco simbolico, uso limitato del linguaggio o presenza di movimenti ripetitivi.
-</div>
-
-<div class="box green">
-<h3>Comunicazione</h3>
-Alcuni bambini sviluppano il linguaggio verbale, altri utilizzano comunicazione aumentativa alternativa (CAA). È fondamentale lavorare su intenzionalità comunicativa, comprensione e reciprocità sociale.
-</div>
-
-<div class="box green">
-<h3>Area Sociale</h3>
-Possono esserci difficoltà nell’interpretare emozioni, espressioni facciali, tono della voce e regole implicite delle interazioni.
-</div>
-
-</section>
-
-<section class="section" id="cause">
-
-<div class="subtitle-box">Cause e Fattori</div>
-
-<div class="box purple">
-<h3>Fattori Genetici</h3>
-La ricerca scientifica evidenzia una forte componente genetica. Non esiste un singolo gene responsabile ma una combinazione di varianti genetiche.
-</div>
-
-<div class="box purple">
-<h3>Fattori Neurobiologici</h3>
-Differenze nella connettività cerebrale e nell’elaborazione sensoriale possono influenzare il modo in cui il bambino percepisce e interpreta il mondo.
-</div>
-
-<div class="box purple">
-<h3>Fattori Ambientali</h3>
-Alcuni fattori prenatali possono contribuire, ma è importante sottolineare che i vaccini NON causano autismo.
-</div>
-
-</section>
-
-<section class="section" id="aba">
-
-<div class="subtitle-box">Metodo ABA</div>
-
-<div class="box orange">
-<h3>Cos'è l'ABA</h3>
-L’Applied Behavior Analysis è un approccio scientifico basato sull’analisi del comportamento. 
-Si fonda sull’osservazione sistematica, sulla misurazione dei comportamenti e sull’utilizzo del rinforzo positivo.
-</div>
-
-<div class="box orange">
-<h3>Obiettivi</h3>
-Sviluppo del linguaggio, abilità sociali, autonomie personali, riduzione dei comportamenti problema.
-</div>
-
-<div class="box orange">
-<h3>Come Funziona</h3>
-Si lavora per piccoli passi (task analysis), con obiettivi misurabili, raccolta dati continua e adattamento costante del programma.
-</div>
-
-</section>
-
-<section class="section" id="teacch">
-
-<div class="subtitle-box">Metodo TEACCH</div>
-
-<div class="box pink">
-<h3>Strutturazione Visiva</h3>
-Organizzazione chiara degli spazi, utilizzo di supporti visivi, agende giornaliere, etichette.
-</div>
-
-<div class="box pink">
-<h3>Autonomia</h3>
-Favorisce indipendenza e comprensione delle routine.
-</div>
-
-<div class="box pink">
-<h3>Personalizzazione</h3>
-Ogni programma è adattato al profilo cognitivo e sensoriale del bambino.
-</div>
-
-</section>
-
-<section class="section" id="terapie">
-
-<div class="subtitle-box">Terapie</div>
-
-<div class="box blue">
-<h3>Logopedia</h3>
-Sviluppo del linguaggio verbale e non verbale.
-</div>
-
-<div class="box blue">
-<h3>Terapia Occupazionale</h3>
-Sviluppo autonomie e integrazione sensoriale.
-</div>
-
-<div class="box blue">
-<h3>Psicomotricità</h3>
-Coordinazione, regolazione emotiva e consapevolezza corporea.
-</div>
-
-</section>
-
-<section class="section" id="figure">
-
-<div class="subtitle-box">Figure Professionali</div>
-
-<div class="box green">
-<h3>Neuropsichiatra Infantile</h3>
-Diagnosi e supervisione clinica.
-</div>
-
-<div class="box green">
-<h3>Psicologo</h3>
-Supporto emotivo e comportamentale.
-</div>
-
-<div class="box green">
-<h3>Educatore Specializzato</h3>
-Intervento educativo personalizzato.
-</div>
-
-<div class="box green">
-<h3>Logopedista</h3>
-Intervento sulla comunicazione.
-</div>
-
 </section>
 
 <footer>
