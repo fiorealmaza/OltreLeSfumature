@@ -4,489 +4,500 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Oltre Le Sfumature</title>
-<link rel="stylesheet" href="style.css">
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-</head>
 
-<body>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
 
-<header class="navbar">
-    <div class="logo-area">
-        <img src="logo.png" class="logo">
-        <h1>Oltre Le Sfumature</h1>
-    </div>
-
-    <nav>
-        <a href="index.html">Home</a>
-        <a href="aba.html">Metodo ABA</a>
-        <a href="teacch.html">Metodo TEACCH</a>
-        <a href="contatti.html">Contatti</a>
-    </nav>
-</header>
-
-<section class="hero">
-    <h2>Comprendere, Supportare, Crescere</h2>
-    <p>
-        Informazione, consapevolezza e strumenti concreti per sostenere 
-        bambini e famiglie nel percorso educativo.
-    </p>
-    <a href="aba.html" class="btn-primary">Scopri di più</a>
-</section>
-
-<div class="wave"></div>
-
-<section class="info">
-    <div class="card">
-        <h3>Metodo ABA</h3>
-        <p>
-        Approccio basato sull’analisi del comportamento per sviluppare 
-        abilità comunicative, sociali e cognitive.
-        </p>
-        <a href="aba.html" class="btn-secondary">Approfondisci</a>
-    </div>
-
-    <div class="card">
-        <h3>Metodo TEACCH</h3>
-        <p>
-        Metodo strutturato che utilizza supporti visivi e organizzazione 
-        dell’ambiente per favorire autonomia.
-        </p>
-        <a href="teacch.html" class="btn-secondary">Approfondisci</a>
-    </div>
-</section>
-
-<footer>
-<p>© 2026 Oltre Le Sfumature - Tutti i diritti riservati</p>
-</footer>
-
-</body>
-</html>
+<style>
 *{
 margin:0;
 padding:0;
 box-sizing:border-box;
 font-family:'Poppins', sans-serif;
+scroll-behavior:smooth;
 }
 
 body{
-background:linear-gradient(180deg,#0d3b66,#001f3f);
-color:white;
+background: linear-gradient(135deg, #d0f0ff, #a2d2ff, #7bbcff);
+background-size: 400% 400%;
+animation: gradientMove 15s ease infinite;
+color:#1a1a1a;
 overflow-x:hidden;
+position:relative;
 }
 
-/* NAVBAR */
+@keyframes gradientMove {
+0% {background-position: 0% 50%;}
+50% {background-position: 100% 50%;}
+100% {background-position: 0% 50%;}
+}
 
-.navbar{
+/* HEADER */
+header{
 display:flex;
 justify-content:space-between;
 align-items:center;
-padding:20px 60px;
-background:rgba(0,0,0,0.3);
-backdrop-filter:blur(10px);
+padding:30px 70px;
+background:rgba(255,255,255,0.85);
+backdrop-filter:blur(15px);
 position:sticky;
 top:0;
 z-index:1000;
+box-shadow:0 15px 50px rgba(0,0,0,0.08);
 }
 
-.logo-area{
+.logo-container{
 display:flex;
 align-items:center;
-gap:15px;
+gap:20px;
 }
 
 .logo{
-width:70px;
+height:85px;
 }
 
-.navbar h1{
-font-size:24px;
-}
-
-.navbar nav a{
-color:white;
-margin-left:30px;
-text-decoration:none;
-font-weight:500;
-transition:0.3s;
-}
-
-.navbar nav a:hover{
-color:#4cc9f0;
+header h1{
+font-size:48px;
+font-weight:800;
+background: linear-gradient(90deg,#0066cc,#4da6ff);
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
 }
 
 /* HERO */
-
 .hero{
 text-align:center;
-padding:120px 20px;
+padding:160px 20px 120px 20px;
 }
 
 .hero h2{
-font-size:42px;
-margin-bottom:20px;
+font-size:52px;
+margin-bottom:25px;
+color:#003d80;
 }
 
 .hero p{
-max-width:700px;
+font-size:20px;
+max-width:800px;
 margin:auto;
-margin-bottom:40px;
-opacity:0.9;
+margin-bottom:30px;
+line-height:1.8;
 }
 
-.btn-primary{
-background:linear-gradient(45deg,#3a86ff,#00b4ff);
-padding:15px 40px;
+.hero-btn{
+display:inline-block;
+padding:18px 40px;
+background:linear-gradient(45deg,#4da6ff,#0066cc);
+color:white;
 border-radius:50px;
 text-decoration:none;
-color:white;
 font-weight:600;
-transition:0.3s;
+transition:0.4s;
 box-shadow:0 15px 40px rgba(0,0,0,0.3);
-}
-
-.btn-primary:hover{
-transform:translateY(-5px);
-}
-
-/* WAVE */
-
-.wave{
 position:relative;
-height:100px;
-background:white;
-border-top-left-radius:50% 100%;
-border-top-right-radius:50% 100%;
+overflow:hidden;
 }
 
-/* INFO SECTION */
+.hero-btn::after{
+content:"";
+position:absolute;
+top:0;
+left:-100%;
+width:100%;
+height:100%;
+background:rgba(255,255,255,0.3);
+transition:0.5s;
+}
 
-.info{
-background:white;
-padding:100px 40px;
+.hero-btn:hover::after{
+left:100%;
+}
+
+/* MENU */
+.menu-toggle{
+width:40px;
+height:28px;
 display:flex;
-justify-content:center;
-gap:50px;
-flex-wrap:wrap;
-color:#001f3f;
+flex-direction:column;
+justify-content:space-between;
+cursor:pointer;
 }
 
-.card{
+.menu-toggle span{
+height:4px;
+background:#0066cc;
+border-radius:4px;
+transition:0.4s;
+}
+
+.menu-toggle.active span:nth-child(1){
+transform:rotate(45deg) translate(6px,6px);
+}
+.menu-toggle.active span:nth-child(2){
+opacity:0;
+}
+.menu-toggle.active span:nth-child(3){
+transform:rotate(-45deg) translate(7px,-7px);
+}
+
+.overlay{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,0.4);
+opacity:0;
+visibility:hidden;
+transition:0.4s;
+z-index:900;
+}
+
+.overlay.active{
+opacity:1;
+visibility:visible;
+}
+
+.side-menu{
+position:fixed;
+top:0;
+right:-320px;
+width:300px;
+height:100%;
 background:white;
-padding:50px;
-width:350px;
-border-radius:25px;
-border:4px solid;
-border-image: linear-gradient(45deg,#3a86ff,#00b4ff,#4cc9f0) 1;
-box-shadow:0 0 40px rgba(0,0,0,0.1);
-text-align:center;
+padding:120px 40px;
+transition:0.5s cubic-bezier(.77,0,.18,1);
+z-index:1001;
+box-shadow:-10px 0 40px rgba(0,0,0,0.15);
+}
+
+.side-menu.active{
+right:0;
+}
+
+.side-menu a{
+display:block;
+margin-bottom:25px;
+text-decoration:none;
+font-weight:600;
+color:#0066cc;
 transition:0.3s;
+}
+
+.side-menu a:hover{
+color:#003d80;
+}
+
+/* SECTIONS */
+.section{
+padding:120px 70px;
+max-width:1200px;
+margin:auto;
+}
+
+.section h2{
+font-size:38px;
+margin-bottom:40px;
+color:#003d80;
+}
+
+/* CARD */
+.card{
+background:rgba(255,255,255,0.85);
+backdrop-filter:blur(12px);
+padding:40px;
+border-radius:25px;
+margin-bottom:35px;
+line-height:1.9;
+box-shadow:0 20px 60px rgba(0,0,0,0.12);
+transition:0.4s;
+position:relative;
+overflow:hidden;
+}
+
+.card::before{
+content:"";
+position:absolute;
+top:-50%;
+left:-50%;
+width:200%;
+height:200%;
+background: radial-gradient(circle, rgba(77,166,255,0.2), transparent 70%);
+transform: rotate(25deg);
+transition:0.5s;
 }
 
 .card:hover{
 transform:translateY(-10px);
 }
 
-.btn-secondary{
-display:inline-block;
-margin-top:20px;
-padding:12px 30px;
-background:#3a86ff;
-color:white;
-border-radius:40px;
-text-decoration:none;
+.card:hover::before{
+transform: rotate(0deg);
 }
 
-/* FOOTER */
-
-footer{
-text-align:center;
-padding:40px;
-background:#001f3f;
-}
-<!DOCTYPE html>
-<html lang="it">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Contatti - Oltre Le Sfumature</title>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-
-<style>
-
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:'Poppins', sans-serif;
+/* REVEAL */
+.reveal{
+opacity:0;
+transform:translateY(60px);
+transition: all 1s ease;
 }
 
-body{
-background:linear-gradient(180deg,#0d3b66,#001f3f);
-color:white;
-overflow-x:hidden;
-}
-
-/* NAVBAR */
-
-.navbar{
-display:flex;
-justify-content:space-between;
-align-items:center;
-padding:20px 60px;
-background:rgba(0,0,0,0.3);
-backdrop-filter:blur(10px);
-position:sticky;
-top:0;
-}
-
-.logo-area{
-display:flex;
-align-items:center;
-gap:15px;
-}
-
-.logo{
-width:70px;
-}
-
-.navbar nav a{
-color:white;
-margin-left:30px;
-text-decoration:none;
-font-weight:500;
-transition:0.3s;
-}
-
-.navbar nav a:hover{
-color:#4cc9f0;
-}
-
-/* HERO */
-
-.contact-hero{
-text-align:center;
-padding:100px 20px;
-}
-
-.contact-hero h2{
-font-size:40px;
-margin-bottom:15px;
+.reveal.active{
+opacity:1;
+transform:translateY(0);
 }
 
 /* WAVE */
-
 .wave{
-position:relative;
-height:100px;
-background:white;
-border-top-left-radius:50% 100%;
-border-top-right-radius:50% 100%;
-}
-
-/* SECTION */
-
-.contact-section{
-background:white;
-color:#001f3f;
-padding:100px 20px;
-text-align:center;
-}
-
-/* BOX MODULO */
-
-.contact-box{
-background:white;
-padding:60px;
-border-radius:25px;
-max-width:800px;
-margin:50px auto;
-border:4px solid;
-border-image: linear-gradient(45deg,#3a86ff,#00b4ff,#4cc9f0) 1;
-box-shadow:0 0 60px rgba(0,180,255,0.3);
-}
-
-.contact-box h3{
-font-size:28px;
-margin-bottom:15px;
-}
-
-.contact-box p{
-margin-bottom:40px;
-}
-
-.contact-form input,
-.contact-form textarea{
 width:100%;
-padding:18px;
-margin-bottom:25px;
-border-radius:15px;
-border:2px solid #e0e0e0;
-font-size:16px;
-transition:0.3s;
-}
-
-.contact-form input:focus,
-.contact-form textarea:focus{
-border-color:#3a86ff;
-outline:none;
-box-shadow:0 0 15px rgba(58,134,255,0.3);
-}
-
-.contact-form button{
-background:linear-gradient(45deg,#3a86ff,#00b4ff);
-color:white;
-padding:18px 50px;
-border:none;
-border-radius:50px;
-font-weight:700;
-cursor:pointer;
-transition:0.3s;
-box-shadow:0 15px 40px rgba(0,0,0,0.2);
-}
-
-.contact-form button:hover{
-transform:translateY(-5px);
-}
-
-/* QUADRO BLU FORTE */
-
-.direct-email-box{
-background:#0d3b66;
-color:white;
-padding:70px;
-margin:80px auto;
-border-radius:30px;
-max-width:900px;
-box-shadow:0 0 60px rgba(0,180,255,0.5);
-}
-
-.btn-email{
-display:inline-block;
-margin-top:30px;
-padding:18px 50px;
-background:white;
-color:#0d3b66;
-border-radius:50px;
-font-weight:700;
-text-decoration:none;
-transition:0.3s;
-}
-
-.btn-email:hover{
-transform:scale(1.05);
-}
-
-/* SOCIAL */
-
-.social-box{
+overflow:hidden;
+line-height:0;
 margin-top:80px;
 }
 
-.social-box a{
-color:#3a86ff;
-text-decoration:none;
+.wave svg{
+display:block;
+width:100%;
+height:100px;
+animation: waveMove 8s linear infinite alternate;
 }
 
-/* FOOTER */
+@keyframes waveMove{
+0%{transform:translateX(0);}
+100%{transform:translateX(-50px);}
+}
+
+/* CONTACT */
+.contact-info{
+background:white;
+padding:50px;
+border-radius:30px;
+box-shadow:0 20px 60px rgba(0,0,0,0.12);
+}
 
 footer{
 text-align:center;
-padding:40px;
-background:#001f3f;
+padding:50px;
+background:#1e3c72;
 color:white;
+margin-top:100px;
 }
 
+@media(max-width:900px){
+header, .section{
+padding:40px 25px;
+}
+
+.hero h2{
+font-size:38px;
+}
+
+.logo{
+height:60px;
+}
+}
 </style>
 </head>
 
 <body>
 
-<header class="navbar">
-    <div class="logo-area">
-        <img src="logo.png" class="logo">
-        <h1>Oltre Le Sfumature</h1>
-    </div>
+<header>
+<div class="logo-container">
+<img src="logo.png" alt="Logo" class="logo">
+<h1>Oltre Le Sfumature</h1>
+</div>
 
-    <nav>
-        <a href="index.html">Home</a>
-        <a href="aba.html">Metodo ABA</a>
-        <a href="teacch.html">Metodo TEACCH</a>
-        <a href="contatti.html">Contatti</a>
-    </nav>
+<div class="menu-toggle" id="menuBtn">
+<span></span>
+<span></span>
+<span></span>
+</div>
 </header>
 
-<section class="contact-hero">
-    <h2>Contattaci</h2>
-    <p>Siamo qui per rispondere alle tue domande.</p>
+<div class="overlay" id="overlay"></div>
+
+<div class="side-menu" id="sideMenu">
+<a href="#intro">Cos’è</a>
+<a href="#caratteristiche">Caratteristiche</a>
+<a href="#intervento">Intervento</a>
+<a href="#contatti">Contatti</a>
+</div>
+
+<section class="hero">
+<h2>Comprendere. Supportare. Valorizzare.</h2>
+<p>
+Un percorso di consapevolezza, informazione e inclusione dedicato allo Spettro Autistico.
+Approfondimenti scientifici, strategie educative e supporto familiare.
+</p>
+<p style="opacity:0.8;">
+Informazione scientifica • Inclusione sociale • Supporto educativo • Consapevolezza
+</p>
+<br>
+<a href="#intro" class="hero-btn">Scopri di più</a>
 </section>
 
-<div class="wave"></div>
+<div class="wave">
+<svg viewBox="0 0 1440 150" preserveAspectRatio="none">
+<path fill="#ffffff" d="M0,96L60,90.7C120,85,240,75,360,74.7C480,75,600,85,720,85.3C840,85,960,75,1080,69.3C1200,64,1320,64,1380,64L1440,64L1440,150L0,150Z"></path>
+</svg>
+</div>
+<section class="section" id="intro">
+<h2>Cos’è lo Spettro Autistico</h2>
 
-<section class="contact-section">
+<div class="card reveal">
+<p>
+Il Disturbo dello Spettro Autistico (ASD) è una condizione del neurosviluppo che influenza
+la comunicazione, l’interazione sociale e la percezione sensoriale.
+Viene definito “spettro” perché si manifesta con caratteristiche e livelli di intensità differenti.
+</p>
+<p>
+Ogni persona autistica è unica e possiede abilità, punti di forza e bisogni differenti.
+Comprendere significa valorizzare le differenze e creare ambienti inclusivi.
+</p>
+</div>
+</section>
 
-<div class="contact-box">
-
-<h3>Hai domande o dubbi?</h3>
-<p>Compila il modulo qui sotto e ti risponderemo il prima possibile.</p>
-
-<form action="https://formspree.io/f/mvzbranp" method="POST" class="contact-form">
-
-<input type="email" name="email" placeholder="La tua email" required>
-
-<textarea name="message" rows="6" placeholder="Scrivi qui il tuo messaggio..." required></textarea>
-
-<button type="submit">Invia Messaggio</button>
-
-</form>
-
+<div class="wave">
+<svg viewBox="0 0 1440 150" preserveAspectRatio="none">
+<path fill="#ffffff" d="M0,96L60,90.7C120,85,240,75,360,74.7C480,75,600,85,720,85.3C840,85,960,75,1080,69.3C1200,64,1320,64,1380,64L1440,64L1440,150L0,150Z"></path>
+</svg>
 </div>
 
+<section class="section" id="caratteristiche">
+<h2>Caratteristiche Principali</h2>
 
-<div class="direct-email-box">
-
-<h3>Preferisci scriverci direttamente?</h3>
-
-<p>Clicca qui sotto per inviarci una email.</p>
-
-<a href="mailto:oltrelesfumature@gmail.com?subject=Richiesta informazioni Oltre Le Sfumature"
-class="btn-email">
-Scrivi una Email
-</a>
-
+<div class="card reveal">
+<h3>Comunicazione</h3>
+<p>
+Può variare dall’assenza di linguaggio verbale a un linguaggio avanzato ma con difficoltà pragmatiche.
+</p>
 </div>
 
+<div class="card reveal">
+<h3>Interazione Sociale</h3>
+<p>
+Difficoltà nel comprendere segnali sociali, emozioni e regole implicite della comunicazione.
+</p>
+</div>
 
-<div class="social-box">
+<div class="card reveal">
+<h3>Sensibilità Sensoriale</h3>
+<p>
+Possibile ipersensibilità o iposensibilità a suoni, luci, odori o stimoli tattili.
+</p>
+</div>
 
-<h3>Seguici sui Social</h3>
+</section>
+
+<div class="wave">
+<svg viewBox="0 0 1440 150" preserveAspectRatio="none">
+<path fill="#ffffff" d="M0,96L60,90.7C120,85,240,75,360,74.7C480,75,600,85,720,85.3C840,85,960,75,1080,69.3C1200,64,1320,64,1380,64L1440,64L1440,150L0,150Z"></path>
+</svg>
+</div>
+
+<section class="section" id="intervento">
+<h2>Intervento e Strategie</h2>
+
+<div class="card reveal">
+<p>
+L’intervento deve essere personalizzato e basato su evidenze scientifiche.
+Tra gli approcci più utilizzati troviamo ABA e TEACCH.
+</p>
+</div>
+
+<div class="card reveal">
+<h3>Metodo ABA</h3>
+<p>
+Approccio basato sui principi dell’apprendimento, utilizza rinforzi positivi
+per sviluppare competenze comunicative e sociali.
+</p>
+</div>
+
+<div class="card reveal">
+<h3>Metodo TEACCH</h3>
+<p>
+Basato sulla strutturazione dell’ambiente e sull’utilizzo di supporti visivi
+per favorire autonomia e prevedibilità.
+</p>
+</div>
+
+</section>
+
+<div class="wave">
+<svg viewBox="0 0 1440 150" preserveAspectRatio="none">
+<path fill="#ffffff" d="M0,96L60,90.7C120,85,240,75,360,74.7C480,75,600,85,720,85.3C840,85,960,75,1080,69.3C1200,64,1320,64,1380,64L1440,64L1440,150L0,150Z"></path>
+</svg>
+</div>
+
+<section class="section" id="contatti">
+<h2>Contattaci</h2>
+
+<div class="contact-info reveal">
 
 <p><strong>Email:</strong><br>
-<a href="mailto:oltrelesfumature@gmail.com">
+<a href="mailto:oltrelesfumature@gmail.com" style="color:#0066cc; text-decoration:none;">
 oltrelesfumature@gmail.com
-</a></p>
+</a>
+</p>
+
+<br>
 
 <p><strong>Instagram:</strong><br>
-<a href="https://www.instagram.com/oltrelesfumature" target="_blank">
+<a href="https://www.instagram.com/oltrelesfumature" target="_blank" style="color:#0066cc; text-decoration:none;">
 @oltrelesfumature
-</a></p>
+</a>
+</p>
+
+<br>
 
 <p><strong>TikTok:</strong><br>
-<a href="https://www.tiktok.com/@oltre.le.sfumature" target="_blank">
+<a href="https://www.tiktok.com/@oltre.le.sfumature" target="_blank" style="color:#0066cc; text-decoration:none;">
 @oltre.le.sfumature
-</a></p>
-
-<p><strong>Facebook:</strong><br>
-<a href="https://www.facebook.com/oltrelesfumature" target="_blank">
-oltrelesfumature
-</a></p>
+</a>
+</p>
 
 </div>
-
 </section>
 
 <footer>
-<p>© 2026 Oltre Le Sfumature - Tutti i diritti riservati</p>
+<p>© 2026 Oltre Le Sfumature — Tutti i diritti riservati</p>
 </footer>
+
+<script>
+
+/* MENU */
+const menuBtn = document.getElementById("menuBtn");
+const sideMenu = document.getElementById("sideMenu");
+const overlay = document.getElementById("overlay");
+
+menuBtn.addEventListener("click", () => {
+menuBtn.classList.toggle("active");
+sideMenu.classList.toggle("active");
+overlay.classList.toggle("active");
+});
+
+overlay.addEventListener("click", () => {
+menuBtn.classList.remove("active");
+sideMenu.classList.remove("active");
+overlay.classList.remove("active");
+});
+
+/* REVEAL ON SCROLL */
+function revealOnScroll(){
+const reveals = document.querySelectorAll(".reveal");
+
+reveals.forEach((element)=>{
+const windowHeight = window.innerHeight;
+const elementTop = element.getBoundingClientRect().top;
+
+if(elementTop < windowHeight - 100){
+element.classList.add("active");
+}
+});
+}
+
+window.addEventListener("scroll", revealOnScroll);
+
+</script>
 
 </body>
 </html>
