@@ -15,8 +15,8 @@
 body{
   font-family:'Roboto',sans-serif;
   line-height:1.8;
-  background:#1537b8;
-  color:#ffffff;
+  background:#e0f2fe;
+  color:#0f172a;
   overflow-x:hidden;
 }
 
@@ -42,27 +42,28 @@ header{
 }
 
 .logo-title img{
-  height:65px;
+  height:50px;
   border-radius:12px;
 }
 
 .site-name{
   font-family:'Cinzel',serif;
   font-weight:900;
-  font-size:1.9rem;
-  text-shadow:0 0 15px rgba(255,255,255,0.6);
+  font-size:1.6rem;
+  text-shadow:0 0 10px rgba(255,255,255,0.6);
+  color:white;
 }
 
 nav{
   display:flex;
-  gap:14px;
+  gap:12px;
 }
 
 nav a{
   color:white;
   text-decoration:none;
   font-weight:500;
-  padding:8px 14px;
+  padding:8px 12px;
   border-radius:20px;
   transition:0.3s;
   font-size:0.9rem;
@@ -90,28 +91,29 @@ nav a:hover{
 
 /* ================= HERO ================= */
 .hero{
-  padding:140px 8% 70px 8%;
+  padding:120px 8% 80px 8%;
   text-align:center;
   background:linear-gradient(135deg,#1537b8,#1e4ed8,#3b82f6);
+  color:white;
 }
 
 .hero-content{
   display:flex;
   justify-content:center;
   align-items:center;
-  gap:25px;
+  gap:20px;
   flex-wrap:wrap;
 }
 
 .hero img{
-  height:110px;
-  border-radius:15px;
+  height:100px;
+  border-radius:12px;
 }
 
 .hero h1{
   font-family:'Cinzel',serif;
-  font-size:2.8rem;
-  text-shadow:0 0 25px rgba(255,255,255,0.7);
+  font-size:2.5rem;
+  text-shadow:0 0 20px rgba(255,255,255,0.7);
 }
 
 .hero p{
@@ -124,13 +126,13 @@ nav a:hover{
 
 /* ================= SECTIONS ================= */
 section{
-  padding:90px 8%;
+  padding:80px 8%;
 }
 
 .section-title{
   font-size:1.8rem;
   margin-bottom:35px;
-  border-bottom:2px solid rgba(255,255,255,0.3);
+  border-bottom:2px solid rgba(0,0,0,0.15);
   padding-bottom:8px;
   display:flex;
   align-items:center;
@@ -140,7 +142,7 @@ section{
 .grid{
   display:grid;
   grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-  gap:30px;
+  gap:25px;
   margin-top:30px;
 }
 
@@ -149,60 +151,45 @@ section{
   color:#0f172a;
   padding:25px;
   border-radius:18px;
-  box-shadow:0 6px 25px rgba(0,0,0,0.25);
+  box-shadow:0 6px 25px rgba(0,0,0,0.15);
   transition:0.3s;
+  opacity:0;
+  transform:translateY(30px);
+}
+
+.card.visible{
+  opacity:1;
+  transform:translateY(0);
 }
 
 .card:hover{
-  transform:translateY(-8px);
-  box-shadow:0 0 35px rgba(147,197,253,0.8);
+  transform:translateY(-6px);
+  box-shadow:0 0 35px rgba(147,197,253,0.6);
 }
 
 .card h3{
-  margin-bottom:10px;
+  margin-bottom:12px;
 }
 
 .card i{
-  font-size:1.7rem;
+  font-size:1.5rem;
   margin-bottom:10px;
-  color:#1537b8;
-}
-
-/* ================= CONTACT ================= */
-.contact{
-  text-align:center;
-}
-
-.contact-box{
-  margin-top:30px;
-  display:flex;
-  justify-content:center;
-  gap:40px;
-  flex-wrap:wrap;
-}
-
-.contact-item{
-  background:linear-gradient(145deg,#60a5fa,#93c5fd);
-  color:#0f172a;
-  padding:20px 30px;
-  border-radius:15px;
-  box-shadow:0 4px 20px rgba(0,0,0,0.3);
-}
-
-.contact-item i{
-  font-size:1.4rem;
-  margin-bottom:8px;
   display:block;
   color:#1537b8;
+}
+
+ul{
+  padding-left:20px;
+  margin-top:8px;
 }
 
 /* ================= FOOTER ================= */
 footer{
   text-align:center;
-  padding:60px 20px;
+  padding:50px 20px;
   background:linear-gradient(90deg,#1537b8,#1e4ed8);
   font-size:0.9rem;
-  margin-top:50px;
+  color:white;
 }
 
 /* ================= MOBILE ================= */
@@ -217,6 +204,7 @@ footer{
     width:230px;
     display:none;
     padding:20px;
+    border-radius:0 0 15px 15px;
   }
 
   nav.active{display:flex;}
@@ -239,12 +227,13 @@ footer{
   </div>
 
   <nav id="navLinks">
-    <a href="#perche">Spettro</a>
+    <a href="#cos-e">Cos'è</a>
     <a href="#caratteristiche">Caratteristiche</a>
-    <a href="#cause">Cause</a>
-    <a href="#sviluppo">Sviluppo</a>
-    <a href="#terapie">Terapie</a>
-    <a href="#metodi">Metodi</a>
+    <a href="#diagnosi">Diagnosi</a>
+    <a href="#prognosi">Prognosi</a>
+    <a href="#intervento">Intervento</a>
+    <a href="#aba">ABA</a>
+    <a href="#teacch">TEACCH</a>
     <a href="#contatti">Contatti</a>
   </nav>
 </header>
@@ -261,63 +250,149 @@ footer{
   </p>
 </section>
 
-<section id="metodi">
-  <h2 class="section-title"><i class="fas fa-book"></i>Metodi Educativi e Interventi</h2>
+<!-- ================= SEZIONI COMPLETE ================= -->
 
+<section id="cos-e">
+  <h2 class="section-title"><i class="fas fa-brain"></i>Cos'è l'Autismo</h2>
   <div class="grid">
-
     <div class="card">
-      <i class="fas fa-chart-line"></i>
-      <h3>Metodo ABA</h3>
-      <p>
-        L’Applied Behavior Analysis (ABA) è un approccio scientifico basato sull’analisi del comportamento.
-        Si fonda sull’osservazione sistematica, sulla definizione di obiettivi chiari e sulla misurazione dei progressi.
-      </p>
-      <p>
-        Utilizza il rinforzo positivo per aumentare comportamenti funzionali
-        e ridurre comportamenti problematici.
-        Gli interventi sono personalizzati e suddivisi in piccoli passi,
-        favorendo apprendimento graduale e consolidamento delle competenze.
-      </p>
-      <p>
-        È utilizzato per sviluppare comunicazione, autonomia,
-        abilità sociali e competenze scolastiche.
-      </p>
+      <p>L'autismo è un disturbo del neurosviluppo a genesi multifattoriale che interessa primariamente il Sistema Nervoso Centrale durante la sua organizzazione.</p>
+      <p>È caratterizzato da disfunzioni della maturazione neurobiologica e del funzionamento del SNC.</p>
+      <p>Si tratta di uno spettro variabile che può comprendere sia persone con alto quoziente intellettivo sia con ritardo mentale.</p>
     </div>
+  </div>
+</section>
 
+<section id="caratteristiche">
+  <h2 class="section-title"><i class="fas fa-list"></i>Caratteristiche Principali</h2>
+  <div class="grid">
     <div class="card">
-      <i class="fas fa-th-large"></i>
-      <h3>Metodo TEACCH</h3>
-      <p>
-        Il TEACCH (Treatment and Education of Autistic and related Communication Handicapped Children)
-        è un programma educativo strutturato.
-      </p>
-      <p>
-        Si basa sull’organizzazione visiva degli spazi,
-        sulla prevedibilità delle attività e sull’utilizzo di supporti visivi
-        per facilitare comprensione e autonomia.
-      </p>
-      <p>
-        Promuove indipendenza, riduce ansia e aiuta la persona
-        a comprendere cosa fare, come farlo e quando termina l’attività.
-      </p>
+      <h3>Alterazioni nella comunicazione</h3>
+      <ul>
+        <li>Assenza o ritardo del linguaggio</li>
+        <li>Ecolalia immediata o differita</li>
+        <li>Prosodia monotona o alterata</li>
+        <li>Inversione pronominale</li>
+        <li>Difficoltà a comprendere ironia e scherzo</li>
+        <li>Contatto oculare sfuggente</li>
+      </ul>
     </div>
+    <div class="card">
+      <h3>Comportamenti ripetitivi e stereotipati</h3>
+      <ul>
+        <li>Sfarfallare le mani</li>
+        <li>Dondolarsi</li>
+        <li>Girare su se stessi</li>
+        <li>Camminare sulle punte</li>
+        <li>Rituali e rigidità</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3>Difficoltà nell'interazione sociale</h3>
+      <ul>
+        <li>Scarso interesse per gli altri</li>
+        <li>Assenza di attenzione condivisa</li>
+        <li>Difficoltà di comprensione degli stati mentali</li>
+        <li>Mancanza di condivisione spontanea di emozioni</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3>Punti di forza</h3>
+      <ul>
+        <li>Pensiero visivo</li>
+        <li>Precisione e attenzione ai dettagli</li>
+        <li>Memoria visiva eccellente</li>
+        <li>Conoscenze approfondite su argomenti specifici</li>
+        <li>Talenti artistici o logico-matematici</li>
+      </ul>
+    </div>
+  </div>
+</section>
 
+<section id="diagnosi">
+  <h2 class="section-title"><i class="fas fa-stethoscope"></i>Diagnosi</h2>
+  <div class="grid">
+    <div class="card">
+      <p>La diagnosi è clinica, basata sull’osservazione del comportamento e sulla raccolta dei dati anamnestici.</p>
+      <p>Non esistono test biologici in grado di individuare la sindrome autistica.</p>
+      <p>La diagnosi e il trattamento precoci cambiano la prognosi a lungo termine.</p>
+    </div>
+  </div>
+</section>
+
+<section id="prognosi">
+  <h2 class="section-title"><i class="fas fa-chart-line"></i>Prognosi ed Evoluzione</h2>
+  <div class="grid">
+    <div class="card">
+      <ul>
+        <li>1-2% acquisisce uno stato normale</li>
+        <li>10-15% raggiunge autonomia familiare</li>
+        <li>25-30% necessita sostegno</li>
+        <li>60-70% diventa adulto non autosufficiente</li>
+      </ul>
+      <p>La prognosi dipende fortemente dal grado di funzionamento cognitivo e dalla precocità dell’intervento.</p>
+    </div>
+  </div>
+</section>
+
+<section id="intervento">
+  <h2 class="section-title"><i class="fas fa-hand-holding-medical"></i>Intervento</h2>
+  <div class="grid">
+    <div class="card">
+      <ul>
+        <li>Intervento precoce e intensivo</li>
+        <li>Programma individualizzato</li>
+        <li>Coinvolgimento attivo della famiglia</li>
+        <li>Lavoro di rete</li>
+        <li>Verifiche periodiche</li>
+      </ul>
+      <p>Non esistono metodi miracolosi, ma sistemi di intervento integrati psico-educativi e cognitivo-comportamentali scientificamente validati.</p>
+    </div>
+  </div>
+</section>
+
+<section id="aba">
+  <h2 class="section-title"><i class="fas fa-brain"></i>Metodo ABA</h2>
+  <div class="grid">
+    <div class="card">
+      <p>ABA (Applied Behavior Analysis) utilizza principi comportamentali per costruire repertori comportamentali utili e ridurre quelli problematici.</p>
+      <ul>
+        <li>Intervento altamente individualizzato</li>
+        <li>Insegnamento senza errori</li>
+        <li>Riduzione dei comportamenti problema</li>
+        <li>Incremento delle capacità adattive</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section id="teacch">
+  <h2 class="section-title"><i class="fas fa-chalkboard-teacher"></i>Modello TEACCH</h2>
+  <div class="grid">
+    <div class="card">
+      <p>Il TEACCH è un modello di presa in carico globale che punta sull’organizzazione visiva di spazi, tempi e materiali.</p>
+      <ul>
+        <li>Strutturazione dello spazio</li>
+        <li>Strutturazione del tempo</li>
+        <li>Uso di agende visive</li>
+        <li>Adattamento dell’ambiente</li>
+        <li>Coinvolgimento dei genitori</li>
+      </ul>
+      <p>Obiettivi: incrementare le abilità emergenti e rendere l’ambiente più comprensibile.</p>
+    </div>
   </div>
 </section>
 
 <section id="contatti" class="contact">
-  <h2 class="section-title"><i class="fas fa-envelope"></i>Contattaci</h2>
-
-  <div class="contact-box">
-    <div class="contact-item">
+  <h2 class="section-title"><i class="fas fa-envelope"></i>Contatti</h2>
+  <div class="grid">
+    <div class="card">
       <i class="fas fa-envelope"></i>
-      oltrelesfumature@gmail.com
+      <p>Email: oltrelesfumature@gmail.com</p>
     </div>
-
-    <div class="contact-item">
+    <div class="card">
       <i class="fab fa-instagram"></i>
-      Instagram: oltrelesfumature@gmail.
+      <p>Instagram: @oltrelesfumature</p>
     </div>
   </div>
 </section>
@@ -333,6 +408,17 @@ const navLinks = document.getElementById("navLinks");
 hamburger.addEventListener("click", () => {
   navLinks.classList.toggle("active");
 });
+
+// Animazione fade-in dei card
+const cards = document.querySelectorAll('.card');
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if(entry.isIntersecting){
+      entry.target.classList.add('visible');
+    }
+  });
+},{ threshold: 0.2 });
+cards.forEach(card => observer.observe(card));
 </script>
 
 </body>
