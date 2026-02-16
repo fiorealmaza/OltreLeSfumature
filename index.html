@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Oltre Le Sfumature</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700;800&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
 <style>
 
@@ -28,7 +28,7 @@ radial-gradient(circle at 10% 20%,#dbeeff,transparent 40%),
 radial-gradient(circle at 90% 80%,#eaf4ff,transparent 40%),
 linear-gradient(135deg,#f6fbff,#ffffff);
 color:#111;
-line-height:1.8;
+line-height:1.9;
 overflow-x:hidden;
 }
 
@@ -41,7 +41,7 @@ width:100%;
 background:linear-gradient(90deg,#bfe0ff,#d7ecff);
 display:flex;
 justify-content:center;
-gap:40px;
+gap:35px;
 padding:18px;
 z-index:1000;
 box-shadow:0 10px 40px rgba(0,0,0,0.1);
@@ -63,17 +63,11 @@ box-shadow:0 0 25px rgba(42,110,219,0.7);
 transform:scale(1.1);
 }
 
-nav a:active{
-background:#2a6edb;
-color:white;
-box-shadow:0 0 40px rgba(42,110,219,1);
-}
-
 /* ---------------- HERO ---------------- */
 
 .hero{
 min-height:100vh;
-padding:220px 120px 140px 120px;
+padding:240px 120px 160px 120px;
 display:flex;
 flex-direction:column;
 justify-content:center;
@@ -83,15 +77,18 @@ justify-content:center;
 display:flex;
 justify-content:space-between;
 align-items:flex-start;
-gap:60px;
+gap:100px;
 flex-wrap:wrap;
 }
 
-/* TITOLO */
+.logo{
+width:260px;
+margin-bottom:40px;
+}
 
 .main-title{
 font-family:'Cinzel',serif;
-font-size:6.5rem;
+font-size:6rem;
 font-weight:800;
 line-height:0.95;
 background:linear-gradient(90deg,#2a6edb,#4e8cff,#2a6edb);
@@ -101,8 +98,8 @@ text-shadow:
 0 0 40px rgba(42,110,219,0.9),
 0 0 120px rgba(42,110,219,0.8),
 0 0 220px rgba(42,110,219,0.7);
+margin-bottom:70px;
 animation:glow 4s infinite alternate;
-margin-bottom:40px;
 }
 
 @keyframes glow{
@@ -110,134 +107,63 @@ from{text-shadow:0 0 40px rgba(42,110,219,0.6)}
 to{text-shadow:0 0 260px rgba(42,110,219,1)}
 }
 
-/* DOMANDA SEPARATA */
-
 .question-box{
-background:linear-gradient(135deg,#eaf3ff,#ffffff);
-padding:40px;
-border-radius:40px;
+background:#cfe6ff;
+padding:40px 55px;
+border-radius:50px;
 box-shadow:0 0 60px rgba(42,110,219,0.4);
-font-size:2rem;
-font-weight:700;
-color:#1f55ad;
-margin-bottom:60px;
+font-size:1.6rem;
+font-weight:600;
+color:#0e4aa8;
+margin-bottom:90px;
+max-width:850px;
 }
 
-/* CONTATTI LATERALI PROMO */
-
-.side-contact{
-background:linear-gradient(135deg,#2a6edb,#4e8cff);
-color:white;
-padding:50px;
-border-radius:45px;
-box-shadow:0 60px 200px rgba(42,110,219,0.6);
-max-width:380px;
+.subtitle-box{
+background:#d9ecff;
+padding:18px 35px;
+border-radius:40px;
+display:inline-block;
+margin-bottom:40px;
+font-weight:600;
+font-size:1.1rem;
+color:#0e4aa8;
+box-shadow:0 20px 60px rgba(42,110,219,0.2);
 }
-
-.side-contact h3{
-font-size:1.8rem;
-margin-bottom:25px;
-}
-
-.side-contact p{
-margin-bottom:15px;
-font-weight:500;
-}
-
-.side-contact button{
-margin-top:20px;
-padding:14px 30px;
-border:none;
-border-radius:30px;
-background:white;
-color:#2a6edb;
-font-weight:700;
-cursor:pointer;
-transition:.3s;
-}
-
-.side-contact button:hover{
-transform:scale(1.1);
-box-shadow:0 0 30px rgba(255,255,255,0.9);
-}
-
-/* ---------------- SEZIONI ---------------- */
-
-.section{
-padding:160px 120px;
-}
-
-.section h2{
-text-align:center;
-font-size:3rem;
-margin-bottom:100px;
-color:#2a6edb;
-font-weight:800;
-}
-
-/* CARD GENERALE */
 
 .card{
-background:rgba(255,255,255,0.97);
-padding:90px;
+background:white;
+padding:100px;
 border-radius:60px;
 box-shadow:0 90px 260px rgba(0,0,0,0.08);
-margin-bottom:120px;
-transition:.6s;
+margin-bottom:150px;
 }
 
-.card:hover{
-transform:translateY(-15px);
-box-shadow:0 140px 320px rgba(42,110,219,0.25);
+/* BOX COLORATI */
+
+.box{
+padding:70px;
+border-radius:50px;
+margin-bottom:80px;
+box-shadow:0 50px 160px rgba(0,0,0,0.08);
 }
 
-/* GRID */
+.blue{background:#eaf3ff;}
+.green{background:#e8fff3;}
+.purple{background:#f3eaff;}
+.orange{background:#fff3e6;}
+.pink{background:#ffeaf5;}
 
-.grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
-gap:60px;
+.box h3{
+margin-bottom:25px;
+font-size:1.3rem;
+font-weight:600;
+color:#0e4aa8;
 }
 
-/* BOX COLORATI DIVERSI */
-
-.box-blue{
-background:#eaf3ff;
-padding:60px;
-border-radius:45px;
-box-shadow:0 50px 160px rgba(42,110,219,0.2);
+.section{
+padding:170px 120px;
 }
-
-.box-green{
-background:#e8fff3;
-padding:60px;
-border-radius:45px;
-box-shadow:0 50px 160px rgba(0,180,120,0.2);
-}
-
-.box-purple{
-background:#f3eaff;
-padding:60px;
-border-radius:45px;
-box-shadow:0 50px 160px rgba(140,80,255,0.2);
-}
-
-.box-orange{
-background:#fff3e6;
-padding:60px;
-border-radius:45px;
-box-shadow:0 50px 160px rgba(255,140,0,0.2);
-}
-
-.box-blue h3,
-.box-green h3,
-.box-purple h3,
-.box-orange h3{
-margin-bottom:20px;
-font-size:1.6rem;
-}
-
-/* FOOTER */
 
 footer{
 background:#2a6edb;
@@ -246,12 +172,13 @@ text-align:center;
 padding:120px;
 font-weight:600;
 letter-spacing:2px;
-margin-top:100px;
+margin-top:120px;
 }
 
 @media(max-width:1000px){
 .top-layout{flex-direction:column;}
 .main-title{font-size:4rem;}
+.logo{width:200px;}
 }
 
 </style>
@@ -263,7 +190,8 @@ margin-top:100px;
 <a href="#cos">Cos'è</a>
 <a href="#sviluppo">Sviluppo</a>
 <a href="#cause">Cause</a>
-<a href="#metodi">Metodi</a>
+<a href="#aba">ABA</a>
+<a href="#teacch">TEACCH</a>
 <a href="#terapie">Terapie</a>
 <a href="#figure">Figure</a>
 </nav>
@@ -274,27 +202,35 @@ margin-top:100px;
 
 <div>
 
+<img src="logo.png" class="logo">
+
 <h1 class="main-title">
 Oltre Le<br>Sfumature
 </h1>
 
 <div class="question-box">
-Cos'è lo Spettro Autistico?
+Cos'è lo Spettro Autistico e come possiamo sostenere ogni bambino nel suo percorso di crescita?
 </div>
+
+<div class="subtitle-box">Definizione Approfondita</div>
 
 <div class="card">
-Il Disturbo dello Spettro Autistico è una condizione del neurosviluppo che influenza comunicazione, interazione sociale e comportamento. È definito “spettro” perché comprende un’ampia varietà di caratteristiche e livelli di supporto. Ogni persona autistica è unica: alcune necessitano di sostegno intensivo, altre conducono una vita autonoma con piccoli adattamenti. Non è una malattia, ma una differente modalità di funzionamento neurologico.
+Il Disturbo dello Spettro Autistico (ASD) è una condizione del neurosviluppo caratterizzata da differenze nella comunicazione sociale, nei comportamenti e negli interessi. 
+Si manifesta nei primi anni di vita e accompagna la persona lungo tutto l’arco dell’esistenza. 
+La parola “spettro” indica la grande variabilità con cui si presenta: alcune persone possono avere bisogni di supporto elevati, altre possono essere autonome ma presentare difficoltà nelle relazioni sociali o nella gestione sensoriale.
+<br><br>
+L’autismo non è una malattia da guarire, ma una condizione neurobiologica che richiede comprensione, accoglienza e interventi personalizzati. 
+Ogni bambino possiede potenzialità uniche che possono emergere attraverso percorsi educativi mirati e un ambiente inclusivo.
 </div>
 
 </div>
 
-<div class="side-contact">
+<div class="box blue" style="max-width:420px;">
 <h3>Dove Ci Trovi</h3>
-<p>📍 Centro Specializzato Neurodiversità</p>
-<p>📞 +39 000 000000</p>
-<p>📧 info@oltrelesfumature.it</p>
-<p>Collaboriamo con famiglie, scuole e professionisti.</p>
-<button>Contattaci Ora</button>
+Centro Specializzato Neurodiversità<br><br>
+Supporto educativo e terapeutico personalizzato<br><br>
+📞 +39 000 000000<br>
+📧 info@oltrelesfumature.it
 </div>
 
 </div>
@@ -302,115 +238,135 @@ Il Disturbo dello Spettro Autistico è una condizione del neurosviluppo che infl
 </section>
 
 <section class="section" id="sviluppo">
-<h2>Sviluppo del Bambino</h2>
 
-<div class="grid">
+<div class="subtitle-box">Sviluppo del Bambino</div>
 
-<div class="box-blue">
-<h3>Segnali Precoci</h3>
-Ridotto contatto visivo, mancata risposta al nome, ritardo nel linguaggio, movimenti ripetitivi, difficoltà nel gioco simbolico.
+<div class="box green">
+<h3>Prime Manifestazioni</h3>
+I segnali possono emergere tra i 12 e i 36 mesi. Possono includere ridotto contatto visivo, mancata risposta al nome, difficoltà nel gioco simbolico, uso limitato del linguaggio o presenza di movimenti ripetitivi.
 </div>
 
-<div class="box-green">
-<h3>Importanza della Diagnosi Precoce</h3>
-Una valutazione tempestiva consente di iniziare interventi mirati migliorando comunicazione, autonomia e adattamento sociale.
+<div class="box green">
+<h3>Comunicazione</h3>
+Alcuni bambini sviluppano il linguaggio verbale, altri utilizzano comunicazione aumentativa alternativa (CAA). È fondamentale lavorare su intenzionalità comunicativa, comprensione e reciprocità sociale.
 </div>
 
-<div class="box-purple">
-<h3>Sviluppo Emotivo e Sociale</h3>
-I bambini possono mostrare difficoltà nel comprendere emozioni e regole sociali, ma con supporto adeguato possono sviluppare competenze significative.
+<div class="box green">
+<h3>Area Sociale</h3>
+Possono esserci difficoltà nell’interpretare emozioni, espressioni facciali, tono della voce e regole implicite delle interazioni.
 </div>
 
-</div>
 </section>
 
 <section class="section" id="cause">
-<h2>Cause e Fattori di Rischio</h2>
 
-<div class="grid">
+<div class="subtitle-box">Cause e Fattori</div>
 
-<div class="box-orange">
+<div class="box purple">
 <h3>Fattori Genetici</h3>
-L’autismo ha una forte componente genetica con più geni coinvolti.
+La ricerca scientifica evidenzia una forte componente genetica. Non esiste un singolo gene responsabile ma una combinazione di varianti genetiche.
 </div>
 
-<div class="box-blue">
+<div class="box purple">
+<h3>Fattori Neurobiologici</h3>
+Differenze nella connettività cerebrale e nell’elaborazione sensoriale possono influenzare il modo in cui il bambino percepisce e interpreta il mondo.
+</div>
+
+<div class="box purple">
 <h3>Fattori Ambientali</h3>
-Complicanze in gravidanza o alla nascita possono aumentare il rischio.
+Alcuni fattori prenatali possono contribuire, ma è importante sottolineare che i vaccini NON causano autismo.
 </div>
 
-<div class="box-green">
-<h3>Chiarezza Scientifica</h3>
-Non esiste alcun collegamento tra vaccini e autismo.
-</div>
-
-</div>
 </section>
 
-<section class="section" id="metodi">
-<h2>Metodi Educativi: ABA e TEACCH</h2>
+<section class="section" id="aba">
 
-<div class="grid">
+<div class="subtitle-box">Metodo ABA</div>
 
-<div class="box-purple">
-<h3>Metodo ABA</h3>
-L’Applied Behavior Analysis si basa sull’analisi del comportamento e sul rinforzo positivo. 
-Prevede obiettivi specifici, misurabili e personalizzati. 
-Lavora su comunicazione, abilità sociali, autonomie quotidiane e riduzione di comportamenti problematici. 
-È uno dei metodi più validati scientificamente.
+<div class="box orange">
+<h3>Cos'è l'ABA</h3>
+L’Applied Behavior Analysis è un approccio scientifico basato sull’analisi del comportamento. 
+Si fonda sull’osservazione sistematica, sulla misurazione dei comportamenti e sull’utilizzo del rinforzo positivo.
 </div>
 
-<div class="box-orange">
-<h3>Metodo TEACCH</h3>
-Approccio strutturato che utilizza supporti visivi, organizzazione dello spazio e prevedibilità. 
-Favorisce autonomia, comprensione delle attività e riduzione dell’ansia. 
-Si adatta ai punti di forza visivi tipici di molte persone autistiche.
+<div class="box orange">
+<h3>Obiettivi</h3>
+Sviluppo del linguaggio, abilità sociali, autonomie personali, riduzione dei comportamenti problema.
 </div>
 
+<div class="box orange">
+<h3>Come Funziona</h3>
+Si lavora per piccoli passi (task analysis), con obiettivi misurabili, raccolta dati continua e adattamento costante del programma.
 </div>
+
+</section>
+
+<section class="section" id="teacch">
+
+<div class="subtitle-box">Metodo TEACCH</div>
+
+<div class="box pink">
+<h3>Strutturazione Visiva</h3>
+Organizzazione chiara degli spazi, utilizzo di supporti visivi, agende giornaliere, etichette.
+</div>
+
+<div class="box pink">
+<h3>Autonomia</h3>
+Favorisce indipendenza e comprensione delle routine.
+</div>
+
+<div class="box pink">
+<h3>Personalizzazione</h3>
+Ogni programma è adattato al profilo cognitivo e sensoriale del bambino.
+</div>
+
 </section>
 
 <section class="section" id="terapie">
-<h2>Terapie e Interventi Integrati</h2>
 
-<div class="grid">
+<div class="subtitle-box">Terapie</div>
 
-<div class="box-blue">
+<div class="box blue">
 <h3>Logopedia</h3>
 Sviluppo del linguaggio verbale e non verbale.
 </div>
 
-<div class="box-green">
+<div class="box blue">
 <h3>Terapia Occupazionale</h3>
-Potenzia autonomie quotidiane e integrazione sensoriale.
+Sviluppo autonomie e integrazione sensoriale.
 </div>
 
-<div class="box-purple">
-<h3>Psicoterapia</h3>
-Supporto emotivo e gestione dell’ansia.
+<div class="box blue">
+<h3>Psicomotricità</h3>
+Coordinazione, regolazione emotiva e consapevolezza corporea.
 </div>
 
-<div class="box-orange">
-<h3>Comunicazione Aumentativa Alternativa (CAA)</h3>
-Strumenti visivi e tecnologici per facilitare la comunicazione.
-</div>
-
-</div>
 </section>
 
 <section class="section" id="figure">
-<h2>Figure Professionali Coinvolte</h2>
 
-<div class="grid">
+<div class="subtitle-box">Figure Professionali</div>
 
-<div class="box-blue">Neuropsichiatra Infantile</div>
-<div class="box-green">Psicologo</div>
-<div class="box-purple">Logopedista</div>
-<div class="box-orange">Educatore Professionale</div>
-<div class="box-blue">Insegnante di Sostegno</div>
-<div class="box-green">Terapista Occupazionale</div>
-
+<div class="box green">
+<h3>Neuropsichiatra Infantile</h3>
+Diagnosi e supervisione clinica.
 </div>
+
+<div class="box green">
+<h3>Psicologo</h3>
+Supporto emotivo e comportamentale.
+</div>
+
+<div class="box green">
+<h3>Educatore Specializzato</h3>
+Intervento educativo personalizzato.
+</div>
+
+<div class="box green">
+<h3>Logopedista</h3>
+Intervento sulla comunicazione.
+</div>
+
 </section>
 
 <footer>
