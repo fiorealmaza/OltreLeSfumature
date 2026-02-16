@@ -3,9 +3,9 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Disturbo dello Spettro Autistico</title>
+<title>Autismo</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
 <style>
 
@@ -16,23 +16,49 @@ box-sizing:border-box;
 }
 
 body{
-font-family:'Montserrat',sans-serif;
-background:linear-gradient(to bottom,#f9fbff,#eef3ff);
-color:#222;
+font-family:'Poppins',sans-serif;
+background:linear-gradient(180deg,#f3f6ff,#e6ecff);
+color:#1f3c88;
 overflow-x:hidden;
-scroll-behavior:smooth;
 }
 
-/* ===== HEADER ===== */
+/* NAVBAR */
+
+nav{
+position:fixed;
+top:0;
+width:100%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:20px 10%;
+background:rgba(255,255,255,0.7);
+backdrop-filter:blur(12px);
+z-index:1000;
+box-shadow:0 5px 20px rgba(0,0,0,0.05);
+}
+
+nav a{
+text-decoration:none;
+color:#1f3c88;
+font-weight:500;
+margin-left:30px;
+transition:0.3s;
+}
+
+nav a:hover{
+color:#4a6ed1;
+}
+
+/* HERO */
 
 header{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:180px 10% 120px 10%;
 background:linear-gradient(135deg,#1f3c88,#4a6ed1);
 color:white;
-padding:120px 10%;
-display:flex;
-align-items:center;
-justify-content:space-between;
-flex-wrap:wrap;
 position:relative;
 overflow:hidden;
 }
@@ -40,271 +66,217 @@ overflow:hidden;
 header::before{
 content:"";
 position:absolute;
-width:500px;
-height:500px;
-background:rgba(255,255,255,0.08);
-border-radius:50%;
-top:-200px;
+width:700px;
+height:700px;
+background:radial-gradient(circle,rgba(255,255,255,0.15),transparent 70%);
+top:-250px;
 right:-200px;
 }
 
-.header-text{
-max-width:600px;
+.hero-text{
+max-width:50%;
 z-index:2;
 }
 
-header h1{
-font-size:3.2em;
-font-weight:800;
-margin-bottom:20px;
+.hero-text h1{
+font-size:58px;
+font-weight:700;
+margin-bottom:25px;
 }
 
-header p{
-font-size:1.2em;
+.hero-text p{
+font-size:20px;
 opacity:0.95;
+line-height:1.6;
 }
 
-header img{
-width:340px;
+.hero-logo{
+width:420px;
 animation:float 6s ease-in-out infinite;
+filter:drop-shadow(0 40px 80px rgba(0,0,0,0.4));
 z-index:2;
 }
 
 @keyframes float{
-0%,100%{transform:translateY(0);}
-50%{transform:translateY(-15px);}
+0%{transform:translateY(0px);}
+50%{transform:translateY(-25px);}
+100%{transform:translateY(0px);}
 }
 
-/* ===== NAV ===== */
-
-nav{
-background:white;
-padding:20px;
-text-align:center;
-box-shadow:0 5px 20px rgba(0,0,0,0.05);
-position:sticky;
-top:0;
-z-index:1000;
-}
-
-nav a{
-margin:0 18px;
-text-decoration:none;
-color:#1f3c88;
-font-weight:600;
-position:relative;
-}
-
-nav a::after{
-content:"";
-position:absolute;
-width:0%;
-height:3px;
-bottom:-6px;
-left:0;
-background:#4a6ed1;
-transition:0.3s;
-}
-
-nav a:hover::after{
-width:100%;
-}
-
-/* ===== SECTIONS ===== */
+/* SECTIONS */
 
 section{
-padding:120px 12%;
+padding:120px 10%;
 display:flex;
 align-items:center;
 justify-content:space-between;
 gap:70px;
-flex-wrap:wrap;
 opacity:0;
-transform:translateY(60px);
-transition:all 1s ease;
+transform:translateY(80px);
+transition:all 1.2s ease;
 }
 
-section.show{
+section.visible{
 opacity:1;
 transform:translateY(0);
 }
 
 section:nth-child(even){
-background:#ffffff;
+flex-direction:row-reverse;
+background:white;
 }
 
 .section-text{
 flex:1;
-min-width:280px;
 }
 
 .section-text h2{
-font-size:2.4em;
-color:#1f3c88;
+font-size:42px;
 margin-bottom:25px;
 }
 
-.section-image{
-flex:1;
-min-width:280px;
-position:relative;
+.section-text p{
+font-size:19px;
+line-height:1.7;
 }
 
-.section-image img{
+.section-img{
+flex:1;
+}
+
+.section-img img{
 width:100%;
-border-radius:30px;
-box-shadow:0 25px 60px rgba(0,0,0,0.15);
+border-radius:25px;
+box-shadow:0 30px 60px rgba(0,0,0,0.15);
 transition:0.6s;
 }
 
-.section-image img:hover{
+.section-img img:hover{
 transform:scale(1.05);
 }
 
-/* ===== BOX ===== */
+/* BOX */
+
+.box-container{
+display:flex;
+gap:40px;
+margin-top:40px;
+}
 
 .box{
-background:linear-gradient(145deg,#ffffff,#f0f4ff);
+background:linear-gradient(145deg,#ffffff,#eef3ff);
 padding:35px;
-border-radius:30px;
-box-shadow:0 15px 40px rgba(0,0,0,0.08);
-margin-bottom:25px;
+border-radius:25px;
+box-shadow:0 20px 40px rgba(0,0,0,0.1);
 transition:0.4s;
+flex:1;
+font-weight:500;
 }
 
 .box:hover{
-transform:translateY(-10px);
-box-shadow:0 25px 60px rgba(0,0,0,0.18);
+transform:translateY(-15px);
+box-shadow:0 35px 70px rgba(0,0,0,0.2);
 }
 
-.box h3{
-color:#4a6ed1;
-margin-bottom:15px;
-}
-
-ul{
-padding-left:20px;
-}
-
-li{
-margin-bottom:8px;
-}
-
-/* ===== FOOTER ===== */
+/* FOOTER */
 
 footer{
 background:#1f3c88;
 color:white;
 text-align:center;
-padding:60px;
-margin-top:80px;
-}
-
-/* ===== RESPONSIVE ===== */
-
-@media(max-width:900px){
-header{
-flex-direction:column;
-text-align:center;
-}
-section{
-flex-direction:column;
-}
+padding:50px;
+font-size:15px;
 }
 
 </style>
 </head>
-
 <body>
 
-<header>
-<div class="header-text">
-<h1>Disturbo dello Spettro Autistico</h1>
-<p>Informazioni, caratteristiche e interventi</p>
-</div>
-<img src="logo-autismo.png" alt="Logo Autismo">
-</header>
-
 <nav>
-<a href="#cose">Cos'è</a>
-<a href="#caratteristiche">Caratteristiche</a>
-<a href="#diagnosi">Diagnosi</a>
-<a href="#prognosi">Prognosi</a>
-<a href="#intervento">Intervento</a>
-<a href="#aba">ABA</a>
-<a href="#teacch">TEACCH</a>
+<div><strong>Autismo</strong></div>
+<div>
+<a href="#">Informazioni</a>
+<a href="#">Comunicazione</a>
+<a href="#">Supporto</a>
+</div>
 </nav>
 
-<section id="cose">
+<header>
+<div class="hero-text">
+<h1>Cos'è l'Autismo</h1>
+<p>L'autismo è una condizione del neurosviluppo che influenza comunicazione, comportamento e interazione sociale. Ogni persona nello spettro è unica e possiede caratteristiche e punti di forza distintivi.</p>
+</div>
+
+<img src="logo.png" alt="Logo Autismo" class="hero-logo">
+</header>
+
+<section>
 <div class="section-text">
-<h2>Cos'è l'Autismo</h2>
-<div class="box">
-<p>L'autismo è un disturbo del neurosviluppo caratterizzato da differenze nella comunicazione e nell'interazione sociale e dalla presenza di comportamenti o interessi ristretti e ripetitivi.</p>
-<p>Ogni persona nello spettro è unica per caratteristiche, punti di forza e bisogni di supporto.</p>
+<h2>Comunicazione</h2>
+<p>Le persone con autismo possono comunicare in modo diverso. Alcune utilizzano il linguaggio verbale, altre strumenti alternativi come immagini o dispositivi di comunicazione aumentativa.</p>
+
+<div class="box-container">
+<div class="box">Comunicazione verbale o non verbale</div>
+<div class="box">Uso di immagini e simboli</div>
 </div>
 </div>
-<div class="section-image">
-<img src="https://images.unsplash.com/photo-1503457574462-bd27054394c4">
+
+<div class="section-img">
+<img src="comunicazione.jpg">
 </div>
 </section>
 
-<section id="caratteristiche">
-<div class="section-image">
-<img src="https://images.unsplash.com/photo-1517486808906-6ca8b3f8e1e1">
-</div>
+<section>
 <div class="section-text">
-<h2>Caratteristiche</h2>
+<h2>Comportamento</h2>
+<p>Possono essere presenti comportamenti ripetitivi o interessi specifici intensi. Questi aspetti fanno parte del modo unico di percepire il mondo.</p>
 
-<div class="box">
-<h3>Comunicazione</h3>
-<ul>
-<li>Particolarità nel linguaggio</li>
-<li>Ecolalia</li>
-<li>Difficoltà nell'interpretazione dell'ironia</li>
-<li>Contatto oculare ridotto</li>
-</ul>
+<div class="box-container">
+<div class="box">Routine strutturate</div>
+<div class="box">Sensibilità sensoriale</div>
+</div>
 </div>
 
-<div class="box">
-<h3>Punti di Forza</h3>
-<ul>
-<li>Pensiero visivo</li>
-<li>Grande attenzione ai dettagli</li>
-<li>Memoria eccellente</li>
-<li>Competenze approfondite</li>
-</ul>
-</div>
-
+<div class="section-img">
+<img src="comportamento.jpg">
 </div>
 </section>
 
-<section id="diagnosi">
+<section>
 <div class="section-text">
-<h2>Diagnosi</h2>
-<div class="box">
-<p>La diagnosi è clinica e si basa sull'osservazione del comportamento e della storia evolutiva.</p>
-<p>Una diagnosi precoce favorisce interventi tempestivi e migliori prospettive.</p>
+<h2>Punti di Forza</h2>
+<p>Molte persone nello spettro autistico possiedono capacità straordinarie come attenzione ai dettagli, memoria eccellente, pensiero logico e creatività.</p>
+
+<div class="box-container">
+<div class="box">Creatività</div>
+<div class="box">Pensiero analitico</div>
 </div>
 </div>
-<div class="section-image">
-<img src="https://images.unsplash.com/photo-1581091870627-3b5deeb63b15">
+
+<div class="section-img">
+<img src="punti-forza.jpg">
 </div>
 </section>
 
 <footer>
-<p>Sito informativo sul Disturbo dello Spettro Autistico</p>
+© 2026 Informazione sull'Autismo
 </footer>
 
 <script>
+
 const sections = document.querySelectorAll("section");
+
 window.addEventListener("scroll", () => {
-sections.forEach(sec => {
-const rect = sec.getBoundingClientRect();
-if(rect.top < window.innerHeight - 100){
-sec.classList.add("show");
+sections.forEach(section => {
+const position = section.getBoundingClientRect().top;
+const screenHeight = window.innerHeight;
+
+if(position < screenHeight - 120){
+section.classList.add("visible");
 }
 });
 });
+
 </script>
 
 </body>
