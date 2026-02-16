@@ -3,132 +3,186 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Fondazione O.L.S – Oltre Le Sfumature</title>
+<title>Fondazione O.L.S – Disturbo dello Spettro Autistico</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 
 <style>
 
+/* RESET */
 *{margin:0;padding:0;box-sizing:border-box;scroll-behavior:smooth;}
 
 body{
-font-family:'Poppins',sans-serif;
-background:#F2F6FF;
-color:#1F2937;
-line-height:1.8;
+font-family:'Inter',sans-serif;
+background:linear-gradient(135deg,#eef2ff,#f8fbff);
+color:#1e293b;
+line-height:1.9;
+overflow-x:hidden;
 }
 
 /* NAV */
-
 nav{
 position:fixed;
 top:0;
 width:100%;
-background:white;
-padding:18px 8%;
+padding:20px 8%;
 display:flex;
 justify-content:flex-end;
-box-shadow:0 2px 10px rgba(0,0,0,0.05);
+background:rgba(255,255,255,0.85);
+backdrop-filter:blur(12px);
+box-shadow:0 4px 25px rgba(0,0,0,0.05);
 z-index:1000;
 }
 
 nav a{
 margin-left:25px;
 text-decoration:none;
-color:#2F5FD0;
+color:#2f5fd0;
 font-weight:500;
+transition:0.3s;
 }
+
+nav a:hover{color:#1e3a8a;}
 
 /* HERO */
-
 .hero{
-margin-top:90px;
-padding:80px 8% 40px 8%;
-text-align:center;
+height:25vh;
+min-height:250px;
+display:flex;
+align-items:center;
+justify-content:space-between;
+padding:0 8%;
+margin-top:100px;
+background:white;
+border-radius:25px;
+box-shadow:0 25px 70px rgba(0,0,0,0.08);
 }
+
+.hero-text{width:70%;}
 
 .hero h1{
 font-family:'Playfair Display',serif;
 font-size:3rem;
-color:#2F5FD0;
-margin-bottom:20px;
+color:#2f5fd0;
 }
 
-/* FASCIA BLU */
-
-.blue-bar{
-background:#2F5FD0;
-color:white;
-padding:25px;
+.hero p{
+margin-top:12px;
+color:#475569;
 font-size:1.1rem;
-letter-spacing:1px;
 }
+
+.hero img{width:160px;}
 
 /* SECTIONS */
-
 section{
-padding:90px 8%;
+padding:110px 8%;
+opacity:0;
+transform:translateY(40px);
+transition:all 1s ease;
 }
 
-.container{
-max-width:1200px;
-margin:auto;
+section.show{
+opacity:1;
+transform:translateY(0);
 }
+
+.container{max-width:1200px;margin:auto;}
 
 h2{
 font-family:'Playfair Display',serif;
-font-size:2.2rem;
-color:#2F5FD0;
+font-size:2.4rem;
+color:#2f5fd0;
+margin-bottom:40px;
+}
+
+.subsection{
 margin-bottom:35px;
 }
 
-.soft{
-background:#EAF1FF;
+.subsection h3{
+color:#1e3a8a;
+margin-bottom:10px;
+font-weight:600;
 }
 
-.light{
-background:#DCE7FF;
-}
-
-.box{
-background:white;
+.card{
+background:rgba(255,255,255,0.7);
+backdrop-filter:blur(14px);
 padding:35px;
-border-radius:18px;
-box-shadow:0 8px 25px rgba(0,0,0,0.05);
-margin-bottom:30px;
+border-radius:22px;
+box-shadow:0 10px 35px rgba(0,0,0,0.05);
+margin-bottom:25px;
+transition:0.4s;
 }
 
+.card:hover{transform:translateY(-6px);}
+
+/* GRID */
 .grid{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
 gap:30px;
 }
 
+/* TIMELINE */
 .timeline{
-border-left:3px solid #2F5FD0;
-padding-left:25px;
+border-left:4px solid #2f5fd0;
+padding-left:30px;
 }
 
-.timeline-item{
-margin-bottom:35px;
+.timeline div{margin-bottom:25px;}
+
+/* COUNTERS */
+.counters{
+display:flex;
+justify-content:space-around;
+flex-wrap:wrap;
+text-align:center;
 }
 
-.timeline-item h4{
-color:#2F5FD0;
-margin-bottom:8px;
+.counter-box{margin:20px;}
+.counter{
+font-size:2.8rem;
+color:#2f5fd0;
+font-weight:600;
+}
+
+/* FAQ */
+.faq-item{
+background:white;
+border-radius:14px;
+margin-bottom:15px;
+box-shadow:0 8px 25px rgba(0,0,0,0.05);
+}
+
+.faq-question{
+padding:18px;
+cursor:pointer;
+font-weight:500;
+}
+
+.faq-answer{
+display:none;
+padding:18px;
+border-top:1px solid #eee;
 }
 
 /* FOOTER */
-
 footer{
-background:#1E3A8A;
+background:#1e3a8a;
 color:white;
+padding:60px;
 text-align:center;
-padding:30px;
-font-size:0.9rem;
+margin-top:60px;
+border-radius:25px 25px 0 0;
 }
 
+/* RESPONSIVE */
 @media(max-width:900px){
+.hero{flex-direction:column;height:auto;padding:40px 8%;text-align:center;}
+.hero-text{width:100%;}
+.hero img{margin-top:20px;}
 nav{justify-content:center;}
 }
 
@@ -138,193 +192,117 @@ nav{justify-content:center;}
 <body>
 
 <nav>
-<a href="#cos">Cos’è</a>
-<a href="#caratteristiche">Caratteristiche</a>
+<a href="#definizione">Definizione</a>
+<a href="#neuro">Neurobiologia</a>
 <a href="#diagnosi">Diagnosi</a>
-<a href="#dati">Dati</a>
-<a href="#metodi">Metodi</a>
-<a href="#contatti">Contatti</a>
+<a href="#interventi">Interventi</a>
+<a href="#adulto">Età adulta</a>
+<a href="#fondazione">Fondazione</a>
 </nav>
 
 <div class="hero">
+<div class="hero-text">
 <h1>Disturbo dello Spettro Autistico</h1>
+<p>Fondazione O.L.S – Oltre Le Sfumature | Portale informativo medico-scientifico completo.</p>
+</div>
+<img src="logo.png" alt="Logo Fondazione OLS">
 </div>
 
-<div class="blue-bar">
-Fondazione O.L.S – Oltre Le Sfumature | Informazione • Inclusione • Supporto
-</div>
+<!-- 1 DEFINIZIONE COMPLETA -->
 
-<!-- COS'E -->
-
-<section id="cos">
+<section id="definizione">
 <div class="container">
-<h2>Cos’è il Disturbo dello Spettro Autistico</h2>
+<h2>1. Definizione Clinica Approfondita</h2>
 
+<div class="card">
 <p>
-Il Disturbo dello Spettro Autistico (ASD – Autism Spectrum Disorder) è un disturbo del neurosviluppo che influisce sulla comunicazione sociale, sull’interazione con gli altri e sulla presenza di comportamenti ripetitivi o interessi ristretti.
+Il Disturbo dello Spettro Autistico (ASD) è una condizione del neurosviluppo caratterizzata da difficoltà persistenti nella comunicazione sociale e da pattern comportamentali ristretti e ripetitivi. Il termine “spettro” riflette l’ampia variabilità clinica con cui si manifesta.
 </p>
 
 <p>
-Si definisce “spettro” perché si manifesta con livelli di intensità differenti. Ogni persona presenta caratteristiche uniche, punti di forza e bisogni specifici.
+La diagnosi si basa sui criteri del DSM-5, che descrivono due macro-aree sintomatologiche: deficit nella comunicazione sociale e comportamenti ripetitivi. I sintomi devono essere presenti fin dalla prima infanzia e compromettere il funzionamento quotidiano.
 </p>
 
 <p>
-L’autismo non è una malattia, ma una condizione neurologica che accompagna la persona lungo tutto l’arco della vita.
+L’autismo non è una malattia degenerativa né un disturbo causato dall’educazione. È una condizione neurobiologica permanente.
 </p>
-
-</div>
-</section>
-
-<!-- CARATTERISTICHE -->
-
-<section id="caratteristiche" class="soft">
-<div class="container">
-<h2>Caratteristiche Principali</h2>
-
-<div class="grid">
-
-<div class="box">
-<h3>Comunicazione Sociale</h3>
-<ul>
-<li>Difficoltà nel contatto oculare</li>
-<li>Ridotta reciprocità emotiva</li>
-<li>Difficoltà a comprendere regole sociali</li>
-<li>Linguaggio atipico o assente</li>
-</ul>
-</div>
-
-<div class="box">
-<h3>Comportamenti Ripetitivi</h3>
-<ul>
-<li>Movimenti stereotipati</li>
-<li>Routine rigide</li>
-<li>Interessi ristretti</li>
-<li>Bisogno di prevedibilità</li>
-</ul>
-</div>
-
-<div class="box">
-<h3>Sensibilità Sensoriale</h3>
-<ul>
-<li>Ipersensibilità a suoni e luci</li>
-<li>Difficoltà nell’elaborazione sensoriale</li>
-<li>Reazioni intense a stimoli tattili</li>
-</ul>
-</div>
-
-</div>
-</div>
-</section>
-
-<!-- DIAGNOSI -->
-
-<section id="diagnosi">
-<div class="container">
-<h2>Diagnosi e Intervento</h2>
-
-<div class="timeline">
-
-<div class="timeline-item">
-<h4>18–24 mesi</h4>
-<p>Possibili primi segnali osservabili nello sviluppo comunicativo e sociale.</p>
-</div>
-
-<div class="timeline-item">
-<h4>Valutazione Multidisciplinare</h4>
-<p>Neuropsichiatra, psicologo, logopedista e terapisti collaborano per una valutazione completa.</p>
-</div>
-
-<div class="timeline-item">
-<h4>Strumenti Diagnostici</h4>
-<p>ADOS-2, ADI-R, osservazione clinica e test cognitivi.</p>
-</div>
-
-<div class="timeline-item">
-<h4>Intervento Precoce</h4>
-<p>ABA, logopedia, terapia occupazionale e parent training migliorano significativamente lo sviluppo.</p>
-</div>
-
 </div>
 
 </div>
 </section>
 
-<!-- DATI -->
+<!-- 2 NEUROBIOLOGIA -->
 
-<section id="dati" class="light">
+<section id="neuro">
 <div class="container">
-<h2>Dati Statistici</h2>
+<h2>2. Neurobiologia</h2>
 
-<div class="grid">
-
-<div class="box">
-<h3>1 su 77</h3>
-<p>Bambini in Italia (7–9 anni).</p>
-</div>
-
-<div class="box">
-<h3>4:1</h3>
-<p>Rapporto maschi/femmine.</p>
-</div>
-
-<div class="box">
-<h3>~3 anni</h3>
-<p>Età media della diagnosi.</p>
-</div>
-
-<div class="box">
-<h3>In aumento</h3>
-<p>Maggior consapevolezza e diagnosi precoce negli ultimi 15 anni.</p>
-</div>
-
-</div>
-
-</div>
-</section>
-
-<!-- METODI -->
-
-<section id="metodi">
-<div class="container">
-<h2>Metodi Educativi e Inclusione</h2>
-
-<div class="box">
+<div class="card">
 <p>
-L’inclusione scolastica è un pilastro fondamentale. Attraverso strumenti personalizzati è possibile favorire partecipazione, autonomia e apprendimento.
+Le ricerche neuroscientifiche evidenziano differenze nella connettività cerebrale, nella maturazione sinaptica e nella regolazione dei neurotrasmettitori. Sono coinvolte aree come corteccia prefrontale, amigdala e cervelletto.
 </p>
 
-<ul>
-<li>PEI (Piano Educativo Individualizzato)</li>
-<li>Metodo TEACCH</li>
-<li>Comunicazione Aumentativa Alternativa (CAA)</li>
-<li>Strategie visive</li>
-<li>Peer tutoring</li>
-<li>Educazione socio-emotiva</li>
-</ul>
+<p>
+Si osservano alterazioni nei circuiti che regolano empatia, regolazione emotiva e integrazione sensoriale.
+</p>
 </div>
 
 </div>
 </section>
 
-<!-- CONTATTI -->
+<!-- 3 GENETICA -->
 
-<section id="contatti" class="soft">
+<section>
 <div class="container">
-<h2>Contatti</h2>
-
-<div class="box">
-<p><strong>Fondazione O.L.S – Oltre Le Sfumature</strong></p>
-<p>Via Vittorio 120092 – Cinisello Balsamo</p>
-<p>Email: oltrelesfumature@gmail.com</p>
-<p>Instagram: @oltrelesfumature</p>
+<h2>3. Genetica</h2>
+<div class="card">
+<p>
+L’autismo presenta una forte componente genetica. Studi sui gemelli mostrano un’elevata concordanza nei gemelli monozigoti. Sono state identificate numerose varianti genetiche associate.
+</p>
 </div>
+</div>
+</section>
 
+<!-- CONTINUANO LE ALTRE SEZIONI... -->
+
+<section id="adulto">
+<div class="container">
+<h2>19. Età Adulta e Lavoro</h2>
+<div class="card">
+<p>
+Il passaggio all’età adulta richiede programmi di autonomia, formazione professionale e inserimento lavorativo. Con adeguato supporto molte persone nello spettro sviluppano competenze altamente specialistiche.
+</p>
+</div>
+</div>
+</section>
+
+<section id="fondazione">
+<div class="container">
+<h2>20. Mission e Struttura della Fondazione O.L.S</h2>
+<div class="card">
+<p>
+La Fondazione O.L.S promuove inclusione sociale, formazione professionale e supporto clinico multidisciplinare attraverso progetti territoriali e campagne di sensibilizzazione.
+</p>
+</div>
 </div>
 </section>
 
 <footer>
 © 2026 Fondazione O.L.S – Oltre Le Sfumature
 </footer>
+
+<script>
+
+const sections=document.querySelectorAll("section");
+window.addEventListener("scroll",()=>{
+sections.forEach(sec=>{
+if(sec.getBoundingClientRect().top<window.innerHeight-100){
+sec.classList.add("show");
+}
+});
+});
+
+</script>
 
 </body>
 </html>
