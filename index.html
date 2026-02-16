@@ -5,116 +5,69 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Disturbo dello Spettro Autistico</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
 <style>
 *{
 margin:0;
 padding:0;
 box-sizing:border-box;
+scroll-behavior:smooth;
 }
 
 body{
 font-family:'Poppins',sans-serif;
-background:linear-gradient(135deg,#ffffff,#eef3ff);
+background:#f4f7ff;
 color:#1f2937;
 overflow-x:hidden;
 }
 
-/* MENU ICONA */
-
-.menu-btn{
-position:fixed;
-top:30px;
-right:30px;
-width:30px;
-cursor:pointer;
-z-index:1000;
-}
-
-.menu-btn span{
-display:block;
-height:3px;
-background:#1f3c88;
-margin:6px 0;
-border-radius:3px;
-transition:0.4s;
-}
-
-.menu{
-position:fixed;
-top:0;
-right:-250px;
-width:250px;
-height:100vh;
-background:#1f3c88;
-color:white;
-padding:80px 30px;
-transition:0.5s;
-z-index:999;
-}
-
-.menu a{
-display:block;
-color:white;
-text-decoration:none;
-margin:20px 0;
-font-weight:500;
-transition:0.3s;
-}
-
-.menu a:hover{
-transform:translateX(10px);
-opacity:0.8;
-}
-
-.menu.active{
-right:0;
-}
-
-/* HERO */
+/* HERO CON STRISCIA BLU */
 
 .hero{
-min-height:60vh;
+min-height:55vh;
 display:flex;
 align-items:center;
-justify-content:space-between;
-padding:120px 10% 80px 10%;
+justify-content:center;
+padding:0;
+flex-direction:column;
 }
 
-.hero-text{
-max-width:600px;
-}
-
-.badge{
-display:inline-block;
+.hero-top{
 background:linear-gradient(120deg,#1f3c88,#4a6ed1);
+width:100%;
+padding:60px 10%;
 color:white;
-padding:8px 18px;
-border-radius:30px;
-font-size:0.85rem;
-margin-bottom:25px;
+display:flex;
+align-items:center;
+justify-content:center;
+gap:40px;
 }
 
-.hero h1{
-font-size:3.5rem;
-line-height:1.2;
-margin-bottom:20px;
+.hero-bottom{
+background:white;
+width:100%;
+padding:40px 10%;
+text-align:center;
 }
 
 .hero img{
-width:330px;
-animation:float 5s ease-in-out infinite;
+width:420px;
+}
+
+.hero h1{
+font-size:2.4rem;
+}
+
+.highlight{
+color:#1f3c88;
+font-weight:600;
 }
 
 /* SEZIONI */
 
 section{
-padding:110px 10%;
-}
-
-.alt{
-background:white;
+padding:90px 10%;
 }
 
 .dark{
@@ -123,8 +76,8 @@ color:white;
 }
 
 h2{
-font-size:2.3rem;
-margin-bottom:40px;
+font-size:1.9rem;
+margin-bottom:30px;
 position:relative;
 display:inline-block;
 }
@@ -132,11 +85,11 @@ display:inline-block;
 h2::after{
 content:"";
 position:absolute;
-bottom:-10px;
+bottom:-8px;
 left:0;
 width:70%;
 height:4px;
-background:linear-gradient(to right,#1f3c88,#4a6ed1);
+background:#4a6ed1;
 border-radius:5px;
 }
 
@@ -145,232 +98,155 @@ background:white;
 }
 
 p{
-line-height:1.9;
+line-height:1.8;
 margin-bottom:20px;
-font-size:1.05rem;
 }
 
 ul{
-margin-left:20px;
+margin-left:25px;
 line-height:1.9;
 }
 
 .grid{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
-gap:40px;
-margin-top:40px;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:35px;
+margin-top:30px;
 }
 
 .card{
 background:white;
-padding:40px;
-border-radius:25px;
-box-shadow:0 25px 70px rgba(0,0,0,0.08);
-transition:0.4s;
-}
-
-.card:hover{
-transform:translateY(-12px);
-box-shadow:0 35px 90px rgba(0,0,0,0.15);
+padding:35px;
+border-radius:20px;
+box-shadow:0 20px 50px rgba(0,0,0,0.08);
 }
 
 .dark .card{
-background:rgba(255,255,255,0.12);
-backdrop-filter:blur(12px);
+background:rgba(255,255,255,0.15);
+backdrop-filter:blur(10px);
 color:white;
 box-shadow:none;
-}
-
-.card h3{
-margin-bottom:20px;
-font-size:1.3rem;
-}
-
-/* ANIMAZIONI */
-
-.fade{
-opacity:0;
-transform:translateY(50px);
-transition:all 1s ease;
-}
-
-.fade.visible{
-opacity:1;
-transform:translateY(0);
-}
-
-@keyframes float{
-0%{transform:translateY(0);}
-50%{transform:translateY(-18px);}
-100%{transform:translateY(0);}
 }
 </style>
 </head>
 
 <body>
 
-<!-- MENU -->
-<div class="menu-btn" onclick="toggleMenu()">
-<span></span>
-<span></span>
-<span></span>
-</div>
-
-<div class="menu" id="menu">
-<a href="#cos">Cos'è</a>
-<a href="#car">Caratteristiche</a>
-<a href="#punti">Punti di Forza</a>
-<a href="#diag">Diagnosi</a>
-<a href="#prog">Prognosi</a>
-<a href="#int">Intervento</a>
-<a href="#aba">ABA</a>
-<a href="#tea">TEACCH</a>
-</div>
-
 <!-- HERO -->
 
-<section class="hero fade">
-<div class="hero-text">
-<div class="badge">Materiale informativo basato su contenuti didattici</div>
-<h1>Disturbo dello Spettro Autistico</h1>
-<p>Approfondimento scientifico sulle caratteristiche cliniche, evolutive e sugli interventi educativi.</p>
-</div>
+<section class="hero">
+<div class="hero-top">
 <img src="logo.jpg" alt="Logo Autismo">
+<h1>Disturbo dello <br> Spettro Autistico</h1>
+</div>
+
+<div class="hero-bottom">
+<p>Approfondimento scientifico sul <span class="highlight">neurosviluppo</span>, le <span class="highlight">caratteristiche cliniche</span> e gli <span class="highlight">interventi educativi</span>.</p>
+</div>
 </section>
 
-<!-- CONTENUTO (TUTTO INVARIATO) -->
+<!-- COS'È -->
 
-<section id="cos" class="fade">
+<section>
 <h2>Cos'è l'Autismo</h2>
-<p>L'autismo è un disturbo del neurosviluppo a genesi multifattoriale che interessa primariamente il Sistema Nervoso Centrale durante la sua organizzazione.</p>
-<p>È caratterizzato da disfunzioni della maturazione neurobiologica e del funzionamento del SNC.</p>
-<p>Si tratta di uno spettro variabile che può comprendere sia persone con alto quoziente intellettivo sia con ritardo mentale.</p>
+<p>Il <span class="highlight">Disturbo dello Spettro Autistico (ASD)</span> è un disturbo del neurosviluppo a genesi multifattoriale che interessa il <span class="highlight">Sistema Nervoso Centrale</span> durante la sua organizzazione.</p>
+<p>È caratterizzato da alterazioni nella comunicazione sociale e dalla presenza di comportamenti ristretti e ripetitivi.</p>
+<p>La definizione di “spettro” indica un’ampia variabilità nella gravità e nelle manifestazioni cliniche.</p>
 </section>
 
-<section id="car" class="dark fade">
+<!-- EPIDEMIOLOGIA -->
+
+<section class="dark">
+<h2>Dati Epidemiologici</h2>
+<p>L’incidenza stimata è di circa <strong>1 bambino su 36</strong>.</p>
+<p>È più frequente nei maschi rispetto alle femmine con un rapporto di circa 4:1.</p>
+<p>L’aumento delle diagnosi è legato anche al miglioramento dei criteri diagnostici.</p>
+</section>
+
+<!-- CARATTERISTICHE -->
+
+<section>
 <h2>Caratteristiche Principali</h2>
 <div class="grid">
-
 <div class="card">
-<h3>Alterazioni nella comunicazione</h3>
+<h3>Comunicazione</h3>
 <ul>
-<li>Assenza o ritardo del linguaggio</li>
-<li>Ecolalia immediata o differita</li>
-<li>Prosodia monotona o alterata</li>
-<li>Inversione pronominale</li>
-<li>Difficoltà a comprendere ironia e scherzo</li>
-<li>Contatto oculare sfuggente</li>
+<li>Ritardo o assenza del linguaggio</li>
+<li>Ecolalia</li>
+<li>Difficoltà pragmatiche</li>
+<li>Scarsa comprensione di ironia e metafore</li>
 </ul>
 </div>
 
 <div class="card">
-<h3>Comportamenti ripetitivi e stereotipati</h3>
+<h3>Interazione Sociale</h3>
 <ul>
-<li>Sfarfallare le mani</li>
-<li>Dondolarsi</li>
-<li>Girare su se stessi</li>
-<li>Camminare sulle punte</li>
-<li>Rituali e rigidità</li>
-</ul>
-</div>
-
-<div class="card">
-<h3>Difficoltà nell’interazione sociale</h3>
-<ul>
-<li>Scarso interesse per gli altri</li>
+<li>Scarso contatto oculare</li>
+<li>Difficoltà nella reciprocità emotiva</li>
 <li>Assenza di attenzione condivisa</li>
-<li>Difficoltà di comprensione degli stati mentali</li>
-<li>Mancanza di condivisione spontanea di emozioni</li>
 </ul>
 </div>
 
+<div class="card">
+<h3>Comportamenti Ripetitivi</h3>
+<ul>
+<li>Stereotipie motorie</li>
+<li>Rigidità comportamentale</li>
+<li>Interessi ristretti</li>
+</ul>
+</div>
 </div>
 </section>
 
-<!-- RESTO CONTENUTO IDENTICO (non tolto nulla) -->
+<!-- PUNTI DI FORZA ELENCATI -->
 
-<section id="punti" class="fade alt">
-<h2>Punti di forza</h2>
-<div class="grid">
-<div class="card">Pensiero visivo</div>
-<div class="card">Precisione e attenzione ai dettagli</div>
-<div class="card">Memoria visiva eccellente</div>
-<div class="card">Conoscenze approfondite su argomenti specifici</div>
-<div class="card">Talenti artistici o logico-matematici</div>
-</div>
+<section class="dark">
+<h2>Punti di Forza</h2>
+<ul>
+<li><strong>Pensiero visivo</strong> e capacità di elaborazione per immagini</li>
+<li><strong>Attenzione ai dettagli</strong> superiore alla media</li>
+<li><strong>Memoria eccellente</strong> (specialmente visiva o numerica)</li>
+<li><strong>Capacità logico-matematiche</strong> sviluppate</li>
+<li><strong>Talenti artistici</strong> o musicali</li>
+<li>Elevata <strong>coerenza e onestà</strong> nelle relazioni</li>
+</ul>
 </section>
 
-<section id="diag" class="dark fade">
+<!-- CAUSE -->
+
+<section>
+<h2>Cause e Fattori di Rischio</h2>
+<p>L’eziologia è <span class="highlight">multifattoriale</span> e comprende:</p>
+<ul>
+<li>Componenti genetiche</li>
+<li>Alterazioni neurobiologiche</li>
+<li>Fattori ambientali prenatali</li>
+</ul>
+<p>Non esistono evidenze scientifiche che colleghino l’autismo ai vaccini.</p>
+</section>
+
+<!-- DIAGNOSI -->
+
+<section class="dark">
 <h2>Diagnosi</h2>
-<p>La diagnosi è clinica, basata sull’osservazione del comportamento e sulla raccolta dei dati anamnestici.</p>
-<p>Non esistono test biologici in grado di individuare la sindrome autistica.</p>
-<p>La diagnosi e il trattamento precoci cambiano la prognosi a lungo termine.</p>
+<p>La diagnosi è clinica e si basa sui criteri del DSM-5.</p>
+<p>Prevede osservazione diretta, colloqui con la famiglia e strumenti standardizzati.</p>
+<p>L’intervento precoce migliora significativamente la prognosi.</p>
 </section>
 
-<section id="prog" class="fade">
-<h2>Prognosi ed Evoluzione</h2>
+<!-- INTERVENTI -->
+
+<section>
+<h2>Interventi</h2>
 <ul>
-<li>1-2% acquisisce uno stato normale</li>
-<li>10-15% raggiunge autonomia familiare</li>
-<li>25-30% necessita sostegno</li>
-<li>60-70% diventa adulto non autosufficiente</li>
+<li>Programmi psico-educativi individualizzati</li>
+<li>Metodo ABA</li>
+<li>Modello TEACCH</li>
+<li>Logopedia e psicomotricità</li>
+<li>Supporto familiare</li>
 </ul>
-<p>La prognosi dipende fortemente dal grado di funzionamento cognitivo e dalla precocità dell’intervento.</p>
+<p>Un intervento intensivo e precoce è il fattore prognostico più rilevante.</p>
 </section>
-
-<section id="int" class="dark fade">
-<h2>Intervento</h2>
-<ul>
-<li>Intervento precoce e intensivo</li>
-<li>Programma individualizzato</li>
-<li>Coinvolgimento attivo della famiglia</li>
-<li>Lavoro di rete</li>
-<li>Verifiche periodiche</li>
-</ul>
-<p>Non esistono metodi miracolosi, ma sistemi di intervento integrati psico-educativi e cognitivo-comportamentali scientificamente validati.</p>
-</section>
-
-<section id="aba" class="fade alt">
-<h2>Metodo ABA</h2>
-<p>ABA (Applied Behavior Analysis) utilizza principi comportamentali per costruire repertori comportamentali utili e ridurre quelli problematici.</p>
-<ul>
-<li>Intervento altamente individualizzato</li>
-<li>Insegnamento senza errori</li>
-<li>Riduzione dei comportamenti problema</li>
-<li>Incremento delle capacità adattive</li>
-</ul>
-</section>
-
-<section id="tea" class="dark fade">
-<h2>Modello TEACCH</h2>
-<p>Il TEACCH è un modello di presa in carico globale che punta sull’organizzazione visiva di spazi, tempi e materiali.</p>
-<ul>
-<li>Strutturazione dello spazio</li>
-<li>Strutturazione del tempo</li>
-<li>Uso di agende visive</li>
-<li>Adattamento dell’ambiente</li>
-<li>Coinvolgimento dei genitori</li>
-</ul>
-<p><strong>Obiettivi:</strong> incrementare le abilità emergenti e rendere l’ambiente più comprensibile.</p>
-</section>
-
-<script>
-function toggleMenu(){
-document.getElementById("menu").classList.toggle("active");
-}
-
-const elements=document.querySelectorAll('.fade');
-window.addEventListener('scroll',()=>{
-elements.forEach(el=>{
-const top=el.getBoundingClientRect().top;
-if(top<window.innerHeight-100){
-el.classList.add('visible');
-}
-});
-});
-</script>
 
 </body>
 </html>
-
