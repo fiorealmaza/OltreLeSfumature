@@ -9,36 +9,36 @@
 <style>
 /* ================= RESET ================= */
 *{margin:0;padding:0;box-sizing:border-box;scroll-behavior:smooth;}
-body{font-family:'Roboto',sans-serif;line-height:1.8;background:#f4f8ff;color:#111;overflow-x:hidden;}
+body{font-family:'Roboto',sans-serif;line-height:1.8;background:#0b1d5f;color:#fff;overflow-x:hidden;}
 
 /* ================= HEADER ================= */
 header{
   position:fixed;width:100%;top:0;left:0;z-index:1000;
   display:flex;justify-content:space-between;align-items:center;
-  padding:15px 8%;background:linear-gradient(90deg,#1f5fbf,#4da3ff,#1f5fbf);
-  box-shadow:0 6px 25px rgba(0,0,0,0.15);border-bottom-left-radius:15px;border-bottom-right-radius:15px;
+  padding:15px 8%;background:linear-gradient(90deg,#0b1d5f,#1b2f7f,#0b1d5f);
+  box-shadow:0 6px 25px rgba(0,0,0,0.25);border-bottom-left-radius:15px;border-bottom-right-radius:15px;
 }
 .logo-title{display:flex;align-items:center;gap:15px;}
-.site-name{color:white;font-family:'Cinzel',serif;font-weight:900;font-size:2.4rem;text-shadow:0 0 25px rgba(255,255,255,0.6);}
+.site-name{color:white;font-family:'Cinzel',serif;font-weight:900;font-size:2.6rem;text-shadow:0 0 25px rgba(255,255,255,0.7);}
 nav{display:flex;gap:20px;}
 nav a{color:white;text-decoration:none;font-weight:600;padding:10px 18px;border-radius:25px;transition:0.3s;background:rgba(255,255,255,0.1);}
-nav a:hover{background:white;color:#1f5fbf;box-shadow:0 0 15px rgba(255,255,255,0.9);}
+nav a:hover{background:white;color:#0b1d5f;box-shadow:0 0 15px rgba(255,255,255,0.9);}
 .hamburger{display:none;flex-direction:column;gap:6px;cursor:pointer;}
 .hamburger span{width:32px;height:4px;background:linear-gradient(90deg,#3b82f6,#60a5fa);border-radius:3px;transition:0.4s;}
 .hamburger.active span:nth-child(1){transform:rotate(45deg) translate(6px,6px);}
 .hamburger.active span:nth-child(2){opacity:0;}
 .hamburger.active span:nth-child(3){transform:rotate(-45deg) translate(6px,-6px);}
 
-/* ================= HERO TIE DYE + ANIMATED WAVES ================= */
+/* ================= HERO TIE DYE + WAVES ================= */
 .hero{
   padding:280px 8% 220px 8%;
   text-align:center;
   position:relative;
   border-radius:0 0 50px 50px;
-  background: radial-gradient(circle at 30% 30%, #3b82f6, transparent 25%),
-              radial-gradient(circle at 70% 20%, #60a5fa, transparent 25%),
-              radial-gradient(circle at 50% 80%, #93c5fd, transparent 25%),
-              linear-gradient(135deg,#a5d8ff,#60a5fa);
+  background: radial-gradient(circle at 30% 30%, #1b2f7f, transparent 25%),
+              radial-gradient(circle at 70% 20%, #3b4fd1, transparent 25%),
+              radial-gradient(circle at 50% 80%, #5a7fff, transparent 25%),
+              linear-gradient(135deg,#0b1d5f,#1b2f7f);
   color:white;
   overflow:hidden;
 }
@@ -59,19 +59,19 @@ nav a:hover{background:white;color:#1f5fbf;box-shadow:0 0 15px rgba(255,255,255,
   50%{transform:translateX(-25%) rotate(5deg);}
   100%{transform:translateX(0) rotate(0deg);}
 }
-.hero h1{font-family:'Cinzel',serif;font-size:5.8rem;margin-bottom:25px;text-shadow:0 0 60px rgba(255,255,255,0.7);}
-.hero img{height:200px;margin-top:20px;transition:0.3s;position:relative;z-index:2;border-radius:25px;}
+.hero h1{font-family:'Cinzel',serif;font-size:6rem;margin-bottom:25px;text-shadow:0 0 60px rgba(255,255,255,0.7);}
+.hero img{height:220px;margin-top:20px;transition:0.3s;position:relative;z-index:2;border-radius:25px;}
 .hero img:hover{transform:scale(1.05);}
-.hero .button{display:inline-block;margin-top:30px;padding:18px 45px;background:#60a5fa;color:white;border-radius:30px;font-weight:600;text-decoration:none;transition:0.3s;font-size:1.2rem;box-shadow:0 0 25px rgba(255,255,255,0.5);}
-.hero .button:hover{background:#a5d8ff;transform:scale(1.08);box-shadow:0 0 40px rgba(255,255,255,0.7);}
+.hero .button{display:inline-block;margin-top:30px;padding:20px 50px;background:#3b4fd1;color:white;border-radius:30px;font-weight:600;text-decoration:none;transition:0.3s;font-size:1.3rem;box-shadow:0 0 25px rgba(255,255,255,0.5);}
+.hero .button:hover{background:#5a7fff;transform:scale(1.08);box-shadow:0 0 40px rgba(255,255,255,0.7);}
 
 /* ================= SECTIONS ================= */
 section{padding:130px 8%;}
-.section-title{display:inline-block;padding:20px 50px;border-radius:30px;font-size:2rem;font-weight:700;margin-bottom:50px;color:white;background:linear-gradient(90deg,#4da3ff,#79c2ff);box-shadow:0 0 40px rgba(31,95,191,0.5);text-shadow:0 0 15px rgba(255,255,255,0.3);}
+.section-title{display:inline-block;padding:20px 50px;border-radius:30px;font-size:2rem;font-weight:700;margin-bottom:50px;color:white;background:linear-gradient(90deg,#3b4fd1,#5a7fff);box-shadow:0 0 40px rgba(31,95,191,0.5);text-shadow:0 0 15px rgba(255,255,255,0.3);}
 .text{font-size:1.16rem;margin-bottom:30px;line-height:1.8;}
 .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:40px;margin-top:50px;}
 .card{
-  background:linear-gradient(135deg,#ffffff,#eef5ff);
+  background:linear-gradient(145deg,#1b2f7f,#3b4fd1);
   padding:35px;
   border-radius:25px;
   box-shadow:0 6px 40px rgba(77,163,255,0.3);
@@ -82,17 +82,17 @@ section{padding:130px 8%;}
 .card:hover{
   transform:translateY(-12px);
   box-shadow:0 0 70px rgba(31,95,191,0.7);
-  background:linear-gradient(135deg,#60a5fa,#93c5fd);
+  background:linear-gradient(135deg,#5a7fff,#3b4fd1);
 }
-.card i{font-size:2.4rem;color:#1f5fbf;margin-bottom:15px;transition:0.3s;}
-.card i:hover{color:#ffffff;transform:scale(1.2);}
+.card i{font-size:2.4rem;color:#fff;margin-bottom:15px;transition:0.3s;}
+.card i:hover{transform:scale(1.2);color:#a5d8ff;}
 
 /* ================= FOOTER ================= */
-footer{text-align:center;padding:90px 20px;background:linear-gradient(90deg,#1f5fbf,#4da3ff);color:white;line-height:1.8;font-size:0.95rem;margin-top:50px;border-top-left-radius:50px;border-top-right-radius:50px;}
+footer{text-align:center;padding:90px 20px;background:linear-gradient(90deg,#0b1d5f,#1b2f7f);color:white;line-height:1.8;font-size:0.95rem;margin-top:50px;border-top-left-radius:50px;border-top-right-radius:50px;}
 
 /* ================= MOBILE ================= */
 @media (max-width:900px){
-  nav{position:absolute;top:70px;right:0;background:linear-gradient(180deg,#1f5fbf,#4da3ff);flex-direction:column;width:240px;display:none;padding:20px;box-shadow:0 10px 30px rgba(0,0,0,0.3);}
+  nav{position:absolute;top:70px;right:0;background:linear-gradient(180deg,#0b1d5f,#1b2f7f);flex-direction:column;width:240px;display:none;padding:20px;box-shadow:0 10px 30px rgba(0,0,0,0.3);}
   nav.active{display:flex;}
   nav a{width:80%;text-align:center;padding:12px;margin:5px 0;}
   .hamburger{display:flex;}
@@ -136,7 +136,6 @@ footer{text-align:center;padding:90px 20px;background:linear-gradient(90deg,#1f5
   <div class="wave"></div>
 </section>
 
-<!-- SEZIONI COMPLETE COME NEL CODICE PRECEDENTE -->
 <section id="perche">
   <div class="section-title">Perché si chiama "Spettro"</div>
   <div class="text">Il termine "spettro" indica la grande variabilità di manifestazioni cliniche nell'autismo. Ogni persona ha punti di forza e aree di difficoltà uniche, rendendo ciascun profilo completamente diverso.</div>
@@ -146,15 +145,65 @@ footer{text-align:center;padding:90px 20px;background:linear-gradient(90deg,#1f5
 <section id="caratteristiche">
   <div class="section-title">Caratteristiche principali</div>
   <div class="grid">
-    <div class="card"><i class="fas fa-comments"></i><h3>Comunicazione</h3><p>Alcune persone hanno difficoltà nel linguaggio verbale o nella comprensione di segnali sociali. Molti sviluppano modalità alternative di comunicazione.</p></div>
-    <div class="card"><i class="fas fa-users"></i><h3>Interazione sociale</h3><p>Comprendere emozioni, espressioni facciali e segnali sociali può risultare difficile, influenzando le relazioni quotidiane.</p></div>
+    <div class="card"><i class="fas fa-comments"></i><h3>Comunicazione</h3><p>Difficoltà nel linguaggio verbale e non verbale. Molti usano modi alternativi come gesti, simboli o strumenti digitali.</p></div>
+    <div class="card"><i class="fas fa-users"></i><h3>Interazione sociale</h3><p>Capire emozioni, espressioni facciali e segnali sociali può essere difficile, influenzando le relazioni quotidiane.</p></div>
     <div class="card"><i class="fas fa-sync-alt"></i><h3>Comportamenti ripetitivi</h3><p>Routine rigide, movimenti ripetitivi e interessi intensi aiutano a gestire ansia e stimoli sensoriali.</p></div>
     <div class="card"><i class="fas fa-bolt"></i><h3>Sensibilità sensoriale</h3><p>Reazioni a suoni, luci, tatto, gusto o odori: alcuni individui sono ipersensibili, altri iposensibili.</p></div>
   </div>
 </section>
 
-<!-- SEZIONI CAUSE, SVILUPPO, TERAPIE, METODI, INCLUSIONE, FUTURO -->
-<!-- Copiare il contenuto lungo del codice precedente, con card animate e gradient hover -->
+<section id="cause">
+  <div class="section-title">Cause e fattori di rischio</div>
+  <div class="grid">
+    <div class="card"><i class="fas fa-dna"></i><h3>Genetica</h3><p>L'ereditarietà ha un ruolo significativo. Non esiste un singolo gene dell’autismo: la condizione deriva da molte varianti genetiche combinate.</p></div>
+    <div class="card"><i class="fas fa-heartbeat"></i><h3>Fattori biologici</h3><p>Età genitoriale avanzata, complicazioni prenatali, esposizione a sostanze e alcune condizioni mediche possono aumentare il rischio senza determinarlo da soli.</p></div>
+    <div class="card"><i class="fas fa-shield-alt"></i><h3>Miti sfatati</h3><p>Non esiste correlazione tra vaccini e autismo. La comunità scientifica internazionale lo conferma da decenni.</p></div>
+    <div class="card"><i class="fas fa-flask"></i><h3>Fattori ambientali</h3><p>Esposizioni durante la gravidanza possono interagire con la predisposizione genetica, ma non sono causa unica dell’autismo.</p></div>
+  </div>
+</section>
+
+<section id="sviluppo">
+  <div class="section-title">Come aiutare lo sviluppo</div>
+  <div class="grid">
+    <div class="card"><i class="fas fa-calendar-alt"></i><h3>Routine strutturate</h3><p>Ambienti prevedibili e coerenti riducono ansia e stress, favorendo autonomia e adattamento.</p></div>
+    <div class="card"><i class="fas fa-graduation-cap"></i><h3>Supporto educativo</h3><p>Interventi personalizzati basati su capacità, interessi e obiettivi individuali. Strategie visive e strutturate essenziali.</p></div>
+    <div class="card"><i class="fas fa-hand-holding-heart"></i><h3>Inclusione sociale</h3><p>Favorire attività condivise, collaborazione e integrazione scolastica o lavorativa. Sensibilizzare coetanei e comunità.</p></div>
+    <div class="card"><i class="fas fa-sign-language"></i><h3>Comunicazione alternativa</h3><p>Simboli, immagini e applicazioni digitali supportano chi ha difficoltà linguistiche, aumentando autonomia e partecipazione.</p></div>
+  </div>
+</section>
+
+<section id="terapie">
+  <div class="section-title">Terapie e interventi</div>
+  <div class="grid">
+    <div class="card"><i class="fas fa-brain"></i><h3>Logopedia</h3><p>Sviluppo linguaggio verbale e non verbale, comprensione e uso della comunicazione efficace.</p></div>
+    <div class="card"><i class="fas fa-running"></i><h3>Psicomotricità</h3><p>Migliora coordinazione motoria, percezione corporea e relazione corpo-mente.</p></div>
+    <div class="card"><i class="fas fa-music"></i><h3>Musicoterapia</h3><p>Espressione emotiva, socializzazione e modulazione sensoriale attraverso la musica.</p></div>
+    <div class="card"><i class="fas fa-dog"></i><h3>Pet Therapy</h3><p>Interazione assistita con animali per stimolare empatia, emozioni positive e socializzazione.</p></div>
+    <div class="card"><i class="fas fa-brain"></i><h3>Terapia Cognitivo-Comportamentale</h3><p>Gestione ansia, regolazione emotiva e comportamenti problematici con strategie personalizzate.</p></div>
+    <div class="card"><i class="fas fa-bolt"></i><h3>Integrazione Sensoriale</h3><p>Modulazione degli stimoli sensoriali per migliorare autonomia e partecipazione alla vita quotidiana.</p></div>
+  </div>
+</section>
+
+<section id="metodi">
+  <div class="section-title">Metodi educativi</div>
+  <div class="grid">
+    <div class="card"><i class="fas fa-chart-line"></i><h3>ABA</h3><p>Intervento comportamentale strutturato con obiettivi chiari, rinforzi positivi e monitoraggio costante dei progressi.</p></div>
+    <div class="card"><i class="fas fa-th-large"></i><h3>TEACCH</h3><p>Strutturazione visiva dell’ambiente, organizzazione prevedibile delle attività quotidiane e supporto all’autonomia.</p></div>
+    <div class="card"><i class="fas fa-pencil-alt"></i><h3>CAA</h3><p>Comunicazione Aumentativa Alternativa con simboli, immagini e dispositivi digitali per facilitare la comunicazione.</p></div>
+  </div>
+</section>
+
+<section id="inclusione">
+  <div class="section-title">Inclusione e supporto sociale</div>
+  <div class="text">Creare ambienti accoglienti, valorizzare interessi individuali e sensibilizzare la comunità sono azioni chiave per una società equa e inclusiva.</div>
+  <div class="text">Promuovere partecipazione scolastica, sport e attività culturali inclusive aiuta lo sviluppo sociale, relazionale e la fiducia personale di ogni individuo.</div>
+</section>
+
+<section id="futuro">
+  <div class="section-title">Ricerca e futuro</div>
+  <div class="text">La ricerca neuroscientifica continua a esplorare basi genetiche, biologiche e neurofunzionali, sviluppando strumenti digitali e tecnologie innovative per interventi personalizzati.</div>
+  <div class="text">Il futuro punta a maggiore consapevolezza, inclusione e valorizzazione delle competenze individuali come risorsa per la collettività, offrendo opportunità di crescita e autonomia per tutti.</div>
+</section>
 
 <footer>
 © 2026 Oltre Le Sfumature — Inclusione • Consapevolezza • Ricerca • Innovazione • Crescita • Comunità • Neurodiversità • Futuro • Educazione • Supporto • Collaborazione • Rispetto • Opportunità • Integrazione • Professionalità • Impegno Continuo
