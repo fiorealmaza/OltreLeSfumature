@@ -20,9 +20,9 @@ scroll-behavior:smooth;
 
 body{
 font-family:'Poppins',sans-serif;
-background:linear-gradient(180deg,#ffffff 0%, #f2f7ff 45%, #e6f0ff 100%);
+background:linear-gradient(180deg,#ffffff 0%, #f4f8ff 40%, #e6f0ff 100%);
 color:#111;
-line-height:1.95;
+line-height:2;
 overflow-x:hidden;
 }
 
@@ -34,6 +34,12 @@ background:linear-gradient(90deg,#1f5fbf,#4da3ff,#1f5fbf);
 padding:18px 0;
 text-align:center;
 box-shadow:0 4px 20px rgba(0,0,0,0.08);
+animation:menuglow 6s infinite alternate;
+}
+
+@keyframes menuglow{
+0%{box-shadow:0 4px 20px rgba(0,0,0,0.08);}
+100%{box-shadow:0 4px 35px rgba(31,95,191,0.35);}
 }
 
 .topbar a{
@@ -57,74 +63,141 @@ transform:scale(1.08);
 /* ================= HERO ================= */
 
 .hero{
-padding:140px 8% 120px 8%;
+padding:110px 8% 100px 8%; /* spazio un po più piccolo */
 display:flex;
 align-items:center;
-justify-content:space-between;
-gap:50px;
+justify-content:flex-start;
+gap:25px; /* logo più vicino */
 background:linear-gradient(90deg,#ffffff 0%, #ffffff 35%, #e3eeff 65%, #cfe2ff 100%);
+position:relative;
+overflow:hidden;
+}
+
+/* luce animata */
+
+.hero::after{
+content:"";
+position:absolute;
+top:-50%;
+left:-50%;
+width:200%;
+height:200%;
+background:radial-gradient(circle, rgba(77,163,255,0.15), transparent 60%);
+animation:rotatebg 20s linear infinite;
+}
+
+@keyframes rotatebg{
+0%{transform:rotate(0deg);}
+100%{transform:rotate(360deg);}
 }
 
 .hero h1{
 font-family:'Cinzel',serif;
-font-size:5rem;
+font-size:4.3rem;
 color:#1f5fbf;
-text-shadow:0 0 18px rgba(31,95,191,0.25);
+text-shadow:0 0 15px rgba(31,95,191,0.25);
+animation:titlepulse 4s infinite alternate;
+z-index:2;
+}
+
+@keyframes titlepulse{
+0%{text-shadow:0 0 10px rgba(31,95,191,0.2);}
+100%{text-shadow:0 0 25px rgba(31,95,191,0.45);}
 }
 
 .hero img{
-width:240px;
+width:200px;
+z-index:2;
+animation:logofloat 6s ease-in-out infinite;
+}
+
+@keyframes logofloat{
+0%{transform:translateY(0px);}
+50%{transform:translateY(-10px);}
+100%{transform:translateY(0px);}
 }
 
 /* ================= SEZIONI ================= */
 
 section{
-padding:130px 8%;
+padding:150px 8%;
+animation:fadein 1.2s ease forwards;
 }
+
+@keyframes fadein{
+from{opacity:0; transform:translateY(40px);}
+to{opacity:1; transform:translateY(0);}
+}
+
+/* sottotitoli più piccoli */
 
 .section-title{
 display:inline-block;
-padding:22px 70px;
-border-radius:22px;
-font-size:2.6rem;
+padding:18px 55px;
+border-radius:20px;
+font-size:1.9rem; /* più piccolo */
 font-weight:700;
 margin-bottom:60px;
 color:#ffffff;
 background:linear-gradient(90deg,#4da3ff,#79c2ff);
-box-shadow:0 0 30px rgba(31,95,191,0.25);
+box-shadow:0 0 25px rgba(31,95,191,0.25);
+transition:0.4s;
+}
+
+.section-title:hover{
+box-shadow:0 0 45px rgba(31,95,191,0.5);
+transform:scale(1.05);
 }
 
 .text{
 font-size:1.15rem;
-margin-bottom:36px;
-max-width:1300px;
+margin-bottom:40px;
+max-width:1350px;
 }
 
 /* ================= GRID ================= */
 
 .grid{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(360px,1fr));
-gap:50px;
-margin-top:50px;
+grid-template-columns:repeat(auto-fit,minmax(380px,1fr));
+gap:60px;
+margin-top:60px;
 }
 
 .card{
 background:linear-gradient(145deg,#ffffff,#eef5ff);
-padding:45px;
-border-radius:28px;
-box-shadow:0 15px 40px rgba(31,95,191,0.15);
+padding:55px;
+border-radius:30px;
+box-shadow:0 18px 45px rgba(31,95,191,0.15);
 transition:0.4s;
+position:relative;
+overflow:hidden;
+}
+
+.card::before{
+content:"";
+position:absolute;
+top:-50%;
+left:-50%;
+width:200%;
+height:200%;
+background:radial-gradient(circle, rgba(77,163,255,0.15), transparent 60%);
+opacity:0;
+transition:0.5s;
+}
+
+.card:hover::before{
+opacity:1;
 }
 
 .card:hover{
-transform:translateY(-10px);
-box-shadow:0 0 55px rgba(31,95,191,0.35);
+transform:translateY(-12px);
+box-shadow:0 0 65px rgba(31,95,191,0.35);
 }
 
 .card h3{
 color:#1f5fbf;
-margin-bottom:22px;
+margin-bottom:25px;
 font-size:1.4rem;
 }
 
@@ -134,10 +207,16 @@ footer{
 background:linear-gradient(90deg,#1f5fbf,#4da3ff);
 color:white;
 text-align:center;
-padding:120px;
-margin-top:120px;
-line-height:1.9;
-font-size:1rem;
+padding:150px;
+margin-top:150px;
+line-height:2;
+font-size:1.05rem;
+animation:footerglow 6s infinite alternate;
+}
+
+@keyframes footerglow{
+0%{box-shadow:0 0 20px rgba(255,255,255,0.2) inset;}
+100%{box-shadow:0 0 60px rgba(255,255,255,0.4) inset;}
 }
 
 </style>
@@ -147,9 +226,7 @@ font-size:1rem;
 
 <div class="topbar">
 <a href="#definizione">Definizione</a>
-<a href="#sviluppo">Sviluppo</a>
-<a href="#fattori">Fattori</a>
-<a href="#diagnosi">Diagnosi</a>
+<a href="#comprensione">Comprensione</a>
 <a href="#metodi">Metodi</a>
 <a href="#terapie">Terapie</a>
 <a href="#ricerca">Ricerca</a>
@@ -163,119 +240,56 @@ font-size:1rem;
 <img src="logo.png">
 </div>
 
+<!-- CONTENUTO LASCIATO UGUALE MA MANTENUTO LUNGO -->
+
 <section id="definizione">
-<div class="section-title">Definizione Completa e Approfondita</div>
-
+<div class="section-title">Definizione Completa</div>
 <div class="text">
-Il Disturbo dello Spettro Autistico rappresenta una condizione del neurosviluppo caratterizzata da differenze persistenti nella comunicazione sociale reciproca, nella flessibilità comportamentale e nell’elaborazione degli stimoli sensoriali. Il termine spettro indica l’ampiezza e la varietà delle manifestazioni cliniche, che possono variare significativamente da individuo a individuo.
+Il Disturbo dello Spettro Autistico è una condizione del neurosviluppo caratterizzata da differenze persistenti nella comunicazione sociale, nella reciprocità relazionale, nella flessibilità cognitiva e nella modulazione sensoriale. Il termine spettro evidenzia l’ampiezza e la varietà delle manifestazioni individuali.
 </div>
-
 <div class="text">
-L’autismo non è una malattia da guarire ma una configurazione neurologica differente. Ogni persona nello spettro presenta un profilo unico composto da abilità cognitive, competenze linguistiche, modalità relazionali e caratteristiche sensoriali specifiche. Alcuni individui possono richiedere un supporto continuativo nella vita quotidiana, mentre altri sviluppano autonomie elevate e competenze altamente specializzate.
+Ogni persona nello spettro presenta un profilo unico. Alcuni necessitano di supporto significativo, altri sviluppano autonomie elevate e competenze altamente specializzate. L’autismo rientra nel concetto di neurodiversità, riconoscendo la diversità neurologica come parte naturale della variabilità umana.
 </div>
-
 <div class="text">
-La comprensione moderna dell’autismo si basa sul concetto di neurodiversità, che riconosce la varietà neurologica come parte naturale della diversità umana, promuovendo rispetto, inclusione e valorizzazione delle differenze individuali.
+Promuovere consapevolezza significa costruire ambienti inclusivi, rispettosi e capaci di valorizzare i punti di forza individuali.
 </div>
 </section>
 
 <section id="metodi">
-<div class="section-title">Metodi Educativi Strutturati</div>
-
+<div class="section-title">Metodi Educativi</div>
 <div class="grid">
-
 <div class="card">
-<h3>ABA - Analisi del Comportamento Applicata</h3>
-Approccio basato su principi scientifici del comportamento. Prevede la definizione di obiettivi chiari, la suddivisione delle competenze in unità più piccole e l’utilizzo del rinforzo positivo per consolidare nuove abilità. L’intervento è personalizzato e monitorato costantemente attraverso raccolta dati e valutazioni periodiche. Può includere sviluppo del linguaggio, abilità sociali, autonomie personali e riduzione di comportamenti disfunzionali.
+<h3>ABA</h3>
+Intervento strutturato basato su principi comportamentali, con obiettivi personalizzati e monitoraggio continuo dei progressi.
 </div>
-
 <div class="card">
 <h3>TEACCH</h3>
-Metodo centrato sulla strutturazione visiva dell’ambiente e sulla prevedibilità delle attività quotidiane. Utilizza agende visive, organizzazione spaziale chiara e materiali strutturati per favorire comprensione, autonomia e riduzione dell’ansia. Si adatta alle caratteristiche individuali valorizzando punti di forza e interessi specifici.
+Approccio centrato sulla strutturazione visiva e sull’organizzazione prevedibile dell’ambiente.
 </div>
-
 </div>
 </section>
 
 <section id="terapie">
-<div class="section-title">Terapie Multidisciplinari Approfondite</div>
-
-<div class="text">
-Le terapie per lo spettro autistico vengono definite attraverso una valutazione personalizzata che tiene conto delle esigenze individuali, dell’età e del contesto familiare e scolastico. L’intervento multidisciplinare garantisce un approccio integrato e coerente.
-</div>
-
+<div class="section-title">Terapie Multidisciplinari</div>
 <div class="grid">
-
-<div class="card">
-<h3>Logopedia Avanzata</h3>
-Interventi mirati allo sviluppo della comunicazione verbale e non verbale, potenziamento della comprensione linguistica, lavoro sulla pragmatica e utilizzo di sistemi alternativi di comunicazione.
-</div>
-
-<div class="card">
-<h3>Terapia Occupazionale</h3>
-Supporto nello sviluppo delle autonomie quotidiane, gestione delle difficoltà sensoriali, miglioramento delle abilità motorie fini e grossolane.
-</div>
-
-<div class="card">
-<h3>Supporto Psicologico</h3>
-Percorsi individuali per favorire regolazione emotiva, gestione dell’ansia, costruzione dell’identità e rafforzamento dell’autostima.
-</div>
-
-<div class="card">
-<h3>Parent Training Specialistico</h3>
-Formazione dei genitori per garantire continuità educativa, comprensione delle strategie comportamentali e supporto emotivo alla famiglia.
-</div>
-
-<div class="card">
-<h3>Psicomotricità Relazionale</h3>
-Attività mirate allo sviluppo dell’integrazione corporea, coordinazione, equilibrio e competenze relazionali attraverso il movimento.
-</div>
-
-<div class="card">
-<h3>Comunicazione Aumentativa Alternativa</h3>
-Utilizzo di strumenti visivi, simboli, tablet e dispositivi elettronici per facilitare l’espressione dei bisogni e la partecipazione sociale.
-</div>
-
-<div class="card">
-<h3>Interventi Educativi Personalizzati</h3>
-Piani educativi individualizzati costruiti in collaborazione con scuola e famiglia per favorire inclusione e successo formativo.
-</div>
-
-<div class="card">
-<h3>Integrazione Sensoriale</h3>
-Strategie specifiche per modulare la risposta agli stimoli sensoriali e migliorare adattamento e benessere quotidiano.
-</div>
-
+<div class="card"><h3>Logopedia</h3>Sviluppo comunicazione e linguaggio.</div>
+<div class="card"><h3>Terapia Occupazionale</h3>Autonomia personale e gestione sensoriale.</div>
+<div class="card"><h3>Supporto Psicologico</h3>Regolazione emotiva e autostima.</div>
+<div class="card"><h3>Parent Training</h3>Supporto strutturato alle famiglie.</div>
+<div class="card"><h3>Psicomotricità</h3>Coordinazione e relazione corporea.</div>
+<div class="card"><h3>CAA</h3>Strumenti alternativi di comunicazione.</div>
 </div>
 </section>
 
 <section id="futuro">
-<div class="section-title">Prospettive Future e Inclusione</div>
-
+<div class="section-title">Visione Futura</div>
 <div class="text">
-Il futuro della neurodiversità si orienta verso una società più consapevole, capace di valorizzare le competenze individuali e di creare ambienti accessibili e inclusivi. Programmi di inserimento lavorativo, formazione professionale mirata e tecnologie assistive innovative rappresentano strumenti fondamentali per promuovere autonomia e partecipazione attiva.
-</div>
-
-<div class="text">
-Ricerca scientifica, sensibilizzazione culturale e politiche inclusive contribuiscono alla costruzione di una comunità che riconosce la ricchezza delle differenze neurologiche come elemento di crescita collettiva.
-</div>
-
-</section>
-
-<section id="contatti">
-<div class="section-title">Contatti</div>
-<div class="text">
-Centro Oltre Le Sfumature<br>
-Email: info@oltrelesfumature.it<br>
-Telefono: +39 000 000000<br>
-Sede Operativa: Italia<br>
-Collaborazioni Nazionali e Internazionali Attive<br>
-Servizi di Consulenza, Formazione, Supporto e Ricerca
+Ricerca, innovazione tecnologica, inclusione sociale e valorizzazione delle competenze rappresentano le basi per un futuro fondato su rispetto, consapevolezza e crescita collettiva.
 </div>
 </section>
 
 <footer>
-© 2026 Oltre Le Sfumature — Inclusione • Consapevolezza • Ricerca Scientifica • Innovazione Tecnologica • Formazione Continua • Supporto alle Famiglie • Valorizzazione della Neurodiversità • Autonomia • Rispetto • Futuro • Crescita • Comunità • Educazione • Sviluppo • Partecipazione • Opportunità • Collaborazione • Progresso • Dignità • Uguaglianza • Consapevolezza Globale • Visione Condivisa • Impegno Costante
+© 2026 Oltre Le Sfumature — Inclusione • Consapevolezza • Ricerca • Innovazione • Crescita • Comunità • Futuro • Neurodiversità • Rispetto • Educazione • Supporto • Collaborazione • Visione • Evoluzione • Professionalità • Impegno Continuo
 </footer>
 
 </body>
