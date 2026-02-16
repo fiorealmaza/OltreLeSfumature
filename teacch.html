@@ -3,277 +3,183 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Metodo TEACCH - Oltre Le Sfumature</title>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+<title>TEACCH – Oltre Le Sfumature</title>
 
-<style>
+<link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700;800&display=swap" rel="stylesheet">
 
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:'Poppins', sans-serif;
-}
-
-body{
-background:linear-gradient(180deg,#0d3b66,#001f3f);
-color:white;
-}
-
-/* NAVBAR */
-
-.navbar{
-display:flex;
-justify-content:space-between;
-align-items:center;
-padding:20px 60px;
-background:rgba(0,0,0,0.3);
-backdrop-filter:blur(10px);
-position:sticky;
-top:0;
-}
-
-.logo-area{
-display:flex;
-align-items:center;
-gap:15px;
-}
-
-.logo{
-width:70px;
-}
-
-.navbar nav a{
-color:white;
-margin-left:30px;
-text-decoration:none;
-transition:0.3s;
-}
-
-.navbar nav a:hover{
-color:#4cc9f0;
-}
-
-/* HERO */
-
-.hero{
-text-align:center;
-padding:120px 20px;
-}
-
-.hero h2{
-font-size:46px;
-margin-bottom:20px;
-}
-
-.hero p{
-max-width:800px;
-margin:auto;
-opacity:0.9;
-}
-
-/* WAVE */
-
-.wave{
-height:100px;
-background:white;
-border-top-left-radius:50% 100%;
-border-top-right-radius:50% 100%;
-}
-
-/* SEZIONI */
-
-.section-light{
-background:white;
-color:#001f3f;
-padding:100px 15%;
-}
-
-.section-blue{
-background:#f4f9ff;
-color:#001f3f;
-padding:100px 15%;
-}
-
-.section-light h3,
-.section-blue h3{
-font-size:32px;
-margin-bottom:25px;
-position:relative;
-}
-
-.section-light h3::after,
-.section-blue h3::after{
-content:"";
-display:block;
-width:80px;
-height:4px;
-background:linear-gradient(45deg,#3a86ff,#00b4ff);
-margin-top:10px;
-border-radius:10px;
-}
-
-.section-light p,
-.section-blue p{
-margin-bottom:20px;
-line-height:1.8;
-font-size:17px;
-}
-
-.section-light ul,
-.section-blue ul{
-margin-left:20px;
-margin-top:20px;
-}
-
-.section-light li,
-.section-blue li{
-margin-bottom:12px;
-line-height:1.7;
-}
-
-/* HIGHLIGHT BOX PICCOLI */
-
-.highlight{
-background:linear-gradient(45deg,#3a86ff,#00b4ff);
-color:white;
-padding:25px;
-border-radius:20px;
-margin:40px 0;
-box-shadow:0 15px 40px rgba(0,0,0,0.2);
-}
-
-/* FOOTER */
-
-footer{
-text-align:center;
-padding:40px;
-background:#001f3f;
-color:white;
-}
-
-</style>
 </head>
-
 <body>
 
 <header class="navbar">
-<div class="logo-area">
-<img src="logo.png" class="logo">
-<h1>Oltre Le Sfumature</h1>
-</div>
+  <div class="logo">Oltre Le Sfumature</div>
 
-<nav>
-<a href="index.html">Home</a>
-<a href="aba.html">Metodo ABA</a>
-<a href="teacch.html">Metodo TEACCH</a>
-<a href="contatti.html">Contatti</a>
-</nav>
+  <div class="menu-toggle" onclick="toggleMenu()">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+
+  <nav class="nav-links">
+    <a href="index.html">Home</a>
+    <a href="aba.html">ABA</a>
+    <a href="teacch.html">TEACCH</a>
+    <a href="contatti.html">Contatti</a>
+  </nav>
 </header>
 
+
 <section class="hero">
-<h2>Metodo TEACCH</h2>
-<p>Un approccio strutturato che valorizza autonomia, organizzazione e comprensione attraverso il supporto visivo.</p>
+  <h1>TEACCH</h1>
+  <p>
+    Approccio psicoeducativo strutturato che organizza l’ambiente,
+    favorisce prevedibilità e promuove autonomia nelle persone con Disturbo dello Spettro Autistico.
+  </p>
 </section>
 
-<div class="wave"></div>
 
-<section class="section-light">
-<h3>Cos’è TEACCH</h3>
+<section class="section">
+  <h2>Cos’è TEACCH</h2>
 
-<p>
-Il programma Treatment and Education of Autistic and Communication Handicapped Children (TEACCH) è un approccio psicoeducativo strutturato per persone con Disturbo dello Spettro Autistico.
-È nato negli anni ’70 presso l’Università della Carolina del Nord.
-</p>
+  <div class="card">
+    <p>
+      Il programma Treatment and Education of Autistic and Communication Handicapped Children (TEACCH)
+      è un approccio psicoeducativo strutturato per persone con Disturbo dello Spettro Autistico.
+    </p>
 
-<p>
-Si basa sull’idea che l’ambiente debba adattarsi alle caratteristiche cognitive e percettive della persona con autismo, e non il contrario.
-</p>
+    <p>
+      È nato negli anni ’70 presso l’Università della Carolina del Nord
+      e si basa sull’idea che l’ambiente debba adattarsi alle caratteristiche cognitive
+      e percettive della persona con autismo, e non il contrario.
+    </p>
 
-<div class="highlight">
-L’obiettivo principale è creare un contesto organizzato, prevedibile e comprensibile che favorisca autonomia, apprendimento e benessere.
-</div>
+    <p>
+      L’obiettivo principale è creare un contesto organizzato,
+      prevedibile e comprensibile che favorisca autonomia,
+      apprendimento e benessere.
+    </p>
+  </div>
 </section>
 
-<section class="section-blue">
-<h3>Principi Chiave</h3>
 
-<ul>
-<li><strong>Strutturazione visiva:</strong> uso di immagini, simboli e agende visive.</li>
-<li><strong>Prevedibilità e routine:</strong> organizzazione chiara della giornata.</li>
-<li><strong>Task analysis:</strong> attività suddivise in passaggi semplici.</li>
-<li><strong>Chiarezza spaziale:</strong> spazi ben definiti.</li>
-<li><strong>Supporti concreti:</strong> materiali organizzati visivamente.</li>
-<li><strong>Valorizzazione dei punti di forza:</strong> attenzione alle abilità visive.</li>
-</ul>
+<section class="section">
+  <h2>Principi Chiave</h2>
+
+  <div class="card">
+    <ul>
+      <li><strong>Strutturazione visiva:</strong> uso di immagini, simboli, colori, etichette e agende visive per facilitare la comprensione.</li>
+      <li><strong>Prevedibilità e routine:</strong> organizzazione chiara della giornata attraverso orari visivi e sequenze di attività.</li>
+      <li><strong>Task analysis:</strong> suddivisione delle attività in passaggi semplici e sequenziali.</li>
+      <li><strong>Chiarezza spaziale:</strong> definizione precisa degli spazi (area lavoro, area gioco, area relax).</li>
+      <li><strong>Supporti concreti e visivi:</strong> materiali organizzati per indicare cosa fare, quanto farne e quando l’attività è conclusa.</li>
+      <li><strong>Valorizzazione dei punti di forza:</strong> attenzione alle abilità visive spesso sviluppate nelle persone con autismo.</li>
+    </ul>
+  </div>
 </section>
 
-<section class="section-light">
-<h3>Obiettivi</h3>
 
-<ul>
-<li>Incrementare l’autonomia personale.</li>
-<li>Ridurre l’ansia e i comportamenti problematici.</li>
-<li>Sviluppare competenze comunicative e sociali.</li>
-<li>Migliorare abilità di vita quotidiana.</li>
-<li>Favorire inserimento scolastico e lavorativo.</li>
-</ul>
+<section class="section">
+  <h2>Obiettivi</h2>
+
+  <div class="card">
+    <ul>
+      <li>Incrementare l’autonomia personale.</li>
+      <li>Favorire la gestione dei comportamenti problematici riducendo l’ansia.</li>
+      <li>Sviluppare competenze comunicative e sociali.</li>
+      <li>Migliorare le abilità di vita quotidiana.</li>
+      <li>Promuovere l’inserimento scolastico e lavorativo.</li>
+    </ul>
+  </div>
 </section>
 
-<section class="section-blue">
-<h3>Struttura dell’intervento</h3>
 
-<p>Il metodo TEACCH prevede:</p>
+<section class="section">
+  <h2>Struttura dell’Intervento</h2>
 
-<ul>
-<li>Spazi organizzati in modo chiaro.</li>
-<li>Attività strutturate e sequenziali.</li>
-<li>Sistemi individuali che aiutano a capire:
-<ul>
-<li>Cosa devo fare?</li>
-<li>Quanto devo farne?</li>
-<li>Quando ho finito?</li>
-<li>Cosa succede dopo?</li>
-</ul>
-</li>
-<li>Collaborazione costante con le famiglie.</li>
-<li>Intervento personalizzato.</li>
-</ul>
+  <div class="card">
+    <ul>
+      <li>Spazi organizzati in modo chiaro e riconoscibile.</li>
+      <li>Attività strutturate e sequenziali con indicazioni visive.</li>
+      <li>Sistemi di lavoro individuali che aiutano a comprendere:</li>
+      <ul>
+        <li>Cosa devo fare?</li>
+        <li>Quanto devo farne?</li>
+        <li>Quando ho finito?</li>
+        <li>Cosa succede dopo?</li>
+      </ul>
+      <li>Collaborazione costante con le famiglie.</li>
+      <li>Intervento personalizzato adattato all’età e al livello di funzionamento.</li>
+    </ul>
+  </div>
 </section>
 
-<section class="section-light">
-<h3>Benefici</h3>
 
-<ul>
-<li>Aumenta la prevedibilità dell’ambiente.</li>
-<li>Riduce ansia e comportamenti disfunzionali.</li>
-<li>Migliora autonomia e competenze funzionali.</li>
-<li>Favorisce la generalizzazione delle abilità.</li>
-<li>Adatto a bambini e adulti.</li>
-</ul>
+<section class="section">
+  <h2>Benefici</h2>
+
+  <div class="card">
+    <ul>
+      <li>Aumenta la prevedibilità dell’ambiente.</li>
+      <li>Riduce ansia e comportamenti disfunzionali.</li>
+      <li>Migliora autonomia e competenze funzionali.</li>
+      <li>Favorisce la generalizzazione delle abilità nei diversi contesti.</li>
+      <li>Adatto sia a bambini sia ad adulti nello spettro autistico.</li>
+    </ul>
+  </div>
 </section>
 
-<section class="section-blue">
-<h3>Differenze rispetto ad altri approcci</h3>
 
-<p>
-A differenza dell’ABA, TEACCH pone maggiore enfasi sull’adattamento dell’ambiente e sull’organizzazione visiva.
-Non mira a “normalizzare” il comportamento, ma a rendere la persona autonoma nel proprio contesto di vita.
-</p>
+<section class="section">
+  <h2>Differenze rispetto ad altri approcci</h2>
+
+  <div class="card">
+    <p>
+      A differenza dell’ABA, che si concentra principalmente sull’analisi
+      e modifica del comportamento attraverso il rinforzo,
+      TEACCH pone maggiore enfasi sull’adattamento dell’ambiente
+      e sull’organizzazione visiva.
+    </p>
+
+    <p>
+      Non mira tanto a “normalizzare” il comportamento,
+      quanto a rendere la persona più autonoma e competente
+      nel proprio contesto di vita.
+    </p>
+  </div>
 </section>
 
-<section class="section-light">
-<h3>Aspetti teorici</h3>
 
-<p>
-TEACCH si basa su una visione dell’autismo come differenza neurobiologica stabile nel tempo.
-L’intervento è considerato un supporto continuo lungo tutte le fasi della vita.
-</p>
+<section class="section">
+  <h2>Aspetti Teorici</h2>
+
+  <div class="card">
+    <p>
+      TEACCH si basa su una visione dell’autismo come differenza
+      neurobiologica stabile nel tempo.
+    </p>
+
+    <p>
+      Per questo motivo, l’intervento non è considerato una “cura”,
+      ma un supporto continuo che accompagna la persona
+      nelle diverse fasi della vita.
+    </p>
+  </div>
 </section>
 
-<footer>
-<p>© 2026 Oltre Le Sfumature - Tutti i diritti riservati</p>
-</footer>
+
+<script>
+function toggleMenu(){
+  document.querySelector(".nav-links").classList.toggle("active");
+}
+
+document.addEventListener("scroll",()=>{
+  document.querySelectorAll(".section").forEach(sec=>{
+    if(sec.getBoundingClientRect().top < window.innerHeight - 100){
+      sec.classList.add("visible");
+    }
+  });
+});
+</script>
 
 </body>
 </html>
