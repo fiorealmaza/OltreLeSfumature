@@ -59,6 +59,8 @@ footer{text-align:center;padding:50px 20px;background:linear-gradient(90deg,#153
 <h1>Oltre Le Sfumature</h1>
 </section>
 
+<!-- ================= SEZIONI COMPLETE ================= -->
+
 <section id="cos-e">
 <h2 class="section-title"><i class="fas fa-brain"></i>Cos'è l'Autismo</h2>
 <div class="grid">
@@ -201,5 +203,6 @@ const cards=document.querySelectorAll('.card');
 const observer=new IntersectionObserver(entries=>{entries.forEach(entry=>{if(entry.isIntersecting){entry.target.classList.add('visible');}})},{threshold:0.2});
 cards.forEach(card=>observer.observe(card));
 </script>
+
 </body>
 </html>
