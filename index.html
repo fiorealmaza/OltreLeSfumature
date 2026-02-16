@@ -3,32 +3,24 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Oltre Le Sfumature - Centro Specializzato Autismo</title>
+<title>Oltre Le Sfumature | Centro Specializzato Autismo</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700;800&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700;800;900&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
 <style>
 
-/* ========================= RESET ========================= */
+/* ================= RESET ================= */
 
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-}
-
-html{
-scroll-behavior:smooth;
-}
-
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
 body{
 font-family:'Poppins',sans-serif;
-background:#ffffff;
-color:#222;
+background:white;
+color:#1a1a1a;
 line-height:1.9;
 }
 
-/* ========================= HEADER ========================= */
+/* ================= HEADER ================= */
 
 header{
 position:fixed;
@@ -39,8 +31,8 @@ background:white;
 display:flex;
 justify-content:space-between;
 align-items:center;
-padding:20px 70px;
-box-shadow:0 6px 25px rgba(0,0,0,0.08);
+padding:25px 70px;
+box-shadow:0 8px 25px rgba(0,0,0,0.08);
 z-index:1000;
 }
 
@@ -51,113 +43,110 @@ gap:20px;
 }
 
 .brand img{
-width:75px;
+width:110px;
 }
 
 .brand h1{
 font-family:'Cinzel',serif;
-font-size:2.3rem;
+font-size:3.2rem;
 color:#1f5fbf;
+text-shadow:0 0 15px rgba(31,95,191,0.7),
+0 0 40px rgba(31,95,191,0.4);
+}
+
+/* ================= MENU ================= */
+
+nav{
+display:flex;
+flex-wrap:wrap;
 }
 
 nav a{
-margin-left:30px;
+margin-left:25px;
 text-decoration:none;
+padding:12px 22px;
+border-radius:40px;
 color:#1f5fbf;
 font-weight:600;
-transition:0.3s;
+transition:0.4s;
 }
 
 nav a:hover{
-color:#0a2f6b;
+background:#1f5fbf;
+color:white;
+box-shadow:0 0 30px rgba(31,95,191,0.8);
 }
 
-/* ========================= SECTIONS ========================= */
+/* ================= SECTIONS ================= */
 
 section{
-padding:180px 10% 130px 10%;
+padding:170px 7% 100px 7%;
 }
 
 .section-title{
-font-size:1.8rem;
-background:#e6f1ff;
+font-size:2.2rem;
 color:#1f5fbf;
-padding:18px 60px;
-border-radius:60px;
+font-weight:700;
+margin-bottom:40px;
 display:inline-block;
-margin-bottom:70px;
-box-shadow:0 0 30px rgba(31,95,191,0.3);
+padding:20px 70px;
+border-radius:60px;
+background:#f3f8ff;
+box-shadow:0 0 30px rgba(31,95,191,0.6),
+0 0 70px rgba(31,95,191,0.25);
+text-shadow:0 0 15px rgba(31,95,191,0.7);
 }
 
-/* ========================= GRID ========================= */
+.text{
+margin-bottom:30px;
+font-size:1.08rem;
+max-width:1100px;
+}
+
+/* ================= GRID ================= */
 
 .grid{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
-gap:50px;
+grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+gap:30px;
+margin-top:40px;
 }
 
 .card{
-background:#f7fbff;
-padding:50px;
-border-radius:35px;
-box-shadow:0 10px 35px rgba(0,0,0,0.06);
-transition:0.3s;
+background:white;
+padding:35px;
+border-radius:30px;
+box-shadow:0 10px 30px rgba(31,95,191,0.1);
+border:1px solid rgba(31,95,191,0.1);
+transition:0.4s;
 }
 
 .card:hover{
-transform:translateY(-8px);
-box-shadow:0 15px 45px rgba(0,0,0,0.12);
+transform:translateY(-6px);
+box-shadow:0 0 40px rgba(31,95,191,0.5),
+0 0 80px rgba(31,95,191,0.3);
 }
 
 .card h3{
 color:#1f5fbf;
-margin-bottom:20px;
+margin-bottom:15px;
 font-size:1.2rem;
+text-shadow:0 0 10px rgba(31,95,191,0.6);
 }
 
-/* ========================= METODI ========================= */
-
-.methods{
-display:grid;
-grid-template-columns:1fr 1fr;
-gap:70px;
-}
-
-.method-box{
-background:#eef6ff;
-padding:70px;
-border-radius:45px;
-box-shadow:0 15px 45px rgba(31,95,191,0.15);
-}
-
-.method-box h3{
-color:#1f5fbf;
-margin-bottom:25px;
-font-size:1.4rem;
-}
-
-/* ========================= FOOTER ========================= */
+/* ================= FOOTER ================= */
 
 footer{
 background:#1f5fbf;
 color:white;
 text-align:center;
-padding:80px;
-margin-top:80px;
-font-size:0.95rem;
+padding:70px;
+margin-top:60px;
 }
-
-/* ========================= RESPONSIVE ========================= */
 
 @media(max-width:950px){
-.methods{
-grid-template-columns:1fr;
-}
-header{
-flex-direction:column;
-gap:20px;
-}
+header{flex-direction:column;gap:20px;}
+nav{justify-content:center;}
 }
 
 </style>
@@ -172,241 +161,206 @@ gap:20px;
 </div>
 
 <nav>
-<a href="#spettro">Lo Spettro</a>
+<a href="#definizione">Definizione</a>
 <a href="#sviluppo">Sviluppo</a>
 <a href="#fattori">Fattori di Rischio</a>
 <a href="#metodi">Metodi</a>
 <a href="#terapie">Terapie</a>
-<a href="#diagnosi">Diagnosi</a>
 <a href="#aiuto">Come Aiutare</a>
-<a href="#famiglia">Famiglia</a>
-<a href="#scuola">Scuola</a>
+<a href="#futuro">Futuro</a>
 <a href="#contatti">Contatti</a>
 </nav>
 </header>
 
-<!-- ========================= LO SPETTRO ========================= -->
+<!-- ================= DEFINIZIONE ================= -->
 
-<section id="spettro">
-<div class="section-title">Cos'è lo Spettro Autistico</div>
+<section id="definizione">
+<div class="section-title">Cos'è il Disturbo dello Spettro Autistico</div>
 
-<p>
-Il Disturbo dello Spettro Autistico (ASD) è una condizione del neurosviluppo che influisce sulla comunicazione sociale, sull'interazione con gli altri e sulla presenza di comportamenti ripetitivi o interessi ristretti.
-Viene definito "spettro" perché esiste una grande variabilità nella manifestazione dei sintomi e nel livello di supporto necessario.
-</p>
+<div class="text">
+Il Disturbo dello Spettro Autistico (ASD) è una condizione del neurosviluppo che influenza la comunicazione, l'interazione sociale e il comportamento. Il termine "spettro" indica che ogni persona presenta caratteristiche diverse per intensità e modalità.
+</div>
 
-<br><br>
+<div class="text">
+Non è una malattia ma una differenza neurologica. Le persone nello spettro possono avere abilità straordinarie, memoria eccezionale, forte concentrazione su interessi specifici e grande attenzione ai dettagli.
+</div>
 
-<p>
-L’autismo non è una malattia da guarire ma una differente modalità di funzionamento neurologico.
-Ogni persona nello spettro possiede caratteristiche uniche, punti di forza e talenti specifici.
-Alcuni bambini possono avere difficoltà significative nella comunicazione verbale, altri possono avere un linguaggio fluente ma difficoltà nella comprensione sociale.
-</p>
-
-<br><br>
-
-<p>
-La diagnosi può essere effettuata già nei primi anni di vita, e un intervento precoce può migliorare significativamente lo sviluppo delle abilità comunicative, sociali e adattive.
-</p>
+<div class="text">
+L’autismo è presente fin dalla prima infanzia, anche se in alcuni casi viene riconosciuto più tardi. Una diagnosi precoce permette interventi tempestivi e mirati.
+</div>
 
 </section>
 
-<!-- ========================= SVILUPPO ========================= -->
+<!-- ================= SVILUPPO ================= -->
 
 <section id="sviluppo">
-<div class="section-title">Sviluppo del Bambino</div>
+<div class="section-title">Sviluppo e Caratteristiche Principali</div>
 
 <div class="grid">
 
 <div class="card">
-<h3>Area Comunicativa</h3>
-Possibile ritardo nello sviluppo del linguaggio, difficoltà nell’iniziare o mantenere conversazioni, ecolalia, uso limitato dei gesti comunicativi.
-In molti casi è utile l’utilizzo della Comunicazione Aumentativa Alternativa (CAA).
+<h3>Comunicazione Verbale</h3>
+Ritardi nello sviluppo del linguaggio, difficoltà nella conversazione reciproca, uso letterale del linguaggio.
 </div>
 
 <div class="card">
-<h3>Area Sociale</h3>
-Difficoltà nella comprensione delle emozioni, del linguaggio non verbale e delle regole implicite delle relazioni.
-Può esserci preferenza per il gioco solitario.
+<h3>Comunicazione Non Verbale</h3>
+Ridotto contatto visivo, difficoltà nell'interpretare espressioni facciali e gesti.
 </div>
 
 <div class="card">
-<h3>Comportamenti Ripetitivi</h3>
-Movimenti stereotipati, rigidità nelle routine, forte interesse per argomenti specifici.
-Questi comportamenti possono avere funzione autoregolatoria.
+<h3>Relazioni Sociali</h3>
+Difficoltà nella comprensione delle regole sociali implicite e nella reciprocità emotiva.
+</div>
+
+<div class="card">
+<h3>Interessi Ristretti</h3>
+Passione intensa per argomenti specifici, routine rigide e bisogno di prevedibilità.
 </div>
 
 <div class="card">
 <h3>Sensibilità Sensoriale</h3>
-Iper o ipo-sensibilità a suoni, luci, odori, consistenze.
-Può influire sulla quotidianità e sull’ambiente scolastico.
+Reazioni intense a suoni, luci, consistenze o odori.
+</div>
+
+<div class="card">
+<h3>Regolazione Emotiva</h3>
+Possibili difficoltà nel gestire frustrazione e cambiamenti improvvisi.
 </div>
 
 </div>
 </section>
 
-<!-- ========================= FATTORI ========================= -->
+<!-- ================= FATTORI ================= -->
 
 <section id="fattori">
-<div class="section-title">Fattori di Rischio</div>
+<div class="section-title">Fattori di Rischio e Cause</div>
 
-<p>
-Le cause dell’autismo sono multifattoriali e includono componenti genetiche e neurobiologiche.
-Non esiste una singola causa.
-</p>
+<div class="text">
+Le cause dell’autismo sono multifattoriali. Studi scientifici indicano una forte componente genetica, combinata a fattori ambientali prenatali.
+</div>
 
-<br><br>
+<div class="text">
+Tra i possibili fattori:
+- Predisposizione genetica
+- Complicazioni durante gravidanza o parto
+- Alterazioni nello sviluppo neurologico
+- Età avanzata dei genitori
+</div>
 
-<ul>
-<li>✔ Predisposizione genetica</li>
-<li>✔ Alterazioni nello sviluppo cerebrale</li>
-<li>✔ Età avanzata dei genitori</li>
-<li>✔ Complicazioni prenatali o perinatali</li>
-<li>✔ Fattori ambientali in fase prenatale</li>
-</ul>
-
-<br><br>
-
-<p>
-Numerosi studi scientifici hanno dimostrato che i vaccini NON causano autismo.
-</p>
+<div class="text">
+È importante sottolineare che i vaccini NON causano l’autismo: questa teoria è stata scientificamente smentita.
+</div>
 
 </section>
 
-<!-- ========================= METODI ========================= -->
+<!-- ================= METODI ================= -->
 
 <section id="metodi">
-<div class="section-title">Metodi Educativi</div>
+<div class="section-title">Metodi Educativi e Interventi</div>
 
-<div class="methods">
+<div class="grid">
 
-<div class="method-box">
-<h3>ABA - Applied Behavior Analysis</h3>
-Approccio basato sull’analisi scientifica del comportamento.
-Si concentra sull’insegnamento strutturato di abilità attraverso il rinforzo positivo.
-Prevede obiettivi misurabili, raccolta dati e monitoraggio continuo.
-Può essere intensivo e personalizzato.
+<div class="card">
+<h3>ABA</h3>
+Analisi del comportamento applicata con obiettivi strutturati e rinforzo positivo.
 </div>
 
-<div class="method-box">
+<div class="card">
 <h3>TEACCH</h3>
-Approccio strutturato che utilizza supporti visivi, organizzazione degli spazi e routine prevedibili.
-Favorisce autonomia, indipendenza e comprensione delle attività quotidiane.
+Strutturazione dell'ambiente con supporti visivi e organizzazione chiara.
+</div>
+
+<div class="card">
+<h3>Denver Model</h3>
+Intervento precoce basato sul gioco e relazione.
+</div>
+
+<div class="card">
+<h3>CAA</h3>
+Comunicazione Aumentativa Alternativa tramite immagini e simboli.
 </div>
 
 </div>
-
 </section>
 
-<!-- ========================= TERAPIE ========================= -->
+<!-- ================= TERAPIE ================= -->
 
 <section id="terapie">
-<div class="section-title">Terapie Specialistiche</div>
+<div class="section-title">Terapie Specialistiche Approfondite</div>
 
 <div class="grid">
 
 <div class="card">
 <h3>Logopedia</h3>
-Intervento per sviluppare comunicazione verbale e non verbale, migliorando articolazione, comprensione e pragmatica.
+Sviluppo del linguaggio e comunicazione funzionale.
 </div>
 
 <div class="card">
 <h3>Terapia Occupazionale</h3>
-Supporto nelle autonomie quotidiane e nell’integrazione sensoriale.
+Autonomia personale, coordinazione e integrazione sensoriale.
 </div>
 
 <div class="card">
 <h3>Psicomotricità</h3>
-Aiuta nello sviluppo della coordinazione motoria e nella regolazione emotiva.
+Sviluppo motorio e consapevolezza corporea.
 </div>
 
 <div class="card">
 <h3>Supporto Psicologico</h3>
-Favorisce gestione emotiva e comportamentale.
-</div>
-
-<div class="card">
-<h3>Intervento Educativo Individualizzato</h3>
-Piani personalizzati in base ai bisogni del bambino.
+Gestione emozioni e comportamenti.
 </div>
 
 <div class="card">
 <h3>Parent Training</h3>
-Formazione ai genitori per applicare strategie educative efficaci a casa.
+Coinvolgimento attivo delle famiglie nel percorso.
+</div>
+
+<div class="card">
+<h3>Terapie di Gruppo</h3>
+Allenamento abilità sociali e interazione con coetanei.
 </div>
 
 </div>
-
 </section>
 
-<!-- ========================= DIAGNOSI ========================= -->
-
-<section id="diagnosi">
-<div class="section-title">Diagnosi</div>
-
-<p>
-La diagnosi viene effettuata da un’équipe multidisciplinare composta da neuropsichiatra infantile, psicologo, logopedista e altri specialisti.
-Si basa su osservazione clinica, strumenti standardizzati e colloqui con la famiglia.
-</p>
-
-</section>
-
-<!-- ========================= COME AIUTARE ========================= -->
+<!-- ================= COME AIUTARE ================= -->
 
 <section id="aiuto">
-<div class="section-title">Come Aiutare</div>
+<div class="section-title">Come Aiutare una Persona nello Spettro</div>
 
-<ul>
-<li>✔ Creare routine prevedibili</li>
-<li>✔ Utilizzare supporti visivi</li>
-<li>✔ Rinforzare positivamente i progressi</li>
-<li>✔ Favorire inclusione scolastica</li>
-<li>✔ Collaborare con professionisti</li>
-<li>✔ Valorizzare punti di forza</li>
-<li>✔ Garantire ambienti strutturati</li>
-<li>✔ Offrire supporto emotivo costante</li>
-</ul>
+<div class="text">
+Favorire ambienti prevedibili, usare comunicazione chiara e diretta, rispettare i tempi della persona, valorizzare interessi specifici e creare routine strutturate.
+</div>
+
+<div class="text">
+L'inclusione scolastica e lavorativa è fondamentale per lo sviluppo dell'autonomia e dell'autostima.
+</div>
 
 </section>
 
-<!-- ========================= FAMIGLIA ========================= -->
+<!-- ================= FUTURO ================= -->
 
-<section id="famiglia">
-<div class="section-title">Supporto alla Famiglia</div>
+<section id="futuro">
+<div class="section-title">Il Futuro dell’Autismo</div>
 
-<p>
-La famiglia è una risorsa fondamentale.
-È importante fornire ascolto, formazione, sostegno psicologico e accompagnamento costante.
-</p>
+<div class="text">
+La ricerca scientifica continua a migliorare diagnosi e interventi. L’obiettivo è costruire una società inclusiva che valorizzi la neurodiversità.
+</div>
 
-</section>
-
-<!-- ========================= SCUOLA ========================= -->
-
-<section id="scuola">
-<div class="section-title">Inclusione Scolastica</div>
-
-<p>
-Collaborazione tra scuola, insegnanti di sostegno e specialisti.
-Creazione di PEI personalizzati.
-Uso di strumenti compensativi e strategie visive.
-</p>
+<div class="text">
+Sempre più programmi lavorativi, percorsi universitari e progetti di autonomia abitativa stanno aprendo nuove opportunità.
+</div>
 
 </section>
-
-<!-- ========================= CONTATTI ========================= -->
 
 <section id="contatti">
 <div class="section-title">Contatti</div>
-
-<p>
-Centro Oltre Le Sfumature<br><br>
-Supporto educativo e terapeutico personalizzato<br><br>
-📍 Italia<br>
+<div class="text">
+Centro Oltre Le Sfumature<br>
 📞 +39 000 000000<br>
 📧 info@oltrelesfumature.it
-</p>
-
+</div>
 </section>
 
 <footer>
