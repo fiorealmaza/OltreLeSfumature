@@ -21,7 +21,7 @@ header{
 .logo-title{display:flex;align-items:center;gap:15px;}
 .logo-small{height:50px;transition:0.3s;}
 .logo-small:hover{transform:rotate(-10deg);}
-.site-name{color:white;font-weight:900;font-size:1.6rem;text-shadow:0 0 15px rgba(0,0,0,0.3);}
+.site-name{color:white;font-weight:900;font-size:2rem;text-shadow:0 0 20px rgba(0,0,0,0.4);}
 nav{display:flex;gap:20px;}
 nav a{color:white;text-decoration:none;font-weight:600;padding:10px 18px;border-radius:25px;transition:0.3s;background:rgba(255,255,255,0.1);}
 nav a:hover{background:white;color:#1f5fbf;box-shadow:0 0 15px rgba(255,255,255,0.8);}
@@ -33,16 +33,18 @@ nav a:hover{background:white;color:#1f5fbf;box-shadow:0 0 15px rgba(255,255,255,
 
 /* HERO */
 .hero{
-  padding:220px 8% 160px 8%;
+  padding:250px 8% 180px 8%;
   text-align:center;
   background:linear-gradient(135deg,#3b82f6,#60a5fa);
   color:white;
   position:relative;
   border-radius:0 0 50px 50px;
 }
-.hero h1{font-family:'Cinzel',serif;font-size:4rem;margin-bottom:15px;text-shadow:0 0 35px rgba(0,0,0,0.3);}
-.hero img{height:60px;vertical-align:middle;margin-left:15px;transition:0.3s;}
-.hero img:hover{transform:scale(1.1);}
+.hero h1{font-family:'Cinzel',serif;font-size:4.5rem;margin-bottom:20px;text-shadow:0 0 40px rgba(0,0,0,0.4);}
+.hero img{height:80px;margin-top:15px;transition:0.3s;}
+.hero img:hover{transform:scale(1.05);}
+.hero .button{display:inline-block;margin-top:25px;padding:14px 35px;background:#60a5fa;color:white;border-radius:25px;font-weight:600;text-decoration:none;transition:0.3s;}
+.hero .button:hover{background:#a5d8ff;transform:scale(1.05);}
 
 /* SECTIONS */
 section{padding:140px 8%;}
@@ -54,10 +56,6 @@ section{padding:140px 8%;}
 .card i{font-size:2.5rem;color:#1f5fbf;margin-bottom:15px;transition:0.3s;}
 .card i:hover{color:#60a5fa;transform:scale(1.2);}
 
-/* BUTTONS */
-.button{display:inline-block;padding:12px 30px;background:linear-gradient(90deg,#1f5fbf,#4da3ff);color:white;border-radius:25px;font-weight:600;transition:0.3s;text-decoration:none;}
-.button:hover{background:linear-gradient(90deg,#60a5fa,#3b82f6);transform:scale(1.05);box-shadow:0 0 20px rgba(0,0,0,0.3);}
-
 /* FOOTER */
 footer{text-align:center;padding:70px 20px;background:linear-gradient(90deg,#1f5fbf,#4da3ff);color:white;line-height:1.8;font-size:0.95rem;margin-top:50px;border-top-left-radius:50px;border-top-right-radius:50px;}
 
@@ -67,19 +65,18 @@ footer{text-align:center;padding:70px 20px;background:linear-gradient(90deg,#1f5
   nav.active{display:flex;}
   nav a{width:80%;text-align:center;padding:12px;margin:5px 0;}
   .hamburger{display:flex;}
-  .hero h1{font-size:2.2rem;}
+  .hero h1{font-size:2.5rem;}
+  .hero img{height:60px;margin-top:10px;}
   section{padding:80px 6%;}
   .grid{grid-template-columns:1fr;}
 }
 </style>
 </head>
-
 <body>
 
 <header>
   <div class="logo-title">
     <h1 class="site-name">Oltre Le Sfumature</h1>
-    <img src="logo.png" class="logo-small" alt="Logo">
   </div>
   <div class="hamburger" id="hamburger">
     <span></span>
@@ -95,36 +92,83 @@ footer{text-align:center;padding:70px 20px;background:linear-gradient(90deg,#1f5
     <a href="#terapie">Terapie</a>
     <a href="#metodi">Metodi</a>
     <a href="#inclusione">Inclusione</a>
+    <a href="#futuro">Futuro</a>
   </nav>
 </header>
 
 <section class="hero" id="hero">
-  <h1>Lo Spettro Autistico <img src="logo.png" alt="Logo"></h1>
-  <p>Conoscere, comprendere e valorizzare ogni individuo</p>
+  <h1>Lo Spettro Autistico</h1>
+  <img src="logo.png" alt="Logo">
   <a href="#perche" class="button">Scopri di più</a>
 </section>
 
 <section id="perche">
   <div class="section-title">Perché si chiama "Spettro"</div>
-  <div class="text">
-    Il termine "spettro" indica la grande variabilità di manifestazioni cliniche nell'autismo. Ogni persona ha punti di forza e aree di difficoltà uniche. Alcuni possono avere sintomi lievi e altri più evidenti, ma tutti rientrano nello stesso concetto di neurodiversità.
-  </div>
-  <div class="text">
-    La parola "spettro" è fondamentale perché sottolinea che l'autismo non è un'unica condizione uniforme, ma un insieme di caratteristiche che si combinano in modi diversi per ogni individuo.
-  </div>
+  <div class="text">Il termine "spettro" indica la grande variabilità di manifestazioni cliniche nell'autismo. Ogni persona ha punti di forza e aree di difficoltà uniche.</div>
+  <div class="text">Sottolinea che l'autismo non è un'unica condizione uniforme, ma un insieme di caratteristiche che si combinano in modi diversi per ogni individuo.</div>
 </section>
 
 <section id="caratteristiche">
   <div class="section-title">Caratteristiche principali</div>
   <div class="grid">
-    <div class="card"><i class="fas fa-comments"></i><h3>Comunicazione</h3><p>Difficoltà nel linguaggio e nella comunicazione sociale. Alcuni individui possono non parlare o usare modi alternativi di comunicazione come gesti o immagini.</p></div>
-    <div class="card"><i class="fas fa-users"></i><h3>Interazione sociale</h3><p>Relazioni con gli altri spesso diverse dal comune. Possono mostrare difficoltà a comprendere segnali sociali, emozioni o comportamenti impliciti.</p></div>
-    <div class="card"><i class="fas fa-sync-alt"></i><h3>Comportamenti ripetitivi</h3><p>Movimenti o routine ripetitive frequenti, come dondolio, battere le mani, o seguire rituali rigorosi. Questo aiuta a gestire ansia o stimoli sensoriali.</p></div>
-    <div class="card"><i class="fas fa-bolt"></i><h3>Sensibilità sensoriale</h3><p>Reazioni particolari a suoni, luci, tatto, gusto o odori. Alcuni possono essere ipersensibili, altri iposensibili, influenzando il comportamento e l'ambiente necessario.</p></div>
+    <div class="card"><i class="fas fa-comments"></i><h3>Comunicazione</h3><p>Difficoltà nel linguaggio e nella comunicazione sociale. Alcuni usano gesti o immagini per comunicare.</p></div>
+    <div class="card"><i class="fas fa-users"></i><h3>Interazione sociale</h3><p>Difficoltà a comprendere segnali sociali, emozioni o comportamenti impliciti.</p></div>
+    <div class="card"><i class="fas fa-sync-alt"></i><h3>Comportamenti ripetitivi</h3><p>Movimenti o routine ripetitive frequenti, aiutano a gestire ansia o stimoli sensoriali.</p></div>
+    <div class="card"><i class="fas fa-bolt"></i><h3>Sensibilità sensoriale</h3><p>Reazioni particolari a suoni, luci, tatto, gusto o odori. Alcuni ipersensibili, altri iposensibili.</p></div>
   </div>
 </section>
 
-<!-- Sezioni Cause, Sviluppo, Terapie, Metodi, Inclusione rimaste come nel precedente codice, tutte incluse con card e icone -->
+<section id="cause">
+  <div class="section-title">Cause & Fattori di rischio</div>
+  <div class="grid">
+    <div class="card"><i class="fas fa-dna"></i><h3>Genetica</h3><p>Predisposizione ereditaria significativa. Nessun singolo gene determina la condizione.</p></div>
+    <div class="card"><i class="fas fa-heartbeat"></i><h3>Fattori biologici</h3><p>Età genitoriale avanzata, complicazioni prenatali, esposizione a sostanze ambientali e condizioni mediche particolari.</p></div>
+    <div class="card"><i class="fas fa-shield-alt"></i><h3>Miti sfatati</h3><p>Nessuna correlazione scientifica tra vaccini e autismo.</p></div>
+    <div class="card"><i class="fas fa-flask"></i><h3>Fattori ambientali</h3><p>Esposizioni durante la gravidanza possono interagire con predisposizione genetica.</p></div>
+  </div>
+</section>
+
+<section id="sviluppo">
+  <div class="section-title">Come aiutare lo sviluppo</div>
+  <div class="grid">
+    <div class="card"><i class="fas fa-calendar-alt"></i><h3>Routine strutturata</h3><p>Ambienti prevedibili e coerenti riducono ansia e confusione.</p></div>
+    <div class="card"><i class="fas fa-graduation-cap"></i><h3>Supporto educativo</h3><p>Interventi personalizzati secondo capacità e interessi.</p></div>
+    <div class="card"><i class="fas fa-hand-holding-heart"></i><h3>Inclusione</h3><p>Promuovere integrazione scolastica e sociale con attività collaborative.</p></div>
+    <div class="card"><i class="fas fa-sign-language"></i><h3>Comunicazione alternativa</h3><p>Strumenti visivi, simboli, applicazioni e tecniche di CAA.</p></div>
+  </div>
+</section>
+
+<section id="terapie">
+  <div class="section-title">Terapie</div>
+  <div class="grid">
+    <div class="card"><i class="fas fa-brain"></i><h3>Logopedia</h3><p>Sviluppo del linguaggio verbale e non verbale.</p></div>
+    <div class="card"><i class="fas fa-running"></i><h3>Psicomotricità</h3><p>Coordinazione motoria e consapevolezza corporea.</p></div>
+    <div class="card"><i class="fas fa-music"></i><h3>Musicoterapia</h3><p>Espressione emotiva e socializzazione attraverso la musica.</p></div>
+    <div class="card"><i class="fas fa-dog"></i><h3>Pet Therapy</h3><p>Interazione assistita con animali, stimolando emozioni positive.</p></div>
+    <div class="card"><i class="fas fa-brain"></i><h3>TCC</h3><p>Gestione ansia, regolazione emotiva e strategie comportamentali.</p></div>
+    <div class="card"><i class="fas fa-bolt"></i><h3>Integrazione Sensoriale</h3><p>Modulazione degli stimoli sensoriali per migliorare adattamento e risposta.</p></div>
+  </div>
+</section>
+
+<section id="metodi">
+  <div class="section-title">Metodi Educativi</div>
+  <div class="grid">
+    <div class="card"><i class="fas fa-chart-line"></i><h3>ABA</h3><p>Intervento comportamentale strutturato con obiettivi personalizzati.</p></div>
+    <div class="card"><i class="fas fa-th-large"></i><h3>TEACCH</h3><p>Strutturazione visiva e organizzazione prevedibile dell'ambiente.</p></div>
+    <div class="card"><i class="fas fa-pencil-alt"></i><h3>CAA</h3><p>Comunicazione Aumentativa Alternativa con simboli, immagini e dispositivi.</p></div>
+  </div>
+</section>
+
+<section id="inclusione">
+  <div class="section-title">Inclusione</div>
+  <div class="text">Creare ambienti accoglienti, valorizzare interessi individuali, sensibilizzare la comunità, supportare famiglie e promuovere opportunità educative e lavorative.</div>
+</section>
+
+<section id="futuro">
+  <div class="section-title">Ricerca & Futuro</div>
+  <div class="text">La ricerca neuroscientifica esplora le basi genetiche e biologiche dell'autismo. Tecnologie e strumenti digitali aprono prospettive di intervento personalizzato.</div>
+  <div class="text">Il futuro punta a maggiore consapevolezza, inclusione e valorizzazione delle competenze individuali come risorsa per la collettività.</div>
+</section>
 
 <footer>
 © 2026 Oltre Le Sfumature — Inclusione • Consapevolezza • Ricerca • Innovazione • Crescita • Comunità • Neurodiversità • Futuro • Educazione • Supporto • Collaborazione • Rispetto • Opportunità • Integrazione • Professionalità • Impegno Continuo
