@@ -3,280 +3,194 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Metodo ABA - Oltre Le Sfumature</title>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+<title>ABA – Oltre Le Sfumature</title>
 
-<style>
+<link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700;800&display=swap" rel="stylesheet">
 
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:'Poppins', sans-serif;
-}
-
-body{
-background:linear-gradient(180deg,#0d3b66,#001f3f);
-color:white;
-}
-
-/* NAVBAR */
-
-.navbar{
-display:flex;
-justify-content:space-between;
-align-items:center;
-padding:20px 60px;
-background:rgba(0,0,0,0.3);
-backdrop-filter:blur(10px);
-position:sticky;
-top:0;
-}
-
-.logo-area{
-display:flex;
-align-items:center;
-gap:15px;
-}
-
-.logo{
-width:70px;
-}
-
-.navbar nav a{
-color:white;
-margin-left:30px;
-text-decoration:none;
-transition:0.3s;
-}
-
-.navbar nav a:hover{
-color:#4cc9f0;
-}
-
-/* HERO */
-
-.hero{
-text-align:center;
-padding:120px 20px;
-}
-
-.hero h2{
-font-size:46px;
-margin-bottom:20px;
-}
-
-.hero p{
-max-width:800px;
-margin:auto;
-opacity:0.9;
-}
-
-/* WAVE */
-
-.wave{
-height:100px;
-background:white;
-border-top-left-radius:50% 100%;
-border-top-right-radius:50% 100%;
-}
-
-/* SEZIONI */
-
-.section-light{
-background:white;
-color:#001f3f;
-padding:100px 15%;
-}
-
-.section-blue{
-background:#f4f9ff;
-color:#001f3f;
-padding:100px 15%;
-}
-
-.section-light h3,
-.section-blue h3{
-font-size:32px;
-margin-bottom:25px;
-position:relative;
-}
-
-.section-light h3::after,
-.section-blue h3::after{
-content:"";
-display:block;
-width:80px;
-height:4px;
-background:linear-gradient(45deg,#3a86ff,#00b4ff);
-margin-top:10px;
-border-radius:10px;
-}
-
-.section-light p,
-.section-blue p{
-margin-bottom:20px;
-line-height:1.8;
-font-size:17px;
-}
-
-.section-light ul,
-.section-blue ul{
-margin-left:20px;
-margin-top:20px;
-}
-
-.section-light li,
-.section-blue li{
-margin-bottom:12px;
-line-height:1.7;
-}
-
-/* BOX EVIDENZIAZIONE */
-
-.highlight{
-background:linear-gradient(45deg,#3a86ff,#00b4ff);
-color:white;
-padding:25px;
-border-radius:20px;
-margin:40px 0;
-box-shadow:0 15px 40px rgba(0,0,0,0.2);
-}
-
-/* FOOTER */
-
-footer{
-text-align:center;
-padding:40px;
-background:#001f3f;
-color:white;
-}
-
-</style>
 </head>
-
 <body>
 
 <header class="navbar">
-<div class="logo-area">
-<img src="logo.png" class="logo">
-<h1>Oltre Le Sfumature</h1>
-</div>
+  <div class="logo">Oltre Le Sfumature</div>
 
-<nav>
-<a href="index.html">Home</a>
-<a href="aba.html">Metodo ABA</a>
-<a href="teacch.html">Metodo TEACCH</a>
-<a href="contatti.html">Contatti</a>
-</nav>
+  <div class="menu-toggle" onclick="toggleMenu()">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+
+  <nav class="nav-links">
+    <a href="index.html">Home</a>
+    <a href="aba.html">ABA</a>
+    <a href="teacch.html">TEACCH</a>
+    <a href="contatti.html">Contatti</a>
+  </nav>
 </header>
 
+
 <section class="hero">
-<h2>ABA – Applied Behavior Analysis</h2>
-<p>Un approccio scientifico basato sull’analisi del comportamento per sviluppare abilità funzionali e migliorare la qualità di vita.</p>
+  <h1>ABA – Applied Behavior Analysis</h1>
+  <p>
+    Approccio scientifico basato sull’analisi del comportamento,
+    utilizzato principalmente nel trattamento del Disturbo dello Spettro Autistico.
+  </p>
 </section>
 
-<div class="wave"></div>
 
-<section class="section-light">
-<h3>Cos’è ABA</h3>
+<section class="section">
+  <h2>Cos’è ABA</h2>
 
-<p>
-L’Applied Behavior Analysis (Analisi Applicata del Comportamento) è un approccio scientifico basato sui principi della psicologia comportamentale.
-Si fonda sull’idea che il comportamento umano sia influenzato dall’ambiente e possa essere modificato attraverso strategie sistematiche e misurabili.
-</p>
+  <div class="card">
+    <p>
+      L’Applied Behavior Analysis (Analisi Applicata del Comportamento) è un approccio
+      scientifico basato sui principi della psicologia comportamentale.
+    </p>
 
-<p>
-ABA viene utilizzato principalmente nel trattamento del Disturbo dello Spettro Autistico, ma trova applicazione anche in altri ambiti educativi e clinici.
-</p>
+    <p>
+      Si fonda sull’idea che il comportamento umano sia influenzato dall’ambiente
+      e possa essere modificato attraverso strategie sistematiche e misurabili.
+    </p>
 
-<div class="highlight">
-L’obiettivo è insegnare nuove abilità funzionali e ridurre comportamenti problematici attraverso procedure strutturate basate su osservazione e raccolta dati.
-</div>
+    <p>
+      ABA viene utilizzato principalmente nel trattamento del Disturbo dello Spettro Autistico,
+      ma trova applicazione anche in altri ambiti educativi e clinici.
+    </p>
 
-<p>
-Uno degli elementi centrali è il modello ABC:
-</p>
-
-<ul>
-<li><strong>A (Antecedente):</strong> cosa accade prima del comportamento</li>
-<li><strong>B (Behavior):</strong> il comportamento osservabile</li>
-<li><strong>C (Conseguenza):</strong> cosa accade dopo il comportamento</li>
-</ul>
-
+    <p>
+      L’obiettivo è insegnare nuove abilità funzionali e ridurre comportamenti problematici
+      attraverso procedure strutturate, basate sull’osservazione e sulla raccolta dati.
+    </p>
+  </div>
 </section>
 
-<section class="section-blue">
-<h3>Principi Chiave</h3>
 
-<ul>
-<li><strong>Rinforzo positivo:</strong> conseguenza piacevole per aumentare un comportamento corretto.</li>
-<li><strong>Rinforzo negativo:</strong> rimozione di uno stimolo spiacevole.</li>
-<li><strong>Modellamento (shaping):</strong> insegnamento graduale per piccoli passi.</li>
-<li><strong>Prompting:</strong> aiuti progressivamente ridotti (fading).</li>
-<li><strong>Chaining:</strong> scomposizione di abilità complesse in sequenze semplici.</li>
-<li><strong>Generalizzazione:</strong> trasferimento delle abilità in diversi contesti.</li>
-<li><strong>Analisi funzionale:</strong> identificazione della funzione del comportamento.</li>
-</ul>
+<section class="section">
+  <h2>Il Modello ABC</h2>
 
-<p>
-L’intervento è sempre individualizzato sulla base di una valutazione approfondita.
-</p>
+  <div class="card">
+    <p>Uno degli elementi centrali dell’ABA è l’analisi del comportamento secondo il modello ABC:</p>
 
+    <ul>
+      <li><strong>A – Antecedente:</strong> cosa accade prima del comportamento</li>
+      <li><strong>B – Behavior:</strong> il comportamento osservabile</li>
+      <li><strong>C – Conseguenza:</strong> cosa accade dopo il comportamento</li>
+    </ul>
+
+    <p>
+      Analizzando queste tre componenti, il terapeuta può comprendere la funzione
+      del comportamento e intervenire in modo mirato.
+    </p>
+  </div>
 </section>
 
-<section class="section-light">
-<h3>Obiettivi</h3>
 
-<ul>
-<li>Sviluppo della comunicazione verbale o alternativa.</li>
-<li>Potenziamento delle abilità sociali.</li>
-<li>Incremento dell’autonomia personale.</li>
-<li>Riduzione dei comportamenti problematici.</li>
-<li>Miglioramento delle abilità scolastiche e cognitive.</li>
-<li>Sviluppo della gestione emotiva.</li>
-</ul>
+<section class="section">
+  <h2>Principi Chiave</h2>
+
+  <div class="card">
+    <ul>
+      <li><strong>Rinforzo positivo:</strong> conseguenza piacevole dopo un comportamento corretto.</li>
+      <li><strong>Rinforzo negativo:</strong> rimozione di uno stimolo spiacevole per aumentare un comportamento adeguato.</li>
+      <li><strong>Modellamento (Shaping):</strong> insegnamento graduale attraverso piccoli passi.</li>
+      <li><strong>Prompting:</strong> aiuti verbali, gestuali o fisici progressivamente ridotti.</li>
+      <li><strong>Chaining:</strong> scomposizione di un’abilità complessa in azioni semplici.</li>
+      <li><strong>Generalizzazione:</strong> trasferimento dell’abilità in contesti diversi.</li>
+      <li><strong>Analisi funzionale:</strong> identificazione della funzione del comportamento problematico.</li>
+    </ul>
+
+    <p>
+      L’intervento è sempre individualizzato e costruito sulla base di una valutazione iniziale approfondita.
+    </p>
+  </div>
 </section>
 
-<section class="section-blue">
-<h3>Struttura dell’intervento</h3>
 
-<ul>
-<li>Sessioni individuali o in piccolo gruppo.</li>
-<li>Interventi intensivi precoci (20–40 ore settimanali).</li>
-<li>Discrete Trial Training (DTT).</li>
-<li>Natural Environment Teaching (NET).</li>
-<li>Monitoraggio costante dei progressi.</li>
-<li>Supervisione di professionisti qualificati.</li>
-<li>Coinvolgimento attivo della famiglia.</li>
-</ul>
+<section class="section">
+  <h2>Obiettivi</h2>
 
+  <div class="card">
+    <ul>
+      <li>Sviluppo della comunicazione verbale o alternativa.</li>
+      <li>Potenziamento delle abilità sociali.</li>
+      <li>Incremento dell’autonomia personale.</li>
+      <li>Riduzione dei comportamenti problematici.</li>
+      <li>Miglioramento delle abilità scolastiche e cognitive.</li>
+      <li>Sviluppo della gestione emotiva.</li>
+    </ul>
+
+    <p>
+      L’obiettivo finale è aumentare la qualità di vita e favorire l’integrazione nei diversi contesti di vita.
+    </p>
+  </div>
 </section>
 
-<section class="section-light">
-<h3>Benefici</h3>
 
-<ul>
-<li>Migliora le competenze comunicative.</li>
-<li>Aumenta abilità sociali e relazionali.</li>
-<li>Riduce comportamenti problematici.</li>
-<li>Potenziamento delle competenze cognitive.</li>
-<li>Favorisce autonomia e inclusione scolastica.</li>
-</ul>
+<section class="section">
+  <h2>Struttura dell’Intervento</h2>
+
+  <div class="card">
+    <ul>
+      <li>Sessioni individuali o in piccolo gruppo.</li>
+      <li>Interventi intensivi precoci (20–40 ore settimanali nei primi anni).</li>
+      <li>Attività strutturate (DTT) e apprendimento in ambiente naturale (NET).</li>
+      <li>Monitoraggio costante dei progressi tramite raccolta dati.</li>
+      <li>Supervisione di professionisti qualificati.</li>
+      <li>Coinvolgimento attivo della famiglia.</li>
+    </ul>
+
+    <p>
+      La misurazione oggettiva dei risultati è un elemento fondamentale dell’ABA.
+    </p>
+  </div>
 </section>
 
-<section class="section-blue">
-<h3>Limiti e considerazioni</h3>
 
-<p>
-L’ABA deve essere applicato in modo etico e rispettoso della persona.
-L’intervento moderno pone attenzione alla motivazione, al benessere emotivo e alla personalizzazione degli obiettivi, evitando approcci eccessivamente rigidi.
-</p>
+<section class="section">
+  <h2>Benefici</h2>
+
+  <div class="card">
+    <ul>
+      <li>Miglioramento delle competenze comunicative.</li>
+      <li>Aumento delle abilità sociali.</li>
+      <li>Riduzione dei comportamenti problematici.</li>
+      <li>Potenziamento delle competenze cognitive.</li>
+      <li>Maggiore autonomia e inclusione scolastica.</li>
+    </ul>
+  </div>
 </section>
 
-<footer>
-<p>© 2026 Oltre Le Sfumature - Tutti i diritti riservati</p>
-</footer>
+
+<section class="section">
+  <h2>Limiti e Considerazioni</h2>
+
+  <div class="card">
+    <p>
+      L’ABA deve essere applicato in modo etico e rispettoso della persona.
+    </p>
+
+    <p>
+      L’intervento moderno pone grande attenzione alla motivazione,
+      al benessere emotivo e alla personalizzazione degli obiettivi,
+      evitando approcci eccessivamente rigidi.
+    </p>
+  </div>
+</section>
+
+
+<script>
+function toggleMenu(){
+  document.querySelector(".nav-links").classList.toggle("active");
+}
+
+document.addEventListener("scroll",()=>{
+  document.querySelectorAll(".section").forEach(sec=>{
+    if(sec.getBoundingClientRect().top < window.innerHeight - 100){
+      sec.classList.add("visible");
+    }
+  });
+});
+</script>
 
 </body>
 </html>
