@@ -3,39 +3,20 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Oltre Le Sfumature | Disturbo dello Spettro Autistico</title>
-
+<title>Oltre Le Sfumature | Neurodiversità</title>
 <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@900&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
 
 <style>
 
-/* ================= PALETTE SOLO BLU ================= */
-:root{
-  --blue-dark:#0f172a;
-  --blue-primary:#1e3a8a;
-  --blue-medium:#2563eb;
-  --blue-light:#3b82f6;
-  --blue-soft:#60a5fa;
-  --blue-pale:#dbeafe;
-  --background:#f0f6ff;
-  --text:#0f172a;
-  --white:#ffffff;
-}
-
 /* ================= RESET ================= */
-*{
-  margin:0;
-  padding:0;
-  box-sizing:border-box;
-  scroll-behavior:smooth;
-}
-
+*{margin:0;padding:0;box-sizing:border-box;scroll-behavior:smooth;}
 body{
   font-family:'Roboto',sans-serif;
-  background:var(--background);
-  color:var(--text);
   line-height:1.8;
+  background:#122c8f; /* blu leggermente più chiaro */
+  color:#ffffff;
+  overflow-x:hidden;
 }
 
 /* ================= HEADER ================= */
@@ -44,154 +25,207 @@ header{
   width:100%;
   top:0;
   left:0;
+  z-index:1000;
   display:flex;
   justify-content:space-between;
   align-items:center;
-  padding:18px 8%;
-  background:linear-gradient(90deg,var(--blue-primary),var(--blue-medium),var(--blue-light));
-  box-shadow:0 4px 25px rgba(0,0,0,0.2);
-  z-index:1000;
+  padding:15px 8%;
+  background:linear-gradient(90deg,#122c8f,#1e40af,#122c8f);
+  box-shadow:0 6px 25px rgba(0,0,0,0.25);
+  border-bottom-left-radius:15px;
+  border-bottom-right-radius:15px;
 }
 
-.logo-container{
-  display:flex;
-  align-items:center;
-  gap:15px;
-}
-
-.logo-container img{
-  height:60px;
-}
-
+.logo-title{display:flex;align-items:center;gap:15px;}
 .site-name{
+  color:white;
   font-family:'Cinzel',serif;
-  font-size:2.4rem;
   font-weight:900;
-  color:white;
-  text-shadow:
-    0 0 8px #ffffff,
-    0 0 18px var(--blue-soft),
-    0 0 28px var(--blue-soft);
+  font-size:2.6rem;
+  text-shadow:0 0 20px rgba(255,255,255,0.6);
 }
 
-nav{
-  display:flex;
-  gap:22px;
-}
-
+nav{display:flex;gap:20px;}
 nav a{
-  text-decoration:none;
   color:white;
-  font-weight:500;
-  padding:8px 14px;
-  border-radius:20px;
+  text-decoration:none;
+  font-weight:600;
+  padding:10px 18px;
+  border-radius:25px;
   transition:0.3s;
+  background:rgba(255,255,255,0.08);
 }
-
 nav a:hover{
   background:white;
-  color:var(--blue-primary);
+  color:#122c8f;
+  box-shadow:0 0 15px rgba(255,255,255,0.8);
 }
+
+.hamburger{display:none;flex-direction:column;gap:6px;cursor:pointer;}
+.hamburger span{
+  width:32px;
+  height:4px;
+  background:linear-gradient(90deg,#60a5fa,#93c5fd);
+  border-radius:3px;
+  transition:0.4s;
+}
+.hamburger.active span:nth-child(1){transform:rotate(45deg) translate(6px,6px);}
+.hamburger.active span:nth-child(2){opacity:0;}
+.hamburger.active span:nth-child(3){transform:rotate(-45deg) translate(6px,-6px);}
 
 /* ================= HERO ================= */
 .hero{
-  padding:220px 8% 150px 8%;
+  padding:260px 8% 200px 8%;
   text-align:center;
-  background:linear-gradient(135deg,var(--blue-primary),var(--blue-medium),var(--blue-light));
+  position:relative;
+  border-radius:0 0 50px 50px;
+  background:linear-gradient(135deg,#122c8f,#1e40af,#3b82f6);
   color:white;
 }
 
 .hero h1{
   font-family:'Cinzel',serif;
-  font-size:3.8rem;
+  font-size:5rem;
   margin-bottom:25px;
-  text-shadow:0 0 30px rgba(255,255,255,0.6);
+  text-shadow:0 0 40px rgba(255,255,255,0.7);
 }
 
-.hero p{
-  max-width:900px;
-  margin:auto;
-  font-size:1.2rem;
+.hero img{
+  height:200px;
+  margin-top:20px;
+  transition:0.3s;
+  border-radius:20px;
 }
+
+.hero img:hover{transform:scale(1.05);}
 
 .hero .button{
   display:inline-block;
-  margin-top:40px;
-  padding:15px 40px;
-  background:white;
-  color:var(--blue-primary);
+  margin-top:30px;
+  padding:18px 45px;
+  background:#3b82f6;
+  color:white;
   border-radius:30px;
   font-weight:600;
   text-decoration:none;
   transition:0.3s;
+  font-size:1.2rem;
+  box-shadow:0 0 20px rgba(255,255,255,0.5);
 }
-
 .hero .button:hover{
-  background:var(--blue-soft);
-  color:white;
+  background:#60a5fa;
   transform:scale(1.05);
 }
 
 /* ================= SECTIONS ================= */
-section{
-  padding:120px 8%;
-}
+section{padding:130px 8%;}
 
 .section-title{
+  display:inline-block;
+  padding:18px 45px;
+  border-radius:30px;
   font-size:2rem;
   font-weight:700;
   margin-bottom:50px;
-  color:var(--blue-primary);
-  border-left:6px solid var(--blue-medium);
-  padding-left:15px;
+  color:white;
+  background:linear-gradient(90deg,#3b82f6,#60a5fa);
+  box-shadow:0 0 30px rgba(59,130,246,0.6);
 }
 
 .text{
+  font-size:1.15rem;
   margin-bottom:25px;
-  font-size:1.08rem;
+  line-height:1.8;
 }
 
-/* ================= GRID & CARD ================= */
 .grid{
   display:grid;
   grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-  gap:35px;
+  gap:40px;
   margin-top:50px;
 }
 
 .card{
-  background:var(--white);
+  background:linear-gradient(145deg,#1e40af,#3b82f6);
   padding:35px;
-  border-radius:20px;
-  box-shadow:0 10px 30px rgba(37,99,235,0.1);
+  border-radius:25px;
+  box-shadow:0 6px 35px rgba(59,130,246,0.4);
   transition:0.4s;
-  border-top:6px solid var(--blue-medium);
 }
-
 .card:hover{
   transform:translateY(-10px);
-  box-shadow:0 20px 40px rgba(37,99,235,0.2);
+  box-shadow:0 0 60px rgba(147,197,253,0.7);
 }
 
 .card i{
-  font-size:2.2rem;
-  color:var(--blue-medium);
-  margin-bottom:18px;
+  font-size:2.3rem;
+  color:white;
+  margin-bottom:15px;
+}
+
+/* ================= CONTACT ================= */
+.contact-form{
+  max-width:700px;
+  margin:auto;
+  display:flex;
+  flex-direction:column;
+  gap:20px;
+}
+
+.contact-form input,
+.contact-form textarea{
+  padding:15px;
+  border:none;
+  border-radius:12px;
+  font-size:1rem;
+}
+
+.contact-form button{
+  padding:15px;
+  border:none;
+  border-radius:25px;
+  background:#3b82f6;
+  color:white;
+  font-weight:600;
+  cursor:pointer;
+  transition:0.3s;
+}
+.contact-form button:hover{
+  background:#60a5fa;
 }
 
 /* ================= FOOTER ================= */
 footer{
   text-align:center;
-  padding:70px 20px;
-  background:linear-gradient(90deg,var(--blue-primary),var(--blue-medium));
+  padding:90px 20px;
+  background:linear-gradient(90deg,#122c8f,#1e40af);
   color:white;
+  line-height:1.8;
   font-size:0.95rem;
+  margin-top:50px;
+  border-top-left-radius:50px;
+  border-top-right-radius:50px;
 }
 
 /* ================= MOBILE ================= */
-@media(max-width:900px){
-  nav{display:none;}
-  .hero h1{font-size:2.6rem;}
+@media (max-width:900px){
+  nav{
+    position:absolute;
+    top:70px;
+    right:0;
+    background:linear-gradient(180deg,#122c8f,#1e40af);
+    flex-direction:column;
+    width:240px;
+    display:none;
+    padding:20px;
+  }
+  nav.active{display:flex;}
+  nav a{width:80%;text-align:center;margin:5px 0;}
+  .hamburger{display:flex;}
+  .hero h1{font-size:3rem;}
+  .hero img{height:150px;}
+  section{padding:90px 6%;}
+  .grid{grid-template-columns:1fr;}
 }
 
 </style>
@@ -200,169 +234,83 @@ footer{
 <body>
 
 <header>
-  <div class="logo-container">
-    <img src="logo.png" alt="Logo">
+  <div class="logo-title">
     <h1 class="site-name">Oltre Le Sfumature</h1>
   </div>
-  <nav>
-    <a href="#definizione">Cos'è</a>
+  <div class="hamburger" id="hamburger">
+    <span></span><span></span><span></span>
+  </div>
+  <nav id="navLinks">
+    <a href="#hero">Home</a>
+    <a href="#perche">Perché "Spettro"</a>
     <a href="#caratteristiche">Caratteristiche</a>
     <a href="#cause">Cause</a>
-    <a href="#diagnosi">Diagnosi</a>
-    <a href="#interventi">Interventi</a>
+    <a href="#sviluppo">Sviluppo</a>
+    <a href="#terapie">Terapie</a>
     <a href="#metodi">Metodi</a>
     <a href="#inclusione">Inclusione</a>
-    <a href="#ricerca">Ricerca</a>
-    <a href="#famiglia">Famiglia</a>
-    <a href="#vita">Vita adulta</a>
+    <a href="#futuro">Futuro</a>
+    <a href="#contatti">Contattaci</a>
   </nav>
 </header>
 
-<section class="hero">
-  <h1>Disturbo dello Spettro Autistico</h1>
-  <p>
-  Il Disturbo dello Spettro Autistico (DSA) è una condizione del neurosviluppo caratterizzata
-  da differenze nella comunicazione, nell'interazione sociale e nell'elaborazione sensoriale.
-  Il termine "spettro" indica l'ampia variabilità con cui si manifesta: ogni persona presenta
-  caratteristiche, competenze, bisogni e punti di forza unici.
-  </p>
-  <a href="#definizione" class="button">Approfondisci</a>
+<section class="hero" id="hero">
+  <h1>Lo Spettro Autistico</h1>
+  <img src="logo.png" alt="Logo">
+  <br>
+  <a href="#perche" class="button">Scopri di più</a>
 </section>
 
-<section id="definizione">
-  <div class="section-title">Cos'è il Disturbo dello Spettro Autistico</div>
+<section id="perche">
+  <div class="section-title">Perché si chiama "Spettro"</div>
   <div class="text">
-  Il DSA rientra tra i disturbi del neurosviluppo e si manifesta generalmente nei primi anni di vita.
-  È una condizione permanente, ma il livello di autonomia e funzionamento può evolvere nel tempo
-  grazie a interventi precoci e personalizzati.
+  Il termine “spettro” indica l’ampia variabilità con cui l’autismo si manifesta. 
+  Non esiste un unico profilo: ogni persona presenta caratteristiche, abilità e bisogni differenti.
   </div>
   <div class="text">
-  Le persone nello spettro possono avere abilità cognitive nella norma o superiori,
-  oppure presentare disabilità intellettiva associata. Ogni profilo è diverso.
+  Alcune persone possono avere elevate competenze cognitive e linguistiche, 
+  altre possono necessitare di supporto significativo nella comunicazione e nell’autonomia.
   </div>
   <div class="text">
-  Parlare di neurodiversità significa riconoscere che il cervello umano può funzionare
-  in modi differenti, senza che questo implichi necessariamente un deficit,
-  ma piuttosto una variazione naturale.
+  Questa variabilità rende fondamentale un approccio personalizzato, centrato sulla persona,
+  sui suoi punti di forza e sulle sue potenzialità.
   </div>
 </section>
 
-<section id="caratteristiche">
-  <div class="section-title">Caratteristiche principali</div>
-  <div class="grid">
-    <div class="card">
-      <i class="fas fa-comments"></i>
-      <h3>Comunicazione</h3>
-      <p>Difficoltà nell'uso del linguaggio verbale e non verbale, nella pragmatica e nella comprensione implicita.</p>
-    </div>
-    <div class="card">
-      <i class="fas fa-users"></i>
-      <h3>Interazione sociale</h3>
-      <p>Differenze nella reciprocità emotiva, nella gestione delle relazioni e nell'interpretazione dei segnali sociali.</p>
-    </div>
-    <div class="card">
-      <i class="fas fa-sync"></i>
-      <h3>Comportamenti ripetitivi</h3>
-      <p>Routine strutturate, interessi specifici e comportamenti ripetitivi che offrono stabilità e prevedibilità.</p>
-    </div>
-    <div class="card">
-      <i class="fas fa-bolt"></i>
-      <h3>Sensibilità sensoriale</h3>
-      <p>Iper o ipo-reattività a suoni, luci, consistenze, odori o stimoli tattili.</p>
-    </div>
+<section id="contatti">
+  <div class="section-title">Contattaci</div>
+  <div class="text">
+  Per informazioni, collaborazioni o richieste di supporto, compila il modulo sottostante.
+  Saremo lieti di rispondere nel più breve tempo possibile.
   </div>
-</section>
 
-<section id="cause">
-  <div class="section-title">Cause e fattori di rischio</div>
-  <div class="text">
-  L'origine del DSA è multifattoriale. Le ricerche indicano una forte componente genetica,
-  con il coinvolgimento di molte varianti genetiche.
-  </div>
-  <div class="text">
-  Fattori ambientali prenatali possono interagire con la predisposizione genetica,
-  ma non esiste una causa unica determinante.
-  </div>
-  <div class="text">
-  Numerose evidenze scientifiche confermano l'assenza di correlazione tra vaccini e autismo.
-  </div>
-</section>
-
-<section id="diagnosi">
-  <div class="section-title">Diagnosi e valutazione</div>
-  <div class="text">
-  La diagnosi è clinica e si basa sull'osservazione comportamentale e su strumenti standardizzati.
-  </div>
-  <div class="text">
-  Una diagnosi precoce consente interventi tempestivi, migliorando le competenze comunicative,
-  sociali e adattive.
-  </div>
-</section>
-
-<section id="interventi">
-  <div class="section-title">Interventi terapeutici</div>
-  <div class="grid">
-    <div class="card">
-      <i class="fas fa-brain"></i>
-      <h3>Intervento comportamentale</h3>
-      <p>Programmi strutturati basati su obiettivi misurabili e rinforzi positivi.</p>
-    </div>
-    <div class="card">
-      <i class="fas fa-comment-medical"></i>
-      <h3>Logopedia</h3>
-      <p>Sviluppo delle competenze linguistiche e comunicative.</p>
-    </div>
-    <div class="card">
-      <i class="fas fa-running"></i>
-      <h3>Psicomotricità</h3>
-      <p>Miglioramento della coordinazione e della percezione corporea.</p>
-    </div>
-  </div>
-</section>
-
-<section id="metodi">
-  <div class="section-title">Metodi educativi</div>
-  <div class="text">
-  Approcci come ABA, TEACCH e CAA vengono utilizzati per favorire autonomia,
-  comunicazione e adattamento.
-  </div>
-</section>
-
-<section id="inclusione">
-  <div class="section-title">Inclusione sociale</div>
-  <div class="text">
-  Creare ambienti inclusivi significa valorizzare le differenze e garantire pari opportunità
-  in ambito scolastico, lavorativo e sociale.
-  </div>
-</section>
-
-<section id="ricerca">
-  <div class="section-title">Ricerca scientifica</div>
-  <div class="text">
-  Le neuroscienze studiano le basi genetiche e neurobiologiche del disturbo,
-  sviluppando strumenti innovativi e tecnologie digitali di supporto.
-  </div>
-</section>
-
-<section id="famiglia">
-  <div class="section-title">Supporto alla famiglia</div>
-  <div class="text">
-  Il coinvolgimento attivo dei genitori e dei caregiver è fondamentale
-  per il successo degli interventi.
-  </div>
-</section>
-
-<section id="vita">
-  <div class="section-title">Vita adulta e autonomia</div>
-  <div class="text">
-  Con adeguato supporto, molte persone nello spettro sviluppano autonomia,
-  competenze professionali e partecipazione sociale attiva.
-  </div>
+  <form class="contact-form">
+    <input type="text" placeholder="Nome e Cognome" required>
+    <input type="email" placeholder="Email" required>
+    <textarea rows="5" placeholder="Scrivi il tuo messaggio..." required></textarea>
+    <button type="submit">Invia Messaggio</button>
+  </form>
 </section>
 
 <footer>
-© 2026 Oltre Le Sfumature — Neurodiversità • Inclusione • Ricerca • Educazione • Supporto • Innovazione • Consapevolezza • Comunità
+© 2026 Oltre Le Sfumature — Inclusione • Consapevolezza • Ricerca • Innovazione • Crescita • Comunità • Neurodiversità
 </footer>
+
+<script>
+const hamburger = document.getElementById("hamburger");
+const navLinks = document.getElementById("navLinks");
+hamburger.addEventListener("click", () => {
+  hamburger.classList.toggle("active");
+  navLinks.classList.toggle("active");
+});
+document.querySelectorAll("#navLinks a").forEach(link => {
+  link.addEventListener("click", () => {
+    hamburger.classList.remove("active");
+    navLinks.classList.remove("active");
+  });
+});
+</script>
 
 </body>
 </html>
+
