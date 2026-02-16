@@ -9,252 +9,63 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
 
 <style>
-/* ================= RESET ================= */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  scroll-behavior: smooth;
-}
-
-body {
-  font-family: 'Roboto', sans-serif;
-  line-height: 1.8;
-  background: #e0f2fe;
-  color: #0f172a;
-  overflow-x: hidden;
-}
-
-/* ================= HEADER ================= */
-header {
-  position: fixed;
-  width: 100%;
-  top: 0;
-  left: 0;
-  z-index: 1000;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 12px 8%;
-  background: linear-gradient(90deg, #1537b8, #1e4ed8, #3b82f6);
-  box-shadow: 0 4px 20px rgba(0,0,0,0.25);
-}
-
-.logo-title {
-  display: flex;
-  align-items: center;
-  gap: 15px;
-}
-
-.logo-title img {
-  height: 60px;
-  border-radius: 12px;
-}
-
-.site-name {
-  font-family: 'Cinzel', serif;
-  font-weight: 900;
-  font-size: 1.8rem;
-  text-shadow: 0 0 10px rgba(255,255,255,0.6);
-  color: white;
-}
-
-nav {
-  display: flex;
-  gap: 12px;
-}
-
-nav a {
-  color: white;
-  text-decoration: none;
-  font-weight: 500;
-  padding: 8px 12px;
-  border-radius: 20px;
-  transition: 0.3s;
-  font-size: 0.95rem;
-  background: rgba(255,255,255,0.08);
-}
-
-nav a:hover {
-  background: white;
-  color: #1537b8;
-}
-
-.hamburger {
-  display: none;
-  flex-direction: column;
-  gap: 5px;
-  cursor: pointer;
-}
-
-.hamburger span {
-  width: 28px;
-  height: 3px;
-  background: white;
-  border-radius: 3px;
-}
-
-/* ================= HERO ================= */
-.hero {
-  padding: 150px 8% 80px 8%;
-  text-align: center;
-  color: #0f172a;
-}
-
-.hero h1 {
-  font-family: 'Cinzel', serif;
-  font-size: 3rem;
-  margin-bottom: 20px;
-  text-shadow: 0 0 15px rgba(0,0,0,0.2);
-  animation: slideDown 1s ease forwards;
-  opacity: 0;
-}
-
-.hero p {
-  margin-top: 20px;
-  max-width: 900px;
-  margin-left: auto;
-  margin-right: auto;
-  font-size: 1.2rem;
-  line-height: 1.9em;
-  text-align: justify;
-  animation: fadeIn 2s ease forwards;
-  opacity: 0;
-}
-
-@keyframes slideDown {
-  0% { transform: translateY(-50px); opacity: 0; }
-  100% { transform: translateY(0); opacity: 1; }
-}
-
-@keyframes fadeIn {
-  0% { opacity: 0; }
-  100% { opacity: 1; }
-}
-
-/* ================= SECTIONS ================= */
-section {
-  padding: 80px 8%;
-}
-
-.section-title {
-  font-size: 2rem;
-  margin-bottom: 35px;
-  border-bottom: 2px solid rgba(0,0,0,0.15);
-  padding-bottom: 8px;
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-
-.grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 25px;
-  margin-top: 30px;
-}
-
-.card {
-  background: linear-gradient(145deg, #60a5fa, #93c5fd);
-  color: #0f172a;
-  padding: 25px;
-  border-radius: 18px;
-  box-shadow: 0 6px 25px rgba(0,0,0,0.15);
-  transition: 0.5s;
-  opacity: 0;
-  transform: translateY(50px) rotateX(20deg);
-}
-
-.card.visible {
-  opacity: 1;
-  transform: translateY(0) rotateX(0deg);
-}
-
-.card:hover {
-  transform: translateY(-6px) rotateX(0deg);
-  box-shadow: 0 0 45px rgba(147,197,253,0.8);
-}
-
-.card h3 {
-  margin-bottom: 12px;
-}
-
-.card i {
-  font-size: 1.5rem;
-  margin-bottom: 10px;
-  display: block;
-  color: #1537b8;
-}
-
-ul {
-  padding-left: 20px;
-  margin-top: 8px;
-}
-
-/* ================= FOOTER ================= */
-footer {
-  text-align: center;
-  padding: 50px 20px;
-  background: linear-gradient(90deg, #1537b8, #1e4ed8);
-  font-size: 0.9rem;
-  color: white;
-}
-
-/* ================= MOBILE ================= */
-@media(max-width:900px) {
-  nav {
-    position: absolute;
-    top: 65px;
-    right: 0;
-    background: #1537b8;
-    flex-direction: column;
-    width: 230px;
-    display: none;
-    padding: 20px;
-    border-radius: 0 0 15px 15px;
-  }
-  nav.active { display: flex; }
-  .hamburger { display: flex; }
-}
+*{margin:0;padding:0;box-sizing:border-box;scroll-behavior:smooth;}
+body{font-family:'Roboto',sans-serif;line-height:1.8;background:#e0f2fe;color:#0f172a;overflow-x:hidden;}
+header{position:fixed;width:100%;top:0;left:0;z-index:1000;display:flex;justify-content:space-between;align-items:center;padding:12px 8%;background:linear-gradient(90deg,#1537b8,#1e4ed8,#3b82f6);box-shadow:0 4px 20px rgba(0,0,0,0.25);}
+.logo-title{display:flex;align-items:center;gap:15px;}
+.logo-title img{height:60px;border-radius:12px;}
+.site-name{font-family:'Cinzel',serif;font-weight:900;font-size:1.8rem;text-shadow:0 0 10px rgba(255,255,255,0.6);color:white;}
+nav{display:flex;gap:12px;}
+nav a{color:white;text-decoration:none;font-weight:500;padding:8px 12px;border-radius:20px;transition:0.3s;font-size:0.95rem;background:rgba(255,255,255,0.08);}
+nav a:hover{background:white;color:#1537b8;}
+.hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;}
+.hamburger span{width:28px;height:3px;background:white;border-radius:3px;}
+.hero{padding:150px 8% 80px 8%;text-align:center;color:#0f172a;}
+.hero h1{font-family:'Cinzel',serif;font-size:3rem;margin-bottom:20px;text-shadow:0 0 15px rgba(0,0,0,0.2);animation:slideDown 1s ease forwards;opacity:0;}
+@keyframes slideDown{0%{transform:translateY(-50px);opacity:0;}100%{transform:translateY(0);opacity:1;}}
+@keyframes fadeIn{0%{opacity:0;}100%{opacity:1;}}
+section{padding:80px 8%;}
+.section-title{font-size:2rem;margin-bottom:35px;border-bottom:2px solid rgba(0,0,0,0.15);padding-bottom:8px;display:flex;align-items:center;gap:10px;}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:25px;margin-top:30px;}
+.card{background:linear-gradient(145deg,#60a5fa,#93c5fd);color:#0f172a;padding:25px;border-radius:18px;box-shadow:0 6px 25px rgba(0,0,0,0.15);transition:0.5s;opacity:0;transform:translateY(50px) rotateX(20deg);}
+.card.visible{opacity:1;transform:translateY(0) rotateX(0deg);}
+.card:hover{transform:translateY(-6px) rotateX(0deg);box-shadow:0 0 45px rgba(147,197,253,0.8);}
+.card h3{margin-bottom:12px;}
+.card i{font-size:1.5rem;margin-bottom:10px;display:block;color:#1537b8;}
+ul{padding-left:20px;margin-top:8px;}
+footer{text-align:center;padding:50px 20px;background:linear-gradient(90deg,#1537b8,#1e4ed8);font-size:0.9rem;color:white;}
+@media(max-width:900px){nav{position:absolute;top:65px;right:0;background:#1537b8;flex-direction:column;width:230px;display:none;padding:20px;border-radius:0 0 15px 15px;}nav.active{display:flex;}.hamburger{display:flex;}}
 </style>
 </head>
 
 <body>
+
 <header>
-  <div class="logo-title">
-    <img src="logo.png" alt="Logo">
-    <div class="site-name">Oltre Le Sfumature</div>
-  </div>
-  <div class="hamburger" id="hamburger"><span></span><span></span><span></span></div>
-  <nav id="navLinks">
-    <a href="#cos-e">Cos'è</a>
-    <a href="#caratteristiche">Caratteristiche</a>
-    <a href="#diagnosi">Diagnosi</a>
-    <a href="#prognosi">Prognosi</a>
-    <a href="#intervento">Intervento</a>
-    <a href="#aba">ABA</a>
-    <a href="#teacch">TEACCH</a>
-    <a href="#contatti">Contatti</a>
-  </nav>
+<div class="logo-title"><img src="logo.png" alt="Logo"><div class="site-name">Oltre Le Sfumature</div></div>
+<div class="hamburger" id="hamburger"><span></span><span></span><span></span></div>
+<nav id="navLinks">
+<a href="#cos-e">Cos'è</a>
+<a href="#caratteristiche">Caratteristiche</a>
+<a href="#diagnosi">Diagnosi</a>
+<a href="#prognosi">Prognosi</a>
+<a href="#intervento">Intervento</a>
+<a href="#aba">ABA</a>
+<a href="#teacch">TEACCH</a>
+<a href="#contatti">Contatti</a>
+</nav>
 </header>
 
 <section class="hero">
-  <h1>Oltre Le Sfumature</h1>
-  <p>
-    Un progetto dedicato alla consapevolezza sulla neurodiversità e sullo spettro autistico. 
-    Informazione corretta, inclusione sociale, supporto educativo e valorizzazione delle capacità individuali. 
-    Ogni persona è unica: comprendere significa rispettare e costruire opportunità.
-  </p>
+<h1>Oltre Le Sfumature</h1>
 </section>
 
 <section id="cos-e">
 <h2 class="section-title"><i class="fas fa-brain"></i>Cos'è l'Autismo</h2>
 <div class="grid">
-<div class="card">
-<p>L'autismo è un disturbo del neurosviluppo a genesi multifattoriale che interessa primariamente il Sistema Nervoso Centrale durante la sua organizzazione.</p>
-<p>È caratterizzato da disfunzioni della maturazione neurobiologica e del funzionamento del SNC.</p>
-<p>Si tratta di uno spettro variabile che può comprendere sia persone con alto quoziente intellettivo sia con ritardo mentale.</p>
-</div>
+<div class="card"><p>L'autismo è un disturbo del neurosviluppo a genesi multifattoriale che interessa primariamente il Sistema Nervoso Centrale durante la sua organizzazione.</p><p>È caratterizzato da disfunzioni della maturazione neurobiologica e del funzionamento del SNC.</p><p>Si tratta di uno spettro variabile che può comprendere sia persone con alto quoziente intellettivo sia con ritardo mentale.</p></div>
+<div class="card"><p>L'autismo si manifesta in modi diversi: difficoltà comunicative, interazione sociale limitata, comportamenti ripetitivi e interessi ristretti.</p><p>Non esistono due persone con autismo identiche: ogni individuo ha bisogni, punti di forza e sfide uniche.</p></div>
+<div class="card"><p>Riconoscere segnali precoci come ritardo nel linguaggio o scarso contatto visivo aiuta a intervenire tempestivamente.</p><p>Interventi precoci migliorano lo sviluppo sociale, comunicativo e cognitivo.</p></div>
+<div class="card"><p>L'autismo non è una malattia ma una condizione dello sviluppo neurobiologico.</p><p>Comprendere e rispettare le differenze favorisce l'inclusione e la valorizzazione delle capacità individuali.</p></div>
 </div>
 </section>
 
@@ -262,46 +73,43 @@ footer {
 <h2 class="section-title"><i class="fas fa-list"></i>Caratteristiche Principali</h2>
 <div class="grid">
 <div class="card">
-<h3>Alterazioni nella comunicazione</h3>
+<h3>Comunicazione e linguaggio</h3>
 <ul>
 <li>Assenza o ritardo del linguaggio</li>
 <li>Ecolalia immediata o differita</li>
-<li>Prosodia monotona o alterata</li>
+<li>Prosodia alterata o monotona</li>
 <li>Inversione pronominale</li>
-<li>Difficoltà a comprendere ironia e scherzo</li>
-<li>Contatto oculare sfuggente</li>
+<li>Difficoltà a comprendere ironia e sarcasmo</li>
+<li>Contatto oculare limitato</li>
 </ul>
 </div>
-
 <div class="card">
-<h3>Comportamenti ripetitivi e stereotipati</h3>
+<h3>Comportamenti ripetitivi</h3>
 <ul>
-<li>Sfarfallare le mani</li>
-<li>Dondolarsi</li>
-<li>Girare su se stessi</li>
+<li>Sfarfallio delle mani</li>
+<li>Dondolamento</li>
+<li>Girarsi su se stessi</li>
 <li>Camminare sulle punte</li>
 <li>Rituali e rigidità</li>
 </ul>
 </div>
-
 <div class="card">
-<h3>Difficoltà nell'interazione sociale</h3>
+<h3>Interazione sociale</h3>
 <ul>
-<li>Scarso interesse per gli altri</li>
+<li>Scarso interesse verso i coetanei</li>
+<li>Difficoltà nella condivisione di emozioni</li>
 <li>Assenza di attenzione condivisa</li>
-<li>Difficoltà di comprensione degli stati mentali</li>
-<li>Mancanza di condivisione spontanea di emozioni</li>
+<li>Difficoltà nella comprensione degli stati mentali altrui</li>
 </ul>
 </div>
-
 <div class="card">
-<h3>Punti di forza</h3>
+<h3>Punti di forza e talenti</h3>
 <ul>
-<li>Pensiero visivo</li>
+<li>Pensiero visivo e analitico</li>
 <li>Precisione e attenzione ai dettagli</li>
 <li>Memoria visiva eccellente</li>
-<li>Conoscenze approfondite su argomenti specifici</li>
-<li>Talenti artistici o logico-matematici</li>
+<li>Conoscenze approfondite su temi specifici</li>
+<li>Talenti artistici, logico-matematici o musicali</li>
 </ul>
 </div>
 </div>
@@ -310,113 +118,88 @@ footer {
 <section id="diagnosi">
 <h2 class="section-title"><i class="fas fa-stethoscope"></i>Diagnosi</h2>
 <div class="grid">
-<div class="card">
-<p>La diagnosi è clinica, basata sull’osservazione del comportamento e sulla raccolta dei dati anamnestici.</p>
-<p>Non esistono test biologici in grado di individuare la sindrome autistica.</p>
-<p>La diagnosi e il trattamento precoci cambiano la prognosi a lungo termine.</p>
-</div>
+<div class="card"><p>La diagnosi è clinica e comportamentale, basata sull'osservazione e sull'anamnesi.</p><p>Non esistono test biologici unici per individuare l'autismo.</p><p>Diagnosi e interventi precoci migliorano significativamente la qualità della vita futura.</p></div>
+<div class="card"><p>Vengono utilizzati strumenti standardizzati come ADOS, ADI-R e valutazioni cognitive e comportamentali per definire il profilo dell'individuo.</p><p>L'obiettivo è creare un piano educativo e terapeutico personalizzato.</p></div>
 </div>
 </section>
 
 <section id="prognosi">
 <h2 class="section-title"><i class="fas fa-chart-line"></i>Prognosi ed Evoluzione</h2>
 <div class="grid">
-<div class="card">
-<ul>
-<li>1-2% acquisisce uno stato normale</li>
+<div class="card"><ul>
+<li>1-2% acquisisce uno sviluppo simile alla norma</li>
 <li>10-15% raggiunge autonomia familiare</li>
-<li>25-30% necessita sostegno</li>
-<li>60-70% diventa adulto non autosufficiente</li>
+<li>25-30% necessita sostegno costante</li>
+<li>60-70% richiede supporto continuo in età adulta</li>
 </ul>
-<p>La prognosi dipende fortemente dal grado di funzionamento cognitivo e dalla precocità dell’intervento.</p>
-</div>
+<p>La prognosi dipende dal livello cognitivo, dal linguaggio e dalla precocità dell'intervento educativo.</p></div>
+<div class="card"><p>Interventi mirati, supporto familiare e ambienti strutturati favoriscono il miglioramento delle competenze sociali e adattive.</p><p>La crescita personale e la qualità della vita migliorano con l'inclusione e la valorizzazione dei talenti individuali.</p></div>
 </div>
 </section>
 
 <section id="intervento">
 <h2 class="section-title"><i class="fas fa-hand-holding-medical"></i>Intervento</h2>
 <div class="grid">
-<div class="card">
-<ul>
+<div class="card"><ul>
 <li>Intervento precoce e intensivo</li>
-<li>Programma individualizzato</li>
+<li>Programma educativo individualizzato</li>
 <li>Coinvolgimento attivo della famiglia</li>
-<li>Lavoro di rete</li>
-<li>Verifiche periodiche</li>
+<li>Lavoro di rete tra professionisti</li>
+<li>Monitoraggio continuo dei progressi</li>
 </ul>
-<p>Non esistono metodi miracolosi, ma sistemi di intervento integrati psico-educativi e cognitivo-comportamentali scientificamente validati.</p>
-</div>
+<p>L'integrazione di approcci psico-educativi e cognitivo-comportamentali garantisce risultati migliori.</p></div>
+<div class="card"><p>Non esistono metodi miracolosi: la chiave è personalizzazione, coerenza e continuità.</p><p>Supportare le autonomie, il linguaggio e le abilità sociali è essenziale per lo sviluppo armonico.</p></div>
 </div>
 </section>
 
 <section id="aba">
 <h2 class="section-title"><i class="fas fa-brain"></i>Metodo ABA</h2>
 <div class="grid">
-<div class="card">
-<p>ABA (Applied Behavior Analysis) utilizza principi comportamentali per costruire repertori comportamentali utili e ridurre quelli problematici.</p>
+<div class="card"><p>ABA (Applied Behavior Analysis) si basa su principi comportamentali per aumentare comportamenti positivi e ridurre quelli problematici.</p>
 <ul>
-<li>Intervento altamente individualizzato</li>
-<li>Insegnamento senza errori</li>
-<li>Riduzione dei comportamenti problema</li>
+<li>Intervento personalizzato</li>
+<li>Apprendimento senza errori</li>
 <li>Incremento delle capacità adattive</li>
-</ul>
-</div>
+<li>Riduzione di comportamenti problematici</li>
+</ul></div>
+<div class="card"><p>L'approccio ABA è supportato da evidenze scientifiche e adattato alle esigenze specifiche di ogni individuo.</p><p>È applicabile in ambito educativo, domestico e sociale, favorendo autonomia e benessere.</p></div>
 </div>
 </section>
 
 <section id="teacch">
 <h2 class="section-title"><i class="fas fa-chalkboard-teacher"></i>Modello TEACCH</h2>
 <div class="grid">
-<div class="card">
-<p>Il TEACCH è un modello di presa in carico globale che punta sull’organizzazione visiva di spazi, tempi e materiali.</p>
+<div class="card"><p>TEACCH si concentra sull'organizzazione visiva di spazi, tempi e materiali.</p>
 <ul>
 <li>Strutturazione dello spazio</li>
 <li>Strutturazione del tempo</li>
 <li>Uso di agende visive</li>
-<li>Adattamento dell’ambiente</li>
+<li>Adattamento ambientale</li>
 <li>Coinvolgimento dei genitori</li>
 </ul>
-<p>Obiettivi: incrementare le abilità emergenti e rendere l’ambiente più comprensibile.</p>
-</div>
+<p>L'obiettivo è incrementare abilità emergenti e rendere l'ambiente più comprensibile.</p></div>
+<div class="card"><p>TEACCH promuove autonomia, prevedibilità e riduzione dell'ansia, migliorando la partecipazione alla vita quotidiana.</p><p>È un approccio flessibile, adattabile alle esigenze individuali.</p></div>
 </div>
 </section>
 
-<section id="contatti" class="contact">
+<section id="contatti">
 <h2 class="section-title"><i class="fas fa-envelope"></i>Contatti</h2>
 <div class="grid">
-<div class="card">
-<i class="fas fa-envelope"></i>
-<p>Email: oltrelesfumature@gmail.com</p>
-</div>
-<div class="card">
-<i class="fab fa-instagram"></i>
-<p>Instagram: @oltrelesfumature</p>
-</div>
+<div class="card"><i class="fas fa-envelope"></i><p>Email: oltrelesfumature@gmail.com</p></div>
+<div class="card"><i class="fab fa-instagram"></i><p>Instagram: @oltrelesfumature</p></div>
+<div class="card"><i class="fas fa-comments"></i><p>Messaggi diretti al servizio OltreLeSfumature</p></div>
 </div>
 </section>
 
-<footer>
-© 2026 Oltre Le Sfumature — Inclusione • Consapevolezza • Neurodiversità • Crescita • Ricerca
-</footer>
+<footer>© 2026 Oltre Le Sfumature — Inclusione • Consapevolezza • Neurodiversità • Crescita • Ricerca</footer>
 
 <script>
-const hamburger = document.getElementById("hamburger");
-const navLinks = document.getElementById("navLinks");
-
-hamburger.addEventListener("click", () => {
-  navLinks.classList.toggle("active");
-});
-
-const cards = document.querySelectorAll('.card');
-const observer = new IntersectionObserver(entries => {
-  entries.forEach(entry => {
-    if(entry.isIntersecting){
-      entry.target.classList.add('visible');
-    }
-  });
-}, { threshold: 0.2 });
-
-cards.forEach(card => observer.observe(card));
+const hamburger=document.getElementById("hamburger");
+const navLinks=document.getElementById("navLinks");
+hamburger.addEventListener("click",()=>{navLinks.classList.toggle("active");});
+const cards=document.querySelectorAll('.card');
+const observer=new IntersectionObserver(entries=>{entries.forEach(entry=>{if(entry.isIntersecting){entry.target.classList.add('visible');}})},{threshold:0.2});
+cards.forEach(card=>observer.observe(card));
 </script>
 </body>
 </html>
