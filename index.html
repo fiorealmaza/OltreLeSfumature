@@ -3,12 +3,13 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Oltre Le Sfumature | Portale Completo sulla Neurodiversità</title>
+<title>Oltre Le Sfumature | Neurodiversità</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700;800;900&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
 
 <style>
+/* RESET */
 *{margin:0;padding:0;box-sizing:border-box;scroll-behavior:smooth;}
 body{font-family:'Poppins',sans-serif;line-height:1.8;background:#f4f8ff;color:#111;}
 
@@ -19,22 +20,22 @@ header{
   display:flex;justify-content:space-between;align-items:center;
   padding:15px 8%;z-index:1000;box-shadow:0 6px 25px rgba(0,0,0,0.12);
 }
-.logo-container{display:flex;align-items:center;gap:10px;}
-.logo-small{height:38px;}
-.site-name{color:white;font-weight:600;font-size:1rem;letter-spacing:1px;}
+.logo-title{display:flex;align-items:center;gap:15px;}
+.logo-small{height:50px;}
+.site-name{color:white;font-weight:800;font-size:1.6rem;text-shadow:0 0 12px rgba(0,0,0,0.4);}
 nav{display:flex;gap:20px;}
 nav a{color:white;text-decoration:none;font-weight:600;padding:8px 16px;border-radius:20px;transition:0.3s;}
 nav a:hover{background:white;color:#1f5fbf;box-shadow:0 0 15px rgba(255,255,255,0.8);}
 .hamburger{display:none;flex-direction:column;gap:6px;cursor:pointer;}
-.hamburger span{width:28px;height:3px;background:white;border-radius:3px;transition:0.4s;}
+.hamburger span{width:32px;height:4px;background:linear-gradient(90deg,#3b82f6,#60a5fa);border-radius:3px;transition:0.4s;}
 .hamburger.active span:nth-child(1){transform:rotate(45deg) translate(6px,6px);}
 .hamburger.active span:nth-child(2){opacity:0;}
 .hamburger.active span:nth-child(3){transform:rotate(-45deg) translate(6px,-6px);}
 
 /* HERO */
-.hero{padding:180px 8% 140px 8%;text-align:center;background:linear-gradient(135deg,#3b82f6,#60a5fa);color:white;}
-.hero h1{font-family:'Cinzel',serif;font-size:3.5rem;margin-bottom:15px;text-shadow:0 0 25px rgba(0,0,0,0.2);}
-.hero p{font-size:1.3rem;}
+.hero{padding:200px 8% 160px 8%;text-align:center;background:linear-gradient(135deg,#3b82f6,#60a5fa);color:white;position:relative;}
+.hero h1{font-family:'Cinzel',serif;font-size:4rem;margin-bottom:15px;text-shadow:0 0 35px rgba(0,0,0,0.3);}
+.hero img{height:60px;vertical-align:middle;margin-left:15px;}
 
 /* SECTIONS */
 section{padding:120px 8%;}
@@ -43,7 +44,7 @@ section{padding:120px 8%;}
 .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:30px;margin-top:40px;}
 .card{background:linear-gradient(145deg,#ffffff,#eef5ff);padding:30px;border-radius:25px;box-shadow:0 0 30px rgba(77,163,255,0.25);transition:0.4s;}
 .card:hover{transform:translateY(-10px);box-shadow:0 0 55px rgba(31,95,191,0.4);}
-.card i{font-size:2rem;color:#1f5fbf;margin-bottom:15px;}
+.card i{font-size:2.2rem;color:#1f5fbf;margin-bottom:15px;}
 
 /* FOOTER */
 footer{text-align:center;padding:70px 20px;background:linear-gradient(90deg,#1f5fbf,#4da3ff);color:white;line-height:1.8;font-size:0.95rem;margin-top:50px;}
@@ -54,7 +55,7 @@ footer{text-align:center;padding:70px 20px;background:linear-gradient(90deg,#1f5
   nav.active{display:flex;}
   nav a{width:80%;text-align:center;padding:12px;}
   .hamburger{display:flex;}
-  .hero h1{font-size:2rem;}
+  .hero h1{font-size:2.2rem;}
   section{padding:80px 6%;}
   .grid{grid-template-columns:1fr;}
 }
@@ -64,9 +65,9 @@ footer{text-align:center;padding:70px 20px;background:linear-gradient(90deg,#1f5
 <body>
 
 <header>
-  <div class="logo-container">
+  <div class="logo-title">
+    <h1 class="site-name">Oltre Le Sfumature</h1>
     <img src="logo.png" class="logo-small" alt="Logo">
-    <span class="site-name">Oltre Le Sfumature</span>
   </div>
   <div class="hamburger" id="hamburger">
     <span></span>
@@ -86,7 +87,7 @@ footer{text-align:center;padding:70px 20px;background:linear-gradient(90deg,#1f5
 </header>
 
 <section class="hero" id="hero">
-  <h1>Lo Spettro Autistico</h1>
+  <h1>Lo Spettro Autistico <img src="logo.png" alt="Logo"></h1>
   <p>Conoscere, comprendere e valorizzare ogni individuo</p>
 </section>
 
@@ -165,12 +166,10 @@ footer{text-align:center;padding:70px 20px;background:linear-gradient(90deg,#1f5
 <script>
 const hamburger = document.getElementById("hamburger");
 const navLinks = document.getElementById("navLinks");
-
 hamburger.addEventListener("click", () => {
   hamburger.classList.toggle("active");
   navLinks.classList.toggle("active");
 });
-
 document.querySelectorAll("#navLinks a").forEach(link => {
   link.addEventListener("click", () => {
     hamburger.classList.remove("active");
