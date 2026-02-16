@@ -8,6 +8,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 
 <style>
+
 *{
 margin:0;
 padding:0;
@@ -17,7 +18,7 @@ scroll-behavior:smooth;
 
 body{
 font-family:'Poppins',sans-serif;
-background:#f8fbff;
+background:#f4f8ff;
 color:#1f2937;
 line-height:1.7;
 }
@@ -56,12 +57,12 @@ padding:60px 8%;
 display:flex;
 align-items:center;
 justify-content:space-between;
-background:linear-gradient(to bottom, white 60%, #e6f0ff);
-min-height:30vh;
+background:linear-gradient(to bottom, white 70%, #e6f0ff);
+min-height:25vh;
 }
 
 .hero-text{
-width:60%;
+width:65%;
 }
 
 .hero h1{
@@ -72,29 +73,34 @@ margin-bottom:15px;
 }
 
 .hero p{
-color:#555;
 font-size:1.1rem;
+color:#444;
 }
 
 .hero img{
-width:30%;
-max-width:260px;
+width:22%;
+max-width:220px;
 }
 
 /* SECTIONS */
 
 section{
-padding:80px 8%;
+padding:90px 8%;
 }
 
 .light{
 background:#e6f0ff;
 }
 
+.blue-block{
+background:#003A99;
+color:white;
+padding:70px 8%;
+}
+
 h2{
 font-family:'Playfair Display',serif;
-font-size:2rem;
-color:#003A99;
+font-size:2.2rem;
 margin-bottom:25px;
 }
 
@@ -105,10 +111,15 @@ margin:auto;
 
 .card{
 background:white;
-padding:30px;
-border-radius:18px;
-box-shadow:0 10px 30px rgba(0,0,0,0.06);
+padding:35px;
+border-radius:20px;
+box-shadow:0 12px 30px rgba(0,0,0,0.08);
 margin-bottom:30px;
+transition:0.3s;
+}
+
+.card:hover{
+transform:translateY(-5px);
 }
 
 ul{
@@ -116,23 +127,73 @@ margin-left:20px;
 margin-top:10px;
 }
 
-.contact{
-background:#003A99;
-color:white;
+/* STATISTICS */
+
+.stats{
+display:flex;
+justify-content:space-between;
+flex-wrap:wrap;
+gap:20px;
 }
 
-.contact .card{
+.stat-box{
 background:white;
-color:#1f2937;
+flex:1;
+min-width:200px;
+padding:30px;
+border-radius:18px;
+text-align:center;
+box-shadow:0 8px 25px rgba(0,0,0,0.1);
+}
+
+.stat-number{
+font-size:2rem;
+font-weight:600;
+color:#003A99;
+}
+
+/* CONTACT */
+
+.contact-wrapper{
+display:flex;
+justify-content:space-between;
+gap:40px;
+flex-wrap:wrap;
+}
+
+.contact-box{
+flex:1;
+min-width:250px;
+}
+
+.contact-card{
+background:white;
+padding:35px;
+border-radius:20px;
+box-shadow:0 10px 25px rgba(0,0,0,0.08);
 }
 
 footer{
-text-align:center;
-padding:30px;
 background:#002766;
 color:white;
+text-align:center;
+padding:30px;
 font-size:0.9rem;
 }
+
+/* ANIMATION */
+
+.fade{
+opacity:0;
+transform:translateY(40px);
+transition:all 1s ease;
+}
+
+.show{
+opacity:1;
+transform:translateY(0);
+}
+
 </style>
 </head>
 
@@ -141,81 +202,141 @@ font-size:0.9rem;
 <nav>
 <a href="#definizione">Definizione</a>
 <a href="#fondazione">Fondazione</a>
-<a href="#scuola">Scuola</a>
-<a href="#sviluppo">Sviluppo</a>
+<a href="#metodi">Metodi</a>
 <a href="#contatti">Contatti</a>
 </nav>
 
 <div class="hero">
 <div class="hero-text">
 <h1>Disturbo dello Spettro Autistico</h1>
-<p>Comprendere, includere, valorizzare ogni unicità.</p>
+<p>Comprendere, includere e valorizzare ogni unicità.</p>
 </div>
 <img src="logo.jpg" alt="Logo OLS">
 </div>
 
-<section id="definizione">
+<section id="definizione" class="fade">
 <div class="container">
-<h2>Cos'è lo Spettro Autistico</h2>
+<h2>Definizione</h2>
 <div class="card">
-<p>Il Disturbo dello Spettro Autistico è un disturbo del neurosviluppo caratterizzato da difficoltà nella comunicazione sociale e comportamenti ripetitivi.</p>
-<p>Si parla di "spettro" perché esistono molteplici modalità di manifestazione, con diversi livelli di supporto necessari.</p>
+<p>Il Disturbo dello Spettro Autistico è un disturbo del neurosviluppo caratterizzato da difficoltà nella comunicazione sociale e comportamenti ripetitivi. Si manifesta nei primi anni di vita e accompagna la persona lungo tutto il ciclo vitale.</p>
 </div>
 </div>
 </section>
 
-<section id="fondazione" class="light">
+<section class="blue-block fade">
+<div class="container">
+<h2>Perché “Spettro”?</h2>
+<p>Si utilizza il termine “spettro” perché le caratteristiche possono variare notevolmente da persona a persona, con differenti livelli di supporto necessari.</p>
+</div>
+</section>
+
+<section id="fondazione" class="light fade">
 <div class="container">
 <h2>Fondazione O.L.S – Oltre Le Sfumature</h2>
 <div class="card">
-<p>O.L.S nasce per promuovere inclusione, consapevolezza e formazione.</p>
+<p>O.L.S nasce con l’obiettivo di promuovere inclusione, formazione e consapevolezza sul territorio.</p>
 <ul>
-<li>Progetti educativi nelle scuole</li>
-<li>Formazione per insegnanti</li>
-<li>Supporto alle famiglie</li>
+<li>Supporto psicopedagogico alle famiglie</li>
+<li>Progetti nelle scuole</li>
 <li>Laboratori di abilità sociali</li>
+<li>Formazione per insegnanti</li>
 <li>Campagne di sensibilizzazione</li>
 </ul>
 </div>
 </div>
 </section>
 
-<section id="scuola">
+<section class="fade">
 <div class="container">
-<h2>Metodi nelle Scuole</h2>
+<h2>Cause e Fattori di Rischio</h2>
 <div class="card">
-<ul>
-<li>Piano Educativo Individualizzato (PEI)</li>
-<li>Metodo TEACCH</li>
-<li>Strategie visive strutturate</li>
-<li>Peer tutoring</li>
-<li>Educazione socio-emotiva</li>
-</ul>
+<p>Le cause non sono univoche. Si ritiene che vi siano fattori genetici e ambientali che interagiscono tra loro.</p>
 </div>
-</div>
-</section>
 
-<section id="sviluppo" class="light">
-<div class="container">
-<h2>Sviluppo del Bambino</h2>
+<h2>Diagnosi</h2>
+<div class="card">
+<p>La diagnosi viene effettuata da un’équipe multidisciplinare attraverso osservazioni cliniche e strumenti standardizzati.</p>
+</div>
+
+<h2>Terapie</h2>
 <div class="card">
 <ul>
-<li>Stimolazione del linguaggio</li>
-<li>Regolazione emotiva</li>
-<li>Sviluppo autonomie personali</li>
+<li>ABA</li>
+<li>Logopedia</li>
+<li>Terapia occupazionale</li>
+<li>Psicomotricità</li>
 <li>Intervento precoce intensivo</li>
 </ul>
 </div>
 </div>
 </section>
 
-<section id="contatti" class="contact">
+<section class="blue-block fade">
+<div class="container">
+<h2>Dati Statistici</h2>
+<div class="stats">
+<div class="stat-box">
+<div class="stat-number">1 su 77</div>
+<p>Bambini in Italia</p>
+</div>
+<div class="stat-box">
+<div class="stat-number">4:1</div>
+<p>Rapporto maschi/femmine</p>
+</div>
+<div class="stat-box">
+<div class="stat-number">2-3 anni</div>
+<p>Età media diagnosi</p>
+</div>
+</div>
+</div>
+</section>
+
+<section id="metodi" class="light fade">
+<div class="container">
+<h2>Metodi nelle Scuole</h2>
+<div class="card">
+<ul>
+<li>Piano Educativo Individualizzato (PEI)</li>
+<li>Metodo TEACCH</li>
+<li>Strategie visive</li>
+<li>Peer tutoring</li>
+<li>Educazione socio-emotiva</li>
+</ul>
+</div>
+
+<h2>Sviluppo del Bambino</h2>
+<div class="card">
+<ul>
+<li>Stimolazione linguaggio</li>
+<li>Autonomie personali</li>
+<li>Regolazione emotiva</li>
+<li>Integrazione sensoriale</li>
+</ul>
+</div>
+</div>
+</section>
+
+<section id="contatti" class="fade">
 <div class="container">
 <h2>Dove Trovarci</h2>
-<div class="card">
-<p>Via Vittorio 120092<br>Cinisello Balsamo</p>
-<p>Email: oltrelesfumature@gmail.com</p>
-<p>Instagram: @oltrelesfumature</p>
+<div class="contact-wrapper">
+<div class="contact-box">
+<div class="contact-card">
+<p><strong>Indirizzo</strong><br>
+Via Vittorio 120092<br>
+Cinisello Balsamo</p>
+</div>
+</div>
+
+<div class="contact-box">
+<div class="contact-card">
+<p><strong>Email</strong><br>
+oltrelesfumature@gmail.com</p>
+
+<p><strong>Instagram</strong><br>
+@oltrelesfumature</p>
+</div>
+</div>
 </div>
 </div>
 </section>
@@ -223,6 +344,18 @@ font-size:0.9rem;
 <footer>
 © 2026 Fondazione O.L.S – Oltre Le Sfumature
 </footer>
+
+<script>
+const faders=document.querySelectorAll('.fade');
+window.addEventListener('scroll',()=>{
+faders.forEach(el=>{
+const top=el.getBoundingClientRect().top;
+if(top<window.innerHeight-100){
+el.classList.add('show');
+}
+});
+});
+</script>
 
 </body>
 </html>
