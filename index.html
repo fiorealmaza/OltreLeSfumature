@@ -3,27 +3,22 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>O.L.S – Oltre Le Sfumature</title>
+<title>Fondazione O.L.S – Oltre Le Sfumature</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
 
 <style>
 
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-scroll-behavior:smooth;
-}
+*{margin:0;padding:0;box-sizing:border-box;scroll-behavior:smooth;}
 
 body{
 font-family:'Poppins',sans-serif;
-background:#F4F7FF;
+background:#F2F6FF;
 color:#1F2937;
-line-height:1.7;
+line-height:1.8;
 }
 
-/* NAVBAR */
+/* NAV */
 
 nav{
 position:fixed;
@@ -48,87 +43,103 @@ font-weight:500;
 
 .hero{
 margin-top:90px;
-padding:70px 8%;
+padding:90px 8%;
 display:flex;
 align-items:center;
 justify-content:space-between;
-background:white;
+background:linear-gradient(to right,#EAF1FF,#FFFFFF);
 }
 
-.hero-text{
-width:65%;
-}
+.hero-text{width:60%;}
 
 .hero h1{
 font-family:'Playfair Display',serif;
-font-size:2.7rem;
+font-size:3rem;
 color:#2F5FD0;
-margin-bottom:15px;
+margin-bottom:20px;
 }
 
 .hero img{
-width:20%;
-max-width:190px;
+width:18%;
+max-width:180px;
 }
 
 /* SECTIONS */
 
-section{
-padding:85px 8%;
-}
-
-.light{
-background:#EAF1FF;
-}
-
-.blue-soft{
-background:#DCE7FF;
-}
+section{padding:100px 8%;}
 
 .container{
-max-width:1050px;
+max-width:1100px;
 margin:auto;
 }
 
 h2{
 font-family:'Playfair Display',serif;
-font-size:2rem;
+font-size:2.2rem;
 color:#2F5FD0;
-margin-bottom:25px;
+margin-bottom:40px;
 }
 
-.card{
+.two-col{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:50px;
+align-items:center;
+}
+
+.box{
+background:white;
+padding:35px;
+border-radius:18px;
+box-shadow:0 8px 25px rgba(0,0,0,0.05);
+}
+
+.soft{
+background:#EAF1FF;
+}
+
+.light{
+background:#DCE7FF;
+}
+
+.icon{
+font-size:28px;
+margin-bottom:15px;
+color:#2F5FD0;
+}
+
+/* TIMELINE */
+
+.timeline{
+border-left:3px solid #2F5FD0;
+padding-left:25px;
+}
+
+.timeline-item{
+margin-bottom:30px;
+}
+
+.timeline-item h4{
+color:#2F5FD0;
+margin-bottom:8px;
+}
+
+/* GRID */
+
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:30px;
+}
+
+/* TESTIMONIALS */
+
+.testimonial{
 background:white;
 padding:30px;
 border-radius:16px;
 box-shadow:0 6px 20px rgba(0,0,0,0.05);
-margin-bottom:30px;
-}
-
-ul{
-margin-left:20px;
-margin-top:10px;
-}
-
-/* STATISTICS */
-
-.stats-grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:25px;
-}
-
-.stat-card{
-background:white;
-padding:25px;
-border-radius:14px;
-box-shadow:0 6px 18px rgba(0,0,0,0.05);
-}
-
-.stat-card h3{
-color:#2F5FD0;
-font-size:1.4rem;
-margin-bottom:10px;
+font-style:italic;
 }
 
 /* CONTACT */
@@ -138,7 +149,7 @@ background:#2F5FD0;
 color:white;
 }
 
-.contact .card{
+.contact .box{
 background:white;
 color:#1F2937;
 }
@@ -147,8 +158,15 @@ footer{
 background:#1E3A8A;
 color:white;
 text-align:center;
-padding:25px;
+padding:30px;
 font-size:0.9rem;
+}
+
+@media(max-width:900px){
+.two-col{grid-template-columns:1fr;}
+.hero{flex-direction:column;text-align:center;}
+.hero-text{width:100%;}
+.hero img{margin-top:20px;}
 }
 
 </style>
@@ -157,8 +175,8 @@ font-size:0.9rem;
 <body>
 
 <nav>
-<a href="#definizione">Definizione</a>
-<a href="#fondazione">Fondazione</a>
+<a href="#chi">Chi siamo</a>
+<a href="#diagnosi">Diagnosi</a>
 <a href="#metodi">Metodi</a>
 <a href="#contatti">Contatti</a>
 </nav>
@@ -166,121 +184,115 @@ font-size:0.9rem;
 <div class="hero">
 <div class="hero-text">
 <h1>Disturbo dello Spettro Autistico</h1>
-<p>Comprendere, includere e valorizzare ogni unicità attraverso informazione e supporto.</p>
+<p>Informazione, inclusione e supporto attraverso la Fondazione O.L.S – Oltre Le Sfumature.</p>
 </div>
 <img src="logo.jpg" alt="Logo OLS">
 </div>
 
-<section id="definizione">
-<div class="container">
-<h2>Definizione</h2>
-<div class="card">
-<p>Il Disturbo dello Spettro Autistico è un disturbo del neurosviluppo caratterizzato da difficoltà nella comunicazione sociale e dalla presenza di comportamenti ripetitivi o interessi ristretti. Si manifesta nei primi anni di vita e accompagna la persona lungo tutto il ciclo vitale.</p>
+<section id="chi">
+<div class="container two-col">
+<div>
+<h2>Chi siamo</h2>
+<p>La Fondazione O.L.S nasce per promuovere consapevolezza e inclusione. Offriamo supporto alle famiglie, formazione per le scuole e progetti educativi mirati allo sviluppo delle competenze sociali.</p>
 </div>
-</div>
-</section>
-
-<section class="blue-soft">
-<div class="container">
-<h2>Perché si parla di “Spettro”</h2>
-<div class="card">
-<p>Il termine “spettro” indica la grande variabilità con cui il disturbo può manifestarsi. Ogni persona presenta caratteristiche, capacità e bisogni differenti, con livelli diversi di supporto necessari.</p>
-</div>
-</div>
-</section>
-
-<section id="fondazione" class="light">
-<div class="container">
-<h2>Fondazione O.L.S – Oltre Le Sfumature</h2>
-<div class="card">
-<p>La Fondazione O.L.S nasce con l’obiettivo di promuovere inclusione, consapevolezza e supporto concreto alle famiglie e alle scuole.</p>
+<div class="box soft">
+<div class="icon">💙</div>
 <ul>
-<li>Supporto psicopedagogico alle famiglie</li>
-<li>Progetti educativi nelle scuole</li>
-<li>Formazione per insegnanti</li>
-<li>Laboratori per abilità sociali</li>
-<li>Campagne di sensibilizzazione territoriale</li>
+<li>Supporto psicopedagogico</li>
+<li>Progetti scolastici</li>
+<li>Formazione insegnanti</li>
+<li>Laboratori abilità sociali</li>
+<li>Campagne di sensibilizzazione</li>
 </ul>
 </div>
 </div>
 </section>
 
 <section>
-<div class="container">
-<h2>Cause e Fattori di Rischio</h2>
-<div class="card">
-<p>Le ricerche indicano un’interazione tra fattori genetici e ambientali. Non esiste una causa unica, ma una combinazione complessa di elementi biologici e neuroevolutivi.</p>
+<div class="container two-col">
+<div class="box light">
+<div class="icon">🧠</div>
+<h3>Definizione</h3>
+<p>Disturbo del neurosviluppo che influisce sulla comunicazione sociale e sui comportamenti ripetitivi, con diversi livelli di supporto necessari.</p>
 </div>
-
-<h2>Diagnosi</h2>
-<div class="card">
-<p>La diagnosi viene effettuata da un’équipe multidisciplinare attraverso osservazioni cliniche e strumenti standardizzati. I primi segnali possono emergere tra i 18 e i 24 mesi.</p>
-</div>
-
-<h2>Terapie</h2>
-<div class="card">
-<ul>
-<li>Intervento comportamentale (ABA)</li>
-<li>Logopedia</li>
-<li>Terapia occupazionale</li>
-<li>Psicomotricità</li>
-<li>Intervento precoce intensivo</li>
-</ul>
+<div>
+<h2>Perché “Spettro”</h2>
+<p>Il termine indica la variabilità con cui il disturbo si manifesta. Ogni persona è unica e presenta caratteristiche differenti.</p>
 </div>
 </div>
 </section>
 
-<section class="blue-soft">
+<section id="diagnosi">
+<div class="container">
+<h2>Diagnosi e Intervento</h2>
+
+<div class="timeline">
+<div class="timeline-item">
+<h4>18-24 mesi</h4>
+<p>Possibili primi segnali osservabili.</p>
+</div>
+
+<div class="timeline-item">
+<h4>Valutazione multidisciplinare</h4>
+<p>Osservazione clinica e strumenti standardizzati.</p>
+</div>
+
+<div class="timeline-item">
+<h4>Intervento precoce</h4>
+<p>ABA, logopedia, terapia occupazionale e percorsi personalizzati.</p>
+</div>
+</div>
+
+</div>
+</section>
+
+<section class="soft">
 <div class="container">
 <h2>Dati Statistici</h2>
 
-<div class="stats-grid">
-
-<div class="stat-card">
+<div class="grid">
+<div class="box">
 <h3>1 su 77</h3>
-<p>In Italia, circa 1 bambino tra i 7 e i 9 anni presenta un disturbo dello spettro autistico.</p>
+<p>Bambini in Italia tra 7-9 anni.</p>
 </div>
-
-<div class="stat-card">
+<div class="box">
 <h3>4:1</h3>
-<p>Il disturbo è diagnosticato circa quattro volte più frequentemente nei maschi rispetto alle femmine.</p>
+<p>Rapporto maschi/femmine.</p>
 </div>
-
-<div class="stat-card">
-<h3>18-24 mesi</h3>
-<p>I primi segnali possono essere osservati già nel secondo anno di vita.</p>
-</div>
-
-<div class="stat-card">
+<div class="box">
 <h3>~3 anni</h3>
-<p>L’età media della diagnosi si colloca intorno ai 3 anni.</p>
+<p>Età media della diagnosi.</p>
+</div>
 </div>
 
-</div>
 </div>
 </section>
 
-<section id="metodi" class="light">
-<div class="container">
+<section id="metodi">
+<div class="container two-col">
+<div>
 <h2>Metodi nelle Scuole</h2>
-<div class="card">
 <ul>
-<li>Piano Educativo Individualizzato (PEI)</li>
+<li>PEI</li>
 <li>Metodo TEACCH</li>
-<li>Strategie visive strutturate</li>
+<li>Strategie visive</li>
 <li>Peer tutoring</li>
 <li>Educazione socio-emotiva</li>
 </ul>
 </div>
+<div class="box">
+<h3>Sviluppo del Bambino</h3>
+<p>Interventi mirati allo sviluppo del linguaggio, autonomie personali, regolazione emotiva e integrazione sensoriale.</p>
+</div>
+</div>
+</section>
 
-<h2>Sviluppo del Bambino</h2>
-<div class="card">
-<ul>
-<li>Sviluppo del linguaggio</li>
-<li>Autonomie personali</li>
-<li>Regolazione emotiva</li>
-<li>Integrazione sensoriale</li>
-</ul>
+<section>
+<div class="container">
+<h2>Testimonianze</h2>
+<div class="grid">
+<div class="testimonial">“Grazie alla Fondazione O.L.S abbiamo trovato supporto e comprensione.”</div>
+<div class="testimonial">“Formazione chiara e concreta per insegnanti.”</div>
 </div>
 </div>
 </section>
@@ -288,9 +300,9 @@ font-size:0.9rem;
 <section id="contatti" class="contact">
 <div class="container">
 <h2>Dove Trovarci</h2>
-<div class="card">
+<div class="box">
 <p><strong>Fondazione O.L.S – Oltre Le Sfumature</strong></p>
-<p>Via Vittorio 120092<br>Cinisello Balsamo</p>
+<p>Via Vittorio 120092 – Cinisello Balsamo</p>
 <p>Email: oltrelesfumature@gmail.com</p>
 <p>Instagram: @oltrelesfumature</p>
 </div>
