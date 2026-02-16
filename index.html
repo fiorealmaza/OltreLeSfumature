@@ -4,18 +4,21 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Oltre Le Sfumature | Disturbo dello Spettro Autistico</title>
-<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@900&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
 
 <style>
 
-/* ================= VARIABILI COLORE ================= */
+/* ================= COLORI MODERNI ================= */
 :root{
-  --primary:#1e3a8a;
-  --secondary:#3b82f6;
-  --light:#60a5fa;
-  --background:#f4f7fb;
-  --text:#1f2937;
+  --primary:#2563eb;
+  --secondary:#4f46e5;
+  --accent:#06b6d4;
+  --pink:#ec4899;
+  --purple:#8b5cf6;
+  --background:#f1f5f9;
+  --text:#1e293b;
   --white:#ffffff;
 }
 
@@ -24,9 +27,9 @@
 
 body{
   font-family:'Roboto',sans-serif;
-  line-height:1.7;
   background:var(--background);
   color:var(--text);
+  line-height:1.7;
 }
 
 /* ================= HEADER ================= */
@@ -35,22 +38,40 @@ header{
   width:100%;
   top:0;
   left:0;
-  z-index:1000;
   display:flex;
   justify-content:space-between;
   align-items:center;
   padding:15px 8%;
-  background:var(--white);
-  box-shadow:0 2px 10px rgba(0,0,0,0.08);
+  background:linear-gradient(90deg,var(--primary),var(--secondary));
+  z-index:1000;
+  box-shadow:0 4px 20px rgba(0,0,0,0.15);
 }
 
+/* Logo + titolo */
+.logo-container{
+  display:flex;
+  align-items:center;
+  gap:15px;
+}
+
+.logo-container img{
+  height:55px;
+  border-radius:10px;
+}
+
+/* Titolo illuminato */
 .site-name{
-  color:var(--primary);
   font-family:'Cinzel',serif;
-  font-weight:700;
-  font-size:2rem;
+  font-size:2.3rem;
+  font-weight:900;
+  color:white;
+  text-shadow:
+    0 0 5px #fff,
+    0 0 15px var(--accent),
+    0 0 25px var(--accent);
 }
 
+/* NAV */
 nav{
   display:flex;
   gap:20px;
@@ -58,53 +79,55 @@ nav{
 
 nav a{
   text-decoration:none;
-  color:var(--primary);
+  color:white;
   font-weight:500;
   padding:8px 14px;
-  border-radius:6px;
+  border-radius:20px;
   transition:0.3s;
 }
 
 nav a:hover{
-  background:var(--secondary);
-  color:white;
+  background:white;
+  color:var(--primary);
 }
 
 /* ================= HERO ================= */
 .hero{
-  padding:180px 8% 120px 8%;
+  padding:190px 8% 130px 8%;
   text-align:center;
-  background:linear-gradient(135deg,var(--primary),var(--secondary));
+  background:linear-gradient(135deg,var(--primary),var(--purple),var(--pink));
   color:white;
 }
 
 .hero h1{
   font-family:'Cinzel',serif;
-  font-size:3.2rem;
+  font-size:3.5rem;
   margin-bottom:20px;
+  text-shadow:0 0 25px rgba(255,255,255,0.6);
 }
 
 .hero p{
-  max-width:700px;
+  max-width:750px;
   margin:auto;
-  font-size:1.1rem;
+  font-size:1.15rem;
 }
 
 .hero .button{
   display:inline-block;
-  margin-top:30px;
-  padding:12px 30px;
+  margin-top:35px;
+  padding:14px 35px;
   background:white;
   color:var(--primary);
-  border-radius:8px;
+  border-radius:30px;
   font-weight:600;
   text-decoration:none;
   transition:0.3s;
 }
 
 .hero .button:hover{
-  background:var(--light);
+  background:var(--accent);
   color:white;
+  transform:scale(1.05);
 }
 
 /* ================= SEZIONI ================= */
@@ -113,10 +136,12 @@ section{
 }
 
 .section-title{
-  font-size:1.8rem;
+  font-size:1.9rem;
   font-weight:700;
   margin-bottom:40px;
-  color:var(--primary);
+  background:linear-gradient(90deg,var(--primary),var(--pink));
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
 }
 
 .text{
@@ -124,6 +149,7 @@ section{
   font-size:1.05rem;
 }
 
+/* GRID */
 .grid{
   display:grid;
   grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
@@ -131,37 +157,42 @@ section{
   margin-top:40px;
 }
 
+/* CARD COLORATE */
 .card{
   background:var(--white);
-  padding:25px;
-  border-radius:12px;
-  box-shadow:0 5px 15px rgba(0,0,0,0.06);
-  transition:0.3s;
+  padding:30px;
+  border-radius:20px;
+  box-shadow:0 8px 25px rgba(0,0,0,0.08);
+  transition:0.4s;
+  border-top:5px solid var(--accent);
 }
 
 .card:hover{
-  transform:translateY(-5px);
-  box-shadow:0 10px 25px rgba(0,0,0,0.08);
+  transform:translateY(-8px);
+  box-shadow:0 15px 35px rgba(0,0,0,0.15);
 }
 
 .card i{
-  font-size:1.8rem;
-  color:var(--secondary);
+  font-size:2rem;
   margin-bottom:15px;
+  background:linear-gradient(135deg,var(--primary),var(--pink));
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
 }
 
 /* ================= FOOTER ================= */
 footer{
   text-align:center;
-  padding:50px 20px;
-  background:white;
-  color:var(--primary);
-  border-top:1px solid #e5e7eb;
+  padding:60px 20px;
+  background:linear-gradient(90deg,var(--primary),var(--secondary));
+  color:white;
   font-size:0.9rem;
 }
 
+/* MOBILE */
 @media(max-width:900px){
   nav{display:none;}
+  .hero h1{font-size:2.5rem;}
 }
 
 </style>
@@ -170,12 +201,13 @@ footer{
 <body>
 
 <header>
-  <h1 class="site-name">Oltre Le Sfumature</h1>
+  <div class="logo-container">
+    <img src="logo.png" alt="Logo">
+    <h1 class="site-name">Oltre Le Sfumature</h1>
+  </div>
   <nav>
-    <a href="#definizione">Cos'è</a>
+    <a href="#cos">Cos'è</a>
     <a href="#caratteristiche">Caratteristiche</a>
-    <a href="#cause">Cause</a>
-    <a href="#diagnosi">Diagnosi</a>
     <a href="#interventi">Interventi</a>
     <a href="#inclusione">Inclusione</a>
     <a href="#ricerca">Ricerca</a>
@@ -186,25 +218,21 @@ footer{
   <h1>Disturbo dello Spettro Autistico</h1>
   <p>
   Una condizione del neurosviluppo caratterizzata da differenze nella comunicazione,
-  nell'interazione sociale e nei comportamenti. Ogni persona presenta un profilo unico,
-  con punti di forza e aree di difficoltà differenti.
+  nell'interazione sociale e nell'elaborazione sensoriale. Ogni individuo presenta
+  un profilo unico di punti di forza e difficoltà.
   </p>
-  <a href="#definizione" class="button">Approfondisci</a>
+  <a href="#cos" class="button">Scopri di più</a>
 </section>
 
-<section id="definizione">
-  <div class="section-title">Cos'è il Disturbo dello Spettro Autistico</div>
+<section id="cos">
+  <div class="section-title">Cos'è lo Spettro Autistico</div>
   <div class="text">
-  Il Disturbo dello Spettro Autistico (DSA) è una condizione del neurosviluppo che emerge
-  nei primi anni di vita e accompagna la persona lungo tutto l'arco della vita.
+  Il Disturbo dello Spettro Autistico (DSA) è una condizione del neurosviluppo
+  che influenza la comunicazione, l'interazione sociale e il comportamento.
   </div>
   <div class="text">
-  Il termine "spettro" indica l'ampia variabilità di manifestazioni cliniche,
-  livelli di autonomia, competenze cognitive e modalità comunicative.
-  </div>
-  <div class="text">
-  Non esiste un unico modo di essere autistici: ogni individuo presenta
-  caratteristiche specifiche che richiedono comprensione e supporto personalizzato.
+  Il termine "spettro" indica la grande variabilità: ogni persona è diversa,
+  con capacità, sensibilità e modalità di apprendimento uniche.
   </div>
 </section>
 
@@ -214,101 +242,52 @@ footer{
     <div class="card">
       <i class="fas fa-comments"></i>
       <h3>Comunicazione</h3>
-      <p>Difficoltà nell'uso del linguaggio verbale e non verbale, comprensione implicita e pragmatica della comunicazione.</p>
+      <p>Differenze nel linguaggio verbale e non verbale e nella comprensione sociale.</p>
     </div>
     <div class="card">
       <i class="fas fa-users"></i>
-      <h3>Interazione sociale</h3>
-      <p>Differenze nella reciprocità sociale, nella gestione delle relazioni e nell'interpretazione delle emozioni.</p>
+      <h3>Relazioni</h3>
+      <p>Modalità particolari di costruire e vivere le relazioni interpersonali.</p>
     </div>
     <div class="card">
       <i class="fas fa-sync"></i>
-      <h3>Comportamenti ripetitivi</h3>
-      <p>Routine strutturate, interessi specifici e comportamenti ripetitivi che offrono stabilità e prevedibilità.</p>
+      <h3>Routine</h3>
+      <p>Preferenza per prevedibilità e strutturazione delle attività.</p>
     </div>
     <div class="card">
       <i class="fas fa-bolt"></i>
-      <h3>Profilo sensoriale</h3>
-      <p>Iper o ipo-sensibilità a stimoli sonori, visivi, tattili o olfattivi.</p>
+      <h3>Sensibilità</h3>
+      <p>Risposte sensoriali più intense o ridotte rispetto alla media.</p>
     </div>
-  </div>
-</section>
-
-<section id="cause">
-  <div class="section-title">Cause e fattori di rischio</div>
-  <div class="text">
-  Le evidenze scientifiche indicano un'origine multifattoriale con forte componente genetica.
-  </div>
-  <div class="text">
-  Fattori ambientali possono interagire con la predisposizione genetica, ma non esiste
-  una causa unica.
-  </div>
-  <div class="text">
-  Numerosi studi hanno confermato l'assenza di correlazione tra vaccini e autismo.
-  </div>
-</section>
-
-<section id="diagnosi">
-  <div class="section-title">Diagnosi</div>
-  <div class="text">
-  La diagnosi è clinica e si basa sull'osservazione comportamentale e su strumenti standardizzati.
-  </div>
-  <div class="text">
-  Una diagnosi precoce permette l'attivazione tempestiva di interventi personalizzati,
-  migliorando significativamente la qualità di vita.
   </div>
 </section>
 
 <section id="interventi">
   <div class="section-title">Interventi e supporto</div>
   <div class="text">
-  Gli interventi devono essere personalizzati e basati sulle evidenze scientifiche.
-  </div>
-  <div class="grid">
-    <div class="card">
-      <i class="fas fa-brain"></i>
-      <h3>Intervento comportamentale</h3>
-      <p>Programmi strutturati con obiettivi misurabili e rinforzi positivi.</p>
-    </div>
-    <div class="card">
-      <i class="fas fa-comment-medical"></i>
-      <h3>Logopedia</h3>
-      <p>Sviluppo delle competenze comunicative e linguistiche.</p>
-    </div>
-    <div class="card">
-      <i class="fas fa-hands-helping"></i>
-      <h3>Supporto familiare</h3>
-      <p>Coinvolgimento attivo dei caregiver nel percorso terapeutico.</p>
-    </div>
+  Gli interventi devono essere personalizzati, basati sulle evidenze scientifiche
+  e costruiti sulle caratteristiche individuali.
   </div>
 </section>
 
 <section id="inclusione">
   <div class="section-title">Inclusione sociale</div>
   <div class="text">
-  La creazione di ambienti inclusivi favorisce autonomia, partecipazione
-  e valorizzazione delle competenze individuali.
-  </div>
-  <div class="text">
-  Scuola, lavoro e comunità svolgono un ruolo fondamentale nel garantire
-  pari opportunità.
+  Promuovere ambienti inclusivi significa valorizzare la neurodiversità
+  e favorire autonomia, partecipazione e dignità.
   </div>
 </section>
 
 <section id="ricerca">
-  <div class="section-title">Ricerca e prospettive future</div>
+  <div class="section-title">Ricerca e innovazione</div>
   <div class="text">
-  La ricerca neuroscientifica continua a studiare le basi genetiche e neurobiologiche
-  del disturbo, sviluppando strumenti digitali e interventi innovativi.
-  </div>
-  <div class="text">
-  L'obiettivo futuro è promuovere consapevolezza, inclusione e piena partecipazione
-  sociale.
+  Le neuroscienze e la tecnologia stanno aprendo nuove prospettive
+  per la comprensione e il supporto personalizzato.
   </div>
 </section>
 
 <footer>
-© 2026 Oltre Le Sfumature — Neurodiversità • Inclusione • Ricerca • Educazione • Supporto
+© 2026 Oltre Le Sfumature — Inclusione • Consapevolezza • Ricerca • Innovazione
 </footer>
 
 </body>
