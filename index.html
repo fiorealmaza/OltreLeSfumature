@@ -16,20 +16,21 @@
 }
 
 body{
-    background:#cce6ff; /* BLU CHIARO */
+    background:#cce6ff; /* BLU MOLTO CHIARO */
     color:#1a1a1a;
 }
 
 /* HEADER */
 header{
-    background:linear-gradient(135deg,#1e3c72,#2a5298);
-    padding:20px 40px;
     display:flex;
     justify-content:space-between;
     align-items:center;
+    padding:15px 40px;
     position:sticky;
     top:0;
     z-index:1000;
+    background:white; /* fascia bianca */
+    box-shadow:0 4px 15px rgba(0,0,0,0.1);
 }
 
 .logo{
@@ -43,16 +44,16 @@ header{
 }
 
 .logo h1{
-    color:white;
     font-size:32px;
     font-weight:700;
     letter-spacing:1px;
+    color:#1a1a1a;
 }
 
 /* MENU */
 .menu-toggle{
     font-size:32px;
-    color:white;
+    color:#1a1a1a;
     cursor:pointer;
     display:none;
 }
@@ -63,7 +64,7 @@ nav{
 }
 
 nav a{
-    color:white;
+    color:#1a1a1a;
     text-decoration:none;
     font-weight:500;
     padding:8px 14px;
@@ -73,6 +74,7 @@ nav a{
 
 nav a:hover{
     background:#4da6ff;
+    color:white;
     box-shadow:0 0 20px #4da6ff;
 }
 
@@ -80,13 +82,14 @@ nav a:hover{
 @media(max-width:900px){
     nav{
         position:absolute;
-        top:80px;
+        top:70px;
         right:0;
-        background:#1e3c72;
+        background:white;
         flex-direction:column;
         width:220px;
         display:none;
         padding:20px;
+        box-shadow:0 5px 20px rgba(0,0,0,0.1);
     }
     nav.active{
         display:flex;
@@ -96,59 +99,65 @@ nav a:hover{
     }
 }
 
-/* SEZIONE INTRO */
+/* INTRO */
 .intro{
-    padding:80px 20px 40px;
+    padding:50px 20px;
     text-align:center;
+    max-width:1000px;
+    margin:auto;
 }
 
 .intro h2{
-    font-size:30px;
-    margin-bottom:15px;
+    font-size:32px;
+    margin-bottom:20px;
+    font-weight:700;
+    color:#1a1a1a;
 }
 
 .intro p{
     max-width:900px;
     margin:auto;
-    line-height:1.7;
+    line-height:1.8;
+    font-size:16px;
 }
 
 /* SEZIONI */
 .section{
-    padding:50px 20px;
+    padding:40px 20px;
     max-width:1200px;
     margin:auto;
 }
 
 .box-title{
-    background:#4da6ff;
-    color:white;
-    padding:12px 20px;
+    background:#ffffff;
+    color:#1a1a1a;
+    padding:14px 22px;
     border-radius:12px;
     display:inline-block;
     margin-bottom:20px;
-    font-weight:600;
+    font-weight:700;
     box-shadow:0 0 25px #4da6ff;
+    font-size:18px;
 }
 
 .card{
     background:white;
-    padding:25px;
+    padding:20px 25px;
     border-radius:16px;
-    margin-bottom:30px;
+    margin-bottom:20px;
     transition:0.5s;
-    box-shadow:0 5px 25px rgba(0,0,0,0.15);
+    box-shadow:0 4px 18px rgba(0,0,0,0.1);
 }
 
 .card:hover{
-    transform:translateY(-7px);
-    box-shadow:0 0 40px #4da6ff;
+    transform:translateY(-5px);
+    box-shadow:0 0 35px #4da6ff;
 }
 
 /* CONTATTI */
 .contact{
     background:white;
-    padding:40px;
+    padding:35px;
     border-radius:20px;
     box-shadow:0 0 35px #4da6ff;
 }
@@ -157,9 +166,10 @@ nav a:hover{
 .contact textarea{
     width:100%;
     padding:12px;
-    margin:10px 0;
+    margin:8px 0;
     border-radius:10px;
     border:1px solid #ccc;
+    font-size:15px;
 }
 
 .contact button{
@@ -170,6 +180,7 @@ nav a:hover{
     border-radius:10px;
     cursor:pointer;
     transition:0.3s;
+    font-size:16px;
 }
 
 .contact button:hover{
@@ -181,7 +192,7 @@ footer{
     padding:30px;
     background:#1e3c72;
     color:white;
-    margin-top:50px;
+    margin-top:40px;
 }
 </style>
 </head>
@@ -208,26 +219,29 @@ footer{
 <section class="intro">
 <h2>Cos’è lo Spettro Autistico?</h2>
 <p>
-Il Disturbo dello Spettro Autistico è una condizione del neurosviluppo a genesi multifattoriale che interessa il Sistema Nervoso Centrale. 
-È uno spettro variabile che può includere persone con alto quoziente intellettivo o con disabilità intellettiva. 
-È legato a disfunzioni della maturazione neurobiologica e presenta una forte componente genetica.
+Il Disturbo dello Spettro Autistico (DSA) è una condizione complessa e multifattoriale del neurosviluppo che interessa il Sistema Nervoso Centrale.  
+Si manifesta con difficoltà nella comunicazione, nell’interazione sociale e con comportamenti ripetitivi o stereotipati.  
+L’espressione dei sintomi varia moltissimo tra individui, includendo persone con alto quoziente intellettivo o con disabilità intellettiva.  
+La componente genetica è significativa e si associano disfunzioni neurobiologiche della maturazione cerebrale.  
+Il riconoscimento precoce e interventi mirati migliorano significativamente l’autonomia, le abilità sociali e la qualità della vita.
 </p>
 </section>
 
 <section id="definizione" class="section">
 <div class="box-title">Definizione e quadro generale</div>
 <div class="card">
-Condizione del neurosviluppo che coinvolge comunicazione, interazione sociale e comportamenti ripetitivi. 
-L’eziologia è spesso non definita ma con forte componente genetica.
+Il Disturbo dello Spettro Autistico è caratterizzato da tre aree principali di difficoltà: comunicazione, interazione sociale e comportamenti ripetitivi.  
+L’eziologia non è completamente definita, ma vi è un’evidente componente genetica.  
+Il quadro clinico varia da soggetto a soggetto e richiede valutazioni individualizzate per progettare interventi mirati e personalizzati.
 </div>
 </section>
 
 <section id="evoluzione" class="section">
 <div class="box-title">Evoluzione storica</div>
 <div class="card">
-Dal 1950 considerato forma di schizofrenia infantile. 
-Con il DSM-III entra nei Disturbi Pervasivi dello Sviluppo.
-Con il DSM-5 diventa categoria unica: Disturbo dello Spettro Autistico.
+Negli anni ’50 l’autismo era erroneamente considerato una forma di schizofrenia infantile.  
+Con il DSM-III (1980) entra nella categoria dei Disturbi Pervasivi dello Sviluppo, mentre con il DSM-5 (2013) viene riconosciuto come Disturbo dello Spettro Autistico unico.  
+Questo riconoscimento ha permesso di comprendere meglio la varietà dei sintomi e di sviluppare strategie di intervento più personalizzate e mirate alle esigenze del singolo individuo.
 </div>
 </section>
 
@@ -236,17 +250,22 @@ Con il DSM-5 diventa categoria unica: Disturbo dello Spettro Autistico.
 
 <div class="card">
 <b>Comunicazione:</b><br>
-Ritardo del linguaggio, ecolalia, inversione pronominale, prosodia alterata, difficoltà a comprendere ironia.
+Ritardo del linguaggio, ecolalia, inversione pronominale, prosodia alterata.  
+Difficoltà a comprendere ironia, sarcasmo e sottintesi.  
+Alcune persone possono avere linguaggio avanzato ma limitata capacità di interazione sociale.
 </div>
 
 <div class="card">
 <b>Interazione sociale:</b><br>
-Assenza attenzione condivisa, evitamento sguardo, difficoltà nel riconoscere stati mentali.
+Assenza di attenzione condivisa, evitamento dello sguardo, difficoltà a interpretare stati mentali altrui.  
+Relazioni sociali ridotte o interessi condivisi limitati.  
+Possibile isolamento o preferenza per attività solitarie, anche se alcune persone instaurano relazioni profonde con figure familiari.
 </div>
 
 <div class="card">
 <b>Comportamenti ripetitivi:</b><br>
-Stereotipie motorie, rigidità cognitiva, forte opposizione ai cambiamenti.
+Stereotipie motorie, rigidità cognitiva, routine rigide, opposizione ai cambiamenti.  
+Interessi ristretti o focalizzati intensamente su temi specifici, che possono diventare punti di forza se ben supportati.
 </div>
 
 </section>
@@ -254,8 +273,10 @@ Stereotipie motorie, rigidità cognitiva, forte opposizione ai cambiamenti.
 <section id="diagnosi" class="section">
 <div class="box-title">Diagnosi</div>
 <div class="card">
-Diagnosi clinica basata su osservazione, anamnesi, strumenti psicometrici, esami audiometrici e genetici se indicati.
-Non esistono test biologici specifici.
+La diagnosi si basa su osservazione clinica, anamnesi dettagliata e strumenti psicometrici standardizzati.  
+Se necessario, possono essere effettuati esami audiometrici o genetici.  
+Non esistono test biologici specifici.  
+La diagnosi precoce consente interventi immediati, migliorando le competenze sociali, comunicative e adattive.
 </div>
 </section>
 
@@ -263,13 +284,14 @@ Non esistono test biologici specifici.
 <div class="box-title">Intervento</div>
 
 <div class="card">
-Intervento precoce, intensivo e personalizzato.
-Coinvolgimento famiglia fondamentale.
+Interventi precoci, intensivi e personalizzati sono fondamentali.  
+Il coinvolgimento della famiglia è essenziale per sostenere l’apprendimento, la gestione dei comportamenti e l’adattamento quotidiano.
 </div>
 
 <div class="card">
 <b>Metodi raccomandati:</b><br>
-ABA, TEACCH, CAA, interventi comportamentali, interventi mediati dai genitori.
+ABA (Applied Behavior Analysis), TEACCH, CAA (Comunicazione Aumentativa Alternativa), interventi comportamentali strutturati e programmi mediati dai genitori.  
+Questi approcci migliorano autonomia, capacità sociali, adattamento e qualità della vita.
 </div>
 
 </section>
@@ -277,8 +299,8 @@ ABA, TEACCH, CAA, interventi comportamentali, interventi mediati dai genitori.
 <section id="famiglia" class="section">
 <div class="box-title">La Famiglia</div>
 <div class="card">
-Ciclo di adattamento: crisi, adattamento, pianificazione, attivismo.
-Coinvolgimento attivo fondamentale per la prognosi.
+Il ciclo di adattamento familiare include fasi di crisi, adattamento, pianificazione e attivismo.  
+Il supporto, la partecipazione attiva e la collaborazione con professionisti sono determinanti per la prognosi, il benessere della persona e la qualità della vita familiare complessiva.
 </div>
 </section>
 
