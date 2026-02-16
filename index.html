@@ -9,181 +9,173 @@
 
 <style>
 
-/* RESET */
-*{margin:0;padding:0;box-sizing:border-box;scroll-behavior:smooth;}
+/* ================= RESET ================= */
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+scroll-behavior:smooth;
+}
 
 body{
 font-family:'Inter',sans-serif;
-background:linear-gradient(135deg,#eef2ff,#f8fbff);
+background:linear-gradient(135deg,#eef2ff,#f7faff);
 color:#1e293b;
 line-height:1.9;
-overflow-x:hidden;
 }
 
-/* NAV */
+/* ================= NAV ================= */
 nav{
 position:fixed;
 top:0;
 width:100%;
-padding:20px 8%;
+padding:22px 8%;
 display:flex;
 justify-content:flex-end;
-background:rgba(255,255,255,0.85);
+background:rgba(255,255,255,0.95);
 backdrop-filter:blur(12px);
-box-shadow:0 4px 25px rgba(0,0,0,0.05);
+box-shadow:0 4px 20px rgba(0,0,0,0.05);
 z-index:1000;
 }
 
 nav a{
-margin-left:25px;
+margin-left:30px;
 text-decoration:none;
-color:#2f5fd0;
+color:#1e3a8a;
 font-weight:500;
 transition:0.3s;
 }
 
-nav a:hover{color:#1e3a8a;}
+nav a:hover{
+color:#2563eb;
+}
 
-/* HERO */
+/* ================= HERO ================= */
+.hero-wrapper{
+height:35vh;
+min-height:340px;
+margin-top:120px;
+display:flex;
+align-items:center;
+justify-content:center;
+padding:0 8%;
+}
+
 .hero{
-height:25vh;
-min-height:250px;
+width:100%;
+background:linear-gradient(135deg,#1e3a8a,#2563eb);
+border-radius:45px;
+padding:80px;
 display:flex;
 align-items:center;
 justify-content:space-between;
-padding:0 8%;
-margin-top:100px;
-background:white;
-border-radius:25px;
-box-shadow:0 25px 70px rgba(0,0,0,0.08);
+box-shadow:0 45px 120px rgba(37,99,235,0.35);
+position:relative;
+overflow:hidden;
 }
 
-.hero-text{width:70%;}
+.hero::before{
+content:"";
+position:absolute;
+width:650px;
+height:650px;
+background:radial-gradient(circle,rgba(255,255,255,0.35),transparent 70%);
+top:-220px;
+right:-150px;
+}
+
+.hero-text{width:65%;z-index:2;}
+
+.hero-title-box{
+background:white;
+padding:40px 55px;
+border-radius:35px;
+display:inline-block;
+box-shadow:
+0 0 0 4px rgba(255,255,255,0.85),
+0 0 80px rgba(255,255,255,0.7);
+}
 
 .hero h1{
 font-family:'Playfair Display',serif;
-font-size:3rem;
-color:#2f5fd0;
+font-size:3.4rem;
+color:#1e3a8a;
 }
 
 .hero p{
-margin-top:12px;
-color:#475569;
-font-size:1.1rem;
+margin-top:30px;
+color:white;
+font-size:1.25rem;
+max-width:700px;
 }
 
-.hero img{width:160px;}
-
-/* SECTIONS */
-section{
-padding:110px 8%;
-opacity:0;
-transform:translateY(40px);
-transition:all 1s ease;
+.hero img{
+width:200px;
+z-index:2;
 }
 
-section.show{
-opacity:1;
-transform:translateY(0);
+/* ================= SECTIONS ================= */
+.section{
+padding:130px 8%;
 }
 
-.container{max-width:1200px;margin:auto;}
+.container{
+max-width:1300px;
+margin:auto;
+}
 
 h2{
 font-family:'Playfair Display',serif;
-font-size:2.4rem;
-color:#2f5fd0;
-margin-bottom:40px;
-}
-
-.subsection{
-margin-bottom:35px;
-}
-
-.subsection h3{
+font-size:2.7rem;
 color:#1e3a8a;
-margin-bottom:10px;
-font-weight:600;
+margin-bottom:50px;
+}
+
+h3{
+color:#1e3a8a;
+margin-bottom:20px;
+font-size:1.4rem;
 }
 
 .card{
-background:rgba(255,255,255,0.7);
-backdrop-filter:blur(14px);
-padding:35px;
-border-radius:22px;
-box-shadow:0 10px 35px rgba(0,0,0,0.05);
-margin-bottom:25px;
-transition:0.4s;
-}
-
-.card:hover{transform:translateY(-6px);}
-
-/* GRID */
-.grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-gap:30px;
-}
-
-/* TIMELINE */
-.timeline{
-border-left:4px solid #2f5fd0;
-padding-left:30px;
-}
-
-.timeline div{margin-bottom:25px;}
-
-/* COUNTERS */
-.counters{
-display:flex;
-justify-content:space-around;
-flex-wrap:wrap;
-text-align:center;
-}
-
-.counter-box{margin:20px;}
-.counter{
-font-size:2.8rem;
-color:#2f5fd0;
-font-weight:600;
-}
-
-/* FAQ */
-.faq-item{
 background:white;
-border-radius:14px;
-margin-bottom:15px;
-box-shadow:0 8px 25px rgba(0,0,0,0.05);
+padding:55px;
+border-radius:35px;
+box-shadow:0 25px 70px rgba(0,0,0,0.06);
+margin-bottom:50px;
 }
 
-.faq-question{
-padding:18px;
-cursor:pointer;
-font-weight:500;
+.highlight{
+background:linear-gradient(135deg,#1e3a8a,#2563eb);
+color:white;
+padding:80px;
+border-radius:45px;
+box-shadow:0 35px 100px rgba(37,99,235,0.4);
 }
 
-.faq-answer{
-display:none;
-padding:18px;
-border-top:1px solid #eee;
-}
-
-/* FOOTER */
 footer{
 background:#1e3a8a;
 color:white;
-padding:60px;
+padding:100px;
 text-align:center;
-margin-top:60px;
-border-radius:25px 25px 0 0;
+margin-top:140px;
+border-radius:45px 45px 0 0;
 }
 
-/* RESPONSIVE */
-@media(max-width:900px){
-.hero{flex-direction:column;height:auto;padding:40px 8%;text-align:center;}
-.hero-text{width:100%;}
-.hero img{margin-top:20px;}
-nav{justify-content:center;}
+@media(max-width:1100px){
+.hero{
+flex-direction:column;
+text-align:center;
+}
+.hero-text{
+width:100%;
+}
+.hero img{
+margin-top:40px;
+}
+nav{
+justify-content:center;
+}
 }
 
 </style>
@@ -192,117 +184,130 @@ nav{justify-content:center;}
 <body>
 
 <nav>
-<a href="#definizione">Definizione</a>
-<a href="#neuro">Neurobiologia</a>
-<a href="#diagnosi">Diagnosi</a>
-<a href="#interventi">Interventi</a>
-<a href="#adulto">Età adulta</a>
-<a href="#fondazione">Fondazione</a>
+<a href="#">Quadro Clinico</a>
+<a href="#">Diagnosi</a>
+<a href="#">Interventi</a>
+<a href="#">Inclusione</a>
+<a href="#">Mission</a>
 </nav>
 
+<div class="hero-wrapper">
 <div class="hero">
 <div class="hero-text">
+<div class="hero-title-box">
 <h1>Disturbo dello Spettro Autistico</h1>
-<p>Fondazione O.L.S – Oltre Le Sfumature | Portale informativo medico-scientifico completo.</p>
+</div>
+<p>Fondazione O.L.S – Oltre Le Sfumature.  
+Portale istituzionale di approfondimento medico-scientifico dedicato alla comprensione, diagnosi e intervento nel Disturbo dello Spettro Autistico lungo tutto l’arco della vita.</p>
 </div>
 <img src="logo.png" alt="Logo Fondazione OLS">
 </div>
+</div>
 
-<!-- 1 DEFINIZIONE COMPLETA -->
-
-<section id="definizione">
+<!-- SEZIONE 1 -->
+<div class="section">
 <div class="container">
-<h2>1. Definizione Clinica Approfondita</h2>
+<h2>Quadro Clinico e Definizione Approfondita</h2>
+
+<div class="card">
+<h3>Definizione Clinica</h3>
+<p>
+Il Disturbo dello Spettro Autistico (ASD) rappresenta un disturbo del neurosviluppo caratterizzato da compromissioni persistenti nella comunicazione sociale reciproca e dalla presenza di pattern comportamentali ristretti e ripetitivi.  
+Il termine “spettro” riflette l’estrema eterogeneità delle manifestazioni cliniche, che possono variare significativamente in intensità, modalità espressiva e livello di autonomia individuale.
+</p>
+<p>
+Le manifestazioni sintomatologiche emergono tipicamente nella prima infanzia, sebbene in alcuni casi possano diventare più evidenti con l’aumentare delle richieste sociali e ambientali. Il disturbo accompagna l’individuo lungo tutto l’arco della vita, con traiettorie evolutive differenti.
+</p>
+</div>
+
+<div class="card">
+<h3>Neurobiologia e Connettività Cerebrale</h3>
+<p>
+Le evidenze neuroscientifiche indicano alterazioni nei circuiti di connettività cerebrale, in particolare nelle reti coinvolte nella cognizione sociale, nell’elaborazione emotiva e nell’integrazione sensoriale.  
+Sono state osservate differenze nel funzionamento delle aree frontali, temporali e limbiche, oltre a variazioni nei pattern di sincronizzazione neuronale.
+</p>
+<p>
+Tali differenze non rappresentano una “lesione” ma una modalità neurobiologica distinta di organizzazione e processamento delle informazioni.
+</p>
+</div>
+
+<div class="card">
+<h3>Genetica e Fattori Ambientali</h3>
+<p>
+L’ASD presenta una significativa componente genetica, con centinaia di varianti associate identificate attraverso studi di sequenziamento genomico.  
+Parallelamente, fattori ambientali prenatali e perinatali possono contribuire in interazione con la predisposizione genetica.
+</p>
+<p>
+L’ipotesi attuale è quella di una multifattorialità complessa, in cui geni e ambiente interagiscono influenzando i processi di sviluppo neuronale precoce.
+</p>
+</div>
+
+</div>
+</div>
+
+<!-- SEZIONE 2 -->
+<div class="section">
+<div class="container">
+<h2>Diagnosi e Valutazione Multidisciplinare</h2>
 
 <div class="card">
 <p>
-Il Disturbo dello Spettro Autistico (ASD) è una condizione del neurosviluppo caratterizzata da difficoltà persistenti nella comunicazione sociale e da pattern comportamentali ristretti e ripetitivi. Il termine “spettro” riflette l’ampia variabilità clinica con cui si manifesta.
+La diagnosi di Disturbo dello Spettro Autistico si basa su criteri clinici definiti dal DSM-5-TR e richiede una valutazione multidisciplinare che coinvolga neuropsichiatra infantile, psicologo, logopedista e altre figure professionali.
 </p>
-
 <p>
-La diagnosi si basa sui criteri del DSM-5, che descrivono due macro-aree sintomatologiche: deficit nella comunicazione sociale e comportamenti ripetitivi. I sintomi devono essere presenti fin dalla prima infanzia e compromettere il funzionamento quotidiano.
+Strumenti standardizzati come ADOS-2 e ADI-R supportano l’osservazione clinica, garantendo maggiore affidabilità e validità diagnostica.
 </p>
-
 <p>
-L’autismo non è una malattia degenerativa né un disturbo causato dall’educazione. È una condizione neurobiologica permanente.
+Una diagnosi precoce consente l’attivazione tempestiva di interventi mirati, favorendo traiettorie evolutive più positive.
 </p>
 </div>
 
 </div>
-</section>
+</div>
 
-<!-- 2 NEUROBIOLOGIA -->
-
-<section id="neuro">
+<!-- SEZIONE 3 HIGHLIGHT -->
+<div class="section">
 <div class="container">
-<h2>2. Neurobiologia</h2>
+<div class="highlight">
+<h2>Interventi Basati su Evidenze Scientifiche</h2>
+<p>
+Le linee guida internazionali raccomandano interventi precoci, intensivi e individualizzati.  
+Tra gli approcci con maggiore evidenza empirica rientrano gli interventi comportamentali basati sull’Analisi Applicata del Comportamento (ABA), i modelli evolutivo-relazionali e i programmi naturalistici come l’Early Start Denver Model.
+</p>
+<p>
+Interventi complementari quali logopedia, terapia occupazionale e psicomotricità contribuiscono al potenziamento delle abilità comunicative, adattive e sensoriali.
+</p>
+<p>
+L’obiettivo centrale non è “normalizzare” il comportamento, ma promuovere autonomia, qualità della vita e partecipazione sociale.
+</p>
+</div>
+</div>
+</div>
+
+<!-- SEZIONE 4 -->
+<div class="section">
+<div class="container">
+<h2>Inclusione, Età Adulta e Prospettive Future</h2>
 
 <div class="card">
 <p>
-Le ricerche neuroscientifiche evidenziano differenze nella connettività cerebrale, nella maturazione sinaptica e nella regolazione dei neurotrasmettitori. Sono coinvolte aree come corteccia prefrontale, amigdala e cervelletto.
+Il sistema scolastico italiano prevede strumenti inclusivi quali il Piano Educativo Individualizzato (PEI) e la presenza dell’insegnante di sostegno, favorendo l’integrazione e la partecipazione attiva dell’alunno.
 </p>
-
 <p>
-Si osservano alterazioni nei circuiti che regolano empatia, regolazione emotiva e integrazione sensoriale.
+In età adulta emergono nuove sfide legate all’autonomia abitativa, all’inserimento lavorativo e alla partecipazione sociale. Percorsi di formazione professionale e progetti di inclusione occupazionale risultano fondamentali.
 </p>
-</div>
-
-</div>
-</section>
-
-<!-- 3 GENETICA -->
-
-<section>
-<div class="container">
-<h2>3. Genetica</h2>
-<div class="card">
 <p>
-L’autismo presenta una forte componente genetica. Studi sui gemelli mostrano un’elevata concordanza nei gemelli monozigoti. Sono state identificate numerose varianti genetiche associate.
+La ricerca attuale si orienta verso modelli di supporto personalizzati lungo tutto il ciclo di vita.
 </p>
 </div>
-</div>
-</section>
 
-<!-- CONTINUANO LE ALTRE SEZIONI... -->
-
-<section id="adulto">
-<div class="container">
-<h2>19. Età Adulta e Lavoro</h2>
-<div class="card">
-<p>
-Il passaggio all’età adulta richiede programmi di autonomia, formazione professionale e inserimento lavorativo. Con adeguato supporto molte persone nello spettro sviluppano competenze altamente specialistiche.
-</p>
 </div>
 </div>
-</section>
-
-<section id="fondazione">
-<div class="container">
-<h2>20. Mission e Struttura della Fondazione O.L.S</h2>
-<div class="card">
-<p>
-La Fondazione O.L.S promuove inclusione sociale, formazione professionale e supporto clinico multidisciplinare attraverso progetti territoriali e campagne di sensibilizzazione.
-</p>
-</div>
-</div>
-</section>
 
 <footer>
-© 2026 Fondazione O.L.S – Oltre Le Sfumature
+© 2026 Fondazione O.L.S – Oltre Le Sfumature  
+Portale istituzionale dedicato alla promozione dell’inclusione, della ricerca e della conoscenza scientifica nel Disturbo dello Spettro Autistico.
 </footer>
-
-<script>
-
-const sections=document.querySelectorAll("section");
-window.addEventListener("scroll",()=>{
-sections.forEach(sec=>{
-if(sec.getBoundingClientRect().top<window.innerHeight-100){
-sec.classList.add("show");
-}
-});
-});
-
-</script>
 
 </body>
 </html>
