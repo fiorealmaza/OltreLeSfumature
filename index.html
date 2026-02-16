@@ -1,160 +1,391 @@
-<section id="metodi" class="section">
-<h2 class="section-title">Metodi di Intervento</h2>
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Oltre Le Sfumature</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+html{
+scroll-behavior:smooth;
+}
+
+body{
+font-family:'Poppins',sans-serif;
+background:
+radial-gradient(circle at 15% 20%,#e3f0ff,transparent 40%),
+radial-gradient(circle at 85% 80%,#d6e8ff,transparent 40%),
+linear-gradient(135deg,#f4f8ff,#ffffff);
+color:#111;
+line-height:1.8;
+overflow-x:hidden;
+}
+
+/* MENU */
+
+nav{
+position:fixed;
+top:0;
+width:100%;
+background:rgba(255,255,255,0.92);
+backdrop-filter:blur(15px);
+display:flex;
+justify-content:center;
+gap:35px;
+padding:18px;
+z-index:1000;
+box-shadow:0 8px 30px rgba(0,0,0,0.05);
+}
+
+nav a{
+text-decoration:none;
+color:#2a6edb;
+font-weight:600;
+font-size:0.9rem;
+transition:.3s;
+}
+
+nav a:hover{
+color:#174a9e;
+transform:scale(1.08);
+}
+
+/* HERO */
+
+.hero{
+min-height:100vh;
+padding:190px 120px 120px 120px;
+display:flex;
+flex-direction:column;
+justify-content:center;
+}
+
+.top-bar{
+display:flex;
+justify-content:space-between;
+align-items:center;
+margin-bottom:70px;
+flex-wrap:wrap;
+gap:40px;
+}
+
+.main-title{
+font-family:'Playfair Display',serif;
+font-size:5.2rem;
+font-weight:800;
+line-height:0.95;
+background:linear-gradient(90deg,#2a6edb,#4e8cff,#2a6edb);
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
+text-shadow:
+0 0 25px rgba(42,110,219,0.7),
+0 0 70px rgba(42,110,219,0.6),
+0 0 140px rgba(42,110,219,0.5);
+animation:glow 4s infinite alternate;
+}
+
+@keyframes glow{
+from{text-shadow:0 0 25px rgba(42,110,219,0.6)}
+to{text-shadow:0 0 200px rgba(42,110,219,1)}
+}
+
+.question{
+margin-top:30px;
+font-size:1.9rem;
+font-weight:600;
+color:#1f55ad;
+}
+
+.logo{
+width:360px;
+}
+
+/* SECTIONS */
+
+.section{
+padding:150px 110px;
+}
+
+.section h2{
+text-align:center;
+font-size:2.7rem;
+margin-bottom:90px;
+color:#2a6edb;
+font-weight:800;
+}
+
+/* CARDS */
+
+.card{
+background:rgba(255,255,255,0.93);
+padding:100px;
+border-radius:60px;
+box-shadow:0 90px 260px rgba(0,0,0,0.08);
+margin-bottom:150px;
+transition:.6s;
+}
+
+.card:hover{
+transform:translateY(-20px);
+box-shadow:0 140px 320px rgba(42,110,219,0.25);
+}
+
+/* GRID */
+
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+gap:70px;
+}
+
+.box{
+background:rgba(255,255,255,0.97);
+padding:60px;
+border-radius:45px;
+box-shadow:0 60px 180px rgba(0,0,0,0.07);
+transition:.5s;
+position:relative;
+}
+
+.box::before{
+content:"";
+position:absolute;
+top:-15px;
+left:-15px;
+width:40px;
+height:40px;
+background:#2a6edb22;
+border-radius:50%;
+}
+
+.box:hover{
+transform:translateY(-15px) scale(1.04);
+box-shadow:0 110px 280px rgba(42,110,219,0.3);
+}
+
+.box h3{
+font-size:1.6rem;
+margin-bottom:20px;
+color:#1f55ad;
+}
+
+.highlight{
+background:linear-gradient(135deg,#eaf3ff,#ffffff);
+}
+
+footer{
+background:#2a6edb;
+color:white;
+text-align:center;
+padding:110px;
+font-weight:600;
+letter-spacing:2px;
+margin-top:80px;
+}
+
+@media(max-width:1000px){
+.top-bar{flex-direction:column;align-items:flex-start;}
+.main-title{font-size:3.5rem;}
+.grid{grid-template-columns:1fr;}
+.logo{width:220px;}
+}
+
+</style>
+</head>
+
+<body>
+
+<nav>
+<a href="#cos">Cos'è</a>
+<a href="#sviluppo">Sviluppo</a>
+<a href="#cause">Cause</a>
+<a href="#rischi">Rischi</a>
+<a href="#profilo">Profilo</a>
+<a href="#metodi">Metodi</a>
+<a href="#aiuto">Come Aiutare</a>
+<a href="#figure">Figure</a>
+<a href="#futuro">Futuro</a>
+<a href="#contatti">Contatti</a>
+</nav>
+
+<section class="hero" id="cos">
+
+<div class="top-bar">
+
+<div>
+<h1 class="main-title">
+Oltre Le<br>Sfumature
+</h1>
+<div class="question">
+Cos'è lo Spettro Autistico?
+</div>
+</div>
+
+<img src="logo.png" class="logo">
+
+</div>
+
+<div class="card highlight">
+Il Disturbo dello Spettro Autistico è una condizione del neurosviluppo caratterizzata da differenze nella comunicazione sociale, nella regolazione emotiva, nei comportamenti ripetitivi e nell’elaborazione sensoriale. È definito “spettro” perché include una vasta gamma di caratteristiche e livelli di supporto. Ogni persona possiede un profilo unico, con punti di forza distintivi e aree di maggiore difficoltà. Comprendere lo spettro significa riconoscere la neurodiversità come parte naturale dell’umanità.
+</div>
+
+</section>
+
+<section class="section" id="sviluppo">
+<h2>Sviluppo del Bambino</h2>
 <div class="grid">
 
 <div class="box">
-<h3>ABA – Analisi Comportamentale Applicata</h3>
-Intervento strutturato basato sul rinforzo positivo.  
-Lavora su comunicazione, autonomie, abilità sociali e gestione dei comportamenti problematici.  
-Prevede obiettivi misurabili, raccolta dati e progressi monitorati nel tempo.
+<h3>Segnali Precoci</h3>
+Ridotto contatto visivo, ritardo nel linguaggio, scarso interesse per il gioco condiviso, movimenti ripetitivi.
+</div>
+
+<div class="box">
+<h3>Importanza della Diagnosi</h3>
+Una diagnosi precoce permette interventi mirati e personalizzati, migliorando competenze sociali e comunicative.
+</div>
+
+<div class="box">
+<h3>Crescita Individuale</h3>
+Ogni bambino segue un percorso unico, con tempi e modalità proprie.
+</div>
+
+</div>
+</section>
+
+<section class="section" id="cause">
+<h2>Cause e Fattori di Rischio</h2>
+<div class="grid">
+
+<div class="box">
+<h3>Componente Genetica</h3>
+Elevata ereditarietà e coinvolgimento di più geni.
+</div>
+
+<div class="box">
+<h3>Fattori Ambientali</h3>
+Possibili influenze prenatali e condizioni neurologiche.
+</div>
+
+<div class="box">
+<h3>Falsi Miti</h3>
+Nessuna correlazione con vaccini o stili educativi.
+</div>
+
+<div class="box">
+<h3>Rischi</h3>
+Familiarità genetica, età avanzata dei genitori, prematurità.
+</div>
+
+</div>
+</section>
+
+<section class="section" id="profilo">
+<h2>Profilo Cognitivo e Sensoriale</h2>
+<div class="grid">
+
+<div class="box">
+Pensiero logico dettagliato e forte concentrazione su interessi specifici.
+</div>
+
+<div class="box">
+Iper o ipo sensibilità a suoni, luci, odori e consistenze.
+</div>
+
+<div class="box">
+Difficoltà nella comprensione implicita delle regole sociali.
+</div>
+
+<div class="box">
+Talenti specifici in ambito artistico, matematico o musicale.
+</div>
+
+</div>
+</section>
+
+<section class="section" id="metodi">
+<h2>Metodi di Intervento</h2>
+<div class="grid">
+
+<div class="box">
+<h3>ABA</h3>
+Rinforzo positivo e obiettivi misurabili.
 </div>
 
 <div class="box">
 <h3>TEACCH</h3>
-Metodo basato sulla strutturazione visiva dell’ambiente.  
-Organizza spazi, tempi e materiali in modo prevedibile.  
-Favorisce autonomia e riduce ansia attraverso routine chiare.
+Strutturazione visiva e prevedibilità ambientale.
 </div>
 
 <div class="box">
 <h3>Logopedia</h3>
-Intervento sul linguaggio verbale e non verbale.  
-Supporta la comunicazione funzionale e l’uso di strumenti alternativi (CAA).
+Sviluppo linguaggio e comunicazione.
 </div>
 
 <div class="box">
 <h3>Terapia Occupazionale</h3>
-Lavora su autonomie quotidiane, regolazione sensoriale e adattamento ambientale.
+Autonomia e regolazione sensoriale.
 </div>
 
 </div>
 </section>
 
-<section id="aiuto" class="section">
-<h2 class="section-title">Come Aiutare</h2>
+<section class="section" id="aiuto">
+<h2>Come Aiutare</h2>
 <div class="grid">
 
-<div class="box">
-Creare routine prevedibili e strutturate.
-</div>
-
-<div class="box">
-Utilizzare supporti visivi e agende giornaliere.
-</div>
-
-<div class="box">
-Anticipare cambiamenti per ridurre l’ansia.
-</div>
-
-<div class="box">
-Rispettare i tempi individuali di apprendimento.
-</div>
-
-<div class="box">
-Valorizzare interessi speciali come strumenti educativi.
-</div>
-
-<div class="box">
-Promuovere inclusione scolastica e sociale.
-</div>
+<div class="box">Creare routine stabili.</div>
+<div class="box">Usare supporti visivi.</div>
+<div class="box">Anticipare cambiamenti.</div>
+<div class="box">Valorizzare interessi speciali.</div>
+<div class="box">Favorire inclusione sociale.</div>
+<div class="box">Collaborare con professionisti.</div>
 
 </div>
 </section>
 
-<section id="figure" class="section">
-<h2 class="section-title">Figure Professionali</h2>
+<section class="section" id="figure">
+<h2>Figure Professionali</h2>
 <div class="grid">
 
-<div class="box">
-<h3>Neuropsichiatra Infantile</h3>
-Effettua diagnosi e monitora lo sviluppo clinico.
-</div>
-
-<div class="box">
-<h3>Psicologo</h3>
-Supporta regolazione emotiva, competenze sociali e famiglia.
-</div>
-
-<div class="box">
-<h3>Logopedista</h3>
-Interviene sulle competenze comunicative.
-</div>
-
-<div class="box">
-<h3>Educatore Professionale</h3>
-Lavora sull’autonomia e sull’integrazione sociale.
-</div>
-
-<div class="box">
-<h3>Insegnante di Sostegno</h3>
-Adatta materiali e strategie didattiche.
-</div>
-
-<div class="box">
-<h3>Terapista Occupazionale</h3>
-Favorisce indipendenza nelle attività quotidiane.
-</div>
+<div class="box">Neuropsichiatra Infantile</div>
+<div class="box">Psicologo</div>
+<div class="box">Logopedista</div>
+<div class="box">Educatore Professionale</div>
+<div class="box">Insegnante di Sostegno</div>
+<div class="box">Terapista Occupazionale</div>
 
 </div>
 </section>
 
-<section id="futuro" class="section">
-<h2 class="section-title">Prospettive Future</h2>
-<div class="grid">
-
-<div class="box">
-Ricerca genetica e neuroscientifica sempre più avanzata.
-</div>
-
-<div class="box">
-Tecnologie assistive e strumenti digitali innovativi.
-</div>
-
-<div class="box">
-Maggiore sensibilizzazione nelle scuole e nelle aziende.
-</div>
-
-<div class="box">
-Promozione della cultura della neurodiversità.
-</div>
-
-<div class="box">
-Inclusione lavorativa e autonomia adulta.
-</div>
-
-<div class="box">
-Costruzione di comunità consapevoli e accoglienti.
-</div>
-
+<section class="section" id="futuro">
+<h2>Prospettive Future</h2>
+<div class="card">
+La ricerca scientifica continua a evolversi, migliorando strumenti diagnostici e interventi personalizzati. Cresce la sensibilizzazione sociale verso inclusione e neurodiversità, promuovendo una società più equa e consapevole.
 </div>
 </section>
 
-<section id="contatti" class="section">
-<h2 class="section-title">Dove Ci Trovi</h2>
-<div class="grid">
-
-<div class="box">
-Email: info@oltrelesfumature.it
-</div>
-
-<div class="box">
-Instagram: @oltrelesfumature
-</div>
-
-<div class="box">
-Telefono: +39 000 000000
-</div>
-
-<div class="box">
+<section class="section" id="contatti">
+<h2>Dove Ci Trovi</h2>
+<div class="card">
+Email: info@oltrelesfumature.it<br>
+Instagram: @oltrelesfumature<br>
+Telefono: +39 000 000000<br>
 Collaborazioni con scuole, famiglie e professionisti.
-</div>
-
 </div>
 </section>
 
 <footer>
-© 2026 Oltre Le Sfumature  
-Inclusione • Consapevolezza • Rispetto • Neurodiversità
+© 2026 Oltre Le Sfumature — Inclusione • Consapevolezza • Neurodiversità
 </footer>
 
 </body>
