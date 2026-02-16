@@ -40,7 +40,7 @@ background:rgba(255,255,255,0.92);
 backdrop-filter:blur(18px);
 display:flex;
 justify-content:center;
-gap:55px;
+gap:50px;
 padding:24px;
 z-index:1000;
 box-shadow:0 10px 40px rgba(0,0,0,0.05);
@@ -62,7 +62,7 @@ transform:scale(1.1);
 
 .hero{
 min-height:100vh;
-padding:190px 120px 120px 120px;
+padding:200px 120px 140px 120px;
 display:flex;
 flex-direction:column;
 justify-content:center;
@@ -72,60 +72,44 @@ justify-content:center;
 display:flex;
 justify-content:space-between;
 align-items:center;
-margin-bottom:70px;
+margin-bottom:60px;
 }
 
 .main-title{
 width:25%;
 min-width:260px;
 font-family:'Playfair Display',serif;
-font-size:2.7rem;
+font-size:8rem;
 font-weight:800;
-line-height:1.1;
+line-height:0.95;
 background:linear-gradient(90deg,#2a6edb,#4e8cff,#2a6edb);
 -webkit-background-clip:text;
 -webkit-text-fill-color:transparent;
 text-shadow:
-0 0 25px rgba(42,110,219,0.7),
-0 0 60px rgba(42,110,219,0.6),
-0 0 110px rgba(42,110,219,0.5);
+0 0 30px rgba(42,110,219,0.8),
+0 0 80px rgba(42,110,219,0.7),
+0 0 150px rgba(42,110,219,0.6);
 animation:glow 4s infinite alternate;
 }
 
 @keyframes glow{
-from{text-shadow:0 0 25px rgba(42,110,219,0.5)}
-to{text-shadow:0 0 120px rgba(42,110,219,1)}
+from{text-shadow:0 0 30px rgba(42,110,219,0.6)}
+to{text-shadow:0 0 200px rgba(42,110,219,1)}
 }
 
-.sub-title{
-margin-top:25px;
-font-size:1.5rem;
-font-weight:600;
+.question{
+margin-top:40px;
+font-size:2rem;
+font-weight:700;
 color:#1f55ad;
 }
 
-.logo-wrapper{
-position:relative;
-}
-
 .logo{
-width:270px;
-position:relative;
-z-index:2;
+width:400px;
+filter:drop-shadow(0 0 40px rgba(42,110,219,0.6));
 }
 
-.logo-wrapper::after{
-content:"";
-position:absolute;
-bottom:-40px;
-left:50%;
-transform:translateX(-50%);
-width:320px;
-height:110px;
-background:radial-gradient(circle,#2a6edb66,transparent 70%);
-filter:blur(55px);
-z-index:1;
-}
+/* SEZIONI */
 
 .section{
 padding:180px 120px;
@@ -139,49 +123,38 @@ margin:auto;
 .section h2{
 font-size:3rem;
 text-align:center;
-margin-bottom:100px;
+margin-bottom:90px;
 color:#2a6edb;
 font-weight:800;
 }
 
 .card{
-background:rgba(255,255,255,0.92);
-padding:130px;
+background:rgba(255,255,255,0.93);
+padding:120px;
 border-radius:70px;
-box-shadow:0 90px 250px rgba(0,0,0,0.08);
+box-shadow:0 100px 280px rgba(0,0,0,0.08);
 margin-bottom:160px;
 transition:.6s;
 }
 
 .card:hover{
 transform:translateY(-25px);
-box-shadow:0 140px 320px rgba(42,110,219,0.25);
+box-shadow:0 150px 350px rgba(42,110,219,0.25);
 }
 
-.grid{
-display:grid;
-grid-template-columns:1fr 1fr;
-gap:150px;
+footer{
+background:#2a6edb;
+color:white;
+text-align:center;
+padding:120px;
+font-weight:600;
+letter-spacing:2px;
 }
 
-.box{
-background:rgba(255,255,255,0.95);
-padding:130px;
-border-radius:70px;
-box-shadow:0 90px 250px rgba(0,0,0,0.08);
-transition:.6s;
-}
-
-.box:hover{
-transform:translateY(-30px) scale(1.05);
-box-shadow:0 150px 350px rgba(42,110,219,0.3);
-}
-
-.box h3{
-font-size:2.2rem;
-margin-bottom:45px;
-color:#1f55ad;
-font-weight:800;
+@media(max-width:1000px){
+.top-bar{flex-direction:column;gap:40px;}
+.main-title{font-size:4rem;width:100%;}
+.logo{width:250px;}
 }
 
 </style>
@@ -190,147 +163,98 @@ font-weight:800;
 <body>
 
 <nav>
-<a href="#intro">Introduzione</a>
-<a href="#profilo">Profilo</a>
+<a href="#cos">Cos'è</a>
+<a href="#sviluppo">Sviluppo</a>
+<a href="#cause">Cause</a>
 <a href="#rischi">Rischi</a>
-<a href="#terapie">Terapie</a>
+<a href="#metodi">Metodi</a>
 <a href="#figure">Figure</a>
-<a href="#inclusione">Inclusione</a>
-<a href="#futuro">Futuro</a>
+<a href="#contatti">Dove Ci Trovi</a>
 </nav>
 
-<section class="hero" id="intro">
+<section class="hero" id="cos">
 
 <div class="top-bar">
 <div>
 <h1 class="main-title">
-Oltre Le<br>
-Sfumature
+Oltre<br>Le<br>Sfumature
 </h1>
-<div class="sub-title">
-Cos'è lo Spettro Autistico
+<div class="question">
+Cos'è lo Spettro Autistico?
 </div>
 </div>
 
-<div class="logo-wrapper">
 <img src="logo.png" class="logo">
-</div>
 </div>
 
 <div class="card">
-Il Disturbo dello Spettro Autistico è una condizione del neurosviluppo che influenza il modo in cui una persona comunica, percepisce il mondo e interagisce con gli altri. Non esiste un solo tipo di autismo, ma uno spettro ampio e variegato di caratteristiche. Ogni individuo presenta punti di forza e aree di difficoltà differenti. Alcuni mostrano capacità analitiche elevate, memoria dettagliata e forte concentrazione su interessi specifici. Altri possono incontrare difficoltà nella comprensione delle dinamiche sociali o nella gestione di ambienti molto stimolanti.
+Il Disturbo dello Spettro Autistico è una condizione del neurosviluppo che influenza la comunicazione sociale, il comportamento e l’elaborazione sensoriale. Si definisce “spettro” perché le caratteristiche variano enormemente da persona a persona. Alcuni individui necessitano di supporto significativo, altri conducono una vita completamente autonoma. Le differenze possono riguardare il linguaggio, la comprensione delle emozioni, la gestione degli stimoli sensoriali e la flessibilità cognitiva.
 </div>
 
 </section>
 
-<section class="section" id="profilo">
+<section class="section" id="sviluppo">
 <div class="container">
-
-<h2>Profilo Cognitivo e Sensoriale</h2>
-
+<h2>Sviluppo del Bambino</h2>
 <div class="card">
-Il profilo cognitivo può includere pensiero logico strutturato, attenzione ai dettagli e grande precisione. Alcune persone nello spettro hanno abilità matematiche, artistiche o musicali particolarmente sviluppate. Dal punto di vista sensoriale possono esserci ipersensibilità a suoni, luci, odori o consistenze, oppure una ricerca intensa di stimoli. Comprendere il profilo individuale è fondamentale per creare ambienti adattati e inclusivi.
+I segnali possono emergere nei primi anni di vita: difficoltà nel contatto visivo, ritardo nel linguaggio, scarso interesse per il gioco condiviso o comportamenti ripetitivi. Una diagnosi precoce consente interventi tempestivi che migliorano significativamente le competenze comunicative e sociali. Ogni bambino segue un percorso unico e personalizzato.
 </div>
+</div>
+</section>
 
+<section class="section" id="cause">
+<div class="container">
+<h2>Cause</h2>
+<div class="card">
+Le cause sono multifattoriali. La ricerca evidenzia una forte componente genetica, con possibile interazione di fattori ambientali prenatali. Non esiste una singola causa determinante. La scienza continua a studiare le basi neurologiche e biologiche dello spettro.
+</div>
 </div>
 </section>
 
 <section class="section" id="rischi">
 <div class="container">
-
 <h2>Fattori di Rischio</h2>
-
 <div class="card">
-Le cause dello spettro autistico sono multifattoriali. La ricerca scientifica evidenzia una forte componente genetica. Possono contribuire anche fattori ambientali prenatali. Non esiste una singola causa determinante. La diagnosi precoce è essenziale per attivare interventi tempestivi e personalizzati.
+Tra i fattori di rischio troviamo familiarità genetica, età avanzata dei genitori e alcune condizioni prenatali. È importante sottolineare che non esiste correlazione con vaccini o pratiche educative. La consapevolezza scientifica è fondamentale per combattere falsi miti.
 </div>
-
 </div>
 </section>
 
-<section class="section" id="terapie">
+<section class="section" id="metodi">
 <div class="container">
-
-<h2>Terapie e Interventi</h2>
-
-<div class="grid">
-
-<div class="box">
-<h3>ABA</h3>
-L’Analisi Comportamentale Applicata è un intervento strutturato basato sul rinforzo positivo. Aiuta a sviluppare competenze comunicative, sociali e comportamentali attraverso obiettivi specifici e misurabili.
+<h2>Metodi e Interventi</h2>
+<div class="card">
+ABA (Analisi Comportamentale Applicata) utilizza il rinforzo positivo per sviluppare competenze comunicative e sociali.  
+TEACCH si basa sulla strutturazione visiva e sull’organizzazione prevedibile dell’ambiente.  
+Logopedia, terapia occupazionale e interventi psicoeducativi completano il percorso. L’obiettivo è potenziare autonomia, comunicazione e qualità della vita.
 </div>
-
-<div class="box">
-<h3>TEACCH</h3>
-Il metodo TEACCH si basa sulla strutturazione visiva dell’ambiente, sull’organizzazione prevedibile delle attività e sull’autonomia della persona.
-</div>
-
-</div>
-
 </div>
 </section>
+
 <section class="section" id="figure">
 <div class="container">
-
-<h2>Figure Professionali Coinvolte</h2>
-
+<h2>Figure Professionali</h2>
 <div class="card">
-Il percorso di supporto coinvolge diverse figure professionali che lavorano in collaborazione. Lo psicologo valuta il profilo cognitivo ed emotivo, supporta la regolazione delle emozioni e aiuta la famiglia nel percorso di comprensione. Il neuropsichiatra infantile effettua la diagnosi clinica e monitora lo sviluppo nel tempo. Il logopedista interviene sulle competenze comunicative e linguistiche. Il terapista occupazionale lavora sull’autonomia personale e sulla gestione sensoriale. L’insegnante di sostegno supporta l’inclusione scolastica, adattando materiali e strategie didattiche. La collaborazione multidisciplinare garantisce un intervento coerente e personalizzato.
+Neuropsichiatra infantile, psicologo, logopedista, terapista occupazionale, educatore e insegnante di sostegno lavorano in équipe multidisciplinare. La collaborazione tra professionisti e famiglia è essenziale per garantire continuità e coerenza negli interventi.
 </div>
-
-<div class="card">
-Il lavoro di équipe è fondamentale: condividere obiettivi, strategie e osservazioni permette di costruire un percorso stabile e continuo. Ogni figura contribuisce con competenze specifiche, ma il centro del percorso rimane sempre la persona, con le sue caratteristiche individuali e il suo potenziale.
-</div>
-
 </div>
 </section>
 
-<section class="section" id="inclusione">
+<section class="section" id="contatti">
 <div class="container">
-
-<h2>Inclusione e Ruolo della Famiglia</h2>
-
+<h2>Dove Ci Trovi</h2>
 <div class="card">
-La famiglia rappresenta il punto di riferimento principale. Il sostegno emotivo, la comprensione e la creazione di routine prevedibili aiutano la persona nello spettro a sentirsi sicura. L’inclusione scolastica e sociale è altrettanto fondamentale. Ambienti strutturati, insegnanti formati e compagni sensibilizzati favoriscono la partecipazione attiva. L’obiettivo non è cambiare la persona, ma adattare il contesto per valorizzarne le capacità.
+Oltre Le Sfumature promuove inclusione, informazione e supporto.  
+Email: info@oltrelesfumature.it  
+Instagram: @oltrelesfumature  
+Telefono: +39 000 000000  
+Unisciti a noi per costruire una società più consapevole e inclusiva.
 </div>
-
-<div class="card">
-Strategie pratiche includono l’uso di supporti visivi, agende strutturate, anticipazione dei cambiamenti e spazi di calma per la regolazione sensoriale. L’ascolto attivo e il rispetto dei tempi individuali sono elementi centrali. Ogni piccolo progresso rappresenta un grande passo verso l’autonomia.
-</div>
-
-</div>
-</section>
-
-<section class="section" id="futuro">
-<div class="container">
-
-<h2>Prospettive Future</h2>
-
-<div class="card">
-La ricerca scientifica continua a evolversi, approfondendo le basi genetiche e neurologiche dello spettro. Nuove tecnologie assistive, strumenti digitali e approcci personalizzati stanno migliorando la qualità della vita. La consapevolezza sociale è in crescita: sempre più scuole, aziende e istituzioni promuovono inclusione e neurodiversità.
-</div>
-
-<div class="card">
-Costruire una società inclusiva significa riconoscere che le differenze cognitive non sono limiti, ma varianti naturali dell’essere umano. Valorizzare la neurodiversità permette di arricchire la comunità con prospettive uniche, creatività e innovazione.
-</div>
-
-</div>
-</section>
-
-<section class="section">
-<div class="container">
-
-<div class="card" style="text-align:center;">
-<h2 style="margin-bottom:50px;">Oltre Le Sfumature</h2>
-<p style="font-size:1.3rem;">
-Inclusione • Consapevolezza • Ricerca • Rispetto • Neurodiversità
-</p>
-</div>
-
 </div>
 </section>
 
 <footer>
-© 2026 Oltre Le Sfumature — Tutti i diritti riservati
+© 2026 Oltre Le Sfumature — Inclusione • Consapevolezza • Neurodiversità
 </footer>
 
 </body>
