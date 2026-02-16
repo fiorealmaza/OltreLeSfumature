@@ -224,29 +224,19 @@ margin-bottom:15px;
 font-size:18px;
 }
 
-/* EMAIL BOX */
+/* BOX EMAIL PROFESSIONALE */
 .email-box{
 margin-top:40px;
 background:white;
 padding:35px;
 border-radius:25px;
 box-shadow:0 0 40px rgba(77,166,255,0.4);
-border:3px solid transparent;
-position:relative;
+border:3px solid #4da6ff;
 }
 
-.email-box::before{
-content:"";
-position:absolute;
-inset:-3px;
-border-radius:25px;
-padding:3px;
-background:linear-gradient(45deg,#4da6ff,#00c6ff,#0066cc);
--webkit-mask:
-linear-gradient(#fff 0 0) content-box,
-linear-gradient(#fff 0 0);
--webkit-mask-composite:xor;
-mask-composite:exclude;
+.email-box h3{
+margin-bottom:20px;
+color:#003d80;
 }
 
 .email-box form{
@@ -294,10 +284,56 @@ background:#1e3c72;
 color:white;
 margin-top:60px;
 }
+
+@media(max-width:900px){
+header, .section{
+padding:40px 25px;
+}
+
+header h1{
+font-size:38px;
+}
+
+.logo{
+height:55px;
+}
+
+.methods{
+flex-direction:column;
+}
+}
 </style>
 </head>
 
 <body>
+
+<header>
+<div class="logo-container">
+<img src="logo.png" alt="Logo Oltre Le Sfumature" class="logo">
+<h1>Oltre Le Sfumature</h1>
+</div>
+
+<div class="menu-toggle" id="menuBtn">
+<span></span>
+<span></span>
+<span></span>
+</div>
+</header>
+
+<div class="overlay" id="overlay"></div>
+
+<div class="side-menu" id="sideMenu">
+<a href="#intro">Cos’è lo Spettro Autistico</a>
+<a href="#definizione">Definizione</a>
+<a href="#evoluzione">Evoluzione</a>
+<a href="#caratteristiche">Caratteristiche</a>
+<a href="#diagnosi">Diagnosi</a>
+<a href="#intervento">Intervento</a>
+<a href="#famiglia">Famiglia</a>
+<a href="#contatti">Contatti</a>
+</div>
+
+<!-- CONTENUTO RIMANE IDENTICO FINO A CONTATTI -->
 
 <section id="contatti" class="section">
 <h2>Contattaci</h2>
@@ -309,6 +345,7 @@ margin-top:60px;
 </div>
 
 <div class="email-box">
+<h3>Hai domande? Scrivici direttamente qui</h3>
 <form action="https://formspree.io/f/mvzbranp" method="POST">
 <input type="email" name="email" placeholder="La tua email" required>
 <textarea name="message" rows="5" placeholder="Scrivi il tuo messaggio..." required></textarea>
@@ -321,6 +358,24 @@ margin-top:60px;
 <footer>
 © 2026 Oltre Le Sfumature
 </footer>
+
+<script>
+const menuBtn = document.getElementById("menuBtn");
+const sideMenu = document.getElementById("sideMenu");
+const overlay = document.getElementById("overlay");
+
+menuBtn.addEventListener("click", () => {
+menuBtn.classList.toggle("active");
+sideMenu.classList.toggle("active");
+overlay.classList.toggle("active");
+});
+
+overlay.addEventListener("click", () => {
+menuBtn.classList.remove("active");
+sideMenu.classList.remove("active");
+overlay.classList.remove("active");
+});
+</script>
 
 </body>
 </html>
