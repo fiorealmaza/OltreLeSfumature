@@ -4,489 +4,130 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Oltre Le Sfumature</title>
-<link rel="stylesheet" href="style.css">
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-</head>
 
+<link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700;800&display=swap" rel="stylesheet">
+
+</head>
 <body>
 
 <header class="navbar">
-    <div class="logo-area">
-        <img src="logo.png" class="logo">
-        <h1>Oltre Le Sfumature</h1>
-    </div>
+  <div class="logo">Oltre Le Sfumature</div>
 
-    <nav>
-        <a href="index.html">Home</a>
-        <a href="aba.html">Metodo ABA</a>
-        <a href="teacch.html">Metodo TEACCH</a>
-        <a href="contatti.html">Contatti</a>
-    </nav>
+  <div class="menu-toggle" onclick="toggleMenu()">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+
+  <nav class="nav-links">
+    <a href="index.html">Home</a>
+    <a href="aba.html">ABA</a>
+    <a href="teacch.html">TEACCH</a>
+    <a href="contatti.html">Contatti</a>
+  </nav>
 </header>
+
 
 <section class="hero">
-    <h2>Comprendere, Supportare, Crescere</h2>
+  <h1>Oltre Le Sfumature</h1>
+  <p>
+    Informazione, consapevolezza e approfondimento sul Disturbo dello Spettro Autistico,
+    attraverso spiegazioni chiare, scientifiche e accessibili sugli approcci educativi più utilizzati.
+  </p>
+</section>
+
+
+<section class="section">
+  <h2>Il Progetto</h2>
+
+  <div class="card">
     <p>
-        Informazione, consapevolezza e strumenti concreti per sostenere 
-        bambini e famiglie nel percorso educativo.
+      Oltre Le Sfumature nasce con l’obiettivo di offrire una visione completa,
+      rispettosa e informata sull’autismo.
     </p>
-    <a href="aba.html" class="btn-primary">Scopri di più</a>
+
+    <p>
+      Il sito approfondisce in modo dettagliato due tra gli approcci più diffusi:
+      ABA (Applied Behavior Analysis) e TEACCH,
+      spiegandone principi, obiettivi, struttura e benefici.
+    </p>
+
+    <p>
+      L’obiettivo è creare uno spazio chiaro e affidabile per:
+    </p>
+
+    <ul>
+      <li>Famiglie che desiderano comprendere meglio gli interventi disponibili</li>
+      <li>Studenti che studiano pedagogia, psicologia o scienze dell’educazione</li>
+      <li>Professionisti interessati ad approfondire gli approcci educativi</li>
+      <li>Chiunque voglia informarsi con consapevolezza</li>
+    </ul>
+  </div>
 </section>
 
-<div class="wave"></div>
 
-<section class="info">
-    <div class="card">
-        <h3>Metodo ABA</h3>
-        <p>
-        Approccio basato sull’analisi del comportamento per sviluppare 
-        abilità comunicative, sociali e cognitive.
-        </p>
-        <a href="aba.html" class="btn-secondary">Approfondisci</a>
-    </div>
+<section class="section">
+  <h2>Perché "Oltre Le Sfumature"</h2>
 
-    <div class="card">
-        <h3>Metodo TEACCH</h3>
-        <p>
-        Metodo strutturato che utilizza supporti visivi e organizzazione 
-        dell’ambiente per favorire autonomia.
-        </p>
-        <a href="teacch.html" class="btn-secondary">Approfondisci</a>
-    </div>
+  <div class="card">
+    <p>
+      Il nome rappresenta l’idea che l’autismo non sia una definizione rigida,
+      ma una realtà complessa e sfaccettata.
+    </p>
+
+    <p>
+      Ogni persona nello spettro è unica, con caratteristiche, punti di forza
+      e modalità di apprendimento differenti.
+    </p>
+
+    <p>
+      Andare "oltre le sfumature" significa:
+    </p>
+
+    <ul>
+      <li>Superare stereotipi e semplificazioni</li>
+      <li>Comprendere la persona nella sua individualità</li>
+      <li>Adattare l’ambiente ai bisogni, non il contrario</li>
+      <li>Promuovere autonomia, dignità e qualità di vita</li>
+    </ul>
+  </div>
 </section>
 
-<footer>
-<p>© 2026 Oltre Le Sfumature - Tutti i diritti riservati</p>
-</footer>
 
-</body>
-</html>
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:'Poppins', sans-serif;
-}
+<section class="section">
+  <h2>Cosa Troverai nel Sito</h2>
 
-body{
-background:linear-gradient(180deg,#0d3b66,#001f3f);
-color:white;
-overflow-x:hidden;
-}
+  <div class="card">
+    <ul>
+      <li>Spiegazione completa dell’approccio ABA</li>
+      <li>Spiegazione completa del metodo TEACCH</li>
+      <li>Principi teorici e pratici</li>
+      <li>Obiettivi educativi e comportamentali</li>
+      <li>Benefici e considerazioni etiche</li>
+      <li>Struttura degli interventi</li>
+    </ul>
 
-/* NAVBAR */
-
-.navbar{
-display:flex;
-justify-content:space-between;
-align-items:center;
-padding:20px 60px;
-background:rgba(0,0,0,0.3);
-backdrop-filter:blur(10px);
-position:sticky;
-top:0;
-z-index:1000;
-}
-
-.logo-area{
-display:flex;
-align-items:center;
-gap:15px;
-}
-
-.logo{
-width:70px;
-}
-
-.navbar h1{
-font-size:24px;
-}
-
-.navbar nav a{
-color:white;
-margin-left:30px;
-text-decoration:none;
-font-weight:500;
-transition:0.3s;
-}
-
-.navbar nav a:hover{
-color:#4cc9f0;
-}
-
-/* HERO */
-
-.hero{
-text-align:center;
-padding:120px 20px;
-}
-
-.hero h2{
-font-size:42px;
-margin-bottom:20px;
-}
-
-.hero p{
-max-width:700px;
-margin:auto;
-margin-bottom:40px;
-opacity:0.9;
-}
-
-.btn-primary{
-background:linear-gradient(45deg,#3a86ff,#00b4ff);
-padding:15px 40px;
-border-radius:50px;
-text-decoration:none;
-color:white;
-font-weight:600;
-transition:0.3s;
-box-shadow:0 15px 40px rgba(0,0,0,0.3);
-}
-
-.btn-primary:hover{
-transform:translateY(-5px);
-}
-
-/* WAVE */
-
-.wave{
-position:relative;
-height:100px;
-background:white;
-border-top-left-radius:50% 100%;
-border-top-right-radius:50% 100%;
-}
-
-/* INFO SECTION */
-
-.info{
-background:white;
-padding:100px 40px;
-display:flex;
-justify-content:center;
-gap:50px;
-flex-wrap:wrap;
-color:#001f3f;
-}
-
-.card{
-background:white;
-padding:50px;
-width:350px;
-border-radius:25px;
-border:4px solid;
-border-image: linear-gradient(45deg,#3a86ff,#00b4ff,#4cc9f0) 1;
-box-shadow:0 0 40px rgba(0,0,0,0.1);
-text-align:center;
-transition:0.3s;
-}
-
-.card:hover{
-transform:translateY(-10px);
-}
-
-.btn-secondary{
-display:inline-block;
-margin-top:20px;
-padding:12px 30px;
-background:#3a86ff;
-color:white;
-border-radius:40px;
-text-decoration:none;
-}
-
-/* FOOTER */
-
-footer{
-text-align:center;
-padding:40px;
-background:#001f3f;
-}
-<!DOCTYPE html>
-<html lang="it">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Contatti - Oltre Le Sfumature</title>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-
-<style>
-
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:'Poppins', sans-serif;
-}
-
-body{
-background:linear-gradient(180deg,#0d3b66,#001f3f);
-color:white;
-overflow-x:hidden;
-}
-
-/* NAVBAR */
-
-.navbar{
-display:flex;
-justify-content:space-between;
-align-items:center;
-padding:20px 60px;
-background:rgba(0,0,0,0.3);
-backdrop-filter:blur(10px);
-position:sticky;
-top:0;
-}
-
-.logo-area{
-display:flex;
-align-items:center;
-gap:15px;
-}
-
-.logo{
-width:70px;
-}
-
-.navbar nav a{
-color:white;
-margin-left:30px;
-text-decoration:none;
-font-weight:500;
-transition:0.3s;
-}
-
-.navbar nav a:hover{
-color:#4cc9f0;
-}
-
-/* HERO */
-
-.contact-hero{
-text-align:center;
-padding:100px 20px;
-}
-
-.contact-hero h2{
-font-size:40px;
-margin-bottom:15px;
-}
-
-/* WAVE */
-
-.wave{
-position:relative;
-height:100px;
-background:white;
-border-top-left-radius:50% 100%;
-border-top-right-radius:50% 100%;
-}
-
-/* SECTION */
-
-.contact-section{
-background:white;
-color:#001f3f;
-padding:100px 20px;
-text-align:center;
-}
-
-/* BOX MODULO */
-
-.contact-box{
-background:white;
-padding:60px;
-border-radius:25px;
-max-width:800px;
-margin:50px auto;
-border:4px solid;
-border-image: linear-gradient(45deg,#3a86ff,#00b4ff,#4cc9f0) 1;
-box-shadow:0 0 60px rgba(0,180,255,0.3);
-}
-
-.contact-box h3{
-font-size:28px;
-margin-bottom:15px;
-}
-
-.contact-box p{
-margin-bottom:40px;
-}
-
-.contact-form input,
-.contact-form textarea{
-width:100%;
-padding:18px;
-margin-bottom:25px;
-border-radius:15px;
-border:2px solid #e0e0e0;
-font-size:16px;
-transition:0.3s;
-}
-
-.contact-form input:focus,
-.contact-form textarea:focus{
-border-color:#3a86ff;
-outline:none;
-box-shadow:0 0 15px rgba(58,134,255,0.3);
-}
-
-.contact-form button{
-background:linear-gradient(45deg,#3a86ff,#00b4ff);
-color:white;
-padding:18px 50px;
-border:none;
-border-radius:50px;
-font-weight:700;
-cursor:pointer;
-transition:0.3s;
-box-shadow:0 15px 40px rgba(0,0,0,0.2);
-}
-
-.contact-form button:hover{
-transform:translateY(-5px);
-}
-
-/* QUADRO BLU FORTE */
-
-.direct-email-box{
-background:#0d3b66;
-color:white;
-padding:70px;
-margin:80px auto;
-border-radius:30px;
-max-width:900px;
-box-shadow:0 0 60px rgba(0,180,255,0.5);
-}
-
-.btn-email{
-display:inline-block;
-margin-top:30px;
-padding:18px 50px;
-background:white;
-color:#0d3b66;
-border-radius:50px;
-font-weight:700;
-text-decoration:none;
-transition:0.3s;
-}
-
-.btn-email:hover{
-transform:scale(1.05);
-}
-
-/* SOCIAL */
-
-.social-box{
-margin-top:80px;
-}
-
-.social-box a{
-color:#3a86ff;
-text-decoration:none;
-}
-
-/* FOOTER */
-
-footer{
-text-align:center;
-padding:40px;
-background:#001f3f;
-color:white;
-}
-
-</style>
-</head>
-
-<body>
-
-<header class="navbar">
-    <div class="logo-area">
-        <img src="logo.png" class="logo">
-        <h1>Oltre Le Sfumature</h1>
-    </div>
-
-    <nav>
-        <a href="index.html">Home</a>
-        <a href="aba.html">Metodo ABA</a>
-        <a href="teacch.html">Metodo TEACCH</a>
-        <a href="contatti.html">Contatti</a>
-    </nav>
-</header>
-
-<section class="contact-hero">
-    <h2>Contattaci</h2>
-    <p>Siamo qui per rispondere alle tue domande.</p>
+    <p>
+      Tutto il contenuto è presentato in modo strutturato, ordinato e facilmente comprensibile.
+    </p>
+  </div>
 </section>
 
-<div class="wave"></div>
 
-<section class="contact-section">
+<script>
+function toggleMenu(){
+  document.querySelector(".nav-links").classList.toggle("active");
+}
 
-<div class="contact-box">
-
-<h3>Hai domande o dubbi?</h3>
-<p>Compila il modulo qui sotto e ti risponderemo il prima possibile.</p>
-
-<form action="https://formspree.io/f/mvzbranp" method="POST" class="contact-form">
-
-<input type="email" name="email" placeholder="La tua email" required>
-
-<textarea name="message" rows="6" placeholder="Scrivi qui il tuo messaggio..." required></textarea>
-
-<button type="submit">Invia Messaggio</button>
-
-</form>
-
-</div>
-
-
-<div class="direct-email-box">
-
-<h3>Preferisci scriverci direttamente?</h3>
-
-<p>Clicca qui sotto per inviarci una email.</p>
-
-<a href="mailto:oltrelesfumature@gmail.com?subject=Richiesta informazioni Oltre Le Sfumature"
-class="btn-email">
-Scrivi una Email
-</a>
-
-</div>
-
-
-<div class="social-box">
-
-<h3>Seguici sui Social</h3>
-
-<p><strong>Email:</strong><br>
-<a href="mailto:oltrelesfumature@gmail.com">
-oltrelesfumature@gmail.com
-</a></p>
-
-<p><strong>Instagram:</strong><br>
-<a href="https://www.instagram.com/oltrelesfumature" target="_blank">
-@oltrelesfumature
-</a></p>
-
-<p><strong>TikTok:</strong><br>
-<a href="https://www.tiktok.com/@oltre.le.sfumature" target="_blank">
-@oltre.le.sfumature
-</a></p>
-
-<p><strong>Facebook:</strong><br>
-<a href="https://www.facebook.com/oltrelesfumature" target="_blank">
-oltrelesfumature
-</a></p>
-
-</div>
-
-</section>
-
-<footer>
-<p>© 2026 Oltre Le Sfumature - Tutti i diritti riservati</p>
-</footer>
+document.addEventListener("scroll",()=>{
+  document.querySelectorAll(".section").forEach(sec=>{
+    if(sec.getBoundingClientRect().top < window.innerHeight - 100){
+      sec.classList.add("visible");
+    }
+  });
+});
+</script>
 
 </body>
 </html>
