@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Autismo - Sito Informativo</title>
+<title>Disturbo dello Spettro Autistico</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
@@ -18,10 +18,9 @@ scroll-behavior:smooth;
 
 body{
 font-family:'Poppins',sans-serif;
-background:linear-gradient(180deg,#f3f6ff,#e9efff);
+background:linear-gradient(180deg,#f4f7ff,#e8eeff);
 color:#1f3c88;
 line-height:1.7;
-overflow-x:hidden;
 }
 
 /* NAVBAR */
@@ -30,8 +29,8 @@ nav{
 position:fixed;
 top:0;
 width:100%;
-background:rgba(255,255,255,0.7);
-backdrop-filter:blur(12px);
+background:rgba(255,255,255,0.85);
+backdrop-filter:blur(10px);
 display:flex;
 justify-content:center;
 padding:15px;
@@ -42,7 +41,7 @@ box-shadow:0 5px 20px rgba(0,0,0,0.05);
 nav a{
 color:#1f3c88;
 text-decoration:none;
-margin:0 20px;
+margin:0 18px;
 font-weight:500;
 transition:0.3s;
 }
@@ -57,11 +56,9 @@ header{
 display:flex;
 justify-content:space-between;
 align-items:center;
-padding:160px 10% 100px 10%;
+padding:170px 10% 120px 10%;
 background:linear-gradient(135deg,#1f3c88,#4a6ed1);
 color:white;
-position:relative;
-overflow:hidden;
 }
 
 .hero-text{
@@ -69,7 +66,7 @@ max-width:55%;
 }
 
 header h1{
-font-size:50px;
+font-size:52px;
 margin-bottom:20px;
 }
 
@@ -79,29 +76,21 @@ opacity:0.95;
 }
 
 .hero-logo{
-width:380px;
+width:360px;
 animation:float 6s ease-in-out infinite;
-filter:drop-shadow(0 40px 80px rgba(0,0,0,0.4));
+filter:drop-shadow(0 30px 70px rgba(0,0,0,0.4));
 }
 
 @keyframes float{
-0%{transform:translateY(0px);}
+0%{transform:translateY(0);}
 50%{transform:translateY(-20px);}
-100%{transform:translateY(0px);}
+100%{transform:translateY(0);}
 }
 
 /* SECTIONS */
 
 section{
 padding:120px 10%;
-opacity:0;
-transform:translateY(60px);
-transition:all 1s ease;
-}
-
-section.visible{
-opacity:1;
-transform:translateY(0);
 }
 
 section:nth-child(even){
@@ -110,20 +99,20 @@ background:white;
 
 h2{
 font-size:36px;
-margin-bottom:30px;
+margin-bottom:40px;
 }
 
-.box{
+.card{
 background:linear-gradient(145deg,#ffffff,#eef3ff);
-padding:30px;
-margin:25px 0;
-border-radius:20px;
+padding:35px;
+margin-bottom:35px;
+border-radius:22px;
 box-shadow:0 20px 40px rgba(0,0,0,0.08);
 transition:0.4s;
 }
 
-.box:hover{
-transform:translateY(-10px);
+.card:hover{
+transform:translateY(-8px);
 box-shadow:0 30px 60px rgba(0,0,0,0.15);
 }
 
@@ -133,13 +122,14 @@ margin-bottom:15px;
 
 ul{
 padding-left:20px;
+margin-top:10px;
 }
 
 footer{
 background:#1f3c88;
 color:white;
 text-align:center;
-padding:40px;
+padding:45px;
 margin-top:60px;
 }
 
@@ -176,11 +166,11 @@ margin:10px;
 <body>
 
 <nav>
-<a href="#cos-e">Cos'è</a>
-<a href="#sintomi">Caratteristiche</a>
+<a href="#cose">Cos'è</a>
+<a href="#caratteristiche">Caratteristiche</a>
 <a href="#diagnosi">Diagnosi</a>
 <a href="#prognosi">Prognosi</a>
-<a href="#interventi">Interventi</a>
+<a href="#intervento">Intervento</a>
 <a href="#aba">ABA</a>
 <a href="#teacch">TEACCH</a>
 </nav>
@@ -190,23 +180,22 @@ margin:10px;
 <h1>Disturbo dello Spettro Autistico</h1>
 <p>Materiale informativo basato su contenuti didattici</p>
 </div>
-
 <img src="logo.png" alt="Logo Autismo" class="hero-logo">
 </header>
 
-<section id="cos-e">
+<section id="cose">
 <h2>Cos'è l'Autismo</h2>
-<div class="box">
+<div class="card">
 <p>L'autismo è un disturbo del neurosviluppo a genesi multifattoriale che interessa primariamente il Sistema Nervoso Centrale durante la sua organizzazione.</p>
 <p>È caratterizzato da disfunzioni della maturazione neurobiologica e del funzionamento del SNC.</p>
 <p>Si tratta di uno spettro variabile che può comprendere sia persone con alto quoziente intellettivo sia con ritardo mentale.</p>
 </div>
 </section>
 
-<section id="sintomi">
+<section id="caratteristiche">
 <h2>Caratteristiche Principali</h2>
 
-<div class="box">
+<div class="card">
 <h3>Alterazioni nella comunicazione</h3>
 <ul>
 <li>Assenza o ritardo del linguaggio</li>
@@ -218,7 +207,7 @@ margin:10px;
 </ul>
 </div>
 
-<div class="box">
+<div class="card">
 <h3>Comportamenti ripetitivi e stereotipati</h3>
 <ul>
 <li>Sfarfallare le mani</li>
@@ -229,7 +218,7 @@ margin:10px;
 </ul>
 </div>
 
-<div class="box">
+<div class="card">
 <h3>Difficoltà nell’interazione sociale</h3>
 <ul>
 <li>Scarso interesse per gli altri</li>
@@ -239,7 +228,7 @@ margin:10px;
 </ul>
 </div>
 
-<div class="box">
+<div class="card">
 <h3>Punti di forza</h3>
 <ul>
 <li>Pensiero visivo</li>
@@ -254,7 +243,7 @@ margin:10px;
 
 <section id="diagnosi">
 <h2>Diagnosi</h2>
-<div class="box">
+<div class="card">
 <p>La diagnosi è clinica, basata sull’osservazione del comportamento e sulla raccolta dei dati anamnestici.</p>
 <p>Non esistono test biologici in grado di individuare la sindrome autistica.</p>
 <p>La diagnosi e il trattamento precoci cambiano la prognosi a lungo termine.</p>
@@ -263,7 +252,7 @@ margin:10px;
 
 <section id="prognosi">
 <h2>Prognosi ed Evoluzione</h2>
-<div class="box">
+<div class="card">
 <ul>
 <li>1-2% acquisisce uno stato normale</li>
 <li>10-15% raggiunge autonomia familiare</li>
@@ -274,9 +263,9 @@ margin:10px;
 </div>
 </section>
 
-<section id="interventi">
+<section id="intervento">
 <h2>Intervento</h2>
-<div class="box">
+<div class="card">
 <ul>
 <li>Intervento precoce e intensivo</li>
 <li>Programma individualizzato</li>
@@ -290,7 +279,7 @@ margin:10px;
 
 <section id="aba">
 <h2>Metodo ABA</h2>
-<div class="box">
+<div class="card">
 <p>ABA (Applied Behavior Analysis) utilizza principi comportamentali per costruire repertori comportamentali utili e ridurre quelli problematici.</p>
 <ul>
 <li>Intervento altamente individualizzato</li>
@@ -303,7 +292,7 @@ margin:10px;
 
 <section id="teacch">
 <h2>Modello TEACCH</h2>
-<div class="box">
+<div class="card">
 <p>Il TEACCH è un modello di presa in carico globale che punta sull’organizzazione visiva di spazi, tempi e materiali.</p>
 <ul>
 <li>Strutturazione dello spazio</li>
@@ -317,23 +306,8 @@ margin:10px;
 </section>
 
 <footer>
-<p>Sito informativo sul Disturbo dello Spettro Autistico</p>
+Sito informativo sul Disturbo dello Spettro Autistico
 </footer>
-
-<script>
-const sections = document.querySelectorAll("section");
-
-window.addEventListener("scroll", () => {
-sections.forEach(section => {
-const position = section.getBoundingClientRect().top;
-const screenHeight = window.innerHeight;
-
-if(position < screenHeight - 100){
-section.classList.add("visible");
-}
-});
-});
-</script>
 
 </body>
 </html>
