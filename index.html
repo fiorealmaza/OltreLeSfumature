@@ -4,674 +4,489 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Oltre Le Sfumature</title>
+<link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+<body>
 
-<style>
+<header class="navbar">
+    <div class="logo-area">
+        <img src="logo.png" class="logo">
+        <h1>Oltre Le Sfumature</h1>
+    </div>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="aba.html">Metodo ABA</a>
+        <a href="teacch.html">Metodo TEACCH</a>
+        <a href="contatti.html">Contatti</a>
+    </nav>
+</header>
+
+<section class="hero">
+    <h2>Comprendere, Supportare, Crescere</h2>
+    <p>
+        Informazione, consapevolezza e strumenti concreti per sostenere 
+        bambini e famiglie nel percorso educativo.
+    </p>
+    <a href="aba.html" class="btn-primary">Scopri di più</a>
+</section>
+
+<div class="wave"></div>
+
+<section class="info">
+    <div class="card">
+        <h3>Metodo ABA</h3>
+        <p>
+        Approccio basato sull’analisi del comportamento per sviluppare 
+        abilità comunicative, sociali e cognitive.
+        </p>
+        <a href="aba.html" class="btn-secondary">Approfondisci</a>
+    </div>
+
+    <div class="card">
+        <h3>Metodo TEACCH</h3>
+        <p>
+        Metodo strutturato che utilizza supporti visivi e organizzazione 
+        dell’ambiente per favorire autonomia.
+        </p>
+        <a href="teacch.html" class="btn-secondary">Approfondisci</a>
+    </div>
+</section>
+
+<footer>
+<p>© 2026 Oltre Le Sfumature - Tutti i diritti riservati</p>
+</footer>
+
+</body>
+</html>
 *{
 margin:0;
 padding:0;
 box-sizing:border-box;
 font-family:'Poppins', sans-serif;
-scroll-behavior:smooth;
 }
 
 body{
-background:linear-gradient(135deg,#eaf6ff,#cce6ff);
-color:#1a1a1a;
+background:linear-gradient(180deg,#0d3b66,#001f3f);
+color:white;
 overflow-x:hidden;
-position:relative;
 }
 
-/* DECORATIVE BACKGROUND BLOBS */
-body::before{
-content:"";
-position:absolute;
-top:-200px;
-left:-200px;
-width:600px;
-height:600px;
-background:radial-gradient(circle,#4da6ff33,transparent 70%);
-border-radius:50%;
-z-index:-1;
-}
+/* NAVBAR */
 
-body::after{
-content:"";
-position:absolute;
-bottom:-250px;
-right:-200px;
-width:600px;
-height:600px;
-background:radial-gradient(circle,#0066cc22,transparent 70%);
-border-radius:50%;
-z-index:-1;
-}
-
-/* HEADER */
-header{
+.navbar{
 display:flex;
 justify-content:space-between;
 align-items:center;
-padding:30px 70px;
-background:rgba(255,255,255,0.8);
-backdrop-filter:blur(12px);
+padding:20px 60px;
+background:rgba(0,0,0,0.3);
+backdrop-filter:blur(10px);
 position:sticky;
 top:0;
 z-index:1000;
-box-shadow:0 15px 50px rgba(0,0,0,0.08);
 }
 
-.logo-container{
+.logo-area{
 display:flex;
 align-items:center;
-gap:20px;
+gap:15px;
 }
 
 .logo{
-height:80px;
-width:auto;
+width:70px;
 }
 
-header h1{
-font-size:52px;
-font-weight:800;
-background: linear-gradient(90deg,#4da6ff,#0066cc);
--webkit-background-clip: text;
--webkit-text-fill-color: transparent;
-}
-
-/* HERO */
-.hero{
-text-align:center;
-padding:160px 20px 120px 20px;
-}
-
-.hero h2{
-font-size:54px;
-margin-bottom:25px;
-color:#003d80;
-}
-
-.hero p{
-font-size:20px;
-max-width:800px;
-margin:auto;
-margin-bottom:40px;
-line-height:1.8;
-}
-
-.hero-btn{
-display:inline-block;
-padding:18px 40px;
-background:#4da6ff;
-color:white;
-border-radius:40px;
-text-decoration:none;
-font-weight:600;
-transition:0.4s;
-box-shadow:0 15px 40px rgba(77,166,255,0.4);
-}
-
-.hero-btn:hover{
-background:#0066cc;
-transform:scale(1.07);
-}
-
-/* HAMBURGER */
-.menu-toggle{
-width:40px;
-height:28px;
-display:flex;
-flex-direction:column;
-justify-content:space-between;
-cursor:pointer;
-}
-
-.menu-toggle span{
-height:4px;
-background:#0066cc;
-border-radius:4px;
-transition:0.4s;
-}
-
-.menu-toggle.active span:nth-child(1){
-transform:rotate(45deg) translate(6px,6px);
-}
-.menu-toggle.active span:nth-child(2){
-opacity:0;
-}
-.menu-toggle.active span:nth-child(3){
-transform:rotate(-45deg) translate(7px,-7px);
-}
-
-/* OVERLAY */
-.overlay{
-position:fixed;
-top:0;
-left:0;
-width:100%;
-height:100%;
-background:rgba(0,0,0,0.4);
-opacity:0;
-visibility:hidden;
-transition:0.4s;
-z-index:900;
-}
-
-.overlay.active{
-opacity:1;
-visibility:visible;
-}
-
-/* MENU */
-.side-menu{
-position:fixed;
-top:0;
-right:-320px;
-width:300px;
-height:100%;
-background:white;
-padding:120px 40px;
-transition:0.5s cubic-bezier(.77,0,.18,1);
-z-index:1001;
-box-shadow:-10px 0 40px rgba(0,0,0,0.15);
-}
-
-.side-menu.active{
-right:0;
-}
-
-.side-menu a{
-display:block;
-margin-bottom:25px;
-text-decoration:none;
-font-weight:600;
-color:#0066cc;
-position:relative;
-transition:0.3s;
-}
-
-.side-menu a::after{
-content:"";
-position:absolute;
-left:0;
-bottom:-6px;
-width:0;
-height:3px;
-background:#4da6ff;
-transition:0.3s;
-}
-
-.side-menu a:hover::after{
-width:100%;
-}
-
-/* SECTIONS */
-.section{
-padding:120px 70px;
-max-width:1200px;
-margin:auto;
-}
-
-.section h2{
-font-size:40px;
-margin-bottom:40px;
-color:#003d80;
-}
-
-/* GLASS CARDS */
-.card{
-background:rgba(255,255,255,0.75);
-backdrop-filter:blur(12px);
-padding:40px;
-border-radius:25px;
-margin-bottom:35px;
-line-height:1.9;
-box-shadow:0 20px 60px rgba(0,0,0,0.12);
-transition:0.4s;
-border:1px solid rgba(255,255,255,0.4);
-}
-
-.card:hover{
-transform:translateY(-10px) scale(1.02);
-box-shadow:0 30px 80px rgba(0,0,0,0.18);
-}
-
-/* METHODS */
-.methods{
-display:flex;
-gap:40px;
-flex-wrap:wrap;
-margin-top:30px;
-}
-
-.method-box{
-flex:1;
-min-width:300px;
-background:linear-gradient(135deg,#d9efff,#b8e0ff);
-padding:40px;
-border-radius:30px;
-box-shadow:0 25px 70px rgba(77,166,255,0.3);
-transition:0.4s;
-text-decoration:none;
-color:#003d80;
-}
-
-.method-box:hover{
-transform:translateY(-12px);
-box-shadow:0 35px 90px rgba(77,166,255,0.45);
-}
-
-.method-box h3{
-margin-bottom:20px;
-text-align:center;
+.navbar h1{
 font-size:24px;
 }
 
-/* CONTACT */
-.contact-info{
-background:rgba(255,255,255,0.85);
-backdrop-filter:blur(10px);
-padding:50px;
-border-radius:30px;
-box-shadow:0 20px 60px rgba(0,0,0,0.12);
-}
-
-footer{
-text-align:center;
-padding:50px;
-background:#1e3c72;
+.navbar nav a{
 color:white;
-margin-top:100px;
+margin-left:30px;
+text-decoration:none;
+font-weight:500;
+transition:0.3s;
 }
 
-@media(max-width:900px){
-header, .section{
-padding:40px 25px;
+.navbar nav a:hover{
+color:#4cc9f0;
+}
+
+/* HERO */
+
+.hero{
+text-align:center;
+padding:120px 20px;
 }
 
 .hero h2{
-font-size:38px;
+font-size:42px;
+margin-bottom:20px;
+}
+
+.hero p{
+max-width:700px;
+margin:auto;
+margin-bottom:40px;
+opacity:0.9;
+}
+
+.btn-primary{
+background:linear-gradient(45deg,#3a86ff,#00b4ff);
+padding:15px 40px;
+border-radius:50px;
+text-decoration:none;
+color:white;
+font-weight:600;
+transition:0.3s;
+box-shadow:0 15px 40px rgba(0,0,0,0.3);
+}
+
+.btn-primary:hover{
+transform:translateY(-5px);
+}
+
+/* WAVE */
+
+.wave{
+position:relative;
+height:100px;
+background:white;
+border-top-left-radius:50% 100%;
+border-top-right-radius:50% 100%;
+}
+
+/* INFO SECTION */
+
+.info{
+background:white;
+padding:100px 40px;
+display:flex;
+justify-content:center;
+gap:50px;
+flex-wrap:wrap;
+color:#001f3f;
+}
+
+.card{
+background:white;
+padding:50px;
+width:350px;
+border-radius:25px;
+border:4px solid;
+border-image: linear-gradient(45deg,#3a86ff,#00b4ff,#4cc9f0) 1;
+box-shadow:0 0 40px rgba(0,0,0,0.1);
+text-align:center;
+transition:0.3s;
+}
+
+.card:hover{
+transform:translateY(-10px);
+}
+
+.btn-secondary{
+display:inline-block;
+margin-top:20px;
+padding:12px 30px;
+background:#3a86ff;
+color:white;
+border-radius:40px;
+text-decoration:none;
+}
+
+/* FOOTER */
+
+footer{
+text-align:center;
+padding:40px;
+background:#001f3f;
+}
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contatti - Oltre Le Sfumature</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins', sans-serif;
+}
+
+body{
+background:linear-gradient(180deg,#0d3b66,#001f3f);
+color:white;
+overflow-x:hidden;
+}
+
+/* NAVBAR */
+
+.navbar{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:20px 60px;
+background:rgba(0,0,0,0.3);
+backdrop-filter:blur(10px);
+position:sticky;
+top:0;
+}
+
+.logo-area{
+display:flex;
+align-items:center;
+gap:15px;
 }
 
 .logo{
-height:60px;
+width:70px;
 }
 
-.methods{
-flex-direction:column;
+.navbar nav a{
+color:white;
+margin-left:30px;
+text-decoration:none;
+font-weight:500;
+transition:0.3s;
 }
+
+.navbar nav a:hover{
+color:#4cc9f0;
 }
+
+/* HERO */
+
+.contact-hero{
+text-align:center;
+padding:100px 20px;
+}
+
+.contact-hero h2{
+font-size:40px;
+margin-bottom:15px;
+}
+
+/* WAVE */
+
+.wave{
+position:relative;
+height:100px;
+background:white;
+border-top-left-radius:50% 100%;
+border-top-right-radius:50% 100%;
+}
+
+/* SECTION */
+
+.contact-section{
+background:white;
+color:#001f3f;
+padding:100px 20px;
+text-align:center;
+}
+
+/* BOX MODULO */
+
+.contact-box{
+background:white;
+padding:60px;
+border-radius:25px;
+max-width:800px;
+margin:50px auto;
+border:4px solid;
+border-image: linear-gradient(45deg,#3a86ff,#00b4ff,#4cc9f0) 1;
+box-shadow:0 0 60px rgba(0,180,255,0.3);
+}
+
+.contact-box h3{
+font-size:28px;
+margin-bottom:15px;
+}
+
+.contact-box p{
+margin-bottom:40px;
+}
+
+.contact-form input,
+.contact-form textarea{
+width:100%;
+padding:18px;
+margin-bottom:25px;
+border-radius:15px;
+border:2px solid #e0e0e0;
+font-size:16px;
+transition:0.3s;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus{
+border-color:#3a86ff;
+outline:none;
+box-shadow:0 0 15px rgba(58,134,255,0.3);
+}
+
+.contact-form button{
+background:linear-gradient(45deg,#3a86ff,#00b4ff);
+color:white;
+padding:18px 50px;
+border:none;
+border-radius:50px;
+font-weight:700;
+cursor:pointer;
+transition:0.3s;
+box-shadow:0 15px 40px rgba(0,0,0,0.2);
+}
+
+.contact-form button:hover{
+transform:translateY(-5px);
+}
+
+/* QUADRO BLU FORTE */
+
+.direct-email-box{
+background:#0d3b66;
+color:white;
+padding:70px;
+margin:80px auto;
+border-radius:30px;
+max-width:900px;
+box-shadow:0 0 60px rgba(0,180,255,0.5);
+}
+
+.btn-email{
+display:inline-block;
+margin-top:30px;
+padding:18px 50px;
+background:white;
+color:#0d3b66;
+border-radius:50px;
+font-weight:700;
+text-decoration:none;
+transition:0.3s;
+}
+
+.btn-email:hover{
+transform:scale(1.05);
+}
+
+/* SOCIAL */
+
+.social-box{
+margin-top:80px;
+}
+
+.social-box a{
+color:#3a86ff;
+text-decoration:none;
+}
+
+/* FOOTER */
+
+footer{
+text-align:center;
+padding:40px;
+background:#001f3f;
+color:white;
+}
+
 </style>
 </head>
 
 <body>
 
-<header>
-<div class="logo-container">
-<img src="logo.png" alt="Logo Oltre Le Sfumature" class="logo">
-<h1>Oltre Le Sfumature</h1>
-</div>
+<header class="navbar">
+    <div class="logo-area">
+        <img src="logo.png" class="logo">
+        <h1>Oltre Le Sfumature</h1>
+    </div>
 
-<div class="menu-toggle" id="menuBtn">
-<span></span>
-<span></span>
-<span></span>
-</div>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="aba.html">Metodo ABA</a>
+        <a href="teacch.html">Metodo TEACCH</a>
+        <a href="contatti.html">Contatti</a>
+    </nav>
 </header>
 
-<div class="overlay" id="overlay"></div>
-
-<div class="side-menu" id="sideMenu">
-<a href="#intro">Cos’è lo Spettro Autistico</a>
-<a href="#definizione">Definizione</a>
-<a href="#evoluzione">Evoluzione</a>
-<a href="#caratteristiche">Caratteristiche</a>
-<a href="#diagnosi">Diagnosi</a>
-<a href="#intervento">Intervento</a>
-<a href="#famiglia">Famiglia</a>
-<a href="#contatti">Contatti</a>
-</div>
-
-<div class="wave">
-<svg viewBox="0 0 1440 150" preserveAspectRatio="none">
-<path fill="#ffffff" fill-opacity="1"
-d="M0,96L60,90.7C120,85,240,75,360,74.7C480,75,600,85,720,85.3C840,85,960,75,1080,69.3C1200,64,1320,64,1380,64L1440,64L1440,150L0,150Z">
-</path>
-</svg>
-</div>
-
-<section class="hero">
-<h2>Comprendere. Supportare. Valorizzare.</h2>
-<p>
-Un percorso di consapevolezza, informazione e inclusione dedicato allo Spettro Autistico.
-Approfondimenti scientifici, strategie educative e supporto familiare per promuovere autonomia,
-benessere emotivo e partecipazione sociale.
-</p>
-<a href="#intro" class="hero-btn">Scopri di più</a>
-  
-<div class="wave">
-<svg viewBox="0 0 1440 150" preserveAspectRatio="none">
-<path fill="#ffffff" fill-opacity="1"
-d="M0,96L60,90.7C120,85,240,75,360,74.7C480,75,600,85,720,85.3C840,85,960,75,1080,69.3C1200,64,1320,64,1380,64L1440,64L1440,150L0,150Z">
-</path>
-</svg>
-</div>
-
-<div class="wave">
-<svg viewBox="0 0 1440 150" preserveAspectRatio="none">
-<path fill="#ffffff" fill-opacity="1"
-d="M0,96L60,90.7C120,85,240,75,360,74.7C480,75,600,85,720,85.3C840,85,960,75,1080,69.3C1200,64,1320,64,1380,64L1440,64L1440,150L0,150Z">
-</path>
-</svg>
-</div>
-
-</section>
-<section class="section" id="intro">
-<h2>Cos’è lo Spettro Autistico</h2>
-
-<div class="card">
-<p>
-Il Disturbo dello Spettro Autistico (ASD) è una condizione del neurosviluppo che influenza il modo in cui una persona comunica, interagisce socialmente e percepisce il mondo.
-Viene definito "spettro" perché si manifesta con caratteristiche e livelli di intensità differenti da individuo a individuo.
-</p>
-
-<p>
-Ogni persona autistica è unica: può presentare punti di forza straordinari in ambiti specifici, come memoria, attenzione ai dettagli, capacità logiche o creative,
-ma può anche incontrare difficoltà nella comunicazione sociale, nella gestione delle emozioni e nella flessibilità comportamentale.
-</p>
-
-<p>
-L’obiettivo dell’inclusione non è “cambiare” la persona, ma comprendere il suo funzionamento e creare un ambiente che valorizzi le sue potenzialità.
-</p>
-</div>
-
-<div class="wave">
-<svg viewBox="0 0 1440 150" preserveAspectRatio="none">
-<path fill="#ffffff" fill-opacity="1"
-d="M0,96L60,90.7C120,85,240,75,360,74.7C480,75,600,85,720,85.3C840,85,960,75,1080,69.3C1200,64,1320,64,1380,64L1440,64L1440,150L0,150Z">
-</path>
-</svg>
-</div>
-
+<section class="contact-hero">
+    <h2>Contattaci</h2>
+    <p>Siamo qui per rispondere alle tue domande.</p>
 </section>
 
+<div class="wave"></div>
 
-<div class="wave">
-<svg viewBox="0 0 1440 150" preserveAspectRatio="none">
-<path fill="#ffffff" fill-opacity="1"
-d="M0,96L60,90.7C120,85,240,75,360,74.7C480,75,600,85,720,85.3C840,85,960,75,1080,69.3C1200,64,1320,64,1380,64L1440,64L1440,150L0,150Z">
-</path>
-</svg>
+<section class="contact-section">
+
+<div class="contact-box">
+
+<h3>Hai domande o dubbi?</h3>
+<p>Compila il modulo qui sotto e ti risponderemo il prima possibile.</p>
+
+<form action="https://formspree.io/f/mvzbranp" method="POST" class="contact-form">
+
+<input type="email" name="email" placeholder="La tua email" required>
+
+<textarea name="message" rows="6" placeholder="Scrivi qui il tuo messaggio..." required></textarea>
+
+<button type="submit">Invia Messaggio</button>
+
+</form>
+
 </div>
 
-<section class="section" id="definizione">
-<h2>Definizione Clinica</h2>
 
-<div class="card">
-<p>
-Secondo il DSM-5 (Manuale Diagnostico e Statistico dei Disturbi Mentali), il Disturbo dello Spettro Autistico è caratterizzato da:
-</p>
+<div class="direct-email-box">
 
-<ul style="margin-top:20px; line-height:2;">
-<li>Difficoltà persistenti nella comunicazione e interazione sociale</li>
-<li>Comportamenti, interessi o attività ristretti e ripetitivi</li>
-<li>I sintomi devono essere presenti fin dalla prima infanzia</li>
-<li>Compromissione clinicamente significativa nel funzionamento quotidiano</li>
-</ul>
+<h3>Preferisci scriverci direttamente?</h3>
 
-<p style="margin-top:20px;">
-Il livello di supporto necessario varia da persona a persona e può essere classificato in tre livelli:
-livello 1 (richiede supporto), livello 2 (supporto sostanziale), livello 3 (supporto molto sostanziale).
-</p>
-</div>
+<p>Clicca qui sotto per inviarci una email.</p>
 
-<div class="wave">
-<svg viewBox="0 0 1440 150" preserveAspectRatio="none">
-<path fill="#ffffff" fill-opacity="1"
-d="M0,96L60,90.7C120,85,240,75,360,74.7C480,75,600,85,720,85.3C840,85,960,75,1080,69.3C1200,64,1320,64,1380,64L1440,64L1440,150L0,150Z">
-</path>
-</svg>
-</div>
-
-</section>
-
-
-<div class="wave">
-<svg viewBox="0 0 1440 150" preserveAspectRatio="none">
-<path fill="#ffffff" fill-opacity="1"
-d="M0,96L60,90.7C120,85,240,75,360,74.7C480,75,600,85,720,85.3C840,85,960,75,1080,69.3C1200,64,1320,64,1380,64L1440,64L1440,150L0,150Z">
-</path>
-</svg>
-</div>
-
-<section class="section" id="evoluzione">
-<h2>Evoluzione del Concetto di Autismo</h2>
-
-<div class="card">
-<p>
-Nel corso degli anni la comprensione dell’autismo è profondamente cambiata.
-In passato si parlava di disturbi separati come Sindrome di Asperger o Disturbo Autistico.
-Oggi queste diagnosi sono state unificate nel concetto di Spettro Autistico.
-</p>
-
-<p>
-La ricerca scientifica ha evidenziato che non si tratta di una malattia da “curare”,
-ma di una condizione neurobiologica che accompagna la persona per tutta la vita.
-</p>
-
-<p>
-Con interventi precoci e personalizzati è possibile migliorare significativamente le competenze comunicative,
-sociali e di autonomia personale.
-</p>
-</div>
-</section>
-
-
-<div class="wave">
-<svg viewBox="0 0 1440 150" preserveAspectRatio="none">
-<path fill="#ffffff" fill-opacity="1"
-d="M0,96L60,90.7C120,85,240,75,360,74.7C480,75,600,85,720,85.3C840,85,960,75,1080,69.3C1200,64,1320,64,1380,64L1440,64L1440,150L0,150Z">
-</path>
-</svg>
-</div>
-
-<section class="section" id="caratteristiche">
-<h2>Caratteristiche Principali</h2>
-
-<div class="card">
-<h3 style="margin-bottom:15px;">Comunicazione</h3>
-<p>
-Può variare dall’assenza di linguaggio verbale a un linguaggio molto sviluppato ma con difficoltà pragmatiche.
-Alcune persone possono avere difficoltà a comprendere metafore, ironia o linguaggio figurato.
-</p>
-</div>
-
-<div class="card">
-<h3 style="margin-bottom:15px;">Interazione Sociale</h3>
-<p>
-Difficoltà nel mantenere il contatto oculare, comprendere le emozioni altrui,
-interpretare le espressioni facciali o partecipare a conversazioni reciproche.
-</p>
-</div>
-
-<div class="card">
-<h3 style="margin-bottom:15px;">Comportamenti Ripetitivi</h3>
-<p>
-Movimenti ripetitivi (stimming), forte bisogno di routine, interessi molto intensi e specifici.
-I cambiamenti improvvisi possono generare ansia o disagio.
-</p>
-</div>
-
-<div class="card">
-<h3 style="margin-bottom:15px;">Sensibilità Sensoriale</h3>
-<p>
-Ipersensibilità o iposensibilità a suoni, luci, odori, consistenze o contatto fisico.
-L’ambiente può risultare sovrastimolante.
-</p>
-</div>
-</section>
-
-
-<div class="wave">
-<svg viewBox="0 0 1440 150" preserveAspectRatio="none">
-<path fill="#ffffff" fill-opacity="1"
-d="M0,96L60,90.7C120,85,240,75,360,74.7C480,75,600,85,720,85.3C840,85,960,75,1080,69.3C1200,64,1320,64,1380,64L1440,64L1440,150L0,150Z">
-</path>
-</svg>
-</div>
-
-<section class="section" id="diagnosi">
-<h2>Diagnosi e Valutazione</h2>
-
-<div class="card">
-<p>
-La diagnosi viene effettuata da un’équipe multidisciplinare composta da neuropsichiatri infantili,
-psicologi, logopedisti e terapisti della neuropsicomotricità.
-</p>
-
-<p>
-La valutazione include:
-</p>
-
-<ul style="margin-top:20px; line-height:2;">
-<li>Osservazione clinica</li>
-<li>Colloqui con la famiglia</li>
-<li>Test standardizzati</li>
-<li>Valutazione del linguaggio e delle competenze cognitive</li>
-</ul>
-
-<p style="margin-top:20px;">
-Una diagnosi precoce consente di avviare interventi tempestivi e mirati,
-favorendo uno sviluppo più armonico delle competenze.
-</p>
-</div>
-</section>
-<section class="section" id="intervento">
-<h2>Intervento e Strategie Educative</h2>
-
-<div class="card">
-<p>
-L’intervento nello Spettro Autistico deve essere personalizzato, intensivo e basato su evidenze scientifiche.
-Non esiste un unico metodo valido per tutti: ogni percorso viene costruito sulle esigenze,
-le abilità e gli obiettivi della persona.
-</p>
-
-<p>
-Tra gli approcci più utilizzati troviamo:
-</p>
-</div>
-
-<div class="methods">
-
-<a href="aba.html" target="_blank" class="method-box">
-<h3>Metodo ABA</h3>
-<p>
-L’Analisi Applicata del Comportamento (ABA) è un approccio scientifico basato sui principi
-dell’apprendimento. Mira a sviluppare abilità comunicative, sociali e cognitive
-attraverso rinforzi positivi e programmi strutturati.
-</p>
-<p style="margin-top:15px;">
-È particolarmente efficace nell’intervento precoce e nella promozione dell’autonomia.
-</p>
-</a>
-
-<a href="teacch.html" target="_blank" class="method-box">
-<h3>Metodo TEACCH</h3>
-<p>
-Il programma TEACCH si basa sulla strutturazione dell’ambiente e sulla prevedibilità.
-Utilizza supporti visivi, organizzazione degli spazi e routine chiare
-per favorire indipendenza e comprensione.
-</p>
-<p style="margin-top:15px;">
-Aiuta la persona a sentirsi sicura e a gestire meglio le attività quotidiane.
-</p>
+<a href="mailto:oltrelesfumature@gmail.com?subject=Richiesta informazioni Oltre Le Sfumature"
+class="btn-email">
+Scrivi una Email
 </a>
 
 </div>
-</section>
 
 
-<div class="wave">
-<svg viewBox="0 0 1440 150" preserveAspectRatio="none">
-<path fill="#ffffff" fill-opacity="1"
-d="M0,96L60,90.7C120,85,240,75,360,74.7C480,75,600,85,720,85.3C840,85,960,75,1080,69.3C1200,64,1320,64,1380,64L1440,64L1440,150L0,150Z">
-</path>
-</svg>
-</div>
+<div class="social-box">
 
-<section class="section" id="famiglia">
-<h2>Il Ruolo della Famiglia</h2>
+<h3>Seguici sui Social</h3>
 
-<div class="card">
-<p>
-La famiglia rappresenta il primo e più importante contesto di crescita.
-Il coinvolgimento attivo dei genitori nel percorso educativo
-aumenta significativamente l’efficacia degli interventi.
-</p>
-
-<p>
-Supportare una persona con autismo significa anche sostenere emotivamente
-i familiari, fornendo strumenti, formazione e momenti di confronto.
-</p>
-
-<p>
-La collaborazione tra scuola, terapisti e famiglia è fondamentale
-per garantire coerenza educativa e continuità negli apprendimenti.
-</p>
-</div>
-
-<div class="card">
-<h3 style="margin-bottom:15px;">Supporto Psicologico</h3>
-<p>
-Gruppi di sostegno, consulenze psicologiche e percorsi di parent training
-aiutano i genitori a comprendere meglio le dinamiche comportamentali
-e a gestire situazioni complesse con maggiore serenità.
-</p>
-</div>
-</section>
-
-
-<div class="wave">
-<svg viewBox="0 0 1440 150" preserveAspectRatio="none">
-<path fill="#ffffff" fill-opacity="1"
-d="M0,96L60,90.7C120,85,240,75,360,74.7C480,75,600,85,720,85.3C840,85,960,75,1080,69.3C1200,64,1320,64,1380,64L1440,64L1440,150L0,150Z">
-</path>
-</svg>
-</div>
-
-<section class="section" id="contatti">
-<h2>Contatti</h2>
-
-<div class="contact-info">
-
-<p>
-<strong>Email:</strong> 
-<a href="mailto:oltrelesfumature@gmail.com" style="color:#0066cc; text-decoration:none;">
+<p><strong>Email:</strong><br>
+<a href="mailto:oltrelesfumature@gmail.com">
 oltrelesfumature@gmail.com
-</a>
-</p>
+</a></p>
 
-<p style="margin-top:15px;">
-<strong>Instagram:</strong> 
-<a href="https://www.instagram.com/oltrelesfumature" target="_blank" style="color:#0066cc; text-decoration:none;">
+<p><strong>Instagram:</strong><br>
+<a href="https://www.instagram.com/oltrelesfumature" target="_blank">
 @oltrelesfumature
-</a>
-</p>
+</a></p>
 
-<p style="margin-top:15px;">
-<strong>TikTok:</strong> 
-<a href="https://www.tiktok.com/@oltre.le.sfumature" target="_blank" style="color:#0066cc; text-decoration:none;">
+<p><strong>TikTok:</strong><br>
+<a href="https://www.tiktok.com/@oltre.le.sfumature" target="_blank">
 @oltre.le.sfumature
-</a>
-</p>
+</a></p>
 
-<p style="margin-top:30px; line-height:1.8;">
-Per informazioni, collaborazioni o richieste di consulenza,
-non esitare a contattarci. Siamo qui per ascoltare,
-informare e costruire insieme un percorso di inclusione e consapevolezza.
-</p>
+<p><strong>Facebook:</strong><br>
+<a href="https://www.facebook.com/oltrelesfumature" target="_blank">
+oltrelesfumature
+</a></p>
 
 </div>
+
 </section>
+
+<footer>
+<p>© 2026 Oltre Le Sfumature - Tutti i diritti riservati</p>
+</footer>
+
+</body>
+</html>
