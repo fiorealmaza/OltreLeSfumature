@@ -3,13 +3,13 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Fondazione O.L.S – Disturbo dello Spettro Autistico</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<title>Fondazione Oltre Le Sfumature</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
 <style>
 
-/* ================= RESET ================= */
 *{
 margin:0;
 padding:0;
@@ -18,58 +18,82 @@ scroll-behavior:smooth;
 }
 
 body{
-font-family:'Inter',sans-serif;
-background:linear-gradient(135deg,#eef2ff,#f7faff);
-color:#1e293b;
-line-height:1.9;
+font-family:'Poppins',sans-serif;
+background:#f4f8ff;
+color:#1a1a1a;
+line-height:1.8;
+overflow-x:hidden;
 }
 
-/* ================= NAV ================= */
-nav{
-position:fixed;
-top:0;
-width:100%;
-padding:22px 8%;
-display:flex;
-justify-content:flex-end;
-background:rgba(255,255,255,0.95);
-backdrop-filter:blur(12px);
-box-shadow:0 4px 20px rgba(0,0,0,0.05);
-z-index:1000;
+section{
+padding:120px 10%;
+position:relative;
 }
 
-nav a{
-margin-left:30px;
-text-decoration:none;
-color:#1e3a8a;
-font-weight:500;
-transition:0.3s;
+h1,h2,h3{
+font-weight:600;
 }
 
-nav a:hover{
-color:#2563eb;
+h2{
+font-size:38px;
+margin-bottom:40px;
+text-align:center;
+color:#0b3d91;
+}
+
+p{
+margin-bottom:20px;
+}
+
+.container{
+max-width:1200px;
+margin:auto;
+}
+
+.grid-2{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+gap:40px;
+}
+
+.grid-3{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:30px;
+}
+
+.card{
+background:white;
+padding:40px;
+border-radius:20px;
+box-shadow:0 15px 40px rgba(0,0,0,0.08);
+transition:0.4s;
+}
+
+.card:hover{
+transform:translateY(-10px);
+box-shadow:0 25px 60px rgba(0,0,0,0.12);
+}
+
+.fade-in{
+opacity:0;
+transform:translateY(40px);
+transition:1s ease;
+}
+
+.fade-in.visible{
+opacity:1;
+transform:translateY(0);
 }
 
 /* ================= HERO ================= */
-.hero-wrapper{
-height:35vh;
-min-height:340px;
-margin-top:120px;
+
+.hero{
+height:100vh;
 display:flex;
 align-items:center;
 justify-content:center;
-padding:0 8%;
-}
-
-.hero{
-width:100%;
-background:linear-gradient(135deg,#1e3a8a,#2563eb);
-border-radius:45px;
-padding:80px;
-display:flex;
-align-items:center;
-justify-content:space-between;
-box-shadow:0 45px 120px rgba(37,99,235,0.35);
+background:#ffffff;
 position:relative;
 overflow:hidden;
 }
@@ -77,105 +101,178 @@ overflow:hidden;
 .hero::before{
 content:"";
 position:absolute;
-width:650px;
-height:650px;
-background:radial-gradient(circle,rgba(255,255,255,0.35),transparent 70%);
-top:-220px;
-right:-150px;
+width:600px;
+height:600px;
+background:radial-gradient(circle,#1e6fff33,transparent);
+top:-200px;
+right:-200px;
+filter:blur(100px);
 }
 
-.hero-text{width:65%;z-index:2;}
-
-.hero-title-box{
-background:white;
-padding:40px 55px;
-border-radius:35px;
-display:inline-block;
-box-shadow:
-0 0 0 4px rgba(255,255,255,0.85),
-0 0 80px rgba(255,255,255,0.7);
-}
-
-.hero h1{
-font-family:'Playfair Display',serif;
-font-size:3.4rem;
-color:#1e3a8a;
-}
-
-.hero p{
-margin-top:30px;
-color:white;
-font-size:1.25rem;
-max-width:700px;
-}
-
-.hero img{
-width:200px;
+.hero-content{
+display:flex;
+align-items:center;
+gap:40px;
 z-index:2;
 }
 
-/* ================= SECTIONS ================= */
-.section{
-padding:130px 8%;
+.hero-logo{
+width:90px;
+height:90px;
 }
 
-.container{
-max-width:1300px;
-margin:auto;
-}
-
-h2{
-font-family:'Playfair Display',serif;
-font-size:2.7rem;
-color:#1e3a8a;
-margin-bottom:50px;
-}
-
-h3{
-color:#1e3a8a;
-margin-bottom:20px;
-font-size:1.4rem;
-}
-
-.card{
+.hero-title{
+font-size:60px;
+color:#ffffff;
+padding:25px 50px;
+border-radius:20px;
 background:white;
-padding:55px;
-border-radius:35px;
-box-shadow:0 25px 70px rgba(0,0,0,0.06);
-margin-bottom:50px;
+position:relative;
+color:#0b3d91;
 }
 
-.highlight{
-background:linear-gradient(135deg,#1e3a8a,#2563eb);
-color:white;
-padding:80px;
-border-radius:45px;
-box-shadow:0 35px 100px rgba(37,99,235,0.4);
+.hero-title::before{
+content:"";
+position:absolute;
+inset:-6px;
+border-radius:25px;
+padding:6px;
+background:linear-gradient(45deg,#1e6fff,#00c6ff,#1e6fff);
+-webkit-mask:
+linear-gradient(#fff 0 0) content-box,
+linear-gradient(#fff 0 0);
+-webkit-mask-composite:xor;
+mask-composite:exclude;
+animation:glow 3s linear infinite;
 }
+
+@keyframes glow{
+0%{filter:hue-rotate(0deg);}
+100%{filter:hue-rotate(360deg);}
+}
+
+.hero-sub{
+margin-top:20px;
+font-size:20px;
+color:#333;
+max-width:600px;
+}
+
+.hero-btn{
+margin-top:30px;
+display:inline-block;
+padding:15px 35px;
+border-radius:30px;
+background:#1e6fff;
+color:white;
+text-decoration:none;
+font-weight:600;
+transition:0.3s;
+}
+
+.hero-btn:hover{
+background:#0b3d91;
+}
+
+/* Timeline */
+
+.timeline{
+position:relative;
+max-width:900px;
+margin:100px auto;
+}
+
+.timeline::after{
+content:'';
+position:absolute;
+width:4px;
+background:#1e6fff;
+top:0;
+bottom:0;
+left:50%;
+margin-left:-2px;
+}
+
+.timeline-item{
+padding:20px 40px;
+position:relative;
+width:50%;
+}
+
+.timeline-item.left{
+left:0;
+}
+
+.timeline-item.right{
+left:50%;
+}
+
+.timeline-item::after{
+content:'';
+position:absolute;
+width:20px;
+height:20px;
+background:#1e6fff;
+border-radius:50%;
+top:30px;
+right:-10px;
+}
+
+.timeline-item.right::after{
+left:-10px;
+}
+
+.timeline-content{
+background:white;
+padding:30px;
+border-radius:15px;
+box-shadow:0 10px 30px rgba(0,0,0,0.08);
+}
+
+/* FAQ */
+
+.faq-item{
+margin-bottom:20px;
+}
+
+.faq-question{
+width:100%;
+padding:20px;
+background:#1e6fff;
+color:white;
+border:none;
+text-align:left;
+font-size:16px;
+cursor:pointer;
+border-radius:10px;
+}
+
+.faq-answer{
+display:none;
+padding:20px;
+background:white;
+border-radius:10px;
+box-shadow:0 5px 15px rgba(0,0,0,0.08);
+}
+
+.faq-answer.show{
+display:block;
+}
+
+/* Footer */
 
 footer{
-background:#1e3a8a;
+background:#0b3d91;
 color:white;
-padding:100px;
-text-align:center;
-margin-top:140px;
-border-radius:45px 45px 0 0;
+padding:80px 10%;
 }
 
-@media(max-width:1100px){
-.hero{
-flex-direction:column;
-text-align:center;
+footer h3{
+margin-bottom:20px;
 }
-.hero-text{
-width:100%;
-}
-.hero img{
-margin-top:40px;
-}
-nav{
-justify-content:center;
-}
+
+footer p{
+opacity:0.9;
 }
 
 </style>
@@ -183,131 +280,1960 @@ justify-content:center;
 
 <body>
 
-<nav>
-<a href="#">Quadro Clinico</a>
-<a href="#">Diagnosi</a>
-<a href="#">Interventi</a>
-<a href="#">Inclusione</a>
-<a href="#">Mission</a>
-</nav>
+<!-- HERO -->
 
-<div class="hero-wrapper">
-<div class="hero">
-<div class="hero-text">
-<div class="hero-title-box">
-<h1>Disturbo dello Spettro Autistico</h1>
-</div>
-<p>Fondazione O.L.S – Oltre Le Sfumature.  
-Portale istituzionale di approfondimento medico-scientifico dedicato alla comprensione, diagnosi e intervento nel Disturbo dello Spettro Autistico lungo tutto l’arco della vita.</p>
-</div>
-<img src="logo.png" alt="Logo Fondazione OLS">
-</div>
-</div>
-
-<!-- SEZIONE 1 -->
-<div class="section">
-<div class="container">
-<h2>Quadro Clinico e Definizione Approfondita</h2>
-
-<div class="card">
-<h3>Definizione Clinica</h3>
-<p>
-Il Disturbo dello Spettro Autistico (ASD) rappresenta un disturbo del neurosviluppo caratterizzato da compromissioni persistenti nella comunicazione sociale reciproca e dalla presenza di pattern comportamentali ristretti e ripetitivi.  
-Il termine “spettro” riflette l’estrema eterogeneità delle manifestazioni cliniche, che possono variare significativamente in intensità, modalità espressiva e livello di autonomia individuale.
+<section class="hero">
+<div class="hero-content fade-in">
+<img src="logo.png" class="hero-logo" alt="Logo Fondazione">
+<div>
+<h1 class="hero-title">Fondazione Oltre Le Sfumature</h1>
+<p class="hero-sub">
+Promuovere consapevolezza scientifica, inclusione sociale 
+e supporto multidisciplinare nel Disturbo dello Spettro Autistico.
 </p>
-<p>
-Le manifestazioni sintomatologiche emergono tipicamente nella prima infanzia, sebbene in alcuni casi possano diventare più evidenti con l’aumentare delle richieste sociali e ambientali. Il disturbo accompagna l’individuo lungo tutto l’arco della vita, con traiettorie evolutive differenti.
-</p>
+<a href="#definizione" class="hero-btn">Scopri di più</a>
 </div>
+</div>
+</section>
 
-<div class="card">
-<h3>Neurobiologia e Connettività Cerebrale</h3>
-<p>
-Le evidenze neuroscientifiche indicano alterazioni nei circuiti di connettività cerebrale, in particolare nelle reti coinvolte nella cognizione sociale, nell’elaborazione emotiva e nell’integrazione sensoriale.  
-Sono state osservate differenze nel funzionamento delle aree frontali, temporali e limbiche, oltre a variazioni nei pattern di sincronizzazione neuronale.
-</p>
-<p>
-Tali differenze non rappresentano una “lesione” ma una modalità neurobiologica distinta di organizzazione e processamento delle informazioni.
-</p>
-</div>
+  
+<!-- ===================================================== -->
+<!-- SEZIONE 1 – DEFINIZIONE CLINICA APPROFONDITA -->
+<!-- ===================================================== -->
 
-<div class="card">
-<h3>Genetica e Fattori Ambientali</h3>
-<p>
-L’ASD presenta una significativa componente genetica, con centinaia di varianti associate identificate attraverso studi di sequenziamento genomico.  
-Parallelamente, fattori ambientali prenatali e perinatali possono contribuire in interazione con la predisposizione genetica.
-</p>
-<p>
-L’ipotesi attuale è quella di una multifattorialità complessa, in cui geni e ambiente interagiscono influenzando i processi di sviluppo neuronale precoce.
-</p>
-</div>
+<section id="definizione">
+<div class="container fade-in">
 
-</div>
-</div>
-
-<!-- SEZIONE 2 -->
-<div class="section">
-<div class="container">
-<h2>Diagnosi e Valutazione Multidisciplinare</h2>
+<h2>Definizione Clinica Approfondita</h2>
 
 <div class="card">
 <p>
-La diagnosi di Disturbo dello Spettro Autistico si basa su criteri clinici definiti dal DSM-5-TR e richiede una valutazione multidisciplinare che coinvolga neuropsichiatra infantile, psicologo, logopedista e altre figure professionali.
+Il Disturbo dello Spettro Autistico (DSA) è una condizione del neurosviluppo
+caratterizzata da differenze persistenti nella comunicazione sociale
+e dalla presenza di pattern comportamentali ristretti e ripetitivi.
 </p>
+
 <p>
-Strumenti standardizzati come ADOS-2 e ADI-R supportano l’osservazione clinica, garantendo maggiore affidabilità e validità diagnostica.
+Il termine “spettro” indica un’ampia variabilità di manifestazioni cliniche,
+livelli di funzionamento e bisogni di supporto.
 </p>
+
 <p>
-Una diagnosi precoce consente l’attivazione tempestiva di interventi mirati, favorendo traiettorie evolutive più positive.
+Secondo i criteri diagnostici internazionali, le caratteristiche principali includono:
+</p>
+
+<p>
+• Difficoltà nella reciprocità socio-emotiva  
+• Alterazioni nella comunicazione verbale e non verbale  
+• Pattern comportamentali ripetitivi  
+• Interessi ristretti e intensi  
+• Iper o ipo-reattività agli stimoli sensoriali  
+</p>
+
+<p>
+L’autismo non è una malattia degenerativa,
+ma una condizione neurobiologica presente fin dalle prime fasi dello sviluppo.
+</p>
+
+<p>
+L’identificazione precoce e l’intervento mirato possono
+favorire un significativo miglioramento delle competenze adattive.
 </p>
 </div>
 
 </div>
+</section>
+
+
+<!-- ===================================================== -->
+<!-- SEZIONE 2 – NEUROBIOLOGIA -->
+<!-- ===================================================== -->
+
+<section>
+<div class="container fade-in">
+
+<h2>Neurobiologia del Disturbo dello Spettro Autistico</h2>
+
+<div class="grid-2">
+
+<div class="card">
+<h3>Sviluppo Cerebrale</h3>
+
+<p>
+Studi di neuroimaging hanno evidenziato differenze nella connettività
+tra diverse aree cerebrali.
+</p>
+
+<p>
+Alcune ricerche indicano:
+</p>
+
+<p>
+• Iperconnettività locale  
+• Ipo-connettività a lunga distanza  
+• Differenze nell’attività della corteccia prefrontale  
+• Alterazioni nel sistema dei neuroni specchio  
+</p>
+
+<p>
+Queste variazioni possono influenzare
+l’elaborazione sociale e la regolazione comportamentale.
+</p>
 </div>
 
-<!-- SEZIONE 3 HIGHLIGHT -->
-<div class="section">
-<div class="container">
-<div class="highlight">
-<h2>Interventi Basati su Evidenze Scientifiche</h2>
+<div class="card">
+<h3>Plasticità Neuronale</h3>
+
 <p>
-Le linee guida internazionali raccomandano interventi precoci, intensivi e individualizzati.  
-Tra gli approcci con maggiore evidenza empirica rientrano gli interventi comportamentali basati sull’Analisi Applicata del Comportamento (ABA), i modelli evolutivo-relazionali e i programmi naturalistici come l’Early Start Denver Model.
+Il cervello nei primi anni di vita presenta elevata plasticità.
 </p>
+
 <p>
-Interventi complementari quali logopedia, terapia occupazionale e psicomotricità contribuiscono al potenziamento delle abilità comunicative, adattive e sensoriali.
+Interventi intensivi e precoci possono modulare
+le traiettorie di sviluppo neuronale.
 </p>
+
 <p>
-L’obiettivo centrale non è “normalizzare” il comportamento, ma promuovere autonomia, qualità della vita e partecipazione sociale.
+La ricerca neuroscientifica continua a esplorare
+i meccanismi sinaptici coinvolti nel DSA.
 </p>
-</div>
-</div>
 </div>
 
-<!-- SEZIONE 4 -->
-<div class="section">
-<div class="container">
-<h2>Inclusione, Età Adulta e Prospettive Future</h2>
+</div>
+
+<div class="card">
+<h3>Regolazione Neurochimica</h3>
+
+<p>
+Sono state studiate differenze nei sistemi:
+</p>
+
+<p>
+• Serotoninergico  
+• GABAergico  
+• Glutammatergico  
+</p>
+
+<p>
+Tali sistemi sono implicati nella modulazione
+dell’equilibrio eccitazione-inibizione.
+</p>
+
+<p>
+L’alterazione di questo equilibrio può contribuire
+alla sensibilità sensoriale e ai comportamenti ripetitivi.
+</p>
+</div>
+
+</div>
+</section>
+
+
+<!-- ===================================================== -->
+<!-- SEZIONE 3 – GENETICA -->
+<!-- ===================================================== -->
+
+<section>
+<div class="container fade-in">
+
+<h2>Genetica e Componenti Ereditarie</h2>
 
 <div class="card">
 <p>
-Il sistema scolastico italiano prevede strumenti inclusivi quali il Piano Educativo Individualizzato (PEI) e la presenza dell’insegnante di sostegno, favorendo l’integrazione e la partecipazione attiva dell’alunno.
+La componente genetica del DSA è significativa.
+Studi su gemelli hanno evidenziato un’elevata concordanza nei gemelli monozigoti.
+</p>
+
+<p>
+Sono stati identificati numerosi geni associati,
+tra cui quelli coinvolti nella formazione e regolazione sinaptica.
+</p>
+
+<p>
+Il modello genetico è multifattoriale e complesso,
+con interazione tra varianti genetiche comuni e rare.
+</p>
+
+<p>
+In alcuni casi, il DSA può essere associato a sindromi genetiche specifiche.
+</p>
+</div>
+
+<div class="card">
+<h3>Mutazioni e Varianti</h3>
+
+<p>
+• Varianti de novo  
+• Mutazioni rare ad alto impatto  
+• Varianti poligeniche cumulative  
+</p>
+
+<p>
+La genetica non determina rigidamente il destino,
+ma interagisce con fattori ambientali.
+</p>
+</div>
+
+</div>
+</section>
+
+
+<!-- ===================================================== -->
+<!-- SEZIONE 4 – FATTORI AMBIENTALI -->
+<!-- ===================================================== -->
+
+<section>
+<div class="container fade-in">
+
+<h2>Fattori Ambientali e Interazione Gene-Ambiente</h2>
+
+<div class="grid-2">
+
+<div class="card">
+<p>
+Alcuni fattori prenatali sono stati studiati come possibili elementi di rischio:
+</p>
+
+<p>
+• Età avanzata dei genitori  
+• Prematurità  
+• Complicanze ostetriche  
+• Esposizione a infezioni materne  
+</p>
+
+<p>
+È fondamentale sottolineare che nessun singolo fattore ambientale
+è sufficiente a causare il DSA.
+</p>
+</div>
+
+<div class="card">
+<p>
+Le evidenze scientifiche hanno escluso correlazioni
+tra vaccinazioni e autismo.
+</p>
+
+<p>
+La letteratura internazionale è concorde
+nel confermare la sicurezza vaccinale.
+</p>
+
+<p>
+Il modello attuale è multifattoriale:
+genetica + ambiente + sviluppo neurobiologico.
+</p>
+</div>
+
+</div>
+
+</div>
+</section>
+
+
+<!-- ===================================================== -->
+<!-- SEZIONE 5 – EPIDEMIOLOGIA COMPLETA -->
+<!-- ===================================================== -->
+
+<section>
+<div class="container fade-in">
+
+<h2>Epidemiologia e Dati di Prevalenza</h2>
+
+<div class="grid-3">
+
+<div class="card">
+<h3>Prevalenza</h3>
+<p>
+Le stime internazionali indicano una prevalenza
+di circa 1 bambino su 36.
+</p>
+</div>
+
+<div class="card">
+<h3>Differenze di Genere</h3>
+<p>
+Il disturbo è diagnosticato più frequentemente nei maschi,
+con rapporto medio di circa 4:1.
+</p>
+</div>
+
+<div class="card">
+<h3>Trend Storico</h3>
+<p>
+Negli ultimi decenni si è osservato un aumento delle diagnosi,
+attribuibile a maggiore consapevolezza e criteri diagnostici più inclusivi.
+</p>
+</div>
+
+</div>
+
+<div class="card">
+<p>
+La prevalenza varia tra i Paesi in base a:
+</p>
+
+<p>
+• Accesso ai servizi sanitari  
+• Sistemi di screening  
+• Criteri diagnostici adottati  
+</p>
+
+<p>
+L’aumento delle diagnosi non indica un’“epidemia”,
+ma un miglior riconoscimento clinico.
+</p>
+</div>
+
+</div>
+</section>
+
+
+<!-- ===================================================== -->
+<!-- SEZIONE 6 – NEURODIVERSITÀ -->
+<!-- ===================================================== -->
+
+<section>
+<div class="container fade-in">
+
+<h2>Neurodiversità e Approccio Centrato sulla Persona</h2>
+
+<div class="card">
+<p>
+Il concetto di neurodiversità riconosce le differenze neurologiche
+come parte della naturale variabilità umana.
+</p>
+
+<p>
+L’obiettivo non è eliminare l’identità autistica,
+ma promuovere inclusione, rispetto e pari opportunità.
+</p>
+
+<p>
+Un linguaggio rispettoso e centrato sulla persona
+favorisce dignità e autodeterminazione.
+</p>
+
+<p>
+La prospettiva moderna integra:
+</p>
+
+<p>
+• Evidenze scientifiche  
+• Diritti civili  
+• Inclusione sociale  
+• Supporti personalizzati  
+</p>
+</div>
+
+</div>
+</section>
+
+
+<!-- ===================================================== -->
+<!-- SEZIONE 7 – CLASSIFICAZIONE DSM-5 -->
+<!-- ===================================================== -->
+
+<section>
+<div class="container fade-in">
+
+<h2>Classificazione Diagnostica secondo DSM-5</h2>
+
+<div class="card">
+<p>
+Il DSM-5 definisce il Disturbo dello Spettro Autistico come una
+condizione caratterizzata da due domini principali:
+</p>
+
+<p><strong>Dominio A – Comunicazione e Interazione Sociale</strong></p>
+
+<p>
+• Deficit nella reciprocità socio-emotiva  
+• Deficit nei comportamenti comunicativi non verbali  
+• Difficoltà nello sviluppo e mantenimento delle relazioni  
+</p>
+
+<p><strong>Dominio B – Pattern Comportamentali Ristretti e Ripetitivi</strong></p>
+
+<p>
+• Movimenti o linguaggio ripetitivi  
+• Insistenza su routine e rigidità  
+• Interessi altamente ristretti  
+• Iper o ipo-reattività sensoriale  
+</p>
+
+<p>
+I sintomi devono essere presenti fin dalle prime fasi dello sviluppo
+e causare compromissione clinicamente significativa.
+</p>
+</div>
+
+</div>
+</section>
+
+
+<!-- ===================================================== -->
+<!-- SEZIONE 8 – LIVELLI DI SUPPORTO -->
+<!-- ===================================================== -->
+
+<section>
+<div class="container fade-in">
+
+<h2>Livelli di Supporto nel DSM-5</h2>
+
+<div class="grid-3">
+
+<div class="card">
+<h3>Livello 1</h3>
+<p>
+Richiede supporto.
+Difficoltà nella pianificazione sociale e flessibilità.
+Può vivere in relativa autonomia con supporti mirati.
+</p>
+</div>
+
+<div class="card">
+<h3>Livello 2</h3>
+<p>
+Richiede supporto sostanziale.
+Difficoltà evidenti nella comunicazione sociale,
+rigidità comportamentale marcata.
+</p>
+</div>
+
+<div class="card">
+<h3>Livello 3</h3>
+<p>
+Richiede supporto molto sostanziale.
+Grave compromissione comunicativa e comportamentale.
+Necessita di assistenza intensiva continuativa.
+</p>
+</div>
+
+</div>
+
+<div class="card">
+<p>
+I livelli di supporto non rappresentano un’etichetta permanente.
+Possono modificarsi nel tempo in base allo sviluppo
+e agli interventi ricevuti.
+</p>
+</div>
+
+</div>
+</section>
+
+
+<!-- ===================================================== -->
+<!-- SEZIONE 9 – SEGNALI PRECOCI PER ETÀ -->
+<!-- ===================================================== -->
+
+<section>
+<div class="container fade-in">
+
+<h2>Segnali Precoci Divisi per Fasce di Età</h2>
+
+<div class="timeline">
+
+<div class="timeline-item left">
+<div class="timeline-content">
+<h3>0 – 12 mesi</h3>
+<p>
+• Ridotto contatto oculare  
+• Scarsa risposta al nome  
+• Limitato sorriso sociale  
+• Ridotta vocalizzazione reciproca  
+</p>
+</div>
+</div>
+
+<div class="timeline-item right">
+<div class="timeline-content">
+<h3>12 – 24 mesi</h3>
+<p>
+• Assenza di gesti indicativi  
+• Ritardo nel linguaggio  
+• Mancanza di gioco simbolico  
+• Ridotta attenzione condivisa  
+</p>
+</div>
+</div>
+
+<div class="timeline-item left">
+<div class="timeline-content">
+<h3>2 – 4 anni</h3>
+<p>
+• Linguaggio ecolalico  
+• Interesse ristretto per oggetti  
+• Difficoltà nel gioco con pari  
+• Iper-reattività sensoriale  
+</p>
+</div>
+</div>
+
+<div class="timeline-item right">
+<div class="timeline-content">
+<h3>5 – 12 anni</h3>
+<p>
+• Difficoltà pragmatiche  
+• Rigidità cognitiva  
+• Interessi circoscritti  
+• Problemi di regolazione emotiva  
+</p>
+</div>
+</div>
+
+<div class="timeline-item left">
+<div class="timeline-content">
+<h3>Adolescenza</h3>
+<p>
+• Ansia sociale  
+• Isolamento  
+• Consapevolezza delle differenze  
+• Rischio di comorbidità depressive  
+</p>
+</div>
+</div>
+
+<div class="timeline-item right">
+<div class="timeline-content">
+<h3>Età adulta</h3>
+<p>
+• Difficoltà lavorative  
+• Sfide relazionali  
+• Bisogno di supporti personalizzati  
+</p>
+</div>
+</div>
+
+</div>
+
+</div>
+</section>
+
+
+<!-- ===================================================== -->
+<!-- SEZIONE 10 – PERCORSO DIAGNOSTICO STEP BY STEP -->
+<!-- ===================================================== -->
+
+<section>
+<div class="container fade-in">
+
+<h2>Percorso Diagnostico Multidisciplinare</h2>
+
+<div class="grid-2">
+
+<div class="card">
+<h3>Fase 1 – Primo Sospetto</h3>
+<p>
+Segnalazione da parte dei genitori o del pediatra
+in presenza di segnali atipici.
+</p>
+</div>
+
+<div class="card">
+<h3>Fase 2 – Invio Specialistico</h3>
+<p>
+Valutazione presso servizio di neuropsichiatria infantile.
+</p>
+</div>
+
+<div class="card">
+<h3>Fase 3 – Valutazione Multidisciplinare</h3>
+<p>
+Osservazione clinica, test standardizzati,
+colloquio con caregiver.
+</p>
+</div>
+
+<div class="card">
+<h3>Fase 4 – Restituzione Diagnostica</h3>
+<p>
+Colloquio dettagliato con la famiglia,
+spiegazione del profilo funzionale.
+</p>
+</div>
+
+<div class="card">
+<h3>Fase 5 – Attivazione Interventi</h3>
+<p>
+Pianificazione del progetto terapeutico personalizzato.
+</p>
+</div>
+
+</div>
+
+</div>
+</section>
+
+
+<!-- ===================================================== -->
+<!-- SEZIONE 11 – COMORBIDITÀ COMPLETE -->
+<!-- ===================================================== -->
+
+<section>
+<div class="container fade-in">
+
+<h2>Comorbidità Psichiatriche e Mediche Associate</h2>
+
+<div class="grid-2">
+
+<div class="card">
+<h3>Disturbi Psichiatrici</h3>
+<p>
+• Disturbo d’Ansia  
+• Disturbo Depressivo  
+• ADHD  
+• Disturbo Ossessivo-Compulsivo  
+• Disturbo Oppositivo Provocatorio  
+</p>
+</div>
+
+<div class="card">
+<h3>Condizioni Mediche</h3>
+<p>
+• Epilessia  
+• Disturbi del sonno  
+• Disturbi gastrointestinali  
+• Problemi alimentari selettivi  
+</p>
+</div>
+
+</div>
+
+<div class="card">
+<p>
+Il trattamento delle comorbidità è fondamentale
+per migliorare la qualità della vita globale.
+</p>
+
+<p>
+Una valutazione integrata consente di distinguere
+tra sintomi primari del DSA e condizioni associate.
+</p>
+</div>
+
+</div>
+</section>
+
+
+<!-- ===================================================== -->
+<!-- SEZIONE 12 – PROFILO SENSORIALE AVANZATO -->
+<!-- ===================================================== -->
+
+<section>
+<div class="container fade-in">
+
+<h2>Profilo Sensoriale Avanzato e Integrazione Multisensoriale</h2>
+
+<div class="card">
+<p>
+Le differenze nell’elaborazione sensoriale rappresentano una componente centrale
+nel Disturbo dello Spettro Autistico e influenzano in modo significativo
+il comportamento quotidiano, l’apprendimento e la regolazione emotiva.
+</p>
+
+<p>
+La percezione degli stimoli può risultare amplificata, attenuata
+oppure qualitativamente differente rispetto alla popolazione generale.
+</p>
+
+<p>
+Queste variazioni coinvolgono diversi sistemi sensoriali:
+</p>
+
+<p>
+• Sistema uditivo  
+• Sistema visivo  
+• Sistema tattile  
+• Sistema vestibolare  
+• Sistema propriocettivo  
+• Sistema gustativo e olfattivo  
+</p>
+</div>
+
+<div class="grid-3">
+
+<div class="card">
+<h3>Iper-reattività Sensoriale</h3>
+<p>
+Alcuni individui possono manifestare una risposta eccessiva agli stimoli ambientali.
 </p>
 <p>
-In età adulta emergono nuove sfide legate all’autonomia abitativa, all’inserimento lavorativo e alla partecipazione sociale. Percorsi di formazione professionale e progetti di inclusione occupazionale risultano fondamentali.
+Esempi frequenti includono:
 </p>
 <p>
-La ricerca attuale si orienta verso modelli di supporto personalizzati lungo tutto il ciclo di vita.
+• Disagio intenso per rumori improvvisi  
+• Fastidio per luci fluorescenti  
+• Rifiuto di tessuti o etichette  
+• Selettività alimentare legata a consistenze  
+</p>
+<p>
+L’iper-reattività può generare evitamento o crisi da sovraccarico sensoriale.
+</p>
+</div>
+
+<div class="card">
+<h3>Ipo-reattività</h3>
+<p>
+In altri casi si osserva una ridotta risposta agli stimoli.
+</p>
+<p>
+Possono essere presenti:
+</p>
+<p>
+• Apparente indifferenza al dolore  
+• Ridotta percezione della temperatura  
+• Bassa risposta a richiami verbali  
+</p>
+<p>
+Questa condizione può influenzare sicurezza e consapevolezza ambientale.
+</p>
+</div>
+
+<div class="card">
+<h3>Ricerca Sensoriale</h3>
+<p>
+Molti comportamenti ripetitivi possono avere funzione autoregolatoria.
+</p>
+<p>
+Esempi:
+</p>
+<p>
+• Dondolamento  
+• Sfarfallio delle mani  
+• Osservazione prolungata di oggetti rotanti  
+• Pressione profonda sul corpo  
+</p>
+<p>
+Questi comportamenti possono favorire stabilizzazione emotiva.
 </p>
 </div>
 
 </div>
+
+<div class="card">
+<p>
+La comprensione del profilo sensoriale individuale permette di strutturare
+ambienti più prevedibili e regolati, riducendo il sovraccarico
+e favorendo partecipazione attiva.
+</p>
 </div>
 
-<footer>
-© 2026 Fondazione O.L.S – Oltre Le Sfumature  
-Portale istituzionale dedicato alla promozione dell’inclusione, della ricerca e della conoscenza scientifica nel Disturbo dello Spettro Autistico.
-</footer>
+</div>
+</section>
 
-</body>
-</html>
+
+<!-- ===================================================== -->
+<!-- SEZIONE 13 – LINGUAGGIO E COMUNICAZIONE -->
+<!-- ===================================================== -->
+
+<section>
+<div class="container fade-in">
+
+<h2>Linguaggio, Comunicazione e Pragmatica Sociale</h2>
+
+<div class="card">
+<p>
+Il linguaggio nel Disturbo dello Spettro Autistico può seguire
+traiettorie estremamente variabili.
+</p>
+
+<p>
+Alcuni individui presentano un ritardo nell’acquisizione,
+altri sviluppano competenze linguistiche formalmente corrette
+ma con difficoltà pragmatiche.
+</p>
+</div>
+
+<div class="grid-2">
+
+<div class="card">
+<h3>Aspetti Espressivi</h3>
+<p>
+• Ritardo nell’emergere delle prime parole  
+• Assenza di linguaggio verbale  
+• Ecolalia immediata o differita  
+• Uso letterale del linguaggio  
+• Prosodia atipica  
+</p>
+</div>
+
+<div class="card">
+<h3>Aspetti Pragmatici</h3>
+<p>
+• Difficoltà nel mantenere una conversazione reciproca  
+• Interpretazione letterale di metafore  
+• Difficoltà nella comprensione delle emozioni altrui  
+• Ridotta flessibilità comunicativa  
+</p>
+</div>
+
+</div>
+
+<div class="card">
+<p>
+La comunicazione non verbale può includere:
+</p>
+<p>
+• Ridotto uso di gesti  
+• Limitato contatto oculare  
+• Difficoltà nell’interpretare espressioni facciali  
+</p>
+
+<p>
+Nei casi di linguaggio verbale limitato,
+l’utilizzo di strumenti di Comunicazione Aumentativa Alternativa
+può favorire autonomia e partecipazione sociale.
+</p>
+</div>
+
+</div>
+</section>
+
+
+<!-- ===================================================== -->
+<!-- SEZIONE 14 – FUNZIONAMENTO COGNITIVO -->
+<!-- ===================================================== -->
+
+<section>
+<div class="container fade-in">
+
+<h2>Funzionamento Cognitivo e Profili Neuropsicologici</h2>
+
+<div class="card">
+<p>
+Il profilo cognitivo è altamente eterogeneo.
+</p>
+
+<p>
+Si possono osservare:
+</p>
+
+<p>
+• Disabilità intellettiva associata  
+• Funzionamento cognitivo nella norma  
+• Alto potenziale cognitivo  
+</p>
+
+<p>
+Molti individui presentano pattern disomogenei,
+con punti di forza specifici accanto a fragilità circoscritte.
+</p>
+</div>
+
+<div class="grid-3">
+
+<div class="card">
+<h3>Punti di Forza</h3>
+<p>
+• Memoria visiva  
+• Attenzione ai dettagli  
+• Pensiero sistematico  
+• Capacità logiche specifiche  
+</p>
+</div>
+
+<div class="card">
+<h3>Aree di Fragilità</h3>
+<p>
+• Generalizzazione delle competenze  
+• Pensiero astratto  
+• Flessibilità cognitiva  
+</p>
+</div>
+
+<div class="card">
+<h3>Stile di Pensiero</h3>
+<p>
+Spesso orientato a:
+</p>
+<p>
+• Struttura  
+• Regolarità  
+• Prevedibilità  
+</p>
+</div>
+
+</div>
+
+</div>
+</section>
+
+
+<!-- ===================================================== -->
+<!-- SEZIONE 15 – REGOLAZIONE EMOTIVA -->
+<!-- ===================================================== -->
+
+<section>
+<div class="container fade-in">
+
+<h2>Regolazione Emotiva e Autoregolazione</h2>
+
+<div class="card">
+<p>
+La regolazione emotiva può rappresentare una delle principali sfide.
+</p>
+
+<p>
+Le difficoltà possono manifestarsi con:
+</p>
+
+<p>
+• Reazioni intense a frustrazione  
+• Crisi comportamentali  
+• Ritiro sociale  
+• Ansia anticipatoria  
+</p>
+
+<p>
+Spesso tali reazioni sono correlate a:
+</p>
+
+<p>
+• Sovraccarico sensoriale  
+• Imprevedibilità ambientale  
+• Richieste eccessive rispetto alle risorse disponibili  
+</p>
+</div>
+
+<div class="card">
+<p>
+Interventi mirati alla consapevolezza emotiva,
+alla strutturazione dell’ambiente
+e all’insegnamento di strategie di coping
+possono favorire maggiore stabilità.
+</p>
+</div>
+
+</div>
+</section>
+
+
+<!-- ===================================================== -->
+<!-- SEZIONE 16 – FUNZIONI ESECUTIVE -->
+<!-- ===================================================== -->
+
+<section>
+<div class="container fade-in">
+
+<h2>Funzioni Esecutive e Flessibilità Cognitiva</h2>
+
+<div class="card">
+<p>
+Le funzioni esecutive comprendono abilità come:
+</p>
+
+<p>
+• Pianificazione  
+• Inibizione comportamentale  
+• Memoria di lavoro  
+• Flessibilità mentale  
+• Organizzazione temporale  
+</p>
+</div>
+
+<div class="grid-2">
+
+<div class="card">
+<h3>Difficoltà Comuni</h3>
+<p>
+• Cambiare attività  
+• Gestire imprevisti  
+• Pianificare compiti complessi  
+• Iniziare o terminare attività  
+</p>
+</div>
+
+<div class="card">
+<h3>Strategie di Supporto</h3>
+<p>
+• Agende visive  
+• Suddivisione dei compiti  
+• Routine prevedibili  
+• Strumenti digitali di organizzazione  
+</p>
+</div>
+
+</div>
+
+</div>
+</section>
+
+
+<!-- ===================================================== -->
+<!-- SEZIONE 17 – FATTORI DI RISCHIO -->
+<!-- ===================================================== -->
+
+<section>
+<div class="container fade-in">
+
+<h2>Fattori di Rischio e Modello Multifattoriale</h2>
+
+<div class="card">
+<p>
+Il Disturbo dello Spettro Autistico è il risultato
+di una complessa interazione tra predisposizione genetica
+e fattori ambientali.
+</p>
+</div>
+
+<div class="grid-3">
+
+<div class="card">
+<h3>Fattori Prenatali</h3>
+<p>
+• Età avanzata dei genitori  
+• Infezioni materne in gravidanza  
+• Esposizione a sostanze tossiche  
+</p>
+</div>
+
+<div class="card">
+<h3>Fattori Perinatali</h3>
+<p>
+• Prematurità  
+• Basso peso alla nascita  
+• Complicanze ostetriche  
+</p>
+</div>
+
+<div class="card">
+<h3>Fattori Genetici</h3>
+<p>
+• Familiarità  
+• Varianti genetiche rare  
+• Mutazioni de novo  
+</p>
+</div>
+
+</div>
+
+<div class="card">
+<p>
+È fondamentale ribadire che nessun singolo fattore
+è sufficiente a determinare la condizione.
+</p>
+
+<p>
+Il modello attuale è integrato e multifattoriale.
+</p>
+</div>
+
+</div>
+</section>
+
+
+<!-- ===================================================== -->
+<!-- SEZIONE 18 – INTERVENTI BASATI SULL’EVIDENZA -->
+<!-- ===================================================== -->
+
+<section>
+<div class="container fade-in">
+
+<h2>Interventi Basati sull’Evidenza Scientifica</h2>
+
+<div class="card">
+<p>
+L’intervento nel Disturbo dello Spettro Autistico deve essere:
+</p>
+
+<p>
+• Individualizzato  
+• Intensivo  
+• Strutturato  
+• Basato su evidenze scientifiche  
+• Monitorato nel tempo  
+</p>
+
+<p>
+Non esiste un unico trattamento valido per tutti.
+L’efficacia dipende dalla personalizzazione
+sul profilo cognitivo, comunicativo e sensoriale dell’individuo.
+</p>
+</div>
+
+</div>
+</section>
+
+
+<!-- ===================================================== -->
+<!-- SEZIONE 19 – ABA -->
+<!-- ===================================================== -->
+
+<section>
+<div class="container fade-in">
+
+<h2>Applied Behavior Analysis (ABA)</h2>
+
+<div class="card">
+<p>
+L’ABA è uno degli approcci più studiati e validati
+nell’ambito dell’autismo.
+</p>
+
+<p>
+Si basa sui principi dell’analisi del comportamento
+e sull’osservazione sistematica delle relazioni
+tra comportamento e ambiente.
+</p>
+</div>
+
+<div class="grid-2">
+
+<div class="card">
+<h3>Principi Fondamentali</h3>
+<p>
+• Rinforzo positivo  
+• Analisi funzionale del comportamento  
+• Scomposizione delle abilità  
+• Generalizzazione degli apprendimenti  
+• Misurazione oggettiva dei progressi  
+</p>
+</div>
+
+<div class="card">
+<h3>Obiettivi</h3>
+<p>
+• Sviluppo comunicativo  
+• Autonomia personale  
+• Riduzione comportamenti problematici  
+• Competenze sociali  
+• Abilità accademiche  
+</p>
+</div>
+
+</div>
+
+<div class="card">
+<p>
+L’intervento può includere:
+</p>
+
+<p>
+• Discrete Trial Training (DTT)  
+• Natural Environment Teaching (NET)  
+• Verbal Behavior  
+• Task analysis  
+</p>
+
+<p>
+La programmazione è guidata da obiettivi misurabili
+e costantemente rivista.
+</p>
+</div>
+
+</div>
+</section>
+
+
+<!-- ===================================================== -->
+<!-- SEZIONE 20 – METODO TEACCH -->
+<!-- ===================================================== -->
+
+<section>
+<div class="container fade-in">
+
+<h2>Metodo TEACCH</h2>
+
+<div class="card">
+<p>
+Il modello TEACCH si basa sulla strutturazione
+dell’ambiente e sulla valorizzazione
+dei punti di forza visivi.
+</p>
+</div>
+
+<div class="grid-3">
+
+<div class="card">
+<h3>Strutturazione Fisica</h3>
+<p>
+Spazi organizzati in modo chiaro
+e prevedibile.
+</p>
+</div>
+
+<div class="card">
+<h3>Strutturazione Temporale</h3>
+<p>
+Uso di agende visive
+e sequenze operative.
+</p>
+</div>
+
+<div class="card">
+<h3>Strutturazione delle Attività</h3>
+<p>
+Compiti suddivisi in passaggi chiari
+con inizio e fine definiti.
+</p>
+</div>
+
+</div>
+
+<div class="card">
+<p>
+L’obiettivo è aumentare autonomia,
+ridurre ansia e favorire comprensione
+attraverso la prevedibilità.
+</p>
+</div>
+
+</div>
+</section>
+
+
+<!-- ===================================================== -->
+<!-- SEZIONE 21 – ESDM -->
+<!-- ===================================================== -->
+
+<section>
+<div class="container fade-in">
+
+<h2>Early Start Denver Model (ESDM)</h2>
+
+<div class="card">
+<p>
+Intervento precoce rivolto a bambini
+in età prescolare.
+</p>
+
+<p>
+Integra principi comportamentali
+con approcci evolutivi e relazionali.
+</p>
+</div>
+
+<div class="card">
+<p>
+Caratteristiche principali:
+</p>
+
+<p>
+• Apprendimento nel gioco  
+• Coinvolgimento attivo del bambino  
+• Partecipazione della famiglia  
+• Stimolazione precoce delle abilità sociali  
+</p>
+</div>
+
+</div>
+</section>
+
+
+<!-- ===================================================== -->
+<!-- SEZIONE 22 – DIR/FLOORTIME -->
+<!-- ===================================================== -->
+
+<section>
+<div class="container fade-in">
+
+<h2>DIR / Floortime</h2>
+
+<div class="card">
+<p>
+Approccio centrato sulla relazione
+e sullo sviluppo emotivo.
+</p>
+
+<p>
+Si basa sull’interazione spontanea
+tra adulto e bambino,
+seguendo gli interessi del bambino.
+</p>
+</div>
+
+<div class="card">
+<p>
+Obiettivi:
+</p>
+
+<p>
+• Espansione delle capacità comunicative  
+• Sviluppo simbolico  
+• Miglioramento regolazione emotiva  
+</p>
+</div>
+
+</div>
+</section>
+
+
+<!-- ===================================================== -->
+<!-- SEZIONE 23 – LOGOPEDIA E TERAPIA OCCUPAZIONALE -->
+<!-- ===================================================== -->
+
+<section>
+<div class="container fade-in">
+
+<h2>Interventi Logopedici e Terapia Occupazionale</h2>
+
+<div class="grid-2">
+
+<div class="card">
+<h3>Logopedia</h3>
+<p>
+• Sviluppo linguaggio espressivo  
+• Comprensione verbale  
+• Comunicazione funzionale  
+• Comunicazione aumentativa  
+</p>
+</div>
+
+<div class="card">
+<h3>Terapia Occupazionale</h3>
+<p>
+• Integrazione sensoriale  
+• Autonomia personale  
+• Abilità motorie fini  
+• Organizzazione delle routine  
+</p>
+</div>
+
+</div>
+
+</div>
+</section>
+
+
+<!-- ===================================================== -->
+<!-- SEZIONE 24 – PARENT TRAINING -->
+<!-- ===================================================== -->
+
+<section>
+<div class="container fade-in">
+
+<h2>Parent Training e Coinvolgimento Familiare</h2>
+
+<div class="card">
+<p>
+Il coinvolgimento attivo della famiglia
+è determinante per l’efficacia dell’intervento.
+</p>
+
+<p>
+Il parent training fornisce strumenti per:
+</p>
+
+<p>
+• Gestione comportamentale  
+• Supporto comunicativo  
+• Strutturazione dell’ambiente domestico  
+• Riduzione dello stress familiare  
+</p>
+</div>
+
+<div class="card">
+<p>
+La collaborazione scuola–famiglia–terapisti
+favorisce coerenza educativa
+e generalizzazione delle competenze.
+</p>
+</div>
+
+</div>
+</section>
+
+
+<!-- ===================================================== -->
+<!-- SEZIONE 25 – APPROCCIO MULTIDISCIPLINARE -->
+<!-- ===================================================== -->
+
+<section>
+<div class="container fade-in">
+
+<h2>Approccio Multidisciplinare</h2>
+
+<div class="card">
+<p>
+Un intervento efficace richiede
+la collaborazione di diverse figure professionali:
+</p>
+
+<p>
+• Neuropsichiatra infantile  
+• Psicologo  
+• Terapista ABA  
+• Logopedista  
+• Terapista occupazionale  
+• Insegnanti  
+</p>
+
+<p>
+La presa in carico globale
+garantisce continuità e coerenza nel tempo.
+</p>
+</div>
+
+</div>
+</section>
+
+
+<!-- ===================================================== -->
+<!-- SEZIONE 26 – INCLUSIONE SCOLASTICA -->
+<!-- ===================================================== -->
+
+<section>
+<div class="container fade-in">
+
+<h2>Inclusione Scolastica</h2>
+
+<div class="card">
+<p>
+L’inclusione scolastica rappresenta un elemento centrale
+nel percorso di crescita dell’alunno con Disturbo dello Spettro Autistico.
+</p>
+
+<p>
+La scuola non è soltanto luogo di apprendimento accademico,
+ma anche spazio di sviluppo sociale,
+autonomia e competenze relazionali.
+</p>
+</div>
+
+<div class="grid-2">
+
+<div class="card">
+<h3>Obiettivi dell’Inclusione</h3>
+<p>
+• Partecipazione attiva alla vita scolastica  
+• Sviluppo competenze sociali  
+• Accesso personalizzato al curriculum  
+• Promozione dell’autonomia  
+</p>
+</div>
+
+<div class="card">
+<h3>Elementi Fondamentali</h3>
+<p>
+• Ambiente strutturato  
+• Routine prevedibili  
+• Supporti visivi  
+• Collaborazione tra insegnanti e famiglia  
+</p>
+</div>
+
+</div>
+
+<div class="card">
+<p>
+L’inclusione efficace richiede adattamenti individualizzati,
+non una semplice presenza fisica in classe.
+</p>
+</div>
+
+</div>
+</section>
+
+
+<!-- ===================================================== -->
+<!-- SEZIONE 27 – PEI E PERSONALIZZAZIONE DIDATTICA -->
+<!-- ===================================================== -->
+
+<section>
+<div class="container fade-in">
+
+<h2>Piano Educativo Individualizzato (PEI)</h2>
+
+<div class="card">
+<p>
+Il Piano Educativo Individualizzato è lo strumento
+che definisce obiettivi, strategie e modalità di supporto
+per l’alunno con bisogni educativi specifici.
+</p>
+
+<p>
+Il PEI si basa su:
+</p>
+
+<p>
+• Profilo di funzionamento  
+• Punti di forza  
+• Aree di fragilità  
+• Livello di autonomia  
+</p>
+</div>
+
+<div class="grid-3">
+
+<div class="card">
+<h3>Area Cognitiva</h3>
+<p>
+Adattamento dei contenuti
+in base al livello di comprensione.
+</p>
+</div>
+
+<div class="card">
+<h3>Area Comunicativa</h3>
+<p>
+Uso di strumenti visivi,
+mappe concettuali,
+CAA se necessario.
+</p>
+</div>
+
+<div class="card">
+<h3>Area Sociale</h3>
+<p>
+Promozione di interazioni guidate,
+lavori cooperativi,
+educazione emotiva.
+</p>
+</div>
+
+</div>
+
+</div>
+</section>
+
+
+<!-- ===================================================== -->
+<!-- SEZIONE 28 – STRATEGIE DIDATTICHE -->
+<!-- ===================================================== -->
+
+<section>
+<div class="container fade-in">
+
+<h2>Strategie Didattiche Efficaci</h2>
+
+<div class="card">
+<p>
+L’insegnamento efficace per studenti nello spettro
+si basa su chiarezza, prevedibilità e supporto visivo.
+</p>
+</div>
+
+<div class="grid-2">
+
+<div class="card">
+<h3>Strumenti Utili</h3>
+<p>
+• Agende visive  
+• Timer visivi  
+• Suddivisione dei compiti  
+• Schemi e mappe concettuali  
+• Rinforzo positivo  
+</p>
+</div>
+
+<div class="card">
+<h3>Adattamenti Metodologici</h3>
+<p>
+• Riduzione stimoli distraenti  
+• Istruzioni semplici e dirette  
+• Verifica della comprensione  
+• Pause strutturate  
+</p>
+</div>
+
+</div>
+
+</div>
+</section>
+
+
+<!-- ===================================================== -->
+<!-- SEZIONE 29 – PROGETTO DI VITA -->
+<!-- ===================================================== -->
+
+<section>
+<div class="container fade-in">
+
+<h2>Progetto di Vita</h2>
+
+<div class="card">
+<p>
+Il progetto di vita rappresenta una visione a lungo termine
+che integra scuola, famiglia, lavoro e contesto sociale.
+</p>
+
+<p>
+Non si limita al percorso scolastico,
+ma considera l’intero arco evolutivo.
+</p>
+</div>
+
+<div class="card">
+<p>
+Include:
+</p>
+
+<p>
+• Sviluppo autonomie personali  
+• Competenze sociali  
+• Orientamento professionale  
+• Partecipazione alla comunità  
+</p>
+</div>
+
+</div>
+</section>
+
+
+<!-- ===================================================== -->
+<!-- SEZIONE 30 – TRANSIZIONE ALL’ETÀ ADULTA -->
+<!-- ===================================================== -->
+
+<section>
+<div class="container fade-in">
+
+<h2>Transizione all’Età Adulta</h2>
+
+<div class="card">
+<p>
+Il passaggio dall’adolescenza all’età adulta
+richiede pianificazione anticipata e graduale.
+</p>
+
+<p>
+Le aree critiche includono:
+</p>
+
+<p>
+• Inserimento lavorativo  
+• Gestione del tempo libero  
+• Autonomia abitativa  
+• Relazioni sociali  
+</p>
+</div>
+
+<div class="card">
+<p>
+Programmi di transizione strutturati
+possono facilitare l’adattamento
+e ridurre il rischio di isolamento sociale.
+</p>
+</div>
+
+</div>
+</section>
+
+
+<!-- ===================================================== -->
+<!-- SEZIONE 31 – LAVORO E AUTONOMIA -->
+<!-- ===================================================== -->
+
+<section>
+<div class="container fade-in">
+
+<h2>Lavoro e Autonomia</h2>
+
+<div class="card">
+<p>
+Molti adulti nello spettro possiedono competenze specifiche
+che possono essere valorizzate in ambito lavorativo.
+</p>
+</div>
+
+<div class="grid-2">
+
+<div class="card">
+<h3>Punti di Forza Professionali</h3>
+<p>
+• Precisione  
+• Attenzione ai dettagli  
+• Costanza  
+• Pensiero sistematico  
+</p>
+</div>
+
+<div class="card">
+<h3>Supporti Necessari</h3>
+<p>
+• Ambiente strutturato  
+• Mansioni chiare  
+• Tutoraggio iniziale  
+• Adattamenti sensoriali  
+</p>
+</div>
+
+</div>
+
+</div>
+</section>
+
+
+<!-- ===================================================== -->
+<!-- SEZIONE 32 – SUPPORTO NELLA VITA ADULTA -->
+<!-- ===================================================== -->
+
+<section>
+<div class="container fade-in">
+
+<h2>Supporto nella Vita Adulta</h2>
+
+<div class="card">
+<p>
+L’età adulta può richiedere servizi di supporto
+personalizzati in base al livello di autonomia.
+</p>
+
+<p>
+Possibili ambiti di intervento:
+</p>
+
+<p>
+• Supporto psicologico  
+• Programmi di autonomia abitativa  
+• Gruppi di socializzazione  
+• Formazione professionale  
+</p>
+</div>
+
+<div class="card">
+<p>
+L’obiettivo è promuovere qualità della vita,
+partecipazione sociale
+e autodeterminazione.
+</p>
+</div>
+
+</div>
+</section>
+
+
+<!-- ===================================================== -->
+<!-- SEZIONE 33 – DIAGNOSI CLINICA -->
+<!-- ===================================================== -->
+
+<section>
+<div class="container fade-in">
+
+<h2>Diagnosi Clinica</h2>
+
+<div class="card">
+<p>
+La diagnosi del Disturbo dello Spettro Autistico
+è un processo clinico complesso,
+basato sull’osservazione comportamentale
+e sulla raccolta dettagliata della storia evolutiva.
+</p>
+
+<p>
+Non esistono esami di laboratorio o test biologici
+che permettano una diagnosi diretta.
+</p>
+</div>
+
+<div class="card">
+<p>
+La valutazione viene effettuata da un’équipe multidisciplinare
+e può includere:
+</p>
+
+<p>
+• Colloquio clinico con i genitori  
+• Osservazione strutturata del comportamento  
+• Valutazione cognitiva  
+• Analisi delle competenze linguistiche  
+• Esame del profilo adattivo  
+</p>
+</div>
+
+</div>
+</section>
+
+
+<!-- ===================================================== -->
+<!-- SEZIONE 34 – STRUMENTI DI VALUTAZIONE -->
+<!-- ===================================================== -->
+
+<section>
+<div class="container fade-in">
+
+<h2>Strumenti di Valutazione Utilizzati</h2>
+
+<div class="grid-2">
+
+<div class="card">
+<h3>Osservazione Strutturata</h3>
+<p>
+Strumenti osservativi standardizzati
+permettono di analizzare:
+</p>
+<p>
+• Comunicazione sociale  
+• Gioco simbolico  
+• Comportamenti ripetitivi  
+• Risposte sociali spontanee  
+</p>
+</div>
+
+<div class="card">
+<h3>Interviste Cliniche</h3>
+<p>
+Colloqui strutturati con i genitori
+consentono di ricostruire
+lo sviluppo precoce del bambino.
+</p>
+</div>
+
+</div>
+
+<div class="card">
+<p>
+La diagnosi non si basa su un singolo strumento,
+ma sull’integrazione di più fonti di informazione.
+</p>
+</div>
+
+</div>
+</section>
+
+
+<!-- ===================================================== -->
+<!-- SEZIONE 35 – RICERCA SCIENTIFICA -->
+<!-- ===================================================== -->
+
+<section>
+<div class="container fade-in">
+
+<h2>Ricerca Scientifica Attuale</h2>
+
+<div class="card">
+<p>
+La ricerca sull’autismo è in continua evoluzione
+e coinvolge ambiti multidisciplinari.
+</p>
+</div>
+
+<div class="grid-3">
+
+<div class="card">
+<h3>Neuroscienze</h3>
+<p>
+Studio delle reti cerebrali,
+della connettività
+e delle differenze nello sviluppo neurobiologico.
+</p>
+</div>
+
+<div class="card">
+<h3>Genetica</h3>
+<p>
+Identificazione di varianti genetiche
+associate a un aumento del rischio,
+con modelli multifattoriali complessi.
+</p>
+</div>
+
+<div class="card">
+<h3>Psicologia dello Sviluppo</h3>
+<p>
+Analisi delle traiettorie evolutive
+e dei fattori protettivi
+che influenzano l’adattamento.
+</p>
+</div>
+
+</div>
+
+<div class="card">
+<p>
+L’obiettivo della ricerca non è “eliminare” l’autismo,
+ma comprendere meglio il funzionamento neurodivergente
+e sviluppare supporti sempre più mirati.
+</p>
+</div>
+
+</div>
+</section>
+
+
+<!-- ===================================================== -->
+<!-- SEZIONE 36 – PROSPETTIVE FUTURE -->
+<!-- ===================================================== -->
+
+<section>
+<div class="container fade-in">
+
+<h2>Prospettive Future: Comprendere e Valorizzare lo Spettro</h2>
+
+<div class="card">
+<p>
+Le prospettive future non riguardano soltanto
+il progresso scientifico,
+ma anche il cambiamento culturale globale.
+</p>
+</div>
+
+<div class="card">
+<p>
+Per migliorare la comprensione mondiale dello spettro autistico
+è necessario:
+</p>
+
+<p>
+• Investire nella ricerca multidisciplinare  
+• Promuovere informazione scientificamente corretta  
+• Combattere stigma e stereotipi  
+• Favorire inclusione sociale reale  
+• Sostenere le famiglie  
+</p>
+</div>
+
+<div class="card">
+<p>
+Un passo fondamentale consiste nel riconoscere
+la neurodiversità come parte della variabilità umana,
+non come semplice deficit.
+</p>
+
+<p>
+La società può crescere attraverso:
+</p>
+
+<p>
+• Educazione nelle scuole  
+• Formazione professionale specifica  
+• Sensibilizzazione mediatica responsabile  
+• Coinvolgimento diretto delle persone nello spettro  
+</p>
+</div>
+
+</div>
+</section>
+
+
+<!-- ===================================================== -->
+<!-- SEZIONE 37 – CONCLUSIONE -->
+<!-- ===================================================== -->
+
+<section>
+<div class="container fade-in">
+
+<h2>Conclusione</h2>
+
+<div class="card">
+<p>
+Il Disturbo dello Spettro Autistico rappresenta
+una condizione complessa,
+eterogenea e multidimensionale.
+</p>
+
+<p>
+Comprendere lo spettro significa
+superare visioni riduttive
+e riconoscere la ricchezza delle differenze individuali.
+</p>
+
+<p>
+Un approccio informato,
+basato su evidenze scientifiche,
+rispetto e inclusione,
+costituisce la base per costruire
+una società più consapevole e accogliente.
+</p>
+
+<p>
+La conoscenza è il primo passo
+verso la comprensione.
+La comprensione è il primo passo
+verso l’inclusione reale.
+</p>
+</div>
+
+</div>
+</section>
+
