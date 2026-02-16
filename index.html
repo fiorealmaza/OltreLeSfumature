@@ -9,110 +9,173 @@
 
 <style>
 *{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:'Poppins', sans-serif;
-    scroll-behavior:smooth;
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins', sans-serif;
+scroll-behavior:smooth;
 }
 
 body{
-    background:#cce6ff;
-    color:#1a1a1a;
+background:#cce6ff;
+color:#1a1a1a;
+overflow-x:hidden;
 }
 
 /* HEADER */
 header{
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    padding:20px 40px;
-    background:white;
-    position:sticky;
-    top:0;
-    z-index:1000;
-    box-shadow:0 4px 15px rgba(0,0,0,0.1);
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:18px 40px;
+background:white;
+position:sticky;
+top:0;
+z-index:1000;
+box-shadow:0 4px 20px rgba(0,0,0,0.08);
+}
+
+.logo{
+display:flex;
+align-items:center;
+gap:15px;
+}
+
+.logo img{
+width:55px;
 }
 
 .logo h1{
-    font-size:38px;
-    font-weight:700;
-    color:#0066cc;
+font-size:34px;
+font-weight:700;
+color:#0066cc;
 }
 
-/* HAMBURGER */
+/* HAMBURGER VERTICALE */
 .menu-toggle{
-    font-size:30px;
-    cursor:pointer;
+width:30px;
+height:22px;
+display:flex;
+flex-direction:column;
+justify-content:space-between;
+cursor:pointer;
+}
+
+.menu-toggle span{
+height:4px;
+background:#0066cc;
+border-radius:4px;
+transition:0.4s;
+}
+
+/* ANIMAZIONE X */
+.menu-toggle.active span:nth-child(1){
+transform:rotate(45deg) translate(5px,5px);
+}
+.menu-toggle.active span:nth-child(2){
+opacity:0;
+}
+.menu-toggle.active span:nth-child(3){
+transform:rotate(-45deg) translate(6px,-6px);
+}
+
+/* OVERLAY */
+.overlay{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,0.4);
+opacity:0;
+visibility:hidden;
+transition:0.4s;
+z-index:900;
+}
+
+.overlay.active{
+opacity:1;
+visibility:visible;
 }
 
 /* MENU LATERALE */
 .side-menu{
-    position:fixed;
-    top:0;
-    right:-260px;
-    width:260px;
-    height:100%;
-    background:white;
-    box-shadow:-5px 0 20px rgba(0,0,0,0.2);
-    padding:80px 20px;
-    transition:0.4s;
-    z-index:2000;
+position:fixed;
+top:0;
+right:-300px;
+width:280px;
+height:100%;
+background:white;
+padding:90px 30px;
+transition:0.5s cubic-bezier(.77,0,.18,1);
+z-index:1001;
+box-shadow:-10px 0 40px rgba(0,0,0,0.15);
 }
 
 .side-menu.active{
-    right:0;
+right:0;
 }
 
 .side-menu a{
-    display:block;
-    margin-bottom:18px;
-    padding:12px 15px;
-    text-decoration:none;
-    color:#0066cc;
-    font-weight:600;
-    border-radius:10px;
-    transition:0.3s;
+display:block;
+margin-bottom:22px;
+text-decoration:none;
+font-weight:600;
+color:#0066cc;
+position:relative;
+transition:0.3s;
 }
 
-.side-menu a:hover{
-    background:#4da6ff;
-    color:white;
-    box-shadow:0 0 15px #4da6ff;
+.side-menu a::after{
+content:"";
+position:absolute;
+left:0;
+bottom:-5px;
+width:0;
+height:3px;
+background:#4da6ff;
+transition:0.3s;
+border-radius:4px;
+}
+
+.side-menu a:hover::after{
+width:100%;
+}
+
+.side-menu a.active{
+color:#003d80;
 }
 
 /* SEZIONI */
 .section{
-    padding:70px 40px;
-    max-width:1000px;
-    margin:auto;
+padding:80px 40px;
+max-width:1000px;
+margin:auto;
+animation:fadeUp 1s ease;
 }
 
-.box-title{
-    display:inline-block;
-    margin-bottom:20px;
-    padding:12px 20px;
-    border-radius:12px;
-    background:white;
-    font-weight:700;
-    box-shadow:0 0 15px #4da6ff;
+@keyframes fadeUp{
+from{opacity:0; transform:translateY(40px);}
+to{opacity:1; transform:translateY(0);}
 }
 
-.card{
-    background:white;
-    padding:20px;
-    border-radius:14px;
-    margin-bottom:20px;
-    line-height:1.8;
-    box-shadow:0 4px 15px rgba(0,0,0,0.1);
+.section h2{
+font-size:26px;
+margin-bottom:20px;
+color:#003d80;
+}
+
+.section p{
+line-height:1.9;
+margin-bottom:18px;
 }
 
 footer{
-    text-align:center;
-    padding:30px;
-    background:#1e3c72;
-    color:white;
-    margin-top:40px;
+text-align:center;
+padding:30px;
+background:#1e3c72;
+color:white;
+margin-top:40px;
 }
 </style>
 </head>
@@ -121,12 +184,19 @@ footer{
 
 <header>
 <div class="logo">
+<img src="logo.png" alt="logo">
 <h1>Oltre Le Sfumature</h1>
 </div>
-<div class="menu-toggle" onclick="toggleMenu()">|||</div>
+
+<div class="menu-toggle" id="menuBtn">
+<span></span>
+<span></span>
+<span></span>
+</div>
 </header>
 
-<!-- MENU -->
+<div class="overlay" id="overlay"></div>
+
 <div class="side-menu" id="sideMenu">
 <a href="#intro">Cos’è lo Spettro Autistico</a>
 <a href="#definizione">Definizione</a>
@@ -138,91 +208,60 @@ footer{
 <a href="#contatti">Contatti</a>
 </div>
 
-<!-- CONTENUTO -->
-
 <section id="intro" class="section">
-<div class="box-title">Cos’è lo Spettro Autistico?</div>
-<div class="card">
-Il Disturbo dello Spettro Autistico (DSA) è una condizione complessa del neurosviluppo che coinvolge comunicazione, interazione sociale e comportamenti ripetitivi o stereotipati.  
-Può manifestarsi in maniera molto variabile: alcune persone hanno alto quoziente intellettivo, capacità linguistiche elevate e interessi specifici intensi, mentre altre presentano disabilità intellettiva, ritardi nel linguaggio e difficoltà nelle abilità adattive.  
-È determinato da una combinazione di fattori genetici e neurobiologici che influenzano la maturazione del cervello.  
-La diagnosi precoce permette interventi mirati, personalizzati e intensivi, migliorando autonomia, gestione dei comportamenti, competenze sociali e qualità della vita.  
-Il ruolo della famiglia è fondamentale per supportare lo sviluppo, favorire l’inclusione e creare ambienti strutturati e prevedibili.  
-Il riconoscimento dei bisogni individuali e l’uso di metodi basati sull’evidenza consentono di valorizzare le abilità e ridurre le difficoltà quotidiane, promuovendo benessere emotivo e partecipazione sociale.
-</div>
+<h2>Cos’è lo Spettro Autistico?</h2>
+<p>
+Il Disturbo dello Spettro Autistico (DSA) è una condizione complessa del neurosviluppo che coinvolge comunicazione, interazione sociale e comportamenti ripetitivi o stereotipati.
+Può manifestarsi in maniera molto variabile...
+</p>
 </section>
 
 <section id="definizione" class="section">
-<div class="box-title">Definizione e quadro generale</div>
-<div class="card">
+<h2>Definizione e quadro generale</h2>
+<p>
 Il Disturbo dello Spettro Autistico è caratterizzato da difficoltà persistenti nella comunicazione sociale, interazione e comportamenti ripetitivi.
-La gravità e la modalità di espressione dei sintomi variano molto tra gli individui.
-È fondamentale una valutazione completa per progettare interventi mirati e personalizzati.
-</div>
+</p>
 </section>
 
 <section id="evoluzione" class="section">
-<div class="box-title">Evoluzione storica</div>
-<div class="card">
+<h2>Evoluzione storica</h2>
+<p>
 Negli anni '50 l’autismo era erroneamente considerato una forma di schizofrenia infantile.
-Con il DSM-III (1980) entra nei Disturbi Pervasivi dello Sviluppo, mentre con il DSM-5 (2013) viene riconosciuto come Disturbo dello Spettro Autistico unico.
-Questa evoluzione ha permesso di sviluppare interventi più efficaci e personalizzati.
-</div>
+Con il DSM-III (1980)...
+</p>
 </section>
 
 <section id="caratteristiche" class="section">
-<div class="box-title">Caratteristiche principali</div>
-<div class="card">
-<b>Comunicazione:</b> Ritardo del linguaggio, ecolalia, inversione pronominale, prosodia alterata, difficoltà a comprendere ironia e sarcasmo.
-</div>
-<div class="card">
-<b>Interazione sociale:</b> Assenza di attenzione condivisa, evitamento dello sguardo, difficoltà a interpretare stati mentali altrui, relazioni sociali ridotte o interessi limitati.
-</div>
-<div class="card">
-<b>Comportamenti ripetitivi:</b> Stereotipie motorie, rigidità cognitiva, routine rigide, opposizione ai cambiamenti, interessi ristretti e intensi.
-</div>
+<h2>Caratteristiche principali</h2>
+<p><b>Comunicazione:</b> Ritardo del linguaggio, ecolalia...</p>
+<p><b>Interazione sociale:</b> Assenza di attenzione condivisa...</p>
+<p><b>Comportamenti ripetitivi:</b> Stereotipie motorie...</p>
 </section>
 
 <section id="diagnosi" class="section">
-<div class="box-title">Diagnosi</div>
-<div class="card">
+<h2>Diagnosi</h2>
+<p>
 La diagnosi si basa su osservazione clinica, anamnesi dettagliata e strumenti psicometrici.
-Se necessario, esami audiometrici o genetici possono essere integrati.
-Non esistono test biologici specifici.
-La diagnosi precoce permette interventi mirati e un miglioramento significativo delle abilità.
-</div>
+</p>
 </section>
 
 <section id="intervento" class="section">
-<div class="box-title">Intervento</div>
-<div class="card">
-Interventi precoci, intensivi e personalizzati migliorano autonomia, competenze sociali e adattamento quotidiano.
-Il supporto della famiglia è essenziale.
-</div>
-<div class="card">
-<b>ABA (Applied Behavior Analysis):</b> Metodo basato sull’analisi del comportamento, sviluppa abilità sociali, comunicative e adattive tramite rinforzi positivi.
-</div>
-<div class="card">
-<b>TEACCH:</b> Approccio strutturato che organizza ambiente, attività e routine per favorire autonomia, apprendimento e gestione dei comportamenti.
-</div>
+<h2>Intervento</h2>
+<p>Interventi precoci, intensivi e personalizzati migliorano autonomia...</p>
+<p><b>ABA:</b> Metodo basato sull’analisi del comportamento...</p>
+<p><b>TEACCH:</b> Approccio strutturato che organizza ambiente...</p>
 </section>
 
 <section id="famiglia" class="section">
-<div class="box-title">La Famiglia</div>
-<div class="card">
+<h2>La Famiglia</h2>
+<p>
 Il ciclo di adattamento familiare include crisi, adattamento, pianificazione e attivismo.
-Supporto e collaborazione con professionisti sono fondamentali per la prognosi e il benessere complessivo.
-</div>
+</p>
 </section>
 
 <section id="contatti" class="section">
-<div class="box-title">Contattaci</div>
-<div class="card">
-<input type="text" placeholder="Nome" style="width:100%;padding:10px;margin-bottom:10px;">
-<input type="email" placeholder="Email" style="width:100%;padding:10px;margin-bottom:10px;">
-<textarea rows="4" placeholder="Scrivi il tuo messaggio" style="width:100%;padding:10px;margin-bottom:10px;"></textarea>
-<button style="background:#4da6ff;color:white;border:none;padding:10px 20px;border-radius:8px;">Invia Messaggio</button>
-</div>
+<h2>Contattaci</h2>
+<p>Scrivici per maggiori informazioni.</p>
 </section>
 
 <footer>
@@ -230,8 +269,31 @@ Supporto e collaborazione con professionisti sono fondamentali per la prognosi e
 </footer>
 
 <script>
-function toggleMenu(){
-document.getElementById("sideMenu").classList.toggle("active");
+const menuBtn = document.getElementById("menuBtn");
+const sideMenu = document.getElementById("sideMenu");
+const overlay = document.getElementById("overlay");
+const links = sideMenu.querySelectorAll("a");
+
+menuBtn.addEventListener("click", () => {
+menuBtn.classList.toggle("active");
+sideMenu.classList.toggle("active");
+overlay.classList.toggle("active");
+});
+
+overlay.addEventListener("click", closeMenu);
+
+links.forEach(link => {
+link.addEventListener("click", () => {
+links.forEach(l => l.classList.remove("active"));
+link.classList.add("active");
+closeMenu();
+});
+});
+
+function closeMenu(){
+menuBtn.classList.remove("active");
+sideMenu.classList.remove("active");
+overlay.classList.remove("active");
 }
 </script>
 
