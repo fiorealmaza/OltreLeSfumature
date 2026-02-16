@@ -4,378 +4,489 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Oltre Le Sfumature</title>
+<link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+<body>
 
-<style>
+<header class="navbar">
+    <div class="logo-area">
+        <img src="logo.png" class="logo">
+        <h1>Oltre Le Sfumature</h1>
+    </div>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="aba.html">Metodo ABA</a>
+        <a href="teacch.html">Metodo TEACCH</a>
+        <a href="contatti.html">Contatti</a>
+    </nav>
+</header>
+
+<section class="hero">
+    <h2>Comprendere, Supportare, Crescere</h2>
+    <p>
+        Informazione, consapevolezza e strumenti concreti per sostenere 
+        bambini e famiglie nel percorso educativo.
+    </p>
+    <a href="aba.html" class="btn-primary">Scopri di più</a>
+</section>
+
+<div class="wave"></div>
+
+<section class="info">
+    <div class="card">
+        <h3>Metodo ABA</h3>
+        <p>
+        Approccio basato sull’analisi del comportamento per sviluppare 
+        abilità comunicative, sociali e cognitive.
+        </p>
+        <a href="aba.html" class="btn-secondary">Approfondisci</a>
+    </div>
+
+    <div class="card">
+        <h3>Metodo TEACCH</h3>
+        <p>
+        Metodo strutturato che utilizza supporti visivi e organizzazione 
+        dell’ambiente per favorire autonomia.
+        </p>
+        <a href="teacch.html" class="btn-secondary">Approfondisci</a>
+    </div>
+</section>
+
+<footer>
+<p>© 2026 Oltre Le Sfumature - Tutti i diritti riservati</p>
+</footer>
+
+</body>
+</html>
 *{
 margin:0;
 padding:0;
 box-sizing:border-box;
 font-family:'Poppins', sans-serif;
-scroll-behavior:smooth;
 }
 
 body{
-background:linear-gradient(180deg,#eaf6ff,#cce6ff);
-color:#1a1a1a;
+background:linear-gradient(180deg,#0d3b66,#001f3f);
+color:white;
 overflow-x:hidden;
 }
 
-/* HEADER */
-header{
+/* NAVBAR */
+
+.navbar{
 display:flex;
 justify-content:space-between;
 align-items:center;
-padding:30px 70px;
-background:white;
+padding:20px 60px;
+background:rgba(0,0,0,0.3);
+backdrop-filter:blur(10px);
 position:sticky;
 top:0;
 z-index:1000;
-box-shadow:0 8px 30px rgba(0,0,0,0.08);
 }
 
-.logo-container{
+.logo-area{
 display:flex;
 align-items:center;
-gap:20px;
+gap:15px;
 }
 
 .logo{
-height:70px;
-width:auto;
+width:70px;
 }
 
-header h1{
-font-size:50px;
-font-weight:800;
-background: linear-gradient(90deg,#4da6ff,#0066cc);
--webkit-background-clip: text;
--webkit-text-fill-color: transparent;
+.navbar h1{
+font-size:24px;
 }
 
-/* HAMBURGER */
-.menu-toggle{
-width:40px;
-height:28px;
-display:flex;
-flex-direction:column;
-justify-content:space-between;
-cursor:pointer;
-}
-
-.menu-toggle span{
-height:4px;
-background:#0066cc;
-border-radius:4px;
-transition:0.4s;
-}
-
-.menu-toggle.active span:nth-child(1){
-transform:rotate(45deg) translate(6px,6px);
-}
-.menu-toggle.active span:nth-child(2){
-opacity:0;
-}
-.menu-toggle.active span:nth-child(3){
-transform:rotate(-45deg) translate(7px,-7px);
-}
-
-/* OVERLAY */
-.overlay{
-position:fixed;
-top:0;
-left:0;
-width:100%;
-height:100%;
-background:rgba(0,0,0,0.4);
-opacity:0;
-visibility:hidden;
-transition:0.4s;
-z-index:900;
-}
-
-.overlay.active{
-opacity:1;
-visibility:visible;
-}
-
-/* MENU */
-.side-menu{
-position:fixed;
-top:0;
-right:-320px;
-width:300px;
-height:100%;
-background:white;
-padding:120px 40px;
-transition:0.5s cubic-bezier(.77,0,.18,1);
-z-index:1001;
-box-shadow:-10px 0 40px rgba(0,0,0,0.15);
-}
-
-.side-menu.active{
-right:0;
-}
-
-.side-menu a{
-display:block;
-margin-bottom:25px;
+.navbar nav a{
+color:white;
+margin-left:30px;
 text-decoration:none;
-font-weight:600;
-color:#0066cc;
-position:relative;
+font-weight:500;
 transition:0.3s;
 }
 
-.side-menu a::after{
-content:"";
-position:absolute;
-left:0;
-bottom:-6px;
-width:0;
-height:3px;
-background:#4da6ff;
-transition:0.3s;
+.navbar nav a:hover{
+color:#4cc9f0;
 }
 
-.side-menu a:hover::after{
-width:100%;
+/* HERO */
+
+.hero{
+text-align:center;
+padding:120px 20px;
 }
 
-.side-menu a.active{
-color:#003d80;
+.hero h2{
+font-size:42px;
+margin-bottom:20px;
 }
 
-/* SEZIONI */
-.section{
-padding:100px 70px;
-max-width:1200px;
+.hero p{
+max-width:700px;
 margin:auto;
-animation:fadeUp 1s ease;
+margin-bottom:40px;
+opacity:0.9;
 }
 
-@keyframes fadeUp{
-from{opacity:0; transform:translateY(40px);}
-to{opacity:1; transform:translateY(0);}
+.btn-primary{
+background:linear-gradient(45deg,#3a86ff,#00b4ff);
+padding:15px 40px;
+border-radius:50px;
+text-decoration:none;
+color:white;
+font-weight:600;
+transition:0.3s;
+box-shadow:0 15px 40px rgba(0,0,0,0.3);
 }
 
-.section h2{
-font-size:36px;
-margin-bottom:30px;
-color:#003d80;
+.btn-primary:hover{
+transform:translateY(-5px);
+}
+
+/* WAVE */
+
+.wave{
+position:relative;
+height:100px;
+background:white;
+border-top-left-radius:50% 100%;
+border-top-right-radius:50% 100%;
+}
+
+/* INFO SECTION */
+
+.info{
+background:white;
+padding:100px 40px;
+display:flex;
+justify-content:center;
+gap:50px;
+flex-wrap:wrap;
+color:#001f3f;
 }
 
 .card{
 background:white;
-padding:35px;
-border-radius:22px;
-margin-bottom:30px;
-line-height:1.9;
-box-shadow:0 10px 40px rgba(0,0,0,0.08);
-transition:0.4s;
+padding:50px;
+width:350px;
+border-radius:25px;
+border:4px solid;
+border-image: linear-gradient(45deg,#3a86ff,#00b4ff,#4cc9f0) 1;
+box-shadow:0 0 40px rgba(0,0,0,0.1);
+text-align:center;
+transition:0.3s;
 }
 
 .card:hover{
-transform:translateY(-8px);
-box-shadow:0 0 40px rgba(77,166,255,0.4);
-}
-
-/* ABA E TEACCH */
-.methods{
-display:flex;
-gap:40px;
-flex-wrap:wrap;
-margin-top:20px;
-}
-
-.method-box{
-flex:1;
-min-width:280px;
-background:#d9efff;
-padding:35px;
-border-radius:25px;
-box-shadow:0 0 30px rgba(77,166,255,0.3);
-transition:0.4s;
-text-decoration:none;
-color:#003d80;
-}
-
-.method-box:hover{
 transform:translateY(-10px);
-box-shadow:0 0 50px rgba(77,166,255,0.5);
 }
 
-.method-box h3{
-margin-bottom:15px;
-text-align:center;
-}
-
-/* CONTATTI */
-.contact-info{
-background:white;
-padding:40px;
-border-radius:25px;
-box-shadow:0 10px 40px rgba(0,0,0,0.08);
-}
-
-.contact-info p{
-margin-bottom:15px;
-font-size:18px;
-}
-
-/* BOX EMAIL PROFESSIONALE */
-.email-box{
-margin-top:40px;
-background:white;
-padding:35px;
-border-radius:25px;
-box-shadow:0 0 40px rgba(77,166,255,0.4);
-border:3px solid #4da6ff;
-}
-
-.email-box h3{
-margin-bottom:20px;
-color:#003d80;
-}
-
-.email-box form{
-display:flex;
-flex-direction:column;
-gap:18px;
-}
-
-.email-box input,
-.email-box textarea{
-padding:14px;
-border-radius:12px;
-border:2px solid #cce6ff;
-font-size:15px;
-transition:0.3s;
-}
-
-.email-box input:focus,
-.email-box textarea:focus{
-border-color:#4da6ff;
-box-shadow:0 0 15px rgba(77,166,255,0.5);
-outline:none;
-}
-
-.email-box button{
-padding:14px;
-border:none;
-border-radius:12px;
-background:linear-gradient(45deg,#4da6ff,#0066cc);
+.btn-secondary{
+display:inline-block;
+margin-top:20px;
+padding:12px 30px;
+background:#3a86ff;
 color:white;
-font-weight:600;
-cursor:pointer;
-transition:0.3s;
+border-radius:40px;
+text-decoration:none;
 }
 
-.email-box button:hover{
-transform:translateY(-4px);
-box-shadow:0 10px 25px rgba(0,102,204,0.4);
-}
+/* FOOTER */
 
 footer{
 text-align:center;
 padding:40px;
-background:#1e3c72;
+background:#001f3f;
+}
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contatti - Oltre Le Sfumature</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins', sans-serif;
+}
+
+body{
+background:linear-gradient(180deg,#0d3b66,#001f3f);
 color:white;
-margin-top:60px;
+overflow-x:hidden;
 }
 
-@media(max-width:900px){
-header, .section{
-padding:40px 25px;
+/* NAVBAR */
+
+.navbar{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:20px 60px;
+background:rgba(0,0,0,0.3);
+backdrop-filter:blur(10px);
+position:sticky;
+top:0;
 }
 
-header h1{
-font-size:38px;
+.logo-area{
+display:flex;
+align-items:center;
+gap:15px;
 }
 
 .logo{
-height:55px;
+width:70px;
 }
 
-.methods{
-flex-direction:column;
+.navbar nav a{
+color:white;
+margin-left:30px;
+text-decoration:none;
+font-weight:500;
+transition:0.3s;
 }
+
+.navbar nav a:hover{
+color:#4cc9f0;
 }
+
+/* HERO */
+
+.contact-hero{
+text-align:center;
+padding:100px 20px;
+}
+
+.contact-hero h2{
+font-size:40px;
+margin-bottom:15px;
+}
+
+/* WAVE */
+
+.wave{
+position:relative;
+height:100px;
+background:white;
+border-top-left-radius:50% 100%;
+border-top-right-radius:50% 100%;
+}
+
+/* SECTION */
+
+.contact-section{
+background:white;
+color:#001f3f;
+padding:100px 20px;
+text-align:center;
+}
+
+/* BOX MODULO */
+
+.contact-box{
+background:white;
+padding:60px;
+border-radius:25px;
+max-width:800px;
+margin:50px auto;
+border:4px solid;
+border-image: linear-gradient(45deg,#3a86ff,#00b4ff,#4cc9f0) 1;
+box-shadow:0 0 60px rgba(0,180,255,0.3);
+}
+
+.contact-box h3{
+font-size:28px;
+margin-bottom:15px;
+}
+
+.contact-box p{
+margin-bottom:40px;
+}
+
+.contact-form input,
+.contact-form textarea{
+width:100%;
+padding:18px;
+margin-bottom:25px;
+border-radius:15px;
+border:2px solid #e0e0e0;
+font-size:16px;
+transition:0.3s;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus{
+border-color:#3a86ff;
+outline:none;
+box-shadow:0 0 15px rgba(58,134,255,0.3);
+}
+
+.contact-form button{
+background:linear-gradient(45deg,#3a86ff,#00b4ff);
+color:white;
+padding:18px 50px;
+border:none;
+border-radius:50px;
+font-weight:700;
+cursor:pointer;
+transition:0.3s;
+box-shadow:0 15px 40px rgba(0,0,0,0.2);
+}
+
+.contact-form button:hover{
+transform:translateY(-5px);
+}
+
+/* QUADRO BLU FORTE */
+
+.direct-email-box{
+background:#0d3b66;
+color:white;
+padding:70px;
+margin:80px auto;
+border-radius:30px;
+max-width:900px;
+box-shadow:0 0 60px rgba(0,180,255,0.5);
+}
+
+.btn-email{
+display:inline-block;
+margin-top:30px;
+padding:18px 50px;
+background:white;
+color:#0d3b66;
+border-radius:50px;
+font-weight:700;
+text-decoration:none;
+transition:0.3s;
+}
+
+.btn-email:hover{
+transform:scale(1.05);
+}
+
+/* SOCIAL */
+
+.social-box{
+margin-top:80px;
+}
+
+.social-box a{
+color:#3a86ff;
+text-decoration:none;
+}
+
+/* FOOTER */
+
+footer{
+text-align:center;
+padding:40px;
+background:#001f3f;
+color:white;
+}
+
 </style>
 </head>
 
 <body>
 
-<header>
-<div class="logo-container">
-<img src="logo.png" alt="Logo Oltre Le Sfumature" class="logo">
-<h1>Oltre Le Sfumature</h1>
-</div>
+<header class="navbar">
+    <div class="logo-area">
+        <img src="logo.png" class="logo">
+        <h1>Oltre Le Sfumature</h1>
+    </div>
 
-<div class="menu-toggle" id="menuBtn">
-<span></span>
-<span></span>
-<span></span>
-</div>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="aba.html">Metodo ABA</a>
+        <a href="teacch.html">Metodo TEACCH</a>
+        <a href="contatti.html">Contatti</a>
+    </nav>
 </header>
 
-<div class="overlay" id="overlay"></div>
+<section class="contact-hero">
+    <h2>Contattaci</h2>
+    <p>Siamo qui per rispondere alle tue domande.</p>
+</section>
 
-<div class="side-menu" id="sideMenu">
-<a href="#intro">Cos’è lo Spettro Autistico</a>
-<a href="#definizione">Definizione</a>
-<a href="#evoluzione">Evoluzione</a>
-<a href="#caratteristiche">Caratteristiche</a>
-<a href="#diagnosi">Diagnosi</a>
-<a href="#intervento">Intervento</a>
-<a href="#famiglia">Famiglia</a>
-<a href="#contatti">Contatti</a>
-</div>
+<div class="wave"></div>
 
-<!-- CONTENUTO RIMANE IDENTICO FINO A CONTATTI -->
+<section class="contact-section">
 
-<section id="contatti" class="section">
-<h2>Contattaci</h2>
+<div class="contact-box">
 
-<div class="contact-info">
-<p><strong>Email:</strong> <a href="mailto:oltrelesfumature@gmail.com">oltrelesfumature@gmail.com</a></p>
-<p><strong>Instagram:</strong> <a href="https://instagram.com/oltrelesfumature" target="_blank">@oltrelesfumature</a></p>
-<p>Per richieste di informazioni, approfondimenti sui metodi o supporto, non esitare a contattarci.</p>
-</div>
+<h3>Hai domande o dubbi?</h3>
+<p>Compila il modulo qui sotto e ti risponderemo il prima possibile.</p>
 
-<div class="email-box">
-<h3>Hai domande? Scrivici direttamente qui</h3>
-<form action="https://formspree.io/f/mvzbranp" method="POST">
+<form action="https://formspree.io/f/mvzbranp" method="POST" class="contact-form">
+
 <input type="email" name="email" placeholder="La tua email" required>
-<textarea name="message" rows="5" placeholder="Scrivi il tuo messaggio..." required></textarea>
+
+<textarea name="message" rows="6" placeholder="Scrivi qui il tuo messaggio..." required></textarea>
+
 <button type="submit">Invia Messaggio</button>
+
 </form>
+
+</div>
+
+
+<div class="direct-email-box">
+
+<h3>Preferisci scriverci direttamente?</h3>
+
+<p>Clicca qui sotto per inviarci una email.</p>
+
+<a href="mailto:oltrelesfumature@gmail.com?subject=Richiesta informazioni Oltre Le Sfumature"
+class="btn-email">
+Scrivi una Email
+</a>
+
+</div>
+
+
+<div class="social-box">
+
+<h3>Seguici sui Social</h3>
+
+<p><strong>Email:</strong><br>
+<a href="mailto:oltrelesfumature@gmail.com">
+oltrelesfumature@gmail.com
+</a></p>
+
+<p><strong>Instagram:</strong><br>
+<a href="https://www.instagram.com/oltrelesfumature" target="_blank">
+@oltrelesfumature
+</a></p>
+
+<p><strong>TikTok:</strong><br>
+<a href="https://www.tiktok.com/@oltre.le.sfumature" target="_blank">
+@oltre.le.sfumature
+</a></p>
+
+<p><strong>Facebook:</strong><br>
+<a href="https://www.facebook.com/oltrelesfumature" target="_blank">
+oltrelesfumature
+</a></p>
+
 </div>
 
 </section>
 
 <footer>
-© 2026 Oltre Le Sfumature
+<p>© 2026 Oltre Le Sfumature - Tutti i diritti riservati</p>
 </footer>
-
-<script>
-const menuBtn = document.getElementById("menuBtn");
-const sideMenu = document.getElementById("sideMenu");
-const overlay = document.getElementById("overlay");
-
-menuBtn.addEventListener("click", () => {
-menuBtn.classList.toggle("active");
-sideMenu.classList.toggle("active");
-overlay.classList.toggle("active");
-});
-
-overlay.addEventListener("click", () => {
-menuBtn.classList.remove("active");
-sideMenu.classList.remove("active");
-overlay.classList.remove("active");
-});
-</script>
 
 </body>
 </html>
