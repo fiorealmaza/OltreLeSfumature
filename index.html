@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Oltre Le Sfumature</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
 <style>
 
@@ -63,7 +63,7 @@ transform:scale(1.08);
 
 .hero{
 min-height:100vh;
-padding:190px 120px 120px 120px;
+padding:200px 120px 140px 120px;
 display:flex;
 flex-direction:column;
 justify-content:center;
@@ -73,57 +73,71 @@ justify-content:center;
 display:flex;
 justify-content:space-between;
 align-items:center;
-margin-bottom:70px;
 flex-wrap:wrap;
 gap:40px;
+margin-bottom:70px;
 }
 
 .main-title{
-font-family:'Playfair Display',serif;
-font-size:5.2rem;
+font-family:'Cinzel',serif;
+font-size:6rem;
 font-weight:800;
 line-height:0.95;
 background:linear-gradient(90deg,#2a6edb,#4e8cff,#2a6edb);
 -webkit-background-clip:text;
 -webkit-text-fill-color:transparent;
 text-shadow:
-0 0 25px rgba(42,110,219,0.7),
-0 0 70px rgba(42,110,219,0.6),
-0 0 140px rgba(42,110,219,0.5);
+0 0 30px rgba(42,110,219,0.8),
+0 0 80px rgba(42,110,219,0.7),
+0 0 160px rgba(42,110,219,0.6);
 animation:glow 4s infinite alternate;
 }
 
 @keyframes glow{
-from{text-shadow:0 0 25px rgba(42,110,219,0.6)}
-to{text-shadow:0 0 200px rgba(42,110,219,1)}
+from{text-shadow:0 0 30px rgba(42,110,219,0.6)}
+to{text-shadow:0 0 220px rgba(42,110,219,1)}
 }
 
 .question{
-margin-top:30px;
-font-size:1.9rem;
+margin-top:35px;
+font-size:2rem;
 font-weight:600;
 color:#1f55ad;
 }
 
 .logo{
-width:360px;
+width:370px;
 }
 
 /* SECTIONS */
 
 .section{
-padding:150px 110px;
+padding:160px 120px;
 }
 
 .section h2{
 text-align:center;
-font-size:2.7rem;
-margin-bottom:90px;
+font-size:2.9rem;
+margin-bottom:100px;
 color:#2a6edb;
 font-weight:800;
 }
 
-/* CARDS */
+/* GLOW TITLE BOX */
+
+.glow-box{
+background:linear-gradient(135deg,#eaf3ff,#ffffff);
+padding:40px;
+border-radius:30px;
+box-shadow:0 0 40px rgba(42,110,219,0.4);
+margin-bottom:60px;
+text-align:center;
+font-weight:700;
+font-size:1.8rem;
+color:#1f55ad;
+}
+
+/* CARD */
 
 .card{
 background:rgba(255,255,255,0.93);
@@ -143,12 +157,12 @@ box-shadow:0 140px 320px rgba(42,110,219,0.25);
 
 .grid{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
 gap:70px;
 }
 
 .box{
-background:rgba(255,255,255,0.97);
+background:white;
 padding:60px;
 border-radius:45px;
 box-shadow:0 60px 180px rgba(0,0,0,0.07);
@@ -156,19 +170,19 @@ transition:.5s;
 position:relative;
 }
 
-.box::before{
+.box::after{
 content:"";
 position:absolute;
-top:-15px;
-left:-15px;
-width:40px;
-height:40px;
+bottom:-12px;
+right:-12px;
+width:35px;
+height:35px;
 background:#2a6edb22;
 border-radius:50%;
 }
 
 .box:hover{
-transform:translateY(-15px) scale(1.04);
+transform:translateY(-15px) scale(1.05);
 box-shadow:0 110px 280px rgba(42,110,219,0.3);
 }
 
@@ -176,10 +190,6 @@ box-shadow:0 110px 280px rgba(42,110,219,0.3);
 font-size:1.6rem;
 margin-bottom:20px;
 color:#1f55ad;
-}
-
-.highlight{
-background:linear-gradient(135deg,#eaf3ff,#ffffff);
 }
 
 footer{
@@ -194,7 +204,7 @@ margin-top:80px;
 
 @media(max-width:1000px){
 .top-bar{flex-direction:column;align-items:flex-start;}
-.main-title{font-size:3.5rem;}
+.main-title{font-size:3.8rem;}
 .grid{grid-template-columns:1fr;}
 .logo{width:220px;}
 }
@@ -208,12 +218,9 @@ margin-top:80px;
 <a href="#cos">Cos'è</a>
 <a href="#sviluppo">Sviluppo</a>
 <a href="#cause">Cause</a>
-<a href="#rischi">Rischi</a>
-<a href="#profilo">Profilo</a>
 <a href="#metodi">Metodi</a>
-<a href="#aiuto">Come Aiutare</a>
+<a href="#terapie">Terapie</a>
 <a href="#figure">Figure</a>
-<a href="#futuro">Futuro</a>
 <a href="#contatti">Contatti</a>
 </nav>
 
@@ -226,7 +233,7 @@ margin-top:80px;
 Oltre Le<br>Sfumature
 </h1>
 <div class="question">
-Cos'è lo Spettro Autistico?
+Cos'è l'Autismo?
 </div>
 </div>
 
@@ -234,127 +241,100 @@ Cos'è lo Spettro Autistico?
 
 </div>
 
-<div class="card highlight">
-Il Disturbo dello Spettro Autistico è una condizione del neurosviluppo caratterizzata da differenze nella comunicazione sociale, nella regolazione emotiva, nei comportamenti ripetitivi e nell’elaborazione sensoriale. È definito “spettro” perché include una vasta gamma di caratteristiche e livelli di supporto. Ogni persona possiede un profilo unico, con punti di forza distintivi e aree di maggiore difficoltà. Comprendere lo spettro significa riconoscere la neurodiversità come parte naturale dell’umanità.
+<div class="card">
+L’autismo, o Disturbo dello Spettro Autistico, è una condizione del neurosviluppo che influenza comunicazione sociale, comportamento e percezione sensoriale. È definito “spettro” perché le caratteristiche variano in modo ampio e individuale. Ogni persona possiede punti di forza, talenti e modalità cognitive uniche.
 </div>
 
 </section>
 
 <section class="section" id="sviluppo">
-<h2>Sviluppo del Bambino</h2>
-<div class="grid">
 
+<div class="glow-box">
+Sviluppo del Bambino
+</div>
+
+<div class="grid">
 <div class="box">
 <h3>Segnali Precoci</h3>
-Ridotto contatto visivo, ritardo nel linguaggio, scarso interesse per il gioco condiviso, movimenti ripetitivi.
+Ridotto contatto visivo, ritardo nel linguaggio, scarso interesse per il gioco condiviso.
 </div>
-
 <div class="box">
-<h3>Importanza della Diagnosi</h3>
-Una diagnosi precoce permette interventi mirati e personalizzati, migliorando competenze sociali e comunicative.
+<h3>Diagnosi Precoce</h3>
+Permette interventi personalizzati e supporto tempestivo.
 </div>
-
 <div class="box">
-<h3>Crescita Individuale</h3>
-Ogni bambino segue un percorso unico, con tempi e modalità proprie.
+<h3>Percorso Individuale</h3>
+Ogni bambino segue tempi e modalità di crescita differenti.
+</div>
 </div>
 
-</div>
 </section>
 
 <section class="section" id="cause">
-<h2>Cause e Fattori di Rischio</h2>
-<div class="grid">
 
-<div class="box">
-<h3>Componente Genetica</h3>
-Elevata ereditarietà e coinvolgimento di più geni.
+<div class="glow-box">
+Cause e Fattori di Rischio
 </div>
 
+<div class="grid">
+<div class="box">
+<h3>Genetica</h3>
+Elevata componente ereditaria.
+</div>
 <div class="box">
 <h3>Fattori Ambientali</h3>
-Possibili influenze prenatali e condizioni neurologiche.
+Possibili influenze prenatali.
 </div>
-
 <div class="box">
 <h3>Falsi Miti</h3>
-Nessuna correlazione con vaccini o stili educativi.
+Nessuna correlazione con vaccini.
 </div>
-
 <div class="box">
 <h3>Rischi</h3>
-Familiarità genetica, età avanzata dei genitori, prematurità.
+Familiarità, prematurità, età genitoriale avanzata.
+</div>
 </div>
 
-</div>
-</section>
-
-<section class="section" id="profilo">
-<h2>Profilo Cognitivo e Sensoriale</h2>
-<div class="grid">
-
-<div class="box">
-Pensiero logico dettagliato e forte concentrazione su interessi specifici.
-</div>
-
-<div class="box">
-Iper o ipo sensibilità a suoni, luci, odori e consistenze.
-</div>
-
-<div class="box">
-Difficoltà nella comprensione implicita delle regole sociali.
-</div>
-
-<div class="box">
-Talenti specifici in ambito artistico, matematico o musicale.
-</div>
-
-</div>
 </section>
 
 <section class="section" id="metodi">
-<h2>Metodi di Intervento</h2>
+<h2>Metodi Educativi Principali</h2>
+
 <div class="grid">
 
 <div class="box">
 <h3>ABA</h3>
-Rinforzo positivo e obiettivi misurabili.
+Intervento basato sul rinforzo positivo e obiettivi misurabili.
 </div>
 
 <div class="box">
 <h3>TEACCH</h3>
-Strutturazione visiva e prevedibilità ambientale.
-</div>
-
-<div class="box">
-<h3>Logopedia</h3>
-Sviluppo linguaggio e comunicazione.
-</div>
-
-<div class="box">
-<h3>Terapia Occupazionale</h3>
-Autonomia e regolazione sensoriale.
+Strutturazione visiva e organizzazione prevedibile.
 </div>
 
 </div>
+
 </section>
 
-<section class="section" id="aiuto">
-<h2>Come Aiutare</h2>
+<section class="section" id="terapie">
+<h2>Terapie e Supporti</h2>
+
 <div class="grid">
 
-<div class="box">Creare routine stabili.</div>
-<div class="box">Usare supporti visivi.</div>
-<div class="box">Anticipare cambiamenti.</div>
-<div class="box">Valorizzare interessi speciali.</div>
-<div class="box">Favorire inclusione sociale.</div>
-<div class="box">Collaborare con professionisti.</div>
+<div class="box">Logopedia</div>
+<div class="box">Terapia Occupazionale</div>
+<div class="box">Psicoterapia</div>
+<div class="box">Supporto Educativo</div>
+<div class="box">Integrazione Sensoriale</div>
+<div class="box">Comunicazione Aumentativa Alternativa</div>
 
 </div>
+
 </section>
 
 <section class="section" id="figure">
 <h2>Figure Professionali</h2>
+
 <div class="grid">
 
 <div class="box">Neuropsichiatra Infantile</div>
@@ -365,23 +345,19 @@ Autonomia e regolazione sensoriale.
 <div class="box">Terapista Occupazionale</div>
 
 </div>
-</section>
 
-<section class="section" id="futuro">
-<h2>Prospettive Future</h2>
-<div class="card">
-La ricerca scientifica continua a evolversi, migliorando strumenti diagnostici e interventi personalizzati. Cresce la sensibilizzazione sociale verso inclusione e neurodiversità, promuovendo una società più equa e consapevole.
-</div>
 </section>
 
 <section class="section" id="contatti">
 <h2>Dove Ci Trovi</h2>
+
 <div class="card">
 Email: info@oltrelesfumature.it<br>
 Instagram: @oltrelesfumature<br>
 Telefono: +39 000 000000<br>
 Collaborazioni con scuole, famiglie e professionisti.
 </div>
+
 </section>
 
 <footer>
