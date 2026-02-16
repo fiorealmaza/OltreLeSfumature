@@ -17,18 +17,9 @@ scroll-behavior:smooth;
 }
 
 body{
-background: linear-gradient(135deg, #d0f0ff, #a2d2ff, #7bbcff);
-background-size: 400% 400%;
-animation: gradientMove 15s ease infinite;
+background:linear-gradient(180deg,#eaf6ff,#cce6ff);
 color:#1a1a1a;
 overflow-x:hidden;
-position:relative;
-}
-
-@keyframes gradientMove {
-0% {background-position: 0% 50%;}
-50% {background-position: 100% 50%;}
-100% {background-position: 0% 50%;}
 }
 
 /* HEADER */
@@ -37,85 +28,40 @@ display:flex;
 justify-content:space-between;
 align-items:center;
 padding:30px 70px;
-background:rgba(255,255,255,0.85);
-backdrop-filter:blur(15px);
+background:white;
 position:sticky;
 top:0;
 z-index:1000;
-box-shadow:0 15px 50px rgba(0,0,0,0.08);
-}
-
-.logo-container{
-display:flex;
-align-items:center;
-gap:20px;
+box-shadow:0 8px 30px rgba(0,0,0,0.08);
 }
 
 .logo{
-height:85px;
+display:flex;
+align-items:center;
+gap:25px;
 }
 
-header h1{
-font-size:48px;
+.logo img{
+width:120px;
+transition:0.4s;
+}
+
+.logo img:hover{
+transform:scale(1.05);
+}
+
+.logo h1{
+font-size:56px;
 font-weight:800;
-background: linear-gradient(90deg,#0066cc,#4da6ff);
+background: linear-gradient(90deg,#4da6ff,#0066cc);
 -webkit-background-clip: text;
 -webkit-text-fill-color: transparent;
 }
 
-/* HERO */
-.hero{
-text-align:center;
-padding:160px 20px 120px 20px;
-}
-
-.hero h2{
-font-size:52px;
-margin-bottom:25px;
-color:#003d80;
-}
-
-.hero p{
-font-size:20px;
-max-width:800px;
-margin:auto;
-margin-bottom:30px;
-line-height:1.8;
-}
-
-.hero-btn{
-display:inline-block;
-padding:18px 40px;
-background:linear-gradient(45deg,#4da6ff,#0066cc);
-color:white;
-border-radius:50px;
-text-decoration:none;
-font-weight:600;
-transition:0.4s;
-box-shadow:0 15px 40px rgba(0,0,0,0.3);
-position:relative;
-overflow:hidden;
-}
-
-.hero-btn::after{
-content:"";
-position:absolute;
-top:0;
-left:-100%;
-width:100%;
-height:100%;
-background:rgba(255,255,255,0.3);
-transition:0.5s;
-}
-
-.hero-btn:hover::after{
-left:100%;
-}
-
-/* MENU */
+/* HAMBURGER */
 .menu-toggle{
-width:40px;
-height:28px;
+width:38px;
+height:26px;
 display:flex;
 flex-direction:column;
 justify-content:space-between;
@@ -139,6 +85,7 @@ opacity:0;
 transform:rotate(-45deg) translate(7px,-7px);
 }
 
+/* OVERLAY */
 .overlay{
 position:fixed;
 top:0;
@@ -157,6 +104,7 @@ opacity:1;
 visibility:visible;
 }
 
+/* MENU */
 .side-menu{
 position:fixed;
 top:0;
@@ -180,120 +128,125 @@ margin-bottom:25px;
 text-decoration:none;
 font-weight:600;
 color:#0066cc;
+position:relative;
 transition:0.3s;
 }
 
-.side-menu a:hover{
+.side-menu a::after{
+content:"";
+position:absolute;
+left:0;
+bottom:-6px;
+width:0;
+height:3px;
+background:#4da6ff;
+transition:0.3s;
+}
+
+.side-menu a:hover::after{
+width:100%;
+}
+
+.side-menu a.active{
 color:#003d80;
 }
 
-/* SECTIONS */
+/* SEZIONI */
 .section{
-padding:120px 70px;
+padding:100px 70px;
 max-width:1200px;
 margin:auto;
+animation:fadeUp 1s ease;
+}
+
+@keyframes fadeUp{
+from{opacity:0; transform:translateY(40px);}
+to{opacity:1; transform:translateY(0);}
 }
 
 .section h2{
-font-size:38px;
-margin-bottom:40px;
+font-size:34px;
+margin-bottom:30px;
 color:#003d80;
 }
 
-/* CARD */
 .card{
-background:rgba(255,255,255,0.85);
-backdrop-filter:blur(12px);
-padding:40px;
-border-radius:25px;
-margin-bottom:35px;
+background:white;
+padding:35px;
+border-radius:22px;
+margin-bottom:30px;
 line-height:1.9;
-box-shadow:0 20px 60px rgba(0,0,0,0.12);
+box-shadow:0 10px 40px rgba(0,0,0,0.08);
 transition:0.4s;
-position:relative;
-overflow:hidden;
-}
-
-.card::before{
-content:"";
-position:absolute;
-top:-50%;
-left:-50%;
-width:200%;
-height:200%;
-background: radial-gradient(circle, rgba(77,166,255,0.2), transparent 70%);
-transform: rotate(25deg);
-transition:0.5s;
 }
 
 .card:hover{
+transform:translateY(-8px);
+box-shadow:0 0 40px rgba(77,166,255,0.4);
+}
+
+/* ABA E TEACCH */
+.methods{
+display:flex;
+gap:40px;
+flex-wrap:wrap;
+margin-top:20px;
+}
+
+.method-box{
+flex:1;
+min-width:280px;
+background:#d9efff;
+padding:35px;
+border-radius:25px;
+box-shadow:0 0 30px rgba(77,166,255,0.3);
+transition:0.4s;
+}
+
+.method-box:hover{
 transform:translateY(-10px);
+box-shadow:0 0 50px rgba(77,166,255,0.5);
 }
 
-.card:hover::before{
-transform: rotate(0deg);
+.method-box h3{
+margin-bottom:15px;
+color:#004c99;
+text-align:center;
 }
 
-/* REVEAL */
-.reveal{
-opacity:0;
-transform:translateY(60px);
-transition: all 1s ease;
-}
-
-.reveal.active{
-opacity:1;
-transform:translateY(0);
-}
-
-/* WAVE */
-.wave{
-width:100%;
-overflow:hidden;
-line-height:0;
-margin-top:80px;
-}
-
-.wave svg{
-display:block;
-width:100%;
-height:100px;
-animation: waveMove 8s linear infinite alternate;
-}
-
-@keyframes waveMove{
-0%{transform:translateX(0);}
-100%{transform:translateX(-50px);}
-}
-
-/* CONTACT */
+/* CONTATTI */
 .contact-info{
 background:white;
-padding:50px;
-border-radius:30px;
-box-shadow:0 20px 60px rgba(0,0,0,0.12);
+padding:40px;
+border-radius:25px;
+box-shadow:0 10px 40px rgba(0,0,0,0.08);
 }
 
-footer{
-text-align:center;
-padding:50px;
-background:#1e3c72;
-color:white;
-margin-top:100px;
+.contact-info p{
+margin-bottom:15px;
+font-size:18px;
 }
 
+/* RESPONSIVE */
 @media(max-width:900px){
-header, .section{
+.header, .section{
 padding:40px 25px;
 }
 
-.hero h2{
-font-size:38px;
+.logo h1{
+font-size:42px;
 }
 
-.logo{
-height:60px;
+.methods{
+flex-direction:column;
 }
+}
+footer{
+text-align:center;
+padding:40px;
+background:#1e3c72;
+color:white;
+margin-top:60px;
 }
 </style>
 </head>
@@ -301,8 +254,8 @@ height:60px;
 <body>
 
 <header>
-<div class="logo-container">
-<img src="logo.png" alt="Logo" class="logo">
+<div class="logo">
+<img src="logo.png" alt="logo">
 <h1>Oltre Le Sfumature</h1>
 </div>
 
@@ -316,155 +269,105 @@ height:60px;
 <div class="overlay" id="overlay"></div>
 
 <div class="side-menu" id="sideMenu">
-<a href="#intro">Cos’è</a>
+<a href="#intro">Cos’è lo Spettro Autistico</a>
+<a href="#definizione">Definizione</a>
+<a href="#evoluzione">Evoluzione</a>
 <a href="#caratteristiche">Caratteristiche</a>
+<a href="#diagnosi">Diagnosi</a>
 <a href="#intervento">Intervento</a>
+<a href="#famiglia">Famiglia</a>
 <a href="#contatti">Contatti</a>
 </div>
 
-<section class="hero">
-<h2>Comprendere. Supportare. Valorizzare.</h2>
-<p>
-Un percorso di consapevolezza, informazione e inclusione dedicato allo Spettro Autistico.
-Approfondimenti scientifici, strategie educative e supporto familiare.
-</p>
-<p style="opacity:0.8;">
-Informazione scientifica • Inclusione sociale • Supporto educativo • Consapevolezza
-</p>
-<br>
-<a href="#intro" class="hero-btn">Scopri di più</a>
-</section>
-
-<div class="wave">
-<svg viewBox="0 0 1440 150" preserveAspectRatio="none">
-<path fill="#ffffff" d="M0,96L60,90.7C120,85,240,75,360,74.7C480,75,600,85,720,85.3C840,85,960,75,1080,69.3C1200,64,1320,64,1380,64L1440,64L1440,150L0,150Z"></path>
-</svg>
-</div>
-<section class="section" id="intro">
-<h2>Cos’è lo Spettro Autistico</h2>
-
-<div class="card reveal">
-<p>
-Il Disturbo dello Spettro Autistico (ASD) è una condizione del neurosviluppo che influenza
-la comunicazione, l’interazione sociale e la percezione sensoriale.
-Viene definito “spettro” perché si manifesta con caratteristiche e livelli di intensità differenti.
-</p>
-<p>
-Ogni persona autistica è unica e possiede abilità, punti di forza e bisogni differenti.
-Comprendere significa valorizzare le differenze e creare ambienti inclusivi.
-</p>
+<section id="intro" class="section">
+<h2>Cos’è lo Spettro Autistico?</h2>
+<div class="card">
+Il Disturbo dello Spettro Autistico (DSA) è una condizione complessa del neurosviluppo che coinvolge comunicazione, interazione sociale e comportamenti ripetitivi o stereotipati.  
+Può manifestarsi in maniera molto variabile: alcune persone hanno alto quoziente intellettivo, capacità linguistiche elevate e interessi specifici intensi, mentre altre presentano disabilità intellettiva, ritardi nel linguaggio e difficoltà nelle abilità adattive.  
+È determinato da una combinazione di fattori genetici e neurobiologici che influenzano la maturazione del cervello.  
+La diagnosi precoce permette interventi mirati, personalizzati e intensivi, migliorando autonomia, gestione dei comportamenti, competenze sociali e qualità della vita.  
+Il ruolo della famiglia è fondamentale per supportare lo sviluppo, favorire l’inclusione e creare ambienti strutturati e prevedibili.  
+Il riconoscimento dei bisogni individuali e l’uso di metodi basati sull’evidenza consentono di valorizzare le abilità e ridurre le difficoltà quotidiane, promuovendo benessere emotivo e partecipazione sociale.
 </div>
 </section>
 
-<div class="wave">
-<svg viewBox="0 0 1440 150" preserveAspectRatio="none">
-<path fill="#ffffff" d="M0,96L60,90.7C120,85,240,75,360,74.7C480,75,600,85,720,85.3C840,85,960,75,1080,69.3C1200,64,1320,64,1380,64L1440,64L1440,150L0,150Z"></path>
-</svg>
+<section id="definizione" class="section">
+<h2>Definizione e quadro generale</h2>
+<div class="card">
+Il Disturbo dello Spettro Autistico è caratterizzato da difficoltà persistenti nella comunicazione sociale, interazione e comportamenti ripetitivi.  
+La gravità e la modalità di espressione dei sintomi variano molto tra gli individui.  
+È fondamentale una valutazione completa per progettare interventi mirati e personalizzati.
 </div>
-
-<section class="section" id="caratteristiche">
-<h2>Caratteristiche Principali</h2>
-
-<div class="card reveal">
-<h3>Comunicazione</h3>
-<p>
-Può variare dall’assenza di linguaggio verbale a un linguaggio avanzato ma con difficoltà pragmatiche.
-</p>
-</div>
-
-<div class="card reveal">
-<h3>Interazione Sociale</h3>
-<p>
-Difficoltà nel comprendere segnali sociali, emozioni e regole implicite della comunicazione.
-</p>
-</div>
-
-<div class="card reveal">
-<h3>Sensibilità Sensoriale</h3>
-<p>
-Possibile ipersensibilità o iposensibilità a suoni, luci, odori o stimoli tattili.
-</p>
-</div>
-
 </section>
 
-<div class="wave">
-<svg viewBox="0 0 1440 150" preserveAspectRatio="none">
-<path fill="#ffffff" d="M0,96L60,90.7C120,85,240,75,360,74.7C480,75,600,85,720,85.3C840,85,960,75,1080,69.3C1200,64,1320,64,1380,64L1440,64L1440,150L0,150Z"></path>
-</svg>
+<section id="evoluzione" class="section">
+<h2>Evoluzione storica</h2>
+<div class="card">
+Negli anni '50 l’autismo era erroneamente considerato una forma di schizofrenia infantile.  
+Con il DSM-III (1980) entra nei Disturbi Pervasivi dello Sviluppo, mentre con il DSM-5 (2013) viene riconosciuto come Disturbo dello Spettro Autistico unico.  
+Questa evoluzione ha permesso di sviluppare interventi più efficaci e personalizzati.
 </div>
-
-<section class="section" id="intervento">
-<h2>Intervento e Strategie</h2>
-
-<div class="card reveal">
-<p>
-L’intervento deve essere personalizzato e basato su evidenze scientifiche.
-Tra gli approcci più utilizzati troviamo ABA e TEACCH.
-</p>
-</div>
-
-<div class="card reveal">
-<h3>Metodo ABA</h3>
-<p>
-Approccio basato sui principi dell’apprendimento, utilizza rinforzi positivi
-per sviluppare competenze comunicative e sociali.
-</p>
-</div>
-
-<div class="card reveal">
-<h3>Metodo TEACCH</h3>
-<p>
-Basato sulla strutturazione dell’ambiente e sull’utilizzo di supporti visivi
-per favorire autonomia e prevedibilità.
-</p>
-</div>
-
 </section>
 
-<div class="wave">
-<svg viewBox="0 0 1440 150" preserveAspectRatio="none">
-<path fill="#ffffff" d="M0,96L60,90.7C120,85,240,75,360,74.7C480,75,600,85,720,85.3C840,85,960,75,1080,69.3C1200,64,1320,64,1380,64L1440,64L1440,150L0,150Z"></path>
-</svg>
+<section id="caratteristiche" class="section">
+<h2>Caratteristiche principali</h2>
+<div class="card"><b>Comunicazione:</b> Ritardo del linguaggio, ecolalia, inversione pronominale, prosodia alterata, difficoltà a comprendere ironia e sarcasmo.</div>
+<div class="card"><b>Interazione sociale:</b> Assenza di attenzione condivisa, evitamento dello sguardo, difficoltà a interpretare stati mentali altrui, relazioni sociali ridotte o interessi limitati.</div>
+<div class="card"><b>Comportamenti ripetitivi:</b> Stereotipie motorie, rigidità cognitiva, routine rigide, opposizione ai cambiamenti, interessi ristretti e intensi.</div>
+</section>
+
+<section id="diagnosi" class="section">
+<h2>Diagnosi</h2>
+<div class="card">
+La diagnosi si basa su osservazione clinica, anamnesi dettagliata e strumenti psicometrici.  
+Se necessario, esami audiometrici o genetici possono essere integrati.  
+Non esistono test biologici specifici.  
+La diagnosi precoce permette interventi mirati e un miglioramento significativo delle abilità.
+</div>
+</section>
+
+<section id="intervento" class="section">
+<h2>Intervento</h2>
+
+<div class="card">
+Interventi precoci, intensivi e personalizzati migliorano autonomia, competenze sociali e adattamento quotidiano.
+Il supporto della famiglia è essenziale.
 </div>
 
-<section class="section" id="contatti">
+<div class="methods">
+<div class="method-box">
+<h3>ABA (Applied Behavior Analysis)</h3>
+Metodo basato sull’analisi del comportamento, sviluppa abilità sociali, comunicative e adattive tramite rinforzi positivi.
+</div>
+
+<div class="method-box">
+<h3>TEACCH</h3>
+Approccio strutturato che organizza ambiente, attività e routine per favorire autonomia, apprendimento e gestione dei comportamenti.
+</div>
+</div>
+</section>
+
+<section id="famiglia" class="section">
+<h2>La Famiglia</h2>
+<div class="card">
+Il ciclo di adattamento familiare include crisi, adattamento, pianificazione e attivismo.  
+Supporto e collaborazione con professionisti sono fondamentali per la prognosi e il benessere complessivo.
+</div>
+</section>
+
+<section id="contatti" class="section">
 <h2>Contattaci</h2>
-
-<div class="contact-info reveal">
-
-<p><strong>Email:</strong><br>
-<a href="mailto:oltrelesfumature@gmail.com" style="color:#0066cc; text-decoration:none;">
-oltrelesfumature@gmail.com
-</a>
-</p>
-
-<br>
-
-<p><strong>Instagram:</strong><br>
-<a href="https://www.instagram.com/oltrelesfumature" target="_blank" style="color:#0066cc; text-decoration:none;">
-@oltrelesfumature
-</a>
-</p>
-
-<br>
-
-<p><strong>TikTok:</strong><br>
-<a href="https://www.tiktok.com/@oltre.le.sfumature" target="_blank" style="color:#0066cc; text-decoration:none;">
-@oltre.le.sfumature
-</a>
-</p>
-
+<div class="contact-info">
+<p><strong>Email:</strong> <a href="mailto:oltrelesfumature@gmail.com">oltrelesfumature@gmail.com</a></p>
+<p><strong>Instagram:</strong> <a href="https://instagram.com/oltrelesfumature" target="_blank">@oltrelesfumature</a></p>
 </div>
 </section>
 
 <footer>
-<p>© 2026 Oltre Le Sfumature — Tutti i diritti riservati</p>
+© 2026 Oltre Le Sfumature
 </footer>
 
 <script>
-
-/* MENU */
 const menuBtn = document.getElementById("menuBtn");
 const sideMenu = document.getElementById("sideMenu");
 const overlay = document.getElementById("overlay");
@@ -480,23 +383,6 @@ menuBtn.classList.remove("active");
 sideMenu.classList.remove("active");
 overlay.classList.remove("active");
 });
-
-/* REVEAL ON SCROLL */
-function revealOnScroll(){
-const reveals = document.querySelectorAll(".reveal");
-
-reveals.forEach((element)=>{
-const windowHeight = window.innerHeight;
-const elementTop = element.getBoundingClientRect().top;
-
-if(elementTop < windowHeight - 100){
-element.classList.add("active");
-}
-});
-}
-
-window.addEventListener("scroll", revealOnScroll);
-
 </script>
 
 </body>
