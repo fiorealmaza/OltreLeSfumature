@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Oltre Le Sfumature</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@800&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
 <style>
@@ -19,12 +19,12 @@ scroll-behavior:smooth;
 
 body{
 font-family:'Poppins',sans-serif;
-background:#f4f7ff;
-color:#111;
-line-height:1.7;
+background:#f5f8ff;
+color:#1a1a1a;
+line-height:1.8;
 }
 
-/* HEADER */
+/* ================= HEADER ================= */
 
 header{
 position:fixed;
@@ -43,45 +43,84 @@ box-shadow:0 5px 25px rgba(0,0,0,0.2);
 .logo-area{
 display:flex;
 align-items:center;
-gap:15px;
+gap:18px;
 }
 
 .logo-area img{
-height:60px;
-border-radius:12px;
+height:80px;
+border-radius:15px;
 }
 
 header h1{
 font-family:'Playfair Display',serif;
-font-size:42px;
+font-size:52px;
 letter-spacing:1px;
+text-shadow:0 0 15px rgba(255,255,255,0.5);
+}
+
+/* HAMBURGER */
+
+.hamburger{
+display:flex;
+flex-direction:column;
+gap:6px;
+cursor:pointer;
+transition:0.3s;
+}
+
+.hamburger span{
+width:32px;
+height:3px;
+background:white;
+border-radius:3px;
+transition:0.4s;
+}
+
+.hamburger.active span:nth-child(1){
+transform:rotate(45deg) translate(5px,5px);
+}
+
+.hamburger.active span:nth-child(2){
+opacity:0;
+}
+
+.hamburger.active span:nth-child(3){
+transform:rotate(-45deg) translate(6px,-6px);
 }
 
 nav{
-display:flex;
-gap:20px;
+position:absolute;
+top:100px;
+right:8%;
+background:white;
+width:260px;
+border-radius:20px;
+box-shadow:0 10px 30px rgba(0,0,0,0.25);
+display:none;
+flex-direction:column;
+padding:25px;
 }
 
 nav a{
-color:white;
 text-decoration:none;
+color:#1e3fa3;
 font-weight:500;
-padding:8px 14px;
-border-radius:25px;
+padding:14px;
+border-radius:14px;
 transition:0.3s;
 }
 
 nav a:hover,
 nav a.active{
-background:white;
-color:#1e3fa3;
-box-shadow:0 0 15px rgba(255,255,255,0.8);
+background:#4e7bff;
+color:white;
+box-shadow:0 0 15px rgba(78,123,255,0.7);
 }
 
-/* HERO */
+/* ================= HERO ================= */
 
 .hero{
-padding:140px 10% 80px 10%;
+padding:170px 10% 90px 10%;
 text-align:center;
 }
 
@@ -92,61 +131,45 @@ font-size:18px;
 color:#444;
 }
 
-/* ACCORDION */
+/* ================= SECTIONS ================= */
 
 .section{
-padding:60px 10%;
+padding:80px 10%;
+opacity:0;
+transform:translateY(40px);
+transition:0.8s ease;
 }
 
-.accordion{
-margin-bottom:20px;
-border-radius:15px;
-overflow:hidden;
-box-shadow:0 0 25px rgba(30,63,163,0.2);
+.section.visible{
+opacity:1;
+transform:translateY(0);
 }
 
-.accordion-header{
-background:linear-gradient(135deg,#4e7bff,#1e3fa3);
-color:white;
-padding:20px;
-cursor:pointer;
-font-size:18px;
-font-weight:600;
-transition:0.3s;
-display:flex;
-justify-content:space-between;
-align-items:center;
+.section h2{
+font-family:'Playfair Display',serif;
+font-size:34px;
+margin-bottom:30px;
+color:#1e3fa3;
 }
 
-.accordion-header:hover{
-background:#1e3fa3;
-}
-
-.accordion-content{
+.box{
 background:white;
-padding:25px;
-display:none;
-animation:fade 0.4s ease;
+padding:35px;
+border-radius:20px;
+box-shadow:0 10px 35px rgba(0,0,0,0.08);
+margin-bottom:35px;
 }
 
-@keyframes fade{
-from{opacity:0;transform:translateY(-10px);}
-to{opacity:1;transform:translateY(0);}
+.box ul{
+margin-top:15px;
+padding-left:20px;
 }
 
-/* CONTACT */
+/* ================= CONTACT ================= */
 
 .contact{
-padding:80px 10%;
 background:#eef3ff;
-}
-
-.contact h2{
-text-align:center;
-font-family:'Playfair Display',serif;
-font-size:32px;
-margin-bottom:40px;
-color:#1e3fa3;
+padding:90px 10%;
 }
 
 form{
@@ -154,20 +177,20 @@ max-width:600px;
 margin:auto;
 display:flex;
 flex-direction:column;
-gap:15px;
+gap:18px;
 }
 
 input,textarea{
-padding:14px;
+padding:15px;
 border-radius:12px;
 border:1px solid #ccc;
 font-family:'Poppins';
 }
 
 button{
-padding:14px;
+padding:15px;
 border:none;
-border-radius:25px;
+border-radius:30px;
 background:linear-gradient(135deg,#1e3fa3,#4e7bff);
 color:white;
 font-weight:600;
@@ -176,11 +199,9 @@ transition:0.3s;
 }
 
 button:hover{
-box-shadow:0 0 20px rgba(30,63,163,0.5);
+box-shadow:0 0 20px rgba(30,63,163,0.4);
 transform:translateY(-3px);
 }
-
-/* INSTAGRAM */
 
 .social{
 text-align:center;
@@ -188,7 +209,7 @@ margin-top:40px;
 }
 
 .social a{
-font-size:28px;
+font-size:32px;
 color:#1e3fa3;
 transition:0.3s;
 }
@@ -202,7 +223,7 @@ transform:scale(1.2);
 
 footer{
 text-align:center;
-padding:40px;
+padding:50px;
 background:#1e3fa3;
 color:white;
 margin-top:60px;
@@ -218,11 +239,18 @@ margin-top:60px;
 <h1>Oltre Le Sfumature</h1>
 </div>
 
-<nav>
-<a href="#chi" class="nav-link">Chi Siamo</a>
-<a href="#autismo" class="nav-link">Autismo</a>
-<a href="#intervento" class="nav-link">Intervento</a>
-<a href="#contatti" class="nav-link">Contatti</a>
+<div class="hamburger" id="hamburger">
+<span></span>
+<span></span>
+<span></span>
+</div>
+
+<nav id="menu">
+<a href="#cos">Cos'è</a>
+<a href="#caratteristiche">Caratteristiche</a>
+<a href="#diagnosi">Diagnosi</a>
+<a href="#intervento">Intervento</a>
+<a href="#contatti">Contatti</a>
 </nav>
 </header>
 
@@ -234,49 +262,56 @@ Ogni persona è unica: comprendere significa rispettare e costruire opportunità
 </p>
 </div>
 
-<section class="section" id="chi">
+<section class="section" id="cos">
+<h2>Cos'è lo Spettro Autistico</h2>
+<div class="box">
+<p>L'autismo è un disturbo del neurosviluppo che coinvolge la comunicazione, l’interazione sociale e il comportamento.</p>
+<p>Viene definito “spettro” perché si manifesta in modo diverso in ogni persona, con livelli di funzionamento e bisogni di supporto variabili.</p>
+<p>Le differenze non rappresentano un limite, ma una modalità alternativa di percepire e organizzare il mondo.</p>
+</div>
+</section>
 
-<div class="accordion">
-<div class="accordion-header">
-Cos’è lo Spettro Autistico
-<i class="fas fa-plus"></i>
+<section class="section" id="caratteristiche">
+<h2>Caratteristiche Principali</h2>
+<div class="box">
+<ul>
+<li>Difficoltà nella comunicazione verbale e non verbale</li>
+<li>Interessi ristretti e specifici</li>
+<li>Comportamenti ripetitivi</li>
+<li>Ipersensibilità o iposensibilità sensoriale</li>
+<li>Bisogno di routine e prevedibilità</li>
+</ul>
 </div>
-<div class="accordion-content">
-L’autismo è un disturbo del neurosviluppo che influisce su comunicazione, relazione sociale e comportamento.
-È definito “spettro” perché ogni persona presenta caratteristiche e livelli di supporto diversi.
-</div>
-</div>
+</section>
 
-<div class="accordion">
-<div class="accordion-header">
-Caratteristiche Principali
-<i class="fas fa-plus"></i>
+<section class="section" id="diagnosi">
+<h2>Diagnosi</h2>
+<div class="box">
+<p>La diagnosi è clinica e si basa sull’osservazione del comportamento e sulla raccolta della storia evolutiva.</p>
+<p>Un intervento precoce migliora significativamente le possibilità di autonomia futura.</p>
 </div>
-<div class="accordion-content">
-Difficoltà nella comunicazione, comportamenti ripetitivi, interessi ristretti ma anche grandi capacità,
-memoria visiva sviluppata e talenti specifici.
-</div>
-</div>
+</section>
 
-<div class="accordion">
-<div class="accordion-header">
-Metodi di Intervento
-<i class="fas fa-plus"></i>
+<section class="section" id="intervento">
+<h2>Intervento</h2>
+<div class="box">
+<p>Gli interventi più efficaci sono personalizzati, strutturati e basati su evidenze scientifiche.</p>
+<ul>
+<li>Approccio ABA</li>
+<li>Metodo TEACCH</li>
+<li>Supporto familiare</li>
+<li>Collaborazione scuola-famiglia</li>
+</ul>
 </div>
-<div class="accordion-content">
-Intervento precoce, approccio ABA, modello TEACCH e collaborazione con famiglia e scuola.
-</div>
-</div>
-
 </section>
 
 <section class="contact" id="contatti">
-<h2>Contattaci</h2>
+<h2 style="text-align:center;font-family:'Playfair Display';font-size:34px;color:#1e3fa3;margin-bottom:30px;">Contattaci</h2>
 
 <form action="mailto:oltrelesfumature@gmail.com" method="post" enctype="text/plain">
-<input type="text" name="nome" placeholder="Il tuo nome" required>
-<input type="email" name="email" placeholder="La tua email" required>
-<textarea name="messaggio" rows="5" placeholder="Scrivi il tuo messaggio..." required></textarea>
+<input type="text" placeholder="Il tuo nome" required>
+<input type="email" placeholder="La tua email" required>
+<textarea rows="5" placeholder="Scrivi il tuo messaggio..." required></textarea>
 <button type="submit">Invia Messaggio</button>
 </form>
 
@@ -289,28 +324,28 @@ Intervento precoce, approccio ABA, modello TEACCH e collaborazione con famiglia 
 </section>
 
 <footer>
-© 2026 Oltre Le Sfumature | Neurodiversità • Inclusione • Consapevolezza
+© 2026 Oltre Le Sfumature | Inclusione • Neurodiversità • Consapevolezza
 </footer>
 
 <script>
 
-/* Accordion */
-const headers = document.querySelectorAll(".accordion-header");
+const hamburger = document.getElementById("hamburger");
+const menu = document.getElementById("menu");
 
-headers.forEach(header=>{
-header.addEventListener("click",()=>{
-const content = header.nextElementSibling;
-content.style.display = content.style.display === "block" ? "none" : "block";
+hamburger.addEventListener("click",()=>{
+hamburger.classList.toggle("active");
+menu.style.display = menu.style.display === "flex" ? "none" : "flex";
+menu.style.flexDirection="column";
 });
-});
 
-/* Menu Active Glow */
-const links = document.querySelectorAll(".nav-link");
-
-links.forEach(link=>{
-link.addEventListener("click",function(){
-links.forEach(l=>l.classList.remove("active"));
-this.classList.add("active");
+/* ANIMAZIONE SCROLL */
+const sections = document.querySelectorAll(".section");
+window.addEventListener("scroll",()=>{
+sections.forEach(sec=>{
+const top = sec.getBoundingClientRect().top;
+if(top < window.innerHeight - 100){
+sec.classList.add("visible");
+}
 });
 });
 
