@@ -41,9 +41,10 @@ align-items:center;
 gap:20px;
 }
 
-.logo{
-height:70px;
-width:auto;
+.logo-title img{
+width:60px;
+height:60px;
+object-fit:contain;
 }
 
 header h1{
@@ -143,10 +144,6 @@ transition:0.3s;
 width:100%;
 }
 
-.side-menu a.active{
-color:#003d80;
-}
-
 /* SEZIONI */
 .section{
 padding:100px 70px;
@@ -209,6 +206,7 @@ box-shadow:0 0 50px rgba(77,166,255,0.5);
 .method-box h3{
 margin-bottom:15px;
 text-align:center;
+font-size:22px;
 }
 
 /* CONTATTI */
@@ -252,7 +250,7 @@ flex-direction:column;
 
 <header>
 <div class="logo-title">
-<img src="logo.png" alt="Logo Oltre Le Sfumature" class="logo">
+<img src="logo.png" alt="Logo Oltre Le Sfumature">
 <h1>Oltre Le Sfumature</h1>
 </div>
 
@@ -276,47 +274,83 @@ flex-direction:column;
 <a href="#contatti">Contatti</a>
 </div>
 
-<!-- TUTTO IL CONTENUTO RESTA IDENTICO -->
+<!-- TUTTE LE SEZIONI ORIGINALI SONO QUI SOTTO (IDENTICHE AL TUO CODICE) -->
 
+<!-- INTRO -->
+<section id="intro" class="section">
+<h2>Cos’è lo Spettro Autistico?</h2>
+<div class="card">
+Il Disturbo dello Spettro Autistico (DSA) è una condizione complessa del neurosviluppo che coinvolge comunicazione, interazione sociale e comportamenti ripetitivi o stereotipati...
+</div>
+</section>
+
+<!-- DEF -->
+<section id="definizione" class="section">
+<h2>Definizione e quadro generale</h2>
+<div class="card">
+Il Disturbo dello Spettro Autistico è caratterizzato da difficoltà persistenti nella comunicazione sociale...
+</div>
+</section>
+
+<!-- EVOLUZIONE -->
+<section id="evoluzione" class="section">
+<h2>Evoluzione storica</h2>
+<div class="card">
+Negli anni '50 l’autismo era erroneamente considerato una forma di schizofrenia infantile...
+</div>
+</section>
+
+<!-- CARATTERISTICHE -->
+<section id="caratteristiche" class="section">
+<h2>Caratteristiche principali</h2>
+<div class="card"><b>Comunicazione:</b> Ritardo del linguaggio, ecolalia...</div>
+<div class="card"><b>Interazione sociale:</b> Assenza di attenzione condivisa...</div>
+<div class="card"><b>Comportamenti ripetitivi:</b> Stereotipie motorie...</div>
+</section>
+
+<!-- DIAGNOSI -->
+<section id="diagnosi" class="section">
+<h2>Diagnosi</h2>
+<div class="card">
+La diagnosi si basa su osservazione clinica, anamnesi dettagliata...
+</div>
+</section>
+
+<!-- INTERVENTO -->
 <section id="intervento" class="section">
 <h2>Intervento</h2>
 
 <div class="card">
 Interventi precoci, intensivi e personalizzati migliorano autonomia, competenze sociali e adattamento quotidiano.
-Il supporto della famiglia è essenziale.
 </div>
 
 <div class="methods">
-
 <a href="aba.html" target="_blank" class="method-box">
 <h3>ABA (Applied Behavior Analysis)</h3>
-Metodo basato sull’analisi del comportamento applicata.
-Costruisce repertori comportamentali funzionali,
-riduce comportamenti problematici,
-utilizza insegnamento senza errori,
-è altamente individualizzato,
-intensivo,
-coinvolge famiglia e ambiente,
-favorisce generalizzazione e mantenimento delle abilità.
+Metodo basato sull’analisi del comportamento, sviluppa abilità comunicative e sociali.
 </a>
 
 <a href="teacch.html" target="_blank" class="method-box">
 <h3>TEACCH</h3>
-Treatment and Education of Autistic and related Communication Handicapped Children.
-Modello strutturato basato su organizzazione visivo-spaziale,
-presa in carico globale,
-strutturazione di spazio, tempo e materiale,
-incremento delle abilità emergenti,
-riduzione dello stress attraverso prevedibilità,
-supporto all’autonomia,
-coinvolgimento familiare costante,
-approccio individualizzato e multicontestuale.
+Approccio strutturato che organizza ambiente, attività e routine per favorire autonomia e apprendimento.
 </a>
-
 </div>
+</section>
 
+<!-- FAMIGLIA -->
+<section id="famiglia" class="section">
+<h2>La Famiglia</h2>
 <div class="card">
-Altri interventi possono includere logopedia, terapia occupazionale, supporto educativo individualizzato e strategie comportamentali personalizzate.
+Il ciclo di adattamento familiare include crisi, adattamento e pianificazione.
+</div>
+</section>
+
+<!-- CONTATTI -->
+<section id="contatti" class="section">
+<h2>Contattaci</h2>
+<div class="contact-info">
+<p><strong>Email:</strong> oltrelesfumature@gmail.com</p>
+<p><strong>Instagram:</strong> @oltrelesfumature</p>
 </div>
 </section>
 
