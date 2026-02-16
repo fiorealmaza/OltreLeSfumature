@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Autismo</title>
+<title>Autismo - Sito Informativo</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
@@ -13,12 +13,14 @@
 margin:0;
 padding:0;
 box-sizing:border-box;
+scroll-behavior:smooth;
 }
 
 body{
 font-family:'Poppins',sans-serif;
-background:linear-gradient(180deg,#f3f6ff,#e6ecff);
+background:linear-gradient(180deg,#f3f6ff,#e9efff);
 color:#1f3c88;
+line-height:1.7;
 overflow-x:hidden;
 }
 
@@ -28,21 +30,20 @@ nav{
 position:fixed;
 top:0;
 width:100%;
-display:flex;
-justify-content:space-between;
-align-items:center;
-padding:20px 10%;
 background:rgba(255,255,255,0.7);
 backdrop-filter:blur(12px);
+display:flex;
+justify-content:center;
+padding:15px;
 z-index:1000;
 box-shadow:0 5px 20px rgba(0,0,0,0.05);
 }
 
 nav a{
-text-decoration:none;
 color:#1f3c88;
+text-decoration:none;
+margin:0 20px;
 font-weight:500;
-margin-left:30px;
 transition:0.3s;
 }
 
@@ -56,50 +57,36 @@ header{
 display:flex;
 justify-content:space-between;
 align-items:center;
-padding:180px 10% 120px 10%;
+padding:160px 10% 100px 10%;
 background:linear-gradient(135deg,#1f3c88,#4a6ed1);
 color:white;
 position:relative;
 overflow:hidden;
 }
 
-header::before{
-content:"";
-position:absolute;
-width:700px;
-height:700px;
-background:radial-gradient(circle,rgba(255,255,255,0.15),transparent 70%);
-top:-250px;
-right:-200px;
-}
-
 .hero-text{
-max-width:50%;
-z-index:2;
+max-width:55%;
 }
 
-.hero-text h1{
-font-size:58px;
-font-weight:700;
-margin-bottom:25px;
+header h1{
+font-size:50px;
+margin-bottom:20px;
 }
 
-.hero-text p{
+header p{
 font-size:20px;
 opacity:0.95;
-line-height:1.6;
 }
 
 .hero-logo{
-width:420px;
+width:380px;
 animation:float 6s ease-in-out infinite;
 filter:drop-shadow(0 40px 80px rgba(0,0,0,0.4));
-z-index:2;
 }
 
 @keyframes float{
 0%{transform:translateY(0px);}
-50%{transform:translateY(-25px);}
+50%{transform:translateY(-20px);}
 100%{transform:translateY(0px);}
 }
 
@@ -107,13 +94,9 @@ z-index:2;
 
 section{
 padding:120px 10%;
-display:flex;
-align-items:center;
-justify-content:space-between;
-gap:70px;
 opacity:0;
-transform:translateY(80px);
-transition:all 1.2s ease;
+transform:translateY(60px);
+transition:all 1s ease;
 }
 
 section.visible{
@@ -122,70 +105,70 @@ transform:translateY(0);
 }
 
 section:nth-child(even){
-flex-direction:row-reverse;
 background:white;
 }
 
-.section-text{
-flex:1;
-}
-
-.section-text h2{
-font-size:42px;
-margin-bottom:25px;
-}
-
-.section-text p{
-font-size:19px;
-line-height:1.7;
-}
-
-.section-img{
-flex:1;
-}
-
-.section-img img{
-width:100%;
-border-radius:25px;
-box-shadow:0 30px 60px rgba(0,0,0,0.15);
-transition:0.6s;
-}
-
-.section-img img:hover{
-transform:scale(1.05);
-}
-
-/* BOX */
-
-.box-container{
-display:flex;
-gap:40px;
-margin-top:40px;
+h2{
+font-size:36px;
+margin-bottom:30px;
 }
 
 .box{
 background:linear-gradient(145deg,#ffffff,#eef3ff);
-padding:35px;
-border-radius:25px;
-box-shadow:0 20px 40px rgba(0,0,0,0.1);
+padding:30px;
+margin:25px 0;
+border-radius:20px;
+box-shadow:0 20px 40px rgba(0,0,0,0.08);
 transition:0.4s;
-flex:1;
-font-weight:500;
 }
 
 .box:hover{
-transform:translateY(-15px);
-box-shadow:0 35px 70px rgba(0,0,0,0.2);
+transform:translateY(-10px);
+box-shadow:0 30px 60px rgba(0,0,0,0.15);
 }
 
-/* FOOTER */
+h3{
+margin-bottom:15px;
+}
+
+ul{
+padding-left:20px;
+}
 
 footer{
 background:#1f3c88;
 color:white;
 text-align:center;
-padding:50px;
-font-size:15px;
+padding:40px;
+margin-top:60px;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:900px){
+
+header{
+flex-direction:column;
+text-align:center;
+}
+
+.hero-text{
+max-width:100%;
+}
+
+.hero-logo{
+margin-top:40px;
+width:250px;
+}
+
+nav{
+flex-wrap:wrap;
+}
+
+nav a{
+margin:10px;
+}
+
 }
 
 </style>
@@ -193,77 +176,151 @@ font-size:15px;
 <body>
 
 <nav>
-<div><strong>Autismo</strong></div>
-<div>
-<a href="#">Informazioni</a>
-<a href="#">Comunicazione</a>
-<a href="#">Supporto</a>
-</div>
+<a href="#cos-e">Cos'è</a>
+<a href="#sintomi">Caratteristiche</a>
+<a href="#diagnosi">Diagnosi</a>
+<a href="#prognosi">Prognosi</a>
+<a href="#interventi">Interventi</a>
+<a href="#aba">ABA</a>
+<a href="#teacch">TEACCH</a>
 </nav>
 
 <header>
 <div class="hero-text">
-<h1>Cos'è l'Autismo</h1>
-<p>L'autismo è una condizione del neurosviluppo che influenza comunicazione, comportamento e interazione sociale. Ogni persona nello spettro è unica e possiede caratteristiche e punti di forza distintivi.</p>
+<h1>Disturbo dello Spettro Autistico</h1>
+<p>Materiale informativo basato su contenuti didattici</p>
 </div>
 
 <img src="logo.png" alt="Logo Autismo" class="hero-logo">
 </header>
 
-<section>
-<div class="section-text">
-<h2>Comunicazione</h2>
-<p>Le persone con autismo possono comunicare in modo diverso. Alcune utilizzano il linguaggio verbale, altre strumenti alternativi come immagini o dispositivi di comunicazione aumentativa.</p>
-
-<div class="box-container">
-<div class="box">Comunicazione verbale o non verbale</div>
-<div class="box">Uso di immagini e simboli</div>
-</div>
-</div>
-
-<div class="section-img">
-<img src="comunicazione.jpg">
+<section id="cos-e">
+<h2>Cos'è l'Autismo</h2>
+<div class="box">
+<p>L'autismo è un disturbo del neurosviluppo a genesi multifattoriale che interessa primariamente il Sistema Nervoso Centrale durante la sua organizzazione.</p>
+<p>È caratterizzato da disfunzioni della maturazione neurobiologica e del funzionamento del SNC.</p>
+<p>Si tratta di uno spettro variabile che può comprendere sia persone con alto quoziente intellettivo sia con ritardo mentale.</p>
 </div>
 </section>
 
-<section>
-<div class="section-text">
-<h2>Comportamento</h2>
-<p>Possono essere presenti comportamenti ripetitivi o interessi specifici intensi. Questi aspetti fanno parte del modo unico di percepire il mondo.</p>
+<section id="sintomi">
+<h2>Caratteristiche Principali</h2>
 
-<div class="box-container">
-<div class="box">Routine strutturate</div>
-<div class="box">Sensibilità sensoriale</div>
-</div>
+<div class="box">
+<h3>Alterazioni nella comunicazione</h3>
+<ul>
+<li>Assenza o ritardo del linguaggio</li>
+<li>Ecolalia immediata o differita</li>
+<li>Prosodia monotona o alterata</li>
+<li>Inversione pronominale</li>
+<li>Difficoltà a comprendere ironia e scherzo</li>
+<li>Contatto oculare sfuggente</li>
+</ul>
 </div>
 
-<div class="section-img">
-<img src="comportamento.jpg">
+<div class="box">
+<h3>Comportamenti ripetitivi e stereotipati</h3>
+<ul>
+<li>Sfarfallare le mani</li>
+<li>Dondolarsi</li>
+<li>Girare su se stessi</li>
+<li>Camminare sulle punte</li>
+<li>Rituali e rigidità</li>
+</ul>
+</div>
+
+<div class="box">
+<h3>Difficoltà nell’interazione sociale</h3>
+<ul>
+<li>Scarso interesse per gli altri</li>
+<li>Assenza di attenzione condivisa</li>
+<li>Difficoltà di comprensione degli stati mentali</li>
+<li>Mancanza di condivisione spontanea di emozioni</li>
+</ul>
+</div>
+
+<div class="box">
+<h3>Punti di forza</h3>
+<ul>
+<li>Pensiero visivo</li>
+<li>Precisione e attenzione ai dettagli</li>
+<li>Memoria visiva eccellente</li>
+<li>Conoscenze approfondite su argomenti specifici</li>
+<li>Talenti artistici o logico-matematici</li>
+</ul>
+</div>
+
+</section>
+
+<section id="diagnosi">
+<h2>Diagnosi</h2>
+<div class="box">
+<p>La diagnosi è clinica, basata sull’osservazione del comportamento e sulla raccolta dei dati anamnestici.</p>
+<p>Non esistono test biologici in grado di individuare la sindrome autistica.</p>
+<p>La diagnosi e il trattamento precoci cambiano la prognosi a lungo termine.</p>
 </div>
 </section>
 
-<section>
-<div class="section-text">
-<h2>Punti di Forza</h2>
-<p>Molte persone nello spettro autistico possiedono capacità straordinarie come attenzione ai dettagli, memoria eccellente, pensiero logico e creatività.</p>
-
-<div class="box-container">
-<div class="box">Creatività</div>
-<div class="box">Pensiero analitico</div>
+<section id="prognosi">
+<h2>Prognosi ed Evoluzione</h2>
+<div class="box">
+<ul>
+<li>1-2% acquisisce uno stato normale</li>
+<li>10-15% raggiunge autonomia familiare</li>
+<li>25-30% necessita sostegno</li>
+<li>60-70% diventa adulto non autosufficiente</li>
+</ul>
+<p>La prognosi dipende fortemente dal grado di funzionamento cognitivo e dalla precocità dell’intervento.</p>
 </div>
-</div>
+</section>
 
-<div class="section-img">
-<img src="punti-forza.jpg">
+<section id="interventi">
+<h2>Intervento</h2>
+<div class="box">
+<ul>
+<li>Intervento precoce e intensivo</li>
+<li>Programma individualizzato</li>
+<li>Coinvolgimento attivo della famiglia</li>
+<li>Lavoro di rete</li>
+<li>Verifiche periodiche</li>
+</ul>
+<p>Non esistono metodi miracolosi, ma sistemi di intervento integrati psico-educativi e cognitivo-comportamentali scientificamente validati.</p>
+</div>
+</section>
+
+<section id="aba">
+<h2>Metodo ABA</h2>
+<div class="box">
+<p>ABA (Applied Behavior Analysis) utilizza principi comportamentali per costruire repertori comportamentali utili e ridurre quelli problematici.</p>
+<ul>
+<li>Intervento altamente individualizzato</li>
+<li>Insegnamento senza errori</li>
+<li>Riduzione dei comportamenti problema</li>
+<li>Incremento delle capacità adattive</li>
+</ul>
+</div>
+</section>
+
+<section id="teacch">
+<h2>Modello TEACCH</h2>
+<div class="box">
+<p>Il TEACCH è un modello di presa in carico globale che punta sull’organizzazione visiva di spazi, tempi e materiali.</p>
+<ul>
+<li>Strutturazione dello spazio</li>
+<li>Strutturazione del tempo</li>
+<li>Uso di agende visive</li>
+<li>Adattamento dell’ambiente</li>
+<li>Coinvolgimento dei genitori</li>
+</ul>
+<p>Obiettivi: incrementare le abilità emergenti e rendere l’ambiente più comprensibile.</p>
 </div>
 </section>
 
 <footer>
-© 2026 Informazione sull'Autismo
+<p>Sito informativo sul Disturbo dello Spettro Autistico</p>
 </footer>
 
 <script>
-
 const sections = document.querySelectorAll("section");
 
 window.addEventListener("scroll", () => {
@@ -271,12 +328,11 @@ sections.forEach(section => {
 const position = section.getBoundingClientRect().top;
 const screenHeight = window.innerHeight;
 
-if(position < screenHeight - 120){
+if(position < screenHeight - 100){
 section.classList.add("visible");
 }
 });
 });
-
 </script>
 
 </body>
