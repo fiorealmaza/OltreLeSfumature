@@ -9,22 +9,19 @@
 <style>
 *{margin:0;padding:0;box-sizing:border-box;scroll-behavior:smooth;}
 body{font-family:'Roboto',sans-serif;line-height:1.8;background:#e0f2fe;color:#0f172a;overflow-x:hidden;}
-a{text-decoration:none;}
-header{position:fixed;top:0;left:0;width:100%;background:linear-gradient(90deg,#1537b8,#1e4ed8,#3b82f6);padding:12px 8%;display:flex;justify-content:space-between;align-items:center;z-index:1000;box-shadow:0 4px 20px rgba(0,0,0,0.25);}
+header{position:fixed;width:100%;top:0;left:0;z-index:1000;display:flex;justify-content:space-between;align-items:center;padding:12px 8%;background:linear-gradient(90deg,#1537b8,#1e4ed8,#3b82f6);box-shadow:0 4px 20px rgba(0,0,0,0.25);}
 .logo-title{display:flex;align-items:center;gap:15px;font-family:'Cinzel',serif;font-weight:900;font-size:1.8rem;color:white;text-shadow:0 0 10px rgba(255,255,255,0.6);}
 .logo-title img{height:60px;border-radius:12px;}
-.contact-top{display:flex;gap:20px;font-size:0.9rem;color:white;align-items:center;}
-.contact-top i{margin-right:6px;}
 nav{display:flex;gap:12px;}
-nav a{color:white;font-weight:500;padding:8px 14px;border-radius:20px;background:rgba(255,255,255,0.08);transition:0.3s;font-size:0.95rem;}
+nav a{color:white;font-weight:500;padding:8px 12px;border-radius:20px;background:rgba(255,255,255,0.08);transition:0.3s;font-size:0.95rem;}
 nav a:hover{background:white;color:#1537b8;}
 .hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;}
 .hamburger span{width:28px;height:3px;background:white;border-radius:3px;}
-.hero{padding:120px 8% 60px 8%;text-align:center;}
-.hero h1{font-family:'Cinzel',serif;font-size:3rem;font-weight:900;color:#1537b8;margin-bottom:20px;text-shadow:0 0 15px rgba(0,0,0,0.2);}
-.hero p{margin-top:20px;max-width:1000px;margin-left:auto;margin-right:auto;font-size:1.15rem;color:#0f172a;line-height:1.9;}
+.hero{padding:120px 8% 80px 8%;text-align:center;color:#0f172a;}
+.hero h1{font-family:'Cinzel',serif;font-size:3rem;text-shadow:0 0 15px rgba(0,0,0,0.2);margin-bottom:25px;}
+.hero p{margin-top:15px;max-width:900px;margin-left:auto;margin-right:auto;font-size:1.2rem;line-height:1.9em;}
 section{padding:80px 8%;}
-.section-title{font-size:2rem;margin-bottom:35px;border-bottom:2px solid rgba(0,0,0,0.15);padding-bottom:8px;display:flex;align-items:center;gap:10px;color:#1537b8;}
+.section-title{font-size:2rem;margin-bottom:35px;border-bottom:2px solid rgba(0,0,0,0.15);padding-bottom:8px;display:flex;align-items:center;gap:10px;}
 .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:25px;margin-top:30px;}
 .card{background:linear-gradient(145deg,#60a5fa,#93c5fd);color:#0f172a;padding:25px;border-radius:18px;box-shadow:0 6px 25px rgba(0,0,0,0.15);transition:0.3s;opacity:0;transform:translateY(30px);}
 .card.visible{opacity:1;transform:translateY(0);}
@@ -32,195 +29,75 @@ section{padding:80px 8%;}
 .card h3{margin-bottom:12px;}
 .card i{font-size:1.5rem;margin-bottom:10px;display:block;color:#1537b8;}
 ul{padding-left:20px;margin-top:8px;}
-footer{text-align:center;padding:50px 20px;background:linear-gradient(90deg,#1537b8,#1e4ed8);font-size:0.9rem;color:white;margin-top:50px;}
-@media(max-width:900px){nav{position:absolute;top:65px;right:0;background:#1537b8;flex-direction:column;width:230px;display:none;padding:20px;border-radius:0 0 15px 15px;}nav.active{display:flex;}.hamburger{display:flex;}}
+footer{text-align:center;padding:50px 20px;background:linear-gradient(90deg,#1537b8,#1e4ed8);font-size:0.9rem;color:white;}
+@media(max-width:900px){nav{position:absolute;top:65px;right:0;background:#1537b8;flex-direction:column;width:230px;display:none;padding:20px;border-radius:0 0 15px 15px;}nav.active{display:flex;} .hamburger{display:flex;}}
 </style>
 </head>
 <body>
 <header>
-  <div class="logo-title"><img src="logo.png" alt="Logo">Oltre Le Sfumature</div>
-  <div class="contact-top">
-    <div><i class="fas fa-envelope"></i>oltrelesfumature@gmail.com</div>
-    <div><i class="fab fa-instagram"></i>@oltrelesfumature</div>
-  </div>
-  <div class="hamburger" id="hamburger"><span></span><span></span><span></span></div>
-  <nav id="navLinks">
-    <a href="#cos-e">Cos'è lo Spettro Autistico</a>
-    <a href="#caratteristiche">Caratteristiche</a>
-    <a href="#diagnosi">Diagnosi</a>
-    <a href="#prognosi">Prognosi</a>
-    <a href="#intervento">Intervento</a>
-    <a href="#aba">ABA</a>
-    <a href="#teacch">TEACCH</a>
-    <a href="#contatti">Contatti</a>
-  </nav>
+<div class="logo-title"><img src="logo.png" alt="Logo">Oltre Le Sfumature</div>
+<div class="hamburger" id="hamburger"><span></span><span></span><span></span></div>
+<nav id="navLinks">
+<a href="#cos-e">Cos'è</a>
+<a href="#caratteristiche">Caratteristiche</a>
+<a href="#diagnosi">Diagnosi</a>
+<a href="#prognosi">Prognosi</a>
+<a href="#intervento">Intervento</a>
+<a href="#aba">ABA</a>
+<a href="#teacch">TEACCH</a>
+<a href="#contatti">Contatti</a>
+</nav>
 </header>
-
 <section class="hero">
-  <h1>Oltre Le Sfumature</h1>
-  <p>Un progetto dedicato alla consapevolezza sulla neurodiversità e sullo spettro autistico. Informazione corretta, inclusione sociale, supporto educativo e valorizzazione delle capacità individuali. Ogni persona è unica: comprendere significa rispettare e costruire opportunità. Questo sito fornisce informazioni dettagliate sul disturbo dello spettro autistico, le caratteristiche principali, metodi di intervento, punti di forza e strumenti educativi, per offrire un quadro chiaro e completo agli operatori, alle famiglie, agli educatori e a chiunque desideri conoscere meglio questa condizione complessa.</p>
+<h1>Oltre Le Sfumature</h1>
+<p>Un progetto dedicato alla consapevolezza sulla neurodiversità e sullo spettro autistico. Informazione corretta, inclusione sociale, supporto educativo e valorizzazione delle capacità individuali. Ogni persona è unica: comprendere significa rispettare e costruire opportunità.</p>
 </section>
-
 <section id="cos-e">
-  <h2 class="section-title"><i class="fas fa-brain"></i>Cos'è lo Spettro Autistico</h2>
-  <div class="grid">
-    <div class="card">
-      <p>L'autismo è un disturbo del neurosviluppo a genesi multifattoriale che interessa primariamente il Sistema Nervoso Centrale durante la sua organizzazione.</p>
-      <p>È caratterizzato da disfunzioni della maturazione neurobiologica e del funzionamento del SNC.</p>
-      <p>Si tratta di uno spettro variabile che può comprendere sia persone con alto quoziente intellettivo sia con ritardo mentale.</p>
-      <p>Ogni individuo manifesta caratteristiche uniche e diverse combinazioni di sintomi, con abilità e punti di forza specifici.</p>
-      <p>Comprendere la complessità dello spettro aiuta a rispettare la diversità e a creare ambienti inclusivi e stimolanti.</p>
-      <p>La consapevolezza precoce e la diagnosi tempestiva possono favorire interventi mirati, migliorare le abilità comunicative e sociali e sostenere l'autonomia personale.</p>
-      <p>Educatori, operatori e famiglie possono utilizzare strategie mirate per potenziare le capacità individuali, promuovere la partecipazione sociale e ridurre le difficoltà comportamentali.</p>
-      <p>La neurodiversità è un valore: ogni persona con autismo contribuisce con talenti, punti di forza e prospettive uniche.</p>
-      <p>L'approccio educativo deve essere individualizzato, flessibile e rispettoso delle esigenze e delle preferenze della persona.</p>
-      <p>Creare contesti stimolanti, prevedibili e sicuri facilita l'apprendimento, la comunicazione e la partecipazione alle attività quotidiane.</p>
-      <p>L'inclusione scolastica e sociale è fondamentale per promuovere il benessere emotivo e lo sviluppo cognitivo, valorizzando le competenze e riducendo l'isolamento.</p>
-      <p>Attraverso attività strutturate, giochi educativi e supporti visivi, è possibile potenziare abilità linguistiche, cognitive, motorie e sociali.</p>
-      <p>La collaborazione tra famiglia, scuola e operatori permette di creare un percorso coerente e continuativo, massimizzando i benefici degli interventi.</p>
-      <p>Il rispetto del ritmo individuale e delle differenze sensoriali è essenziale per garantire esperienze positive e significative.</p>
-      <p>Ogni traguardo raggiunto, anche piccolo, rappresenta un passo importante verso autonomia e realizzazione personale.</p>
-      <p>L'obiettivo finale è supportare la persona con autismo nel vivere una vita soddisfacente, autonoma e piena di opportunità.</p>
-      <p>Informare, educare e sensibilizzare la comunità è fondamentale per promuovere una società più inclusiva e consapevole.</p>
-      <p>Questo sito raccoglie risorse, spiegazioni dettagliate, esempi pratici e strategie educative efficaci, per chiunque desideri approfondire la conoscenza dello spettro autistico.</p>
-      <p>Offre strumenti pratici per insegnanti, genitori, operatori e studenti, facilitando la comprensione delle difficoltà e dei punti di forza di ogni individuo.</p>
-      <p>L'approccio centrato sulla persona valorizza le competenze, riduce gli ostacoli e favorisce la partecipazione attiva nella vita sociale, scolastica e lavorativa.</p>
-      <p>Lo spettro autistico non è uniforme: ogni percorso educativo deve essere personalizzato, basato sull'osservazione, la valutazione e il monitoraggio continuo dei progressi.</p>
-      <p>Attraverso l'informazione, la formazione e l'uso di strumenti educativi scientificamente validati, è possibile creare ambienti inclusivi e stimolanti, capaci di valorizzare le potenzialità di ciascuno.</p>
-    </div>
-  </div>
+<h2 class="section-title"><i class="fas fa-brain"></i>Cos'è l'Autismo</h2>
+<div class="grid"><div class="card"><p>L'autismo è un disturbo del neurosviluppo a genesi multifattoriale che interessa primariamente il Sistema Nervoso Centrale durante la sua organizzazione.</p><p>È caratterizzato da disfunzioni della maturazione neurobiologica e del funzionamento del SNC.</p><p>Si tratta di uno spettro variabile che può comprendere sia persone con alto quoziente intellettivo sia con ritardo mentale.</p></div></div>
 </section>
-
 <section id="caratteristiche">
-  <h2 class="section-title"><i class="fas fa-list"></i>Caratteristiche Principali</h2>
-  <div class="grid">
-    <div class="card">
-      <h3>Alterazioni nella comunicazione</h3>
-      <ul>
-        <li>Assenza o ritardo del linguaggio</li>
-        <li>Ecolalia immediata o differita</li>
-        <li>Prosodia monotona o alterata</li>
-        <li>Inversione pronominale</li>
-        <li>Difficoltà a comprendere ironia e scherzo</li>
-        <li>Contatto oculare sfuggente</li>
-      </ul>
-      <p>Questi aspetti influenzano la capacità di interagire e comprendere i messaggi sociali, ma possono essere supportati con strategie educative mirate.</p>
-      <p>Interventi specifici includono attività di potenziamento linguistico, giochi di ruolo e l'uso di strumenti visivi e comunicativi alternativi per migliorare l'espressione e la comprensione.</p>
-    </div>
-    <div class="card">
-      <h3>Comportamenti ripetitivi e stereotipati</h3>
-      <ul>
-        <li>Sfarfallare le mani</li>
-        <li>Dondolarsi</li>
-        <li>Girare su se stessi</li>
-        <li>Camminare sulle punte</li>
-        <li>Rituali e rigidità</li>
-      </ul>
-      <p>Questi comportamenti servono spesso come modalità di autoregolazione sensoriale e emotiva e devono essere interpretati nel contesto della persona.</p>
-      <p>Strategie di intervento includono l'introduzione graduale di variabilità nelle routine e attività sensoriali controllate per ridurre stress e ansia.</p>
-    </div>
-    <div class="card">
-      <h3>Difficoltà nell'interazione sociale</h3>
-      <ul>
-        <li>Scarso interesse per gli altri</li>
-        <li>Assenza di attenzione condivisa</li>
-        <li>Difficoltà di comprensione degli stati mentali</li>
-        <li>Mancanza di condivisione spontanea di emozioni</li>
-      </ul>
-      <p>Si può intervenire con attività strutturate e giochi sociali, modellamento di comportamenti desiderati e rinforzo positivo per favorire l'apprendimento delle regole sociali.</p>
-      <p>L'uso di supporti visivi, come schede, immagini e tabelle, facilita la comprensione e l'apprendimento dei comportamenti sociali.</p>
-    </div>
-    <div class="card">
-      <h3>Punti di forza</h3>
-      <ul>
-        <li>Pensiero visivo</li>
-        <li>Precisione e attenzione ai dettagli</li>
-        <li>Memoria visiva eccellente</li>
-        <li>Conoscenze approfondite su argomenti specifici</li>
-        <li>Talenti artistici o logico-matematici</li>
-      </ul>
-      <p>Valorizzare i punti di forza è fondamentale: attività creative, scientifiche, artistiche e logico-matematiche possono essere integrate nel percorso educativo.</p>
-      <p>L'obiettivo è promuovere fiducia, autonomia e realizzazione personale attraverso la scoperta e l'espressione dei talenti individuali.</p>
-    </div>
-  </div>
+<h2 class="section-title"><i class="fas fa-list"></i>Caratteristiche Principali</h2>
+<div class="grid">
+<div class="card"><h3>Alterazioni nella comunicazione</h3><ul><li>Assenza o ritardo del linguaggio</li><li>Ecolalia immediata o differita</li><li>Prosodia monotona o alterata</li><li>Inversione pronominale</li><li>Difficoltà a comprendere ironia e scherzo</li><li>Contatto oculare sfuggente</li></ul></div>
+<div class="card"><h3>Comportamenti ripetitivi e stereotipati</h3><ul><li>Sfarfallare le mani</li><li>Dondolarsi</li><li>Girare su se stessi</li><li>Camminare sulle punte</li><li>Rituali e rigidità</li></ul></div>
+<div class="card"><h3>Difficoltà nell'interazione sociale</h3><ul><li>Scarso interesse per gli altri</li><li>Assenza di attenzione condivisa</li><li>Difficoltà di comprensione degli stati mentali</li><li>Mancanza di condivisione spontanea di emozioni</li></ul></div>
+<div class="card"><h3>Punti di forza</h3><ul><li>Pensiero visivo</li><li>Precisione e attenzione ai dettagli</li><li>Memoria visiva eccellente</li><li>Conoscenze approfondite su argomenti specifici</li><li>Talenti artistici o logico-matematici</li></ul></div>
+</div>
 </section>
-
 <section id="diagnosi">
-  <h2 class="section-title"><i class="fas fa-stethoscope"></i>Diagnosi</h2>
-  <div class="grid">
-    <div class="card">
-      <p>La diagnosi è clinica, basata sull'osservazione del comportamento e sulla raccolta dei dati anamnestici. Non esistono test biologici in grado di individuare la sindrome autistica.</p>
-      <p>Una diagnosi precoce permette interventi mirati e aumenta le possibilità di sviluppare abilità comunicative, sociali e cognitive.</p>
-      <p>Professionisti qualificati valutano lo sviluppo, il linguaggio, le abilità sociali, i comportamenti ripetitivi e le capacità cognitive per determinare un profilo individuale.</p>
-      <p>La diagnosi deve essere comunicata con sensibilità, fornendo informazioni chiare e supporto alle famiglie.</p>
-      <p>Strategie educative personalizzate e programmi strutturati derivano dalla valutazione diagnostica, permettendo interventi efficaci e mirati.</p>
-    </div>
-  </div>
+<h2 class="section-title"><i class="fas fa-stethoscope"></i>Diagnosi</h2>
+<div class="grid"><div class="card"><p>La diagnosi è clinica, basata sull’osservazione del comportamento e sulla raccolta dei dati anamnestici.</p><p>Non esistono test biologici in grado di individuare la sindrome autistica.</p><p>La diagnosi e il trattamento precoci cambiano la prognosi a lungo termine.</p></div></div>
 </section>
-
 <section id="prognosi">
-  <h2 class="section-title"><i class="fas fa-chart-line"></i>Prognosi ed Evoluzione</h2>
-  <div class="grid">
-    <div class="card">
-      <ul>
-        <li>1-2% acquisisce uno stato normale</li>
-        <li>10-15% raggiunge autonomia familiare</li>
-        <li>25-30% necessita sostegno</li>
-        <li>60-70% diventa adulto non autosufficiente</li>
-      </ul>
-      <p>La prognosi dipende dal grado di funzionamento cognitivo e dalla precocità dell’intervento educativo. Ogni individuo presenta un percorso unico e personalizzato.</p>
-      <p>Lavorare sulle competenze comunicative, sociali e cognitive migliora autonomia, partecipazione sociale e qualità della vita.</p>
-    </div>
-  </div>
+<h2 class="section-title"><i class="fas fa-chart-line"></i>Prognosi ed Evoluzione</h2>
+<div class="grid"><div class="card"><ul><li>1-2% acquisisce uno stato normale</li><li>10-15% raggiunge autonomia familiare</li><li>25-30% necessita sostegno</li><li>60-70% diventa adulto non autosufficiente</li></ul><p>La prognosi dipende fortemente dal grado di funzionamento cognitivo e dalla precocità dell’intervento.</p></div></div>
 </section>
-
 <section id="intervento">
-  <h2 class="section-title"><i class="fas fa-hand-holding-heart"></i>Intervento Educativo</h2>
-  <div class="grid">
-    <div class="card">
-      <ul>
-        <li>Intervento precoce e intensivo</li>
-        <li>Programma individualizzato</li>
-        <li>Coinvolgimento attivo della famiglia</li>
-        <li>Lavoro di rete</li>
-        <li>Verifiche periodiche</li>
-      </ul>
-      <p>Non esistono metodi miracolosi, ma sistemi di intervento integrati psico-educativi e cognitivo-comportamentali scientificamente validati. La collaborazione tra operatori, famiglia e scuola è essenziale.</p>
-    </div>
-  </div>
+<h2 class="section-title"><i class="fas fa-hand-holding-medical"></i>Intervento</h2>
+<div class="grid"><div class="card"><ul><li>Intervento precoce e intensivo</li><li>Programma individualizzato</li><li>Coinvolgimento attivo della famiglia</li><li>Lavoro di rete</li><li>Verifiche periodiche</li></ul><p>Non esistono metodi miracolosi, ma sistemi di intervento integrati psico-educativi e cognitivo-comportamentali scientificamente validati.</p></div></div>
 </section>
-
 <section id="aba">
-  <h2 class="section-title"><i class="fas fa-project-diagram"></i>Metodo ABA</h2>
-  <div class="grid">
-    <div class="card">
-      <p>L’ABA (Applied Behavior Analysis) utilizza principi comportamentali per costruire repertori comportamentali utili e ridurre quelli problematici.</p>
-      <ul>
-        <li>Intervento altamente individualizzato</li>
-        <li>Insegnamento senza errori</li>
-        <li>Riduzione dei comportamenti problema</li>
-        <li>Incremento delle capacità adattive</li>
-      </ul>
-    </div>
-  </div>
+<h2 class="section-title"><i class="fas fa-brain"></i>Metodo ABA</h2>
+<div class="grid"><div class="card"><p>ABA (Applied Behavior Analysis) utilizza principi comportamentali per costruire repertori comportamentali utili e ridurre quelli problematici.</p><ul><li>Intervento altamente individualizzato</li><li>Insegnamento senza errori</li><li>Riduzione dei comportamenti problema</li><li>Incremento delle capacità adattive</li></ul></div></div>
 </section>
-
 <section id="teacch">
-  <h2 class="section-title"><i class="fas fa-th-large"></i>Modello TEACCH</h2>
-  <div class="grid">
-    <div class="card">
-      <p>Il TEACCH è un modello di presa in carico globale che punta sull’organizzazione visiva di spazi, tempi e materiali.</p>
-      <ul>
-        <li>Strutturazione dello spazio</li>
-        <li>Strutturazione del tempo</li>
-        <li>Uso di agende visive</li>
-        <li>Adattamento dell’ambiente</li>
-        <li>Coinvolgimento dei genitori</li>
-      </ul>
-      <p>Obiettivi: incrementare le abilità emergenti e rendere l’ambiente più comprensibile e prevedibile per la persona.</p>
-    </div>
-  </div>
+<h2 class="section-title"><i class="fas fa-chalkboard-teacher"></i>Modello TEACCH</h2>
+<div class="grid"><div class="card"><p>Il TEACCH è un modello di presa in carico globale che punta sull’organizzazione visiva di spazi, tempi e materiali.</p><ul><li>Strutturazione dello spazio</li><li>Strutturazione del tempo</li><li>Uso di agende visive</li><li>Adattamento dell’ambiente</li><li>Coinvolgimento dei genitori</li></ul><p>Obiettivi: incrementare le abilità emergenti e rendere l’ambiente più comprensibile.</p></div></div>
 </section>
-
-<section id="contatti">
-  <h2 class="section-title"><i class="fas fa-envelope"></i>Contatti</h
+<section id="contatti" class="contact">
+<h2 class="section-title"><i class="fas fa-envelope"></i>Contatti</h2>
+<div class="grid"><div class="card"><i class="fas fa-envelope"></i><p>Email: oltrelesfumature@gmail.com</p></div>
+<div class="card"><i class="fab fa-instagram"></i><p>Instagram: @oltrelesfumature</p></div></div>
+</section>
+<footer>© 2026 Oltre Le Sfumature — Inclusione • Consapevolezza • Neurodiversità • Crescita • Ricerca</footer>
+<script>
+const hamburger=document.getElementById("hamburger");
+const navLinks=document.getElementById("navLinks");
+hamburger.addEventListener("click",()=>{navLinks.classList.toggle("active");});
+const cards=document.querySelectorAll('.card');
+const observer=new IntersectionObserver(entries=>{entries.forEach(entry=>{if(entry.isIntersecting){entry.target.classList.add('visible');}})},{threshold:0.2});
+cards.forEach(card=>observer.observe(card));
+</script>
+</body>
+</html>
