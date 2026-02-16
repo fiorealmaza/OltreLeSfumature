@@ -5,13 +5,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Oltre Le Sfumature</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800;900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800&family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
 <style>
-
-/* ========================= */
-/* RESET E BASE */
-/* ========================= */
 
 *{
 margin:0;
@@ -26,38 +22,35 @@ scroll-behavior:smooth;
 body{
 font-family:'Poppins',sans-serif;
 background:
-radial-gradient(circle at 5% 10%,#dbe9ff,transparent 40%),
-radial-gradient(circle at 95% 90%,#cfe2ff,transparent 40%),
-linear-gradient(135deg,#eef4ff,#ffffff);
+radial-gradient(circle at 10% 20%,#e3f0ff,transparent 40%),
+radial-gradient(circle at 90% 80%,#d6e8ff,transparent 40%),
+linear-gradient(135deg,#f4f8ff,#ffffff);
 color:#111;
+line-height:2;
 overflow-x:hidden;
-line-height:1.9;
 }
 
-/* ========================= */
-/* MENU NAVIGAZIONE */
-/* ========================= */
+/* MENU */
 
 nav{
 position:fixed;
 top:0;
 width:100%;
-background:rgba(255,255,255,0.9);
-backdrop-filter:blur(15px);
+background:rgba(255,255,255,0.92);
+backdrop-filter:blur(18px);
 display:flex;
 justify-content:center;
-gap:60px;
-padding:22px;
+gap:55px;
+padding:24px;
 z-index:1000;
-box-shadow:0 5px 25px rgba(0,0,0,0.05);
+box-shadow:0 10px 40px rgba(0,0,0,0.05);
 }
 
 nav a{
 text-decoration:none;
 color:#2a6edb;
 font-weight:600;
-letter-spacing:1px;
-transition:0.3s;
+transition:.3s;
 }
 
 nav a:hover{
@@ -65,13 +58,11 @@ color:#1f55ad;
 transform:scale(1.1);
 }
 
-/* ========================= */
 /* HERO */
-/* ========================= */
 
 .hero{
 min-height:100vh;
-padding:170px 120px 100px 120px;
+padding:190px 120px 120px 120px;
 display:flex;
 flex-direction:column;
 justify-content:center;
@@ -84,38 +75,41 @@ align-items:center;
 margin-bottom:70px;
 }
 
-/* TITOLO 1/4 ORIZZONTALE */
-
-.title{
+.main-title{
 width:25%;
-min-width:250px;
-font-size:1.9rem;
+min-width:260px;
+font-family:'Playfair Display',serif;
+font-size:2.7rem;
 font-weight:800;
-line-height:1.15;
-letter-spacing:1px;
+line-height:1.1;
 background:linear-gradient(90deg,#2a6edb,#4e8cff,#2a6edb);
 -webkit-background-clip:text;
 -webkit-text-fill-color:transparent;
 text-shadow:
-0 0 12px rgba(42,110,219,0.6),
-0 0 25px rgba(42,110,219,0.5),
-0 0 45px rgba(42,110,219,0.4);
+0 0 25px rgba(42,110,219,0.7),
+0 0 60px rgba(42,110,219,0.6),
+0 0 110px rgba(42,110,219,0.5);
 animation:glow 4s infinite alternate;
 }
 
 @keyframes glow{
-from{text-shadow:0 0 12px rgba(42,110,219,0.5)}
-to{text-shadow:0 0 55px rgba(42,110,219,1)}
+from{text-shadow:0 0 25px rgba(42,110,219,0.5)}
+to{text-shadow:0 0 120px rgba(42,110,219,1)}
 }
 
-/* LOGO */
+.sub-title{
+margin-top:25px;
+font-size:1.5rem;
+font-weight:600;
+color:#1f55ad;
+}
 
 .logo-wrapper{
 position:relative;
 }
 
 .logo{
-width:180px;
+width:270px;
 position:relative;
 z-index:2;
 }
@@ -123,30 +117,18 @@ z-index:2;
 .logo-wrapper::after{
 content:"";
 position:absolute;
-bottom:-25px;
+bottom:-40px;
 left:50%;
 transform:translateX(-50%);
-width:240px;
-height:80px;
+width:320px;
+height:110px;
 background:radial-gradient(circle,#2a6edb66,transparent 70%);
-filter:blur(40px);
+filter:blur(55px);
 z-index:1;
 }
 
-.subtitle{
-margin-top:50px;
-max-width:1000px;
-font-size:1.2rem;
-color:#444;
-line-height:2.1;
-}
-
-/* ========================= */
-/* SEZIONI GENERALI */
-/* ========================= */
-
 .section{
-padding:170px 110px;
+padding:180px 120px;
 }
 
 .container{
@@ -155,99 +137,51 @@ margin:auto;
 }
 
 .section h2{
-font-size:2.7rem;
+font-size:3rem;
 text-align:center;
-margin-bottom:80px;
+margin-bottom:100px;
 color:#2a6edb;
 font-weight:800;
 }
 
-/* ========================= */
-/* CARD */
-/* ========================= */
-
 .card{
-background:rgba(255,255,255,0.88);
-backdrop-filter:blur(25px);
-padding:110px;
-border-radius:60px;
-box-shadow:0 70px 170px rgba(0,0,0,0.08);
-margin-bottom:140px;
+background:rgba(255,255,255,0.92);
+padding:130px;
+border-radius:70px;
+box-shadow:0 90px 250px rgba(0,0,0,0.08);
+margin-bottom:160px;
 transition:.6s;
-font-size:1.08rem;
-line-height:2.2;
 }
 
 .card:hover{
-transform:translateY(-18px);
-box-shadow:0 100px 240px rgba(42,110,219,0.25);
+transform:translateY(-25px);
+box-shadow:0 140px 320px rgba(42,110,219,0.25);
 }
-
-/* ========================= */
-/* GRID */
-/* ========================= */
 
 .grid{
 display:grid;
 grid-template-columns:1fr 1fr;
-gap:130px;
+gap:150px;
 }
 
 .box{
-background:rgba(255,255,255,0.92);
-backdrop-filter:blur(25px);
-padding:110px;
-border-radius:60px;
-box-shadow:0 70px 170px rgba(0,0,0,0.08);
+background:rgba(255,255,255,0.95);
+padding:130px;
+border-radius:70px;
+box-shadow:0 90px 250px rgba(0,0,0,0.08);
 transition:.6s;
-line-height:2.1;
 }
 
 .box:hover{
-transform:translateY(-25px) scale(1.05);
-box-shadow:0 120px 260px rgba(42,110,219,0.3);
+transform:translateY(-30px) scale(1.05);
+box-shadow:0 150px 350px rgba(42,110,219,0.3);
 }
 
 .box h3{
-font-size:1.9rem;
-margin-bottom:40px;
+font-size:2.2rem;
+margin-bottom:45px;
 color:#1f55ad;
 font-weight:800;
-}
-
-/* ========================= */
-/* FOOTER */
-/* ========================= */
-
-footer{
-background:#2a6edb;
-color:white;
-text-align:center;
-padding:100px;
-font-weight:600;
-letter-spacing:2px;
-}
-
-/* ========================= */
-/* RESPONSIVE */
-/* ========================= */
-
-@media(max-width:1000px){
-
-.top-bar{
-flex-direction:column;
-gap:40px;
-align-items:flex-start;
-}
-
-.title{
-width:100%;
-}
-
-.grid{
-grid-template-columns:1fr;
-}
-
 }
 
 </style>
@@ -259,28 +193,33 @@ grid-template-columns:1fr;
 <a href="#intro">Introduzione</a>
 <a href="#profilo">Profilo</a>
 <a href="#rischi">Rischi</a>
-<a href="#aiuto">Aiuto</a>
+<a href="#terapie">Terapie</a>
+<a href="#figure">Figure</a>
+<a href="#inclusione">Inclusione</a>
 <a href="#futuro">Futuro</a>
 </nav>
 
 <section class="hero" id="intro">
 
 <div class="top-bar">
-
-<h1 class="title">
-Disturbo dello<br>
-Spettro Autistico
+<div>
+<h1 class="main-title">
+Oltre Le<br>
+Sfumature
 </h1>
+<div class="sub-title">
+Cos'è lo Spettro Autistico
+</div>
+</div>
 
 <div class="logo-wrapper">
-<img src="logo.png" alt="Logo" class="logo">
+<img src="logo.png" class="logo">
+</div>
 </div>
 
+<div class="card">
+Il Disturbo dello Spettro Autistico è una condizione del neurosviluppo che influenza il modo in cui una persona comunica, percepisce il mondo e interagisce con gli altri. Non esiste un solo tipo di autismo, ma uno spettro ampio e variegato di caratteristiche. Ogni individuo presenta punti di forza e aree di difficoltà differenti. Alcuni mostrano capacità analitiche elevate, memoria dettagliata e forte concentrazione su interessi specifici. Altri possono incontrare difficoltà nella comprensione delle dinamiche sociali o nella gestione di ambienti molto stimolanti.
 </div>
-
-<p class="subtitle">
-Il Disturbo dello Spettro Autistico è una condizione del neurosviluppo caratterizzata da differenze nella comunicazione sociale, nei comportamenti ripetitivi, nella regolazione emotiva e nell’elaborazione sensoriale. Ogni individuo nello spettro presenta un profilo unico, con combinazioni differenti di abilità, difficoltà, interessi specifici e modalità percettive particolari. Comprendere lo spettro significa promuovere inclusione, rispetto e valorizzazione della neurodiversità come parte fondamentale della società moderna.
-</p>
 
 </section>
 
@@ -290,7 +229,7 @@ Il Disturbo dello Spettro Autistico è una condizione del neurosviluppo caratter
 <h2>Profilo Cognitivo e Sensoriale</h2>
 
 <div class="card">
-Molte persone nello spettro mostrano eccellenti capacità di attenzione ai dettagli, memoria a lungo termine sviluppata e pensiero logico sistematico. Possono però incontrare difficoltà nella flessibilità cognitiva e nella comprensione implicita delle regole sociali. Il profilo sensoriale può includere ipersensibilità a suoni, luci o consistenze, oppure ricerca intensa di stimoli. La regolazione emotiva può risultare complessa in ambienti imprevedibili o sovrastimolanti.
+Il profilo cognitivo può includere pensiero logico strutturato, attenzione ai dettagli e grande precisione. Alcune persone nello spettro hanno abilità matematiche, artistiche o musicali particolarmente sviluppate. Dal punto di vista sensoriale possono esserci ipersensibilità a suoni, luci, odori o consistenze, oppure una ricerca intensa di stimoli. Comprendere il profilo individuale è fondamentale per creare ambienti adattati e inclusivi.
 </div>
 
 </div>
@@ -302,29 +241,60 @@ Molte persone nello spettro mostrano eccellenti capacità di attenzione ai detta
 <h2>Fattori di Rischio</h2>
 
 <div class="card">
-I fattori di rischio comprendono componenti genetiche, familiarità, età avanzata dei genitori e possibili influenze ambientali prenatali. Non esiste una causa unica ma una combinazione multifattoriale. La ricerca scientifica continua a esplorare le basi neurobiologiche e genetiche per comprendere meglio i meccanismi alla base dello sviluppo dello spettro.
+Le cause dello spettro autistico sono multifattoriali. La ricerca scientifica evidenzia una forte componente genetica. Possono contribuire anche fattori ambientali prenatali. Non esiste una singola causa determinante. La diagnosi precoce è essenziale per attivare interventi tempestivi e personalizzati.
 </div>
 
 </div>
 </section>
 
-<section class="section" id="aiuto">
+<section class="section" id="terapie">
 <div class="container">
 
-<h2>Come Aiutare</h2>
+<h2>Terapie e Interventi</h2>
 
 <div class="grid">
 
 <div class="box">
-<h3>Intervento Educativo</h3>
-Programmi strutturati e personalizzati favoriscono lo sviluppo delle competenze comunicative e sociali attraverso rinforzi positivi, routine prevedibili e obiettivi chiari.
+<h3>ABA</h3>
+L’Analisi Comportamentale Applicata è un intervento strutturato basato sul rinforzo positivo. Aiuta a sviluppare competenze comunicative, sociali e comportamentali attraverso obiettivi specifici e misurabili.
 </div>
 
 <div class="box">
-<h3>Inclusione Sociale</h3>
-Promuovere ambienti inclusivi, formazione degli insegnanti e sensibilizzazione della comunità migliora l’autonomia e la qualità della vita delle persone nello spettro.
+<h3>TEACCH</h3>
+Il metodo TEACCH si basa sulla strutturazione visiva dell’ambiente, sull’organizzazione prevedibile delle attività e sull’autonomia della persona.
 </div>
 
+</div>
+
+</div>
+</section>
+<section class="section" id="figure">
+<div class="container">
+
+<h2>Figure Professionali Coinvolte</h2>
+
+<div class="card">
+Il percorso di supporto coinvolge diverse figure professionali che lavorano in collaborazione. Lo psicologo valuta il profilo cognitivo ed emotivo, supporta la regolazione delle emozioni e aiuta la famiglia nel percorso di comprensione. Il neuropsichiatra infantile effettua la diagnosi clinica e monitora lo sviluppo nel tempo. Il logopedista interviene sulle competenze comunicative e linguistiche. Il terapista occupazionale lavora sull’autonomia personale e sulla gestione sensoriale. L’insegnante di sostegno supporta l’inclusione scolastica, adattando materiali e strategie didattiche. La collaborazione multidisciplinare garantisce un intervento coerente e personalizzato.
+</div>
+
+<div class="card">
+Il lavoro di équipe è fondamentale: condividere obiettivi, strategie e osservazioni permette di costruire un percorso stabile e continuo. Ogni figura contribuisce con competenze specifiche, ma il centro del percorso rimane sempre la persona, con le sue caratteristiche individuali e il suo potenziale.
+</div>
+
+</div>
+</section>
+
+<section class="section" id="inclusione">
+<div class="container">
+
+<h2>Inclusione e Ruolo della Famiglia</h2>
+
+<div class="card">
+La famiglia rappresenta il punto di riferimento principale. Il sostegno emotivo, la comprensione e la creazione di routine prevedibili aiutano la persona nello spettro a sentirsi sicura. L’inclusione scolastica e sociale è altrettanto fondamentale. Ambienti strutturati, insegnanti formati e compagni sensibilizzati favoriscono la partecipazione attiva. L’obiettivo non è cambiare la persona, ma adattare il contesto per valorizzarne le capacità.
+</div>
+
+<div class="card">
+Strategie pratiche includono l’uso di supporti visivi, agende strutturate, anticipazione dei cambiamenti e spazi di calma per la regolazione sensoriale. L’ascolto attivo e il rispetto dei tempi individuali sono elementi centrali. Ogni piccolo progresso rappresenta un grande passo verso l’autonomia.
 </div>
 
 </div>
@@ -336,14 +306,31 @@ Promuovere ambienti inclusivi, formazione degli insegnanti e sensibilizzazione d
 <h2>Prospettive Future</h2>
 
 <div class="card">
-Le prospettive future includono sviluppo di tecnologie assistive, diagnosi sempre più precoci, interventi personalizzati basati su evidenze neuroscientifiche e maggiore consapevolezza globale. L’obiettivo è costruire una società che comprenda, accetti e valorizzi le differenze cognitive.
+La ricerca scientifica continua a evolversi, approfondendo le basi genetiche e neurologiche dello spettro. Nuove tecnologie assistive, strumenti digitali e approcci personalizzati stanno migliorando la qualità della vita. La consapevolezza sociale è in crescita: sempre più scuole, aziende e istituzioni promuovono inclusione e neurodiversità.
+</div>
+
+<div class="card">
+Costruire una società inclusiva significa riconoscere che le differenze cognitive non sono limiti, ma varianti naturali dell’essere umano. Valorizzare la neurodiversità permette di arricchire la comunità con prospettive uniche, creatività e innovazione.
+</div>
+
+</div>
+</section>
+
+<section class="section">
+<div class="container">
+
+<div class="card" style="text-align:center;">
+<h2 style="margin-bottom:50px;">Oltre Le Sfumature</h2>
+<p style="font-size:1.3rem;">
+Inclusione • Consapevolezza • Ricerca • Rispetto • Neurodiversità
+</p>
 </div>
 
 </div>
 </section>
 
 <footer>
-© 2026 Oltre Le Sfumature — Inclusione • Ricerca • Consapevolezza • Neurodiversità
+© 2026 Oltre Le Sfumature — Tutti i diritti riservati
 </footer>
 
 </body>
