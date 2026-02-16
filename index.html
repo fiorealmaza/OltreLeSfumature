@@ -2,211 +2,20 @@
 <html lang="it">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Disturbo dello Spettro Autistico</title>
-
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
-
-<style>
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-scroll-behavior:smooth;
-}
-
-body{
-font-family:'Poppins',sans-serif;
-background:#f0f6ff;
-color:#1f2937;
-overflow-x:hidden;
-}
-
-/* MENU */
-
-nav{
-position:fixed;
-top:0;
-width:100%;
-display:flex;
-justify-content:flex-end;
-padding:18px 10%;
-background:#c6e0ff;
-z-index:1000;
-}
-
-nav a{
-margin-left:25px;
-text-decoration:none;
-color:#003a99;
-font-weight:600;
-transition:0.3s;
-}
-
-nav a:hover{
-color:#0055ff;
-}
-
-/* HERO */
-
-.hero{
-margin-top:80px;
-padding:80px 10%;
-display:flex;
-align-items:center;
-justify-content:space-between;
-background:white;
-border-radius:0 0 40px 40px;
-}
-
-.hero-text{
-width:65%;
-}
-
-.hero h1{
-font-family:'Playfair Display',serif;
-font-size:3.5rem;
-color:#003a99;
-margin-bottom:20px;
-}
-
-.hero p{
-font-size:1.1rem;
-color:#555;
-}
-
-.hero img{
-width:30%;
-max-width:350px;
-}
-
-/* SEZIONI */
-
-section{
-padding:90px 10%;
-opacity:0;
-transform:translateY(60px);
-transition:all 0.8s ease;
-}
-
-section.visible{
-opacity:1;
-transform:translateY(0);
-}
-
-.light{
-background:#cfe4ff;
-}
-
-h2{
-font-size:2rem;
-color:#003a99;
-margin-bottom:20px;
-font-family:'Playfair Display',serif;
-display:flex;
-align-items:center;
-gap:10px;
-}
-
-p{
-line-height:1.8;
-margin-bottom:15px;
-}
-
-ul{
-margin-left:20px;
-line-height:1.8;
-}
-
-/* BOTTONI */
-
-.btn{
-margin-top:15px;
-padding:12px 22px;
-background:#0055ff;
-color:white;
-border:none;
-border-radius:30px;
-cursor:pointer;
-transition:0.3s;
-font-weight:500;
-}
-
-.btn:hover{
-background:#003a99;
-transform:scale(1.05);
-}
-
-/* MODAL */
-
-.modal{
-display:none;
-position:fixed;
-top:0;
-left:0;
-width:100%;
-height:100%;
-background:rgba(0,0,0,0.6);
-justify-content:center;
-align-items:center;
-z-index:2000;
-}
-
-.modal-content{
-background:white;
-padding:40px;
-border-radius:20px;
-width:80%;
-max-width:600px;
-animation:zoomIn 0.4s ease;
-}
-
-@keyframes zoomIn{
-from{transform:scale(0.7);opacity:0;}
-to{transform:scale(1);opacity:1;}
-}
-
-/* DATI BOX */
-
-.stats{
-background:white;
-padding:30px;
-border-radius:20px;
-box-shadow:0 10px 25px rgba(0,0,0,0.1);
-max-width:500px;
-}
-
-/* CONTATTI */
-
-.contact{
-display:flex;
-justify-content:space-between;
-background:#cfe4ff;
-padding:70px 10%;
-}
-
-.contact-box{
-background:white;
-padding:30px;
-border-radius:20px;
-box-shadow:0 10px 25px rgba(0,0,0,0.1);
-}
-</style>
+<title>O.L.S - Spettro Autistico</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
 <nav>
-<a href="#definizione">Definizione</a>
-<a href="#chisiamo">Chi Siamo</a>
-<a href="#cause">Cause</a>
-<a href="#diagnosi">Diagnosi</a>
-<a href="#terapie">Interventi</a>
-<a href="#dati">Dati</a>
-<a href="#contatti">Contatti</a>
+<a href="index.html">Home</a>
+<a href="definizione.html">Definizione</a>
+<a href="fondazione.html">Fondazione</a>
+<a href="scuola.html">Scuola</a>
+<a href="sviluppo.html">Sviluppo</a>
 </nav>
-
-<!-- HERO -->
 
 <div class="hero">
 <div class="hero-text">
@@ -216,119 +25,57 @@ box-shadow:0 10px 25px rgba(0,0,0,0.1);
 <img src="logo.jpg" alt="Logo OLS">
 </div>
 
-<!-- DEFINIZIONE -->
-
-<section id="definizione" class="light">
-<h2>🧠 Definizione</h2>
+<section class="light">
+<h2>Cos'è l'Autismo</h2>
+<div class="card">
 <p>Il Disturbo dello Spettro Autistico è un disturbo del neurosviluppo che coinvolge comunicazione sociale e comportamenti ripetitivi.</p>
-<button class="btn" onclick="openModal('modal1')">Scopri di più</button>
-</section>
-
-<!-- CHI SIAMO + OLS -->
-
-<section id="chisiamo">
-<h2>💙 Chi Siamo – O.L.S</h2>
-<p>O.L.S – Oltre Le Sfumature è una fondazione che promuove inclusione, consapevolezza e formazione.</p>
-<button class="btn" onclick="openModal('modal2')">Approfondisci</button>
-</section>
-
-<!-- CAUSE -->
-
-<section id="cause" class="light">
-<h2>🧬 Cause e Fattori di Rischio</h2>
-<ul>
-<li>Fattori genetici</li>
-<li>Alterazioni neurobiologiche</li>
-<li>Componenti ambientali prenatali</li>
-</ul>
-<button class="btn" onclick="openModal('modal3')">Più informazioni</button>
-</section>
-
-<!-- DIAGNOSI -->
-
-<section id="diagnosi">
-<h2>📋 Diagnosi</h2>
-<p>Basata sui criteri DSM-5, osservazione clinica e strumenti standardizzati.</p>
-<button class="btn" onclick="openModal('modal4')">Leggi di più</button>
-</section>
-
-<!-- INTERVENTI -->
-
-<section id="terapie" class="light">
-<h2>🎯 Interventi</h2>
-<ul>
-<li>ABA</li>
-<li>TEACCH</li>
-<li>Logopedia</li>
-<li>Supporto familiare</li>
-</ul>
-<button class="btn" onclick="openModal('modal5')">Dettagli</button>
-</section>
-
-<!-- DATI -->
-
-<section id="dati">
-<h2>📊 Dati Statistici</h2>
-<div class="stats">
-<p><strong>1 bambino su 36</strong></p>
-<p>Rapporto maschi/femmine 4:1</p>
-<p>Aumento diagnosi legato a criteri più accurati</p>
+<a href="definizione.html" class="btn">Approfondisci</a>
 </div>
 </section>
 
-<!-- CONTATTI -->
+<section>
+<h2>Fondazione O.L.S – Oltre Le Sfumature</h2>
+<div class="card">
+<p>La Fondazione O.L.S nasce per promuovere inclusione, formazione e supporto alle famiglie.</p>
+<ul>
+<li>Progetti educativi nelle scuole</li>
+<li>Formazione insegnanti</li>
+<li>Sportelli di ascolto</li>
+<li>Laboratori sociali</li>
+</ul>
+<a href="fondazione.html" class="btn">Scopri la Fondazione</a>
+</div>
+</section>
 
-<section id="contatti" class="contact">
-<div>
-<h2>📍 Dove Trovarci</h2>
+<section class="light">
+<h2>Metodi nelle Scuole</h2>
+<div class="card">
+<p>L'inclusione scolastica è fondamentale per lo sviluppo.</p>
+<ul>
+<li>PEI personalizzato</li>
+<li>Didattica strutturata</li>
+<li>Strategie visive</li>
+</ul>
+<a href="scuola.html" class="btn">Scopri di più</a>
+</div>
+</section>
+
+<section>
+<h2>Sviluppo del Bambino</h2>
+<div class="card">
+<p>L'intervento precoce favorisce linguaggio, autonomia e regolazione emotiva.</p>
+<a href="sviluppo.html" class="btn">Approfondisci</a>
+</div>
+</section>
+
+<section class="contact">
+<h2>Dove Trovarci</h2>
+<div class="card">
 <p>Via Vittorio, 120092<br>Cinisello Balsamo</p>
 <p>Email: oltrelesfumature@gmail.com</p>
 <p>Instagram: @oltrelesfumature</p>
 </div>
-
-<div class="contact-box">
-<p>La Fondazione O.L.S organizza incontri, consulenze e progetti educativi sul territorio.</p>
-</div>
 </section>
-
-<!-- MODALS -->
-
-<div id="modal1" class="modal"><div class="modal-content" onclick="closeModal('modal1')"><p>L'autismo presenta diversi livelli di supporto e manifestazioni cliniche differenti.</p></div></div>
-
-<div id="modal2" class="modal"><div class="modal-content" onclick="closeModal('modal2')"><p>O.L.S nasce per promuovere inclusione, formazione e sensibilizzazione sullo spettro autistico.</p></div></div>
-
-<div id="modal3" class="modal"><div class="modal-content" onclick="closeModal('modal3')"><p>Le cause sono multifattoriali, con forte componente genetica.</p></div></div>
-
-<div id="modal4" class="modal"><div class="modal-content" onclick="closeModal('modal4')"><p>La diagnosi precoce migliora significativamente gli esiti evolutivi.</p></div></div>
-
-<div id="modal5" class="modal"><div class="modal-content" onclick="closeModal('modal5')"><p>Interventi personalizzati e intensivi sono fondamentali.</p></div></div>
-
-<script>
-
-/* Animazioni on scroll */
-
-const sections = document.querySelectorAll("section");
-
-window.addEventListener("scroll", () => {
-sections.forEach(sec => {
-const top = sec.getBoundingClientRect().top;
-if(top < window.innerHeight - 100){
-sec.classList.add("visible");
-}
-});
-});
-
-/* Modal */
-
-function openModal(id){
-document.getElementById(id).style.display="flex";
-}
-
-function closeModal(id){
-document.getElementById(id).style.display="none";
-}
-
-</script>
 
 </body>
 </html>
