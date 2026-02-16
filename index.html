@@ -159,32 +159,20 @@ to{opacity:1;transform:translateY(0);}
 
 <body>
 
-<header style="background:#eaf6ff; padding:100px 20px; text-align:center;">
+<header class="hero-header">
 
-<div style="
-background:white;
-padding:35px 60px;
-border-radius:30px;
-display:inline-flex;
-align-items:center;
-gap:25px;
-box-shadow:0 0 45px rgba(0,119,255,0.35);
-">
+<div class="title-container">
+    <div class="line"></div>
 
-<img src="logo.png" alt="Logo Oltre Le Sfumature" style="width:95px; height:95px; object-fit:contain;">
+    <div class="title-content">
+        <img src="logo.png" alt="Logo Oltre Le Sfumature" class="logo">
+        <h1>Oltre Le Sfumature</h1>
+    </div>
 
-<h1 style="
-color:#0077ff;
-font-size:3rem;
-margin:0;
-text-shadow:0 0 18px rgba(0,119,255,0.6);
-">
-Oltre Le Sfumature
-</h1>
-
+    <div class="line"></div>
 </div>
 
-<p style="margin-top:30px; font-size:1.2rem; color:#004a99;">
+<p class="subtitle">
 Informazioni chiare, scientifiche e rassicuranti sul Disturbo dello Spettro Autistico
 </p>
 
@@ -192,23 +180,24 @@ Informazioni chiare, scientifiche e rassicuranti sul Disturbo dello Spettro Auti
 
 
 
-<nav>
+<nav class="navbar">
 
 <div class="hamburger" onclick="toggleMenu()">
-<div></div>
-<div></div>
-<div></div>
+☰
 </div>
 
-<div class="nav-links" id="navLinks">
-<a href="#definizione" onclick="toggleMenu()">Cos'è</a>
-<a href="#storia" onclick="toggleMenu()">Storia</a>
-<a href="#campanelli" onclick="toggleMenu()">Campanelli</a>
-<a href="#faq" onclick="toggleMenu()">FAQ</a>
-<a href="#contatti" onclick="toggleMenu()">Contatti</a>
-</div>
+<ul id="menu" class="menu">
+<li><a href="#definizione">Definizione</a></li>
+<li><a href="#storia">Storia</a></li>
+<li><a href="#caratteristiche">Caratteristiche</a></li>
+<li><a href="#terapie">Terapie</a></li>
+<li><a href="aba.html">Metodo ABA</a></li>
+<li><a href="teacch.html">Metodo TEACCH</a></li>
+<li><a href="#contatti">Contattaci</a></li>
+</ul>
 
 </nav>
+
 
 <section id="definizione">
 <h2>Cos’è il Disturbo dello Spettro Autistico?</h2>
