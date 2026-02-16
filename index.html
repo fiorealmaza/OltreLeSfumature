@@ -35,6 +35,17 @@ z-index:1000;
 box-shadow:0 8px 30px rgba(0,0,0,0.08);
 }
 
+.logo-container{
+display:flex;
+align-items:center;
+gap:20px;
+}
+
+.logo{
+height:70px;
+width:auto;
+}
+
 header h1{
 font-size:50px;
 font-weight:800;
@@ -231,6 +242,10 @@ header h1{
 font-size:38px;
 }
 
+.logo{
+height:55px;
+}
+
 .methods{
 flex-direction:column;
 }
@@ -241,7 +256,11 @@ flex-direction:column;
 <body>
 
 <header>
+<div class="logo-container">
+<img src="logo.png" alt="Logo Oltre Le Sfumature" class="logo">
 <h1>Oltre Le Sfumature</h1>
+</div>
+
 <div class="menu-toggle" id="menuBtn">
 <span></span>
 <span></span>
@@ -262,7 +281,6 @@ flex-direction:column;
 <a href="#contatti">Contatti</a>
 </div>
 
-<!-- INTRO -->
 <section id="intro" class="section">
 <h2>Cos’è lo Spettro Autistico?</h2>
 <div class="card">
