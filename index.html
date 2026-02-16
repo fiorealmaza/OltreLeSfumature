@@ -34,12 +34,6 @@ background:linear-gradient(90deg,#1f5fbf,#4da3ff,#1f5fbf);
 padding:18px 0;
 text-align:center;
 box-shadow:0 4px 20px rgba(0,0,0,0.08);
-animation:menuglow 6s infinite alternate;
-}
-
-@keyframes menuglow{
-0%{box-shadow:0 4px 20px rgba(0,0,0,0.08);}
-100%{box-shadow:0 4px 35px rgba(31,95,191,0.35);}
 }
 
 .topbar a{
@@ -60,94 +54,59 @@ box-shadow:0 0 20px rgba(255,255,255,0.9);
 transform:scale(1.08);
 }
 
-/* ================= HERO ================= */
+/* ================= HERO TIE DYE ================= */
 
 .hero{
-padding:110px 8% 100px 8%; /* spazio un po più piccolo */
+padding:120px 8% 110px 8%;
 display:flex;
 align-items:center;
-justify-content:flex-start;
-gap:25px; /* logo più vicino */
-background:linear-gradient(90deg,#ffffff 0%, #ffffff 35%, #e3eeff 65%, #cfe2ff 100%);
+gap:30px;
+background:
+radial-gradient(circle at 20% 30%, rgba(77,163,255,0.4), transparent 50%),
+radial-gradient(circle at 80% 20%, rgba(31,95,191,0.35), transparent 50%),
+radial-gradient(circle at 60% 80%, rgba(120,190,255,0.4), transparent 55%),
+#ffffff;
 position:relative;
 overflow:hidden;
 }
 
-/* luce animata */
-
-.hero::after{
-content:"";
-position:absolute;
-top:-50%;
-left:-50%;
-width:200%;
-height:200%;
-background:radial-gradient(circle, rgba(77,163,255,0.15), transparent 60%);
-animation:rotatebg 20s linear infinite;
-}
-
-@keyframes rotatebg{
-0%{transform:rotate(0deg);}
-100%{transform:rotate(360deg);}
-}
-
 .hero h1{
 font-family:'Cinzel',serif;
-font-size:4.3rem;
+font-size:4.5rem;
 color:#1f5fbf;
-text-shadow:0 0 15px rgba(31,95,191,0.25);
-animation:titlepulse 4s infinite alternate;
-z-index:2;
-}
-
-@keyframes titlepulse{
-0%{text-shadow:0 0 10px rgba(31,95,191,0.2);}
-100%{text-shadow:0 0 25px rgba(31,95,191,0.45);}
+text-shadow:0 0 20px rgba(31,95,191,0.35);
 }
 
 .hero img{
-width:200px;
-z-index:2;
-animation:logofloat 6s ease-in-out infinite;
+width:240px; /* più grande */
+animation:floatlogo 6s ease-in-out infinite;
 }
 
-@keyframes logofloat{
+@keyframes floatlogo{
 0%{transform:translateY(0px);}
-50%{transform:translateY(-10px);}
+50%{transform:translateY(-12px);}
 100%{transform:translateY(0px);}
 }
 
 /* ================= SEZIONI ================= */
 
 section{
-padding:150px 8%;
-animation:fadein 1.2s ease forwards;
+padding:140px 8%;
 }
-
-@keyframes fadein{
-from{opacity:0; transform:translateY(40px);}
-to{opacity:1; transform:translateY(0);}
-}
-
-/* sottotitoli più piccoli */
 
 .section-title{
 display:inline-block;
 padding:18px 55px;
 border-radius:20px;
-font-size:1.9rem; /* più piccolo */
+font-size:1.9rem;
 font-weight:700;
 margin-bottom:60px;
 color:#ffffff;
 background:linear-gradient(90deg,#4da3ff,#79c2ff);
-box-shadow:0 0 25px rgba(31,95,191,0.25);
-transition:0.4s;
+box-shadow:0 0 35px rgba(31,95,191,0.4);
 }
 
-.section-title:hover{
-box-shadow:0 0 45px rgba(31,95,191,0.5);
-transform:scale(1.05);
-}
+/* ================= TESTO ================= */
 
 .text{
 font-size:1.15rem;
@@ -159,7 +118,7 @@ max-width:1350px;
 
 .grid{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(380px,1fr));
+grid-template-columns:repeat(auto-fit,minmax(360px,1fr));
 gap:60px;
 margin-top:60px;
 }
@@ -168,31 +127,31 @@ margin-top:60px;
 background:linear-gradient(145deg,#ffffff,#eef5ff);
 padding:55px;
 border-radius:30px;
-box-shadow:0 18px 45px rgba(31,95,191,0.15);
+box-shadow:0 0 40px rgba(77,163,255,0.35);
 transition:0.4s;
 position:relative;
 overflow:hidden;
 }
 
-.card::before{
+.card::after{
 content:"";
 position:absolute;
 top:-50%;
 left:-50%;
 width:200%;
 height:200%;
-background:radial-gradient(circle, rgba(77,163,255,0.15), transparent 60%);
+background:radial-gradient(circle, rgba(77,163,255,0.25), transparent 60%);
 opacity:0;
 transition:0.5s;
 }
 
-.card:hover::before{
+.card:hover::after{
 opacity:1;
 }
 
 .card:hover{
 transform:translateY(-12px);
-box-shadow:0 0 65px rgba(31,95,191,0.35);
+box-shadow:0 0 70px rgba(31,95,191,0.6);
 }
 
 .card h3{
@@ -211,12 +170,6 @@ padding:150px;
 margin-top:150px;
 line-height:2;
 font-size:1.05rem;
-animation:footerglow 6s infinite alternate;
-}
-
-@keyframes footerglow{
-0%{box-shadow:0 0 20px rgba(255,255,255,0.2) inset;}
-100%{box-shadow:0 0 60px rgba(255,255,255,0.4) inset;}
 }
 
 </style>
@@ -226,13 +179,13 @@ animation:footerglow 6s infinite alternate;
 
 <div class="topbar">
 <a href="#definizione">Definizione</a>
-<a href="#comprensione">Comprensione</a>
+<a href="#cause">Cause</a>
+<a href="#genetica">Genetica</a>
+<a href="#figure">Figure Professionali</a>
 <a href="#metodi">Metodi</a>
 <a href="#terapie">Terapie</a>
-<a href="#ricerca">Ricerca</a>
-<a href="#inclusione">Inclusione</a>
+<a href="#aiuto">Come Aiutare</a>
 <a href="#futuro">Futuro</a>
-<a href="#contatti">Contatti</a>
 </div>
 
 <div class="hero">
@@ -240,56 +193,90 @@ animation:footerglow 6s infinite alternate;
 <img src="logo.png">
 </div>
 
-<!-- CONTENUTO LASCIATO UGUALE MA MANTENUTO LUNGO -->
-
 <section id="definizione">
-<div class="section-title">Definizione Completa</div>
+<div class="section-title">Definizione Approfondita</div>
 <div class="text">
-Il Disturbo dello Spettro Autistico è una condizione del neurosviluppo caratterizzata da differenze persistenti nella comunicazione sociale, nella reciprocità relazionale, nella flessibilità cognitiva e nella modulazione sensoriale. Il termine spettro evidenzia l’ampiezza e la varietà delle manifestazioni individuali.
+Il Disturbo dello Spettro Autistico è una condizione del neurosviluppo caratterizzata da differenze nella comunicazione sociale, nella flessibilità comportamentale e nell’elaborazione sensoriale. Il termine spettro indica un’ampia variabilità di presentazioni cliniche.
 </div>
 <div class="text">
-Ogni persona nello spettro presenta un profilo unico. Alcuni necessitano di supporto significativo, altri sviluppano autonomie elevate e competenze altamente specializzate. L’autismo rientra nel concetto di neurodiversità, riconoscendo la diversità neurologica come parte naturale della variabilità umana.
+Ogni individuo presenta un profilo unico con punti di forza e aree di difficoltà. L’autismo rientra nel concetto di neurodiversità, riconoscendo la diversità neurologica come parte naturale dell’umanità.
+</div>
+</section>
+
+<section id="cause">
+<div class="section-title">Cause e Fattori di Rischio</div>
+<div class="text">
+Le cause dell’autismo sono multifattoriali. Studi scientifici indicano l’interazione tra predisposizione genetica e fattori ambientali prenatali. Non esiste correlazione tra vaccini e autismo secondo la comunità scientifica internazionale.
 </div>
 <div class="text">
-Promuovere consapevolezza significa costruire ambienti inclusivi, rispettosi e capaci di valorizzare i punti di forza individuali.
+Fattori prenatali, età genitoriale avanzata e alcune condizioni mediche possono aumentare il rischio, ma non determinano da soli la presenza della condizione.
+</div>
+</section>
+
+<section id="genetica">
+<div class="section-title">Aspetti Genetici</div>
+<div class="text">
+La ricerca genetica ha identificato numerose varianti associate allo spettro autistico. L’ereditarietà gioca un ruolo significativo, anche se non esiste un singolo “gene dell’autismo”.
+</div>
+<div class="text">
+Le differenze genetiche influenzano lo sviluppo cerebrale precoce, la connettività neuronale e i processi di elaborazione delle informazioni.
+</div>
+</section>
+
+<section id="figure">
+<div class="section-title">Figure Professionali Coinvolte</div>
+<div class="grid">
+<div class="card"><h3>Neuropsichiatra Infantile</h3>Diagnosi e coordinamento clinico.</div>
+<div class="card"><h3>Psicologo</h3>Valutazione cognitiva e supporto emotivo.</div>
+<div class="card"><h3>Logopedista</h3>Sviluppo della comunicazione.</div>
+<div class="card"><h3>Terapista Occupazionale</h3>Autonomia e integrazione sensoriale.</div>
+<div class="card"><h3>Educatore Professionale</h3>Intervento educativo personalizzato.</div>
+<div class="card"><h3>Insegnante di Sostegno</h3>Inclusione scolastica.</div>
 </div>
 </section>
 
 <section id="metodi">
 <div class="section-title">Metodi Educativi</div>
 <div class="grid">
-<div class="card">
-<h3>ABA</h3>
-Intervento strutturato basato su principi comportamentali, con obiettivi personalizzati e monitoraggio continuo dei progressi.
-</div>
-<div class="card">
-<h3>TEACCH</h3>
-Approccio centrato sulla strutturazione visiva e sull’organizzazione prevedibile dell’ambiente.
-</div>
+<div class="card"><h3>ABA</h3>Intervento comportamentale strutturato con obiettivi personalizzati.</div>
+<div class="card"><h3>TEACCH</h3>Strutturazione visiva e organizzazione prevedibile dell’ambiente.</div>
 </div>
 </section>
 
 <section id="terapie">
-<div class="section-title">Terapie Multidisciplinari</div>
+<div class="section-title">Terapie e Coterapie</div>
 <div class="grid">
-<div class="card"><h3>Logopedia</h3>Sviluppo comunicazione e linguaggio.</div>
-<div class="card"><h3>Terapia Occupazionale</h3>Autonomia personale e gestione sensoriale.</div>
-<div class="card"><h3>Supporto Psicologico</h3>Regolazione emotiva e autostima.</div>
-<div class="card"><h3>Parent Training</h3>Supporto strutturato alle famiglie.</div>
+<div class="card"><h3>Logopedia</h3>Sviluppo linguaggio e comunicazione.</div>
 <div class="card"><h3>Psicomotricità</h3>Coordinazione e relazione corporea.</div>
-<div class="card"><h3>CAA</h3>Strumenti alternativi di comunicazione.</div>
+<div class="card"><h3>Musicoterapia</h3>Espressione emotiva attraverso la musica.</div>
+<div class="card"><h3>Pet Therapy</h3>Interazione assistita con animali.</div>
+<div class="card"><h3>Terapia Cognitivo-Comportamentale</h3>Gestione ansia e regolazione emotiva.</div>
+<div class="card"><h3>Integrazione Sensoriale</h3>Modulazione degli stimoli sensoriali.</div>
+</div>
+</section>
+
+<section id="aiuto">
+<div class="section-title">Come Aiutare Concretamente</div>
+<div class="text">
+Creare ambienti strutturati e prevedibili, utilizzare comunicazione chiara e visiva, rispettare i tempi individuali e valorizzare gli interessi specifici rappresentano strategie fondamentali.
+</div>
+<div class="text">
+Promuovere inclusione scolastica e lavorativa, sensibilizzare la comunità e supportare le famiglie sono azioni chiave per costruire una società equa.
 </div>
 </section>
 
 <section id="futuro">
-<div class="section-title">Visione Futura</div>
+<div class="section-title">Ricerca e Futuro</div>
 <div class="text">
-Ricerca, innovazione tecnologica, inclusione sociale e valorizzazione delle competenze rappresentano le basi per un futuro fondato su rispetto, consapevolezza e crescita collettiva.
+La ricerca neuroscientifica continua a esplorare le basi genetiche e biologiche dello spettro autistico. Tecnologie innovative e strumenti digitali aprono nuove prospettive di intervento personalizzato.
+</div>
+<div class="text">
+Il futuro punta verso maggiore consapevolezza, inclusione e valorizzazione delle competenze individuali come risorsa per la collettività.
 </div>
 </section>
 
 <footer>
-© 2026 Oltre Le Sfumature — Inclusione • Consapevolezza • Ricerca • Innovazione • Crescita • Comunità • Futuro • Neurodiversità • Rispetto • Educazione • Supporto • Collaborazione • Visione • Evoluzione • Professionalità • Impegno Continuo
+© 2026 Oltre Le Sfumature — Inclusione • Consapevolezza • Ricerca • Innovazione • Crescita • Comunità • Neurodiversità • Futuro • Educazione • Supporto • Collaborazione • Evoluzione • Rispetto • Opportunità • Integrazione • Professionalità • Impegno Continuo
 </footer>
 
 </body>
