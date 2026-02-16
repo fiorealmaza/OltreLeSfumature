@@ -28,7 +28,7 @@ background:white;
 padding:18px 8%;
 display:flex;
 justify-content:flex-end;
-box-shadow:0 2px 12px rgba(0,0,0,0.05);
+box-shadow:0 2px 10px rgba(0,0,0,0.05);
 z-index:1000;
 }
 
@@ -43,14 +43,9 @@ font-weight:500;
 
 .hero{
 margin-top:90px;
-padding:90px 8%;
-display:flex;
-align-items:center;
-justify-content:space-between;
-background:linear-gradient(to right,#EAF1FF,#FFFFFF);
+padding:80px 8% 40px 8%;
+text-align:center;
 }
-
-.hero-text{width:60%;}
 
 .hero h1{
 font-family:'Playfair Display',serif;
@@ -59,17 +54,24 @@ color:#2F5FD0;
 margin-bottom:20px;
 }
 
-.hero img{
-width:18%;
-max-width:180px;
+/* FASCIA BLU */
+
+.blue-bar{
+background:#2F5FD0;
+color:white;
+padding:25px;
+font-size:1.1rem;
+letter-spacing:1px;
 }
 
 /* SECTIONS */
 
-section{padding:100px 8%;}
+section{
+padding:90px 8%;
+}
 
 .container{
-max-width:1100px;
+max-width:1200px;
 margin:auto;
 }
 
@@ -77,21 +79,7 @@ h2{
 font-family:'Playfair Display',serif;
 font-size:2.2rem;
 color:#2F5FD0;
-margin-bottom:40px;
-}
-
-.two-col{
-display:grid;
-grid-template-columns:1fr 1fr;
-gap:50px;
-align-items:center;
-}
-
-.box{
-background:white;
-padding:35px;
-border-radius:18px;
-box-shadow:0 8px 25px rgba(0,0,0,0.05);
+margin-bottom:35px;
 }
 
 .soft{
@@ -102,29 +90,13 @@ background:#EAF1FF;
 background:#DCE7FF;
 }
 
-.icon{
-font-size:28px;
-margin-bottom:15px;
-color:#2F5FD0;
-}
-
-/* TIMELINE */
-
-.timeline{
-border-left:3px solid #2F5FD0;
-padding-left:25px;
-}
-
-.timeline-item{
+.box{
+background:white;
+padding:35px;
+border-radius:18px;
+box-shadow:0 8px 25px rgba(0,0,0,0.05);
 margin-bottom:30px;
 }
-
-.timeline-item h4{
-color:#2F5FD0;
-margin-bottom:8px;
-}
-
-/* GRID */
 
 .grid{
 display:grid;
@@ -132,27 +104,21 @@ grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
 gap:30px;
 }
 
-/* TESTIMONIALS */
-
-.testimonial{
-background:white;
-padding:30px;
-border-radius:16px;
-box-shadow:0 6px 20px rgba(0,0,0,0.05);
-font-style:italic;
+.timeline{
+border-left:3px solid #2F5FD0;
+padding-left:25px;
 }
 
-/* CONTACT */
-
-.contact{
-background:#2F5FD0;
-color:white;
+.timeline-item{
+margin-bottom:35px;
 }
 
-.contact .box{
-background:white;
-color:#1F2937;
+.timeline-item h4{
+color:#2F5FD0;
+margin-bottom:8px;
 }
+
+/* FOOTER */
 
 footer{
 background:#1E3A8A;
@@ -163,10 +129,7 @@ font-size:0.9rem;
 }
 
 @media(max-width:900px){
-.two-col{grid-template-columns:1fr;}
-.hero{flex-direction:column;text-align:center;}
-.hero-text{width:100%;}
-.hero img{margin-top:20px;}
+nav{justify-content:center;}
 }
 
 </style>
@@ -175,137 +138,187 @@ font-size:0.9rem;
 <body>
 
 <nav>
-<a href="#chi">Chi siamo</a>
+<a href="#cos">Cos’è</a>
+<a href="#caratteristiche">Caratteristiche</a>
 <a href="#diagnosi">Diagnosi</a>
+<a href="#dati">Dati</a>
 <a href="#metodi">Metodi</a>
 <a href="#contatti">Contatti</a>
 </nav>
 
 <div class="hero">
-<div class="hero-text">
 <h1>Disturbo dello Spettro Autistico</h1>
-<p>Informazione, inclusione e supporto attraverso la Fondazione O.L.S – Oltre Le Sfumature.</p>
-</div>
-<img src="logo.jpg" alt="Logo OLS">
 </div>
 
-<section id="chi">
-<div class="container two-col">
-<div>
-<h2>Chi siamo</h2>
-<p>La Fondazione O.L.S nasce per promuovere consapevolezza e inclusione. Offriamo supporto alle famiglie, formazione per le scuole e progetti educativi mirati allo sviluppo delle competenze sociali.</p>
+<div class="blue-bar">
+Fondazione O.L.S – Oltre Le Sfumature | Informazione • Inclusione • Supporto
 </div>
-<div class="box soft">
-<div class="icon">💙</div>
+
+<!-- COS'E -->
+
+<section id="cos">
+<div class="container">
+<h2>Cos’è il Disturbo dello Spettro Autistico</h2>
+
+<p>
+Il Disturbo dello Spettro Autistico (ASD – Autism Spectrum Disorder) è un disturbo del neurosviluppo che influisce sulla comunicazione sociale, sull’interazione con gli altri e sulla presenza di comportamenti ripetitivi o interessi ristretti.
+</p>
+
+<p>
+Si definisce “spettro” perché si manifesta con livelli di intensità differenti. Ogni persona presenta caratteristiche uniche, punti di forza e bisogni specifici.
+</p>
+
+<p>
+L’autismo non è una malattia, ma una condizione neurologica che accompagna la persona lungo tutto l’arco della vita.
+</p>
+
+</div>
+</section>
+
+<!-- CARATTERISTICHE -->
+
+<section id="caratteristiche" class="soft">
+<div class="container">
+<h2>Caratteristiche Principali</h2>
+
+<div class="grid">
+
+<div class="box">
+<h3>Comunicazione Sociale</h3>
 <ul>
-<li>Supporto psicopedagogico</li>
-<li>Progetti scolastici</li>
-<li>Formazione insegnanti</li>
-<li>Laboratori abilità sociali</li>
-<li>Campagne di sensibilizzazione</li>
+<li>Difficoltà nel contatto oculare</li>
+<li>Ridotta reciprocità emotiva</li>
+<li>Difficoltà a comprendere regole sociali</li>
+<li>Linguaggio atipico o assente</li>
 </ul>
 </div>
+
+<div class="box">
+<h3>Comportamenti Ripetitivi</h3>
+<ul>
+<li>Movimenti stereotipati</li>
+<li>Routine rigide</li>
+<li>Interessi ristretti</li>
+<li>Bisogno di prevedibilità</li>
+</ul>
+</div>
+
+<div class="box">
+<h3>Sensibilità Sensoriale</h3>
+<ul>
+<li>Ipersensibilità a suoni e luci</li>
+<li>Difficoltà nell’elaborazione sensoriale</li>
+<li>Reazioni intense a stimoli tattili</li>
+</ul>
+</div>
+
+</div>
 </div>
 </section>
 
-<section>
-<div class="container two-col">
-<div class="box light">
-<div class="icon">🧠</div>
-<h3>Definizione</h3>
-<p>Disturbo del neurosviluppo che influisce sulla comunicazione sociale e sui comportamenti ripetitivi, con diversi livelli di supporto necessari.</p>
-</div>
-<div>
-<h2>Perché “Spettro”</h2>
-<p>Il termine indica la variabilità con cui il disturbo si manifesta. Ogni persona è unica e presenta caratteristiche differenti.</p>
-</div>
-</div>
-</section>
+<!-- DIAGNOSI -->
 
 <section id="diagnosi">
 <div class="container">
 <h2>Diagnosi e Intervento</h2>
 
 <div class="timeline">
+
 <div class="timeline-item">
-<h4>18-24 mesi</h4>
-<p>Possibili primi segnali osservabili.</p>
+<h4>18–24 mesi</h4>
+<p>Possibili primi segnali osservabili nello sviluppo comunicativo e sociale.</p>
 </div>
 
 <div class="timeline-item">
-<h4>Valutazione multidisciplinare</h4>
-<p>Osservazione clinica e strumenti standardizzati.</p>
+<h4>Valutazione Multidisciplinare</h4>
+<p>Neuropsichiatra, psicologo, logopedista e terapisti collaborano per una valutazione completa.</p>
 </div>
 
 <div class="timeline-item">
-<h4>Intervento precoce</h4>
-<p>ABA, logopedia, terapia occupazionale e percorsi personalizzati.</p>
+<h4>Strumenti Diagnostici</h4>
+<p>ADOS-2, ADI-R, osservazione clinica e test cognitivi.</p>
 </div>
+
+<div class="timeline-item">
+<h4>Intervento Precoce</h4>
+<p>ABA, logopedia, terapia occupazionale e parent training migliorano significativamente lo sviluppo.</p>
+</div>
+
 </div>
 
 </div>
 </section>
 
-<section class="soft">
+<!-- DATI -->
+
+<section id="dati" class="light">
 <div class="container">
 <h2>Dati Statistici</h2>
 
 <div class="grid">
+
 <div class="box">
 <h3>1 su 77</h3>
-<p>Bambini in Italia tra 7-9 anni.</p>
+<p>Bambini in Italia (7–9 anni).</p>
 </div>
+
 <div class="box">
 <h3>4:1</h3>
 <p>Rapporto maschi/femmine.</p>
 </div>
+
 <div class="box">
 <h3>~3 anni</h3>
 <p>Età media della diagnosi.</p>
 </div>
+
+<div class="box">
+<h3>In aumento</h3>
+<p>Maggior consapevolezza e diagnosi precoce negli ultimi 15 anni.</p>
+</div>
+
 </div>
 
 </div>
 </section>
 
+<!-- METODI -->
+
 <section id="metodi">
-<div class="container two-col">
-<div>
-<h2>Metodi nelle Scuole</h2>
+<div class="container">
+<h2>Metodi Educativi e Inclusione</h2>
+
+<div class="box">
+<p>
+L’inclusione scolastica è un pilastro fondamentale. Attraverso strumenti personalizzati è possibile favorire partecipazione, autonomia e apprendimento.
+</p>
+
 <ul>
-<li>PEI</li>
+<li>PEI (Piano Educativo Individualizzato)</li>
 <li>Metodo TEACCH</li>
+<li>Comunicazione Aumentativa Alternativa (CAA)</li>
 <li>Strategie visive</li>
 <li>Peer tutoring</li>
 <li>Educazione socio-emotiva</li>
 </ul>
 </div>
-<div class="box">
-<h3>Sviluppo del Bambino</h3>
-<p>Interventi mirati allo sviluppo del linguaggio, autonomie personali, regolazione emotiva e integrazione sensoriale.</p>
-</div>
+
 </div>
 </section>
 
-<section>
-<div class="container">
-<h2>Testimonianze</h2>
-<div class="grid">
-<div class="testimonial">“Grazie alla Fondazione O.L.S abbiamo trovato supporto e comprensione.”</div>
-<div class="testimonial">“Formazione chiara e concreta per insegnanti.”</div>
-</div>
-</div>
-</section>
+<!-- CONTATTI -->
 
-<section id="contatti" class="contact">
+<section id="contatti" class="soft">
 <div class="container">
-<h2>Dove Trovarci</h2>
+<h2>Contatti</h2>
+
 <div class="box">
 <p><strong>Fondazione O.L.S – Oltre Le Sfumature</strong></p>
 <p>Via Vittorio 120092 – Cinisello Balsamo</p>
 <p>Email: oltrelesfumature@gmail.com</p>
 <p>Instagram: @oltrelesfumature</p>
 </div>
+
 </div>
 </section>
 
