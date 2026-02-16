@@ -9,6 +9,8 @@
 
 <style>
 
+/* ---------------- RESET ---------------- */
+
 *{
 margin:0;
 padding:0;
@@ -22,94 +24,144 @@ scroll-behavior:smooth;
 body{
 font-family:'Poppins',sans-serif;
 background:
-radial-gradient(circle at 15% 20%,#e3f0ff,transparent 40%),
-radial-gradient(circle at 85% 80%,#d6e8ff,transparent 40%),
-linear-gradient(135deg,#f4f8ff,#ffffff);
+radial-gradient(circle at 10% 20%,#dbeeff,transparent 40%),
+radial-gradient(circle at 90% 80%,#eaf4ff,transparent 40%),
+linear-gradient(135deg,#f6fbff,#ffffff);
 color:#111;
 line-height:1.8;
 overflow-x:hidden;
 }
 
-/* MENU */
+/* ---------------- MENU ---------------- */
 
 nav{
 position:fixed;
 top:0;
 width:100%;
-background:rgba(255,255,255,0.92);
-backdrop-filter:blur(15px);
+background:linear-gradient(90deg,#bfe0ff,#d7ecff);
 display:flex;
 justify-content:center;
-gap:35px;
+gap:40px;
 padding:18px;
 z-index:1000;
-box-shadow:0 8px 30px rgba(0,0,0,0.05);
+box-shadow:0 10px 40px rgba(0,0,0,0.1);
 }
 
 nav a{
 text-decoration:none;
-color:#2a6edb;
+color:#0e4aa8;
 font-weight:600;
-font-size:0.9rem;
-transition:.3s;
+font-size:0.95rem;
+padding:10px 18px;
+border-radius:30px;
+transition:all .4s ease;
 }
 
 nav a:hover{
-color:#174a9e;
-transform:scale(1.08);
+background:white;
+box-shadow:0 0 25px rgba(42,110,219,0.7);
+transform:scale(1.1);
 }
 
-/* HERO */
+nav a:active{
+background:#2a6edb;
+color:white;
+box-shadow:0 0 40px rgba(42,110,219,1);
+}
+
+/* ---------------- HERO ---------------- */
 
 .hero{
 min-height:100vh;
-padding:200px 120px 140px 120px;
+padding:220px 120px 140px 120px;
 display:flex;
 flex-direction:column;
 justify-content:center;
 }
 
-.top-bar{
+.top-layout{
 display:flex;
 justify-content:space-between;
-align-items:center;
+align-items:flex-start;
+gap:60px;
 flex-wrap:wrap;
-gap:40px;
-margin-bottom:70px;
 }
+
+/* TITOLO */
 
 .main-title{
 font-family:'Cinzel',serif;
-font-size:6rem;
+font-size:6.5rem;
 font-weight:800;
 line-height:0.95;
 background:linear-gradient(90deg,#2a6edb,#4e8cff,#2a6edb);
 -webkit-background-clip:text;
 -webkit-text-fill-color:transparent;
 text-shadow:
-0 0 30px rgba(42,110,219,0.8),
-0 0 80px rgba(42,110,219,0.7),
-0 0 160px rgba(42,110,219,0.6);
+0 0 40px rgba(42,110,219,0.9),
+0 0 120px rgba(42,110,219,0.8),
+0 0 220px rgba(42,110,219,0.7);
 animation:glow 4s infinite alternate;
+margin-bottom:40px;
 }
 
 @keyframes glow{
-from{text-shadow:0 0 30px rgba(42,110,219,0.6)}
-to{text-shadow:0 0 220px rgba(42,110,219,1)}
+from{text-shadow:0 0 40px rgba(42,110,219,0.6)}
+to{text-shadow:0 0 260px rgba(42,110,219,1)}
 }
 
-.question{
-margin-top:35px;
+/* DOMANDA SEPARATA */
+
+.question-box{
+background:linear-gradient(135deg,#eaf3ff,#ffffff);
+padding:40px;
+border-radius:40px;
+box-shadow:0 0 60px rgba(42,110,219,0.4);
 font-size:2rem;
-font-weight:600;
+font-weight:700;
 color:#1f55ad;
+margin-bottom:60px;
 }
 
-.logo{
-width:370px;
+/* CONTATTI LATERALI PROMO */
+
+.side-contact{
+background:linear-gradient(135deg,#2a6edb,#4e8cff);
+color:white;
+padding:50px;
+border-radius:45px;
+box-shadow:0 60px 200px rgba(42,110,219,0.6);
+max-width:380px;
 }
 
-/* SECTIONS */
+.side-contact h3{
+font-size:1.8rem;
+margin-bottom:25px;
+}
+
+.side-contact p{
+margin-bottom:15px;
+font-weight:500;
+}
+
+.side-contact button{
+margin-top:20px;
+padding:14px 30px;
+border:none;
+border-radius:30px;
+background:white;
+color:#2a6edb;
+font-weight:700;
+cursor:pointer;
+transition:.3s;
+}
+
+.side-contact button:hover{
+transform:scale(1.1);
+box-shadow:0 0 30px rgba(255,255,255,0.9);
+}
+
+/* ---------------- SEZIONI ---------------- */
 
 .section{
 padding:160px 120px;
@@ -117,39 +169,25 @@ padding:160px 120px;
 
 .section h2{
 text-align:center;
-font-size:2.9rem;
+font-size:3rem;
 margin-bottom:100px;
 color:#2a6edb;
 font-weight:800;
 }
 
-/* GLOW TITLE BOX */
-
-.glow-box{
-background:linear-gradient(135deg,#eaf3ff,#ffffff);
-padding:40px;
-border-radius:30px;
-box-shadow:0 0 40px rgba(42,110,219,0.4);
-margin-bottom:60px;
-text-align:center;
-font-weight:700;
-font-size:1.8rem;
-color:#1f55ad;
-}
-
-/* CARD */
+/* CARD GENERALE */
 
 .card{
-background:rgba(255,255,255,0.93);
-padding:100px;
+background:rgba(255,255,255,0.97);
+padding:90px;
 border-radius:60px;
 box-shadow:0 90px 260px rgba(0,0,0,0.08);
-margin-bottom:150px;
+margin-bottom:120px;
 transition:.6s;
 }
 
 .card:hover{
-transform:translateY(-20px);
+transform:translateY(-15px);
 box-shadow:0 140px 320px rgba(42,110,219,0.25);
 }
 
@@ -157,56 +195,63 @@ box-shadow:0 140px 320px rgba(42,110,219,0.25);
 
 .grid{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
-gap:70px;
+grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+gap:60px;
 }
 
-.box{
-background:white;
+/* BOX COLORATI DIVERSI */
+
+.box-blue{
+background:#eaf3ff;
 padding:60px;
 border-radius:45px;
-box-shadow:0 60px 180px rgba(0,0,0,0.07);
-transition:.5s;
-position:relative;
+box-shadow:0 50px 160px rgba(42,110,219,0.2);
 }
 
-.box::after{
-content:"";
-position:absolute;
-bottom:-12px;
-right:-12px;
-width:35px;
-height:35px;
-background:#2a6edb22;
-border-radius:50%;
+.box-green{
+background:#e8fff3;
+padding:60px;
+border-radius:45px;
+box-shadow:0 50px 160px rgba(0,180,120,0.2);
 }
 
-.box:hover{
-transform:translateY(-15px) scale(1.05);
-box-shadow:0 110px 280px rgba(42,110,219,0.3);
+.box-purple{
+background:#f3eaff;
+padding:60px;
+border-radius:45px;
+box-shadow:0 50px 160px rgba(140,80,255,0.2);
 }
 
-.box h3{
-font-size:1.6rem;
+.box-orange{
+background:#fff3e6;
+padding:60px;
+border-radius:45px;
+box-shadow:0 50px 160px rgba(255,140,0,0.2);
+}
+
+.box-blue h3,
+.box-green h3,
+.box-purple h3,
+.box-orange h3{
 margin-bottom:20px;
-color:#1f55ad;
+font-size:1.6rem;
 }
+
+/* FOOTER */
 
 footer{
 background:#2a6edb;
 color:white;
 text-align:center;
-padding:110px;
+padding:120px;
 font-weight:600;
 letter-spacing:2px;
-margin-top:80px;
+margin-top:100px;
 }
 
 @media(max-width:1000px){
-.top-bar{flex-direction:column;align-items:flex-start;}
-.main-title{font-size:3.8rem;}
-.grid{grid-template-columns:1fr;}
-.logo{width:220px;}
+.top-layout{flex-direction:column;}
+.main-title{font-size:4rem;}
 }
 
 </style>
@@ -221,143 +266,151 @@ margin-top:80px;
 <a href="#metodi">Metodi</a>
 <a href="#terapie">Terapie</a>
 <a href="#figure">Figure</a>
-<a href="#contatti">Contatti</a>
 </nav>
 
 <section class="hero" id="cos">
 
-<div class="top-bar">
+<div class="top-layout">
 
 <div>
+
 <h1 class="main-title">
 Oltre Le<br>Sfumature
 </h1>
-<div class="question">
-Cos'è l'Autismo?
-</div>
-</div>
 
-<img src="logo.png" class="logo">
-
+<div class="question-box">
+Cos'è lo Spettro Autistico?
 </div>
 
 <div class="card">
-L’autismo, o Disturbo dello Spettro Autistico, è una condizione del neurosviluppo che influenza comunicazione sociale, comportamento e percezione sensoriale. È definito “spettro” perché le caratteristiche variano in modo ampio e individuale. Ogni persona possiede punti di forza, talenti e modalità cognitive uniche.
+Il Disturbo dello Spettro Autistico è una condizione del neurosviluppo che influenza comunicazione, interazione sociale e comportamento. È definito “spettro” perché comprende un’ampia varietà di caratteristiche e livelli di supporto. Ogni persona autistica è unica: alcune necessitano di sostegno intensivo, altre conducono una vita autonoma con piccoli adattamenti. Non è una malattia, ma una differente modalità di funzionamento neurologico.
+</div>
+
+</div>
+
+<div class="side-contact">
+<h3>Dove Ci Trovi</h3>
+<p>📍 Centro Specializzato Neurodiversità</p>
+<p>📞 +39 000 000000</p>
+<p>📧 info@oltrelesfumature.it</p>
+<p>Collaboriamo con famiglie, scuole e professionisti.</p>
+<button>Contattaci Ora</button>
+</div>
+
 </div>
 
 </section>
 
 <section class="section" id="sviluppo">
-
-<div class="glow-box">
-Sviluppo del Bambino
-</div>
+<h2>Sviluppo del Bambino</h2>
 
 <div class="grid">
-<div class="box">
+
+<div class="box-blue">
 <h3>Segnali Precoci</h3>
-Ridotto contatto visivo, ritardo nel linguaggio, scarso interesse per il gioco condiviso.
-</div>
-<div class="box">
-<h3>Diagnosi Precoce</h3>
-Permette interventi personalizzati e supporto tempestivo.
-</div>
-<div class="box">
-<h3>Percorso Individuale</h3>
-Ogni bambino segue tempi e modalità di crescita differenti.
-</div>
+Ridotto contatto visivo, mancata risposta al nome, ritardo nel linguaggio, movimenti ripetitivi, difficoltà nel gioco simbolico.
 </div>
 
+<div class="box-green">
+<h3>Importanza della Diagnosi Precoce</h3>
+Una valutazione tempestiva consente di iniziare interventi mirati migliorando comunicazione, autonomia e adattamento sociale.
+</div>
+
+<div class="box-purple">
+<h3>Sviluppo Emotivo e Sociale</h3>
+I bambini possono mostrare difficoltà nel comprendere emozioni e regole sociali, ma con supporto adeguato possono sviluppare competenze significative.
+</div>
+
+</div>
 </section>
 
 <section class="section" id="cause">
-
-<div class="glow-box">
-Cause e Fattori di Rischio
-</div>
+<h2>Cause e Fattori di Rischio</h2>
 
 <div class="grid">
-<div class="box">
-<h3>Genetica</h3>
-Elevata componente ereditaria.
-</div>
-<div class="box">
-<h3>Fattori Ambientali</h3>
-Possibili influenze prenatali.
-</div>
-<div class="box">
-<h3>Falsi Miti</h3>
-Nessuna correlazione con vaccini.
-</div>
-<div class="box">
-<h3>Rischi</h3>
-Familiarità, prematurità, età genitoriale avanzata.
-</div>
+
+<div class="box-orange">
+<h3>Fattori Genetici</h3>
+L’autismo ha una forte componente genetica con più geni coinvolti.
 </div>
 
+<div class="box-blue">
+<h3>Fattori Ambientali</h3>
+Complicanze in gravidanza o alla nascita possono aumentare il rischio.
+</div>
+
+<div class="box-green">
+<h3>Chiarezza Scientifica</h3>
+Non esiste alcun collegamento tra vaccini e autismo.
+</div>
+
+</div>
 </section>
 
 <section class="section" id="metodi">
-<h2>Metodi Educativi Principali</h2>
+<h2>Metodi Educativi: ABA e TEACCH</h2>
 
 <div class="grid">
 
-<div class="box">
-<h3>ABA</h3>
-Intervento basato sul rinforzo positivo e obiettivi misurabili.
+<div class="box-purple">
+<h3>Metodo ABA</h3>
+L’Applied Behavior Analysis si basa sull’analisi del comportamento e sul rinforzo positivo. 
+Prevede obiettivi specifici, misurabili e personalizzati. 
+Lavora su comunicazione, abilità sociali, autonomie quotidiane e riduzione di comportamenti problematici. 
+È uno dei metodi più validati scientificamente.
 </div>
 
-<div class="box">
-<h3>TEACCH</h3>
-Strutturazione visiva e organizzazione prevedibile.
+<div class="box-orange">
+<h3>Metodo TEACCH</h3>
+Approccio strutturato che utilizza supporti visivi, organizzazione dello spazio e prevedibilità. 
+Favorisce autonomia, comprensione delle attività e riduzione dell’ansia. 
+Si adatta ai punti di forza visivi tipici di molte persone autistiche.
 </div>
 
 </div>
-
 </section>
 
 <section class="section" id="terapie">
-<h2>Terapie e Supporti</h2>
+<h2>Terapie e Interventi Integrati</h2>
 
 <div class="grid">
 
-<div class="box">Logopedia</div>
-<div class="box">Terapia Occupazionale</div>
-<div class="box">Psicoterapia</div>
-<div class="box">Supporto Educativo</div>
-<div class="box">Integrazione Sensoriale</div>
-<div class="box">Comunicazione Aumentativa Alternativa</div>
-
+<div class="box-blue">
+<h3>Logopedia</h3>
+Sviluppo del linguaggio verbale e non verbale.
 </div>
 
+<div class="box-green">
+<h3>Terapia Occupazionale</h3>
+Potenzia autonomie quotidiane e integrazione sensoriale.
+</div>
+
+<div class="box-purple">
+<h3>Psicoterapia</h3>
+Supporto emotivo e gestione dell’ansia.
+</div>
+
+<div class="box-orange">
+<h3>Comunicazione Aumentativa Alternativa (CAA)</h3>
+Strumenti visivi e tecnologici per facilitare la comunicazione.
+</div>
+
+</div>
 </section>
 
 <section class="section" id="figure">
-<h2>Figure Professionali</h2>
+<h2>Figure Professionali Coinvolte</h2>
 
 <div class="grid">
 
-<div class="box">Neuropsichiatra Infantile</div>
-<div class="box">Psicologo</div>
-<div class="box">Logopedista</div>
-<div class="box">Educatore Professionale</div>
-<div class="box">Insegnante di Sostegno</div>
-<div class="box">Terapista Occupazionale</div>
+<div class="box-blue">Neuropsichiatra Infantile</div>
+<div class="box-green">Psicologo</div>
+<div class="box-purple">Logopedista</div>
+<div class="box-orange">Educatore Professionale</div>
+<div class="box-blue">Insegnante di Sostegno</div>
+<div class="box-green">Terapista Occupazionale</div>
 
 </div>
-
-</section>
-
-<section class="section" id="contatti">
-<h2>Dove Ci Trovi</h2>
-
-<div class="card">
-Email: info@oltrelesfumature.it<br>
-Instagram: @oltrelesfumature<br>
-Telefono: +39 000 000000<br>
-Collaborazioni con scuole, famiglie e professionisti.
-</div>
-
 </section>
 
 <footer>
