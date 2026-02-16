@@ -5,196 +5,147 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Disturbo dello Spettro Autistico</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
 
 <style>
-
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-scroll-behavior:smooth;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-body{
-font-family:'Poppins',sans-serif;
-background:linear-gradient(180deg,#f4f7ff,#e8eeff);
-color:#1f3c88;
-line-height:1.7;
+body {
+  font-family: 'Inter', sans-serif;
+  background: linear-gradient(135deg,#eef2ff,#f8faff);
+  color: #1f2937;
+  overflow-x: hidden;
 }
 
-/* NAVBAR */
-
-nav{
-position:fixed;
-top:0;
-width:100%;
-background:rgba(255,255,255,0.85);
-backdrop-filter:blur(10px);
-display:flex;
-justify-content:center;
-padding:15px;
-z-index:1000;
-box-shadow:0 5px 20px rgba(0,0,0,0.05);
+section {
+  padding: 80px 10%;
 }
 
-nav a{
-color:#1f3c88;
-text-decoration:none;
-margin:0 18px;
-font-weight:500;
-transition:0.3s;
+h1,h2,h3 {
+  font-weight: 700;
 }
 
-nav a:hover{
-color:#4a6ed1;
+h2 {
+  font-size: 2.4rem;
+  margin-bottom: 30px;
+  color: #1f3c88;
 }
 
-/* HERO */
-
-header{
-display:flex;
-justify-content:space-between;
-align-items:center;
-padding:170px 10% 120px 10%;
-background:linear-gradient(135deg,#1f3c88,#4a6ed1);
-color:white;
+p {
+  line-height: 1.7;
+  margin-bottom: 20px;
 }
 
-.hero-text{
-max-width:55%;
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: linear-gradient(120deg,#1f3c88,#4a6ed1);
+  color: white;
+  padding: 0 10%;
 }
 
-header h1{
-font-size:52px;
-margin-bottom:20px;
+.hero-text {
+  max-width: 600px;
+  animation: fadeUp 1.2s ease;
 }
 
-header p{
-font-size:20px;
-opacity:0.95;
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
 }
 
-.hero-logo{
-width:360px;
-animation:float 6s ease-in-out infinite;
-filter:drop-shadow(0 30px 70px rgba(0,0,0,0.4));
+.hero p {
+  opacity: 0.9;
 }
 
-@keyframes float{
-0%{transform:translateY(0);}
-50%{transform:translateY(-20px);}
-100%{transform:translateY(0);}
+.hero img {
+  width: 260px;
+  animation: float 4s ease-in-out infinite;
 }
 
-/* SECTIONS */
-
-section{
-padding:120px 10%;
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(280px,1fr));
+  gap: 30px;
 }
 
-section:nth-child(even){
-background:white;
+.card {
+  background: white;
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.08);
+  transition: 0.4s;
 }
 
-h2{
-font-size:36px;
-margin-bottom:40px;
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 60px rgba(0,0,0,0.15);
 }
 
-.card{
-background:linear-gradient(145deg,#ffffff,#eef3ff);
-padding:35px;
-margin-bottom:35px;
-border-radius:22px;
-box-shadow:0 20px 40px rgba(0,0,0,0.08);
-transition:0.4s;
+.dark {
+  background: linear-gradient(120deg,#1f3c88,#4a6ed1);
+  color: white;
 }
 
-.card:hover{
-transform:translateY(-8px);
-box-shadow:0 30px 60px rgba(0,0,0,0.15);
+.dark h2 {
+  color: white;
 }
 
-h3{
-margin-bottom:15px;
+ul {
+  margin-left: 20px;
+  line-height: 1.8;
 }
 
-ul{
-padding-left:20px;
-margin-top:10px;
+.fade-section {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: 1s ease;
 }
 
-footer{
-background:#1f3c88;
-color:white;
-text-align:center;
-padding:45px;
-margin-top:60px;
+.fade-section.visible {
+  opacity: 1;
+  transform: translateY(0);
 }
 
-/* RESPONSIVE */
-
-@media(max-width:900px){
-
-header{
-flex-direction:column;
-text-align:center;
+@keyframes float {
+  0% {transform: translateY(0px);}
+  50% {transform: translateY(-20px);}
+  100% {transform: translateY(0px);}
 }
 
-.hero-text{
-max-width:100%;
+@keyframes fadeUp {
+  from {opacity:0; transform:translateY(30px);}
+  to {opacity:1; transform:translateY(0);}
 }
-
-.hero-logo{
-margin-top:40px;
-width:250px;
-}
-
-nav{
-flex-wrap:wrap;
-}
-
-nav a{
-margin:10px;
-}
-
-}
-
 </style>
 </head>
+
 <body>
 
-<nav>
-<a href="#cose">Cos'è</a>
-<a href="#caratteristiche">Caratteristiche</a>
-<a href="#diagnosi">Diagnosi</a>
-<a href="#prognosi">Prognosi</a>
-<a href="#intervento">Intervento</a>
-<a href="#aba">ABA</a>
-<a href="#teacch">TEACCH</a>
-</nav>
+<section class="hero">
+  <div class="hero-text">
+    <h1>Disturbo dello Spettro Autistico</h1>
+    <p>Materiale informativo basato su contenuti didattici</p>
+  </div>
+  <img src="logo.png" alt="Logo Autismo">
+</section>
 
-<header>
-<div class="hero-text">
-<h1>Disturbo dello Spettro Autistico</h1>
-<p>Materiale informativo basato su contenuti didattici</p>
-</div>
-<img src="logo.png" alt="Logo Autismo" class="hero-logo">
-</header>
-
-<section id="cose">
+<section class="fade-section">
 <h2>Cos'è l'Autismo</h2>
-<div class="card">
 <p>L'autismo è un disturbo del neurosviluppo a genesi multifattoriale che interessa primariamente il Sistema Nervoso Centrale durante la sua organizzazione.</p>
 <p>È caratterizzato da disfunzioni della maturazione neurobiologica e del funzionamento del SNC.</p>
 <p>Si tratta di uno spettro variabile che può comprendere sia persone con alto quoziente intellettivo sia con ritardo mentale.</p>
-</div>
 </section>
 
-<section id="caratteristiche">
+<section class="dark fade-section">
 <h2>Caratteristiche Principali</h2>
-
+<div class="card-grid">
 <div class="card">
 <h3>Alterazioni nella comunicazione</h3>
 <ul>
@@ -208,7 +159,7 @@ margin:10px;
 </div>
 
 <div class="card">
-<h3>Comportamenti ripetitivi e stereotipati</h3>
+<h3>Comportamenti ripetitivi</h3>
 <ul>
 <li>Sfarfallare le mani</li>
 <li>Dondolarsi</li>
@@ -219,40 +170,37 @@ margin:10px;
 </div>
 
 <div class="card">
-<h3>Difficoltà nell’interazione sociale</h3>
+<h3>Difficoltà sociali</h3>
 <ul>
 <li>Scarso interesse per gli altri</li>
 <li>Assenza di attenzione condivisa</li>
-<li>Difficoltà di comprensione degli stati mentali</li>
+<li>Difficoltà nella comprensione degli stati mentali</li>
 <li>Mancanza di condivisione spontanea di emozioni</li>
 </ul>
 </div>
-
-<div class="card">
-<h3>Punti di forza</h3>
-<ul>
-<li>Pensiero visivo</li>
-<li>Precisione e attenzione ai dettagli</li>
-<li>Memoria visiva eccellente</li>
-<li>Conoscenze approfondite su argomenti specifici</li>
-<li>Talenti artistici o logico-matematici</li>
-</ul>
 </div>
-
 </section>
 
-<section id="diagnosi">
+<section class="fade-section">
+<h2>Punti di Forza</h2>
+<div class="card-grid">
+<div class="card">Pensiero visivo</div>
+<div class="card">Precisione e attenzione ai dettagli</div>
+<div class="card">Memoria visiva eccellente</div>
+<div class="card">Conoscenze approfondite su argomenti specifici</div>
+<div class="card">Talenti artistici o logico-matematici</div>
+</div>
+</section>
+
+<section class="dark fade-section">
 <h2>Diagnosi</h2>
-<div class="card">
 <p>La diagnosi è clinica, basata sull’osservazione del comportamento e sulla raccolta dei dati anamnestici.</p>
 <p>Non esistono test biologici in grado di individuare la sindrome autistica.</p>
 <p>La diagnosi e il trattamento precoci cambiano la prognosi a lungo termine.</p>
-</div>
 </section>
 
-<section id="prognosi">
+<section class="fade-section">
 <h2>Prognosi ed Evoluzione</h2>
-<div class="card">
 <ul>
 <li>1-2% acquisisce uno stato normale</li>
 <li>10-15% raggiunge autonomia familiare</li>
@@ -260,12 +208,10 @@ margin:10px;
 <li>60-70% diventa adulto non autosufficiente</li>
 </ul>
 <p>La prognosi dipende fortemente dal grado di funzionamento cognitivo e dalla precocità dell’intervento.</p>
-</div>
 </section>
 
-<section id="intervento">
+<section class="dark fade-section">
 <h2>Intervento</h2>
-<div class="card">
 <ul>
 <li>Intervento precoce e intensivo</li>
 <li>Programma individualizzato</li>
@@ -274,12 +220,10 @@ margin:10px;
 <li>Verifiche periodiche</li>
 </ul>
 <p>Non esistono metodi miracolosi, ma sistemi di intervento integrati psico-educativi e cognitivo-comportamentali scientificamente validati.</p>
-</div>
 </section>
 
-<section id="aba">
+<section class="fade-section">
 <h2>Metodo ABA</h2>
-<div class="card">
 <p>ABA (Applied Behavior Analysis) utilizza principi comportamentali per costruire repertori comportamentali utili e ridurre quelli problematici.</p>
 <ul>
 <li>Intervento altamente individualizzato</li>
@@ -287,12 +231,10 @@ margin:10px;
 <li>Riduzione dei comportamenti problema</li>
 <li>Incremento delle capacità adattive</li>
 </ul>
-</div>
 </section>
 
-<section id="teacch">
+<section class="dark fade-section">
 <h2>Modello TEACCH</h2>
-<div class="card">
 <p>Il TEACCH è un modello di presa in carico globale che punta sull’organizzazione visiva di spazi, tempi e materiali.</p>
 <ul>
 <li>Strutturazione dello spazio</li>
@@ -301,13 +243,21 @@ margin:10px;
 <li>Adattamento dell’ambiente</li>
 <li>Coinvolgimento dei genitori</li>
 </ul>
-<p>Obiettivi: incrementare le abilità emergenti e rendere l’ambiente più comprensibile.</p>
-</div>
+<p><strong>Obiettivi:</strong> incrementare le abilità emergenti e rendere l’ambiente più comprensibile.</p>
 </section>
 
-<footer>
-Sito informativo sul Disturbo dello Spettro Autistico
-</footer>
+<script>
+const sections = document.querySelectorAll('.fade-section');
+
+window.addEventListener('scroll', () => {
+  sections.forEach(sec => {
+    const top = sec.getBoundingClientRect().top;
+    if(top < window.innerHeight - 100){
+      sec.classList.add('visible');
+    }
+  });
+});
+</script>
 
 </body>
 </html>
