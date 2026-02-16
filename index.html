@@ -175,12 +175,23 @@ to{opacity:1;transform:translateY(0);}
 
 
 <nav>
-<a href="#definizione">Cos'è</a>
-<a href="#storia">Storia</a>
-<a href="#campanelli">Campanelli</a>
-<a href="#faq">FAQ</a>
-<a href="#contatti">Contatti</a>
+
+<div class="hamburger" onclick="toggleMenu()">
+<div></div>
+<div></div>
+<div></div>
+</div>
+
+<div class="nav-links" id="navLinks">
+<a href="#definizione" onclick="toggleMenu()">Cos'è</a>
+<a href="#storia" onclick="toggleMenu()">Storia</a>
+<a href="#campanelli" onclick="toggleMenu()">Campanelli</a>
+<a href="#faq" onclick="toggleMenu()">FAQ</a>
+<a href="#contatti" onclick="toggleMenu()">Contatti</a>
+</div>
+
 </nav>
+
 <section id="definizione">
 <h2>Cos’è il Disturbo dello Spettro Autistico?</h2>
 
