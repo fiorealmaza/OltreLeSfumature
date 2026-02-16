@@ -3,13 +3,13 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Oltre Le Sfumature | Autismo Approfondimento Completo</title>
+<title>Oltre Le Sfumature | Portale Completo sul Disturbo dello Spettro Autistico</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700;800;900&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
 <style>
 
-/* ================= RESET ================= */
+/* ================= RESET GENERALE ================= */
 
 *{
 margin:0;
@@ -21,7 +21,7 @@ body{
 font-family:'Poppins',sans-serif;
 background:white;
 color:#111;
-line-height:1.75;
+line-height:1.85;
 }
 
 /* ================= MENU SUPERIORE ================= */
@@ -29,17 +29,17 @@ line-height:1.75;
 .topbar{
 width:100%;
 background:#1f5fbf;
-padding:14px 0;
+padding:18px 0;
 text-align:center;
 }
 
 .topbar a{
 color:white;
 text-decoration:none;
-margin:0 18px;
+margin:0 22px;
 font-weight:600;
-padding:8px 16px;
-border-radius:25px;
+padding:9px 20px;
+border-radius:30px;
 transition:0.3s;
 font-size:0.95rem;
 }
@@ -54,89 +54,73 @@ box-shadow:0 0 20px rgba(255,255,255,0.8);
 
 .header{
 display:flex;
+justify-content:space-between;
 align-items:center;
-gap:20px;
-padding:45px 8% 20px 8%;
-}
-
-.header img{
-width:120px;
-filter:drop-shadow(0 0 15px rgba(31,95,191,0.8));
+padding:60px 8% 30px 8%;
 }
 
 .header h1{
 font-family:'Cinzel',serif;
 font-size:3.6rem;
 color:#1f5fbf;
-text-shadow:
-0 0 12px rgba(31,95,191,0.9),
-0 0 35px rgba(31,95,191,0.6),
-0 0 70px rgba(31,95,191,0.3);
+text-shadow:0 0 10px rgba(31,95,191,0.35);
+}
+
+.header img{
+width:140px;
 }
 
 /* ================= SEZIONI ================= */
 
 section{
-padding:30px 8% 40px 8%;
+padding:80px 8%;
 }
-
-/* Titolo con quadrato blu chiaro */
 
 .section-title{
 background:#dbe9ff;
 display:inline-block;
-padding:14px 40px;
-border-radius:12px;
-font-size:1.9rem;
+padding:18px 50px;
+border-radius:16px;
+font-size:2.1rem;
 color:#1f5fbf;
 font-weight:700;
-margin-bottom:18px;
-box-shadow:0 0 25px rgba(31,95,191,0.4);
-text-shadow:0 0 8px rgba(31,95,191,0.6);
-}
-
-/* Primo stacco piccolo dopo titolo principale */
-
-.first-question{
-margin-top:10px;
+margin-bottom:35px;
+box-shadow:0 0 20px rgba(31,95,191,0.25);
 }
 
 .text{
-font-size:1.02rem;
-margin-bottom:16px;
+font-size:1.08rem;
+margin-bottom:26px;
 max-width:1200px;
 }
 
-/* ================= BOX CONTENUTO ================= */
+/* ================= GRID ================= */
 
 .grid{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-gap:18px;
-margin-top:15px;
+grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+gap:30px;
+margin-top:30px;
 }
 
 .card{
 background:white;
-padding:22px;
-border-radius:18px;
+padding:28px;
+border-radius:20px;
 border:1px solid rgba(31,95,191,0.15);
-box-shadow:0 6px 18px rgba(31,95,191,0.12);
+box-shadow:0 8px 22px rgba(31,95,191,0.12);
 transition:0.3s;
 }
 
 .card:hover{
-box-shadow:
-0 0 30px rgba(31,95,191,0.6),
-0 0 60px rgba(31,95,191,0.3);
-transform:translateY(-4px);
+box-shadow:0 0 40px rgba(31,95,191,0.45);
+transform:translateY(-6px);
 }
 
 .card h3{
 color:#1f5fbf;
-margin-bottom:8px;
-font-size:1.1rem;
-text-shadow:0 0 8px rgba(31,95,191,0.6);
+margin-bottom:12px;
+font-size:1.2rem;
 }
 
 /* ================= FOOTER ================= */
@@ -145,9 +129,10 @@ footer{
 background:#1f5fbf;
 color:white;
 text-align:center;
-padding:40px;
-margin-top:30px;
+padding:60px;
 font-size:0.95rem;
+margin-top:60px;
+line-height:1.6;
 }
 
 </style>
@@ -160,167 +145,175 @@ font-size:0.95rem;
 <a href="#definizione">Definizione</a>
 <a href="#sviluppo">Sviluppo</a>
 <a href="#fattori">Fattori di Rischio</a>
+<a href="#diagnosi">Diagnosi</a>
 <a href="#metodi">Metodi</a>
 <a href="#terapie">Terapie</a>
+<a href="#ricerca">Ricerca</a>
 <a href="#futuro">Futuro</a>
 <a href="#contatti">Contatti</a>
 </div>
 
-<!-- LOGO + TITOLO ILLUMINATO -->
+<!-- HEADER -->
 <div class="header">
-<img src="logo.png">
 <h1>Oltre Le Sfumature</h1>
+<img src="logo.png">
 </div>
 
-<!-- ================= DEFINIZIONE ================= -->
-
+<!-- DEFINIZIONE -->
 <section id="definizione">
-<div class="section-title">Cos'è il Disturbo dello Spettro Autistico?</div>
+<div class="section-title">Che cos’è il Disturbo dello Spettro Autistico?</div>
 
-<div class="text first-question">
-Il Disturbo dello Spettro Autistico (ASD) è una condizione del neurosviluppo che influenza il modo in cui una persona comunica, interagisce socialmente e percepisce il mondo. Si parla di "spettro" perché le caratteristiche possono variare enormemente da individuo a individuo.
+<div class="text">
+Il Disturbo dello Spettro Autistico (ASD) è una condizione del neurosviluppo che influenza la comunicazione, il comportamento e l’elaborazione sensoriale. Il termine spettro indica l’estrema variabilità delle manifestazioni cliniche: ogni persona presenta caratteristiche uniche, con punti di forza distintivi e differenti necessità di supporto.
 </div>
 
 <div class="text">
-L’autismo non è una malattia da curare ma una condizione neurologica che accompagna la persona per tutta la vita. Alcuni individui necessitano di supporto significativo, altri sviluppano un’elevata autonomia e competenze specialistiche in ambiti come tecnologia, arte, matematica o musica.
+L’autismo non è una malattia da guarire ma una modalità differente di funzionamento neurologico. Alcuni individui possono necessitare di supporto significativo nella vita quotidiana, mentre altri sviluppano competenze elevate in ambiti specifici come matematica, informatica, arte, musica o scienze.
 </div>
 
 <div class="text">
-La diagnosi viene effettuata tramite osservazione clinica e strumenti standardizzati da professionisti specializzati nel neurosviluppo.
+Le caratteristiche principali includono difficoltà nella comunicazione sociale reciproca, comportamenti ripetitivi, interessi ristretti e particolari modalità di risposta agli stimoli sensoriali.
 </div>
 </section>
 
-<!-- ================= SVILUPPO ================= -->
-
+<!-- SVILUPPO -->
 <section id="sviluppo">
-<div class="section-title">Come si manifesta durante lo sviluppo?</div>
+<div class="section-title">Sviluppo e Segnali Precoci</div>
+
+<div class="text">
+I segnali possono emergere già nei primi due anni di vita. Alcuni bambini mostrano scarso contatto visivo, limitata risposta al nome, difficoltà nell’uso del gesto indicativo e ritardo nello sviluppo del linguaggio.
+</div>
+
+<div class="text">
+Durante la crescita possono manifestarsi rigidità comportamentale, necessità di routine strutturate, forte concentrazione su interessi specifici e difficoltà nella comprensione delle dinamiche sociali implicite.
+</div>
 
 <div class="grid">
 <div class="card">
-<h3>Comunicazione</h3>
-Possibili ritardi nel linguaggio, ecolalia, difficoltà nella conversazione reciproca e interpretazione letterale delle frasi.
+<h3>Area Comunicativa</h3>
+Ritardo nel linguaggio, ecolalia, difficoltà nella conversazione reciproca e comprensione letterale del linguaggio figurato.
 </div>
 
 <div class="card">
-<h3>Interazione Sociale</h3>
-Difficoltà nel comprendere segnali sociali impliciti, gesti, espressioni facciali e tono della voce.
+<h3>Area Sociale</h3>
+Difficoltà nel riconoscere emozioni, interpretare espressioni facciali e comprendere norme sociali non esplicite.
 </div>
 
 <div class="card">
-<h3>Interessi Specifici</h3>
-Forte concentrazione su argomenti ristretti con grande memoria e attenzione ai dettagli.
-</div>
-
-<div class="card">
-<h3>Sensibilità Sensoriale</h3>
-Reazioni intense o ridotte a suoni, luci, consistenze, odori o contatto fisico.
+<h3>Area Sensoriale</h3>
+Iper o ipo sensibilità a suoni, luci, consistenze, odori e contatto fisico.
 </div>
 </div>
 </section>
 
-<!-- ================= FATTORI ================= -->
-
+<!-- FATTORI -->
 <section id="fattori">
-<div class="section-title">Fattori di Rischio e Origine</div>
+<div class="section-title">Fattori di Rischio e Origini</div>
 
 <div class="text">
-Le ricerche indicano una componente genetica significativa, con il coinvolgimento di molteplici geni. Anche fattori ambientali prenatali possono influire sullo sviluppo neurologico.
+L’origine dell’autismo è multifattoriale. Studi scientifici dimostrano una forte componente genetica associata a fattori ambientali prenatali che possono influire sullo sviluppo neurologico.
 </div>
 
 <div class="text">
-Tra i fattori associati:
-• predisposizione familiare  
-• età avanzata dei genitori  
-• complicazioni durante gravidanza o parto  
-• alterazioni nello sviluppo cerebrale precoce
+Tra i fattori correlati troviamo predisposizione familiare, età avanzata dei genitori, complicazioni durante la gravidanza o il parto e alterazioni nello sviluppo cerebrale precoce.
 </div>
 
 <div class="text">
-È importante ribadire che i vaccini non causano l’autismo: questa teoria è stata ampiamente smentita dalla comunità scientifica.
+È importante sottolineare che numerose ricerche internazionali hanno escluso qualsiasi collegamento tra vaccini e autismo.
 </div>
 </section>
 
-<!-- ================= METODI ================= -->
+<!-- DIAGNOSI -->
+<section id="diagnosi">
+<div class="section-title">Diagnosi e Valutazione Multidisciplinare</div>
 
+<div class="text">
+La diagnosi viene effettuata da un’équipe composta da neuropsichiatra infantile, psicologo, terapista della neuropsicomotricità e logopedista.
+</div>
+
+<div class="text">
+Si utilizzano strumenti standardizzati, osservazione clinica e colloqui con la famiglia per valutare comunicazione, interazione sociale e comportamento.
+</div>
+</section>
+
+<!-- METODI -->
 <section id="metodi">
-<div class="section-title">Metodi Educativi</div>
+<div class="section-title">Metodi Educativi e Approcci Interventivi</div>
 
 <div class="grid">
 <div class="card">
 <h3>ABA</h3>
-Approccio basato sull’analisi del comportamento e rinforzo positivo.
+Analisi del comportamento applicata con rinforzo positivo e obiettivi strutturati.
 </div>
 
 <div class="card">
 <h3>TEACCH</h3>
-Organizzazione strutturata dell’ambiente e supporti visivi.
+Strutturazione ambientale e utilizzo di supporti visivi.
 </div>
 
 <div class="card">
 <h3>Denver Model</h3>
-Intervento precoce centrato sul gioco e relazione.
+Intervento precoce centrato sulla relazione e sul gioco condiviso.
 </div>
 
 <div class="card">
-<h3>CAA</h3>
-Strumenti alternativi per facilitare la comunicazione.
+<h3>Comunicazione Aumentativa</h3>
+Strumenti alternativi per favorire l’espressione e la comprensione.
 </div>
 </div>
 </section>
 
-<!-- ================= TERAPIE ================= -->
-
+<!-- TERAPIE -->
 <section id="terapie">
-<div class="section-title">Terapie e Supporti</div>
+<div class="section-title">Terapie e Supporto Continuativo</div>
 
-<div class="grid">
-<div class="card">
-<h3>Logopedia</h3>
-Sviluppo del linguaggio e comunicazione funzionale.
+<div class="text">
+Gli interventi possono includere logopedia per lo sviluppo del linguaggio, terapia occupazionale per l’autonomia, supporto psicologico per la regolazione emotiva e parent training per sostenere la famiglia.
 </div>
 
-<div class="card">
-<h3>Terapia Occupazionale</h3>
-Autonomia personale e integrazione sensoriale.
-</div>
-
-<div class="card">
-<h3>Psicoterapia</h3>
-Gestione emotiva e comportamentale.
-</div>
-
-<div class="card">
-<h3>Parent Training</h3>
-Formazione e coinvolgimento della famiglia.
-</div>
+<div class="text">
+L’obiettivo principale non è “normalizzare” la persona, ma potenziare le sue capacità, ridurre le difficoltà e migliorare la qualità della vita.
 </div>
 </section>
 
-<!-- ================= FUTURO ================= -->
+<!-- RICERCA -->
+<section id="ricerca">
+<div class="section-title">Ricerca Scientifica e Innovazione</div>
 
+<div class="text">
+La ricerca neuroscientifica sta approfondendo i meccanismi genetici e biologici alla base dello spettro autistico, con l’obiettivo di sviluppare strumenti diagnostici sempre più precoci e interventi personalizzati.
+</div>
+
+<div class="text">
+Tecnologie emergenti come intelligenza artificiale e realtà virtuale vengono studiate per supportare apprendimento e inclusione.
+</div>
+</section>
+
+<!-- FUTURO -->
 <section id="futuro">
 <div class="section-title">Il Futuro della Neurodiversità</div>
 
 <div class="text">
-La società sta evolvendo verso una maggiore inclusione e valorizzazione delle differenze neurologiche. Sempre più aziende sviluppano programmi di inserimento lavorativo per persone nello spettro.
+La società moderna sta progressivamente riconoscendo il valore della neurodiversità, promuovendo inclusione scolastica, lavorativa e sociale.
 </div>
 
 <div class="text">
-La ricerca scientifica continua a migliorare strumenti diagnostici e interventi personalizzati, con l’obiettivo di garantire qualità della vita e autonomia.
+Sempre più aziende sviluppano programmi di inserimento professionale dedicati, valorizzando precisione, memoria e capacità analitiche spesso presenti nelle persone nello spettro.
 </div>
 </section>
 
 <section id="contatti">
-<div class="section-title">Contatti</div>
+<div class="section-title">Contatti e Informazioni</div>
 <div class="text">
 Centro Oltre Le Sfumature<br>
 Email: info@oltrelesfumature.it<br>
-Telefono: +39 000 000000
+Telefono: +39 000 000000<br>
+Sede: Italia
 </div>
 </section>
 
 <footer>
-© 2026 Oltre Le Sfumature — Inclusione • Consapevolezza • Ricerca • Futuro
+© 2026 Oltre Le Sfumature — Inclusione • Consapevolezza • Ricerca • Formazione • Futuro • Supporto • Innovazione • Rispetto • Comprensione • Valorizzazione della Neurodiversità
 </footer>
 
 </body>
