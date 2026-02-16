@@ -45,6 +45,7 @@ padding:10px 22px;
 border-radius:30px;
 transition:0.3s;
 font-size:0.95rem;
+display:inline-block;
 }
 
 .topbar a:hover{
@@ -54,7 +55,7 @@ box-shadow:0 0 20px rgba(255,255,255,0.9);
 transform:scale(1.08);
 }
 
-/* ================= HERO TIE DYE ================= */
+/* ================= HERO ================= */
 
 .hero{
 padding:120px 8% 110px 8%;
@@ -78,7 +79,7 @@ text-shadow:0 0 20px rgba(31,95,191,0.35);
 }
 
 .hero img{
-width:240px; /* più grande */
+width:240px;
 animation:floatlogo 6s ease-in-out infinite;
 }
 
@@ -105,8 +106,6 @@ color:#ffffff;
 background:linear-gradient(90deg,#4da3ff,#79c2ff);
 box-shadow:0 0 35px rgba(31,95,191,0.4);
 }
-
-/* ================= TESTO ================= */
 
 .text{
 font-size:1.15rem;
@@ -170,6 +169,79 @@ padding:150px;
 margin-top:150px;
 line-height:2;
 font-size:1.05rem;
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width:1024px){
+
+.hero{
+flex-direction:column;
+text-align:center;
+padding:80px 6%;
+}
+
+.hero h1{
+font-size:3rem;
+}
+
+.hero img{
+width:180px;
+margin-top:20px;
+}
+
+section{
+padding:100px 6%;
+}
+
+.grid{
+grid-template-columns:1fr;
+gap:40px;
+}
+
+footer{
+padding:90px 30px;
+}
+
+}
+
+@media (max-width:600px){
+
+.topbar a{
+display:block;
+margin:8px auto;
+}
+
+.hero h1{
+font-size:2.2rem;
+}
+
+.hero img{
+width:140px;
+}
+
+section{
+padding:80px 5%;
+}
+
+.section-title{
+font-size:1.3rem;
+padding:12px 25px;
+}
+
+.text{
+font-size:1rem;
+}
+
+.card{
+padding:30px;
+}
+
+footer{
+padding:60px 20px;
+font-size:0.9rem;
+}
+
 }
 
 </style>
