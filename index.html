@@ -1,375 +1,268 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Disturbo dello Spettro Autistico</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+scroll-behavior:smooth;
+}
+
+body{
+background:linear-gradient(135deg,#e0f2ff,#f5f9ff);
+color:#1a1a1a;
+overflow-x:hidden;
+}
+
+header{
+background:linear-gradient(90deg,#0077ff,#00aaff);
+color:white;
+padding:80px 20px;
+text-align:center;
+position:relative;
+overflow:hidden;
+}
+
+header h1{
+font-size:2.8rem;
+margin-bottom:15px;
+animation:fadeInDown 1.2s ease forwards;
+}
+
+header p{
+font-size:1.2rem;
+animation:fadeInUp 1.2s ease forwards;
+}
+
+nav{
+position:sticky;
+top:0;
+background:white;
+padding:15px;
+display:flex;
+justify-content:center;
+gap:30px;
+box-shadow:0 4px 12px rgba(0,0,0,0.08);
+z-index:1000;
+}
+
+nav a{
+text-decoration:none;
+color:#0077ff;
+font-weight:600;
+transition:0.3s;
+}
+
+nav a:hover{
+color:#0055aa;
+transform:scale(1.05);
+}
+
+section{
+padding:80px 10%;
+}
+
+h2{
+text-align:center;
+font-size:2rem;
+margin-bottom:40px;
+color:#0077ff;
+}
+
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:30px;
+}
+
+.box{
+background:white;
+padding:30px;
+border-radius:20px;
+box-shadow:0 10px 25px rgba(0,0,0,0.08);
+transition:0.4s;
+}
+
+.box:hover{
+transform:translateY(-8px);
+box-shadow:0 15px 35px rgba(0,0,0,0.12);
+}
+
+.box h3{
+margin-bottom:15px;
+color:#0077ff;
+}
+
+.box ul{
+padding-left:20px;
+}
+
+.box li{
+margin-bottom:8px;
+}
+
+form{
+display:flex;
+flex-direction:column;
+gap:15px;
+}
+
+input,textarea{
+padding:12px;
+border-radius:10px;
+border:1px solid #ccc;
+font-size:1rem;
+}
+
+button{
+padding:12px;
+border:none;
+border-radius:10px;
+background:#0077ff;
+color:white;
+font-weight:600;
+cursor:pointer;
+transition:0.3s;
+}
+
+button:hover{
+background:#0055aa;
+}
+
+footer{
+background:#0077ff;
+color:white;
+text-align:center;
+padding:30px;
+margin-top:40px;
+}
+
+@keyframes fadeInDown{
+from{opacity:0;transform:translateY(-30px);}
+to{opacity:1;transform:translateY(0);}
+}
+
+@keyframes fadeInUp{
+from{opacity:0;transform:translateY(30px);}
+to{opacity:1;transform:translateY(0);}
+}
 </style>
 </head>
 
 <body>
 
 <header>
-<div class="logo">
-<img src="logo.png" alt="logo">
-<h1>Oltre Le Sfumature</h1>
-</div>
-
-<div class="menu-toggle" id="menuBtn">
-<span></span>
-<span></span>
-<span></span>
-</div>
+<h1>Disturbo dello Spettro Autistico 💙🧩</h1>
+<p>Informazioni chiare, scientifiche e rassicuranti per le famiglie</p>
 </header>
 
-<div class="overlay" id="overlay"></div>
-
-<div class="side-menu" id="sideMenu">
-<a href="#intro">Definizione</a>
-<a href="#evoluzione">Evoluzione</a>
-<a href="#caratteristiche">Caratteristiche</a>
-<a href="#diagnosi">Diagnosi</a>
-<a href="#intervento">Intervento</a>
-<a href="#terapie">Terapie</a>
-<a href="#famiglia">Famiglia</a>
+<nav>
+<a href="#definizione">Cos'è</a>
+<a href="#storia">Storia</a>
+<a href="#campanelli">Campanelli</a>
+<a href="#faq">FAQ</a>
 <a href="#contatti">Contatti</a>
+</nav>
+<section id="definizione">
+<h2>Cos’è il Disturbo dello Spettro Autistico?</h2>
+
+<div class="grid">
+
+<div class="box">
+<h3>Definizione generale</h3>
+<p>Il Disturbo dello Spettro Autistico (DSA) è una condizione del neurosviluppo che coinvolge comunicazione, interazione sociale e comportamenti ripetitivi.</p>
+<p>Non è una malattia contagiosa. Non è causato dallo stile educativo. Non è una colpa.</p>
+<p>Ha una base biologica con una forte componente genetica e multifattoriale.</p>
 </div>
 
-<section id="intro" class="section">
-<h2>Definizione dello Spettro Autistico</h2>
-<div class="card">
-Il Disturbo dello Spettro Autistico (DSA) è una condizione del neurosviluppo caratterizzata da difficoltà persistenti nella comunicazione sociale e dalla presenza di comportamenti ripetitivi e interessi ristretti.  
-Si definisce “spettro” perché le manifestazioni cliniche variano significativamente per intensità, modalità espressiva e livello di funzionamento cognitivo.
-
-Le differenze possono riguardare linguaggio, abilità adattive, capacità relazionali e autonomia personale.  
-Alcune persone presentano competenze elevate in specifici ambiti, mentre altre necessitano di supporto intensivo nella vita quotidiana.
-
-L’eziologia è multifattoriale e comprende componenti genetiche e neurobiologiche.  
-Non è causato da fattori educativi o affettivi, come erroneamente ipotizzato in passato.
-</div>
-</section>
-
-<section id="evoluzione" class="section">
-<h2>Evoluzione Storica del Concetto di Autismo</h2>
-<div class="card">
-Il termine “autismo” fu introdotto da Eugen Bleuler nel 1911 per descrivere un sintomo della schizofrenia.  
-Nel 1943 Leo Kanner descrisse l’autismo infantile precoce come condizione distinta.
-
-Negli anni ’50 si diffuse erroneamente la teoria delle “madri frigorifero”, poi definitivamente smentita.  
-
-Con il DSM-III (1980) l’autismo venne inserito nei Disturbi Pervasivi dello Sviluppo.  
-Nel DSM-5 (2013) si parla ufficialmente di Disturbo dello Spettro Autistico, unificando precedenti diagnosi come sindrome di Asperger e disturbo disintegrativo dell’infanzia.
-
-Questa evoluzione ha permesso un approccio diagnostico più preciso e interventi maggiormente personalizzati.
-</div>
-</section>
-<section id="caratteristiche" class="section">
-<h2>Caratteristiche Principali</h2>
-
-<div class="card">
-<h3>Comunicazione</h3>
-Le difficoltà comunicative possono manifestarsi con:
-- Ritardo o assenza del linguaggio verbale  
-- Ecolalia (ripetizione di parole o frasi)  
-- Inversione pronominale  
-- Prosodia alterata  
-- Difficoltà nella comprensione di ironia, metafore e sarcasmo  
-- Ridotta comunicazione non verbale (gesti, mimica, contatto oculare)  
-
-Alcuni soggetti possiedono un linguaggio formale corretto ma presentano difficoltà pragmatiche, ovvero nell’uso sociale del linguaggio.
+<div class="box">
+<h3>Perché si parla di “spettro”?</h3>
+<ul>
+<li>Bambini con difficoltà importanti nella comunicazione</li>
+<li>Bambini con linguaggio sviluppato ma difficoltà sociali</li>
+<li>Persone con disabilità intellettiva</li>
+<li>Persone con intelligenza nella norma o superiore</li>
+</ul>
+<p>Ogni bambino è diverso. Ogni profilo è unico.</p>
 </div>
 
-<div class="card">
-<h3>Interazione Sociale</h3>
-Le difficoltà sociali includono:
-- Ridotta attenzione condivisa  
-- Scarso interesse verso i coetanei  
-- Difficoltà a comprendere stati mentali ed emozioni altrui (teoria della mente)  
-- Evitamento o eccessiva rigidità nello sguardo  
-- Difficoltà nel gioco simbolico  
-
-Le relazioni possono essere limitate o caratterizzate da modalità relazionali atipiche.
+<div class="box">
+<h3>Diagnosi</h3>
+<p>La diagnosi è clinica.</p>
+<ul>
+<li>Basata sull’osservazione del comportamento</li>
+<li>Supportata dall’anamnesi familiare</li>
+<li>Riferita ai criteri del DSM-5</li>
+</ul>
+<p>Non esiste un esame del sangue o un test biologico specifico.</p>
 </div>
 
-<div class="card">
-<h3>Comportamenti Ripetitivi e Interessi Ristretti</h3>
-- Stereotipie motorie (dondolarsi, agitare le mani)  
-- Routine rigide e resistenza ai cambiamenti  
-- Iper o ipo-reattività sensoriale  
-- Interessi specifici molto intensi e circoscritti  
-- Bisogno marcato di prevedibilità  
-
-Questi comportamenti spesso hanno funzione regolativa e riducono ansia e sovraccarico sensoriale.
+<div class="box">
+<h3>Cosa significa oggi per le famiglie?</h3>
+<p>👉 Non è una punizione.</p>
+<p>👉 Non è il risultato di errori educativi.</p>
+<p>👉 Non è mancanza di affetto.</p>
+<p>Con interventi personalizzati e coinvolgimento familiare molti bambini sviluppano competenze importanti e autonomia.</p>
 </div>
 
-<div class="card">
-<h3>Profilo Sensoriale</h3>
-Molte persone nello spettro presentano:
-- Ipersensibilità a suoni, luci, odori  
-- Iposensibilità al dolore  
-- Difficoltà nell’integrazione sensoriale  
-
-L’alterazione sensoriale influisce significativamente sulla qualità della vita e sull’adattamento ambientale.
 </div>
-
-</section>
-
-
-<section id="diagnosi" class="section">
-<h2>Diagnosi</h2>
-
-<div class="card">
-La diagnosi è clinica e si basa su:
-
-- Osservazione diretta del comportamento  
-- Colloqui con i genitori  
-- Raccolta anamnestica dettagliata  
-- Utilizzo di strumenti standardizzati (es. ADOS-2, ADI-R)  
-
-Non esistono test biologici specifici per identificare il DSA.
-</div>
-
-<div class="card">
-<h3>Indicatori Precoci</h3>
-Alcuni segnali osservabili già nei primi 24 mesi:
-
-- Assenza di lallazione o gesti comunicativi  
-- Mancata risposta al nome  
-- Scarso contatto oculare  
-- Assenza di gioco simbolico  
-- Mancanza di attenzione condivisa  
-
-L’identificazione precoce consente interventi più efficaci.
-</div>
-
-<div class="card">
-<h3>Fattori di Rischio</h3>
-I principali fattori associati includono:
-
-- Familiarità genetica  
-- Età avanzata dei genitori  
-- Prematurità  
-- Condizioni neurologiche associate  
-
-È importante sottolineare che non esiste una singola causa determinante.
-</div>
-
-<div class="card">
-<h3>Importanza della Diagnosi Precoce</h3>
-Un intervento tempestivo permette di:
-
-- Migliorare le competenze comunicative  
-- Ridurre comportamenti problema  
-- Favorire autonomia  
-- Sostenere l’inclusione scolastica  
-
-La collaborazione tra famiglia, scuola e professionisti è fondamentale.
-</div>
-
-</section>
-<section id="intervento" class="section">
-<h2>Intervento</h2>
-
-<div class="card">
-L’intervento nel Disturbo dello Spettro Autistico deve essere precoce, intensivo, strutturato e personalizzato.  
-Ogni progetto educativo e terapeutico viene costruito sulla base delle caratteristiche individuali, del livello di funzionamento e dei bisogni specifici della persona.
-
-Un intervento efficace mira a:
-- Potenziare la comunicazione
-- Sviluppare abilità sociali
-- Incrementare l’autonomia personale
-- Ridurre comportamenti disfunzionali
-- Favorire l’inclusione scolastica e sociale
-
-Il lavoro integrato tra terapisti, scuola e famiglia rappresenta un elemento centrale per garantire continuità e coerenza educativa.
-</div>
-
-<div class="card">
-<h3>Principali Approcci Educativi e Comportamentali</h3>
-Tra i metodi maggiormente utilizzati e supportati dalla letteratura scientifica troviamo l’ABA e il TEACCH.  
-Entrambi mirano a migliorare qualità della vita e autonomia, ma attraverso modalità differenti.
-</div>
-
-<div class="methods">
-
-<a href="aba.html" target="_blank" class="method-box">
-<h3>ABA (Applied Behavior Analysis)</h3>
-Metodo basato sull’analisi scientifica del comportamento.  
-Utilizza principi di rinforzo positivo, modellamento e prompting per insegnare abilità comunicative, sociali e adattive.  
-
-L’intervento è strutturato in modo intensivo e prevede obiettivi misurabili, monitoraggio continuo dei progressi e generalizzazione delle competenze nei diversi contesti di vita.
-</a>
-
-<a href="teacch.html" target="_blank" class="method-box">
-<h3>TEACCH</h3>
-Approccio psicoeducativo strutturato che organizza ambiente, materiali e routine per favorire comprensione, autonomia e riduzione dell’ansia.  
-
-Si basa sull’adattamento dell’ambiente alle caratteristiche cognitive della persona, utilizzando supporti visivi, strutturazione dello spazio e pianificazione delle attività.
-</a>
-
-</div>
-
-<div style="height:60px;"></div>
-
-<div class="card">
-L’ABA e il TEACCH non sono in contrapposizione, ma possono essere integrati all’interno di un progetto globale.  
-La scelta del metodo dipende dalle caratteristiche individuali, dagli obiettivi educativi e dal contesto familiare e scolastico.
-
-Un intervento realmente efficace è sempre multidisciplinare e centrato sulla persona.
-</div>
-
-</section>
-<section id="terapie" class="section">
-<h2>Terapie Complementari e Intervento Multidisciplinare</h2>
-
-<div class="card">
-Un intervento efficace nel Disturbo dello Spettro Autistico non si limita a un unico metodo, ma coinvolge una rete multidisciplinare di professionisti.  
-L’obiettivo è sostenere lo sviluppo globale della persona, migliorare l’autonomia e favorire la qualità della vita in tutti i contesti.
-</div>
-
-<div class="card">
-<h3>Logopedia</h3>
-La logopedia interviene sulle difficoltà comunicative e linguistiche.  
-Può lavorare su:
-- Sviluppo del linguaggio verbale  
-- Comprensione linguistica  
-- Pragmatica della comunicazione  
-- Comunicazione Aumentativa Alternativa (CAA)  
-
-Nei casi di assenza di linguaggio verbale si utilizzano strumenti visivi, simboli o dispositivi elettronici per facilitare l’espressione.
-</div>
-
-<div class="card">
-<h3>Psicomotricità</h3>
-Favorisce lo sviluppo dello schema corporeo, coordinazione, regolazione emotiva e integrazione sensoriale.  
-Attraverso il gioco strutturato e il movimento, il bambino può migliorare autoregolazione e consapevolezza corporea.
-</div>
-
-<div class="card">
-<h3>Terapia Occupazionale</h3>
-Supporta l’autonomia nelle attività quotidiane (vestirsi, alimentarsi, organizzare materiali).  
-Interviene anche sulle difficoltà sensoriali e sulla pianificazione motoria.
-</div>
-
-<div class="card">
-<h3>Supporto Psicologico</h3>
-Può essere rivolto sia alla persona nello spettro sia alla famiglia.  
-Aiuta nella gestione dell’ansia, delle emozioni e dei momenti di crisi, promuovendo strategie di coping efficaci.
-</div>
-
-<div class="card">
-<h3>Intervento Scolastico</h3>
-L’inclusione scolastica rappresenta un pilastro fondamentale.  
-La collaborazione tra insegnanti curricolari, insegnanti di sostegno e terapisti permette di creare un Piano Educativo Individualizzato (PEI) coerente con gli obiettivi terapeutici.
-</div>
-
 </section>
 
 
 
-<section id="famiglia" class="section">
-<h2>Il Ruolo della Famiglia</h2>
+<section id="storia">
+<h2>La storia dell’autismo spiegata alle famiglie 💙🧩</h2>
 
-<div class="card">
-La diagnosi di Disturbo dello Spettro Autistico rappresenta un momento delicato per l’intero sistema familiare.  
-Le famiglie attraversano spesso fasi di shock, negazione, riorganizzazione e adattamento.
+<div class="grid">
+
+<div class="box">
+<h3>Un tempo si pensava fosse colpa dei genitori</h3>
+<p>Negli anni ’50 e ’60 si credeva che l’autismo fosse una forma precoce di schizofrenia infantile e che fosse causato da problemi nel rapporto tra genitori e figli.</p>
+<p><strong>Oggi sappiamo con certezza che questa teoria è sbagliata.</strong></p>
+<p>L’autismo non è causato dall’atteggiamento dei genitori, né da mancanza di affetto.</p>
+<p>Questo è stato uno dei cambiamenti più importanti nella storia della ricerca.</p>
 </div>
 
-<div class="card">
-Un adeguato supporto consente di:
-- Comprendere la condizione  
-- Acquisire strumenti educativi efficaci  
-- Ridurre stress e senso di isolamento  
-- Favorire una relazione positiva e strutturata  
-
-La famiglia non è solo destinataria dell’intervento, ma parte attiva e fondamentale del progetto educativo.
+<div class="box">
+<h3>La svolta: condizione del neurosviluppo</h3>
+<p>A partire dagli anni ’70, la scienza ha iniziato a riconoscere che l’autismo ha una base biologica.</p>
+<p>Oggi è classificato come Disturbo dello Spettro Autistico.</p>
+<ul>
+<li>Non è una malattia contagiosa</li>
+<li>Non è qualcosa che passa con la crescita</li>
+<li>Non è causato da cattiva educazione</li>
+</ul>
 </div>
 
-<div class="card">
-La collaborazione tra genitori e professionisti permette coerenza educativa tra casa, scuola e terapia.  
-La continuità e la stabilità ambientale favoriscono sicurezza e prevedibilità, elementi centrali per il benessere della persona nello spettro.
+<div class="box">
+<h3>Il cambiamento nel 2013</h3>
+<p>Nel 2013, con il DSM-5, tutte le diagnosi precedenti (come la Sindrome di Asperger) sono state riunite sotto un’unica definizione: Disturbo dello Spettro Autistico.</p>
+<ul>
+<li>Semplificare la diagnosi</li>
+<li>Riconoscere un continuum</li>
+<li>Personalizzare meglio gli interventi</li>
+</ul>
 </div>
 
+<div class="box">
+<h3>Un messaggio importante 💙</h3>
+<p>L’autismo non definisce tutto ciò che è un bambino.</p>
+<ul>
+<li>Punti di forza</li>
+<li>Interessi specifici</li>
+<li>Modalità uniche di apprendere</li>
+<li>Potenzialità da valorizzare</li>
+</ul>
+<p>La conoscenza scientifica è cresciuta molto. E continua a crescere.</p>
+</div>
+
+</div>
 </section>
-
-
-
-<section id="contatti" class="section">
-<h2>Contattaci</h2>
-
-<div class="card">
-Se desideri ricevere informazioni, collaborare o approfondire i contenuti del progetto "Oltre Le Sfumature", puoi contattarci compilando il modulo sottostante oppure attraverso i nostri canali social.
-</div>
-
-<div class="card">
-
-<form action="https://formspree.io/f/mvzbranp" method="POST">
-
-<label>Nome e Cognome</label><br>
-<input type="text" name="name" required style="width:100%; padding:12px; margin:10px 0 20px 0; border-radius:10px; border:1px solid #ccc;">
-
-<label>Email</label><br>
-<input type="email" name="email" required style="width:100%; padding:12px; margin:10px 0 20px 0; border-radius:10px; border:1px solid #ccc;">
-
-<label>Messaggio</label><br>
-<textarea name="message" rows="5" required style="width:100%; padding:12px; margin:10px 0 20px 0; border-radius:10px; border:1px solid #ccc;"></textarea>
-
-<button type="submit" style="background:#0066cc; color:white; padding:12px 25px; border:none; border-radius:10px; cursor:pointer; font-weight:600;">
-Invia Messaggio
-</button>
-
-</form>
-
-</div>
-
-
-<div class="card">
-<h3>Seguici sui Social</h3>
-
-<div style="display:flex; gap:20px; margin-top:20px; flex-wrap:wrap;">
-
-<a href="https://instagram.com/oltrelesfumature" target="_blank" style="text-decoration:none; color:#003d80; font-weight:600;">
-📷 Instagram
-</a>
-
-<a href="#" target="_blank" style="text-decoration:none; color:#003d80; font-weight:600;">
-📘 Facebook
-</a>
-
-<a href="#" target="_blank" style="text-decoration:none; color:#003d80; font-weight:600;">
-🎵 TikTok
-</a>
-
-<a href="#" target="_blank" style="text-decoration:none; color:#003d80; font-weight:600;">
-💼 LinkedIn
-</a>
-
-</div>
-</div>
-
-</section>
-
-
-
-<footer>
-© 2026 Oltre Le Sfumature | Tutti i diritti riservati  
-<br><br>
-Progetto informativo sul Disturbo dello Spettro Autistico dedicato alla sensibilizzazione, inclusione e diffusione di conoscenze scientificamente fondate.
-</footer>
-
-
-
-<script>
-const menuBtn = document.getElementById("menuBtn");
-const sideMenu = document.getElementById("sideMenu");
-const overlay = document.getElementById("overlay");
-
-menuBtn.addEventListener("click", () => {
-menuBtn.classList.toggle("active");
-sideMenu.classList.toggle("active");
-overlay.classList.toggle("active");
-});
-
-overlay.addEventListener("click", () => {
-menuBtn.classList.remove("active");
-sideMenu.classList.remove("active");
-overlay.classList.remove("active");
-});
-</script>
-
-</body>
-</html>
