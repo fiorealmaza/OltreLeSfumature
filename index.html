@@ -29,24 +29,24 @@ header{
     position:sticky;
     top:0;
     z-index:1000;
-    background:white; /* fascia bianca luminosa */
+    background:white;
     box-shadow:0 4px 15px rgba(0,0,0,0.1);
 }
 
 .logo{
     display:flex;
     align-items:center;
-    gap:15px;
+    gap:20px;
 }
 
 .logo img{
-    width:60px;
+    width:80px; /* logo più grande */
 }
 
 .logo h1{
-    font-size:32px;
+    font-size:40px; /* titolo più grande */
     font-weight:700;
-    letter-spacing:1px;
+    letter-spacing:2px;
     color:#1a1a1a;
 }
 
@@ -82,7 +82,7 @@ nav a:hover{
 @media(max-width:900px){
     nav{
         position:absolute;
-        top:70px;
+        top:90px;
         right:0;
         background:white;
         flex-direction:column;
@@ -99,26 +99,38 @@ nav a:hover{
     }
 }
 
-/* INTRO */
+/* INTRO - HERO SECTION */
 .intro{
-    padding:50px 20px;
-    text-align:center;
-    max-width:1000px;
+    display:flex;
+    align-items:flex-start;
+    padding:60px 40px;
+    max-width:1200px;
     margin:auto;
+    gap:40px;
 }
 
-.intro h2{
-    font-size:32px;
-    margin-bottom:20px;
-    font-weight:700;
+.intro img{
+    width:200px; /* logo grande nella sezione */
+    border-radius:20px;
+    box-shadow:0 0 30px rgba(77,166,255,0.6);
+}
+
+.intro-text{
+    max-width:800px;
+}
+
+.intro-text h2{
+    font-size:48px; /* titolo molto grande */
+    margin-bottom:25px;
+    font-weight:800;
     color:#1a1a1a;
 }
 
-.intro p{
-    max-width:900px;
-    margin:auto;
-    line-height:1.8;
-    font-size:16px;
+.intro-text p{
+    font-size:18px;
+    line-height:1.9;
+    color:#1a1a1a;
+    text-align:left;
 }
 
 /* SEZIONI */
@@ -216,98 +228,104 @@ footer{
 </nav>
 </header>
 
+<!-- INTRO HERO -->
 <section class="intro">
+<img src="logo.png" alt="logo hero">
+<div class="intro-text">
 <h2>Cos’è lo Spettro Autistico?</h2>
 <p>
 Il Disturbo dello Spettro Autistico (DSA) è una condizione complessa e multifattoriale del neurosviluppo che interessa il Sistema Nervoso Centrale.  
-Si manifesta con difficoltà nella comunicazione, nell’interazione sociale e con comportamenti ripetitivi o stereotipati.  
-L’espressione dei sintomi varia moltissimo tra individui, includendo persone con alto quoziente intellettivo o con disabilità intellettiva.  
-La componente genetica è significativa e si associano disfunzioni neurobiologiche della maturazione cerebrale.  
-Il riconoscimento precoce e interventi mirati migliorano significativamente l’autonomia, le abilità sociali e la qualità della vita.
+Si manifesta con difficoltà nella comunicazione, nell’interazione sociale e con comportamenti ripetitivi o stereotipati, con un’ampia variabilità tra individui.  
+Alcune persone hanno alto quoziente intellettivo e capacità linguistiche elevate, mentre altre presentano disabilità intellettiva o ritardi nello sviluppo del linguaggio.  
+È strettamente legato a fattori genetici e a disfunzioni nella maturazione neurobiologica.  
+La diagnosi precoce e interventi mirati, personalizzati e intensivi migliorano significativamente autonomia, adattamento, competenze sociali e qualità della vita.  
+Il riconoscimento dei bisogni individuali e il supporto della famiglia sono fondamentali per promuovere l’inclusione sociale, il benessere emotivo e lo sviluppo di abilità funzionali nella vita quotidiana.
 </p>
+</div>
 </section>
 
+<!-- Definizione -->
 <section id="definizione" class="section">
 <div class="box-title">Definizione e quadro generale</div>
 <div class="card">
 Il Disturbo dello Spettro Autistico è caratterizzato da tre aree principali di difficoltà: comunicazione, interazione sociale e comportamenti ripetitivi.  
-L’eziologia non è completamente definita, ma vi è un’evidente componente genetica.  
-Il quadro clinico varia da soggetto a soggetto e richiede valutazioni individualizzate per progettare interventi mirati e personalizzati.
+La gravità e l’espressione dei sintomi variano ampiamente tra gli individui, richiedendo valutazioni personalizzate per progettare interventi mirati e adattati al singolo.
 </div>
 </section>
 
+<!-- Evoluzione -->
 <section id="evoluzione" class="section">
 <div class="box-title">Evoluzione storica</div>
 <div class="card">
 Negli anni ’50 l’autismo era erroneamente considerato una forma di schizofrenia infantile.  
 Con il DSM-III (1980) entra nella categoria dei Disturbi Pervasivi dello Sviluppo, mentre con il DSM-5 (2013) viene riconosciuto come Disturbo dello Spettro Autistico unico.  
-Questo riconoscimento ha permesso di comprendere meglio la varietà dei sintomi e di sviluppare strategie di intervento più personalizzate e mirate alle esigenze del singolo individuo.
+Questo cambiamento ha permesso una maggiore comprensione della varietà dei sintomi e l’adozione di strategie di intervento più personalizzate.
 </div>
 </section>
 
+<!-- Caratteristiche -->
 <section id="caratteristiche" class="section">
 <div class="box-title">Caratteristiche principali</div>
 
 <div class="card">
 <b>Comunicazione:</b><br>
-Ritardo del linguaggio, ecolalia, inversione pronominale, prosodia alterata.  
-Difficoltà a comprendere ironia, sarcasmo e sottintesi.  
-Alcune persone possono avere linguaggio avanzato ma limitata capacità di interazione sociale.
+Ritardo del linguaggio, ecolalia, inversione pronominale, prosodia alterata, difficoltà a comprendere ironia, sarcasmo e sottintesi.
 </div>
 
 <div class="card">
 <b>Interazione sociale:</b><br>
-Assenza di attenzione condivisa, evitamento dello sguardo, difficoltà a interpretare stati mentali altrui.  
-Relazioni sociali ridotte o interessi condivisi limitati.  
-Possibile isolamento o preferenza per attività solitarie, anche se alcune persone instaurano relazioni profonde con figure familiari.
+Assenza di attenzione condivisa, evitamento dello sguardo, difficoltà a interpretare stati mentali altrui, relazioni sociali ridotte o interessi limitati.
 </div>
 
 <div class="card">
 <b>Comportamenti ripetitivi:</b><br>
-Stereotipie motorie, rigidità cognitiva, routine rigide, opposizione ai cambiamenti.  
-Interessi ristretti o focalizzati intensamente su temi specifici, che possono diventare punti di forza se ben supportati.
+Stereotipie motorie, rigidità cognitiva, routine rigide, opposizione ai cambiamenti, interessi ristretti o focalizzati intensamente.
 </div>
 
 </section>
 
+<!-- Diagnosi -->
 <section id="diagnosi" class="section">
 <div class="box-title">Diagnosi</div>
 <div class="card">
-La diagnosi si basa su osservazione clinica, anamnesi dettagliata e strumenti psicometrici standardizzati.  
-Se necessario, possono essere effettuati esami audiometrici o genetici.  
+Si basa su osservazione clinica, anamnesi dettagliata e strumenti psicometrici standardizzati.  
+Se necessario, esami audiometrici o genetici possono essere integrati.  
 Non esistono test biologici specifici.  
-La diagnosi precoce consente interventi immediati, migliorando le competenze sociali, comunicative e adattive.
+La diagnosi precoce consente interventi mirati e migliora autonomie, competenze sociali e adattamento.
 </div>
 </section>
 
+<!-- Intervento -->
 <section id="intervento" class="section">
 <div class="box-title">Intervento</div>
 
 <div class="card">
 Interventi precoci, intensivi e personalizzati sono fondamentali.  
-Il coinvolgimento della famiglia è essenziale per sostenere l’apprendimento, la gestione dei comportamenti e l’adattamento quotidiano.
+Il coinvolgimento della famiglia è essenziale per sostenere l’apprendimento e la gestione dei comportamenti.
 </div>
 
 <div class="card">
 <b>ABA (Applied Behavior Analysis):</b><br>
-Metodo basato sull’analisi del comportamento, finalizzato a sviluppare abilità sociali, comunicative e adattive attraverso rinforzi positivi e strategie individualizzate.
+Metodo basato sull’analisi del comportamento per sviluppare abilità sociali, comunicative e adattive tramite rinforzi positivi e strategie individualizzate.
 </div>
 
 <div class="card">
 <b>TEACCH:</b><br>
-Approccio strutturato che organizza l’ambiente, le attività e le routine per favorire autonomia, apprendimento e gestione dei comportamenti, rispettando i tempi e i bisogni del bambino.
+Approccio strutturato che organizza ambiente, attività e routine per favorire autonomia, apprendimento e gestione dei comportamenti, rispettando tempi e bisogni del bambino.
 </div>
 
 </section>
 
+<!-- Famiglia -->
 <section id="famiglia" class="section">
 <div class="box-title">La Famiglia</div>
 <div class="card">
-Il ciclo di adattamento familiare include fasi di crisi, adattamento, pianificazione e attivismo.  
-Il supporto, la partecipazione attiva e la collaborazione con professionisti sono determinanti per la prognosi, il benessere della persona e la qualità della vita familiare complessiva.
+Il ciclo di adattamento familiare include crisi, adattamento, pianificazione e attivismo.  
+Supporto, partecipazione e collaborazione con professionisti sono determinanti per la prognosi e il benessere complessivo.
 </div>
 </section>
 
+<!-- Contatti -->
 <section id="contatti" class="section">
 <div class="box-title">Contattaci</div>
 <div class="contact">
