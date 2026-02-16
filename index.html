@@ -3,134 +3,93 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Oltre Le Sfumature</title>
+<title>Oltre Le Sfumature - Centro Specializzato Autismo</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700;800&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
 <style>
 
-/* =========================== RESET =========================== */
+/* ========================= RESET ========================= */
 
-*{margin:0;padding:0;box-sizing:border-box;}
-html{scroll-behavior:smooth;}
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+html{
+scroll-behavior:smooth;
+}
 
 body{
 font-family:'Poppins',sans-serif;
-background:linear-gradient(-45deg,#041c3d,#0a2f6b,#114aad,#1f6fe0,#4fa3ff,#1f6fe0,#114aad,#041c3d);
-background-size:600% 600%;
-animation:gradientMove 20s ease infinite;
-color:white;
-line-height:1.8;
-overflow-x:hidden;
+background:#ffffff;
+color:#222;
+line-height:1.9;
 }
 
-@keyframes gradientMove{
-0%{background-position:0% 50%;}
-50%{background-position:100% 50%;}
-100%{background-position:0% 50%;}
-}
+/* ========================= HEADER ========================= */
 
-/* =========================== MENU =========================== */
-
-nav{
+header{
 position:fixed;
 top:0;
+left:0;
 width:100%;
+background:white;
 display:flex;
-justify-content:center;
-gap:30px;
-padding:18px;
-background:rgba(255,255,255,0.12);
-backdrop-filter:blur(20px);
+justify-content:space-between;
+align-items:center;
+padding:20px 70px;
+box-shadow:0 6px 25px rgba(0,0,0,0.08);
 z-index:1000;
-box-shadow:0 0 40px rgba(255,255,255,0.2);
+}
+
+.brand{
+display:flex;
+align-items:center;
+gap:20px;
+}
+
+.brand img{
+width:75px;
+}
+
+.brand h1{
+font-family:'Cinzel',serif;
+font-size:2.3rem;
+color:#1f5fbf;
 }
 
 nav a{
-color:white;
+margin-left:30px;
 text-decoration:none;
+color:#1f5fbf;
 font-weight:600;
-padding:10px 20px;
-border-radius:40px;
 transition:0.3s;
 }
 
 nav a:hover{
-background:white;
 color:#0a2f6b;
-box-shadow:0 0 25px white;
-transform:scale(1.1);
 }
 
-/* =========================== HERO =========================== */
+/* ========================= SECTIONS ========================= */
 
-.hero{
-min-height:100vh;
-display:flex;
-flex-direction:column;
-justify-content:center;
-align-items:center;
-padding-top:170px;
-text-align:center;
-}
-
-.title-row{
-display:flex;
-align-items:center;
-gap:40px;
-justify-content:center;
-flex-wrap:wrap;
-}
-
-.logo{
-width:200px;
-filter:drop-shadow(0 0 40px white);
-}
-
-.main-title{
-font-family:'Cinzel',serif;
-font-size:6rem;
-line-height:1;
-background:linear-gradient(90deg,#ffffff,#bcd9ff,#ffffff);
--webkit-background-clip:text;
--webkit-text-fill-color:transparent;
-text-shadow:0 0 60px white,0 0 180px #8ec5ff;
-animation:glow 4s infinite alternate;
-}
-
-@keyframes glow{
-from{text-shadow:0 0 60px white;}
-to{text-shadow:0 0 300px #8ec5ff;}
-}
-
-.question{
-margin-top:80px;
-font-size:2rem;
-background:rgba(255,255,255,0.2);
-padding:30px 70px;
-border-radius:80px;
-box-shadow:0 0 60px rgba(255,255,255,0.8);
-max-width:1000px;
-}
-
-/* =========================== SEZIONI =========================== */
-
-.section{
-padding:170px 8%;
+section{
+padding:180px 10% 130px 10%;
 }
 
 .section-title{
-font-size:2.2rem;
-margin-bottom:80px;
-text-align:center;
-display:inline-block;
-padding:20px 60px;
+font-size:1.8rem;
+background:#e6f1ff;
+color:#1f5fbf;
+padding:18px 60px;
 border-radius:60px;
-background:linear-gradient(90deg,#1f6fe0,#4fa3ff);
-box-shadow:0 0 70px #4fa3ff;
+display:inline-block;
+margin-bottom:70px;
+box-shadow:0 0 30px rgba(31,95,191,0.3);
 }
 
-/* =========================== GRIGLIA =========================== */
+/* ========================= GRID ========================= */
 
 .grid{
 display:grid;
@@ -139,125 +98,66 @@ gap:50px;
 }
 
 .card{
-background:rgba(255,255,255,0.18);
+background:#f7fbff;
 padding:50px;
-border-radius:50px;
-box-shadow:0 0 40px rgba(255,255,255,0.5);
-transition:0.4s;
+border-radius:35px;
+box-shadow:0 10px 35px rgba(0,0,0,0.06);
+transition:0.3s;
 }
 
 .card:hover{
-transform:translateY(-15px) scale(1.05);
-box-shadow:0 0 90px white;
+transform:translateY(-8px);
+box-shadow:0 15px 45px rgba(0,0,0,0.12);
 }
 
 .card h3{
-margin-bottom:25px;
-font-size:1.4rem;
+color:#1f5fbf;
+margin-bottom:20px;
+font-size:1.2rem;
 }
 
-/* =========================== METODI SPECIALI =========================== */
+/* ========================= METODI ========================= */
 
 .methods{
 display:grid;
 grid-template-columns:1fr 1fr;
-gap:60px;
+gap:70px;
 }
 
 .method-box{
-background:linear-gradient(135deg,#ffffff,#dbeeff);
-color:#0a2f6b;
-padding:60px;
-border-radius:60px;
-box-shadow:0 0 80px white;
-transition:0.4s;
-}
-
-.method-box:hover{
-transform:scale(1.05);
-box-shadow:0 0 120px white;
+background:#eef6ff;
+padding:70px;
+border-radius:45px;
+box-shadow:0 15px 45px rgba(31,95,191,0.15);
 }
 
 .method-box h3{
+color:#1f5fbf;
 margin-bottom:25px;
-font-size:1.6rem;
+font-size:1.4rem;
 }
 
-/* =========================== NUVOLA CONTATTI =========================== */
-
-.contact-section{
-display:flex;
-justify-content:center;
-align-items:center;
-padding:220px 8%;
-}
-
-.cloud{
-position:relative;
-background:white;
-color:#0a2f6b;
-padding:100px 140px;
-border-radius:150px;
-box-shadow:0 0 120px white;
-text-align:center;
-max-width:1000px;
-}
-
-.cloud::before,
-.cloud::after{
-content:"";
-position:absolute;
-background:white;
-border-radius:50%;
-}
-
-.cloud::before{
-width:180px;
-height:180px;
-top:-60px;
-left:150px;
-}
-
-.cloud::after{
-width:220px;
-height:220px;
-bottom:-80px;
-right:200px;
-}
-
-.cloud h2{
-margin-bottom:40px;
-font-size:2.5rem;
-}
-
-.cloud button{
-margin-top:40px;
-padding:20px 60px;
-border:none;
-border-radius:60px;
-background:#114aad;
-color:white;
-font-weight:600;
-cursor:pointer;
-transition:0.3s;
-}
-
-.cloud button:hover{
-background:#041c3d;
-transform:scale(1.1);
-box-shadow:0 0 40px #114aad;
-}
+/* ========================= FOOTER ========================= */
 
 footer{
+background:#1f5fbf;
+color:white;
 text-align:center;
 padding:80px;
-font-weight:500;
+margin-top:80px;
+font-size:0.95rem;
 }
 
-@media(max-width:900px){
-.main-title{font-size:3.5rem;}
-.logo{width:130px;}
-.methods{grid-template-columns:1fr;}
+/* ========================= RESPONSIVE ========================= */
+
+@media(max-width:950px){
+.methods{
+grid-template-columns:1fr;
+}
+header{
+flex-direction:column;
+gap:20px;
+}
 }
 
 </style>
@@ -265,79 +165,248 @@ font-weight:500;
 
 <body>
 
+<header>
+<div class="brand">
+<img src="logo.png">
+<h1>Oltre Le Sfumature</h1>
+</div>
+
 <nav>
-<a href="#definizione">Cos'è</a>
+<a href="#spettro">Lo Spettro</a>
 <a href="#sviluppo">Sviluppo</a>
-<a href="#cause">Cause</a>
+<a href="#fattori">Fattori di Rischio</a>
 <a href="#metodi">Metodi</a>
 <a href="#terapie">Terapie</a>
-<a href="#figure">Figure</a>
+<a href="#diagnosi">Diagnosi</a>
+<a href="#aiuto">Come Aiutare</a>
+<a href="#famiglia">Famiglia</a>
+<a href="#scuola">Scuola</a>
 <a href="#contatti">Contatti</a>
 </nav>
+</header>
 
-<section class="hero" id="definizione">
+<!-- ========================= LO SPETTRO ========================= -->
 
-<div class="title-row">
-<img src="logo.png" class="logo">
-<h1 class="main-title">Oltre Le<br>Sfumature</h1>
-</div>
+<section id="spettro">
+<div class="section-title">Cos'è lo Spettro Autistico</div>
 
-<div class="question">
-Cos'è lo Spettro Autistico? Definizione completa, caratteristiche, cause, sviluppo, metodi educativi, terapie e figure professionali.
-</div>
+<p>
+Il Disturbo dello Spettro Autistico (ASD) è una condizione del neurosviluppo che influisce sulla comunicazione sociale, sull'interazione con gli altri e sulla presenza di comportamenti ripetitivi o interessi ristretti.
+Viene definito "spettro" perché esiste una grande variabilità nella manifestazione dei sintomi e nel livello di supporto necessario.
+</p>
+
+<br><br>
+
+<p>
+L’autismo non è una malattia da guarire ma una differente modalità di funzionamento neurologico.
+Ogni persona nello spettro possiede caratteristiche uniche, punti di forza e talenti specifici.
+Alcuni bambini possono avere difficoltà significative nella comunicazione verbale, altri possono avere un linguaggio fluente ma difficoltà nella comprensione sociale.
+</p>
+
+<br><br>
+
+<p>
+La diagnosi può essere effettuata già nei primi anni di vita, e un intervento precoce può migliorare significativamente lo sviluppo delle abilità comunicative, sociali e adattive.
+</p>
 
 </section>
 
-<section class="section">
-<div class="section-title">Definizione dello Spettro Autistico</div>
+<!-- ========================= SVILUPPO ========================= -->
+
+<section id="sviluppo">
+<div class="section-title">Sviluppo del Bambino</div>
+
 <div class="grid">
+
 <div class="card">
-<h3>Cos'è l'Autismo</h3>
-Disturbo del neurosviluppo che influenza comunicazione, interazione sociale e comportamento.
+<h3>Area Comunicativa</h3>
+Possibile ritardo nello sviluppo del linguaggio, difficoltà nell’iniziare o mantenere conversazioni, ecolalia, uso limitato dei gesti comunicativi.
+In molti casi è utile l’utilizzo della Comunicazione Aumentativa Alternativa (CAA).
 </div>
+
 <div class="card">
-<h3>Perché “Spettro”</h3>
-Ampia variabilità nei livelli di autonomia e bisogni di supporto.
+<h3>Area Sociale</h3>
+Difficoltà nella comprensione delle emozioni, del linguaggio non verbale e delle regole implicite delle relazioni.
+Può esserci preferenza per il gioco solitario.
 </div>
+
 <div class="card">
-<h3>Neurodiversità</h3>
-Valorizzazione delle differenze neurologiche come parte della diversità umana.
+<h3>Comportamenti Ripetitivi</h3>
+Movimenti stereotipati, rigidità nelle routine, forte interesse per argomenti specifici.
+Questi comportamenti possono avere funzione autoregolatoria.
 </div>
+
+<div class="card">
+<h3>Sensibilità Sensoriale</h3>
+Iper o ipo-sensibilità a suoni, luci, odori, consistenze.
+Può influire sulla quotidianità e sull’ambiente scolastico.
+</div>
+
 </div>
 </section>
 
-<section class="section" id="metodi">
+<!-- ========================= FATTORI ========================= -->
+
+<section id="fattori">
+<div class="section-title">Fattori di Rischio</div>
+
+<p>
+Le cause dell’autismo sono multifattoriali e includono componenti genetiche e neurobiologiche.
+Non esiste una singola causa.
+</p>
+
+<br><br>
+
+<ul>
+<li>✔ Predisposizione genetica</li>
+<li>✔ Alterazioni nello sviluppo cerebrale</li>
+<li>✔ Età avanzata dei genitori</li>
+<li>✔ Complicazioni prenatali o perinatali</li>
+<li>✔ Fattori ambientali in fase prenatale</li>
+</ul>
+
+<br><br>
+
+<p>
+Numerosi studi scientifici hanno dimostrato che i vaccini NON causano autismo.
+</p>
+
+</section>
+
+<!-- ========================= METODI ========================= -->
+
+<section id="metodi">
 <div class="section-title">Metodi Educativi</div>
 
 <div class="methods">
 
 <div class="method-box">
 <h3>ABA - Applied Behavior Analysis</h3>
-Approccio scientifico basato sull’analisi del comportamento.
-Utilizza rinforzo positivo, raccolta dati continua, obiettivi misurabili.
-Intervento intensivo e personalizzato.
+Approccio basato sull’analisi scientifica del comportamento.
+Si concentra sull’insegnamento strutturato di abilità attraverso il rinforzo positivo.
+Prevede obiettivi misurabili, raccolta dati e monitoraggio continuo.
+Può essere intensivo e personalizzato.
 </div>
 
 <div class="method-box">
 <h3>TEACCH</h3>
-Approccio strutturato che utilizza supporti visivi,
-organizzazione degli spazi e routine prevedibili.
-Favorisce autonomia e comprensione.
+Approccio strutturato che utilizza supporti visivi, organizzazione degli spazi e routine prevedibili.
+Favorisce autonomia, indipendenza e comprensione delle attività quotidiane.
 </div>
 
 </div>
 
 </section>
 
-<section class="contact-section" id="contatti">
-<div class="cloud">
-<h2>Contattaci</h2>
+<!-- ========================= TERAPIE ========================= -->
+
+<section id="terapie">
+<div class="section-title">Terapie Specialistiche</div>
+
+<div class="grid">
+
+<div class="card">
+<h3>Logopedia</h3>
+Intervento per sviluppare comunicazione verbale e non verbale, migliorando articolazione, comprensione e pragmatica.
+</div>
+
+<div class="card">
+<h3>Terapia Occupazionale</h3>
+Supporto nelle autonomie quotidiane e nell’integrazione sensoriale.
+</div>
+
+<div class="card">
+<h3>Psicomotricità</h3>
+Aiuta nello sviluppo della coordinazione motoria e nella regolazione emotiva.
+</div>
+
+<div class="card">
+<h3>Supporto Psicologico</h3>
+Favorisce gestione emotiva e comportamentale.
+</div>
+
+<div class="card">
+<h3>Intervento Educativo Individualizzato</h3>
+Piani personalizzati in base ai bisogni del bambino.
+</div>
+
+<div class="card">
+<h3>Parent Training</h3>
+Formazione ai genitori per applicare strategie educative efficaci a casa.
+</div>
+
+</div>
+
+</section>
+
+<!-- ========================= DIAGNOSI ========================= -->
+
+<section id="diagnosi">
+<div class="section-title">Diagnosi</div>
+
+<p>
+La diagnosi viene effettuata da un’équipe multidisciplinare composta da neuropsichiatra infantile, psicologo, logopedista e altri specialisti.
+Si basa su osservazione clinica, strumenti standardizzati e colloqui con la famiglia.
+</p>
+
+</section>
+
+<!-- ========================= COME AIUTARE ========================= -->
+
+<section id="aiuto">
+<div class="section-title">Come Aiutare</div>
+
+<ul>
+<li>✔ Creare routine prevedibili</li>
+<li>✔ Utilizzare supporti visivi</li>
+<li>✔ Rinforzare positivamente i progressi</li>
+<li>✔ Favorire inclusione scolastica</li>
+<li>✔ Collaborare con professionisti</li>
+<li>✔ Valorizzare punti di forza</li>
+<li>✔ Garantire ambienti strutturati</li>
+<li>✔ Offrire supporto emotivo costante</li>
+</ul>
+
+</section>
+
+<!-- ========================= FAMIGLIA ========================= -->
+
+<section id="famiglia">
+<div class="section-title">Supporto alla Famiglia</div>
+
+<p>
+La famiglia è una risorsa fondamentale.
+È importante fornire ascolto, formazione, sostegno psicologico e accompagnamento costante.
+</p>
+
+</section>
+
+<!-- ========================= SCUOLA ========================= -->
+
+<section id="scuola">
+<div class="section-title">Inclusione Scolastica</div>
+
+<p>
+Collaborazione tra scuola, insegnanti di sostegno e specialisti.
+Creazione di PEI personalizzati.
+Uso di strumenti compensativi e strategie visive.
+</p>
+
+</section>
+
+<!-- ========================= CONTATTI ========================= -->
+
+<section id="contatti">
+<div class="section-title">Contatti</div>
+
+<p>
 Centro Oltre Le Sfumature<br><br>
 Supporto educativo e terapeutico personalizzato<br><br>
+📍 Italia<br>
 📞 +39 000 000000<br>
-📧 info@oltrelesfumature.it<br>
-<button>Prenota una Consulenza</button>
-</div>
+📧 info@oltrelesfumature.it
+</p>
+
 </section>
 
 <footer>
