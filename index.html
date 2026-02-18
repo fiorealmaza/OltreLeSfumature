@@ -239,23 +239,11 @@ gap:15px;
 .menu li a.active {
     color: #0077ff;
     font-weight: 700;
-    text-shadow: 0 0 2px #0077ff, 0 0 6px #00aaff;
-    transition: text-shadow 0.4s ease, transform 0.3s ease;
-    transform: scale(1.05);
-    animation: glowPulse 1.5s infinite alternate;
+    text-shadow: 0 0 1px #0077ff, 0 0 3px #00aaff; /* glow molto leggero */
+    transition: text-shadow 0.3s ease, transform 0.2s ease;
+    transform: scale(1.03);
 }
 
-@keyframes glowPulse {
-    0% {
-        text-shadow: 0 0 2px #0077ff, 0 0 6px #00aaff;
-    }
-    50% {
-        text-shadow: 0 0 4px #0077ff, 0 0 10px #00aaff;
-    }
-    100% {
-        text-shadow: 0 0 2px #0077ff, 0 0 6px #00aaff;
-    }
-}
 
 
 
