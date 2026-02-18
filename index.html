@@ -359,7 +359,32 @@ box-shadow:0 0 25px rgba(0,119,255,0.9);
   height: auto;
   border-radius: 20px;
 }
+/* Titolo "Offriamo servizi concreti come" */
+.offriamo-servizi {
+    text-align: center;
+    color: #0077ff;
+    font-size: 2rem; /* più grande */
+    text-shadow: 0 0 10px rgba(0,119,255,0.6), 0 0 20px rgba(0,170,255,0.4); /* effetto illuminato */
+    margin: 50px 0 30px 0; /* spazio sopra e sotto */
+}
 
+/* Responsive per telefoni */
+@media (max-width: 768px) {
+    .chi-siamo-container {
+        flex-direction: column;  /* immagine sotto il testo */
+        gap: 20px;
+    }
+
+    .chi-siamo-immagine img.imma1 {
+        max-width: 90%;     /* immagine più piccola */
+        height: auto;
+        margin: 0 auto;
+    }
+
+    .offriamo-servizi {
+        font-size: 1.5rem;  /* titolo leggibile su mobile */
+    }
+}
 /* SOTTOTITOLO “Offriamo servizi concreti come” */
 .chi-siamo-testo h3 {
   margin: 50px 0 30px 0;
