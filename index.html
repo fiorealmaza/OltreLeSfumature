@@ -307,32 +307,60 @@ box-shadow:0 0 25px rgba(0,119,255,0.9);
 }
 
 
-.chi-siamo-container{
-  display:flex;
-  flex-direction:row; /* testo a sinistra, immagine a destra */
-  align-items:flex-start; /* allinea in alto */
-  justify-content:space-between;
-  gap:40px;
-  flex-wrap:wrap; /* per mobile va sotto */
+/* CONTENITORE CHI SIAMO */
+.chi-siamo-container {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start; /* testo e immagine allineati in alto */
+  justify-content: flex-start;
+  gap: 40px; /* spazio tra testo e immagine */
+  flex-wrap: wrap; /* permette di andare sotto su mobile */
 }
 
-.chi-siamo-testo{
-  flex:1;
-  min-width:280px;
+/* TESTO A SINISTRA */
+.chi-siamo-testo {
+  flex: 1;
+  min-width: 280px;
+  text-align: left;
 }
 
-.chi-siamo-immagine{
-  flex:1;
-  min-width:280px;
-  text-align:center;
+/* IMMAGINE A DESTRA, leggermente più piccola */
+.chi-siamo-immagine {
+  flex: 1;
+  min-width: 280px;
+  text-align: center;
 }
 
-.chi-siamo-immagine img.imma1{
-  max-height:300px; /* altezza simile al testo */
-  width:auto;
-  border-radius:20px;
-  display:block;
-  margin-top:20px; /* distanza dal testo sopra */
+.chi-siamo-immagine img.imma1 {
+  max-width: 90%; /* leggermente più piccola */
+  height: auto;
+  border-radius: 20px;
+}
+
+/* SOTTOTITOLO “Offriamo servizi concreti come” */
+.chi-siamo-testo h3 {
+  margin: 50px 0 30px 0;
+  text-align: center;
+  color: #0077ff;
+  font-size: 1.6rem;
+  text-shadow: 0 0 8px #00aaff, 0 0 15px #00ccff; /* effetto illuminato */
+}
+
+/* RESPONSIVE: su mobile testo sopra e immagine sotto */
+@media (max-width: 768px) {
+  .chi-siamo-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .chi-siamo-testo h3 {
+    font-size: 1.4rem;
+  }
+
+  .chi-siamo-immagine img.imma1 {
+    max-width: 80%;
+  }
 }
 
 .offriamo-servizi {
@@ -414,24 +442,26 @@ box-shadow:0 0 25px rgba(0,119,255,0.9);
     
 <!-- INIZIO SEZIONE CHI SIAMO / COSA OFFRIAMO -->
 <section id="chi-siamo">
-<div class="chi-siamo-container">
-  <div class="chi-siamo-testo">
-    <h2>Chi siamo</h2>
-    <p>
-      OltreLeSfumature è un centro specializzato nel supporto e trattamento di persone nello
-      spettro autistico in età adulta. La nostra missione è accompagnare ogni individuo verso una
-      maggiore autonomia personale, sociale e lavorativa, favorendo il benessere, l’inclusione e
-      una qualità di vita adulta soddisfacente.
-      Crediamo che ogni persona abbia potenzialità uniche: il nostro compito è valorizzarle con
-      servizi specializzati, approcci scientificamente validi e strategie individualizzate che
-      rispettano la dignità e i tempi di ciascun utente.
-    </p>
-    <h3 style="margin-bottom:30px;">Offriamo servizi concreti come:</h3>
+  <div class="chi-siamo-container">
+    <div class="chi-siamo-testo">
+      <h2>Chi siamo</h2>
+      <p>
+        OltreLeSfumature è un centro specializzato nel supporto e trattamento di persone nello
+        spettro autistico in età adulta. La nostra missione è accompagnare ogni individuo verso una
+        maggiore autonomia personale, sociale e lavorativa, favorendo il benessere, l’inclusione e
+        una qualità di vita adulta soddisfacente.
+        Crediamo che ogni persona abbia potenzialità uniche: il nostro compito è valorizzarle con
+        servizi specializzati, approcci scientificamente validi e strategie individualizzate che
+        rispettano la dignità e i tempi di ciascun utente.
+      </p>
+    </div>
+    <div class="chi-siamo-immagine">
+      <img src="imma1.png" alt="Chi siamo" class="imma1">
+    </div>
   </div>
-  <div class="chi-siamo-immagine">
-    <img src="imma1.png" alt="Chi siamo" class="imma1">
-  </div>
-</div>
+
+  <h3 class="offriamo-servizi">Offriamo servizi concreti come:</h3>
+</section>
 
 
 <div class="box box-servizio">
