@@ -1,1 +1,168 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Centro Diurno - Oltre le Sfumature</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Poppins',sans-serif;
+  scroll-behavior:smooth;
+}
+
+body{
+  background:linear-gradient(135deg,#e0f2ff,#f5f9ff);
+  color:#1a1a1a;
+  overflow-x:hidden;
+}
+
+header{
+  background:#eaf6ff;
+  padding:100px 20px;
+  text-align:center;
+}
+
+header h1{
+  color:#0077ff;
+  font-size:3rem;
+  text-shadow:0 0 18px rgba(0,119,255,0.6);
+  margin-bottom:20px;
+}
+
+header p{
+  font-size:1.2rem;
+  color:#004a99;
+  max-width:800px;
+  margin:0 auto;
+}
+
+/* SEZIONI */
+section{
+  padding:60px 10%;
+}
+
+h2{
+  text-align:center;
+  font-size:2rem;
+  margin-bottom:40px;
+  color:#0077ff;
+}
+
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+  gap:30px;
+}
+
+.box{
+  background:white;
+  padding:30px;
+  border-radius:20px;
+  box-shadow:0 10px 25px rgba(0,0,0,0.08);
+  transition:0.4s;
+}
+
+.box:hover{
+  transform:translateY(-8px);
+  box-shadow:0 15px 35px rgba(0,0,0,0.12);
+}
+
+.box h3{
+  margin-bottom:15px;
+  color:#0077ff;
+}
+
+.box p{
+  line-height:1.6;
+}
+
+/* APPROFONDISCI */
+.approfondisci {
+  color:#0077ff;
+  font-weight:600;
+  cursor:pointer;
+  display:inline-block;
+  margin-top:10px;
+  transition: text-shadow 0.3s ease, transform 0.2s ease;
+}
+
+.approfondisci:hover {
+  text-shadow: 0 0 6px rgba(0,119,255,0.6), 0 0 12px rgba(0,170,255,0.4);
+  transform: scale(1.05);
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <h1>CENTRO DIURNO</h1>
+  <p>Il nostro Centro Diurno offre supporto educativo e sociale a bambini e adolescenti con Disturbo dello Spettro Autistico. Attraverso attività strutturate e interventi mirati, aiutiamo i nostri utenti a sviluppare competenze sociali, autonomia e abilità pratiche quotidiane.</p>
+</header>
+
+<section>
+<h2>Servizi offerti</h2>
+<div class="grid">
+
+<div class="box">
+<h3>Attività educative</h3>
+<p>Programmi personalizzati per sviluppare capacità cognitive, sociali e comportamentali, basati su interventi ABA individualizzati.</p>
+</div>
+
+<div class="box">
+<h3>Laboratori pratici</h3>
+<p>Laboratori artistici, musicali e di gioco strutturato per stimolare la creatività e migliorare le abilità sociali e cooperative.</p>
+</div>
+
+<div class="box">
+<h3>Supporto individuale</h3>
+<p>Educatori e specialisti lavorano uno a uno con i bambini per favorire l’autonomia e il raggiungimento degli obiettivi personali.</p>
+</div>
+
+<div class="box">
+<h3>Attività di gruppo</h3>
+<p>Momenti strutturati di interazione sociale e gioco di gruppo, per sviluppare competenze relazionali e la capacità di lavorare in team.</p>
+</div>
+
+</div>
+</section>
+
+<section>
+<h2>Come funziona</h2>
+<div class="grid">
+<div class="box">
+<h3>Orari e frequenza</h3>
+<p>Il Centro Diurno è aperto dal lunedì al venerdì, con programmi flessibili in base alle esigenze delle famiglie e dei bambini.</p>
+</div>
+
+<div class="box">
+<h3>Team specializzato</h3>
+<p>Psicologi, educatori, logopedisti e neuropsichiatri infantili collaborano per garantire interventi personalizzati e monitoraggio costante dei progressi.</p>
+</div>
+
+<div class="box">
+<h3>Obiettivi personalizzati</h3>
+<p>Ogni bambino ha un piano educativo individualizzato, basato sulle sue esigenze e competenze, aggiornato regolarmente dal nostro team.</p>
+</div>
+
+<div class="box">
+<h3>Coinvolgimento familiare</h3>
+<p>Le famiglie sono coinvolte in tutte le fasi del percorso, con incontri periodici di aggiornamento e formazione.</p>
+</div>
+</div>
+</section>
+
+<section>
+<h2>Vuoi saperne di più?</h2>
+<p class="approfondisci" onclick="window.location.href='contatti.html'">Approfondisci di più →</p>
+</section>
+
+</body>
+</html>
 
