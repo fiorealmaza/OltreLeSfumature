@@ -1,1 +1,168 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Progetto Dopo di Noi - Oltre le Sfumature</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Poppins',sans-serif;
+  scroll-behavior:smooth;
+}
+
+body{
+  background:linear-gradient(135deg,#e0f2ff,#f5f9ff);
+  color:#1a1a1a;
+  overflow-x:hidden;
+}
+
+header{
+  background:#eaf6ff;
+  padding:100px 20px;
+  text-align:center;
+}
+
+header h1{
+  color:#0077ff;
+  font-size:3rem;
+  text-shadow:0 0 18px rgba(0,119,255,0.6);
+  margin-bottom:20px;
+}
+
+header p{
+  font-size:1.2rem;
+  color:#004a99;
+  max-width:800px;
+  margin:0 auto;
+}
+
+section{
+  padding:60px 10%;
+}
+
+h2{
+  text-align:center;
+  font-size:2rem;
+  margin-bottom:40px;
+  color:#0077ff;
+}
+
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+  gap:30px;
+}
+
+.box{
+  background:white;
+  padding:30px;
+  border-radius:20px;
+  box-shadow:0 10px 25px rgba(0,0,0,0.08);
+  transition:0.4s;
+}
+
+.box:hover{
+  transform:translateY(-8px);
+  box-shadow:0 15px 35px rgba(0,0,0,0.12);
+}
+
+.box h3{
+  margin-bottom:15px;
+  color:#0077ff;
+}
+
+.box p{
+  line-height:1.6;
+}
+
+.approfondisci {
+  color:#0077ff;
+  font-weight:600;
+  cursor:pointer;
+  display:inline-block;
+  margin-top:10px;
+  transition: text-shadow 0.3s ease, transform 0.2s ease;
+}
+
+.approfondisci:hover {
+  text-shadow: 0 0 6px rgba(0,119,255,0.6), 0 0 12px rgba(0,170,255,0.4);
+  transform: scale(1.05);
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <h1>PROGETTO "DOPO DI NOI"</h1>
+  <p>Percorsi dedicati ai giovani adulti con Disturbo dello Spettro Autistico, pensati per favorire autonomia personale, sociale e inclusione nella comunità.</p>
+</header>
+
+<section>
+<h2>Obiettivi principali</h2>
+<div class="grid">
+
+<div class="box">
+<h3>Autonomia personale</h3>
+<p>Supportiamo lo sviluppo delle capacità di gestione della quotidianità, come cucina, igiene, gestione economica e organizzazione del tempo.</p>
+</div>
+
+<div class="box">
+<h3>Abilità sociali</h3>
+<p>Attività guidate per potenziare relazioni sociali, interazione con coetanei e partecipazione attiva alla comunità.</p>
+</div>
+
+<div class="box">
+<h3>Inclusione lavorativa</h3>
+<p>Percorsi orientati all’inserimento in laboratori protetti e attività lavorative compatibili con le capacità e interessi individuali.</p>
+</div>
+
+<div class="box">
+<h3>Supporto psicologico</h3>
+<p>Accompagnamento individuale e gruppale per affrontare sfide emotive e favorire benessere mentale.</p>
+</div>
+
+</div>
+</section>
+
+<section>
+<h2>Come funziona il progetto</h2>
+<div class="grid">
+
+<div class="box">
+<h3>Team multidisciplinare</h3>
+<p>Psicologi, educatori, assistenti sociali e logopedisti collaborano per garantire interventi personalizzati e costante monitoraggio dei progressi.</p>
+</div>
+
+<div class="box">
+<h3>Programmi personalizzati</h3>
+<p>Ogni partecipante ha un piano individuale adattato alle proprie esigenze, con obiettivi chiari e misurabili.</p>
+</div>
+
+<div class="box">
+<h3>Coinvolgimento famigliare</h3>
+<p>Le famiglie partecipano attivamente al progetto attraverso incontri, aggiornamenti e formazione continua.</p>
+</div>
+
+<div class="box">
+<h3>Attività di gruppo</h3>
+<p>Laboratori, uscite educative e attività socializzanti per sviluppare autonomia e relazioni interpersonali.</p>
+</div>
+
+</div>
+</section>
+
+<section>
+<h2>Vuoi saperne di più?</h2>
+<p class="approfondisci" onclick="window.location.href='contatti.html'">Approfondisci di più →</p>
+</section>
+
+</body>
+</html>
 
