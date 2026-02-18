@@ -626,12 +626,32 @@ Una valutazione precoce permette di intervenire tempestivamente e offrire suppor
 <script>
 function toggleMenu() {
     var menu = document.getElementById("menu");
-    if (menu.style.display === "flex") {
-        menu.style.display = "none";
-    } else {
-        menu.style.display = "flex";
-    }
+    menu.style.display = menu.style.display === "flex" ? "none" : "flex";
 }
+
+// Evidenzia il link cliccato MA non chiude il menu
+document.querySelectorAll("#menu a").forEach(link => {
+    link.addEventListener("click", function() {
+
+        document.querySelectorAll("#menu a").forEach(l => 
+            l.classList.remove("active")
+        );
+
+        this.classList.add("active");
+    });
+});
+
+// Chiude il menu solo se clicchi fuori
+document.addEventListener("click", function(event) {
+    var menu = document.getElementById("menu");
+    var hamburger = document.querySelector(".hamburger");
+
+    if (!menu.contains(event.target) && 
+        !hamburger.contains(event.target) && 
+        menu.style.display === "flex") {
+        menu.style.display = "none";
+    }
+});
 </script>
 
 </body>
