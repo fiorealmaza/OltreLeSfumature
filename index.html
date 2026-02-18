@@ -260,6 +260,38 @@ cursor:pointer;
 transform:translateY(-8px);
 box-shadow:0 0 25px rgba(0,119,255,0.9);
 }
+    
+/* BOX SERVIZI CHI SIAMO */
+.box {
+  background:#cfe7ff; /* azzurro chiaro */
+  padding:30px;
+  border-radius:20px;
+  box-shadow:0 5px 15px rgba(0,0,0,0.08);
+  transition:0.4s;
+  position: relative; /* necessario per link sotto */
+}
+
+.box:hover{
+  transform:translateY(-6px);
+  box-shadow:0 10px 25px rgba(0,0,0,0.12);
+}
+
+/* LINK APPROFONDISCI DI PIU' SOTTO I BOX */
+.approfondisci {
+  color:#0077ff;
+  font-weight:600;
+  cursor:pointer;
+  display:block; /* va su una nuova riga sotto il box */
+  text-align:right;
+  margin-top:15px;
+  text-decoration:none;
+  transition: text-shadow 0.3s ease, transform 0.2s ease;
+}
+
+.approfondisci:hover {
+  text-shadow: 0 0 6px rgba(0,119,255,0.6), 0 0 12px rgba(0,170,255,0.4);
+  transform: scale(1.03);
+}
 
 
 
