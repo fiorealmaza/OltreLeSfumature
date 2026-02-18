@@ -310,7 +310,7 @@ box-shadow:0 0 25px rgba(0,119,255,0.9);
 .chi-siamo-container{
   display:flex;
   flex-direction:row; /* testo a sinistra, immagine a destra */
-  align-items:center;
+  align-items:flex-start; /* allinea in alto */
   justify-content:space-between;
   gap:40px;
   flex-wrap:wrap; /* per mobile va sotto */
@@ -328,10 +328,24 @@ box-shadow:0 0 25px rgba(0,119,255,0.9);
 }
 
 .chi-siamo-immagine img.imma1{
-  max-width:80%; /* prima era 100%, così sarà un po’ più piccola */
-  height:auto;
+  max-height:300px; /* altezza simile al testo */
+  width:auto;
   border-radius:20px;
+  display:block;
+  margin-top:20px; /* distanza dal testo sopra */
 }
+
+.offriamo-servizi {
+  margin-top:40px;   /* distanza dal testo e dall'immagine sopra */
+  text-align:center;
+  color:#0077ff;
+  font-size:1.5rem;
+  font-weight:700;
+  text-shadow:
+     0 0 8px rgba(0,119,255,0.6),
+     0 0 15px rgba(0,170,255,0.4); /* bagliore esterno */
+}
+    
 
 .torna-home {
     position: fixed;
