@@ -235,19 +235,28 @@ flex-direction:column;
 gap:15px;
 }
 
-.menu li a{
-text-decoration:none;
-color:#0077ff;
-font-weight:600;
-}
-
 .menu li a:hover,
 .menu li a.active {
     color: #0077ff;
-    text-shadow: 0 0 4px #0077ff, 0 0 8px #00aaff; /* glow più delicato */
     font-weight: 700;
-    transition: 0.3s;
+    text-shadow: 0 0 2px #0077ff, 0 0 6px #00aaff;
+    transition: text-shadow 0.4s ease, transform 0.3s ease;
+    transform: scale(1.05);
+    animation: glowPulse 1.5s infinite alternate;
 }
+
+@keyframes glowPulse {
+    0% {
+        text-shadow: 0 0 2px #0077ff, 0 0 6px #00aaff;
+    }
+    50% {
+        text-shadow: 0 0 4px #0077ff, 0 0 10px #00aaff;
+    }
+    100% {
+        text-shadow: 0 0 2px #0077ff, 0 0 6px #00aaff;
+    }
+}
+
 
 
 .metodo-box{
