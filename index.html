@@ -68,8 +68,10 @@ color:#0055aa;
 transform:scale(1.05);
 }
 
-section{
-padding:80px 10%;
+section {
+    padding: 80px 0;       /* spazio sopra e sotto */
+    max-width: 1200px;     /* larghezza massima della sezione */
+    margin: 0 auto;        /* centra la sezione */
 }
 
 h2{
@@ -328,12 +330,14 @@ box-shadow:0 0 25px rgba(0,119,255,0.9);
 
 /* CONTENITORE CHI SIAMO */
 .chi-siamo-container {
-  display: flex;
-  flex-direction: row;
-  align-items: flex-start; /* testo e immagine allineati in alto */
-  justify-content: flex-start;
-  gap: 40px; /* spazio tra testo e immagine */
-  flex-wrap: wrap; /* permette di andare sotto su mobile */
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+    flex-wrap: wrap;
+    margin: 0 auto;    /* centra il container */
+    max-width: 100%;   /* rimane all’interno del padding del body */
 }
 
 /* TESTO A SINISTRA */
