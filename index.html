@@ -184,10 +184,11 @@ gap:20px;
 }
 
 .logo{
-    width:120px;
-    height:auto;       /* mantiene le proporzioni senza quadrato */
-    object-fit:contain;
-    background: transparent;
+    width: 120px;
+    height: auto;       /* mantiene proporzioni */
+    object-fit: contain;
+    display: block;     /* evita piccoli puntini o linee sotto l'immagine */
+    background: transparent; 
 }
 
 .hero-header h1{
@@ -311,22 +312,22 @@ box-shadow:0 0 25px rgba(0,119,255,0.9);
 
 <body>
 
-<header class="hero-header">
+<header class="hero-header" style="background: linear-gradient(135deg,#e0f2ff,#f5f9ff);">
 
-  <div class="title-container">
-      <div class="line"></div>
+<div class="title-container" style="background: transparent;">
+    <div class="line"></div>
 
-      <div class="title-content" style="background: transparent;">
-          <img src="logo.png" alt="Logo Oltre Le Sfumature" class="logo" style="background: transparent; height:auto;">
-          <h1>Oltre Le Sfumature</h1>
-      </div>
+    <div class="title-content" style="background: transparent;">
+        <img src="logo.png" alt="Logo Oltre Le Sfumature" class="logo">
+        <h1>Oltre Le Sfumature</h1>
+    </div>
 
-      <div class="line"></div>
-  </div>
+    <div class="line"></div>
+</div>
 
-  <p class="subtitle">
-  Cooperativa Sociale specializzata nel supporto alle persone con Disturbo dello Spettro Autistico attraverso interventi basati sul metodo "ABA"
-  </p>
+<p class="subtitle">
+Cooperativa Sociale specializzata nel supporto alle persone con Disturbo dello Spettro Autistico attraverso interventi basati sul metodo "ABA"
+</p>
 
 </header>
 
