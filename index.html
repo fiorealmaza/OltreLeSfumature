@@ -196,33 +196,56 @@ to{opacity:1;transform:translateY(0);}
     margin: 10px auto;
 }
 
-/* ===== ADATTAMENTO HERO, LOGO, TITOLO E MENU SUL TELEFONO - VERSIONE PIÙ COMPATTA ===== */
+/* ===== HERO - LOGO E TITOLO AFFIANCATI SOLO SUL TELEFONO ===== */
 @media (max-width: 768px) {
 
-    /* Hero header padding più compatto */
+    /* Hero header padding compatto */
     .hero-header {
-        padding: 50px 10px 25px 10px; /* meno spazio sopra e sotto */
+        padding: 40px 10px 20px 10px;
+        text-align: center;
     }
 
-    /* Titolo ridotto, centrato e leggibile in 1-2 righe */
-    .hero-header h1 {
-        font-size: 1.5rem;  /* ancora più piccolo */
-        margin-top: 8px;    
-        text-align: center;
-        line-height: 1.2;   /* meno spazio tra le righe */
+    /* Titolo e logo affiancati */
+    .title-content {
+        display: flex;
+        flex-direction: row;      /* logo a sinistra, titolo a destra */
+        align-items: center;      /* allinea verticalmente */
+        justify-content: center;  /* centra tutto orizzontalmente */
+        gap: 10px;                /* spazio tra logo e titolo */
+        flex-wrap: wrap;          /* se lo schermo è troppo stretto, va a capo */
     }
 
     /* Logo più piccolo */
     .hero-header .logo {
-        max-width: 80px;    /* riduzione significativa */
-        margin-bottom: 8px; /* spazio tra logo e titolo */
+        max-width: 60px;           /* riduzione logo */
+        height: auto;
+    }
+
+    /* Titolo più piccolo e compatto */
+    .hero-header h1 {
+        font-size: 1.3rem;         /* dimensione più piccola */
+        line-height: 1.1;          /* meno spazio tra righe */
+        margin: 0;
+        text-align: left;           /* allineato accanto al logo */
     }
 
     /* Linee luminose più larghe e vicine al contenuto */
     .line {
-        width: 95%; 
-        margin: 8px auto; /* distanza minima sopra e sotto */
+        width: 95%;
+        margin: 6px auto;          /* distanza minima sopra e sotto */
     }
+
+    /* Sottotitolo più piccolo e compatto */
+    .subtitle {
+        font-size: 0.9rem;
+        margin-top: 6px;
+    }
+
+    /* Navbar più sottile */
+    .navbar {
+        padding: 6px 10px;
+    }
+}
 
     /* Barra del menu più sottile */
     .navbar {
