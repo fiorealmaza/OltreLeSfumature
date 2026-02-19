@@ -169,7 +169,7 @@ to{opacity:1;transform:translateY(0);}
 /* HEADER HERO E LINEE LUMINOSO - VERSIONE ADATTABILE */
 .hero-header {
     background: #eaf6ff;
-    padding: 100px 20px; /* PC: 100px sopra e sotto, 20px dx/sx */
+    padding: 120px 20px 60px 20px; /* padding PC: sopra, dx/sx, sotto */
     text-align: center;
 }
 
@@ -180,39 +180,41 @@ to{opacity:1;transform:translateY(0);}
     gap: 25px;
 }
 
-.line {
-    width: 60%;
-    height: 5px; /* leggermente più alta */
-    background: linear-gradient(to right, transparent, #0077ff, transparent);
-    box-shadow: 0 0 25px rgba(0,119,255,0.8); /* luminosità esterna */
-    border-radius: 10px;
-    margin: 10px auto; /* centrata con piccolo spazio sopra/sotto */
-}
-
 .hero-header h1 {
     color: #0077ff;
-    font-size: 3rem; /* titolo grande sul PC */
+    font-size: 3rem;           /* titolo grande sul PC */
     margin: 0;
     text-shadow: 0 0 18px rgba(0,119,255,0.6);
+}
+
+.line {
+    width: 60%;
+    height: 5px;
+    background: linear-gradient(to right, transparent, #0077ff, transparent);
+    box-shadow: 0 0 25px rgba(0,119,255,0.8);
+    border-radius: 10px;
+    margin: 10px auto;
 }
 
 /* ===== ADATTAMENTO HERO, TITOLI E LINEE SUL TELEFONO ===== */
 @media (max-width: 768px) {
     .hero-header {
-        padding-left: 5px;   /* quasi senza margini laterali */
-        padding-right: 5px;
-        padding-top: 60px;   /* spazio sopra ridotto */
-        padding-bottom: 30px; /* spazio sotto ridotto */
+        padding-left: 0;       /* nessun margine laterale */
+        padding-right: 0;
+        padding-top: 50px;     /* meno spazio sopra */
+        padding-bottom: 20px;  /* meno spazio sotto */
     }
 
     .hero-header h1 {
-        font-size: 2rem;      /* titolo più piccolo sul telefono */
+        font-size: 1.6rem;      /* titolo più piccolo per stare tutto */
+        line-height: 1.1;       /* altezza riga compatta */
         text-align: center;
-        line-height: 1.2;     /* per evitare che vada a capo male */
+        word-break: break-word; /* evita che le parole escano dal bordo */
+        padding: 0 10px;        /* piccolo padding interno per sicurezza */
     }
 
     .line {
-        width: 95%;            /* linee quasi ai bordi sul telefono */
+        width: 95%;             /* linee quasi ai bordi sul telefono */
     }
 }
 
