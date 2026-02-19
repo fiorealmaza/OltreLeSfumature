@@ -175,10 +175,11 @@ to{opacity:1;transform:translateY(0);}
 
 .line {
     width: 60%;
-    height: 4px;
+    height: 5px; /* leggermente più alta */
     background: linear-gradient(to right, transparent, #0077ff, transparent);
-    box-shadow: 0 0 15px rgba(0,119,255,0.6);
+    box-shadow: 0 0 25px rgba(0,119,255,0.8); /* luminosità esterna */
     border-radius: 10px;
+    margin: 10px auto; /* centrata con piccolo spazio sopra/sotto */
 }
 
 .title-content {
@@ -468,8 +469,11 @@ box-shadow:0 0 25px rgba(0,119,255,0.9);
 
 <body>
 <a href="index.html" class="torna-home">← Torna alla Home</a>
+
 <header class="hero-header">
   <div class="title-container">
+
+    <!-- Riga luminosa sopra il titolo -->
     <div class="line"></div>
 
     <div class="title-content">
@@ -477,7 +481,9 @@ box-shadow:0 0 25px rgba(0,119,255,0.9);
       <h1>Oltre Le Sfumature</h1>
     </div>
 
+    <!-- Riga luminosa sotto il titolo -->
     <div class="line"></div>
+
   </div>
 
   <p class="subtitle">
