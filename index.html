@@ -196,32 +196,45 @@ to{opacity:1;transform:translateY(0);}
     margin: 10px auto;
 }
 
-/* ===== ADATTAMENTO HERO, LOGO, TITOLO E MENU SUL TELEFONO ===== */
+/* ===== ADATTAMENTO HERO, LOGO, TITOLO E MENU SUL TELEFONO - VERSIONE PIÙ COMPATTA ===== */
 @media (max-width: 768px) {
 
     /* Hero header padding più compatto */
     .hero-header {
-        padding: 60px 10px 30px 10px; /* meno spazio sopra e sotto */
+        padding: 50px 10px 25px 10px; /* meno spazio sopra e sotto */
     }
 
-    /* Titolo ridotto, sempre centrato */
+    /* Titolo ridotto, centrato e leggibile in 1-2 righe */
     .hero-header h1 {
-        font-size: 1.8rem;  /* più piccolo del PC */
-        margin-top: 10px;   /* un po’ di spazio sopra il titolo */
+        font-size: 1.5rem;  /* ancora più piccolo */
+        margin-top: 8px;    
         text-align: center;
+        line-height: 1.2;   /* meno spazio tra le righe */
     }
 
-    /* Logo più piccolo se necessario */
+    /* Logo più piccolo */
     .hero-header .logo {
-        max-width: 100px;   /* riduce larghezza sul telefono */
-        margin-bottom: 10px; /* spazio tra logo e titolo */
+        max-width: 80px;    /* riduzione significativa */
+        margin-bottom: 8px; /* spazio tra logo e titolo */
     }
 
     /* Linee luminose più larghe e vicine al contenuto */
     .line {
-        width: 95%; /* quasi ai bordi dello schermo */
-        margin: 10px auto; /* distanza minima sopra e sotto */
+        width: 95%; 
+        margin: 8px auto; /* distanza minima sopra e sotto */
     }
+
+    /* Barra del menu più sottile */
+    .navbar {
+        padding: 6px 10px; /* riduce altezza */
+    }
+
+    /* Sottotitolo più piccolo e compatto */
+    .subtitle {
+        font-size: 0.95rem;
+        margin-top: 8px;
+    }
+}
 
     /* Barra del menu più sottile */
     .navbar {
