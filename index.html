@@ -196,25 +196,36 @@ to{opacity:1;transform:translateY(0);}
     margin: 10px auto;
 }
 
-/* ===== ADATTAMENTO HERO, TITOLI E LINEE SUL TELEFONO ===== */
+/* ===== ADATTAMENTO HERO E LOGO SUL TELEFONO ===== */
 @media (max-width: 768px) {
     .hero-header {
-        padding-left: 0;       /* nessun margine laterale */
+        padding-left: 0;
         padding-right: 0;
-        padding-top: 50px;     /* meno spazio sopra */
-        padding-bottom: 20px;  /* meno spazio sotto */
+        padding-top: 50px;
+        padding-bottom: 20px;
+    }
+
+    .title-content {
+        flex-direction: column;   /* logo sopra, titolo sotto */
+        align-items: center;
+        gap: 10px;
     }
 
     .hero-header h1 {
-        font-size: 1.6rem;      /* titolo più piccolo per stare tutto */
-        line-height: 1.1;       /* altezza riga compatta */
+        font-size: 2rem;           /* titolo leggibile in massimo 2 righe */
+        line-height: 1.2;
         text-align: center;
-        word-break: break-word; /* evita che le parole escano dal bordo */
-        padding: 0 10px;        /* piccolo padding interno per sicurezza */
+        word-break: break-word;
+        padding: 0 10px;
+    }
+
+    .logo {
+        max-width: 80px;           /* riduce leggermente il logo sul telefono */
+        height: auto;
     }
 
     .line {
-        width: 95%;             /* linee quasi ai bordi sul telefono */
+        width: 95%;                /* linee quasi ai bordi */
     }
 }
 
