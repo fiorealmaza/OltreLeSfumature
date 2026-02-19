@@ -457,15 +457,24 @@ box-shadow:0 0 25px rgba(0,119,255,0.9);
     text-align: center;
 }
 
-...
-(continua il blocco)
+/* LINEE LUMINOSE SOPRA E SOTTO IL TITOLO */
+.line {
+    width: 60%;
+    height: 4px;
+    background: linear-gradient(to right, transparent, #0077ff, transparent);
+    box-shadow: 0 0 15px rgba(0,119,255,0.6);
+    border-radius: 10px;
+    margin: 20px auto; /* centra la linea e distanza sopra/sotto */
+}
 
+/* ===== GRID SERVIZI ===== */
+.grid-servizi {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px; /* distanza tra i box */
+    margin-top: 40px; /* distanza dal titolo "Offriamo servizi concreti come" */
+}
 </style>
-   
-</style>
-
-</head>
-
 
 <body>
 <a href="index.html" class="torna-home">← Torna alla Home</a>
@@ -487,8 +496,7 @@ box-shadow:0 0 25px rgba(0,119,255,0.9);
   </div>
 
   <p class="subtitle">
-    Cooperativa Sociale specializzata nel supporto alle persone con Disturbo 
-      dello Spettro Autistico attraverso interventi basati sul metodo "ABA"
+    Cooperativa Sociale specializzata nel supporto alle persone con Disturbo dello Spettro Autistico attraverso interventi basati sul metodo "ABA"
   </p>
 </header>
 
