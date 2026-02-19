@@ -165,11 +165,11 @@ to{opacity:1;transform:translateY(0);}
 from{opacity:0;transform:translateY(30px);}
 to{opacity:1;transform:translateY(0);}
 }
-/* HEADER */
 
+/* HEADER HERO E LINEE LUMINOSO - VERSIONE ADATTABILE */
 .hero-header {
     background: #eaf6ff;
-    padding: 100px 20px;
+    padding: 100px 20px; /* PC: 100px sopra e sotto, 20px dx/sx */
     text-align: center;
 }
 
@@ -187,6 +187,33 @@ to{opacity:1;transform:translateY(0);}
     box-shadow: 0 0 25px rgba(0,119,255,0.8); /* luminosità esterna */
     border-radius: 10px;
     margin: 10px auto; /* centrata con piccolo spazio sopra/sotto */
+}
+
+.hero-header h1 {
+    color: #0077ff;
+    font-size: 3rem; /* titolo grande sul PC */
+    margin: 0;
+    text-shadow: 0 0 18px rgba(0,119,255,0.6);
+}
+
+/* ===== ADATTAMENTO HERO, TITOLI E LINEE SUL TELEFONO ===== */
+@media (max-width: 768px) {
+    .hero-header {
+        padding-left: 5px;   /* quasi senza margini laterali */
+        padding-right: 5px;
+        padding-top: 60px;   /* spazio sopra ridotto */
+        padding-bottom: 30px; /* spazio sotto ridotto */
+    }
+
+    .hero-header h1 {
+        font-size: 2rem;      /* titolo più piccolo sul telefono */
+        text-align: center;
+        line-height: 1.2;     /* per evitare che vada a capo male */
+    }
+
+    .line {
+        width: 95%;            /* linee quasi ai bordi sul telefono */
+    }
 }
 
 .title-content {
