@@ -196,36 +196,48 @@ to{opacity:1;transform:translateY(0);}
     margin: 10px auto;
 }
 
-/* ===== ADATTAMENTO HERO E LOGO SUL TELEFONO ===== */
+/* ===== ADATTAMENTO HERO, LOGO, TITOLO E MENU SUL TELEFONO ===== */
 @media (max-width: 768px) {
+
+    /* Hero header padding più compatto */
     .hero-header {
-        padding-left: 0;
-        padding-right: 0;
-        padding-top: 50px;
-        padding-bottom: 20px;
+        padding: 60px 10px 30px 10px; /* meno spazio sopra e sotto */
     }
 
-    .title-content {
-        flex-direction: column;   /* logo sopra, titolo sotto */
-        align-items: center;
-        gap: 10px;
-    }
-
+    /* Titolo ridotto, sempre centrato */
     .hero-header h1 {
-        font-size: 2rem;           /* titolo leggibile in massimo 2 righe */
-        line-height: 1.2;
+        font-size: 1.8rem;  /* più piccolo del PC */
+        margin-top: 10px;   /* un po’ di spazio sopra il titolo */
         text-align: center;
-        word-break: break-word;
-        padding: 0 10px;
     }
 
-    .logo {
-        max-width: 80px;           /* riduce leggermente il logo sul telefono */
-        height: auto;
+    /* Logo più piccolo se necessario */
+    .hero-header .logo {
+        max-width: 100px;   /* riduce larghezza sul telefono */
+        margin-bottom: 10px; /* spazio tra logo e titolo */
     }
 
+    /* Linee luminose più larghe e vicine al contenuto */
     .line {
-        width: 95%;                /* linee quasi ai bordi */
+        width: 95%; /* quasi ai bordi dello schermo */
+        margin: 10px auto; /* distanza minima sopra e sotto */
+    }
+
+    /* Barra del menu più sottile */
+    .navbar {
+        padding: 8px 10px; /* riduce altezza */
+    }
+
+    /* Sottotitolo leggermente più piccolo e compatto */
+    .subtitle {
+        font-size: 1rem;
+        margin-top: 10px;
+    }
+
+    /* Avvicina immagine hero alla linea luminosa */
+    .chi-siamo-immagine img.imma1 {
+        max-width: 90%;
+        margin-top: 20px; /* ridotta distanza dalla linea */
     }
 }
 
