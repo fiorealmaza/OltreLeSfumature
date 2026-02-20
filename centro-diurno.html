@@ -121,6 +121,20 @@ h2{
   text-shadow: 0 0 6px rgba(0,119,255,0.6), 0 0 12px rgba(0,170,255,0.4);
   transform: scale(1.05);
 }
+.galleria-centro {
+  display: flex;
+  justify-content: center; /* centra le immagini */
+  gap: 20px; /* spazio tra le immagini */
+  flex-wrap: nowrap; /* le immagini rimangono sulla stessa riga */
+  margin-bottom: 40px;
+}
+
+.galleria-centro img {
+  width: 45%; /* riduce la dimensione, due immagini affiancate stanno bene */
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+  object-fit: cover;
+}
 </style>
 
 </style>
