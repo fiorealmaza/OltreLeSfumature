@@ -413,11 +413,7 @@ box-shadow:0 0 25px rgba(0,119,255,0.9);
         0 0 35px rgba(0, 119, 255, 0.3); /* effetto di luce esterna maggiore */
     margin: 50px 0 30px 0; /* più spazio sopra */
 }
-@media (max-width: 768px) {
-    .offriamo-servizi {
-        font-size: 1.5rem; /* più leggibile su mobile */
-    }
-}
+
 
 /* LINK APPROFONDISCI DI PIU' SOTTO I BOX */
 .approfondisci {
@@ -477,58 +473,137 @@ box-shadow:0 0 25px rgba(0,119,255,0.9);
     margin: 50px 0 30px 0; /* spazio sopra e sotto */
 }
 
-/* Responsive per telefoni */
+
+/* ===== STILI MOBILE (max-width: 768px) ===== */
 @media (max-width: 768px) {
+
+    /* BODY e SEZIONI */
+    body {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    section {
+        padding: 50px 0;
+    }
+
+    /* HEADER HERO */
+    .hero-header {
+        padding: 50px 15px 30px 15px;
+    }
+
+    .title-container {
+        gap: 15px;
+    }
+
+    .title-content {
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        flex-wrap: wrap;
+    }
+
+    .hero-header .logo {
+        max-width: 60px;
+    }
+
+    .hero-header h1 {
+        font-size: 1.5rem;
+        line-height: 1.2;
+        text-align: left;
+    }
+
+    .subtitle {
+        font-size: 0.9rem;
+        margin-top: 8px;
+        text-align: center;
+    }
+
+    .line {
+        width: 95%;
+        margin: 6px auto;
+    }
+
+    /* NAVBAR */
+    .navbar {
+        padding: 8px 10px;
+        justify-content: center;
+    }
+
+    .menu {
+        top: 50px;
+        right: 10px;
+        padding: 15px 20px;
+        border-radius: 15px;
+    }
+
+    .menu li a {
+        font-size: 1rem;
+    }
+
+    /* BOX GENERALI */
+    .box {
+        padding: 20px;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    h3 {
+        font-size: 1.2rem;
+    }
+
+    .grid, .grid-servizi, .galleria-centro {
+        gap: 15px;
+    }
+
+    /* CHI SIAMO */
     .chi-siamo-container {
-        flex-direction: column;  /* immagine sotto il testo */
+        flex-direction: column;
         gap: 20px;
+        align-items: center;
     }
 
     .chi-siamo-immagine img.imma1 {
-        max-width: 90%;     
-        height: auto;
-        margin: 0 auto;
+        max-width: 90%;
     }
 
+    .chi-siamo-testo h3 {
+        font-size: 1.4rem;
+    }
+
+    /* OFFRIAMO SERVIZI */
     .offriamo-servizi {
-        font-size: 1.5rem;  /* titolo leggibile su mobile */
+        font-size: 1.5rem;
+        margin-top: 30px;
     }
-}
-/* SOTTOTITOLO “Offriamo servizi concreti come” */
-.chi-siamo-testo h3 {
-  margin: 50px 0 30px 0;
-  text-align: center;
-  color: #0077ff;
-  font-size: 1.6rem;
-  text-shadow: 0 0 8px #00aaff, 0 0 15px #00ccff; /* effetto illuminato */
-}
 
-/* RESPONSIVE: su mobile testo sopra e immagine sotto */
-@media (max-width: 768px) {
-  .chi-siamo-container {
-    flex-direction: column;
-    align-items: center;
-    gap: 20px;
-  }
+    /* GALLERIA CENTRO */
+    .galleria-centro {
+        grid-template-columns: 1fr;
+    }
 
-  .chi-siamo-testo h3 {
-    font-size: 1.4rem;
-  }
+    /* TORNA HOME */
+    .torna-home {
+        top: 10px;
+        left: 10px;
+        padding: 6px 10px;
+        font-size: 0.9rem;
+    }
 
-  .chi-siamo-immagine img.imma1 {
-    max-width: 90%;
-  }
-}
+    /* METODO BOX */
+    .metodo-box {
+        padding: 20px;
+    }
 
-.offriamo-servizi {
-  margin-top:40px;   /* distanza dal testo e dall'immagine sopra */
-  text-align:center;
-  color:#0077ff;
-  font-size:1.5rem;
-  font-weight:700;
-  text-shadow:
-     0 0 8px rgba(0,119,255,0.6),
-     0 0 15px rgba(0,170,255,0.4); /* bagliore esterno */
+    /* FORM CONTATTI */
+    form input, form textarea, form button {
+        font-size: 0.95rem;
+        padding: 10px;
+    }
+
 }
     
 
@@ -649,48 +724,36 @@ box-shadow:0 0 25px rgba(0,119,255,0.9);
         rispettano la dignità e i tempi di ciascun utente.
       </p>
     </div>
-  <div class="chi-siamo-immagine">
-    <img src="imma1.png" alt="Chi siamo" class="imma1">
-</div>
+    <div class="chi-siamo-immagine">
+      <img src="imma1.png" alt="Chi siamo: attività e ambienti del centro" class="imma1">
+    </div>
+  </div> <!-- Chiusura corretta del container -->
 
-<section class="galleria-centro">
-    <img src="immaAcd.png" alt="Centro diurno 1">
-    <img src="immaBcd.png" alt="Centro diurno 2">
-    <img src="immaCdc.png" alt="Centro diurno 3">
-    <img src="immaDcd.png" alt="Centro diurno 4">
+  <h3 class="offriamo-servizi">Offriamo servizi concreti come:</h3>
+
+  <div class="grid-servizi">
+
+    <div class="box box-servizio">
+      <h3>Centro Diurno</h3>
+      <p>Supporto educativo e sociale per bambini e adolescenti, con attività mirate allo sviluppo di autonomie e abilità sociali.</p>
+      <p class="approfondisci" onclick="window.location.href='centro-diurno.html'">Approfondisci di più →</p>
+    </div>
+
+    <div class="box box-servizio">
+      <h3>Progetto “Dopo di Noi”</h3>
+      <p>Percorsi dedicati ai giovani adulti con Disturbo dello Spettro Autistico, per prepararsi all’autonomia personale e sociale.</p>
+      <p class="approfondisci" onclick="window.location.href='dopo-di-noi.html'">Approfondisci di più →</p>
+    </div>
+
+    <div class="box box-servizio">
+      <h3>Laboratori e attività educative</h3>
+      <p>Laboratori mirati all’apprendimento, alla socializzazione e allo sviluppo di abilità pratiche per ogni età.</p>
+      <p class="approfondisci" onclick="window.location.href='laboratori.html'">Approfondisci di più →</p>
+    </div>
+
+  </div>
 </section>
 
-<h3 class="offriamo-servizi">Offriamo servizi concreti come:</h3>
-
-<div class="grid-servizi">
-
-  <div class="box box-servizio">
-    <h3>Centro Diurno</h3>
-    <p>Supporto educativo e sociale per bambini e adolescenti, con attività mirate allo sviluppo di autonomie e abilità sociali.</p>
-    <p class="approfondisci" onclick="window.location.href='centro-diurno.html'">Approfondisci di più →</p>
-  </div>
-
-  <div class="box box-servizio">
-    <h3>Progetto “Dopo di Noi”</h3>
-    <p>Percorsi dedicati ai giovani adulti con Disturbo dello Spettro Autistico, per prepararsi all’autonomia personale e sociale.</p>
-    <p class="approfondisci" onclick="window.location.href='dopo-di-noi.html'">Approfondisci di più →</p>
-  </div>
-
-  <div class="box box-servizio">
-    <h3>Laboratori e attività educative</h3>
-    <p>Laboratori mirati all’apprendimento, alla socializzazione e allo sviluppo di abilità pratiche per ogni età.</p>
-    <p class="approfondisci" onclick="window.location.href='laboratori.html'">Approfondisci di più →</p>
-  </div>
-
-</div>
-
-
-
-</div>
-
-
-
-</section>
 <!-- FINE SEZIONE CHI SIAMO / COSA OFFRIAMO -->
 
 <section id="definizione">
