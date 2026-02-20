@@ -733,87 +733,24 @@ box-shadow:0 0 25px rgba(0,119,255,0.9);
 </nav>
 
     
-<!-- INIZIO SEZIONE CHI SIAMO / COSA OFFRIAMO -->
-<section id="definizione">
-  <h2>Cos’è il Disturbo dello Spettro Autistico?</h2>
-
-  <div class="grid">
-
-    <div class="box">
-      <p>Il Disturbo dello Spettro Autistico (DSA) è una condizione del neurosviluppo che coinvolge comunicazione, interazione sociale e comportamenti ripetitivi.</p>
-      <p>Non è una malattia contagiosa. Non è causato dallo stile educativo. Non è una colpa.</p>
-      <p>Ha una base biologica con una forte componente genetica e multifattoriale.</p>
+<!-- ===== SEZIONE CHI SIAMO / COSA OFFRIAMO ===== -->
+<section id="chi-siamo">
+  <div class="chi-siamo-container">
+    <!-- TESTO -->
+    <div class="chi-siamo-testo">
+      <h2>Chi siamo</h2>
+      <p>La Cooperativa Sociale <strong>“Oltre le Sfumature”</strong> si occupa del supporto a persone con Disturbo dello Spettro Autistico. Offriamo interventi educativi, sociali e attività mirate alla crescita delle autonomie e delle abilità sociali.</p>
     </div>
 
-    <div class="box">
-      <h3>Perché si parla di “spettro”?</h3>
-      <ul>
-        <li>Bambini con difficoltà importanti nella comunicazione</li>
-        <li>Bambini con linguaggio sviluppato ma difficoltà sociali</li>
-        <li>Persone con disabilità intellettiva</li>
-        <li>Persone con intelligenza nella norma o superiore</li>
-      </ul>
-      <p>Ogni bambino è diverso. Ogni profilo è unico.</p>
+    <!-- IMMAGINE -->
+    <div class="chi-siamo-immagine">
+      <img src="imma1.png" alt="Attività e ambienti del centro Oltre le Sfumature" class="imma1">
     </div>
-
   </div>
-</section>
 
-<style>
-/* GRID e BOX */
-.grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 30px;
-  margin-top: 20px;
-}
-
-.box {
-  background: #cfe7ff; /* azzurro chiaro */
-  padding: 25px;
-  border-radius: 15px;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.08);
-}
-
-.box h3 {
-  color: #0077ff;
-  margin-bottom: 15px;
-}
-
-/* UL e LI - rientro */
-ul {
-  padding-left: 30px;
-  margin-left: 0;
-}
-
-li {
-  margin-bottom: 8px;
-  line-height: 1.5;
-}
-
-/* ===== MOBILE ===== */
-@media (max-width: 768px) {
-  .grid {
-    gap: 20px;
-  }
-
-  ul {
-    padding-left: 30px; /* rientro un po’ più interno */
-  }
-
-  li {
-    margin-bottom: 10px;
-  }
-}
-</style>
-
-  </div> <!-- chi-siamo-container -->
-
-  <!-- Titolo servizi -->
+  <!-- SERVIZI -->
   <h3 class="offriamo-servizi">Offriamo servizi concreti come:</h3>
-
   <div class="grid-servizi">
-
     <div class="box box-servizio">
       <h3>Centro Diurno</h3>
       <p>Supporto educativo e sociale per bambini e adolescenti, con attività mirate allo sviluppo di autonomie e abilità sociali.</p>
@@ -831,9 +768,104 @@ li {
       <p>Laboratori mirati all’apprendimento, alla socializzazione e allo sviluppo di abilità pratiche per ogni età.</p>
       <p class="approfondisci" onclick="window.location.href='laboratori.html'">Approfondisci di più →</p>
     </div>
-
   </div>
 </section>
+
+<!-- ===== SEZIONE COS'È LO SPETTRO ===== -->
+<section id="definizione">
+  <h2>Cos’è il Disturbo dello Spettro Autistico?</h2>
+
+  <div class="grid">
+    <div class="box">
+      <p>Il Disturbo dello Spettro Autistico (DSA) è una condizione del neurosviluppo che coinvolge comunicazione, interazione sociale e comportamenti ripetitivi.</p>
+      <p>Non è una malattia contagiosa, non è causato dallo stile educativo e non è una colpa.</p>
+      <p>Ha una base biologica con una forte componente genetica e multifattoriale.</p>
+    </div>
+
+    <div class="box">
+      <h3>Perché si parla di “spettro”?</h3>
+      <ul>
+        <li>Bambini con difficoltà importanti nella comunicazione</li>
+        <li>Bambini con linguaggio sviluppato ma difficoltà sociali</li>
+        <li>Persone con disabilità intellettiva</li>
+        <li>Persone con intelligenza nella norma o superiore</li>
+      </ul>
+      <p>Ogni bambino è diverso. Ogni profilo è unico.</p>
+    </div>
+  </div>
+</section>
+
+<style>
+/* ===== CHI SIAMO ===== */
+.chi-siamo-container {
+    display: flex;
+    flex-direction: row; /* testo a sinistra, immagine a destra */
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem; /* margini laterali su PC */
+}
+
+.chi-siamo-testo {
+    flex: 1;
+    min-width: 280px;
+    text-align: left;
+}
+
+.chi-siamo-immagine {
+    flex: 1;
+    text-align: center;
+}
+
+.chi-siamo-immagine img.imma1 {
+    max-width: 100%;
+    height: auto;
+    border-radius: 20px;
+}
+
+/* OFFRIAMO SERVIZI */
+.offriamo-servizi {
+    text-align: center;
+    color: #0077ff;
+    font-size: 2rem;
+    margin: 50px 0 30px 0;
+}
+
+.grid-servizi {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    margin-top: 20px;
+}
+
+/* ===== RESPONSIVE (tablet e telefono) ===== */
+@media (max-width: 1024px) { /* ipad / tablet */
+    .chi-siamo-container {
+        flex-direction: column; /* immagine sotto il testo */
+        gap: 20px;
+        padding: 0 1.5rem; /* margini più stretti */
+    }
+    .chi-siamo-testo, .chi-siamo-immagine {
+        width: 100%;
+    }
+    .chi-siamo-immagine img.imma1 {
+        max-width: 90%;
+        margin-top: 15px;
+    }
+}
+
+@media (max-width: 768px) { /* telefono */
+    .chi-siamo-container {
+        padding: 0 1rem; /* margini stretti */
+    }
+    .chi-siamo-immagine img.imma1 {
+        max-width: 100%;
+        margin-top: 15px;
+    }
+}
+</style>
 
 <!-- FINE SEZIONE CHI SIAMO / COSA OFFRIAMO -->
 
