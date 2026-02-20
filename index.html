@@ -559,20 +559,44 @@ box-shadow:0 0 25px rgba(0,119,255,0.9);
         gap: 15px;
     }
 
-    /* CHI SIAMO */
+    /* ===== CHI SIAMO MOBILE ===== */
+@media (max-width: 768px) {
+
+    /* BODY - margini laterali */
+    body {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    /* CHI SIAMO: testo sopra, immagine sotto */
     .chi-siamo-container {
-        flex-direction: column;
-        gap: 20px;
-        align-items: center;
+        flex-direction: column;   /* mette testo sopra e immagine sotto */
+        gap: 20px;                /* distanza tra testo e immagine */
+        align-items: stretch;     /* testo occupa tutta la larghezza */
+        text-align: left;         /* testo normale, non centrato */
+    }
+
+    .chi-siamo-testo {
+        width: 100%;              /* occupa tutta la larghezza disponibile */
+        min-width: unset;         /* rimuove min-width che creava colonna stretta */
+    }
+
+    .chi-siamo-immagine {
+        width: 100%;              /* immagine sotto, tutta la larghezza */
+        text-align: center;       /* centra l’immagine */
     }
 
     .chi-siamo-immagine img.imma1 {
-        max-width: 90%;
+        max-width: 100%;          /* occupa tutta la larghezza possibile */
+        height: auto;
+        margin-top: 15px;         /* distanza sopra immagine */
     }
 
+    /* Titolo h3 più piccolo */
     .chi-siamo-testo h3 {
         font-size: 1.4rem;
     }
+}
 
     /* OFFRIAMO SERVIZI */
     .offriamo-servizi {
