@@ -697,13 +697,40 @@ h2 {
 
 <!-- ===== STILE CSS ===== -->
 <style>
-/* ===== TITOLO PRINCIPALE ===== */
-h2 {
-    color: #007BFF; /* blu principale */
-    text-shadow: 0 0 5px #00bfff, 0 0 10px #00bfff, 0 0 15px #00bfff; /* sfumatura esterna leggera */
-    text-align: center;
-    margin-bottom: 50px;
+
+/* Titolo principale */
+.title-content h1 {
+    font-size: 3rem; /* base per telefoni piccoli */
     font-weight: bold;
+    color: #007BFF;
+    margin: 0;
+    text-shadow:
+        0 0 5px #00bfff,
+        0 0 10px #00bfff,
+        0 0 15px #00bfff,
+        0 0 25px #00bfff,
+        0 0 35px #00bfff;
+}
+
+/* Schermi tablet / ipad */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .title-content h1 {
+        font-size: 4rem; /* più grande su tablet */
+    }
+}
+
+/* Schermi desktop */
+@media (min-width: 1025px) {
+    .title-content h1 {
+        font-size: 5rem; /* ancora più grande su desktop */
+    }
+}
+
+/* Titolo mobile già esistente */
+@media (max-width: 768px) {
+    .title-content h1 {
+        font-size: 3rem; /* mantiene grandezza per telefoni */
+    }
 }
 
 /* ===== STILE BOX AUTISMO ===== */
