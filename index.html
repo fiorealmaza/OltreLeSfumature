@@ -739,7 +739,11 @@ box-shadow:0 0 25px rgba(0,119,255,0.9);
 /* ===== ILLUMINA TUTTI I TITOLI PRINCIPALI DELLE SEZIONI ===== */
 h2 {
     color: #007BFF; /* blu uniforme come gli altri titoli */
-    text-shadow: 0 0 3px #00bfff, 0 0 6px #00bfff; /* luminosità più leggera e leggibile */
+    text-shadow: 
+        0 0 2px #00bfff88,  /* vicino al testo, poco opaco */
+        0 0 4px #00bfff66,
+        0 0 6px #00bfff44,
+        0 0 10px #00bfff22; /* sfumatura esterna molto leggera */
     text-align: center; /* centra tutti i titoli */
     margin-bottom: 50px; /* distanza dal contenuto sotto */
     font-weight: bold; /* grassetto */
