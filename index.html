@@ -186,70 +186,53 @@ to{opacity:1;transform:translateY(0);}
 }
 
 
-    /* Navbar più sottile */
-    .navbar {
-        padding: 6px 10px;
-    }
+    /* NAVBAR */
+.navbar {
+    position: fixed;       /* fisso in alto */
+    top: 0;
+    left: 0;
+    right: 0;
+    background: white;
+    padding: 15px 10px;
+    display: flex;
+    justify-content: flex-end; /* hamburger a destra */
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    z-index: 2000;
 }
 
-    /* Barra del menu più sottile */
-    .navbar {
-        padding: 6px 10px; /* riduce altezza */
-    }
-
-
-    /* Barra del menu più sottile */
-    .navbar {
-        padding: 8px 10px; /* riduce altezza */
-    }
-
-    
-
-/* NAVBAR */
-
-.navbar{
-position:fixed; /* Fisso in alto */
-top:0;
-left:0;
-right:0;
-background:white;
-padding:15px;
-display:flex;
-justify-content:flex-end;
-box-shadow:0 4px 12px rgba(0,0,0,0.08);
-z-index:2000; /* più alto del "torna-home" */
+.hamburger {
+    font-size: 2rem;
+    cursor: pointer;
+    color: #0077ff;
 }
 
-.hamburger{
-font-size:2rem;
-cursor:pointer;
-color:#0077ff;
+.menu {
+    list-style: none;
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    background: white;
+    padding: 20px 30px;
+    border-radius: 20px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+    display: none;         /* nascosto di default, necessario per lo script */
+    flex-direction: column; /* sempre in colonna */
+    gap: 15px;
 }
 
-.menu{
-list-style:none;
-position:absolute;
-top:60px;
-right:20px;
-background:white;
-padding:20px 30px;
-border-radius:20px;
-box-shadow:0 8px 25px rgba(0,0,0,0.15);
-display:none;
-flex-direction:column;
-gap:15px;
+.menu li a {
+    font-size: 1rem;
 }
 
 .menu li a:hover,
 .menu li a.active {
     font-weight: 700;
     text-shadow: 
-        0 0 6px rgba(0, 119, 255, 0.6),   /* bagliore esterno principale */
-        0 0 12px rgba(0, 170, 255, 0.4);  /* bagliore esterno secondario più diffuso */
+        0 0 6px rgba(0, 119, 255, 0.6),
+        0 0 12px rgba(0, 170, 255, 0.4);
     transition: text-shadow 0.3s ease, transform 0.2s ease;
     transform: scale(1.03);
 }
-
 
 
 
@@ -377,22 +360,6 @@ box-shadow:0 0 25px rgba(0,119,255,0.9);
 
   
 
-    /* NAVBAR */
-    .navbar {
-    padding: 8px 10px;
-    justify-content: flex-end; /* hamburger a destra */
-}
-
-    .menu {
-        top: 50px;
-        right: 10px;
-        padding: 15px 20px;
-        border-radius: 15px;
-    }
-
-    .menu li a {
-        font-size: 1rem;
-    }
 
     /* BOX GENERALI */
     .box {
@@ -637,7 +604,6 @@ h2 {
 
 </style>
 
-<body>
 <a href="index.html" class="torna-home">← Torna alla Home</a>
 
 
@@ -1345,7 +1311,13 @@ const menu = document.getElementById("menu");
 // Funzione per aprire/chiudere menu al click sull'hamburger
 hamburger.addEventListener("click", function(event) {
     event.stopPropagation(); // evita che il click chiuda subito il menu
-    menu.style.display = (menu.style.display === "flex") ? "none" : "flex";
+
+    if (menu.style.display === "flex") {
+        menu.style.display = "none"; // chiudi il menu
+    } else {
+        menu.style.display = "flex";           // apri il menu
+        menu.style.flexDirection = "column";   // assicurati che sia colonna
+    }
 });
 
 // Chiudi il menu se clicchi fuori
