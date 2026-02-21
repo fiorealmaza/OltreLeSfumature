@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Oltre Le Sfumature</title>
+
+  <style>
+    /* Contenitore del titolo e delle linee LED */
+    .title-container {
+      text-align: center;
+      margin: 40px 0;
+    }
+
+    /* Linee luminose sopra e sotto il titolo */
+    .title-container .line {
+      height: 4px;
+      width: 80%;
+      margin: 10px auto;
+      background: linear-gradient(90deg, #fffb00, #ff00ff, #00ffff);
+      box-shadow: 0 0 10px #fffb00, 0 0 20px #ff00ff, 0 0 30px #00ffff;
+      border-radius: 2px;
+      animation: pulse 2s infinite alternate;
+    }
+
+    /* Animazione LED pulsante */
+    @keyframes pulse {
+      0% { opacity: 0.8; transform: scaleX(1); }
+      50% { opacity: 1; transform: scaleX(1.05); }
+      100% { opacity: 0.8; transform: scaleX(1); }
+    }
+
+    /* Contenuto del titolo (logo + testo) */
+    .title-content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    /* Logo del titolo */
+    .title-content .logo {
+      max-width: 150px;
+      margin-bottom: 10px;
+    }
+
+    /* Testo del titolo con effetto LED */
+    .title-content h1 {
+      font-size: 3rem;
+      font-weight: bold;
+      color: #fff;
+      text-shadow: 0 0 5px #fff,
+                   0 0 10px #fffb00,
+                   0 0 20px #ff00ff,
+                   0 0 30px #00ffff;
+    }
+
+    /* Sottotitolo */
+    .subtitle {
+      text-align: center;
+      font-size: 1.2rem;
+      color: #eee;
+      max-width: 800px;
+      margin: 20px auto 0;
+    }
+
+    /* Sfondo generale della pagina */
+    body {
+      background-color: #1a1a1a;
+      font-family: Arial, sans-serif;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="title-container">
+      <!-- Riga luminosa sopra il titolo -->
+      <div class="line"></div>
+
+      <div class="title-content">
+        <img src="logo.png" alt="Logo Oltre Le Sfumature" class="logo">
+        <h1>Oltre Le Sfumature</h1>
+      </div>
+
+      <!-- Riga luminosa sotto il titolo -->
+      <div class="line"></div>
+    </div>
+
+    <p class="subtitle">
+      Cooperativa Sociale specializzata nel supporto alle persone con Disturbo dello Spettro Autistico attraverso interventi basati sul metodo "ABA"
+    </p>
+  </header>
+
+</body>
+</html>
