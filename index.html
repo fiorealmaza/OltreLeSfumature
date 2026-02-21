@@ -778,43 +778,57 @@ box-shadow:0 0 25px rgba(0,119,255,0.9);
 </nav>
 
     
-<!-- ===== SEZIONE SERVIZI ===== -->
-<section id="servizi">
-
-  <!-- TITOLO SERVIZI CENTRALE BLU ILLUMINATO -->
-  <h2 class="titolo-servizi">I NOSTRI SERVIZI</h2>
-
-  <!-- GRID SERVIZI ILLUMINATI -->
-  <div class="grid-servizi">
-
-    <!-- SERVIZIO 1 -->
-    <div class="box-servizio">
-      <h3>Centro diurno</h3>
-      <p>Il Centro diurno offre attività educative e di socializzazione, con spazi sicuri e accoglienti per tutti gli utenti.</p>
-      <a href="centro-diurno.html" class="approfondisci">Approfondisci →</a>
+<!-- ===== SEZIONE CHI SIAMO / SERVIZI ===== -->
+<section id="chi-siamo">
+  <div class="chi-siamo-container">
+    <!-- TESTO -->
+    <div class="chi-siamo-testo">
+      <h2>Chi siamo</h2>
+      <p>La Cooperativa Sociale <strong>“Oltre le Sfumature”</strong> offre supporto e trattamenti specializzati per persone adulte nello spettro autistico.</p>
+      <p>La nostra missione è accompagnare ogni individuo verso il raggiungimento di una maggiore autonomia personale, sociale e lavorativa, promuovendo il benessere, l’inclusione e una qualità di vita adulta piena e soddisfacente.</p>
+      <p>Crediamo che ogni persona possieda potenzialità uniche. Il nostro impegno è riconoscerle e valorizzarle attraverso servizi altamente specializzati, approcci scientificamente validati e percorsi individualizzati, costruiti nel rispetto della dignità, dei tempi e delle caratteristiche di ciascun utente.</p>
     </div>
 
-    <!-- SERVIZIO 2 -->
-    <div class="box-servizio">
-      <h3>Dopo di noi</h3>
-      <p>Il servizio “Dopo di noi” accompagna i ragazzi e le famiglie nella costruzione di percorsi di autonomia e inclusione.</p>
-      <a href="dopo-di-noi.html" class="approfondisci">Approfondisci →</a>
+    <!-- IMMAGINE -->
+    <div class="chi-siamo-immagine">
+      <img src="imma1.png" alt="Attività e ambienti del centro Oltre le Sfumature" class="imma1">
+    </div>
+  </div>
+
+  <!-- SERVIZI ORDINATI COME BOX CLICCABILI -->
+  <h3 class="offriamo-servizi-left">I nostri servizi</h3>
+
+  <div class="servizi-container">
+
+    <div class="servizio-box" onclick="this.classList.toggle('aperto')">
+      <h3>Centro Diurno</h3>
+      <p class="descrizione">Supporto educativo e sociale per bambini e adolescenti, con attività mirate allo sviluppo di autonomie e abilità sociali.</p>
+      <div class="approfondisci-box" onclick="window.location.href='centro-diurno.html'">
+        <span>Approfondisci →</span>
+      </div>
     </div>
 
-    <!-- SERVIZIO 3 -->
-    <div class="box-servizio">
-      <h3>Laboratori</h3>
-      <p>I laboratori sono progettati per sviluppare abilità pratiche, creative e cognitive in un ambiente stimolante.</p>
-      <a href="laboratori.html" class="approfondisci">Approfondisci →</a>
+    <div class="servizio-box" onclick="this.classList.toggle('aperto')">
+      <h3>Progetto “Dopo di Noi”</h3>
+      <p class="descrizione">Percorsi dedicati ai giovani adulti con Disturbo dello Spettro Autistico, per prepararsi all’autonomia personale e sociale.</p>
+      <div class="approfondisci-box" onclick="window.location.href='dopo-di-noi.html'">
+        <span>Approfondisci →</span>
+      </div>
+    </div>
+
+    <div class="servizio-box" onclick="this.classList.toggle('aperto')">
+      <h3>Laboratori e attività educative</h3>
+      <p class="descrizione">Laboratori mirati all’apprendimento, alla socializzazione e allo sviluppo di abilità pratiche per ogni età.</p>
+      <div class="approfondisci-box" onclick="window.location.href='laboratori.html'">
+        <span>Approfondisci →</span>
+      </div>
     </div>
 
   </div>
 
-  <!-- TITOLO STRUTTURA FUORI QUADRATO -->
-  <h2 class="titolo-struttura">La struttura</h2>
-
-  <!-- QUADRATO STRUTTURA -->
-  <div class="box-struttura">
+  <!-- STRUTTURA DIVENTA BOX STANDARD -->
+  <div id="quadro-struttura-standard" style="margin-top:50px; padding:30px; border-radius:20px; box-shadow:0 5px 15px rgba(0,0,0,0.08); background:#cfe7ff; max-width:1000px; margin-left:auto; margin-right:auto;">
+    <h3>La struttura</h3>
     <p>La nostra struttura è organizzata per essere accogliente, sicura e funzionale allo sviluppo delle autonomie. Gli spazi sono pensati per favorire:</p>
     <ul>
       <li>Attività educative individuali e di gruppo</li>
@@ -827,103 +841,6 @@ box-shadow:0 0 25px rgba(0,119,255,0.9);
   </div>
 
 </section>
-
-<!-- ===== STILE CSS ===== -->
-<style>
-  /* Titoli principali */
-  .titolo-servizi {
-    text-align:center; 
-    color:#007BFF; 
-    text-shadow: 0 0 12px #00bfff, 0 0 25px #00d0ff; 
-    margin-bottom:50px;
-    font-size:2.5em;
-  }
-
-  .titolo-struttura {
-    color:#007BFF; 
-    margin-top:60px; 
-    margin-bottom:20px; 
-    text-align:left;
-    font-size:2em;
-  }
-
-  /* Grid servizi */
-  .grid-servizi {
-    display:flex;
-    flex-wrap:wrap;
-    gap:30px;
-    justify-content:center;
-    margin-bottom:50px;
-  }
-
-  /* Box servizi */
-  .box-servizio {
-    background:#e6f3ff;
-    border-radius:20px;
-    box-shadow:0 5px 15px rgba(0,0,0,0.1);
-    padding:25px;
-    width:300px;
-    transition: all 0.3s ease;
-    cursor:pointer;
-  }
-
-  .box-servizio h3 {
-    color:#007BFF;
-    text-shadow:0 0 10px #00bfff;
-    margin-bottom:15px;
-  }
-
-  .box-servizio p {
-    line-height:1.6;
-    margin-bottom:20px;
-  }
-
-  /* Link Approfondisci */
-  .approfondisci {
-    text-decoration:none;
-    font-weight:bold;
-    color:#0056b3;
-    transition: all 0.3s ease;
-  }
-
-  .approfondisci:hover, .approfondisci:active {
-    color:#00d0ff;
-    text-shadow: 0 0 8px #00d0ff, 0 0 15px #00bfff;
-  }
-
-  /* Effetto hover sui box */
-  .box-servizio:hover, .box-servizio:active {
-    box-shadow:0 10px 25px rgba(0,0,0,0.2), 0 0 20px #00bfff;
-    transform: translateY(-5px);
-  }
-
-  /* Box struttura */
-  .box-struttura {
-    background:#cfe7ff;
-    border-radius:20px;
-    box-shadow:0 5px 15px rgba(0,0,0,0.08);
-    padding:30px;
-    max-width:1000px;
-    margin-left:auto;
-    margin-right:auto;
-    margin-bottom:50px;
-  }
-
-  .box-struttura ul {
-    list-style-type: disc;
-    padding-left:40px;
-    line-height:1.8;
-    margin-top:15px;
-  }
-
-  /* Mobile responsiveness */
-  @media (max-width: 1024px) {
-    .grid-servizi {
-      flex-direction:column;
-      align-items:center;
-    }
-  }
-</style>
 
 <!-- ===== SEZIONE COS'È LO SPETTRO ===== -->
 <section id="definizione">
