@@ -485,12 +485,20 @@ box-shadow:0 0 25px rgba(0,119,255,0.9);
 
 /* LINEE LUMINOSE SOPRA E SOTTO IL TITOLO */
 .line {
-    width: 60%;
+    width: 60%;  /* larghezza standard per PC/iPad */
     height: 4px;
     background: linear-gradient(to right, transparent, #0077ff, transparent);
     box-shadow: 0 0 15px rgba(0,119,255,0.6);
     border-radius: 10px;
     margin: 20px auto; /* centra la linea e distanza sopra/sotto */
+}
+
+/* Mostra correttamente le linee LED su smartphone */
+@media (max-width: 480px) {
+    .line {
+        width: 95%;       /* quasi tutta la larghezza del telefono */
+        margin: 15px auto; /* margine più compatto */
+    }
 }
 
 /* ===== GRID SERVIZI ===== */
@@ -980,19 +988,6 @@ body.home .after-title {
     }
 }
 
-/* Linee luminose sopra e sotto */
-.line {
-    height: 6px;
-    width: 80%;
-    margin: 20px auto;
-    border-radius: 3px;
-    background: linear-gradient(to right, rgba(0,123,255,0.8), rgba(0,191,255,1), rgba(0,123,255,0.8));
-    box-shadow:
-        0 0 15px rgba(0,191,255,0.7),
-        0 0 30px rgba(0,191,255,0.5),
-        0 0 45px rgba(0,191,255,0.3);
-    animation: pulse 2s infinite alternate;
-}
 
 /* Animazione LED pulsante */
 @keyframes pulse {
@@ -1089,12 +1084,7 @@ body.home .after-title {
         font-size: 0.9rem;
     }
 
-    /* Linea sopra il titolo leggermente più piccola e distanza maggiore */
-    .line:first-of-type {
-        margin-top: 30px;
-        height: 4px;
-    }
-}
+
 
 </style>
 
