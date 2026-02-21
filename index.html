@@ -1386,23 +1386,27 @@ document.querySelectorAll("#menu a").forEach(link => {
     });
 });
 
-// Chiude il menu solo se clicchi fuori
+<script>
+// Se clicchi fuori dal menu, chiudi
 document.addEventListener("click", function(event) {
-    var menu = document.getElementById("menu");
-    var hamburger = document.querySelector(".hamburger");
+    const menu = document.getElementById("menu");
+    const hamburger = document.querySelector(".hamburger");
 
-    if (!menu.contains(event.target) && 
-        !hamburger.contains(event.target) && 
-        menu.style.display === "flex") {
+    // Se il menu è aperto e il click NON è sul menu o sull'hamburger, chiudi
+    if (menu.style.display === "flex" &&
+        !menu.contains(event.target) &&
+        !hamburger.contains(event.target)) {
         menu.style.display = "none";
     }
 });
-<script>
+
+// Funzione per aprire/chiudere menu
 function toggleMenu() {
-  const menu = document.getElementById('menu');
-  menu.style.display = (menu.style.display === 'flex') ? 'none' : 'flex';
+    const menu = document.getElementById('menu');
+    menu.style.display = (menu.style.display === 'flex') ? 'none' : 'flex';
 }
 </script>
+</body>
 
 </body>
 </html>
