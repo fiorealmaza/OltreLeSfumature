@@ -502,43 +502,78 @@ box-shadow:0 0 25px rgba(0,119,255,0.9);
         padding: 50px 0;
     }
 
-    /* HEADER HERO */
-    .hero-header {
-        padding: 50px 15px 30px 15px;
-    }
+    /* BLOCCO TITOLO LED CON SFONDO BLU CHIARO */
+.title-container {
+    text-align: center;
+    margin: 50px auto;
+    background-color: #cceeff; /* BLU CHIARO CARINO */
+    padding: 40px 20px; /* padding per far respirare il contenuto */
+    border-radius: 12px; /* arrotondato leggermente per un effetto più morbido */
+    max-width: 900px; /* larghezza massima per non allungarsi troppo su schermi grandi */
+}
 
-    .title-container {
-        gap: 15px;
-    }
+/* Linee luminose sopra e sotto il titolo */
+.title-container .line {
+    height: 6px; 
+    width: 80%;
+    margin: 15px auto;
+    border-radius: 3px;
+    background: linear-gradient(to right, rgba(0, 123, 255, 0.8), rgba(0, 191, 255, 1), rgba(0, 123, 255, 0.8));
+    box-shadow:
+        0 0 15px rgba(0, 191, 255, 0.7),
+        0 0 30px rgba(0, 191, 255, 0.5),
+        0 0 45px rgba(0, 191, 255, 0.3);
+    animation: pulse 2s infinite alternate;
+}
 
-    .title-content {
-        flex-direction: row;
-        align-items: center;
-        justify-content: center;
-        gap: 10px;
-        flex-wrap: wrap;
-    }
+/* Animazione LED pulsante */
+@keyframes pulse {
+    0% { opacity: 0.8; transform: scaleX(1); }
+    50% { opacity: 1; transform: scaleX(1.05); }
+    100% { opacity: 0.8; transform: scaleX(1); }
+}
 
-    .hero-header .logo {
-        max-width: 60px;
-    }
+/* Contenuto del titolo (logo + testo) */
+.title-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
 
-    .hero-header h1 {
-        font-size: 1.5rem;
-        line-height: 1.2;
-        text-align: left;
-    }
+/* Logo del titolo */
+.title-content .logo {
+    max-width: 150px;
+}
 
-    .subtitle {
-        font-size: 0.9rem;
-        margin-top: 8px;
-        text-align: center;
-    }
+/* Testo del titolo con effetto LED */
+.title-content h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #007BFF;
+    text-shadow:
+        0 0 5px #00bfff,
+        0 0 10px #00bfff,
+        0 0 15px #00bfff,
+        0 0 25px #00bfff,
+        0 0 35px #00bfff;
+    margin: 0;
+}
 
-    .line {
-        width: 95%;
-        margin: 6px auto;
-    }
+/* Sottotitolo */
+.subtitle {
+    text-align: center;
+    font-size: 1.2rem;
+    color: #004466; /* un blu scuro carino per contrastare lo sfondo chiaro */
+    max-width: 800px;
+    margin-top: 20px;
+}
+
+/* Sfondo generale della pagina */
+body {
+    background-color: #f5f5f5;
+    font-family: Arial, sans-serif;
+}
 
     /* NAVBAR */
     .navbar {
@@ -803,7 +838,7 @@ h2 {
 <body>
 <a href="index.html" class="torna-home">← Torna alla Home</a>
 
-<header class="hero-header" style="background-color: #a3d5ff; padding: 40px 0;">
+<header>
   <div class="title-container">
     <!-- Riga LED sopra -->
     <div class="line"></div>
@@ -815,13 +850,12 @@ h2 {
 
     <!-- Riga LED sotto -->
     <div class="line"></div>
+
+    <p class="subtitle">
+      Cooperativa Sociale specializzata nel supporto alle persone con Disturbo dello Spettro Autistico attraverso interventi basati sul metodo "ABA"
+    </p>
   </div>
-
-  <p class="subtitle">
-    Cooperativa Sociale specializzata nel supporto alle persone con Disturbo dello Spettro Autistico attraverso interventi basati sul metodo "ABA"
-  </p>
 </header>
-
 
 
 <nav class="navbar">
