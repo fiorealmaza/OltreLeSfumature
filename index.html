@@ -37,9 +37,9 @@ body {
 }
 
 header {
-    background-color: #cceeff; /* blu chiaro da bordo a bordo */
-    color: #004466;            /* colore testo sottotitolo */
-    padding: 0;                /* tutto lo spazio gestito da .title-container */
+    background-color: #cceeff; /* stesso blu chiaro del titolo */
+    color: #004466;             /* colore testo leggermente più scuro, come il sottotitolo */
+    padding: 0;                 /* lo spazio interno lo gestisce .title-container */
     text-align: center;
     position: relative;
     overflow: hidden;
@@ -485,20 +485,12 @@ box-shadow:0 0 25px rgba(0,119,255,0.9);
 
 /* LINEE LUMINOSE SOPRA E SOTTO IL TITOLO */
 .line {
-    width: 60%;  /* larghezza standard per PC/iPad */
+    width: 60%;
     height: 4px;
     background: linear-gradient(to right, transparent, #0077ff, transparent);
     box-shadow: 0 0 15px rgba(0,119,255,0.6);
     border-radius: 10px;
     margin: 20px auto; /* centra la linea e distanza sopra/sotto */
-}
-
-/* Mostra correttamente le linee LED su smartphone */
-@media (max-width: 480px) {
-    .line {
-        width: 95%;       /* quasi tutta la larghezza del telefono */
-        margin: 15px auto; /* margine più compatto */
-    }
 }
 
 /* ===== GRID SERVIZI ===== */
@@ -656,9 +648,6 @@ h2 {
     </p>
   </div>
 </header>
-
-<!-- Spazio dopo il titolo -->
-<div class="after-title-space"></div>
     
 <!-- ===== SEZIONE CHI SIAMO ===== -->
 <section id="chi-siamo">
@@ -708,40 +697,13 @@ h2 {
 
 <!-- ===== STILE CSS ===== -->
 <style>
-
-/* Titolo principale */
-.title-content h1 {
-    font-size: 3rem; /* base per telefoni piccoli */
+/* ===== TITOLO PRINCIPALE ===== */
+h2 {
+    color: #007BFF; /* blu principale */
+    text-shadow: 0 0 5px #00bfff, 0 0 10px #00bfff, 0 0 15px #00bfff; /* sfumatura esterna leggera */
+    text-align: center;
+    margin-bottom: 50px;
     font-weight: bold;
-    color: #007BFF;
-    margin: 0;
-    text-shadow:
-        0 0 5px #00bfff,
-        0 0 10px #00bfff,
-        0 0 15px #00bfff,
-        0 0 25px #00bfff,
-        0 0 35px #00bfff;
-}
-
-/* Schermi tablet / ipad */
-@media (min-width: 769px) and (max-width: 1024px) {
-    .title-content h1 {
-        font-size: 4rem; /* più grande su tablet */
-    }
-}
-
-/* Schermi desktop */
-@media (min-width: 1025px) {
-    .title-content h1 {
-        font-size: 5rem; /* ancora più grande su desktop */
-    }
-}
-
-/* Titolo mobile già esistente */
-@media (max-width: 768px) {
-    .title-content h1 {
-        font-size: 3rem; /* mantiene grandezza per telefoni */
-    }
 }
 
 /* ===== STILE BOX AUTISMO ===== */
@@ -937,57 +899,35 @@ h2 {
 body {
     background-color: #f5f5f5; /* colore pagina */
     margin: 0;
-    padding: 0 20px; /* margini laterali per tutta la pagina */
+    padding: 0;
     font-family: Arial, sans-serif;
 }
 
-/* BLOCCO TITOLO LED - solo per la HOME */
-body.home .title-container {
+/* BLOCCO TITOLO LED - unico blocco blu chiaro */
+.title-container {
     text-align: center;
-    margin: 0;                  /* nessun margine intorno */
-    padding-top: 220px;         /* spazio interno superiore */
-    padding-bottom: 80px;       /* spazio interno inferiore */
-    background-color: #cceeff;  /* blu chiaro */
-    width: 100vw;               /* tutta la larghezza della finestra */
-    position: relative;          /* mantiene contenuto centrato */
-    left: 0;
-    right: 0;
+    margin: 0;                /* niente margini extra */
+    padding: 80px 20px;       /* spazio interno */
+    background-color: #cceeff; /* blu chiaro */
+    border-radius: 0;      
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-
-/* Schermi più piccoli (tablet e telefoni) */
-@media (max-width: 768px) {
-    body.home .title-container {
-        padding-top: 180px;
-        padding-bottom: 60px;
-    }
+/* Linee luminose sopra e sotto */
+.line {
+    height: 6px;
+    width: 80%;
+    margin: 20px auto;
+    border-radius: 3px;
+    background: linear-gradient(to right, rgba(0,123,255,0.8), rgba(0,191,255,1), rgba(0,123,255,0.8));
+    box-shadow:
+        0 0 15px rgba(0,191,255,0.7),
+        0 0 30px rgba(0,191,255,0.5),
+        0 0 45px rgba(0,191,255,0.3);
+    animation: pulse 2s infinite alternate;
 }
-
-/* Schermi molto piccoli (smartphone stretti) */
-@media (max-width: 480px) {
-    body.home .title-container {
-        padding-top: 160px;
-        padding-bottom: 50px;
-    }
-}
-
-/* Contenuto subito dopo il titolo */
-body.home .after-title {
-    margin-top: 60px;  /* margine sotto il titolo */
-}
-
-@media (max-width: 768px) {
-    body.home .after-title {
-        margin-top: 50px;
-    }
-}
-
-@media (max-width: 480px) {
-    body.home .after-title {
-        margin-top: 40px;
-    }
-}
-
 
 /* Animazione LED pulsante */
 @keyframes pulse {
@@ -1013,8 +953,9 @@ body.home .after-title {
     object-fit: contain;
 }
 
+/* Titolo con effetto LED */
 .title-content h1 {
-    font-size: 4rem; /* più grande su PC e tablet */
+    font-size: 3rem;
     font-weight: bold;
     color: #007BFF;
     margin: 0;
@@ -1026,48 +967,22 @@ body.home .after-title {
         0 0 35px #00bfff;
 }
 
-/* Dimensione titolo per tablet */
-@media (max-width: 1024px) {
-    .title-content h1 {
-        font-size: 3.5rem;
-    }
-}
-
-/* Dimensione titolo per telefoni */
-@media (max-width: 768px) {
-    .title-content h1 {
-        font-size: 2.5rem;
-    }
-}
-
+/* Sottotitolo */
 .subtitle {
     text-align: center;
-    font-size: 1.3rem;  /* leggermente più grande su PC */
+    font-size: 1.2rem;
     color: #004466;
     max-width: 800px;
     margin: 25px auto 0 auto;
 }
 
-/* Sottotitolo tablet/telefono */
-@media (max-width: 1024px) {
-    .subtitle {
-        font-size: 1.2rem;
-    }
-}
-
-@media (max-width: 768px) {
-    .subtitle {
-        font-size: 1rem;
-        margin-top: 20px;
-    }
-}
-
 /* ===== STILE MOBILE PER TITOLO ===== */
 @media (max-width: 768px) {
+    /* Riduce il padding del blocco */
     .title-container {
-        padding: 25px 0 50px 0; /* blocco sempre da bordo a bordo */
+        padding: 25px 15px;
+        max-width: 90%;
     }
-}
 
     /* Logo più piccolo */
     .title-content .logo {
@@ -1084,7 +999,12 @@ body.home .after-title {
         font-size: 0.9rem;
     }
 
-
+    /* Linea sopra il titolo leggermente più piccola e distanza maggiore */
+    .line:first-of-type {
+        margin-top: 30px;
+        height: 4px;
+    }
+}
 
 </style>
 
