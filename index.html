@@ -775,7 +775,11 @@ box-shadow:0 0 25px rgba(0,119,255,0.9);
   </div>
 
 <!-- ===== SEZIONE LA STRUTTURA ===== -->
-<h3 class="offriamo-servizi" style="cursor:pointer;" onclick="toggleStruttura()">La struttura</h3>
+<div id="titolo-struttura" onclick="toggleStruttura()" 
+     style="cursor:pointer; display:flex; align-items:center; justify-content:center; gap:15px; max-width:500px; margin:40px auto 20px auto; padding:20px; border-radius:20px; background:linear-gradient(135deg,#cfe7ff,#e0f2ff); box-shadow:0 0 25px rgba(0,119,255,0.6); transition:0.4s;">
+  <span style="font-size:1.8rem; font-weight:700; color:#0077ff; text-align:center;">La struttura</span>
+  <span style="writing-mode: vertical-rl; font-size:1.5rem; font-weight:700; color:#0077ff;">&gt;&gt;</span>
+</div>
 
 <div id="quadro-struttura" style="display:none; margin-top:20px; padding:25px; border-radius:20px; box-shadow:0 0 25px rgba(0,119,255,0.6); background:white; max-width:1000px; margin-left:auto; margin-right:auto; transition:0.4s;">
   <p>La nostra struttura è organizzata per essere accogliente, sicura e funzionale allo sviluppo delle autonomie. Gli spazi sono pensati per favorire:</p>
@@ -790,6 +794,26 @@ box-shadow:0 0 25px rgba(0,119,255,0.9);
 </div>
 
 <script>
+function toggleStruttura() {
+    var quadro = document.getElementById("quadro-struttura");
+    if (quadro.style.display === "none") {
+        quadro.style.display = "block";
+        quadro.scrollIntoView({behavior: "smooth", block: "start"});
+    } else {
+        quadro.style.display = "none";
+    }
+}
+
+// Chiude il quadro se clicchi fuori
+document.addEventListener("click", function(event) {
+    var quadro = document.getElementById("quadro-struttura");
+    var titolo = document.getElementById("titolo-struttura");
+    if (!quadro.contains(event.target) && !titolo.contains(event.target)) {
+        quadro.style.display = "none";
+    }
+});
+</script>
+
 function toggleStruttura() {
     var quadro = document.getElementById("quadro-struttura");
     if (quadro.style.display === "none") {
