@@ -907,7 +907,7 @@ body {
 .title-container {
     text-align: center;
     margin: 0;
-    padding-top: 140px;         /* aumentato per far scendere il titolo sotto la navbar */
+    padding-top: 150px;         /* aumentato per far scendere il titolo sotto la navbar */
     padding-bottom: 80px;
     padding-left: 20px;
     padding-right: 20px;
@@ -916,6 +916,22 @@ body {
     max-width: 100%;
     margin-left: auto;
     margin-right: auto;
+}
+
+/* Schermi più piccoli (smartphone) */
+@media (max-width: 768px) {
+    .title-container {
+        padding-top: 120px;  /* meno spazio su telefoni e tablet piccoli */
+        padding-bottom: 60px;
+    }
+}
+
+/* Schermi molto piccoli (es. telefoni stretti) */
+@media (max-width: 480px) {
+    .title-container {
+        padding-top: 100px;  /* ottimizza per telefoni piccoli */
+        padding-bottom: 50px;
+    }
 }
 
 /* Linee luminose sopra e sotto */
