@@ -736,15 +736,13 @@ box-shadow:0 0 25px rgba(0,119,255,0.9);
     transition: 0.4s;
 }
 
-/* ===== ILLUMINA I TITOLI PRINCIPALI DELLE SEZIONI ===== */
+/* ===== ILLUMINA TUTTI I TITOLI PRINCIPALI DELLE SEZIONI ===== */
 h2 {
-    color: #007BFF; /* blu principale */
-    text-shadow: 
-        0 0 5px #00bfff, 
-        0 0 10px #00bfff, 
-        0 0 15px #00bfff; /* effetto luminoso azzurro chiaro */
+    color: #007BFF; /* blu uniforme come gli altri titoli */
+    text-shadow: 0 0 3px #00bfff, 0 0 6px #00bfff; /* luminosità più leggera e leggibile */
     text-align: center; /* centra tutti i titoli */
-    margin-bottom: 40px; /* distanza dal contenuto sotto */
+    margin-bottom: 50px; /* distanza dal contenuto sotto */
+    font-weight: bold; /* grassetto */
 }
 
 </style>
@@ -848,12 +846,8 @@ h2 {
 <!-- ===== SEZIONE STORIA DELL’AUTISMO ===== -->
 <section id="storia-autismo" style="margin-top:50px; margin-bottom:50px;">
 
-  <!-- TITOLO ILLUMINATO CON BLU DEI QUADRI -->
-  <h2 style="text-align:center; color:#004a99; 
-      text-shadow: 0 0 5px #4da6ff, 0 0 10px #4da6ff, 0 0 15px #4da6ff, 0 0 20px #4da6ff; 
-      margin-bottom:50px; font-weight:bold;">
-    La storia dell’autismo💙🧩
-  </h2>
+ <!-- ===== TITOLO ILLUMINATO PRINCIPALE ===== -->
+<h2>La storia dell’autismo💙🧩</h2>
 
   <!-- BOX UNO SOTTO L’ALTRO -->
   <div style="display:grid; grid-template-columns:1fr; gap:30px; max-width:800px; margin:0 auto;">
