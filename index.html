@@ -681,6 +681,51 @@ box-shadow:0 0 25px rgba(0,119,255,0.9);
     gap: 30px; /* distanza tra i box */
     margin-top: 40px; /* distanza dal titolo "Offriamo servizi concreti come" */
 }
+
+/* ===== NUOVO STILE SERVIZI COME STRUTTURA ===== */
+.box-servizio {
+    background: linear-gradient(135deg,#cfe7ff,#e0f2ff);
+    border-radius: 25px;
+    box-shadow: 0 0 25px rgba(0,119,255,0.6);
+    padding: 25px;
+    position: relative;
+    cursor: pointer;
+    transition: 0.4s;
+    margin-bottom: 20px; /* distanza tra i box quando sono uno sotto l’altro */
+}
+
+.box-servizio:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 0 35px rgba(0,119,255,0.9);
+}
+
+.box-servizio .approfondisci {
+    position: absolute;
+    bottom: 15px;
+    right: 20px;
+    font-weight: 600;
+    text-decoration: none;
+    color: #0077ff;
+    transition: text-shadow 0.3s ease, transform 0.2s ease;
+}
+
+.box-servizio .approfondisci:hover {
+    text-shadow: 0 0 6px rgba(0,119,255,0.6), 0 0 12px rgba(0,170,255,0.4);
+    transform: scale(1.03);
+}
+
+/* ===== STILE STRUTTURA COME VECCHI SERVIZI ===== */
+#quadro-struttura {
+    background: #cfe7ff; /* azzurro chiaro */
+    border-radius: 20px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+    padding: 30px;
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+    transition: 0.4s;
+}
+
 </style>
 
 <body>
@@ -733,17 +778,15 @@ box-shadow:0 0 25px rgba(0,119,255,0.9);
 </nav>
 
     
-<!-- ===== SEZIONE CHI SIAMO / COSA OFFRIAMO ===== -->
+<!-- ===== SEZIONE CHI SIAMO / SERVIZI ===== -->
 <section id="chi-siamo">
   <div class="chi-siamo-container">
     <!-- TESTO -->
     <div class="chi-siamo-testo">
       <h2>Chi siamo</h2>
-      <p>La Cooperativa Sociale <strong>“Oltre le Sfumature”</strong> offre supporto e trattamenti specializzati per persone adulte nello spettro autistico.
-
-      <p> La nostra missione è accompagnare ogni individuo verso il raggiungimento di una maggiore autonomia personale, sociale e lavorativa, promuovendo il benessere, l’inclusione e una qualità di vita adulta piena e soddisfacente.
-
-      <p> Crediamo che ogni persona possieda potenzialità uniche. Il nostro impegno è riconoscerle e valorizzarle attraverso servizi altamente specializzati, approcci scientificamente validati e percorsi individualizzati, costruiti nel rispetto della dignità, dei tempi e delle caratteristiche di ciascun utente.</p>
+      <p>La Cooperativa Sociale <strong>“Oltre le Sfumature”</strong> offre supporto e trattamenti specializzati per persone adulte nello spettro autistico.</p>
+      <p>La nostra missione è accompagnare ogni individuo verso il raggiungimento di una maggiore autonomia personale, sociale e lavorativa, promuovendo il benessere, l’inclusione e una qualità di vita adulta piena e soddisfacente.</p>
+      <p>Crediamo che ogni persona possieda potenzialità uniche. Il nostro impegno è riconoscerle e valorizzarle attraverso servizi altamente specializzati, approcci scientificamente validati e percorsi individualizzati, costruiti nel rispetto della dignità, dei tempi e delle caratteristiche di ciascun utente.</p>
     </div>
 
     <!-- IMMAGINE -->
@@ -752,55 +795,65 @@ box-shadow:0 0 25px rgba(0,119,255,0.9);
     </div>
   </div>
 
-  <!-- SERVIZI -->
-  <h3 class="offriamo-servizi">Offriamo servizi concreti come:</h3>
-  <div class="grid-servizi">
-    <div class="box box-servizio">
-      <h3>Centro Diurno</h3>
-      <p>Supporto educativo e sociale per bambini e adolescenti, con attività mirate allo sviluppo di autonomie e abilità sociali.</p>
-      <p class="approfondisci" onclick="window.location.href='centro-diurno.html'">Approfondisci di più →</p>
-    </div>
+ <!-- ===== SEZIONE SERVIZI ===== -->
+<h3 class="offriamo-servizi-left">I nostri servizi</h3>
 
-    <div class="box box-servizio">
+<div class="grid-servizi">
+
+  <div class="box-servizio">
+    <h3>Centro Diurno</h3>
+    <p>Supporto educativo e sociale per bambini e adolescenti, con attività mirate allo sviluppo di autonomie e abilità sociali.</p>
+    <p class="approfondisci" onclick="window.location.href='centro-diurno.html'">Approfondisci →</p>
+  </div>
+
+  <div class="box-servizio">
+    <h3>Progetto “Dopo di Noi”</h3>
+    <p>Percorsi dedicati ai giovani adulti con Disturbo dello Spettro Autistico, per prepararsi all’autonomia personale e sociale.</p>
+    <p class="approfondisci" onclick="window.location.href='dopo-di-noi.html'">Approfondisci →</p>
+  </div>
+
+  <div class="box-servizio">
+    <h3>Laboratori e attività educative</h3>
+    <p>Laboratori mirati all’apprendimento, alla socializzazione e allo sviluppo di abilità pratiche per ogni età.</p>
+    <p class="approfondisci" onclick="window.location.href='laboratori.html'">Approfondisci →</p>
+  </div>
+
+</div>
+
+    <div class="servizio-box" onclick="this.classList.toggle('aperto')">
       <h3>Progetto “Dopo di Noi”</h3>
-      <p>Percorsi dedicati ai giovani adulti con Disturbo dello Spettro Autistico, per prepararsi all’autonomia personale e sociale.</p>
-      <p class="approfondisci" onclick="window.location.href='dopo-di-noi.html'">Approfondisci di più →</p>
+      <p class="descrizione">Percorsi dedicati ai giovani adulti con Disturbo dello Spettro Autistico, per prepararsi all’autonomia personale e sociale.</p>
+      <div class="approfondisci-box" onclick="window.location.href='dopo-di-noi.html'">
+        <span>Approfondisci →</span>
+      </div>
     </div>
 
-    <div class="box box-servizio">
+    <div class="servizio-box" onclick="this.classList.toggle('aperto')">
       <h3>Laboratori e attività educative</h3>
-      <p>Laboratori mirati all’apprendimento, alla socializzazione e allo sviluppo di abilità pratiche per ogni età.</p>
-      <p class="approfondisci" onclick="window.location.href='laboratori.html'">Approfondisci di più →</p>
+      <p class="descrizione">Laboratori mirati all’apprendimento, alla socializzazione e allo sviluppo di abilità pratiche per ogni età.</p>
+      <div class="approfondisci-box" onclick="window.location.href='laboratori.html'">
+        <span>Approfondisci →</span>
+      </div>
     </div>
+
   </div>
 
-<!-- ===== SEZIONE LA STRUTTURA AGGIORNATA ===== -->
-<div id="titolo-struttura" onclick="toggleStruttura()" 
-     style="cursor:pointer; display:flex; align-items:center; justify-content:center; gap:15px; 
-            max-width:500px; margin:60px auto 40px auto; /* <-- modificato */
-            padding:25px; border-radius:25px; 
-            background:linear-gradient(135deg,#cfe7ff,#e0f2ff); 
-            box-shadow:0 0 25px rgba(0,119,255,0.6); transition:0.4s;">
-  <div style="text-align:center;">
-    <span style="font-size:1.8rem; font-weight:700; color:#0077ff;">La struttura</span>
-    <p style="font-size:1rem; color:#0055aa; margin-top:5px;">Clicca qui</p>
+  <!-- STRUTTURA DIVENTA BOX STANDARD -->
+  <div id="quadro-struttura-standard" style="margin-top:50px; padding:30px; border-radius:20px; box-shadow:0 5px 15px rgba(0,0,0,0.08); background:#cfe7ff; max-width:1000px; margin-left:auto; margin-right:auto;">
+    <h3>La struttura</h3>
+    <p>La nostra struttura è organizzata per essere accogliente, sicura e funzionale allo sviluppo delle autonomie. Gli spazi sono pensati per favorire:</p>
+    <ul>
+      <li>Attività educative individuali e di gruppo</li>
+      <li>Laboratori di autonomia domestica</li>
+      <li>Ambienti che riproducono situazioni di vita quotidiana</li>
+      <li>Attività formative e psico-educative</li>
+      <li>Momenti di socializzazione e inclusione</li>
+    </ul>
+    <p>Ogni ambiente è strutturato per garantire prevedibilità, riduzione dello stress sensoriale e sicurezza.</p>
   </div>
-  <span style="writing-mode: vertical-rl; font-size:1.5rem; font-weight:700; color:#0077ff;">&gt;&gt;</span>
-</div>
 
-<div id="quadro-struttura" style="display:none; margin-top:20px; padding:30px; border-radius:25px; box-shadow:0 0 25px rgba(0,119,255,0.6); background:white; max-width:1000px; margin-left:auto; margin-right:auto; transition:0.4s;">
-  <p>La nostra struttura è organizzata per essere accogliente, sicura e funzionale allo sviluppo delle autonomie. Gli spazi sono pensati per favorire:</p>
-  <ul>
-    <li>Attività educative individuali e di gruppo</li>
-    <li>Laboratori di autonomia domestica</li>
-    <li>Ambienti che riproducono situazioni di vita quotidiana</li>
-    <li>Attività formative e psico-educative</li>
-    <li>Momenti di socializzazione e inclusione</li>
-  </ul>
-  <p>Ogni ambiente è strutturato per garantire prevedibilità, riduzione dello stress sensoriale e sicurezza.</p>
-</div>
+</section>
 
-<script>
 function toggleStruttura() {
     var quadro = document.getElementById("quadro-struttura");
     if (quadro.style.display === "none") {
