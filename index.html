@@ -193,7 +193,7 @@ to{opacity:1;transform:translateY(0);}
     left: 0;
     right: 0;
     background: white;
-    padding: 10px 10px;
+    padding: 15px 10px;
     display: flex;
     justify-content: flex-end; /* hamburger a destra */
     box-shadow: 0 4px 12px rgba(0,0,0,0.08);
@@ -907,7 +907,7 @@ body {
 .title-container {
     text-align: center;
     margin: 0;                /* niente margini extra */
-    padding: 80px 20px;       /* spazio interno */
+    padding: 50px 20px;       /* spazio interno */
     background-color: #cceeff; /* blu chiaro */
     border-radius: 0;      
     max-width: 100%;
@@ -1281,9 +1281,27 @@ Una valutazione precoce permette di intervenire tempestivamente e offrire suppor
 </section>
 
 
+
 <footer>
-    <p>© 2026 Oltre Le Sfumature 💙🧩</p>
+<p>© 2026 Oltre Le Sfumature 💙🧩</p>
 </footer>
+<script>
+function toggleMenu() {
+    var menu = document.getElementById("menu");
+    menu.style.display = menu.style.display === "flex" ? "none" : "flex";
+}
+
+// Evidenzia il link cliccato MA non chiude il menu
+document.querySelectorAll("#menu a").forEach(link => {
+    link.addEventListener("click", function() {
+
+        document.querySelectorAll("#menu a").forEach(l => 
+            l.classList.remove("active")
+        );
+
+        this.classList.add("active");
+    });
+});
 
 <script>
 // Riferimenti agli elementi
@@ -1298,12 +1316,13 @@ hamburger.addEventListener("click", function(event) {
         menu.style.display = "none"; // chiudi il menu
     } else {
         menu.style.display = "flex";           // apri il menu
-        menu.style.flexDirection = "column";   // sempre in colonna
+        menu.style.flexDirection = "column";   // assicurati che sia colonna
     }
 });
 
 // Chiudi il menu se clicchi fuori
 document.addEventListener("click", function(event) {
+    // Se il menu è aperto e il click NON è sull'hamburger o sul menu
     if (menu.style.display === "flex" &&
         !menu.contains(event.target) &&
         !hamburger.contains(event.target)) {
@@ -1315,30 +1334,6 @@ document.addEventListener("click", function(event) {
 menu.addEventListener("click", function(event) {
     event.stopPropagation();
 });
-
-// Evidenzia il link cliccato e illumina al passaggio del mouse
-const links = document.querySelectorAll("#menu a");
-
-links.forEach(link => {
-    // Evidenzia al click
-    link.addEventListener("click", function() {
-        links.forEach(l => l.classList.remove("active"));
-        this.classList.add("active");
-    });
-
-    // Illumina al passaggio del mouse
-    link.addEventListener("mouseenter", function() {
-        this.style.textShadow = 
-            "0 0 6px rgba(0, 119, 255, 0.6), 0 0 12px rgba(0, 170, 255, 0.4)";
-        this.style.transition = "text-shadow 0.3s ease, transform 0.2s ease";
-        this.style.transform = "scale(1.03)";
-    });
-
-    link.addEventListener("mouseleave", function() {
-        if (!this.classList.contains("active")) {
-            this.style.textShadow = "none";
-            this.style.transform = "scale(1)";
-        }
-    });
-});
 </script>
+</body>
+</html>
