@@ -227,17 +227,16 @@ color:#0077ff;
 }
 
 .menu{
-list-style:none;
-position:absolute;
-top:60px;
-right:20px;
-background:white;
-padding:20px 30px;
-border-radius:20px;
-box-shadow:0 8px 25px rgba(0,0,0,0.15);
-display:none;
-flex-direction:column;
-gap:15px;
+    list-style: none;
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    background: white;
+    padding: 20px 30px;
+    border-radius: 20px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+    display: none;          /* nascosto di default */
+    gap: 15px;              /* mantiene lo spazio tra i link */
 }
 
 .menu li a:hover,
@@ -637,7 +636,6 @@ h2 {
 
 </style>
 
-<body>
 <a href="index.html" class="torna-home">← Torna alla Home</a>
 
 
@@ -1345,7 +1343,13 @@ const menu = document.getElementById("menu");
 // Funzione per aprire/chiudere menu al click sull'hamburger
 hamburger.addEventListener("click", function(event) {
     event.stopPropagation(); // evita che il click chiuda subito il menu
-    menu.style.display = (menu.style.display === "flex") ? "none" : "flex";
+
+    if (menu.style.display === "flex") {
+        menu.style.display = "none"; // chiudi il menu
+    } else {
+        menu.style.display = "flex";           // apri il menu
+        menu.style.flexDirection = "column";   // assicurati che sia colonna
+    }
 });
 
 // Chiudi il menu se clicchi fuori
