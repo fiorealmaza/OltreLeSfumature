@@ -967,26 +967,20 @@ header {
         0 0 35px #00bfff;
 }
 
-/* Sottotitolo */
+/* Sottotitolo generale */
 .subtitle {
     text-align: center;
-    font-size: 1.2rem;
+    font-size: 1.2rem; /* dimensione normale su PC/iPad */
     color: #004466;
     max-width: 800px;
     margin: 25px auto 0 auto;
 }
 
-/* ===== STILE MOBILE ===== */
+/* Sottotitolo su telefoni piccoli */
 @media (max-width: 768px) {
-    .title-container {
-        padding-top: 160px;      /* abbastanza per telefono, sotto la barra */
-        padding-bottom: 60px;
-    }
-    .title-content h1 {
-        font-size: 2rem;         /* più piccolo su telefono */
-    }
-    .line {
-        width: 90%;              /* linea più larga su schermi stretti */
+    .subtitle {
+        font-size: 0.9rem; /* più piccolo per smartphone */
+        margin-top: 15px;  /* riduce un po' lo spazio sopra */
     }
 }
 
