@@ -954,8 +954,9 @@ header {
     object-fit: contain;
 }
 
+/* Titolo generale (PC e tablet) */
 .title-content h1 {
-    font-size: 3.5rem;           /* più grande su pc e tablet */
+    font-size: 3rem;           /* dimensione più grande su PC e tablet */
     font-weight: bold;
     color: #007BFF;
     margin: 0;
@@ -965,6 +966,13 @@ header {
         0 0 15px #00bfff,
         0 0 25px #00bfff,
         0 0 35px #00bfff;
+}
+
+/* Titolo su telefoni */
+@media (max-width: 768px) {
+    .title-content h1 {
+        font-size: 1.8rem;    /* più piccolo su smartphone */
+    }
 }
 
 /* Sottotitolo generale */
