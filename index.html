@@ -773,6 +773,43 @@ box-shadow:0 0 25px rgba(0,119,255,0.9);
       <p class="approfondisci" onclick="window.location.href='laboratori.html'">Approfondisci di più →</p>
     </div>
   </div>
+
+<!-- ===== SEZIONE LA STRUTTURA ===== -->
+<h3 class="offriamo-servizi" style="cursor:pointer;" onclick="toggleStruttura()">La struttura</h3>
+
+<div id="quadro-struttura" style="display:none; margin-top:20px; padding:25px; border-radius:20px; box-shadow:0 0 25px rgba(0,119,255,0.6); background:white; max-width:1000px; margin-left:auto; margin-right:auto; transition:0.4s;">
+  <p>La nostra struttura è organizzata per essere accogliente, sicura e funzionale allo sviluppo delle autonomie. Gli spazi sono pensati per favorire:</p>
+  <ul>
+    <li>Attività educative individuali e di gruppo</li>
+    <li>Laboratori di autonomia domestica</li>
+    <li>Ambienti che riproducono situazioni di vita quotidiana</li>
+    <li>Attività formative e psico-educative</li>
+    <li>Momenti di socializzazione e inclusione</li>
+  </ul>
+  <p>Ogni ambiente è strutturato per garantire prevedibilità, riduzione dello stress sensoriale e sicurezza.</p>
+</div>
+
+<script>
+function toggleStruttura() {
+    var quadro = document.getElementById("quadro-struttura");
+    if (quadro.style.display === "none") {
+        quadro.style.display = "block";
+        quadro.scrollIntoView({behavior: "smooth", block: "start"});
+    } else {
+        quadro.style.display = "none";
+    }
+}
+
+// Chiude il quadro se clicchi fuori
+document.addEventListener("click", function(event) {
+    var quadro = document.getElementById("quadro-struttura");
+    var titolo = document.querySelector('h3[onclick="toggleStruttura()"]');
+    if (!quadro.contains(event.target) && !titolo.contains(event.target)) {
+        quadro.style.display = "none";
+    }
+});
+</script>
+
 </section>
 
 <!-- ===== SEZIONE COS'È LO SPETTRO ===== -->
