@@ -938,7 +938,7 @@ header {
     animation: pulse 2s infinite alternate;
 }
 
-/* Titolo e logo */
+/* ===== Titolo e logo ===== */
 .title-content {
     display: flex;
     flex-direction: row;       
@@ -948,15 +948,16 @@ header {
     flex-wrap: wrap;
 }
 
+/* Logo leggermente più piccolo */
 .logo {
-    width: 130px;
+    width: 120px; /* ridotto da 130px */
     height: auto;
     object-fit: contain;
 }
 
 /* Titolo generale (PC e tablet) */
 .title-content h1 {
-    font-size: 3rem;           /* dimensione più grande su PC e tablet */
+    font-size: 3.2rem; /* leggermente più grande */
     font-weight: bold;
     color: #007BFF;
     margin: 0;
@@ -968,10 +969,15 @@ header {
         0 0 35px #00bfff;
 }
 
-/* Titolo su telefoni */
+/* Titolo su smartphone */
 @media (max-width: 768px) {
     .title-content h1 {
-        font-size: 1.8rem;    /* più piccolo su smartphone */
+        font-size: 1.8rem; /* resta più piccolo per schermi stretti */
+    }
+    
+    /* Logo più piccolo su smartphone */
+    .title-content .logo {
+        width: 80px;
     }
 }
 
@@ -988,11 +994,9 @@ header {
 @media (max-width: 768px) {
     .subtitle {
         font-size: 0.9rem; /* più piccolo per smartphone */
-        margin-top: 15px;  /* riduce un po' lo spazio sopra */
+        margin-top: 15px;  /* spazio sopra ridotto */
     }
 }
-
-</style>
 
 <!-- FINE SEZIONE CHI SIAMO / COSA OFFRIAMO -->
 
