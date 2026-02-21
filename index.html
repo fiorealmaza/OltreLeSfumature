@@ -1340,12 +1340,19 @@ document.querySelectorAll("#menu a").forEach(link => {
 });
 
 <script>
-// Se clicchi fuori dal menu, chiudi
-document.addEventListener("click", function(event) {
-    const menu = document.getElementById("menu");
-    const hamburger = document.querySelector(".hamburger");
+// Riferimenti agli elementi
+const hamburger = document.querySelector(".hamburger");
+const menu = document.getElementById("menu");
 
-    // Se il menu è aperto e il click NON è sul menu o sull'hamburger, chiudi
+// Funzione per aprire/chiudere menu al click sull'hamburger
+hamburger.addEventListener("click", function(event) {
+    event.stopPropagation(); // evita che il click chiuda subito il menu
+    menu.style.display = (menu.style.display === "flex") ? "none" : "flex";
+});
+
+// Chiudi il menu se clicchi fuori
+document.addEventListener("click", function(event) {
+    // Se il menu è aperto e il click NON è sull'hamburger o sul menu
     if (menu.style.display === "flex" &&
         !menu.contains(event.target) &&
         !hamburger.contains(event.target)) {
@@ -1353,13 +1360,10 @@ document.addEventListener("click", function(event) {
     }
 });
 
-// Funzione per aprire/chiudere menu
-function toggleMenu() {
-    const menu = document.getElementById('menu');
-    menu.style.display = (menu.style.display === 'flex') ? 'none' : 'flex';
-}
+// Previeni che clic dentro il menu chiuda tutto
+menu.addEventListener("click", function(event) {
+    event.stopPropagation();
+});
 </script>
-</body>
-
 </body>
 </html>
