@@ -917,18 +917,18 @@ header {
 .title-container {
     text-align: center;
     margin: 0;                   /* niente margini extra */
-    padding-top: 120px;          /* spazio sufficiente per stare sotto la barra del menu */
+    padding-top: 140px;          /* spazio sufficiente per stare sotto la barra del menu */
     padding-bottom: 80px;        /* spazio sotto */
     background-color: #cceeff;   /* blu chiaro */
     width: 100vw;                /* tutta la larghezza della finestra */
     position: relative;          /* mantiene contenuto centrato */
 }
 
-/* Linea sopra il titolo (LED) */
-.line:first-of-type {
+/* Linee luminose sopra e sotto - identiche */
+.line {
     height: 6px;
     width: 80%;
-    margin: 20px auto 20px auto;  /* distanza sopra/sotto la linea */
+    margin: 20px auto;           /* distanza sopra/sotto la linea */
     border-radius: 3px;
     background: linear-gradient(to right, rgba(0,123,255,0.8), rgba(0,191,255,1), rgba(0,123,255,0.8));
     box-shadow:
@@ -938,33 +938,24 @@ header {
     animation: pulse 2s infinite alternate;
 }
 
-/* Animazione LED pulsante */
-@keyframes pulse {
-    0% { opacity: 0.8; transform: scaleX(1); }
-    50% { opacity: 1; transform: scaleX(1.05); }
-    100% { opacity: 0.8; transform: scaleX(1); }
-}
-
-/* Contenuto titolo (logo + testo) */
+/* Titolo e logo */
 .title-content {
     display: flex;
-    flex-direction: row;       /* logo a sinistra, titolo a destra */
+    flex-direction: row;       
     align-items: center;
     justify-content: center;
     gap: 20px;
     flex-wrap: wrap;
 }
 
-/* Logo */
 .logo {
     width: 130px;
     height: auto;
     object-fit: contain;
 }
 
-/* Titolo con effetto LED */
 .title-content h1 {
-    font-size: 3rem;
+    font-size: 3.5rem;           /* più grande su pc e tablet */
     font-weight: bold;
     color: #007BFF;
     margin: 0;
@@ -985,44 +976,19 @@ header {
     margin: 25px auto 0 auto;
 }
 
-/* ===== STILE MOBILE PER TITOLO ===== */
+/* ===== STILE MOBILE ===== */
 @media (max-width: 768px) {
-    /* Riduce il padding del blocco */
     .title-container {
-        padding: 25px 15px;
-        max-width: 90%;
+        padding-top: 160px;      /* abbastanza per telefono, sotto la barra */
+        padding-bottom: 60px;
     }
-
-    /* Logo più piccolo */
-    .title-content .logo {
-        width: 80px;
-    }
-
-    /* Titolo più piccolo */
     .title-content h1 {
-        font-size: 1.8rem;
+        font-size: 2rem;         /* più piccolo su telefono */
     }
-
-    /* Sottotitolo più piccolo */
-    .subtitle {
-        font-size: 0.9rem;
+    .line {
+        width: 90%;              /* linea più larga su schermi stretti */
     }
-
-    /* Linea sopra il titolo visibile su tutti i dispositivi */
-.line:first-of-type {
-    width: 90%;             /* più stretta rispetto a 100%, così si vede su telefono */
-    height: 6px;            /* altezza standard per visibilità */
-    margin: 25px auto 20px auto; /* margine sopra e sotto */
-    border-radius: 3px;
-    background: linear-gradient(to right, rgba(0,123,255,0.8), rgba(0,191,255,1), rgba(0,123,255,0.8));
-    box-shadow:
-        0 0 15px rgba(0,191,255,0.7),
-        0 0 30px rgba(0,191,255,0.5),
-        0 0 45px rgba(0,191,255,0.3);
-    animation: pulse 2s infinite alternate;
 }
-
-</style>
 
 <!-- FINE SEZIONE CHI SIAMO / COSA OFFRIAMO -->
 
