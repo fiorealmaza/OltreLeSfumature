@@ -906,12 +906,14 @@ body {
 /* BLOCCO TITOLO LED - solo per la HOME */
 body.home .title-container {
     text-align: center;
-    margin: 0; /* da bordo a bordo */
+    margin: 0; /* blocco titolo da bordo a bordo */
     padding-top: 220px;       /* spazio per navbar */
     padding-bottom: 80px;
     background-color: #cceeff;
     border-radius: 0;      
     width: 100%; /* esteso su tutta la larghezza */
+    /* Aggiungo margine extra sotto il blocco */
+    margin-bottom: 60px; /* spazio tra titolo e resto della pagina */
 }
 
 /* Schermi più piccoli (tablet e telefoni piccoli) */
@@ -919,6 +921,7 @@ body.home .title-container {
     body.home .title-container {
         padding-top: 180px;
         padding-bottom: 60px;
+        margin-bottom: 50px; /* margine leggermente più piccolo su mobile */
     }
 }
 
@@ -927,6 +930,7 @@ body.home .title-container {
     body.home .title-container {
         padding-top: 160px;
         padding-bottom: 50px;
+        margin-bottom: 40px; /* margine ottimizzato per telefoni stretti */
     }
 }
 
