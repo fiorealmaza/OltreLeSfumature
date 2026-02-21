@@ -852,26 +852,6 @@ box-shadow:0 0 25px rgba(0,119,255,0.9);
     <p>Ogni ambiente è strutturato per garantire prevedibilità, riduzione dello stress sensoriale e sicurezza.</p>
   </div>
 
-</section>
-
-function toggleStruttura() {
-    var quadro = document.getElementById("quadro-struttura");
-    if (quadro.style.display === "none") {
-        quadro.style.display = "block";
-        quadro.scrollIntoView({behavior: "smooth", block: "start"});
-    } else {
-        quadro.style.display = "none";
-    }
-}
-
-// Chiude il quadro se clicchi fuori
-document.addEventListener("click", function(event) {
-    var quadro = document.getElementById("quadro-struttura");
-    var titolo = document.getElementById("titolo-struttura");
-    if (!quadro.contains(event.target) && !titolo.contains(event.target)) {
-        quadro.style.display = "none";
-    }
-});
 </script>
 
 </section>
