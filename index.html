@@ -906,31 +906,24 @@ body {
 /* BLOCCO TITOLO LED - solo per la HOME */
 body.home .title-container {
     text-align: center;
-    margin: 0;
-    padding-top: 200px;       /* più spazio per far scendere il titolo sotto la navbar */
-    padding-bottom: 80px;
-    padding-left: 20px;
-    padding-right: 20px;
+    margin: 0 auto;
+    padding: 220px 20px 80px 20px; /* padding-top aumentato per non essere coperto dalla navbar */
     background-color: #cceeff;
     border-radius: 0;      
     max-width: 100%;
-    margin-left: auto;
-    margin-right: auto;
 }
 
 /* Schermi più piccoli (tablet e telefoni piccoli) */
 @media (max-width: 768px) {
     body.home .title-container {
-        padding-top: 160px;   /* ridotto per schermi più piccoli */
-        padding-bottom: 60px;
+        padding: 180px 20px 60px 20px; /* ridotto per schermi più piccoli */
     }
 }
 
 /* Schermi molto piccoli (smartphone stretti) */
 @media (max-width: 480px) {
     body.home .title-container {
-        padding-top: 140px;   /* ottimizzato per telefoni piccoli */
-        padding-bottom: 50px;
+        padding: 160px 15px 50px 15px; /* ottimizzato per telefoni piccoli */
     }
 }
 
@@ -972,7 +965,6 @@ body.home .title-container {
     object-fit: contain;
 }
 
-/* Titolo con effetto LED */
 .title-content h1 {
     font-size: 3rem;
     font-weight: bold;
@@ -997,11 +989,11 @@ body.home .title-container {
 
 /* ===== STILE MOBILE PER TITOLO ===== */
 @media (max-width: 768px) {
-    /* Riduce il padding del blocco */
     .title-container {
-        padding: 25px 15px;
+        padding: 25px 15px 50px 15px; /* padding ottimizzato mobile */
         max-width: 90%;
     }
+}
 
     /* Logo più piccolo */
     .title-content .logo {
