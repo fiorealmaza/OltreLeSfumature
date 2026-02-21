@@ -37,9 +37,9 @@ body {
 }
 
 header {
-    background-color: #cceeff; /* stesso blu chiaro del titolo */
-    color: #004466;             /* colore testo leggermente più scuro, come il sottotitolo */
-    padding: 0;                 /* lo spazio interno lo gestisce .title-container */
+    background-color: #cceeff; /* blu chiaro da bordo a bordo */
+    color: #004466;            /* colore testo sottotitolo */
+    padding: 0;                /* tutto lo spazio gestito da .title-container */
     text-align: center;
     position: relative;
     overflow: hidden;
@@ -648,6 +648,9 @@ h2 {
     </p>
   </div>
 </header>
+
+<!-- Spazio dopo il titolo -->
+<div class="after-title-space"></div>
     
 <!-- ===== SEZIONE CHI SIAMO ===== -->
 <section id="chi-siamo">
@@ -933,15 +936,16 @@ body {
 /* BLOCCO TITOLO LED - solo per la HOME */
 body.home .title-container {
     text-align: center;
-    margin: 0;                 /* nessun margine */
-    padding-top: 220px;        /* spazio interno superiore */
-    padding-bottom: 80px;      /* spazio interno inferiore */
-    background-color: #cceeff; /* blu chiaro */
+    margin: 0;                  /* nessun margine intorno */
+    padding-top: 220px;         /* spazio interno superiore */
+    padding-bottom: 80px;       /* spazio interno inferiore */
+    background-color: #cceeff;  /* blu chiaro */
     width: 100vw;               /* tutta la larghezza della finestra */
-    position: relative;         /* mantiene contenuto centrato */
+    position: relative;          /* mantiene contenuto centrato */
     left: 0;
     right: 0;
 }
+
 
 /* Schermi più piccoli (tablet e telefoni) */
 @media (max-width: 768px) {
@@ -1015,7 +1019,7 @@ body.home .after-title {
 }
 
 .title-content h1 {
-    font-size: 3rem;
+    font-size: 4rem; /* più grande su PC e tablet */
     font-weight: bold;
     color: #007BFF;
     margin: 0;
@@ -1027,13 +1031,40 @@ body.home .after-title {
         0 0 35px #00bfff;
 }
 
-/* Sottotitolo */
+/* Dimensione titolo per tablet */
+@media (max-width: 1024px) {
+    .title-content h1 {
+        font-size: 3.5rem;
+    }
+}
+
+/* Dimensione titolo per telefoni */
+@media (max-width: 768px) {
+    .title-content h1 {
+        font-size: 2.5rem;
+    }
+}
+
 .subtitle {
     text-align: center;
-    font-size: 1.2rem;
+    font-size: 1.3rem;  /* leggermente più grande su PC */
     color: #004466;
     max-width: 800px;
     margin: 25px auto 0 auto;
+}
+
+/* Sottotitolo tablet/telefono */
+@media (max-width: 1024px) {
+    .subtitle {
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .subtitle {
+        font-size: 1rem;
+        margin-top: 20px;
+    }
 }
 
 /* ===== STILE MOBILE PER TITOLO ===== */
