@@ -171,45 +171,6 @@ from{opacity:0;transform:translateY(30px);}
 to{opacity:1;transform:translateY(0);}
 }
 
-/* Titolo LED principale */
-.title-container {
-    text-align: center;
-    margin: 50px 0;
-    background-color: #cceeff; /* BLU CHIARO CARINO */
-    padding: 40px 20px; /* spazio attorno a logo, titolo e sottotitolo */
-    border-radius: 12px; /* angoli arrotondati */
-    position: relative; /* necessario se vuoi effetti LED sopra e sotto */
-}
-
-.line {
-    height: 6px; 
-    width: 200px;
-    margin: 15px auto;
-    border-radius: 3px;
-    background: linear-gradient(to right, rgba(0, 123, 255, 0.8), rgba(0, 191, 255, 1), rgba(0, 123, 255, 0.8));
-    box-shadow:
-        0 0 15px rgba(0, 191, 255, 0.7),
-        0 0 30px rgba(0, 191, 255, 0.5),
-        0 0 45px rgba(0, 191, 255, 0.3);
-}
-
-.title-content .logo {
-    width: 120px;
-    margin-bottom: 15px;
-}
-
-.title-content h1 {
-    font-size: 3rem;
-    color: #007BFF;
-    font-weight: bold;
-    text-shadow:
-        0 0 5px #00bfff,
-        0 0 10px #00bfff,
-        0 0 15px #00bfff,
-        0 0 25px #00bfff,
-        0 0 35px #00bfff;
-    margin: 0.5rem 0;
-}
 
 .galleria-centro {
     display: grid;
@@ -224,50 +185,6 @@ to{opacity:1;transform:translateY(0);}
     box-shadow: 0 0 20px rgba(0,119,255,0.4);
 }
 
-/* ===== HERO - LOGO E TITOLO AFFIANCATI SOLO SUL TELEFONO ===== */
-@media (max-width: 768px) {
-
-    /* Hero header padding compatto */
-    .hero-header {
-        padding: 40px 10px 20px 10px;
-        text-align: center;
-    }
-
-    /* Titolo e logo affiancati */
-    .title-content {
-        display: flex;
-        flex-direction: row;      /* logo a sinistra, titolo a destra */
-        align-items: center;      /* allinea verticalmente */
-        justify-content: center;  /* centra tutto orizzontalmente */
-        gap: 10px;                /* spazio tra logo e titolo */
-        flex-wrap: wrap;          /* se lo schermo è troppo stretto, va a capo */
-    }
-
-    /* Logo più piccolo */
-    .hero-header .logo {
-        max-width: 60px;           /* riduzione logo */
-        height: auto;
-    }
-
-    /* Titolo più piccolo e compatto */
-    .hero-header h1 {
-        font-size: 1.3rem;         /* dimensione più piccola */
-        line-height: 1.1;          /* meno spazio tra righe */
-        margin: 0;
-        text-align: left;           /* allineato accanto al logo */
-    }
-
-    /* Linee luminose più larghe e vicine al contenuto */
-    .line {
-        width: 95%;
-        margin: 6px auto;          /* distanza minima sopra e sotto */
-    }
-
-    /* Sottotitolo più piccolo e compatto */
-    .subtitle {
-        font-size: 0.9rem;
-        margin-top: 6px;
-    }
 
     /* Navbar più sottile */
     .navbar {
@@ -280,57 +197,13 @@ to{opacity:1;transform:translateY(0);}
         padding: 6px 10px; /* riduce altezza */
     }
 
-    /* Sottotitolo più piccolo e compatto */
-    .subtitle {
-        font-size: 0.95rem;
-        margin-top: 8px;
-    }
-}
 
     /* Barra del menu più sottile */
     .navbar {
         padding: 8px 10px; /* riduce altezza */
     }
 
-    /* Sottotitolo leggermente più piccolo e compatto */
-    .subtitle {
-        font-size: 1rem;
-        margin-top: 10px;
-    }
-
-    /* Avvicina immagine hero alla linea luminosa */
-    .chi-siamo-immagine img.imma1 {
-        max-width: 90%;
-        margin-top: 20px; /* ridotta distanza dalla linea */
-    }
-}
-
-.title-content {
-    display: flex;
-    align-items: center;
-    gap: 20px;
-}
-
-.logo {
-    width: 120px;
-    height: auto;        /* mantiene proporzioni */
-    object-fit: contain;
-    display: block;      /* evita puntini o linee sotto l'immagine */
-    background: transparent;
-}
-
-.hero-header h1 {
-    color: #0077ff;
-    font-size: 3rem;
-    margin: 0;
-    text-shadow: 0 0 18px rgba(0,119,255,0.6);
-}
-
-.subtitle {
-    margin-top: 30px;
-    font-size: 1.2rem;
-    color: #004a99;
-}
+    
 
 /* NAVBAR */
 
@@ -502,78 +375,7 @@ box-shadow:0 0 25px rgba(0,119,255,0.9);
         padding: 50px 0;
     }
 
-    /* BLOCCO TITOLO LED CON SFONDO BLU CHIARO */
-.title-container {
-    text-align: center;
-    margin: 50px auto;
-    background-color: #cceeff; /* BLU CHIARO CARINO */
-    padding: 40px 20px; /* padding per far respirare il contenuto */
-    border-radius: 12px; /* arrotondato leggermente per un effetto più morbido */
-    max-width: 900px; /* larghezza massima per non allungarsi troppo su schermi grandi */
-}
-
-/* Linee luminose sopra e sotto il titolo */
-.title-container .line {
-    height: 6px; 
-    width: 80%;
-    margin: 15px auto;
-    border-radius: 3px;
-    background: linear-gradient(to right, rgba(0, 123, 255, 0.8), rgba(0, 191, 255, 1), rgba(0, 123, 255, 0.8));
-    box-shadow:
-        0 0 15px rgba(0, 191, 255, 0.7),
-        0 0 30px rgba(0, 191, 255, 0.5),
-        0 0 45px rgba(0, 191, 255, 0.3);
-    animation: pulse 2s infinite alternate;
-}
-
-/* Animazione LED pulsante */
-@keyframes pulse {
-    0% { opacity: 0.8; transform: scaleX(1); }
-    50% { opacity: 1; transform: scaleX(1.05); }
-    100% { opacity: 0.8; transform: scaleX(1); }
-}
-
-/* Contenuto del titolo (logo + testo) */
-.title-content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 15px;
-}
-
-/* Logo del titolo */
-.title-content .logo {
-    max-width: 150px;
-}
-
-/* Testo del titolo con effetto LED */
-.title-content h1 {
-    font-size: 3rem;
-    font-weight: bold;
-    color: #007BFF;
-    text-shadow:
-        0 0 5px #00bfff,
-        0 0 10px #00bfff,
-        0 0 15px #00bfff,
-        0 0 25px #00bfff,
-        0 0 35px #00bfff;
-    margin: 0;
-}
-
-/* Sottotitolo */
-.subtitle {
-    text-align: center;
-    font-size: 1.2rem;
-    color: #004466; /* un blu scuro carino per contrastare lo sfondo chiaro */
-    max-width: 800px;
-    margin-top: 20px;
-}
-
-/* Sfondo generale della pagina */
-body {
-    background-color: #f5f5f5;
-    font-family: Arial, sans-serif;
-}
+  
 
     /* NAVBAR */
     .navbar {
@@ -838,25 +640,6 @@ h2 {
 <body>
 <a href="index.html" class="torna-home">← Torna alla Home</a>
 
-<header>
-  <div class="title-container">
-    <!-- Riga LED sopra -->
-    <div class="line"></div>
-
-    <div class="title-content">
-      <img src="logo.png" alt="Logo Oltre Le Sfumature" class="logo">
-      <h1>Oltre Le Sfumature</h1>
-    </div>
-
-    <!-- Riga LED sotto -->
-    <div class="line"></div>
-
-    <p class="subtitle">
-      Cooperativa Sociale specializzata nel supporto alle persone con Disturbo dello Spettro Autistico attraverso interventi basati sul metodo "ABA"
-    </p>
-  </div>
-</header>
-
 
 <nav class="navbar">
 
@@ -881,6 +664,26 @@ h2 {
 
 </nav>
 
+<header>
+  <div class="title-container">
+    <!-- Riga LED sopra -->
+    <div class="line"></div>
+
+    <!-- Contenuto del titolo -->
+    <div class="title-content">
+      <img src="logo.png" alt="Logo Oltre Le Sfumature" class="logo">
+      <h1>Oltre Le Sfumature</h1>
+    </div>
+
+    <!-- Riga LED sotto -->
+    <div class="line"></div>
+
+    <!-- Sottotitolo -->
+    <p class="subtitle">
+      Cooperativa Sociale specializzata nel supporto alle persone con Disturbo dello Spettro Autistico attraverso interventi basati sul metodo "ABA"
+    </p>
+  </div>
+</header>
     
 <!-- ===== SEZIONE CHI SIAMO ===== -->
 <section id="chi-siamo">
@@ -1127,6 +930,80 @@ h2 {
         margin-top: 15px;
     }
 }
+
+/* ===== BLOCCO TITOLO LED ===== */
+
+body {
+    background-color: #f5f5f5;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.title-container {
+    text-align: center;
+    margin: 60px auto;
+    background-color: #cceeff; /* sfondo blu chiaro */
+    padding: 50px 20px;
+    border-radius: 15px;
+    max-width: 900px;
+}
+
+.line {
+    height: 6px;
+    width: 80%;
+    margin: 20px auto;
+    border-radius: 3px;
+    background: linear-gradient(to right, rgba(0,123,255,0.8), rgba(0,191,255,1), rgba(0,123,255,0.8));
+    box-shadow:
+        0 0 15px rgba(0,191,255,0.7),
+        0 0 30px rgba(0,191,255,0.5),
+        0 0 45px rgba(0,191,255,0.3);
+    animation: pulse 2s infinite alternate;
+}
+
+@keyframes pulse {
+    0% { opacity: 0.8; transform: scaleX(1); }
+    50% { opacity: 1; transform: scaleX(1.05); }
+    100% { opacity: 0.8; transform: scaleX(1); }
+}
+
+.title-content {
+    display: flex;
+    flex-direction: row;   /* logo a sinistra, titolo a destra */
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.logo {
+    width: 130px;
+    height: auto;
+    object-fit: contain;
+}
+
+.title-content h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #007BFF;
+    margin: 0;
+    text-shadow:
+        0 0 5px #00bfff,
+        0 0 10px #00bfff,
+        0 0 15px #00bfff,
+        0 0 25px #00bfff,
+        0 0 35px #00bfff;
+}
+
+.subtitle {
+    text-align: center;
+    font-size: 1.2rem;
+    color: #004466;
+    max-width: 800px;
+    margin: 25px auto 0 auto;
+}
+
 </style>
 
 <!-- FINE SEZIONE CHI SIAMO / COSA OFFRIAMO -->
