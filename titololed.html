@@ -6,10 +6,14 @@
   <title>Oltre Le Sfumature</title>
 
   <style>
-    /* Contenitore del titolo e delle linee LED */
+    /* Contenitore del titolo e delle linee LED con sfondo blu chiaro */
     .title-container {
       text-align: center;
-      margin: 40px 0;
+      margin: 40px auto;
+      background-color: #cceeff; /* BLU CHIARO CARINO */
+      padding: 40px 20px; /* spazio attorno al contenuto */
+      border-radius: 12px; /* angoli leggermente arrotondati */
+      max-width: 900px; /* larghezza massima per non allungare troppo il blocco */
     }
 
     /* Linee luminose sopra e sotto il titolo */
@@ -40,25 +44,28 @@
     /* Logo del titolo */
     .title-content .logo {
       max-width: 150px;
-      margin-bottom: 10px;
+      margin-bottom: 15px;
     }
 
     /* Testo del titolo con effetto LED */
     .title-content h1 {
       font-size: 3rem;
       font-weight: bold;
-      color: #fff;
-      text-shadow: 0 0 5px #fff,
-                   0 0 10px #fffb00,
-                   0 0 20px #ff00ff,
-                   0 0 30px #00ffff;
+      color: #007BFF; /* blu carino */
+      text-shadow:
+        0 0 5px #00bfff,
+        0 0 10px #00bfff,
+        0 0 15px #00bfff,
+        0 0 25px #00bfff,
+        0 0 35px #00bfff;
+      margin: 0.5rem 0;
     }
 
     /* Sottotitolo */
     .subtitle {
       text-align: center;
       font-size: 1.2rem;
-      color: #eee;
+      color: #007BFF; /* stesso blu del titolo per uniformità */
       max-width: 800px;
       margin: 20px auto 0;
     }
@@ -84,11 +91,11 @@
 
       <!-- Riga luminosa sotto il titolo -->
       <div class="line"></div>
-    </div>
 
-    <p class="subtitle">
-      Cooperativa Sociale specializzata nel supporto alle persone con Disturbo dello Spettro Autistico attraverso interventi basati sul metodo "ABA"
-    </p>
+      <p class="subtitle">
+        Cooperativa Sociale specializzata nel supporto alle persone con Disturbo dello Spettro Autistico attraverso interventi basati sul metodo "ABA"
+      </p>
+    </div>
   </header>
 
 </body>
