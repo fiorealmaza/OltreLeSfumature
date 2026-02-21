@@ -931,24 +931,27 @@ h2 {
     }
 }
 
-/* ===== BLOCCO TITOLO LED ===== */
-
+/* Sfondo generale della pagina */
 body {
-    background-color: #f5f5f5;
-    font-family: Arial, sans-serif;
+    background-color: #f5f5f5; /* colore pagina */
     margin: 0;
     padding: 0;
+    font-family: Arial, sans-serif;
 }
 
+/* BLOCCO TITOLO LED - unico blocco blu chiaro */
 .title-container {
     text-align: center;
-    margin: 60px auto;
-    background-color: #cceeff; /* sfondo blu chiaro */
-    padding: 50px 20px;
-    border-radius: 15px;
+    margin: 0;                /* niente margini extra */
+    padding: 50px 20px;       /* spazio interno */
+    background-color: #cceeff; /* blu chiaro */
+    border-radius: 15px;      /* angoli leggermente arrotondati */
     max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
+/* Linee luminose sopra e sotto */
 .line {
     height: 6px;
     width: 80%;
@@ -962,27 +965,31 @@ body {
     animation: pulse 2s infinite alternate;
 }
 
+/* Animazione LED pulsante */
 @keyframes pulse {
     0% { opacity: 0.8; transform: scaleX(1); }
     50% { opacity: 1; transform: scaleX(1.05); }
     100% { opacity: 0.8; transform: scaleX(1); }
 }
 
+/* Contenuto titolo (logo + testo) */
 .title-content {
     display: flex;
-    flex-direction: row;   /* logo a sinistra, titolo a destra */
+    flex-direction: row;       /* logo a sinistra, titolo a destra */
     align-items: center;
     justify-content: center;
     gap: 20px;
     flex-wrap: wrap;
 }
 
+/* Logo */
 .logo {
     width: 130px;
     height: auto;
     object-fit: contain;
 }
 
+/* Titolo con effetto LED */
 .title-content h1 {
     font-size: 3rem;
     font-weight: bold;
@@ -996,6 +1003,7 @@ body {
         0 0 35px #00bfff;
 }
 
+/* Sottotitolo */
 .subtitle {
     text-align: center;
     font-size: 1.2rem;
