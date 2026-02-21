@@ -903,11 +903,11 @@ body {
     font-family: Arial, sans-serif;
 }
 
-/* BLOCCO TITOLO LED - unico blocco blu chiaro */
-.title-container {
+/* BLOCCO TITOLO LED - solo per la HOME */
+body.home .title-container {
     text-align: center;
     margin: 0;
-    padding-top: 150px;         /* aumentato per far scendere il titolo sotto la navbar */
+    padding-top: 200px;       /* più spazio per far scendere il titolo sotto la navbar */
     padding-bottom: 80px;
     padding-left: 20px;
     padding-right: 20px;
@@ -918,18 +918,18 @@ body {
     margin-right: auto;
 }
 
-/* Schermi più piccoli (smartphone) */
+/* Schermi più piccoli (tablet e telefoni piccoli) */
 @media (max-width: 768px) {
-    .title-container {
-        padding-top: 120px;  /* meno spazio su telefoni e tablet piccoli */
+    body.home .title-container {
+        padding-top: 160px;   /* ridotto per schermi più piccoli */
         padding-bottom: 60px;
     }
 }
 
-/* Schermi molto piccoli (es. telefoni stretti) */
+/* Schermi molto piccoli (smartphone stretti) */
 @media (max-width: 480px) {
-    .title-container {
-        padding-top: 160px;  /* aumentato da 100px a 140px */
+    body.home .title-container {
+        padding-top: 140px;   /* ottimizzato per telefoni piccoli */
         padding-bottom: 50px;
     }
 }
