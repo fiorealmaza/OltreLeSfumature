@@ -1012,11 +1012,18 @@ header {
         font-size: 0.9rem;
     }
 
-    /* Linea sopra il titolo leggermente più piccola e distanza maggiore */
-    .line:first-of-type {
-        margin-top: 30px;
-        height: 4px;
-    }
+    /* Linea sopra il titolo visibile su tutti i dispositivi */
+.line:first-of-type {
+    width: 90%;             /* più stretta rispetto a 100%, così si vede su telefono */
+    height: 6px;            /* altezza standard per visibilità */
+    margin: 25px auto 20px auto; /* margine sopra e sotto */
+    border-radius: 3px;
+    background: linear-gradient(to right, rgba(0,123,255,0.8), rgba(0,191,255,1), rgba(0,123,255,0.8));
+    box-shadow:
+        0 0 15px rgba(0,191,255,0.7),
+        0 0 30px rgba(0,191,255,0.5),
+        0 0 45px rgba(0,191,255,0.3);
+    animation: pulse 2s infinite alternate;
 }
 
 </style>
