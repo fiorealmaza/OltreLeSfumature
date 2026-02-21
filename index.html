@@ -814,26 +814,6 @@ document.addEventListener("click", function(event) {
 });
 </script>
 
-function toggleStruttura() {
-    var quadro = document.getElementById("quadro-struttura");
-    if (quadro.style.display === "none") {
-        quadro.style.display = "block";
-        quadro.scrollIntoView({behavior: "smooth", block: "start"});
-    } else {
-        quadro.style.display = "none";
-    }
-}
-
-// Chiude il quadro se clicchi fuori
-document.addEventListener("click", function(event) {
-    var quadro = document.getElementById("quadro-struttura");
-    var titolo = document.querySelector('h3[onclick="toggleStruttura()"]');
-    if (!quadro.contains(event.target) && !titolo.contains(event.target)) {
-        quadro.style.display = "none";
-    }
-});
-</script>
-
 </section>
 
 <!-- ===== SEZIONE COS'È LO SPETTRO ===== -->
