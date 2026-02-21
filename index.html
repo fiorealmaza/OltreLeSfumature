@@ -643,10 +643,12 @@ h2 {
     <div class="line"></div>
 
     <!-- Sottotitolo -->
-    <p class="subtitle">
-      Cooperativa Sociale specializzata nel supporto alle persone con Disturbo dello Spettro Autistico attraverso interventi basati sul metodo "ABA"
-    </p>
-  </div>
+<p class="subtitle">
+  Cooperativa Sociale specializzata nel supporto <span class="mobile-br"><br></span>
+  alle persone con Disturbo dello Spettro <span class="mobile-br"><br></span>
+  Autistico attraverso interventi basati sul metodo "ABA"
+</p>
+
 </header>
     
 <!-- ===== SEZIONE CHI SIAMO ===== -->
@@ -995,6 +997,17 @@ header {
     .subtitle {
         font-size: 0.9rem; /* più piccolo per smartphone */
         margin-top: 15px;  /* spazio sopra ridotto */
+    }
+}
+
+/* Mostra il <br> solo su smartphone */
+.mobile-br {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .mobile-br {
+        display: inline;
     }
 }
 
