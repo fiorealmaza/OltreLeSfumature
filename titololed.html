@@ -6,14 +6,16 @@
   <title>Oltre Le Sfumature</title>
 
   <style>
-    /* Contenitore del titolo e delle linee LED con sfondo blu chiaro */
+    /* Contenitore del titolo, logo e sottotitolo */
     .title-container {
       text-align: center;
-      margin: 40px auto;
+      margin: 50px 0;
       background-color: #cceeff; /* BLU CHIARO CARINO */
-      padding: 40px 20px; /* spazio attorno al contenuto */
-      border-radius: 12px; /* angoli leggermente arrotondati */
-      max-width: 900px; /* larghezza massima per non allungare troppo il blocco */
+      padding: 40px 20px;
+      border-radius: 12px;
+      max-width: 900px;
+      margin-left: auto;
+      margin-right: auto;
     }
 
     /* Linee luminose sopra e sotto il titolo */
@@ -27,7 +29,6 @@
       animation: pulse 2s infinite alternate;
     }
 
-    /* Animazione LED pulsante */
     @keyframes pulse {
       0% { opacity: 0.8; transform: scaleX(1); }
       50% { opacity: 1; transform: scaleX(1.05); }
@@ -41,13 +42,11 @@
       align-items: center;
     }
 
-    /* Logo del titolo */
     .title-content .logo {
       max-width: 150px;
       margin-bottom: 15px;
     }
 
-    /* Testo del titolo con effetto LED */
     .title-content h1 {
       font-size: 3rem;
       font-weight: bold;
@@ -61,16 +60,12 @@
       margin: 0.5rem 0;
     }
 
-    /* Sottotitolo */
     .subtitle {
-      text-align: center;
       font-size: 1.2rem;
-      color: #007BFF; /* stesso blu del titolo per uniformità */
-      max-width: 800px;
-      margin: 20px auto 0;
+      color: #007BFF; /* stesso blu del titolo */
+      margin-top: 20px;
     }
 
-    /* Sfondo generale della pagina */
     body {
       background-color: #1a1a1a;
       font-family: Arial, sans-serif;
@@ -81,7 +76,6 @@
 
   <header>
     <div class="title-container">
-      <!-- Riga luminosa sopra il titolo -->
       <div class="line"></div>
 
       <div class="title-content">
@@ -89,7 +83,6 @@
         <h1>Oltre Le Sfumature</h1>
       </div>
 
-      <!-- Riga luminosa sotto il titolo -->
       <div class="line"></div>
 
       <p class="subtitle">
