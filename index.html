@@ -749,6 +749,46 @@ h2 {
     font-weight: bold; /* grassetto */
 }
 
+<style>
+/* ===== STILI GENERALI ===== */
+body {
+    font-family: Arial, sans-serif;
+    background: #f0f8ff;
+}
+
+/* ===== ILLUMINA I TITOLI PRINCIPALI ===== */
+h2 {
+    color: #007BFF;
+    text-shadow: 0 0 8px #00bfff;
+    text-align: center;
+    margin-bottom: 50px;
+    font-weight: bold;
+}
+
+/* ===== BOX AUTISMO ===== */
+.autismo-box {
+    background: #cfe7ff;
+    border-radius: 20px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08), 0 0 20px #4da6ff, 0 0 40px #4da6ff;
+    padding: 30px;
+    color: black; /* testo normale nero */
+}
+
+.autismo-box strong {
+    color: #007BFF; /* blu per le frasi in strong */
+}
+
+.autismo-box ul li {
+    list-style-type: disc;
+    list-style-position: inside;
+    color: black; /* testo nero */
+}
+
+.autismo-box ul li::marker {
+    color: #007BFF; /* solo il pallino blu */
+}
+</style>
+
 </style>
 
 <body>
@@ -850,21 +890,21 @@ h2 {
 <!-- ===== SEZIONE STORIA DELL’AUTISMO ===== -->
 <section id="storia-autismo" style="margin-top:50px; margin-bottom:50px;">
 
- <!-- ===== TITOLO ILLUMINATO PRINCIPALE ===== -->
-<h2>La storia dell’autismo💙🧩</h2>
+  <!-- ===== TITOLO ILLUMINATO PRINCIPALE ===== -->
+  <h2>La storia dell’autismo💙🧩</h2>
 
   <!-- BOX UNO SOTTO L’ALTRO -->
   <div style="display:grid; grid-template-columns:1fr; gap:30px; max-width:800px; margin:0 auto;">
 
     <!-- BOX 1: Come veniva visto -->
-    <div style="background:#cfe7ff; border-radius:20px; box-shadow: 0 5px 15px rgba(0,0,0,0.08), 0 0 20px #4da6ff, 0 0 40px #4da6ff; padding:30px;">
-      <h3 style="color:#007BFF; margin-bottom:15px;">Come veniva visto il Disturbo dello Spettro Autistico?</h3>
+    <div class="autismo-box">
+      <h3>Come veniva visto il Disturbo dello Spettro Autistico?</h3>
       <p>Oggi sappiamo molto sull’autismo, ma non è sempre stato così.</p>
       <p><strong>Tra gli anni ’50 e ’60:</strong> l’autismo veniva considerato una forma precoce di schizofrenia infantile. Si pensava fosse causato da problemi emotivi e da difficoltà nel rapporto tra genitori e figli. Questa idea ha influenzato per anni il modo di comprendere e trattare il disturbo.</p>
       <p><strong>Negli anni ’70:</strong> l’autismo non fu più considerato di origine psicologica. La ricerca iniziò a concentrarsi sulle basi biologiche e sul funzionamento del cervello, aprendo la strada a una visione più scientifica e meno colpevolizzante.</p>
       <p><strong>DSM-III (1980):</strong> autismo infantile inserito tra i Disturbi Pervasivi dello Sviluppo.</p>
       <p><strong>DSM-IV e DSM-IV-TR:</strong> Disturbi Generalizzati dello Sviluppo, suddivisi in:</p>
-      <ul style="list-style-type: disc; padding-left: 40px; line-height:1.8;">
+      <ul>
         <li>Disturbo Autistico</li>
         <li>Sindrome di Asperger</li>
         <li>Sindrome di Rett</li>
@@ -874,8 +914,8 @@ h2 {
     </div>
 
     <!-- BOX 2: Oggi - Nuova consapevolezza -->
-    <div style="background:#cfe7ff; border-radius:20px; box-shadow: 0 5px 15px rgba(0,0,0,0.08), 0 0 20px #4da6ff, 0 0 40px #4da6ff; padding:30px;">
-      <h3 style="color:#007BFF; margin-bottom:15px;">Oggi: Nuova consapevolezza</h3>
+    <div class="autismo-box">
+      <h3>Oggi: Nuova consapevolezza</h3>
       <p><strong>DSM-5 (2013):</strong> introdotta un’unica categoria diagnostica: Disturbo dello Spettro Autistico.</p>
       <p>I sottotipi sono stati eliminati perché si è compreso che non si tratta di disturbi separati, ma di diverse manifestazioni di una stessa condizione.</p>
       <p>Si parla di “spettro” proprio per sottolineare questa varietà: ogni persona è unica, con caratteristiche, punti di forza e bisogni di supporto differenti.</p>
