@@ -1030,21 +1030,13 @@ header {
 .faq-answer {
     max-height: 0;
     overflow: hidden;
-    opacity: 0;
-    transform: translateY(-8px);
     padding: 0 25px;
-    transition: 
-        max-height 0.45s ease,
-        opacity 0.35s ease,
-        transform 0.35s ease,
-        padding 0.3s ease;
+    transition: max-height 0.45s ease, padding 0.3s ease;
 }
 
-/* Quando il box è aperto */
+/* Quando aperto */
 .faq-item.active .faq-answer {
-    max-height: 800px;
-    opacity: 1;
-    transform: translateY(0);
+    max-height: 1000px;
     padding: 20px 25px;
 }
   
