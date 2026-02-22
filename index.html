@@ -959,7 +959,7 @@ header {
     }
 }
 
-/* ===== FAQ ACCORDION ===== */
+/* ===== FAQ ACCORDION PROFESSIONALE ===== */
 
 .faq-container {
     max-width: 900px;
@@ -974,7 +974,13 @@ header {
     border-radius: 20px;
     overflow: hidden;
     box-shadow: 0 5px 15px rgba(0,0,0,0.08);
-    transition: 0.3s;
+    transition: box-shadow 0.4s ease, background 0.4s ease;
+}
+
+/* Effetto leggermente più luminoso quando aperto */
+.faq-item.active {
+    box-shadow: 0 8px 25px rgba(0,123,255,0.25);
+    background: #d6ebff;
 }
 
 .faq-question {
@@ -985,21 +991,41 @@ header {
     align-items: center;
     font-weight: 600;
     color: #007BFF;
+    transition: background 0.3s ease;
 }
 
 .faq-question:hover {
     background: rgba(0,123,255,0.08);
 }
 
+/* ===== FRECCIA NEON ===== */
 .arrow {
+    font-size: 22px;
+    color: #4da6ff;
+
+    /* Neon base */
+    text-shadow:
+        0 0 5px #4da6ff,
+        0 0 10px #4da6ff,
+        0 0 20px rgba(0,123,255,0.6);
+
+    line-height: 0.8;
     text-align: center;
     font-weight: bold;
-    line-height: 0.8;
-    transition: transform 0.3s ease;
+    transition: transform 0.4s ease, text-shadow 0.4s ease, filter 0.4s ease;
 }
 
+/* Quando il box è aperto */
 .faq-item.active .arrow {
     transform: rotate(180deg);
+
+    /* Neon più intenso */
+    text-shadow:
+        0 0 8px #4da6ff,
+        0 0 15px #4da6ff,
+        0 0 30px #007BFF;
+
+    filter: brightness(1.3);
 }
 
 .faq-answer {
@@ -1009,12 +1035,11 @@ header {
     transition: max-height 0.5s ease, padding 0.3s ease;
 }
 
+/* Quando il box è aperto */
 .faq-item.active .faq-answer {
-    max-height: 600px;
+    max-height: 800px; /* abbastanza per contenuti più lunghi */
     padding: 20px 25px;
 }
-
-</style>
   
 <!-- FINE SEZIONE CHI SIAMO / COSA OFFRIAMO -->
 
@@ -1174,6 +1199,7 @@ Una valutazione precoce permette di intervenire tempestivamente e offrire suppor
 </p>
 </div>
 
+  
 <section id="faq">
 <h2>Domande frequenti 💙</h2>
 
@@ -1183,7 +1209,7 @@ Una valutazione precoce permette di intervenire tempestivamente e offrire suppor
   <div class="faq-item">
     <div class="faq-question">
       <span>1️⃣ L’autismo è colpa dei genitori?</span>
-      <div class="arrow">^<br>^</div>
+      <div class="arrow">˅</div>
     </div>
     <div class="faq-answer">
       <p>No. Le vecchie teorie sono state superate da decenni.</p>
@@ -1195,7 +1221,7 @@ Una valutazione precoce permette di intervenire tempestivamente e offrire suppor
   <div class="faq-item">
     <div class="faq-question">
       <span>2️⃣ L’autismo è una malattia?</span>
-      <div class="arrow">^<br>^</div>
+      <div class="arrow">˅</div>
     </div>
     <div class="faq-answer">
       <p>No. Non è una malattia infettiva.</p>
@@ -1207,7 +1233,7 @@ Una valutazione precoce permette di intervenire tempestivamente e offrire suppor
   <div class="faq-item">
     <div class="faq-question">
       <span>3️⃣ L’autismo passa con la crescita?</span>
-      <div class="arrow">^<br>^</div>
+      <div class="arrow">˅</div>
     </div>
     <div class="faq-answer">
       <p>No. L’autismo non passa.</p>
@@ -1219,7 +1245,7 @@ Una valutazione precoce permette di intervenire tempestivamente e offrire suppor
   <div class="faq-item">
     <div class="faq-question">
       <span>4️⃣ Esiste una cura?</span>
-      <div class="arrow">^<br>^</div>
+      <div class="arrow">˅</div>
     </div>
     <div class="faq-answer">
       <p>Non esiste una cura che elimini l’autismo.</p>
@@ -1231,7 +1257,7 @@ Una valutazione precoce permette di intervenire tempestivamente e offrire suppor
   <div class="faq-item">
     <div class="faq-question">
       <span>5️⃣ Come si fa la diagnosi?</span>
-      <div class="arrow">^<br>^</div>
+      <div class="arrow">˅</div>
     </div>
     <div class="faq-answer">
       <p>La diagnosi è clinica, basata sull’osservazione del comportamento e sull’anamnesi familiare.</p>
@@ -1243,7 +1269,7 @@ Una valutazione precoce permette di intervenire tempestivamente e offrire suppor
   <div class="faq-item">
     <div class="faq-question">
       <span>6️⃣ Tutti i bambini hanno disabilità intellettiva?</span>
-      <div class="arrow">^<br>^</div>
+      <div class="arrow">˅</div>
     </div>
     <div class="faq-answer">
       <p>No. Lo spettro è molto ampio.</p>
@@ -1259,7 +1285,7 @@ Una valutazione precoce permette di intervenire tempestivamente e offrire suppor
   <div class="faq-item">
     <div class="faq-question">
       <span>7️⃣ I vaccini causano l’autismo?</span>
-      <div class="arrow">^<br>^</div>
+      <div class="arrow">˅</div>
     </div>
     <div class="faq-answer">
       <p>No. Numerosi studi scientifici hanno dimostrato che non esiste alcuna correlazione.</p>
@@ -1270,7 +1296,7 @@ Una valutazione precoce permette di intervenire tempestivamente e offrire suppor
   <div class="faq-item">
     <div class="faq-question">
       <span>8️⃣ Le persone con autismo provano emozioni?</span>
-      <div class="arrow">^<br>^</div>
+      <div class="arrow">˅</div>
     </div>
     <div class="faq-answer">
       <p>Sì. Provano emozioni come tutti.</p>
@@ -1282,7 +1308,7 @@ Una valutazione precoce permette di intervenire tempestivamente e offrire suppor
   <div class="faq-item">
     <div class="faq-question">
       <span>9️⃣ Cosa può fare la famiglia?</span>
-      <div class="arrow">^<br>^</div>
+      <div class="arrow">˅</div>
     </div>
     <div class="faq-answer">
       <ul>
@@ -1299,7 +1325,7 @@ Una valutazione precoce permette di intervenire tempestivamente e offrire suppor
   <div class="faq-item">
     <div class="faq-question">
       <span>🔟 Qual è il futuro?</span>
-      <div class="arrow">^<br>^</div>
+      <div class="arrow">˅</div>
     </div>
     <div class="faq-answer">
       <p>Non esiste una risposta unica.</p>
