@@ -959,7 +959,63 @@ header {
     }
 }
 
+/* ===== FAQ ACCORDION ===== */
+
+.faq-container {
+    max-width: 900px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.faq-item {
+    background: #cfe7ff;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+    transition: 0.3s;
+}
+
+.faq-question {
+    padding: 20px 25px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: 600;
+    color: #007BFF;
+}
+
+.faq-question:hover {
+    background: rgba(0,123,255,0.08);
+}
+
+.arrow {
+    text-align: center;
+    font-weight: bold;
+    line-height: 0.8;
+    transition: transform 0.3s ease;
+}
+
+.faq-item.active .arrow {
+    transform: rotate(180deg);
+}
+
+.faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    padding: 0 25px;
+    transition: max-height 0.5s ease, padding 0.3s ease;
+}
+
+.faq-item.active .faq-answer {
+    max-height: 600px;
+    padding: 20px 25px;
+}
+
 </style>
+  
 <!-- FINE SEZIONE CHI SIAMO / COSA OFFRIAMO -->
 
 <section>
@@ -1118,84 +1174,142 @@ Una valutazione precoce permette di intervenire tempestivamente e offrire suppor
 </p>
 </div>
 
-</section>
 <section id="faq">
 <h2>Domande frequenti 💙</h2>
 
-<div class="grid">
+<div class="faq-container">
 
-<div class="box">
-<h3>1️⃣ L’autismo è colpa dei genitori?</h3>
-<p>No. Le vecchie teorie sono state superate da decenni.</p>
-<p>Oggi è riconosciuto come Disturbo dello Spettro Autistico, una condizione del neurosviluppo con base biologica e componente genetica.</p>
-</div>
+  <!-- 1 -->
+  <div class="faq-item">
+    <div class="faq-question">
+      <span>1️⃣ L’autismo è colpa dei genitori?</span>
+      <div class="arrow">^<br>^</div>
+    </div>
+    <div class="faq-answer">
+      <p>No. Le vecchie teorie sono state superate da decenni.</p>
+      <p>Oggi è riconosciuto come Disturbo dello Spettro Autistico, una condizione del neurosviluppo con base biologica e componente genetica.</p>
+    </div>
+  </div>
 
-<div class="box">
-<h3>2️⃣ L’autismo è una malattia?</h3>
-<p>No. Non è una malattia infettiva.</p>
-<p>È una condizione del neurosviluppo che riguarda il modo in cui il cervello elabora informazioni sociali, comunicative e sensoriali.</p>
-</div>
+  <!-- 2 -->
+  <div class="faq-item">
+    <div class="faq-question">
+      <span>2️⃣ L’autismo è una malattia?</span>
+      <div class="arrow">^<br>^</div>
+    </div>
+    <div class="faq-answer">
+      <p>No. Non è una malattia infettiva.</p>
+      <p>È una condizione del neurosviluppo che riguarda il modo in cui il cervello elabora informazioni sociali, comunicative e sensoriali.</p>
+    </div>
+  </div>
 
-<div class="box">
-<h3>3️⃣ L’autismo passa con la crescita?</h3>
-<p>No. L’autismo non passa.</p>
-<p>Con interventi adeguati molte competenze possono migliorare significativamente.</p>
-</div>
+  <!-- 3 -->
+  <div class="faq-item">
+    <div class="faq-question">
+      <span>3️⃣ L’autismo passa con la crescita?</span>
+      <div class="arrow">^<br>^</div>
+    </div>
+    <div class="faq-answer">
+      <p>No. L’autismo non passa.</p>
+      <p>Con interventi adeguati molte competenze possono migliorare significativamente.</p>
+    </div>
+  </div>
 
-<div class="box">
-<h3>4️⃣ Esiste una cura?</h3>
-<p>Non esiste una cura che elimini l’autismo.</p>
-<p>Esistono però interventi validati che aiutano a sviluppare comunicazione, abilità sociali, autonomia e gestione del comportamento.</p>
-</div>
+  <!-- 4 -->
+  <div class="faq-item">
+    <div class="faq-question">
+      <span>4️⃣ Esiste una cura?</span>
+      <div class="arrow">^<br>^</div>
+    </div>
+    <div class="faq-answer">
+      <p>Non esiste una cura che elimini l’autismo.</p>
+      <p>Esistono però interventi validati che aiutano a sviluppare comunicazione, abilità sociali, autonomia e gestione del comportamento.</p>
+    </div>
+  </div>
 
-<div class="box">
-<h3>5️⃣ Come si fa la diagnosi?</h3>
-<p>La diagnosi è clinica, basata sull’osservazione del comportamento e sull’anamnesi familiare.</p>
-<p>Non esiste un test biologico specifico.</p>
-</div>
+  <!-- 5 -->
+  <div class="faq-item">
+    <div class="faq-question">
+      <span>5️⃣ Come si fa la diagnosi?</span>
+      <div class="arrow">^<br>^</div>
+    </div>
+    <div class="faq-answer">
+      <p>La diagnosi è clinica, basata sull’osservazione del comportamento e sull’anamnesi familiare.</p>
+      <p>Non esiste un test biologico specifico.</p>
+    </div>
+  </div>
 
-<div class="box">
-<h3>6️⃣ Tutti i bambini hanno disabilità intellettiva?</h3>
-<p>No. Lo spettro è molto ampio.</p>
-<ul>
-<li>Bambini con disabilità intellettiva</li>
-<li>Bambini con intelligenza nella norma</li>
-<li>Bambini con abilità cognitive superiori</li>
-</ul>
-</div>
+  <!-- 6 -->
+  <div class="faq-item">
+    <div class="faq-question">
+      <span>6️⃣ Tutti i bambini hanno disabilità intellettiva?</span>
+      <div class="arrow">^<br>^</div>
+    </div>
+    <div class="faq-answer">
+      <p>No. Lo spettro è molto ampio.</p>
+      <ul>
+        <li>Bambini con disabilità intellettiva</li>
+        <li>Bambini con intelligenza nella norma</li>
+        <li>Bambini con abilità cognitive superiori</li>
+      </ul>
+    </div>
+  </div>
 
-<div class="box">
-<h3>7️⃣ I vaccini causano l’autismo?</h3>
-<p>No. Numerosi studi scientifici hanno dimostrato che non esiste alcuna correlazione.</p>
-</div>
+  <!-- 7 -->
+  <div class="faq-item">
+    <div class="faq-question">
+      <span>7️⃣ I vaccini causano l’autismo?</span>
+      <div class="arrow">^<br>^</div>
+    </div>
+    <div class="faq-answer">
+      <p>No. Numerosi studi scientifici hanno dimostrato che non esiste alcuna correlazione.</p>
+    </div>
+  </div>
 
-<div class="box">
-<h3>8️⃣ Le persone con autismo provano emozioni?</h3>
-<p>Sì. Provano emozioni come tutti.</p>
-<p>Possono però avere difficoltà nell’esprimerle o nel comprendere segnali sociali.</p>
-</div>
+  <!-- 8 -->
+  <div class="faq-item">
+    <div class="faq-question">
+      <span>8️⃣ Le persone con autismo provano emozioni?</span>
+      <div class="arrow">^<br>^</div>
+    </div>
+    <div class="faq-answer">
+      <p>Sì. Provano emozioni come tutti.</p>
+      <p>Possono però avere difficoltà nell’esprimerle o nel comprendere segnali sociali.</p>
+    </div>
+  </div>
 
-<div class="box">
-<h3>9️⃣ Cosa può fare la famiglia?</h3>
-<ul>
-<li>Collaborare con specialisti</li>
-<li>Mantenere routine coerenti</li>
-<li>Strutturare ambienti prevedibili</li>
-<li>Valorizzare i punti di forza</li>
-</ul>
-<p>La famiglia è una risorsa centrale 💙</p>
-</div>
+  <!-- 9 -->
+  <div class="faq-item">
+    <div class="faq-question">
+      <span>9️⃣ Cosa può fare la famiglia?</span>
+      <div class="arrow">^<br>^</div>
+    </div>
+    <div class="faq-answer">
+      <ul>
+        <li>Collaborare con specialisti</li>
+        <li>Mantenere routine coerenti</li>
+        <li>Strutturare ambienti prevedibili</li>
+        <li>Valorizzare i punti di forza</li>
+      </ul>
+      <p>La famiglia è una risorsa centrale 💙</p>
+    </div>
+  </div>
 
-<div class="box">
-<h3>🔟 Qual è il futuro?</h3>
-<p>Non esiste una risposta unica.</p>
-<p>Dipende da livello cognitivo, linguaggio, intervento precoce e supporto scolastico.</p>
-<p>Molte persone nello spettro sviluppano autonomie significative e una vita soddisfacente.</p>
-</div>
+  <!-- 10 -->
+  <div class="faq-item">
+    <div class="faq-question">
+      <span>🔟 Qual è il futuro?</span>
+      <div class="arrow">^<br>^</div>
+    </div>
+    <div class="faq-answer">
+      <p>Non esiste una risposta unica.</p>
+      <p>Dipende da livello cognitivo, linguaggio, intervento precoce e supporto scolastico.</p>
+      <p>Molte persone nello spettro sviluppano autonomie significative e una vita soddisfacente.</p>
+    </div>
+  </div>
 
 </div>
 </section>
-
 
 
 <section id="contatti">
@@ -1225,6 +1339,18 @@ Una valutazione precoce permette di intervenire tempestivamente e offrire suppor
 </footer>
 
 <script>
+
+// FAQ Accordion
+const faqItems = document.querySelectorAll(".faq-item");
+
+faqItems.forEach(item => {
+    const question = item.querySelector(".faq-question");
+
+    question.addEventListener("click", () => {
+        item.classList.toggle("active");
+    });
+});
+  
 // Riferimenti agli elementi
 const hamburger = document.querySelector(".hamburger");
 const menu = document.getElementById("menu");
