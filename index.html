@@ -777,8 +777,77 @@ h2 {
     <p style="margin-top:15px;">Ogni ambiente è strutturato per garantire prevedibilità, riduzione dello stress sensoriale e sicurezza.</p>
   </div>
 
+<style>
+/* =========================
+   BOTTONE CARTA SERVIZI HOME
+========================= */
+
+.carta-servizi-btn{
+  text-align:center;
+  margin-top:35px;
+}
+
+.carta-servizi-btn a{
+  display:inline-flex;
+  align-items:center;
+  gap:10px;
+  background:white;
+  color:#0066cc;
+  padding:14px 32px;
+  border-radius:40px;
+  text-decoration:none;
+  font-weight:600;
+  border:2px solid #4db8ff;
+  box-shadow:0 0 20px rgba(77,184,255,0.25);
+  transition:0.3s ease;
+}
+
+.carta-servizi-btn a:hover{
+  background:#4db8ff;
+  color:white;
+  transform:translateY(-4px);
+  box-shadow:0 0 35px rgba(0,119,255,0.45);
+}
+
+/* Puntino luminoso */
+.dot{
+  width:10px;
+  height:10px;
+  background:#4db8ff;
+  border-radius:50%;
+  box-shadow:
+    0 0 8px #4db8ff,
+    0 0 15px rgba(77,184,255,0.8);
+  animation:pulseDot 1.6s infinite alternate;
+}
+
+@keyframes pulseDot{
+  from{transform:scale(1);}
+  to{transform:scale(1.3);}
+}
+
+/* Bottone Download PDF */
+.download-btn{
+  display:inline-block;
+  background:#4db8ff;
+  color:white;
+  padding:14px 30px;
+  border-radius:40px;
+  text-decoration:none;
+  font-weight:600;
+  margin-top:40px;
+  transition:0.3s ease;
+  box-shadow:0 0 20px rgba(77,184,255,0.3);
+}
+
+.download-btn:hover{
+  background:#0077ff;
+  transform:translateY(-3px);
+  box-shadow:0 0 30px rgba(0,119,255,0.5);
+}
 
 <style>
+
 /* ===== CHI SIAMO ===== */
 .chi-siamo-container {
     display: flex;
