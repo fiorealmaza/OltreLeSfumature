@@ -692,63 +692,56 @@ h2 {
 <!-- ===== STILE CSS ===== -->
 <style>
 
-<!-- =========================
-     CARTA DEI SERVIZI LED CON PALLINO
-========================= -->
-
 <style>
-/* Quadretto bianco con bordo LED e margine sotto il sottotitolo */
+/* =========================
+   QUADRO CARTA DEI SERVIZI
+========================= */
+
 .carta-servizi-btn {
-  text-align: left;                   /* testo allineato a sinistra */
-  margin: 50px auto 0 auto;           /* distanza dal sottotitolo e centrato */
-  display: inline-block;
-  padding: 15px 20px;                 /* quadretto più compatto */
-  border-radius: 16px;
-  border: 3px solid #00e5ff;          /* bordo LED */
-  background: #ffffff;                 /* sfondo bianco */
-  box-shadow: 0 0 10px #00e5ff, 0 0 20px #00e5ff inset; /* bagliore LED delicato */
-  max-width: 260px;                    /* quadretto più piccolo */
-  transition: 0.4s;
-}
-
-/* Hover sul quadretto */
-.carta-servizi-btn:hover {
+  display: block;                 /* vero blocco */
+  width: 320px;                   /* larghezza visibile */
+  margin: 90px auto 0 auto;       /* MOLTO più sotto e centrato */
+  padding: 22px 25px;
+  border-radius: 18px;
+  border: 3px solid #00e5ff;
+  background: #ffffff;
   box-shadow: 0 0 15px #00e5ff, 0 0 30px #00e5ff inset;
-  transform: translateY(-2px);
+  text-align: center;
+  transition: 0.3s ease;
 }
 
-/* Link cliccabile dentro il quadretto */
+.carta-servizi-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 0 20px #00e5ff, 0 0 40px #00e5ff inset;
+}
+
+/* Testo dentro il quadro */
 .carta-servizi-btn a {
+  text-decoration: none;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #003366;
   display: inline-flex;
   align-items: center;
-  gap: 8px;
-  text-decoration: none;
-  font-weight: 600;
-  color: #003366;                      /* colore testo */
+  gap: 12px;
 }
 
-/* Pallino LED bianco piccolo davanti al testo */
+/* Pallino LED */
 .carta-servizi-btn .dot {
-  width: 8px;
-  height: 8px;
+  width: 10px;
+  height: 10px;
   background: #ffffff;
   border-radius: 50%;
-  box-shadow: 0 0 5px #00e5ff, 0 0 10px #00e5ff; /* effetto LED */
-  display: inline-block;
-  margin-right: 10px;
-  vertical-align: middle;
+  box-shadow: 0 0 8px #00e5ff, 0 0 16px #00e5ff;
   animation: pulseDot 1.5s infinite alternate;
 }
 
-/* Animazione pulsazione pallino LED */
 @keyframes pulseDot {
   from {
     transform: scale(1);
-    box-shadow: 0 0 5px #00e5ff, 0 0 10px #00e5ff;
   }
   to {
-    transform: scale(1.3);
-    box-shadow: 0 0 8px #00e5ff, 0 0 16px #00e5ff;
+    transform: scale(1.4);
   }
 }
 </style>
