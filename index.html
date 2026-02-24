@@ -689,6 +689,68 @@ h2 {
 
 <!-- ===== STILE CSS ===== -->
 <style>
+
+<!-- =========================
+     CARTA DEI SERVIZI LED CON PALLINO
+========================= -->
+
+<style>
+/* Quadretto bianco con bordo LED e margine sotto il sottotitolo */
+.carta-servizi-btn {
+  text-align: left;                   /* testo allineato a sinistra */
+  margin: 50px auto 0 auto;           /* distanza dal sottotitolo e centrato */
+  display: inline-block;
+  padding: 15px 20px;                 /* quadretto più compatto */
+  border-radius: 16px;
+  border: 3px solid #00e5ff;          /* bordo LED */
+  background: #ffffff;                 /* sfondo bianco */
+  box-shadow: 0 0 10px #00e5ff, 0 0 20px #00e5ff inset; /* bagliore LED delicato */
+  max-width: 260px;                    /* quadretto più piccolo */
+  transition: 0.4s;
+}
+
+/* Hover sul quadretto */
+.carta-servizi-btn:hover {
+  box-shadow: 0 0 15px #00e5ff, 0 0 30px #00e5ff inset;
+  transform: translateY(-2px);
+}
+
+/* Link cliccabile dentro il quadretto */
+.carta-servizi-btn a {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  color: #003366;                      /* colore testo */
+}
+
+/* Pallino LED bianco piccolo davanti al testo */
+.carta-servizi-btn .dot {
+  width: 8px;
+  height: 8px;
+  background: #ffffff;
+  border-radius: 50%;
+  box-shadow: 0 0 5px #00e5ff, 0 0 10px #00e5ff; /* effetto LED */
+  display: inline-block;
+  margin-right: 10px;
+  vertical-align: middle;
+  animation: pulseDot 1.5s infinite alternate;
+}
+
+/* Animazione pulsazione pallino LED */
+@keyframes pulseDot {
+  from {
+    transform: scale(1);
+    box-shadow: 0 0 5px #00e5ff, 0 0 10px #00e5ff;
+  }
+  to {
+    transform: scale(1.3);
+    box-shadow: 0 0 8px #00e5ff, 0 0 16px #00e5ff;
+  }
+}
+</style>
+
 /* ===== TITOLO PRINCIPALE ===== */
 h2 {
     color: #007BFF; /* blu principale */
@@ -724,55 +786,7 @@ h2 {
     color:#007BFF; /* solo i pallini blu */
 }
 
-<style>
-
-/* =========================
-   CARTA DEI SERVIZI LED CON PALLINO
-========================= */
-
-/* Quadretto bianco con bordo LED e margine sotto il sottotitolo */
-.carta-servizi-btn {
-  text-align: left;         /* testo allineato a sinistra */
-  margin-top: 30px;         /* distanza dal sottotitolo */
-  display: inline-block;
-  padding: 15px 20px;       /* quadretto più compatto */
-  border-radius: 16px;
-  border: 3px solid #00e5ff; /* bordo LED */
-  background: #ffffff;       /* sfondo bianco */
-  box-shadow: 0 0 10px #00e5ff, 0 0 20px #00e5ff inset; /* bagliore LED delicato */
-  max-width: 260px;          /* quadretto più piccolo */
-  transition: 0.4s;
-}
-
-/* Bottone LED dentro il quadretto */
-.carta-servizi-btn a {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  text-decoration: none;
-  font-weight: 600;
-  color: #003366;
-  background: none;           /* niente sfondo, solo il quadretto */
-  padding: 0;
-}
-
-/* Pallino bianco piccolo davanti al testo */
-.carta-servizi-btn .dot {
-  width: 8px;                 /* pallino più piccolo */
-  height: 8px;
-  background: #ffffff;        /* pallino bianco */
-  border-radius: 50%;
-  box-shadow: 0 0 5px #00e5ff, 0 0 10px #00e5ff; /* effetto LED */
-  display: inline-block;
-  margin-right: 10px;         /* spazio tra pallino e testo */
-  vertical-align: middle;
-}
-
-/* Hover sul quadretto */
-.carta-servizi-btn:hover {
-  box-shadow: 0 0 15px #00e5ff, 0 0 30px #00e5ff inset;
-  transform: translateY(-2px);
-}
+</style>
 
 <!-- ===== SEZIONE SERVIZI ===== -->
 <section id="servizi">
