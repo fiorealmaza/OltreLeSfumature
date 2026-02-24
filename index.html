@@ -633,12 +633,11 @@ h2 {
   alle persone con Disturbo dello Spettro Autistico <span class="mobile-br"><br></span>
   attraverso interventi basati sul metodo "ABA"
 </p>
-</p>
-</p>
+
 <div class="carta-servizi-btn">
   <a href="carta-servizi.html">
     <span class="dot"></span>
-    Scarica la Carta dei Servizi
+    Carta dei Servizi
   </a>
 </div>
 
@@ -729,65 +728,53 @@ h2 {
 
 <style>
 
-<!-- =========================
-     CARTA DEI SERVIZI LED CON PALLINO
-========================= -->
+/* =========================
+   CARTA DEI SERVIZI LED CON PALLINO
+========================= */
 
-<style>
-/* Quadretto bianco con bordo LED e margine maggiore */
+/* Quadretto bianco con bordo LED e margine sotto il sottotitolo */
 .carta-servizi-btn {
-  text-align: left;      /* testo allineato a sinistra */
-  margin-top: 210px;     /* più distanza dal sottotitolo */
+  text-align: left;         /* testo allineato a sinistra */
+  margin-top: 30px;         /* distanza dal sottotitolo */
   display: inline-block;
-  padding: 20px 25px;
+  padding: 15px 20px;       /* quadretto più compatto */
   border-radius: 16px;
   border: 3px solid #00e5ff; /* bordo LED */
-  background: #ffffff;        /* sfondo bianco */
+  background: #ffffff;       /* sfondo bianco */
   box-shadow: 0 0 10px #00e5ff, 0 0 20px #00e5ff inset; /* bagliore LED delicato */
-  max-width: 300px;
+  max-width: 260px;          /* quadretto più piccolo */
   transition: 0.4s;
 }
 
-.carta-servizi-btn h3 {
-  font-size: 18px;
-  margin-bottom: 15px;
-}
-
-/* Bottone blu LED */
+/* Bottone LED dentro il quadretto */
 .carta-servizi-btn a {
   display: inline-flex;
   align-items: center;
-  justify-content: center;
   gap: 8px;
-  background: #0077ff;
-  color: white;
-  padding: 12px 28px;
-  border-radius: 28px;
   text-decoration: none;
   font-weight: 600;
-  box-shadow: 0 0 6px #00e5ff, 0 0 12px #00e5ff inset;
-  transition: all 0.3s ease;
-}
-
-.carta-servizi-btn a:hover {
-  background: #00bfff;
   color: #003366;
-  box-shadow: 0 0 12px #00e5ff, 0 0 24px #00e5ff inset;
-  transform: translateY(-2px);
+  background: none;           /* niente sfondo, solo il quadretto */
+  padding: 0;
 }
 
 /* Pallino bianco piccolo davanti al testo */
 .carta-servizi-btn .dot {
-  width: 10px;           /* pallino piccolo */
-  height: 10px;
-  background: #ffffff;    /* pallino bianco */
+  width: 8px;                 /* pallino più piccolo */
+  height: 8px;
+  background: #ffffff;        /* pallino bianco */
   border-radius: 50%;
-  box-shadow: 0 0 6px #00e5ff, 0 0 12px #00e5ff; /* effetto LED */
+  box-shadow: 0 0 5px #00e5ff, 0 0 10px #00e5ff; /* effetto LED */
   display: inline-block;
-  margin-right: 8px;      /* spazio tra pallino e testo */
-  vertical-align: middle; /* allinea bene col testo */
+  margin-right: 10px;         /* spazio tra pallino e testo */
+  vertical-align: middle;
 }
-</style>
+
+/* Hover sul quadretto */
+.carta-servizi-btn:hover {
+  box-shadow: 0 0 15px #00e5ff, 0 0 30px #00e5ff inset;
+  transform: translateY(-2px);
+}
 
 <!-- ===== SEZIONE SERVIZI ===== -->
 <section id="servizi">
