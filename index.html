@@ -730,63 +730,75 @@ h2 {
 
 <style>
 /* =========================
-   CARTA DEI SERVIZI
+   CARTA DEI SERVIZI LED
 ========================= */
 
-/* Spazio dal sottotitolo */
+/* Quadretto bianco con bordo LED */
 .carta-servizi-btn {
   text-align: center;
-  margin-top: 60px; /* più distanza dal sottotitolo */
+  margin-top: 50px; /* più distanza dal sottotitolo */
   display: inline-block;
-  padding: 20px; 
-  border-radius: 20px;
-  border: 3px solid #00ccff; /* bordo led azzurro chiaro */
-  box-shadow: 0 0 15px #00ccff, 0 0 25px #00ccff, 0 0 40px #00ccff inset; /* effetto luminoso led */
-  background: #e0f7ff; /* sfondo leggermente chiaro per LED */
-  max-width: 350px; /* un po’ più piccolo */
+  padding: 20px;
+  border-radius: 16px;
+  border: 3px solid #00e5ff; /* bordo LED */
+  background: #ffffff; /* sfondo bianco */
+  box-shadow: 0 0 10px #00e5ff, 0 0 20px #00e5ff inset; /* bagliore LED delicato */
+  max-width: 320px; /* dimensione più compatta */
+  position: relative;
   transition: 0.4s;
 }
 
 .carta-servizi-btn:hover {
-  box-shadow: 0 0 25px #00e5ff, 0 0 45px #00e5ff, 0 0 60px #00e5ff inset;
-  transform: translateY(-4px);
+  box-shadow: 0 0 15px #00e5ff, 0 0 30px #00e5ff inset;
+  transform: translateY(-3px);
 }
 
-/* LINK DENTRO IL QUADRETTO */
+/* Bottone blu LED */
 .carta-servizi-btn a {
   display: inline-flex;
   align-items: center;
-  gap: 10px;
-  background: #0077ff; /* blu led */
+  justify-content: center;
+  gap: 8px;
+  background: #0077ff;
   color: white;
-  padding: 12px 26px;
-  border-radius: 30px;
+  padding: 10px 24px;
+  border-radius: 28px;
   text-decoration: none;
   font-weight: 600;
-  box-shadow: 0 0 10px #00ccff, 0 0 20px #00ccff, 0 0 30px #0077ff inset; /* effetto LED */
+  box-shadow: 0 0 6px #00e5ff, 0 0 12px #00e5ff inset; /* LED soft */
   transition: 0.3s ease;
 }
 
 .carta-servizi-btn a:hover {
   background: #00e5ff; /* blu LED più chiaro al passaggio */
-  color: #004466;
-  box-shadow: 0 0 15px #00e5ff, 0 0 30px #00e5ff, 0 0 40px #00ccff inset;
+  color: #003366;
+  box-shadow: 0 0 12px #00e5ff, 0 0 24px #00e5ff inset;
   transform: translateY(-2px);
 }
 
-/* Puntino luminoso LED (opzionale) */
+/* Puntino LED */
 .dot {
   width: 10px;
   height: 10px;
-  background: #00ccff;
+  background: #00e5ff; /* stesso colore del bordo LED */
   border-radius: 50%;
-  box-shadow: 0 0 6px #00ccff, 0 0 15px rgba(0,204,255,0.8);
-  animation: pulseDot 1.2s infinite alternate;
+  box-shadow: 0 0 6px #00e5ff, 0 0 12px #00e5ff;
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  animation: pulseDot 1.5s infinite alternate;
 }
 
+/* Animazione LED pulsante */
 @keyframes pulseDot {
-  from {transform: scale(1);}
-  to {transform: scale(1.3);}
+  from {
+    transform: scale(1);
+    box-shadow: 0 0 6px #00e5ff, 0 0 12px #00e5ff;
+  }
+  to {
+    transform: scale(1.3);
+    box-shadow: 0 0 12px #00e5ff, 0 0 24px #00e5ff;
+  }
 }
 </style>
 
