@@ -729,21 +729,23 @@ h2 {
 <style>
 
 <style>
+
+<style>
 /* =========================
-   CARTA DEI SERVIZI LED
+   CARTA DEI SERVIZI LED CON PALLINO
 ========================= */
 
-/* Quadretto bianco con bordo LED */
+/* Quadretto bianco con bordo LED e margine maggiore */
 .carta-servizi-btn {
   text-align: center;
-  margin-top: 50px; /* più distanza dal sottotitolo */
+  margin-top: 80px; /* più distanza dal sottotitolo */
   display: inline-block;
-  padding: 20px;
+  padding: 25px 20px;
   border-radius: 16px;
   border: 3px solid #00e5ff; /* bordo LED */
   background: #ffffff; /* sfondo bianco */
   box-shadow: 0 0 10px #00e5ff, 0 0 20px #00e5ff inset; /* bagliore LED delicato */
-  max-width: 320px; /* dimensione più compatta */
+  max-width: 350px; /* dimensione più compatta */
   position: relative;
   transition: 0.4s;
 }
@@ -761,7 +763,7 @@ h2 {
   gap: 8px;
   background: #0077ff;
   color: white;
-  padding: 10px 24px;
+  padding: 12px 28px;
   border-radius: 28px;
   text-decoration: none;
   font-weight: 600;
@@ -776,13 +778,13 @@ h2 {
   transform: translateY(-2px);
 }
 
-/* Puntino LED */
-.dot {
-  width: 10px;
-  height: 10px;
-  background: #00e5ff; /* stesso colore del bordo LED */
+/* Pallino LED bianco dentro il quadretto */
+.carta-servizi-btn .dot {
+  width: 12px;
+  height: 12px;
+  background: #ffffff; /* pallino bianco */
   border-radius: 50%;
-  box-shadow: 0 0 6px #00e5ff, 0 0 12px #00e5ff;
+  box-shadow: 0 0 8px #00e5ff, 0 0 16px #00e5ff; /* effetto LED */
   position: absolute;
   top: 15px;
   right: 15px;
@@ -793,7 +795,7 @@ h2 {
 @keyframes pulseDot {
   from {
     transform: scale(1);
-    box-shadow: 0 0 6px #00e5ff, 0 0 12px #00e5ff;
+    box-shadow: 0 0 8px #00e5ff, 0 0 16px #00e5ff;
   }
   to {
     transform: scale(1.3);
