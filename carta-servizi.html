@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<title>Carta dei Servizi</title>
+<link rel="stylesheet" href="style.css">
+
+<style>
+
+/* Sfondo elegante chiaro */
+body {
+    background: linear-gradient(to bottom, #f4f9ff, #eef6ff);
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Contenitore principale */
+.carta-container {
+    max-width: 1000px;
+    margin: 80px auto;
+    padding: 40px;
+    background: white;
+    border-radius: 25px;
+    box-shadow:
+        0 0 20px rgba(0, 170, 255, 0.15),
+        0 0 40px rgba(0, 170, 255, 0.08);
+    animation: fadeIn 1s ease forwards;
+}
+
+/* Titolo principale */
+.carta-container h1 {
+    text-align: center;
+    color: #1c6edb;
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    position: relative;
+}
+
+/* Linea luminosa sotto il titolo */
+.carta-container h1::after {
+    content: "";
+    display: block;
+    width: 120px;
+    height: 4px;
+    margin: 15px auto 0 auto;
+    background: linear-gradient(to right, #8fd3ff, #1c6edb, #8fd3ff);
+    border-radius: 3px;
+    box-shadow: 0 0 15px rgba(0,170,255,0.4);
+}
+
+/* Titoli sezioni */
+.section-title {
+    color: #1c6edb;
+    margin-top: 40px;
+    font-size: 1.4rem;
+}
+
+/* Liste */
+ul {
+    line-height: 1.8;
+    padding-left: 20px;
+}
+
+/* Paragrafi */
+p {
+    line-height: 1.7;
+    color: #333;
+}
+
+/* Bottone PDF */
+.download-btn {
+    display: inline-block;
+    margin-top: 40px;
+    background: white;
+    color: #1c6edb;
+    border: 2px solid #1c6edb;
+    padding: 14px 30px;
+    border-radius: 40px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 15px rgba(0,170,255,0.2);
+}
+
+.download-btn:hover {
+    background: #1c6edb;
+    color: white;
+    transform: translateY(-3px);
+    box-shadow: 0 0 25px rgba(0,170,255,0.4);
+}
+
+/* Animazione ingresso */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .carta-container {
+        margin: 40px 15px;
+        padding: 25px;
+    }
+
+    .carta-container h1 {
+        font-size: 1.8rem;
+    }
+}
+
+</style>
+</head>
+
+<body>
+
+<nav style="padding:20px;">
+<a href="index.html" style="text-decoration:none; color:#1c6edb; font-weight:600;">
+← Torna alla Home
+</a>
+</nav>
+
+<div class="carta-container">
+
+<h1>Carta dei Servizi</h1>
+
+<h2 class="section-title">1. Presentazione</h2>
+<p>
+La Cooperativa Sociale “Oltre le Sfumature” è una realtà educativa e socio-assistenziale specializzata nel supporto a persone con disturbo dello spettro autistico.
+Opera con l’obiettivo di promuovere autonomia, inclusione sociale e qualità della vita attraverso interventi personalizzati e scientificamente fondati.
+</p>
+
+<h2 class="section-title">2. Missione</h2>
+<ul>
+<li>Favorire l’autonomia personale, sociale e abitativa</li>
+<li>Sviluppare competenze funzionali alla vita adulta</li>
+<li>Promuovere l’inclusione nel territorio</li>
+<li>Sostenere le famiglie nel percorso evolutivo</li>
+<li>Costruire percorsi individualizzati basati sulle potenzialità</li>
+</ul>
+<p>
+La Cooperativa realizza progetti educativi strutturati orientati all’autodeterminazione e alla dignità della persona.
+</p>
+
+<h2 class="section-title">3. Destinatari del Servizio</h2>
+<ul>
+<li>Giovani adulti che hanno concluso il percorso scolastico superiore</li>
+<li>Ragazzi inseriti nel contesto degli oratori</li>
+<li>Persone con disturbo dello spettro autistico che necessitano di percorsi strutturati</li>
+</ul>
+
+<h2 class="section-title">4. Principi Fondamentali</h2>
+<ul>
+<li>Centralità della persona</li>
+<li>Individualizzazione dell’intervento</li>
+<li>Professionalità e competenza</li>
+<li>Metodologie evidence-based</li>
+<li>Collaborazione con la famiglia</li>
+<li>Inclusione sociale</li>
+<li>Rispetto della dignità e dei tempi individuali</li>
+</ul>
+
+<h2 class="section-title">5. Metodologie di Intervento</h2>
+<p>
+Valutazione iniziale, definizione di obiettivi individualizzati, programmazione educativa, monitoraggio costante e verifica periodica condivisa con la famiglia.
+L’intervento integra approccio comportamentale, interventi psico-educativi e potenziamento delle abilità sociali ed emotive.
+</p>
+
+<h2 class="section-title">6. Servizi Offerti</h2>
+
+<h3>Centro Diurno</h3>
+<p>Servizio educativo e riabilitativo volto a promuovere autonomia personale, sociale e pre-lavorativa.</p>
+
+<h3>Progetto “Dopo di Noi”</h3>
+<p>Percorso per l’autonomia abitativa e la continuità del progetto di vita nel tempo.</p>
+
+<h2 class="section-title">7. Figure Professionali</h2>
+<ul>
+<li>Coordinatore clinico</li>
+<li>Psicologo/Psicoterapeuta</li>
+<li>Analista del comportamento (ABA)</li>
+<li>Educatore professionale</li>
+<li>Logopedista</li>
+<li>Operatori socio-assistenziali</li>
+<li>Tutor per l’inclusione lavorativa</li>
+</ul>
+
+<h2 class="section-title">8. Modalità di Accesso</h2>
+<ul>
+<li>Colloquio conoscitivo iniziale</li>
+<li>Valutazione delle esigenze</li>
+<li>Definizione del progetto individualizzato</li>
+</ul>
+
+<h2 class="section-title">9. Impegno per la Qualità</h2>
+<ul>
+<li>Aggiornamento continuo del personale</li>
+<li>Monitoraggio costante dell’efficacia</li>
+<li>Dialogo con le famiglie</li>
+<li>Trasparenza organizzativa</li>
+</ul>
+
+<div style="text-align:center;">
+<a href="carta-servizi.pdf" target="_blank" class="download-btn">
+Scarica PDF
+</a>
+</div>
+
+</div>
+
+</body>
+</html>
