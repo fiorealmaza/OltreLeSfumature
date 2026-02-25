@@ -236,6 +236,116 @@ section h2 {
 }
 </style>
 
+<style>
+/* HEADER */
+header {
+  text-align: center;
+  padding: 50px 20px 30px 20px;
+  background: #f4f8fb;
+}
+
+header h1 {
+  font-size: 28px;
+  margin-bottom: 15px;
+  color: #003366;
+}
+
+header p {
+  max-width: 700px;
+  margin: auto;
+  font-size: 16px;
+  line-height: 1.6;
+  color: #444;
+}
+
+/* SECTION */
+section {
+  padding: 50px 20px;
+}
+
+section h2 {
+  text-align: center;
+  margin-bottom: 40px;
+  font-size: 22px;
+  color: #0066cc;
+}
+
+/* GRID PRINCIPALE */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 25px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* BOX */
+.box {
+  background: white;
+  border-radius: 14px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: transform 0.3s ease;
+}
+
+.box:hover {
+  transform: translateY(-5px);
+}
+
+.box h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+  color: #003366;
+}
+
+.box p {
+  font-size: 14px;
+  line-height: 1.6;
+  color: #555;
+  margin-bottom: 15px;
+}
+
+/* IMMAGINI DOPPIE */
+.image-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.image-grid img {
+  width: 100%;
+  height: 140px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+/* TABLET */
+@media (max-width: 1024px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* TELEFONO */
+@media (max-width: 600px) {
+  header h1 {
+    font-size: 22px;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .image-grid img {
+    height: 160px;
+  }
+}
+</style>
+
 <header>
   <h1>LABORATORI E ATTIVITÀ EDUCATIVE</h1>
   <p>
@@ -250,9 +360,9 @@ section h2 {
 
 <div class="grid">
 
+  <!-- ARTISTICO -->
   <div class="box">
-    <img src="https://images.unsplash.com/photo-1513364776144-60967b0f800f" alt="Laboratorio artistico">
-    <div class="box-content">
+    <div>
       <h3>Laboratori artistici</h3>
       <p>
         Questo laboratorio serve per aiutare la persona mediante pittura, disegno
@@ -260,11 +370,15 @@ section h2 {
         e l’autonomia, favorendo la scoperta di sé attraverso l’arte.
       </p>
     </div>
+    <div class="image-grid">
+      <img src="laboratorio-artistico1.jpg" alt="Laboratorio artistico 1">
+      <img src="laboratorio-artistico2.jpg" alt="Laboratorio artistico 2">
+    </div>
   </div>
 
+  <!-- MUSICALE -->
   <div class="box">
-    <img src="https://images.unsplash.com/photo-1507838153414-b4b713384a76" alt="Laboratorio musicale">
-    <div class="box-content">
+    <div>
       <h3>Laboratori musicali</h3>
       <p>
         Questo laboratorio serve per aiutare la persona attraverso strumenti musicali,
@@ -272,11 +386,15 @@ section h2 {
         e capacità di socializzazione.
       </p>
     </div>
+    <div class="image-grid">
+      <img src="laboratorio-musicale1.jpg" alt="Laboratorio musicale 1">
+      <img src="laboratorio-musicale2.jpg" alt="Laboratorio musicale 2">
+    </div>
   </div>
 
+  <!-- VITA PRATICA -->
   <div class="box">
-    <img src="https://images.unsplash.com/photo-1490818387583-1baba5e638af" alt="Laboratorio vita pratica">
-    <div class="box-content">
+    <div>
       <h3>Laboratori di vita pratica</h3>
       <p>
         Questo laboratorio aiuta la persona con attività quotidiane simulate o guidate,
@@ -284,17 +402,25 @@ section h2 {
         autonomia, responsabilità e sicurezza nelle azioni di tutti i giorni.
       </p>
     </div>
+    <div class="image-grid">
+      <img src="laboratorio-vita-pratica1.jpg" alt="Laboratorio vita pratica 1">
+      <img src="laboratorio-vita-pratica2.jpg" alt="Laboratorio vita pratica 2">
+    </div>
   </div>
 
+  <!-- GRUPPO -->
   <div class="box">
-    <img src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac" alt="Laboratorio di gruppo">
-    <div class="box-content">
+    <div>
       <h3>Laboratori di gruppo</h3>
       <p>
         Questo laboratorio serve per aiutare la persona mediante giochi strutturati
         e attività cooperative, favorendo relazioni sociali, lavoro di squadra,
         comunicazione e collaborazione con gli altri.
       </p>
+    </div>
+    <div class="image-grid">
+      <img src="laboratorio-di-gruppo1.jpg" alt="Laboratorio di gruppo 1">
+      <img src="laboratorio-di-gruppo2.jpg" alt="Laboratorio di gruppo 2">
     </div>
   </div>
 
