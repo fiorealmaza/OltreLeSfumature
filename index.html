@@ -220,6 +220,75 @@ to{opacity:1;transform:translateY(0);}
     gap: 15px;
 }
 
+/* SFONDO NOTTE GLOBALE */
+body {
+  background: #0b0f2a !important;
+  color: #e0e0e0 !important;
+}
+
+/* LINEE LED */
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 200%;
+  height: 200%;
+  background-image: repeating-linear-gradient(
+      0deg,
+      rgba(255,255,255,0.05) 0px,
+      rgba(255,255,255,0.05) 1px,
+      transparent 1px,
+      transparent 20px
+    ),
+    repeating-linear-gradient(
+      90deg,
+      rgba(255,255,255,0.05) 0px,
+      rgba(255,255,255,0.05) 1px,
+      transparent 1px,
+      transparent 20px
+    );
+  pointer-events: none;
+  z-index: -1;
+}
+
+/* BOX, CARD, FORM */
+.box, .colloquio-box, .image-grid img {
+  background-color: #1b1f3a !important;
+  color: #e0e0e0 !important;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.6) !important;
+  border-radius: 12px !important;
+}
+
+/* TITOLI */
+h1, h2, h3 {
+  color: #00aaff !important;
+}
+
+/* PULSANTI E LINK */
+a, button {
+  background-color: #00aaff !important;
+  color: #0b0f2a !important;
+  border-radius: 10px !important;
+  transition: 0.3s;
+}
+
+a:hover, button:hover {
+  background-color: #0088cc !important;
+}
+
+/* TESTO SECONDOARIO */
+p, li {
+  color: #ccc !important;
+}
+
+/* RESPONSIVE TELEFONO */
+@media (max-width: 600px) {
+  body::before {
+    background-size: 15px 15px;
+  }
+}
+
 .menu li a {
     font-size: 1rem;
 }
@@ -357,8 +426,6 @@ box-shadow:0 0 25px rgba(0,119,255,0.9);
     section {
         padding: 50px 0;
     }
-
-  
 
 
     /* BOX GENERALI */
