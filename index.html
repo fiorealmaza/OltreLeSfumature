@@ -585,6 +585,86 @@ h2 {
 
 </style>
 
+<style>
+/* --- BASE --- */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+}
+
+/* --- CONTAINER GLOBALE --- */
+body > * {
+  padding-left: 15px;   /* margine interno a sinistra su mobile */
+  padding-right: 15px;  /* margine interno a destra su mobile */
+}
+
+/* SU PC lascia tutto libero, non cambia larghezza */
+@media (min-width: 601px) {
+  body > * {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+/* --- GRIGLIE RESPONSIVE --- */
+.grid, .laboratori-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+/* BOX UNIFORMI */
+.box, .colloquio-box, .card, .laboratori-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+  transition: transform 0.3s;
+}
+
+.box:hover, .colloquio-box:hover, .card:hover, .laboratori-box:hover {
+  transform: translateY(-3px);
+}
+
+/* IMMAGINI */
+.box img, .colloquio-box img, .card img, .laboratori-box img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  margin-top: 10px;
+  display: block;
+}
+
+/* TESTI: NON TOCCA I FONT */
+h1, h2, h3, p {
+  margin-bottom: 15px;
+}
+
+/* --- MOBILE --- */
+@media (max-width: 600px) {
+  .grid, .laboratori-grid {
+    grid-template-columns: 1fr; /* un box per riga su smartphone */
+    gap: 15px;
+  }
+
+  .box, .colloquio-box, .card, .laboratori-box {
+    padding: 15px;
+  }
+
+  /* I testi rimangono uguali, nessuna riduzione */
+}
+</style>
 
 <a href="index.html" class="torna-home">← Torna alla Home</a>
 
