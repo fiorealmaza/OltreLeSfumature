@@ -586,6 +586,75 @@ h2 {
 
 </style>
 
+<style>
+/* CONTAINER GLOBALE PER TUTTA LA PAGINA */
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+/* TUTTI I CONTENITORI PRINCIPALI DELLA PAGINA */
+.container, .section, header, footer, .grid, .box, .colloquio-box {
+  max-width: 1200px;      /* larghezza massima su PC */
+  margin-left: auto;
+  margin-right: auto;      /* centra i contenuti */
+  padding-left: 15px;
+  padding-right: 15px;     /* margini interni su mobile */
+}
+
+/* SEZIONI */
+.section {
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+/* GRIGLIE E BOX INTERNI */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+/* BOX */
+.box, .colloquio-box {
+  padding: 18px;
+  border-radius: 15px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.1);
+  background-color: #fff;   /* puoi cambiare se vuoi tema scuro */
+}
+
+/* TESTI */
+h1, h2, h3 {
+  margin-top: 0;
+}
+
+p {
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+
+/* RESPONSIVE TELEFONO */
+@media (max-width: 600px) {
+  .container, .section, .grid, .box, .colloquio-box {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  
+  .grid {
+    grid-template-columns: 1fr; /* un box per riga su smartphone */
+    gap: 15px;
+  }
+}
+</style>
+
 
 <a href="index.html" class="torna-home">← Torna alla Home</a>
 
