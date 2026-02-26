@@ -220,55 +220,50 @@ to{opacity:1;transform:translateY(0);}
     gap: 15px;
 }
 
-<style>
-/* SFONDO BLU NOTTE ELEGANTE */
-body {
-  background: #0b0f2a; /* blu notte elegante */
-  position: relative;
-  overflow: hidden;
-}
+<!-- BLOCCO SFONDO BLU NOTTE CON LINEE ELEGANTI -->
+<div class="bg-night-lines"></div>
 
-/* STELLE MINIMALI */
-body::after {
-  content: "";
-  position: fixed;
-  top: 0;
+<style>
+.bg-night-lines {
+  position: absolute;       /* dietro tutti i contenuti */
+  top: 150px;               /* sotto titolo e sottotitolo, regola se serve */
   left: 0;
   width: 100%;
-  height: 100%;
-  pointer-events: none;
-  background:
-    radial-gradient(rgba(255,255,255,0.8) 1px, transparent 1px),
-    radial-gradient(rgba(255,255,255,0.6) 1px, transparent 1px),
-    radial-gradient(rgba(255,255,255,0.5) 1px, transparent 1px);
-  background-size: 40px 40px, 80px 80px, 120px 120px;
-  background-position: 0 0, 20px 40px, 50px 100px;
-  animation: stars-move 40s linear infinite;
-  opacity: 0.8; /* delicato e non invasivo */
+  height: calc(100vh - 150px); /* copre il resto della pagina */
+  background: #0b0f2a;     /* blu notte */
+  overflow: hidden;
+  z-index: -1;              /* sempre dietro i testi */
 }
 
-/* STELLE CADENTI SINGOLE */
-.star-fall {
-  position: fixed;
-  width: 2px;
-  height: 60px;
-  background: linear-gradient(to bottom, rgba(255,255,255,0.8), transparent);
-  top: -80px;
-  left: 0;
-  pointer-events: none;
-  animation: fall linear infinite;
+/* LINEE CASUALI BLU CHIARO */
+.bg-night-lines::before,
+.bg-night-lines::after {
+  content: "";
+  position: absolute;
+  width: 200%;
+  height: 200%;
+  background-image: linear-gradient(120deg, rgba(0,150,255,0.15) 1px, transparent 1px),
+                    linear-gradient(60deg, rgba(0,200,255,0.1) 1px, transparent 1px);
+  background-size: 300px 300px;
+  animation: lines-move 40s linear infinite;
 }
 
-/* ANIMAZIONE STELLE SCIVOLANTI */
-@keyframes stars-move {
-  0% { background-position: 0 0, 20px 40px, 50px 100px; }
-  100% { background-position: -200px 200px, -300px 400px, -400px 600px; }
+/* ANIMAZIONE DELLE LINEE */
+@keyframes lines-move {
+  0% { transform: translate(0,0); }
+  100% { transform: translate(-200px,200px); }
 }
 
-/* ANIMAZIONE SINGOLE STELLE CADENTI */
-@keyframes fall {
-  0% { transform: translateY(0) translateX(0) rotate(0deg); opacity: 1; }
-  100% { transform: translateY(100vh) translateX(50px) rotate(45deg); opacity: 0; }
+/* RESPONSIVE TELEFONO */
+@media (max-width: 600px) {
+  .bg-night-lines {
+    top: 120px;
+    height: calc(100vh - 120px);
+  }
+  .bg-night-lines::before,
+  .bg-night-lines::after {
+    background-size: 200px 200px;
+  }
 }
 
 .menu li a {
