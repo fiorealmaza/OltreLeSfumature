@@ -220,52 +220,6 @@ to{opacity:1;transform:translateY(0);}
     gap: 15px;
 }
 
-<!-- BLOCCO SFONDO BLU NOTTE CON LINEE ELEGANTI -->
-<div class="bg-night-lines"></div>
-
-<style>
-.bg-night-lines {
-  position: absolute;       /* dietro tutti i contenuti */
-  top: 150px;               /* sotto titolo e sottotitolo, regola se serve */
-  left: 0;
-  width: 100%;
-  height: calc(100vh - 150px); /* copre il resto della pagina */
-  background: #0b0f2a;     /* blu notte */
-  overflow: hidden;
-  z-index: -1;              /* sempre dietro i testi */
-}
-
-/* LINEE CASUALI BLU CHIARO */
-.bg-night-lines::before,
-.bg-night-lines::after {
-  content: "";
-  position: absolute;
-  width: 200%;
-  height: 200%;
-  background-image: linear-gradient(120deg, rgba(0,150,255,0.15) 1px, transparent 1px),
-                    linear-gradient(60deg, rgba(0,200,255,0.1) 1px, transparent 1px);
-  background-size: 300px 300px;
-  animation: lines-move 40s linear infinite;
-}
-
-/* ANIMAZIONE DELLE LINEE */
-@keyframes lines-move {
-  0% { transform: translate(0,0); }
-  100% { transform: translate(-200px,200px); }
-}
-
-/* RESPONSIVE TELEFONO */
-@media (max-width: 600px) {
-  .bg-night-lines {
-    top: 120px;
-    height: calc(100vh - 120px);
-  }
-  .bg-night-lines::before,
-  .bg-night-lines::after {
-    background-size: 200px 200px;
-  }
-}
-
 .menu li a {
     font-size: 1rem;
 }
